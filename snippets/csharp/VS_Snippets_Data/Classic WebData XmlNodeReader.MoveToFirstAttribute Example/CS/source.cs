@@ -24,7 +24,6 @@ public class Sample
        reader.MoveToFirstAttribute();
        string genre=reader.Value;
        Console.WriteLine("The genre value: " + genre);
-
      } 
      finally 
      {
@@ -32,6 +31,5 @@ public class Sample
           reader.Close();
       }
   }
-  
 } // End class
    // </Snippet1>

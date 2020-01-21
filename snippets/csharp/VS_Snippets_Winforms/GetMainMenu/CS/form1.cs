@@ -73,7 +73,6 @@ namespace GetMainMenu
 			this.Text = "My Form";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.ResumeLayout(false);
-
 		}
 		#endregion
 
@@ -118,7 +117,6 @@ namespace GetMainMenu
 
 		private void Form1_Load(object sender, System.EventArgs e)
 		{
-
 		}
 	}
 }

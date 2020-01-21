@@ -29,7 +29,6 @@ public class UrlsSection : ConfigurationSection
         }
     }
     // </Snippet20>
-
 }
 //</Snippet2>
 

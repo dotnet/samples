@@ -31,7 +31,6 @@ namespace customer_relationship
             }
             foreach (IOrder order in c.PreviousOrders)
                 Console.WriteLine($"Order on {order.Purchased} for {order.Cost}");
-
         }
     }
 }

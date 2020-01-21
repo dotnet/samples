@@ -48,7 +48,6 @@ namespace CalcAddIns
                     throw new InvalidOperationException("This add-in does not support: " + operation);
             }
         }
-
     }
 }
 // </Snippet1>

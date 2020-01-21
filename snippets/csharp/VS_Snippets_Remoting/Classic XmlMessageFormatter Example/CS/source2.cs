@@ -16,7 +16,6 @@ using System;
  
          // Add order to the database.
          /* Insert code here. */
- 
      }
  }
  // </Snippet2>

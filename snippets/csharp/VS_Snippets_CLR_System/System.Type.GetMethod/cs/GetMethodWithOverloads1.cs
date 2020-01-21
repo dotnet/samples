@@ -51,7 +51,6 @@ public class Example
                Console.Write(parms[ctr].ParameterType.Name);
                if (ctr < parms.Length - 1) 
                   Console.Write(", ");
-
             }
             Console.WriteLine(")");
          }
@@ -71,7 +70,6 @@ public class Example
                Console.Write(parms[ctr].ParameterType.Name);
                if (ctr < parms.Length - 1) 
                   Console.Write(", ");
-
             }
             Console.WriteLine(")");
          } 

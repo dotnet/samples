@@ -98,6 +98,5 @@ namespace Microsoft.WebProgrammingModel.Samples
 
             return newCustomer;
         }
-
     }
 }

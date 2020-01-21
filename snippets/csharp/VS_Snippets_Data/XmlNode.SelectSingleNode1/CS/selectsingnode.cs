@@ -21,7 +21,6 @@ public class Sample
       book = root.SelectSingleNode("descendant::book[@bk:ISBN='1-861001-57-6']", nsmgr);
 
       Console.WriteLine(book.OuterXml);
-
   }
 }
 //</snippet1>

@@ -44,7 +44,6 @@ namespace ClientSideProviderAssembly
                 return null;
             else
                 return new ConsoleProvider(hwnd);
-
         }
 
         private static IRawElementProviderSimple Create(
@@ -83,7 +82,6 @@ namespace ClientSideProviderAssembly
                 return "Custom Console Window";
             else
                 return null;
-
         }
 
         object IRawElementProviderSimple.GetPatternProvider(int iid)

@@ -38,5 +38,4 @@ private void GetFormats2()
     {
         Application.Run(new Form1());
     }
-
 }

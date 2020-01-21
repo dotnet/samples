@@ -64,7 +64,6 @@ namespace NorthwindStreamingClient
 
                 // Select the first employee in the collection.
                 employeesComboBox.SelectedIndex = 0;
-
             }
             catch (DataServiceQueryException ex)
             {

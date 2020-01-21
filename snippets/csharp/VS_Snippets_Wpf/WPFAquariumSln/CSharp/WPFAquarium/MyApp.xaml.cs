@@ -12,6 +12,5 @@ namespace WPFAquarium
 
   public partial class MyApp : Application
   {
-
   }
 }

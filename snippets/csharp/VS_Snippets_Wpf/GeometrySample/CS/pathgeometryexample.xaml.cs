@@ -17,6 +17,5 @@ namespace Microsoft.Samples.Graphics.Geometries
 
             InitializeComponent();
        }
-
     }
 }

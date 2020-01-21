@@ -22,7 +22,6 @@ class AsmBuilderGetFileDemo
 	sw.Close();
 
 	return f;
-
    }
 
    private static AssemblyBuilder BuildDynAssembly()
@@ -49,7 +48,6 @@ class AsmBuilderGetFileDemo
 	myAsmBuilder.Save(myAsmFileName);	
 
 	return myAsmBuilder;
-
    }
 
    public static void Main() 
@@ -81,9 +79,7 @@ class AsmBuilderGetFileDemo
 	StreamReader sr = new StreamReader(myResourceFS, System.Text.Encoding.ASCII);
 	Console.WriteLine(sr.ReadToEnd());
 	sr.Close();
-
    }
-
 }
 
 // </Snippet1>

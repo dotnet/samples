@@ -12,7 +12,6 @@ namespace Casting
          EncryptWithoutCasting();
 
          Console.ReadLine();
-
       }
 
       private static void EncryptWithCasting()
@@ -25,7 +24,6 @@ namespace Casting
             byte[] oaepEncrypted = rsa.Encrypt(data, true);
             byte[] pkcs1Encrypted = rsa.Encrypt(data, false);
             // </Snippet1>
-
          }
          catch (Exception e)
          {

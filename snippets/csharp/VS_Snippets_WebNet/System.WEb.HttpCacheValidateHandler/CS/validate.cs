@@ -25,5 +25,4 @@ public void CacheValidate1(HttpContext context, Object data, ref HttpValidationS
 }
     
 // </Snippet1>
-
 }

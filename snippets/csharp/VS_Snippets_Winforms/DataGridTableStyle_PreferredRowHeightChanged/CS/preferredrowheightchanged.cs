@@ -115,7 +115,6 @@
                bool val=myTextBox.Focus();
             }
          }
-         
       }
 
       // Create a DataSet with a table and populate it.

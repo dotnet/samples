@@ -50,7 +50,6 @@ namespace StrokeCollectionShadow
             set
             {
                 this.DrawingAttributes.AddPropertyData(shadow, value);
-
             }
         }
 
@@ -76,7 +75,6 @@ namespace StrokeCollectionShadow
                 {
                     context.Pop();
                 }
-
             }
             base.DrawCore(context, overrides);
         }

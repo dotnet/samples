@@ -56,9 +56,7 @@ class XMLDSIGDetached
         catch(CryptographicException e)
         {
             Console.WriteLine(e.Message);
-
         }
-		
     }
 
     // Sign an XML file and save the signature in a new file. This method does not  
@@ -93,7 +91,6 @@ class XMLDSIGDetached
         XmlTextWriter xmltw = new XmlTextWriter(XmlSigFileName, new UTF8Encoding(false));
         xmlDigitalSignature.WriteTo(xmltw);
         xmltw.Close();
-
     }
 
     // Verify the signature of an XML file against an asymetric 
@@ -120,6 +117,5 @@ class XMLDSIGDetached
         // and return the result.
         return signedXml.CheckSignature(Key);
     }
-
 }
 // </Snippet1>

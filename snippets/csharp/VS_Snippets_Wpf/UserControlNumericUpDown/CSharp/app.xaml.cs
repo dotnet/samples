@@ -12,6 +12,5 @@ namespace MyUserControl
 
     public partial class app : Application
     {
-
     }
 }

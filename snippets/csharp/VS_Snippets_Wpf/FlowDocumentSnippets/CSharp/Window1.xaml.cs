@@ -22,7 +22,6 @@ namespace FlowDocumentSnippets
         public Window1()
         {
             InitializeComponent();
-            
         }
 
         private void WindowLoaded(Object sender, RoutedEventArgs args)
@@ -329,7 +328,6 @@ namespace FlowDocumentSnippets
             flowDoc.Typography.StandardLigatures      = false;
             flowDoc.Typography.Variants               = FontVariants.Ruby;
             // </Snippet_FlowDocumentTypography>
-
         }
 
         void TextEffectsStuff()
@@ -361,7 +359,6 @@ namespace FlowDocumentSnippets
             runx.TextEffects = new TextEffectCollection();
             runx.TextEffects.Add(tfe);
             fd.Blocks.Add(new Paragraph(runx));
-
         }
 
         void Hyphenate()

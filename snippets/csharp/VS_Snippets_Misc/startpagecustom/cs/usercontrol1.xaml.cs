@@ -39,7 +39,6 @@ namespace WebUserControl
 
         private void WebFrame_Navigated(object sender, NavigationEventArgs e)
         {
-
         }
     }
 }

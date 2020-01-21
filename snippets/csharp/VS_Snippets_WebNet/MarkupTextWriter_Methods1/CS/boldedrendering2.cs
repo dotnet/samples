@@ -78,7 +78,6 @@ namespace Samples.AspNet.CS
 
              writer.RenderEndTag();
              writer.WriteLine();
-   
         }
     }
 }

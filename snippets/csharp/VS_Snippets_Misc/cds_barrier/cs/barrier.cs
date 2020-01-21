@@ -132,11 +132,9 @@ class BarrierDemo
             Thread t2 = new Thread(() => app.CrunchNumbers(1));
             t1.Start();
             t2.Start();
-            
         }
     //</snippet02>
 
      byte[] ProcessData(byte[] input)
         { return new byte[2]; }
-
 }

@@ -35,7 +35,6 @@ namespace FileSystemExample
             {
                 Console.WriteLine(e);
             }
-
         }
 
         // Adds an ACL entry on the specified file for the specified account.
@@ -55,7 +54,6 @@ namespace FileSystemExample
 
             // Set the new access settings.
             fInfo.SetAccessControl(fSecurity);
-
         }
 
         // Removes an ACL entry on the specified file for the specified account.
@@ -75,7 +73,6 @@ namespace FileSystemExample
 
             // Set the new access settings.
             fInfo.SetAccessControl(fSecurity);
-
         }
     }
 }

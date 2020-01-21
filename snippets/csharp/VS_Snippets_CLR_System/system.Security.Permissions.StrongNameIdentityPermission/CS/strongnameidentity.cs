@@ -78,7 +78,6 @@ public class StrongNameIdentityDemo
         }
 
         return returnValue;
-
     }
     //</Snippet3>
     //<Snippet4>
@@ -102,7 +101,6 @@ public class StrongNameIdentityDemo
             Console.WriteLine("The intersection of MyCompany.MyDepartment.*"
             + "MyCompany.MyDepartment.MyFile is "
             + ((StrongNameIdentityPermission)snIdPerm3).Name.ToString());
-
         }
         catch (Exception e)
         {
@@ -111,7 +109,6 @@ public class StrongNameIdentityDemo
         }
 
         return returnValue;
-
     }
     //</Snippet4>
     //<Snippet5>
@@ -149,7 +146,6 @@ public class StrongNameIdentityDemo
         Console.WriteLine("Result of ToFromXml = " + snIdPerm2.ToString() + "\n");
 
         return returnValue;
-
     }
     //</Snippet6>
     // Invoke all demos.
@@ -191,7 +187,6 @@ public class StrongNameIdentityDemo
         Console.WriteLine("********************************************************\n");
 
         return (ret);
-
     }
     // Test harness.
     public static void Main(String[] args)

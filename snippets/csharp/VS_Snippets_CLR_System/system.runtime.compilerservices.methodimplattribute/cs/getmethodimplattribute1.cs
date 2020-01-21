@@ -18,7 +18,6 @@ public class Example
          Console.WriteLine();
          foreach (var attrib in attribs)
             Console.WriteLine("   " + attrib.ToString());   
-
       }
       else {
          Console.WriteLine("   <None>");

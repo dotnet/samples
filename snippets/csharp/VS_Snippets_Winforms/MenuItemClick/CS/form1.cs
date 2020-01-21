@@ -55,7 +55,6 @@ namespace MenuItemClass
 			this.Name = "Form1";
 			this.Text = "Form1";
 			this.Load += new System.EventHandler(this.Form1_Load);
-
 		}
 		#endregion
 
@@ -103,7 +102,6 @@ namespace MenuItemClass
 
 		private void Form1_Load(object sender, System.EventArgs e)
 		{
-		
 		}
 	}
 }

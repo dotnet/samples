@@ -80,7 +80,6 @@ namespace DataGrid_CellSelection
                 cr.BeginEdit();
                 cr.SetField(di.Column.DisplayIndex, "");
                 cr.EndEdit();
-
             }
         }
         //</Snippet3>

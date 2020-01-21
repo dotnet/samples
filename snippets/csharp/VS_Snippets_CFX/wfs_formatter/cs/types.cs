@@ -50,5 +50,4 @@ namespace Microsoft.Samples.WorkflowServicesSamples.EchoWorkflowClient
         [MessageBodyMember]
         public bool isPreApproved;
     }
-
 }

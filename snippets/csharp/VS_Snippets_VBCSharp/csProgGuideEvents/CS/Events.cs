@@ -110,7 +110,6 @@ namespace BaseClassEvents
         {
             Console.WriteLine("Drawing a rectangle");
         }
-
     }
 
     // Represents the surface on which the shapes are drawn
@@ -215,7 +214,6 @@ namespace DotNetEvents
             // then raise the event. You can also raise an event
             // before you execute a block of code.
             OnRaiseCustomEvent(new CustomEventArgs("Did something"));
-
         }
 
         // Wrap event invocations inside a protected virtual method
@@ -271,7 +269,6 @@ namespace DotNetEvents
             // Keep the console window open
             Console.WriteLine("Press Enter to close this window.");
             Console.ReadLine();
-
         }
     }
 }
@@ -620,7 +617,6 @@ namespace WrapTwoInterfaceEvents
                     PostDrawEvent -= value;
                 }
             }
-
         }
 
         // For the sake of simplicity this one method
@@ -679,7 +675,6 @@ namespace WrapTwoInterfaceEvents
             System.Console.ReadKey();
         }
     }
-
 }
 /* Output:
     Sub1 receives the IDrawingObject event.
@@ -718,6 +713,5 @@ namespace ImplementInterfaceEvents
             }
         }
     }
-
 }
 //</snippet12>

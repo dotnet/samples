@@ -75,9 +75,7 @@ namespace TreeViewCustomization
             // clicked twice in succession to toggle the expansion state.
             SelectedNode = null;
         }
-
     }
     //</Snippet2>
-
 }
 //</Snippet1>

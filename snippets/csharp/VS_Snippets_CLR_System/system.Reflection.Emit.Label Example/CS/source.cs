@@ -74,7 +74,6 @@ class ILLabelDemo {
 	adderIL.Emit(OpCodes.Ret);
 	
 	return myTypeBldr.CreateType();
-
    }
 
    public static void Main() {
@@ -103,15 +102,11 @@ class ILLabelDemo {
 
 		Console.WriteLine("{0} + {1} = {2}", addParams[0], addParams[1],
 				  adderResult);
-
 	} else {
 
 		Console.WriteLine("One of the integers to add was greater than 100!");
-
 	}		
-            
    }
-
 }
 
 // </Snippet1>

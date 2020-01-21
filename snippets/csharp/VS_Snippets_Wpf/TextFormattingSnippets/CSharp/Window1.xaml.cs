@@ -16,7 +16,6 @@ namespace WindowsApplication1
         public Window1()
         {
             InitializeComponent();
-
         }
 
         private void OnClick(object sender, EventArgs e)

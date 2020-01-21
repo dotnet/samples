@@ -61,7 +61,6 @@ class Program
         new Type[] { typeof(int), typeof(int).MakeByRefType() },
         null);
     Console.WriteLine("Found method: {0}", mInfo);
-
   }
 }
 // </Snippet1>

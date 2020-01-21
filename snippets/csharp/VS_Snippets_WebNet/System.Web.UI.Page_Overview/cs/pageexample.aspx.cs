@@ -7,7 +7,6 @@ public partial class MyCodeBehindCS : System.Web.UI.Page
     {
 
         // Place page-specific code here.
-
     }
 
     // Define a handler for the button click.
@@ -15,7 +14,6 @@ public partial class MyCodeBehindCS : System.Web.UI.Page
     {	
 
         MySpan.InnerHtml = "Hello, " + MyTextBox.Text + ".";
-
     }
 }
 // </Snippet2>

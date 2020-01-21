@@ -54,7 +54,6 @@ class Program
             // Clear the TripleDES key.
             tDESkey.Clear();
         }
-
     }
 
     public static void Encrypt(XmlDocument Doc, string ElementToEncrypt, TripleDESCryptoServiceProvider Alg)
@@ -71,7 +70,6 @@ class Program
         if (elementToEncrypt == null)
         {
             throw new XmlException("The specified element was not found");
-
         }
 
         //////////////////////////////////////////////////
@@ -110,7 +108,6 @@ class Program
         ////////////////////////////////////////////////////
 
         EncryptedXml.ReplaceElement(elementToEncrypt, edElement, false);
-
     }
 
     public static void Decrypt(XmlDocument Doc, SymmetricAlgorithm Alg)
@@ -137,8 +134,6 @@ class Program
 
         // Replace the encryptedData element with the plaintext XML element.
         exml.ReplaceData(encryptedElement, rgbOutput);
-
     }
-
 }
 //</snippet1>

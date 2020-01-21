@@ -485,7 +485,6 @@ using System.Diagnostics;
           string name = section.SectionInformation.Name;
           Console.WriteLine("Name: {0}", name);
       }
-
     }
  
   // </Snippet4>
@@ -583,7 +582,6 @@ using System.Diagnostics;
     }
   
   // </Snippet9>
-
   }
   #endregion
 

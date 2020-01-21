@@ -27,7 +27,6 @@ namespace NativeWindowApplication
 
             nwl = new MyNativeWindowListener(this);
             nw = new MyNativeWindow(this);
-
         }
 
         // The main entry point for the application.

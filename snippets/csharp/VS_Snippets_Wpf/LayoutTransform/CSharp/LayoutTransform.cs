@@ -168,7 +168,6 @@ namespace LayoutTransformCode
 
             mainWindow.Content = grid1;
 			mainWindow.Show ();
-
 		}
 	}
 

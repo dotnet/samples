@@ -90,6 +90,5 @@ namespace DataBindingLab
             this.AuctionItems.Add(squashRacket);
             #endregion
         }
-
     }
 }

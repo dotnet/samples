@@ -502,6 +502,5 @@ namespace SystemDateTimeReference
         //       8/22/2014 7:30:00 PM Eastern Daylight Time
         //       8/28/2014 7:00:00 PM Eastern Daylight Time
         // </Snippet8>
-
     }
 }

@@ -75,7 +75,6 @@ namespace BasicManipulation
                 {
                     //Report that the element hit the boundary
                     e.ReportBoundaryFeedback(new ManipulationDelta(overshoot, 0, new Vector(), new Vector()));
-
                 }
             }
           
@@ -157,6 +156,5 @@ namespace BasicManipulation
 
             e.Handled = true;
         }
-
     }
 }

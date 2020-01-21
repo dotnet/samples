@@ -33,7 +33,6 @@ public class Example
                                         month, output));
             else
                months[month - 1] += "  " + output;
-
          }         
       }                  
       

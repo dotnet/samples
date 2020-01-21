@@ -742,7 +742,6 @@ namespace Samples.AspNet.Membership
             updateCmd.ExecuteNonQuery();
           }
         }
-
       }
       catch (OdbcException)
       {
@@ -1247,7 +1246,6 @@ namespace Samples.AspNet.Membership
             updateCmd.ExecuteNonQuery();
           }
         }
-
       }
       catch (OdbcException)
       {

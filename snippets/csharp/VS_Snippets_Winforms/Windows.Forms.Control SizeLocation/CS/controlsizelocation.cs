@@ -54,7 +54,6 @@ namespace ControlMembers
          this.Name = "Form1";
          this.Text = "Form1";
          this.ResumeLayout(false);
-
       }
 		#endregion
 
@@ -116,6 +115,5 @@ private void AddOKCancelButtons()
                          "Location: " + ctrl.Location.ToString(),"button1 Position",MessageBoxButtons.OKCancel );
          this.AddOKCancelButtons();
       }
-
 	}
 }

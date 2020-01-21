@@ -12,6 +12,5 @@ namespace UIAAutomationID_snip
 
     public partial class MyApp : Application
     {
-
     }
 }

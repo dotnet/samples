@@ -33,5 +33,4 @@ public class Form1: Form
         adapter.Update(tempDataSet);
     }
     // </Snippet1>
-
 }

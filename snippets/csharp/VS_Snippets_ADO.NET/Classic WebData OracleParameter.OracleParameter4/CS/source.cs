@@ -20,5 +20,4 @@ public void CreateOracleParameter()
     Console.WriteLine(parameter.ToString());
  }
 // </Snippet1>
-
 }

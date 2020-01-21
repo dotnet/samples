@@ -40,7 +40,6 @@ namespace cs_walk1part2
             // Prevent console window from closing.
             Console.ReadLine();
             // </Snippet6>
-
         }
     }
 
@@ -60,7 +59,6 @@ namespace cs_walk1part2
             {
                 this._CustomerID = value;
             }
-
         }
 
         private string _City;
@@ -76,7 +74,5 @@ namespace cs_walk1part2
                 this._City = value;
             }
         }
-
     }
-
 }

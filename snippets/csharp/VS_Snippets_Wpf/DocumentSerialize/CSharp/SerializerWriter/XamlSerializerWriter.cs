@@ -322,10 +322,8 @@ namespace SdkSample
                 if (xmlWriter != null)
                     xmlWriter.Close();
             }
-
         }
 
         private Stream _stream;
-
     }
 }

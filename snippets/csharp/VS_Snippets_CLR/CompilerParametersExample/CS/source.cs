@@ -180,7 +180,6 @@ namespace CompilerParametersExample
                     sourceFile, cr.PathToAssembly);
                 Console.WriteLine("{0} temporary files created during the compilation.",
                     cp.TempFiles.Count.ToString());
-
             }
           
             // Return the results of compilation.
@@ -228,7 +227,6 @@ namespace CompilerParametersExample
                     Process.Start(exeName);            
                 }
             }
-
         }
     }
 }

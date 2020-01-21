@@ -84,7 +84,6 @@ namespace Samples.Aspnet.Config
         }
         // </Snippet5>
         // </Snippet3>
-
       }
       catch (Exception e)
       {

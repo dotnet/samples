@@ -81,7 +81,6 @@ namespace MessageBox_CS
 			this.Name = "Form1";
 			this.Text = "Form1";
 			this.ResumeLayout(false);
-
 		}
 		#endregion
 
@@ -101,7 +100,6 @@ namespace MessageBox_CS
 			validateUserEntry3();
 			validateUserEntry4();
 			validateUserEntry5();
-		
 		}
 
    //<snippet1>
@@ -156,11 +154,8 @@ namespace MessageBox_CS
 				// Closes the parent form.
 
 				this.Close();
-
 			}
-
 		}
-
 	}
 
 	//</snippet2>
@@ -192,11 +187,8 @@ namespace MessageBox_CS
 				// Closes the parent form.
 
 				this.Close();
-
 			}
-
 		}
-
 	}
 
 	//</snippet3>
@@ -228,11 +220,8 @@ namespace MessageBox_CS
 				// Closes the parent form.
 
 				this.Close();
-
 			}
-
 		}
-
 	}
 	//</snippet4>
 
@@ -262,11 +251,8 @@ namespace MessageBox_CS
 				// Closes the parent form.
 
 				this.Close();
-
 			}
-
 		}
-
 	}
 	//</snippet5>
 
@@ -277,6 +263,5 @@ namespace MessageBox_CS
         }
 
         //</snippet6>
-
 	}
 }

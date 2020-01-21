@@ -42,8 +42,6 @@ class Program
         {
             Console.WriteLine(e.Message);
         }
-
     }
-
 }
 //</Snippet1>

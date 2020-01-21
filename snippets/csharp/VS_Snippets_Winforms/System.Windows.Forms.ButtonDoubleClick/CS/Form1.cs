@@ -24,7 +24,6 @@ namespace MouseRollBackSingleClick
             button1.Text = "Click or Double Click";
             button1.DoubleClick += new EventHandler(button1_DoubleClick);
             this.Controls.Add(button1);
-           
         }
 
         // Handle the double click event.
@@ -47,7 +46,6 @@ namespace MouseRollBackSingleClick
             Application.EnableVisualStyles();
             Application.Run(new Form1());
         }
-
     }
 //<snippet2>
     public class DoubleClickButton : Button

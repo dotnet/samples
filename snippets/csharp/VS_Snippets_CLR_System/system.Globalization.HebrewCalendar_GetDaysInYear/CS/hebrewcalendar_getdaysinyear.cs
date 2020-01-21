@@ -30,9 +30,7 @@ public class SamplesHebrewCalendar  {
             Console.Write( "\t{0}", myCal.GetDaysInYear( y, myCal.Eras[i] ) );
          Console.WriteLine();
       }
-
    }
-
 }
 
 /*

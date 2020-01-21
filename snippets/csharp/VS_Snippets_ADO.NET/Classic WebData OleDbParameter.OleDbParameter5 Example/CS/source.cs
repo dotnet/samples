@@ -17,5 +17,4 @@ public class Sample
     OleDbParameter myParameter = new OleDbParameter("Description", "Beverages");
  }
 // </Snippet1>
-
 }

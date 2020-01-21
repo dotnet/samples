@@ -26,13 +26,11 @@ namespace Microsoft.Samples.PointExamples
           myWindow.Content = new SampleViewer();
               
           myWindow.Show();
-
         }
         
         private void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs args)
         {
             MessageBox.Show("Unhandled exception: " + args.ExceptionObject.ToString());
         }       
-
     }
 }

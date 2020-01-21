@@ -18,7 +18,6 @@ namespace ConceptualKnownTypeSamples
 
         static string SayHello()
         { return "Hello"; }
-
     }
     // <snippet1>
     [DataContract]
@@ -52,7 +51,6 @@ namespace ConceptualKnownTypeSamples
         private Shape ShapeOfLogo;
         [DataMember]
         private int ColorOfLogo;
-
     }
     // </snippet3>
 

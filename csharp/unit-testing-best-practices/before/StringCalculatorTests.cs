@@ -86,7 +86,6 @@ namespace UnitTestingBestPracticesBefore
                 Assert.Equal(expected, stringCalculator.Add(test));
                 expected += 3;
             }
-
         }
         // </SnippetLogicInTests>
 

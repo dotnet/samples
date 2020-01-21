@@ -17,6 +17,5 @@ namespace ComboBoxSimple
 
 public partial class Pane1 : Canvas
 {
-
 }
 }

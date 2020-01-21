@@ -38,7 +38,6 @@ namespace BindingExpressionBaseValidateWithoutUpdating
             {
                 MessageBox.Show(e.Error.ErrorContent.ToString());
             }
-
         }
 
         // Update the source data object when the user clicks

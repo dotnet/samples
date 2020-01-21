@@ -25,7 +25,6 @@ public class Sample {
        writer.WriteEndElement();
 	
        writer.Flush();
-
      } 
      finally  {
         if (writer != null)

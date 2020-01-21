@@ -203,7 +203,6 @@ namespace WindowsApplication3
 			this.toolStrip1.ResumeLayout(false);
 			this.toolStrip2.ResumeLayout(false);
 			this.ResumeLayout(false);
-
 		}
 	}
 }

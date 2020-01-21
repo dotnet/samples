@@ -26,7 +26,6 @@ public class SamplesStringCollection  {
          Console.WriteLine( "   [{0}] {1}", i, myArr2[i] );
       }
       Console.WriteLine();
-
    }
 
    public static void PrintValues( IEnumerable myCol )  {
@@ -34,7 +33,6 @@ public class SamplesStringCollection  {
          Console.WriteLine( "   {0}", obj );
       Console.WriteLine();
    }
-
 }
 
 /*

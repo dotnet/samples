@@ -75,11 +75,8 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
                 animatedButton.GetAnimationBaseValue(Button.WidthProperty)
                 + "\nRotateTransform base value: " +
                 animatedRotateTransform.GetAnimationBaseValue(RotateTransform.AngleProperty));
-        
         }
  //</SnippetGetAnimationBaseValue> 
- 
     }
- 
 }
 //</SnippetGetAnimationBaseValueExampleWholePage>

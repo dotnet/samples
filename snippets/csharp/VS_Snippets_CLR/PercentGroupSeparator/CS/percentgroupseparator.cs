@@ -18,7 +18,6 @@ class NumberFormatInfoSample {
       // Displays the same value with a blank as the separator.
       nfi.PercentGroupSeparator = " ";
       Console.WriteLine( myInt.ToString( "P", nfi ) );
-
    }
 }
 

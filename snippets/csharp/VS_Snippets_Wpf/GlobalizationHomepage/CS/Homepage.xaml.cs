@@ -20,6 +20,5 @@ namespace MicrosoftSaudiArabiaHomepage
         {
             InitializeComponent();
         }
-
     }
 }

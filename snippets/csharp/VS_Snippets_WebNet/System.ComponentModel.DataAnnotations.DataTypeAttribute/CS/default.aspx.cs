@@ -21,7 +21,6 @@ public partial class Default : System.Web.UI.Page
         // Assign title dynamically.
         Title = string.Concat("Applying the DataTypeAttribute to ",
           _table.Columns[9].DisplayName, " Data Field");
-
     }
 }
 // </Snippet5> 

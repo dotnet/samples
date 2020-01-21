@@ -14,7 +14,6 @@ namespace Samples.AspNet.CS
             Configuration config = ConfigurationManager.OpenMachineConfiguration();
             ConfigurationSectionGroupCollection mySectionGroupCollection = config.SectionGroups;
             ShowSectionGroupCollectionInfo(mySectionGroupCollection);
-
         }
         //</Snippet10>
         static String getSpacer()

@@ -111,7 +111,6 @@ namespace Microsoft.Samples.KeyFrameExamples
 
             Content = containerCanvas;
         }
-
     }
 }
 // </SnippetAltDoubleAnimationUsingKeyFramesWholePage>

@@ -46,7 +46,6 @@ namespace cs_walk4
             param = "";
             textBox1.Text = "";
             // </Snippet2>
-
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -34,7 +34,6 @@ namespace MyLogRecordSequence
      
             MySequence = sequence;
 	    // </Snippet1>
-
         }
 
         public void AddExtents()
@@ -177,7 +176,6 @@ namespace MyLogRecordSequence
             Console.WriteLine("    Auto grow enabled:     {0}", policy.AutoGrow);
             Console.WriteLine("    New extent prefix:     {0}", policy.NewExtentPrefix);
             Console.WriteLine("    Next extent suffix:    {0}", policy.NextExtentSuffix);
-
 	}
 
         // <Snippet5>

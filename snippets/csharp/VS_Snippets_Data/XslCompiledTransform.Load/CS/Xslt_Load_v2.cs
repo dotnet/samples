@@ -9,7 +9,6 @@ using System.Net;
 class XslCompiledTransformLoad {
 
   static void Main() {
-
   }
 
 // Load with XPathDocument.

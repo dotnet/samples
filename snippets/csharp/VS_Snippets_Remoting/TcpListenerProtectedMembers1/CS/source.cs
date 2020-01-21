@@ -21,7 +21,6 @@ public class TestClass
 
         // start listening and process connections here.
         listener.Start();
-
     }
 // </Snippet1>
 
@@ -38,6 +37,5 @@ public class TestClass
 
         Console.WriteLine("enter to exit");
         Console.Read();
-
     }
 }

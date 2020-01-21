@@ -25,7 +25,6 @@ namespace VSMGoToElementState
             GenerateNumber();
             //Show the answer in the title bar for testing purposes.
             Title = this.number.ToString();
-
         }
 
         //<SnippetGoToElementStateCode>

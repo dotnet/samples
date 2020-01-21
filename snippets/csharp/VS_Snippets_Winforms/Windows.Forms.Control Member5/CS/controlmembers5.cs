@@ -74,7 +74,6 @@ namespace ControlMembers4
          this.Name = "Form1";
          this.Text = "Form1";
          this.ResumeLayout(false);
-
       }
 		#endregion
 
@@ -152,6 +151,5 @@ private void AutoSizeControl(Control control, int textPadding)
    g.Dispose();
 }
 // </snippet1>
-
    }
 }

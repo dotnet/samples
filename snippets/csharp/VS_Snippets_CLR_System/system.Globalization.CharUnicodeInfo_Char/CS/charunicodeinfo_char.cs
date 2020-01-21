@@ -36,7 +36,6 @@ public class SamplesCharUnicodeInfo  {
 
       Console.Write( "U+2788 CIRCLED SANS-SERIF DIGIT NINE   " );
       PrintProperties( '\u2788' );
-
    }
 
    public static void PrintProperties( char c )  {
@@ -46,7 +45,6 @@ public class SamplesCharUnicodeInfo  {
       Console.Write( " {0,-5}", CharUnicodeInfo.GetDecimalDigitValue( c ) );
       Console.WriteLine( "{0}", CharUnicodeInfo.GetUnicodeCategory( c ) );
    }
-
 }
 
 

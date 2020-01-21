@@ -108,6 +108,5 @@ public class Form1 : Form
         return false;
     }
     //</Snippet2>
-
 }
 //</Snippet1>

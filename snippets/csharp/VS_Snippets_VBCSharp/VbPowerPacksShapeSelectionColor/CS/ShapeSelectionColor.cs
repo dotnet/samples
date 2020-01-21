@@ -15,7 +15,6 @@ namespace VbPowerPacksShapeSelectionColorCS
         public ShapeSelectionColor()
         {
             InitializeComponent();
-
         }
 
         // <Snippet1>

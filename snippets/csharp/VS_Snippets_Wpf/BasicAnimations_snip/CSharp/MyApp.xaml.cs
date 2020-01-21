@@ -16,6 +16,5 @@ namespace SDKSamples
             SampleViewer mainWindow = new SampleViewer();
             mainWindow.Show();
         }
-
     }
 }

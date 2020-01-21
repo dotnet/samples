@@ -99,7 +99,6 @@ class Program
         catch (UnauthorizedAccessException AuthEx)
         {
             Console.WriteLine(AuthEx.Message);
-
         }
     }
 
@@ -117,7 +116,6 @@ class Program
             s.EndsWith(".docx"));
     }
     // </Snippet8>
-
 }
 
 // <Snippet9>

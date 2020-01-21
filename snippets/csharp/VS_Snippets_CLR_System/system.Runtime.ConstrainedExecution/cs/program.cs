@@ -97,7 +97,6 @@ class WorkUnit
 
             // Else move to the next level.
             StackDepth2();
-
         }
         finally
         {

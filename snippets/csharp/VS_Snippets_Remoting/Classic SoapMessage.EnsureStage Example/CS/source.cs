@@ -13,7 +13,6 @@
       private static void EnsureStage(SoapMessageStage sms)
       {
       }
-
    }
 
    public enum SoapMessageStage

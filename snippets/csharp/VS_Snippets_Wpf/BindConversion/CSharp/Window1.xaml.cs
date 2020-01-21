@@ -101,7 +101,6 @@ namespace SDKSample
         lbChooseCulture.SelectedIndex = 0;
     }
     //</Snippet1>
-    
   }
   //</Snippet3>
 }

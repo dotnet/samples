@@ -18,6 +18,5 @@ namespace HitTest3D
             Window1 mainWindow = new Window1();
             mainWindow.Show();
         }
-
     }
 }

@@ -101,7 +101,6 @@ namespace Microsoft.Syndication.Samples
             }
 
             Console.ReadLine();
-
         }
 
         private static void DumpToConsole( SyndicationFeedFormatter formatter )

@@ -46,7 +46,6 @@ namespace CS
 			ServiceHostFactory factory = new ServiceHostFactory();
 		}
 		// </Snippet1>
-
 	} 
 
 	// <Snippet0>
@@ -70,10 +69,8 @@ namespace CS
 			ServiceHost serviceHost = new ServiceHost(typeof(HelloService),
 				baseAddresses);
 			return serviceHost;
-
 		}
 		// </Snippet3>
-
 	}
 	// </Snippet0>
 
@@ -81,5 +78,4 @@ namespace CS
 	//provide the type name in the @ServiceHost directive as follows:
 
 	//<% @ServiceHost Factory="DerivedFactory" Service="MyService" %> 
-
 }

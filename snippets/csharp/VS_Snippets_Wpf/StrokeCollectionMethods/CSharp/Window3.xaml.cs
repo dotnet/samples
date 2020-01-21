@@ -37,7 +37,6 @@ namespace StrokeCollectionEraseMethods
 
         // Sample event handler:  
         // private void ButtonClick(object sender, RoutedEventArgs e) {}
-
     }
 
     //<Snippet33>
@@ -70,7 +69,6 @@ namespace StrokeCollectionEraseMethods
                     // Attach the even handler to the InkCannvas
                     sourceInkCanvas.StrokeCollected += new InkCanvasStrokeCollectedEventHandler(SourceChanged);
                 }
-
             }
         }
 
@@ -95,8 +93,6 @@ namespace StrokeCollectionEraseMethods
                 sourceInkCanvas.Strokes.Draw(drawingContext);
             }
         }
-
     }
     //</Snippet33>
- 
 }

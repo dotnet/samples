@@ -19,7 +19,6 @@ public class Sample
      {
         Console.WriteLine("{0} = {1}", attrColl.Item(i).Name, attrColl.Item(i).Value);
      }         
-    
   }
 }
  // </Snippet1>

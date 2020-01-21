@@ -96,9 +96,7 @@ class MyClass
         {
             Console.WriteLine(e.Message.ToString());
         }
-
     }
-
 }
 
 //</Snippet1>

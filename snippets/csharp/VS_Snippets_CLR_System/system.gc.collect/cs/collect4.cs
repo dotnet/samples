@@ -24,6 +24,5 @@ public class Example
           String s2 = "word2";
           str[ctr] = s1 + " " + s2;
        }
-
    }
 }

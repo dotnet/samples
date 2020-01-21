@@ -10,7 +10,6 @@ namespace Microsoft.Samples.Workflow
         public class IOrderService
         {
         }
-        
     }
     public class OrderApplication
     {
@@ -22,5 +21,4 @@ namespace Microsoft.Samples.Workflow
     {
         public class ISpeechService { }
     }
-    
 }

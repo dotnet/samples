@@ -96,7 +96,6 @@ namespace DBNullCS
 			Application.EnableVisualStyles();
 			Application.Run(new Form1());
         }
-       
 	}
 }
 // </snippet1>

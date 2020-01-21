@@ -7,6 +7,5 @@ namespace Contoso.VSSkinHost
     static class PkgCmdIDList
     {
         public const uint cmdidSetSkin =        0x100;
-
     };
 }

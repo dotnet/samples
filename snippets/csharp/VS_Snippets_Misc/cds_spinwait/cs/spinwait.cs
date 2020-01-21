@@ -65,7 +65,6 @@ namespace CDS_Spinwait
                 if (!spinner.NextSpinWillYield)
                 {
                     spinner.SpinOnce();
-
                 }
                 // Rather than let SpinWait do a context switch now,
                 //  we initiate the kernel Wait operation, because
@@ -141,7 +140,6 @@ namespace CDS_Spinwait
                 if (Console.ReadKey().KeyChar == 'c')
                 {
                     cts.Cancel();
-
                 }
             });
 
@@ -419,5 +417,4 @@ namespace SpinWait2
         #endregion
     }
     //</snippet7>
-
 }

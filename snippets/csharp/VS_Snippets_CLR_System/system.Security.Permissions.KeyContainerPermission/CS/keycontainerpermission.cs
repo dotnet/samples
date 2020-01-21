@@ -230,7 +230,6 @@ namespace KeyContainerPermissionDemo
             {
                 Console.WriteLine("Exception thrown:  " + e.Message);
             }
-
         }
         private static void DeleteKeyContainer(string containerName)
         {

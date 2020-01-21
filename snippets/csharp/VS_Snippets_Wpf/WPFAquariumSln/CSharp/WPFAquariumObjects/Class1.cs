@@ -73,14 +73,12 @@ namespace WPFAquariumObjects
     {
       return baseValue; //give more practical implementation that tracks Height and Width
     }
-
   }
 
   public class Fishbowl : Aquarium {
     public Fishbowl()
       : base()
     {
-
     }
 //<SnippetRODPOverride> 
     static Fishbowl() {
@@ -118,7 +116,6 @@ namespace WPFAquariumObjects
       }
     }
     protected AquariumObject(Uri startingGraphicUri) {
-      
     }
 //<SnippetRegisterAttachedBubbler>
     public static readonly DependencyProperty IsBubbleSourceProperty = DependencyProperty.RegisterAttached(
@@ -167,10 +164,8 @@ namespace WPFAquariumObjects
   {
     static Fish() {
       AquariumGraphicProperty.OverrideMetadata(typeof(Fish), new FrameworkPropertyMetadata(new System.Uri("fish.gif", UriKind.RelativeOrAbsolute), FrameworkPropertyMetadataOptions.AffectsRender));
-
     }
     public Fish() : base() {
-
     } 
 
     protected override Geometry DefiningGeometry

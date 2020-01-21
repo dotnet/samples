@@ -51,7 +51,6 @@ namespace SamplesAspNet
             maxMsgNumber = 10;
 
             // More custom initialization goes here.
-
         }
         // </Snippet2>
 
@@ -84,7 +83,6 @@ namespace SamplesAspNet
             
             // Clear the buffer.
             msgBuffer.Clear();
-
         }
         // </Snippet3>
 
@@ -175,9 +173,7 @@ namespace SamplesAspNet
             }
         }
         // </Snippet6>
-
     }
-
 }
 
 // </Snippet1>

@@ -40,7 +40,6 @@ namespace Samples
         public SecondCustomException(string message)
             : base(message)
         {
-
         }
 
         public SecondCustomException(string message, Exception innerException)

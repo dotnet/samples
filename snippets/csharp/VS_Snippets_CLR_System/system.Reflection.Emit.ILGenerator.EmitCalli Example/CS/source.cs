@@ -41,7 +41,5 @@ class MyDynamicAssembly
 	// More IL code emission here ...
 	
 	// </Snippet1>
-
    }
-
 }

@@ -28,7 +28,6 @@ namespace RemotingSamples
          CallContext.SetHeaders(arrHeader);
          return "HeaderMethod " + name;
       }
-
    }
 // </Snippet3>
 

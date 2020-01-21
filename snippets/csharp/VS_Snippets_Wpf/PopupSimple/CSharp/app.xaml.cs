@@ -18,6 +18,5 @@ namespace Popup_Properties_Sample
       Window1 mainWindow = new Window1();
       mainWindow.Show();
     }
-
   }
 }

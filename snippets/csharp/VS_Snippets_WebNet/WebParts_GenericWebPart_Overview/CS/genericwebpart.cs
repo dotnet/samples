@@ -75,6 +75,5 @@ public partial class genericwebpart_sample : System.Web.UI.Page
       "<em>GenericWebPart Parent ID: </em>" + listPart.Parent.ID;
   }
   // </snippet4>
-
 }
 // </snippet3>

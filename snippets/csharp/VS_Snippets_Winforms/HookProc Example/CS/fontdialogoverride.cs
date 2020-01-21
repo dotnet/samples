@@ -43,13 +43,11 @@ protected override IntPtr HookProc(IntPtr hWnd, int msg, IntPtr wParam, IntPtr l
 		case WM_MOVE:
 			System.Diagnostics.Trace.Write("The WM_MOVE message was received.");
 			break;
-
 	}
 
 	// Always call the base class hook procedure.
 
 	return base.HookProc(hWnd, msg, wParam, lParam);
-
 }
 //</snippet1>
 
@@ -59,6 +57,5 @@ protected override IntPtr HookProc(IntPtr hWnd, int msg, IntPtr wParam, IntPtr l
 			// TODO: Add constructor logic here
 			//
 		}
-
 	}
 }

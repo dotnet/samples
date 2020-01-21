@@ -18,6 +18,5 @@ namespace ScrollChangedEventArgs_layout
 			mainWindow.InitializeComponent();
 			mainWindow.Show();
         }
-
 	}
 }

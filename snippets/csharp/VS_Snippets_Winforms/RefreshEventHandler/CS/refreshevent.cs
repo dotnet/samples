@@ -71,7 +71,6 @@ namespace PropertyChanged
 			this.Text = "Form1";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.ResumeLayout(false);
-
 		}
 		#endregion
 
@@ -99,7 +98,6 @@ protected static void OnRefresh(System.ComponentModel.RefreshEventArgs e)
     Console.WriteLine(e.ComponentChanged.ToString());
 }
 //</snippet1>
-
 	}
 
 	class Control : Component 
@@ -119,5 +117,4 @@ protected static void OnRefresh(System.ComponentModel.RefreshEventArgs e)
 			}
 		}
 	}
-
 }

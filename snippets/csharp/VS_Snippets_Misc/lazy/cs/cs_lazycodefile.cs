@@ -104,7 +104,6 @@ namespace CS_lazy
     {
         public DataInitializedFromDb(SqlDataReader reader) { }
         public int Count { get; private set; }
-
     }
     class MyClass3
     {
@@ -243,9 +242,7 @@ namespace CS_lazy
 
         static int[] GetPrimeFactors(long bigNum)
         { return new int[1]; }
-          
     }
-
 }
 
 namespace HowToSnippets
@@ -289,7 +286,6 @@ namespace HowToSnippets
                         return _text.Value;
                     }                    
                 }
-                
             }
         static void Main()
         {
@@ -301,7 +297,6 @@ namespace HowToSnippets
                 new WebPage("", ""),
                 new WebPage("", ""),
             };
-           
         }
     }
 }

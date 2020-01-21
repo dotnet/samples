@@ -21,6 +21,5 @@ namespace WeakEvents
         {
             MessageBox.Show("EventClientWEPV4UsingManager handles EventSource.SomeEvent");
         }
-
     }
 }

@@ -26,9 +26,7 @@ public class SamplesCultureInfo
             Console.WriteLine("(no associated specific culture)");
          }
       }
-
    }
-
 }
 
 

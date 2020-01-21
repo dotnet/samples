@@ -178,12 +178,9 @@ namespace Input_Ovw
 
         private void handler1(object sender, MouseButtonEventArgs e)
         {
-
         }
         private void handler2(object sender, MouseButtonEventArgs e)
         {
-
         }
-
     }
 }

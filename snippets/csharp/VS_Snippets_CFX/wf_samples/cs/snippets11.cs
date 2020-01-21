@@ -162,7 +162,6 @@ namespace WF_Snippets
             this.Activities.Add(this.BookingCag);
             this.Name = "SimpleConditionedActivityGroupWorkflow";
             this.CanModifyActivities = false;
-
         }
         // </snippet156>
 
@@ -236,7 +235,6 @@ namespace WF_Snippets
             this.Name = "DiscountPolicyWorkflow";
             this.Completed += new System.EventHandler(this.WorkflowCompleted);
             this.CanModifyActivities = false;
-
         }
 
         private PolicyActivity advancedDiscountPolicy;
@@ -289,7 +287,6 @@ namespace WF_Snippets
             this.Activities.Add(this.ReplicatorWork);
             this.Name = "SimpleReplicatorWorkflow";
             this.CanModifyActivities = false;
-
         }
 
         private SampleReplicatorChildActivity SampleReplicatorChildActivity1;
@@ -451,7 +448,6 @@ namespace WF_Snippets
             this.Name = "ThrowWorkflow";
             this.CanModifyActivities = false;
             // </snippet179>
-
         }
 
         private Exception thrownExceptionValue = new System.Exception("My Exception Message.");
@@ -463,7 +459,6 @@ namespace WF_Snippets
         }
 
         private ThrowActivity throwActivity1;
-
     }
     // </snippet178>
 
@@ -520,6 +515,5 @@ namespace WF_Snippets
             this.Sequence2.Name = "Sequence2";
             // </snippet180>
         }
-
     }
 }

@@ -71,7 +71,6 @@ namespace Examples.CS.WebControls.Design
             }
 
             return markup;
-
         } // GetDesignTimeHtml
         // </snippet2>
     } // MyLoginStatusDesigner

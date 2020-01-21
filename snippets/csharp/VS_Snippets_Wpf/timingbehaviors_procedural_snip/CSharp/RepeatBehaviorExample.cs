@@ -229,7 +229,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             myStopStoryboard.BeginStoryboardName = myBeginStoryboard.Name;
             myEventTrigger1.Actions.Add(myStopStoryboard);
             myStackPanel.Triggers.Add(myEventTrigger1);
-
         }
     }
 }

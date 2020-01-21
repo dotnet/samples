@@ -163,7 +163,6 @@ class HttpWebRequest_BeginGetResponse
       
       responseStream.Close();
     }
-
     }
     catch(WebException e)
     {
@@ -172,8 +171,6 @@ class HttpWebRequest_BeginGetResponse
       Console.WriteLine("\nStatus:{0}",e.Status);
     }
     allDone.Set();
-
   }
 // </Snippet1>
-
 }

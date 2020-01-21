@@ -21,7 +21,6 @@ namespace CustomControls
       // Your code goes here.
     } 
   }
-
 }
 
 //</snippet1>

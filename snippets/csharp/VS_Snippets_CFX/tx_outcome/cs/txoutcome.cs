@@ -42,9 +42,7 @@ namespace Microsoft.Samples.Transactions.Quickstarts
 							break;
 						}
 					}
-
 				}
-
 			}
 			catch (System.Transactions.TransactionException ex)
 			{

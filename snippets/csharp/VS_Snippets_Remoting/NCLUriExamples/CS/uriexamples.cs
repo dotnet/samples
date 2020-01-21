@@ -34,7 +34,6 @@ namespace Example
 
             // snippet 19
             UnescapeUriWithPlusConversion();
-
         }
 
         private static void SampleToString()
@@ -102,7 +101,6 @@ namespace Example
             //    Uri is not a local host
             //    Uri is a file
         //</snippet6>
-            
         }
 
         private static void HexConversions()
@@ -126,7 +124,6 @@ namespace Example
             else
                  Console.WriteLine("The character is not hexadecimal encoded");
         //</snippet2>
-                    
         }
 
         // MakeRelative
@@ -238,8 +235,6 @@ namespace Example
             String PlusString = DataString.Replace('+',' ');
             Console.WriteLine("plus to space string: {0}", PlusString);
         //</snippet19>
-
         }
-
     }
 }

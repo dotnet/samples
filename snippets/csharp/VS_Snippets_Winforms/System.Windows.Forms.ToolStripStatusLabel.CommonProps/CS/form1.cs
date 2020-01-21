@@ -61,7 +61,6 @@ namespace WindowsApplication5
             statusStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
-
         }
     }
 }

@@ -57,11 +57,8 @@ namespace SDKSample
                             item.IsSigned = true;
                         }
                     }// end:foreach (XpsDigitalSignature
-
                 }// end:foreach (XpsSignatureDefinition
-
             }// end:foreach (IXpsFixedDocumentReader
-
         }// end:IterateSignatureDefinitions()
 
 		//</SnippetIterateSignatureDefinitions>
@@ -116,7 +113,6 @@ namespace SDKSample
                     item.IsSigned = true;
                 }
             }// end:foreach (XpsDigitalSignature
-
         }// end:IterateSignatures()
 
         //<SnippetSignXpsDocument>
@@ -148,11 +144,8 @@ namespace SDKSample
                 xpsDocument.SignDigitally(
                     cert, true, XpsDigSigPartAlteringRestrictions.None);
             }
-
         }// end:SignXps()
 
         //</SnippetSignXpsDocument>
-
     }// end:class SignatureUtilites
-
 }// end:namespace

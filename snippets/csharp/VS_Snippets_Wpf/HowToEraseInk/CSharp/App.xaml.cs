@@ -15,5 +15,4 @@ using System.Configuration;
         {
             InitializeComponent();
         }
-
     }

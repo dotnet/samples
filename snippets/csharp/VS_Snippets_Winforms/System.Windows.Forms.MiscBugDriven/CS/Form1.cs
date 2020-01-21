@@ -47,7 +47,6 @@ namespace ImageListCollectionEx
             numericUpDown1.Accelerations.Add(new NumericUpDownAcceleration(5, 1000));
             numericUpDown1.Accelerations.Add(new NumericUpDownAcceleration(8, 5000));
             Controls.Add(numericUpDown1);
-       
         }
         //</snippet6>
 
@@ -142,9 +141,7 @@ namespace ImageListCollectionEx
                 imageList1.Draw(this.CreateGraphics(), new Point(10,10), i);
                 Application.DoEvents();
                 System.Threading.Thread.Sleep(1000);
-                
             }
-
         }
 //</snippet1>
 
@@ -169,8 +166,6 @@ namespace ImageListCollectionEx
             this.Name = "Form1";
 
             this.ResumeLayout(false);
-            
         }
-
     }
 }

@@ -52,7 +52,6 @@ public class GacIdentityPermissionDemo
             if (p3 != null)
             {
                 Console.WriteLine("The union of two GacIdentityPermissions was successful.");
-
             }
             else
             {
@@ -64,11 +63,9 @@ public class GacIdentityPermissionDemo
         {
             Console.WriteLine("An exception was thrown : " + e);
             return false;
-
         }
 
         return true;
-
     }
     // </Snippet3>
     // <Snippet4>
@@ -84,7 +81,6 @@ public class GacIdentityPermissionDemo
             if (p3 != null)
             {
                 Console.WriteLine("The intersection of the two permissions = " + p3.ToString() + "\n");
-
             }
             else
             {
@@ -95,11 +91,9 @@ public class GacIdentityPermissionDemo
         {
             Console.WriteLine("An exception was thrown : " + e);
             return false;
-
         }
 
         return true;
-
     }
     //</Snippet4>
     //<Snippet5>
@@ -117,7 +111,6 @@ public class GacIdentityPermissionDemo
             {
                 Console.WriteLine("Result of copy = " + Gac2.ToString() + "\n");
             }
-
         }
         catch (Exception e)
         {
@@ -126,7 +119,6 @@ public class GacIdentityPermissionDemo
         }
 
         return true;
-
     }
     //</Snippet5>
     //<Snippet6>
@@ -160,7 +152,6 @@ public class GacIdentityPermissionDemo
         }
 
         return true;
-
     }
     //</Snippet6>
     // Invoke all demos.
@@ -195,7 +186,6 @@ public class GacIdentityPermissionDemo
         returnCode = tempReturnCode && returnCode;
 
         return (returnCode);
-
     }
     // Test harness.
     public static void Main(String[] args)

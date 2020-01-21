@@ -74,7 +74,6 @@ namespace DataViewWinFormsSample
 
                 // Fill the data set with the contact information.
                 contactsDataAdapter.Fill(dataSet, "Contact");
-
             }
             catch (SqlException ex)
             {

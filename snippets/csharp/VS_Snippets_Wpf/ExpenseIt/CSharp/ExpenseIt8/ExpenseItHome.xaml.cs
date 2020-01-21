@@ -30,7 +30,6 @@ namespace ExpenseIt
             // View Expense Report
             ExpenseReportPage expenseReportPage = new ExpenseReportPage(this.peopleListBox.SelectedItem);
             this.NavigationService.Navigate(expenseReportPage);
-
         }
         //</Snippet27>
     }

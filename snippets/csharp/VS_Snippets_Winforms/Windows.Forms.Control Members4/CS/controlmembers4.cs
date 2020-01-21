@@ -134,7 +134,6 @@ namespace ControlMembers4
          this.Text = "Form2";
          this.panel1.ResumeLayout(false);
          this.ResumeLayout(false);
-
       }
 		#endregion
 
@@ -198,6 +197,5 @@ private void treeView1_AfterLabelEdit(object sender, NodeLabelEditEventArgs e)
    treeView1.LabelEdit = false;
 }
 // </snippet3>
-
    }
 }

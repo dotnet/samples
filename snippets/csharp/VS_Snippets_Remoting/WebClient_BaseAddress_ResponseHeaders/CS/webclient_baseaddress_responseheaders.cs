@@ -50,7 +50,6 @@ public class WebClient_BaseAddress
             for (int i=0; i < myWebHeaderCollection.Count; i++)				
             	Console.WriteLine ("\t" + myWebHeaderCollection.GetKey(i) + " = " + myWebHeaderCollection.Get(i));
 // </Snippet2>
-
         } 
         catch (WebException e) 
         {

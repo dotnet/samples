@@ -264,12 +264,10 @@ public static void ReceiveFrom_Callback(IAsyncResult ar){
 	          	               "data = {1} ", strContent.Length, strContent));
 	     }
 	     s.Close();
-	     
 	}
 //</Snippet10>
 }
 
 public static void Main(){
 }
-
 }

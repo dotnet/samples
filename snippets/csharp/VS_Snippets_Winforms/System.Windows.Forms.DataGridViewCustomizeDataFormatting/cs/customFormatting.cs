@@ -98,6 +98,5 @@ public class Form1 : Form
     {
         Application.Run(new Form1());
     }
-
 }
 //</Snippet00>

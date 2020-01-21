@@ -39,7 +39,6 @@ public class ReceiptNumberGeneratorClass
 // </snippet3>
         // Return nextReceiptNumber
         return nextReceiptNumber;
-            
     }
 }
 // </snippet0>

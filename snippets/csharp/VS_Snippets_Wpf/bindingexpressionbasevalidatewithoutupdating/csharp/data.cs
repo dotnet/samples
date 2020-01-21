@@ -93,13 +93,11 @@ namespace BindingExpressionBaseValidateWithoutUpdating
         {
             currentData = copyData;
             NotifyPropertyChanged("");
-
         }
 
         public virtual void EndEdit()
         {
             copyData = new ItemData();
-
         }
 
         #endregion
@@ -128,12 +126,10 @@ namespace BindingExpressionBaseValidateWithoutUpdating
             {
                 return new ValidationResult(false, 
                     "The call number must have 6 characters after the period (.).");
-
             }
 
             return ValidationResult.ValidResult;
         }
     }
-
 }
 //</SnippetData>

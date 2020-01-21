@@ -16,5 +16,4 @@ public class Form1: Form
         table.ChildRelations.Add("New Relation", column1, column2);
     }
     // </Snippet1>
-
 }

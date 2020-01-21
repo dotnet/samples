@@ -13,6 +13,5 @@ namespace MenuStyles
 
 	public partial class MyApp : Application
 	{
-
 	}
 }

@@ -57,7 +57,6 @@ public class FileIOPermissionDemo
                     {
                         Console.WriteLine(firstPermission + " is not a subset of " + secondPermission + "\n");
                     }
-
                 }
                 catch (Exception e)
                 {
@@ -124,13 +123,10 @@ public class FileIOPermissionDemo
                     Console.WriteLine("An exception was thrown for union " + e);
                     returnValue = false;
                 }
-
             }
-
         }
 
         return returnValue;
-
     }
     //</Snippet3>
 
@@ -191,7 +187,6 @@ public class FileIOPermissionDemo
         }
 
         return returnValue;
-
     }
     //</Snippet4>
 
@@ -233,7 +228,6 @@ public class FileIOPermissionDemo
                     if (fileIO1 == "")
                     {
                         Console.WriteLine("The target FileIOPermission is empty, copy failed.");
-
                     }
                     else
                     {
@@ -276,7 +270,6 @@ public class FileIOPermissionDemo
                 fileIOPerm2 = new FileIOPermission(PermissionState.None);
                 fileIOPerm2.FromXml(fileIOPerm1.ToXml());
                 Console.WriteLine("Result of ToFromXml = " + fileIOPerm2.ToString() + "\n");
-
             }
             catch (Exception e)
             {
@@ -286,7 +279,6 @@ public class FileIOPermissionDemo
         }
 
         return returnValue;
-
     }
     //</Snippet6>
 
@@ -333,7 +325,6 @@ public class FileIOPermissionDemo
 
             Console.WriteLine("Write access = \n" +
                 fileIOPerm1.GetPathList(FileIOPermissionAccess.AllAccess));
-
         }
         catch (ArgumentException e)
         {
@@ -364,7 +355,6 @@ public class FileIOPermissionDemo
             Console.WriteLine("Adding AllAccess rights for local files.");
             fileIOPerm1.AllLocalFiles = FileIOPermissionAccess.AllAccess;
             Console.WriteLine("AllLocalFiles access = " + fileIOPerm1.AllLocalFiles);
-
         }
         catch (ArgumentException e)
         {
@@ -418,7 +408,6 @@ public class FileIOPermissionDemo
         ret = retTmp && ret;
 
         return (ret);
-
     }
     // Test harness.
     public static void Main(String[] args)
@@ -500,7 +489,6 @@ internal class FileIOGenerator
             file = "";
             fileIndex++;
             return true;
-
         }
         if (fileIndex > myFile.Length)
         {

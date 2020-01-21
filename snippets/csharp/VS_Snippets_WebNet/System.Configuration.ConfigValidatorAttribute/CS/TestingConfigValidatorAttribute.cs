@@ -35,9 +35,7 @@ namespace Samples.AspNet
                     
                     car.SectionInformation.ForceSave = true;
                     config.Save(ConfigurationSaveMode.Full);
-
                 }
-
             }
             catch (ConfigurationErrorsException err)
             {
@@ -66,7 +64,6 @@ namespace Samples.AspNet
                 Console.WriteLine("Commute Make: {0} Color: {1} Miles: {2} Year: {3}",
                     cars.Commute.Make, cars.Commute.Color,
                     cars.Commute.Miles, cars.Commute.Year);
-
             }
             catch (ConfigurationErrorsException err)
             {
@@ -102,7 +99,6 @@ namespace Samples.AspNet
 
                 cars.Dream = dreamCar;
                 cars.Commute = commuteCar;
-
             }
             catch (ConfigurationErrorsException err)
             {
@@ -114,9 +110,7 @@ namespace Samples.AspNet
         {
             GetCars();
             NotAllowedCars();
-    
         }
-
     }
 }
 // </Snippet41>

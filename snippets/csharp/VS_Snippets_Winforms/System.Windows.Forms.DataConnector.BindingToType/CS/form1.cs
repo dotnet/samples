@@ -32,12 +32,10 @@ class Form1 : Form
 
         // Bind the DataGridView control to the BindingSource.
         dgv.DataSource = bSource;
-       
     }
     public static void Main()
     {
         Application.Run(new Form1());
-     
     }
 
     private void button1_Click(object sender, EventArgs e)

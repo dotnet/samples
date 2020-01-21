@@ -51,7 +51,6 @@ namespace ServiceDescriptionSnippet
 
             serviceHost.Open();
             // </Snippet3>
-
         }
 
         public void Snippet9()

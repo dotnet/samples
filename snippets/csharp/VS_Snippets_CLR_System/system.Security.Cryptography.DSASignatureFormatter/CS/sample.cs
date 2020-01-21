@@ -24,13 +24,11 @@ class DSASample
 
 			//Create a signature for HashValue and return it.
 			byte[] SignedHash = DSAFormatter.CreateSignature(Hash);
-
 		}
 		catch(CryptographicException e)
 		{
 			Console.WriteLine(e.Message);
 		}
 	}
-
 }
 // </Snippet1>

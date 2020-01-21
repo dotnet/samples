@@ -55,7 +55,6 @@ namespace Samples.AspNet.CS
             }
 
             return Source;
-          
         }
 // </snippet2>
         
@@ -99,10 +98,7 @@ namespace Samples.AspNet.CS
             }
 
             return Source;
-          
         }
-
     }
-
 }
 // </snippet1>

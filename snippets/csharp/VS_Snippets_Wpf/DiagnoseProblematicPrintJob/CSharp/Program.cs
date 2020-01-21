@@ -61,7 +61,6 @@ namespace DiagnoseProblematicPrintJob
                             jobList = jobList + "\n\t\tJob: " + job.JobName + " ID: " + job.JobIdentifier;
                         }
                     }// end for each print job    
-
                 }// end for each print queue
                 //</SnippetEnumerateJobsInQueues>
             }// end while list of print servers is not yet exhausted
@@ -114,9 +113,7 @@ namespace DiagnoseProblematicPrintJob
             // End the program
             Console.WriteLine("\nPress Return to end.");
             Console.ReadLine();
-  
         }// end Main
-
     }// end Program class
 
     class TroubleSpotter
@@ -168,7 +165,6 @@ namespace DiagnoseProblematicPrintJob
             {
                 Console.WriteLine("The printer needs human intervention.");
             }
- 
         }//end SpotTroubleUsingProperties
         // </SnippetSpotTroubleUsingJobProperties>
 
@@ -225,7 +221,6 @@ namespace DiagnoseProblematicPrintJob
             {
                 Console.WriteLine("The printer needs human intervention.");
             }
-          
         }//end SpotTroubleUsingJobAttributes
         // </SnippetSpotTroubleUsingJobAttributes>
 
@@ -256,7 +251,6 @@ namespace DiagnoseProblematicPrintJob
                     theJob.Cancel();
                 }
             }//end if the queue should be resumed
-
         }//end HandlePausedJob
         //</SnippetHandlePausedJob>
         
@@ -288,9 +282,7 @@ namespace DiagnoseProblematicPrintJob
                 {
                     Console.WriteLine(TimeConverter.ConvertToLocalHumanReadableTime(theJob.HostingPrintQueue.StartTimeOfDay).ToShortTimeString());
                 }
-
             }//end if at least one is not available
-
         }//end ReportQueueAndJobAvailability
         //</SnippetReportQueueAndJobAvailability>
 
@@ -335,7 +327,6 @@ namespace DiagnoseProblematicPrintJob
             return available;
         }//end ReportAvailabilityAtThisTime
         // </SnippetUsingJobStartAndUntilTimes>
-
     }//end TroubleSpotter class
 
     //<SnippetTimeConverter>
@@ -357,10 +348,7 @@ namespace DiagnoseProblematicPrintJob
             DateTime localTime = utcTime.ToLocalTime();
 
             return localTime;
-
         }// end ConvertToLocalHumanReadableTime
-
     }//end TimeConverter class
     //</SnippetTimeConverter>
-
 }// end namespace

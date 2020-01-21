@@ -20,14 +20,12 @@ namespace BrushesIntroduction
        public GradientBrushesExample()
        {
             InitializeComponent();
-       
        }
        
        private void pageLoaded(object sender, RoutedEventArgs args)
        {
             showHideGradientStopsCheckBox.Checked += new RoutedEventHandler(showGradientStops);
             showHideGradientStopsCheckBox.Unchecked += new RoutedEventHandler(hideGradientStops);
-       
        }
 
        private void showGradientStops(object sender, RoutedEventArgs args)
@@ -58,7 +56,5 @@ namespace BrushesIntroduction
                gradientPath4.Opacity = 0.0;
                gradientPath5.Opacity = 0.0;
        }       
-            
     }
-   
 }

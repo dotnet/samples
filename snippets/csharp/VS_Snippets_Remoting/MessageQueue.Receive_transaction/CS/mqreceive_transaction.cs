@@ -95,7 +95,6 @@ namespace MyProject
 
                 // Commit the transaction.
                 myTransaction.Commit();
-
             }
 			
             catch (MessageQueueException e)

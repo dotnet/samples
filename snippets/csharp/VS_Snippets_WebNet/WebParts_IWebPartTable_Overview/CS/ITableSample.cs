@@ -95,9 +95,7 @@ namespace Samples.AspNet.CS.Controls
 			{
 				return ((TableProviderWebPart)control).ConnectionPointEnabled;
 			}
-
 		}
-
 	}
 
   // This code sample creates a Web Parts control that acts as a consumer 
@@ -169,10 +167,7 @@ namespace Samples.AspNet.CS.Controls
         allowsMultipleConnections)
       {
       }
-
     } // TableConsumerConnectionPoint
-
   } // TableConsumer
-
 } // Samples.AspNet.CS.Controls
 //</SNIPPET2>

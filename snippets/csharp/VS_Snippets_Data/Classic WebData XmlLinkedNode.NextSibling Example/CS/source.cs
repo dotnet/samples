@@ -16,7 +16,6 @@
       Console.WriteLine(book.OuterXml);
       Console.WriteLine();
       Console.WriteLine(book.NextSibling.OuterXml);
- 
    }
  }
     // </Snippet1>

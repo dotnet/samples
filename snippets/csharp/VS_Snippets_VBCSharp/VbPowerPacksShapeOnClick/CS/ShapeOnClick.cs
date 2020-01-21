@@ -47,5 +47,4 @@ namespace VbPowerPacksShapeOnClickCS
         }
     }
     // </Snippet1>
-
 }

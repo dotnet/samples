@@ -72,7 +72,6 @@ namespace Samples
         {
             // Not implemented.
         }
-
     }
     //</snippet3>
 
@@ -125,7 +124,6 @@ namespace Samples
         {
             throw new NotImplementedException();
         }
-      
     }
 }
 namespace Samples2
@@ -389,5 +387,4 @@ namespace Samples2
             get { throw new Exception("The method or operation is not implemented."); }
         }
     }
-
 }

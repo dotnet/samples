@@ -18,6 +18,5 @@ namespace UsingPageFunctionsSample
         {
             InitializeComponent();
         }
-
     }
 }

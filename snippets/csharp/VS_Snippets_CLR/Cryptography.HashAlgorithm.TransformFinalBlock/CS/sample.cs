@@ -60,6 +60,5 @@ class MainClass
 		sha.TransformFinalBlock(input, offset, input.Length - offset);
 		Console.WriteLine("MultiBlock {0:00}: {1}", size, BytesToStr(sha.Hash));
 	}
-
 }
 // </Snippet1>

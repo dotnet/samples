@@ -12,13 +12,11 @@ namespace Microsoft.ServiceModel.Samples
     interface IMyService {
 
     //Define the contract operations.
-
     }
 
     class MyService : IMyService {
 
     //Implement the IMyService operations.
-
     }
     //</snippet10>
 
@@ -62,6 +60,5 @@ namespace Microsoft.ServiceModel.Samples
 
             //</snippet3>
         }
-
     }
 }

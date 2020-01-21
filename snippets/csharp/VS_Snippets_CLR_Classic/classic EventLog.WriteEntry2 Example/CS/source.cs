@@ -13,7 +13,6 @@ class MySample{
         
         // Write an informational entry to the event log.    
         myLog.WriteEntry("Writing warning to event log.", EventLogEntryType.Warning);
-        
     }
 }
       

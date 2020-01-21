@@ -507,7 +507,6 @@ namespace SdkSample
             ShowPrompt(
                 "Click 'File | Open...' to select a file to open and view.");
             rightsBlock.Text = "";
-
         }// end:CloseDocument
         //</SnippetRmPkgViewCloseDoc>
         #endregion File|Close
@@ -685,5 +684,4 @@ namespace SdkSample
         #endregion private fields
 
     }// end:partial class Window1
-
 }// end:namespace SdkSample

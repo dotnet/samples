@@ -9,7 +9,6 @@ public class Group
    // This attribute will be overridden.
    [SoapAttribute (Namespace = "http://www.cpandl.com")]
    public string GroupName;
-   
 }
 
 public class Run
@@ -18,7 +17,6 @@ public class Run
    {
       Run test = new Run();
       test.SerializeOverride("SoapOveride.xml");
-     
    }
 
    public void SerializeOverride(string filename)
@@ -39,7 +37,6 @@ public class Run
       // Serialize the class, and close the TextWriter.
       overRideSerializer.Serialize(writer, myGroup);
        writer.Close();
-
    }
 
    private XmlSerializer CreateOverrideSerializer(){
@@ -66,7 +63,6 @@ public class Run
       XmlSerializer ser = new XmlSerializer(myMapping);
       return ser;
    }
-
 }
 //<?xml version="1.0" encoding="utf-8" ?> 
 // <Group xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 

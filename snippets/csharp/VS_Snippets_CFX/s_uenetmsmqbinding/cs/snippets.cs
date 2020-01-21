@@ -81,7 +81,5 @@ namespace UE.ServiceModel.Samples
 		EnvelopeVersion envelopeVersion = binding.EnvelopeVersion;
 		// </Snippet9>
 	}
-
     }
-
 }

@@ -136,9 +136,7 @@ namespace ClientAppServicesDemo
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
     }
-
 }
 //</snippet200>

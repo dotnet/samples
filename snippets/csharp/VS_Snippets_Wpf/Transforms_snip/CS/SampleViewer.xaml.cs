@@ -15,7 +15,5 @@ namespace Microsoft.Samples.TransformExamples
         {
             InitializeComponent();
         }
-
     }
-
 }

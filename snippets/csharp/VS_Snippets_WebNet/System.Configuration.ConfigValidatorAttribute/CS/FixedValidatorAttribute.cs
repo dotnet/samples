@@ -52,7 +52,6 @@ namespace Samples.AspNet
 
                     throw new ConfigurationErrorsException(
                        "My dream car cannot be older than " + minYear.ToString());
-
                 }
 
                 // Make sure the car can still run on its own
@@ -61,7 +60,6 @@ namespace Samples.AspNet
                   throw new ConfigurationErrorsException(
                         "My dream car drive odometer cannot read more than " + 
                         maxMiles.ToString() + " miles");
-  
                 }
 
                 // Validate color
@@ -70,15 +68,12 @@ namespace Samples.AspNet
                     throw new ConfigurationErrorsException(
                         "My dream car can oly be " + color);
                 }
-
             }
             catch (ConfigurationErrorsException err)
             {
                 Console.WriteLine(err.ToString());
             }
         }
-
     }
-
   }
 // </Snippet21>

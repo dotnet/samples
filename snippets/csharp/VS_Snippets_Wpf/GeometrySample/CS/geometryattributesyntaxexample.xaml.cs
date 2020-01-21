@@ -15,8 +15,6 @@ namespace Microsoft.Samples.Graphics.Geometries
        public GeometryAttributeSyntaxExample()
        {
             InitializeComponent();
-       
        }
-
     }
 }

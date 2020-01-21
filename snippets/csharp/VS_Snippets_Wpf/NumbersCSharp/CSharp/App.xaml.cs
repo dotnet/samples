@@ -12,6 +12,5 @@ namespace BidiTest
 
     public partial class App : Application
     {
-
     }
 }

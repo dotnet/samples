@@ -180,7 +180,6 @@ namespace IPFilter
             }
             public IPAddress IP   { get { return myIPAddressObject; }
             }
-
         }
 
         [SecurityPermission(SecurityAction.Demand)]
@@ -280,7 +279,6 @@ namespace IPFilter
                 return myFilterSet;
             }
         }
-
     } // class MyIPFilterChannelSink
 
     public enum FilterMode
@@ -294,5 +292,4 @@ namespace IPFilter
         IPAddress Mask { get; }
         IPAddress IP { get; }
     } // interface IFilter
-
 } // namespace IPFilter

@@ -35,7 +35,6 @@ namespace Examples.NegotiateStreamExamples
                 }
                 Console.WriteLine("Client connected.");
             }
-        
         }
         //<snippet1>
         public static void AuthenticateClient(TcpClient clientRequest)

@@ -24,7 +24,6 @@ class Program
                 // Remove path information from string.
                 Console.WriteLine("{0}", 
                     dir.Substring(dir.LastIndexOf("\\") + 1));
-
             }
             Console.WriteLine("{0} directories found.", 
                 dirs.Count<string>().ToString());

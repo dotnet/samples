@@ -20,7 +20,6 @@ public class Sample
       XmlAttribute attr = root.GetAttributeNode("genre");
       Console.WriteLine(attr.Value);
    }
-
   }
 }
    // </Snippet1>

@@ -58,7 +58,6 @@ namespace Service
                 return new Rss20FeedFormatter(feed);
             else 
                 return new Atom10FeedFormatter(feed);
-            
         }
     }
 

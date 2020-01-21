@@ -41,7 +41,6 @@ namespace Samples.AspNet.CS
 			HttpContext ctx = HttpContext.Current;
 			ctx.Response.Write(" Executing PostAcquireRequestState ");
 		}
-
 	}
 }
 // </Snippet1>

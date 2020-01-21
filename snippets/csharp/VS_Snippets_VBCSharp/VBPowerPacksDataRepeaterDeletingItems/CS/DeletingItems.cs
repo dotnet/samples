@@ -23,14 +23,12 @@ namespace DeletingItemsCS
             this.Validate();
             this.employeesBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.northwndDataSet);
-
         }
 
         private void DeletingItems_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'northwndDataSet.Employees' table. You can move, or remove it, as needed.
             this.employeesTableAdapter.Fill(this.northwndDataSet.Employees);
-
         }
         // <Snippet1>
         private void DataRepeater1_DeletingItems(object sender, 

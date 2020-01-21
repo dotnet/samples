@@ -19,9 +19,7 @@ public class SamplesRegionInfo  {
       Console.WriteLine( "   TwoLetterISORegionName:       {0}", myRI1.TwoLetterISORegionName );
       Console.WriteLine( "   CurrencySymbol:               {0}", myRI1.CurrencySymbol );
       Console.WriteLine( "   ISOCurrencySymbol:            {0}", myRI1.ISOCurrencySymbol );
-
    }
-
 }
 
 /*

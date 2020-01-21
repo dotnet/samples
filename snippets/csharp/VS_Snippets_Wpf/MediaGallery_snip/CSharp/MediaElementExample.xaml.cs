@@ -26,7 +26,6 @@ namespace SDKSample
 
          // Initialize the MediaElement property values.
          InitializePropertyValues();
-
       }
 
       // Pause the media.
@@ -36,7 +35,6 @@ namespace SDKSample
          // The Pause method pauses the media if it is currently running.
          // The Play method can be used to resume.
          myMediaElement.Pause();
-
       }
 
       // Stop the media.
@@ -46,7 +44,6 @@ namespace SDKSample
          // The Stop method stops and resets the media to be played from
          // the beginning.
          myMediaElement.Stop();
-
       }
 
       // Change the volume of the media.
@@ -94,7 +91,6 @@ namespace SDKSample
          myMediaElement.Volume = (double)volumeSlider.Value;
          myMediaElement.SpeedRatio = (double)speedRatioSlider.Value;
       }
-
    }
 }
 // </SnippetCodeBehindMediaElementExampleWholePage>

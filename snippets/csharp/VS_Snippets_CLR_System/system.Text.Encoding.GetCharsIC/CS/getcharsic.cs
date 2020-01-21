@@ -35,7 +35,6 @@ public class SamplesEncoding  {
       PrintCountsAndChars( barrBE, 0, 8, u32BE );
       Console.Write( "LE array with LE encoding : " );
       PrintCountsAndChars( barrLE, 0, 8, u32LE );
-
    }
 
    public static void PrintCountsAndChars( byte[] bytes, int index, int count, Encoding enc )  {
@@ -59,9 +58,7 @@ public class SamplesEncoding  {
       // enc.GetChars( bytes, index, count, chars, 0 );
 
       Console.WriteLine( chars );
-
    }
-
 }
 
 

@@ -15,7 +15,6 @@ namespace SampleApp
     
         public app()
         {
-
         }
 
         void AppStartingUp(object sender, StartupEventArgs e)
@@ -26,6 +25,5 @@ namespace SampleApp
             mainWindow.Height = 600;
             mainWindow.Show();
         }
-
     }
 }

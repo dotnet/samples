@@ -100,7 +100,6 @@ public class SamplesCompareInfo  {
       PrintMarker( "           u\u0308 : ", -1, myComp.LastIndexOf( myStr, "u\u0308", iS, CompareOptions.IgnoreCase ) );
       PrintMarker( "            Ü : ", -1, myComp.LastIndexOf( myStr, 'Ü', iS, CompareOptions.IgnoreCase ) );
       PrintMarker( "            ü : ", -1, myComp.LastIndexOf( myStr, 'ü', iS, CompareOptions.IgnoreCase ) );
-
    }
 
    public static void PrintMarker( String Prefix, int First, int Last )  {
@@ -127,14 +126,12 @@ public class SamplesCompareInfo  {
 
          // Displays the array of Char as a String.
          Console.WriteLine( "{0}{1}", Prefix, new String( myCharArr ) );
-
       }
       else
         {
             Console.WriteLine( Prefix );
         }
     }
-
 }
 
 

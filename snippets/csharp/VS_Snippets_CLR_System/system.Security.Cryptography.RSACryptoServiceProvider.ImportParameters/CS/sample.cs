@@ -25,14 +25,12 @@ class RSACSPSample
                 RSA2.ImportParameters(RSAParams);
                 }
             }
-
         }
         catch (CryptographicException e)
         {
             //Catch this exception in case the encryption did
             //not succeed.
             Console.WriteLine(e.Message);
-
         }
         // </Snippet1>
     }

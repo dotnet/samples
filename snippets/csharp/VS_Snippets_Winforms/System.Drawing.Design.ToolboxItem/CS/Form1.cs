@@ -54,7 +54,6 @@ namespace CustomToolboxItem
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
-
         }
 
         protected override void Dispose(bool disposing)
@@ -123,7 +122,6 @@ namespace CustomToolboxItem
             this.Name = "UserControl1";
             this.Padding = new System.Windows.Forms.Padding(6);
             this.ResumeLayout(false);
-
         }
 
         protected override void Dispose(bool disposing)
@@ -134,7 +132,6 @@ namespace CustomToolboxItem
             }
             base.Dispose(disposing);
         }
-
     }
 
 //<snippet3>
@@ -265,7 +262,6 @@ namespace CustomToolboxItem
             this.Name = "ToolboxItemDialog";
             this.Text = "ToolboxItemDialog";
             this.ResumeLayout(false);
-
         }
 
         public string CreationText

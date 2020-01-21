@@ -28,5 +28,4 @@ public class Form1: Form
         DataSet1.Tables["OrderDetails"].Columns.Add(column);
     }
     // </Snippet1>
-
 }

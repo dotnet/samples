@@ -56,7 +56,6 @@ public class EnvironmentPermissionDemo
             " = " + ((EnvironmentPermission)envIdPerm3).GetPathList(EnvironmentPermissionAccess.Read).ToString());
 
         return returnValue;
-
     }
     //</Snippet3>
     // Intersect creates and returns a new permission that is the intersection of
@@ -89,7 +88,6 @@ public class EnvironmentPermissionDemo
         }
     
         return returnValue;
-
     }
     //</Snippet4>
     //Copy creates and returns an identical copy of the current permission.
@@ -132,7 +130,6 @@ public class EnvironmentPermissionDemo
         Console.WriteLine("Result of ToFromXml = " + envPerm2.ToString() + "\n");
 
         return returnValue;
-
     }
     //</Snippet6>
     // AddPathList adds access for the specified environment variables to the existing state of the permission.
@@ -210,7 +207,6 @@ public class EnvironmentPermissionDemo
         ret = retTmp && ret;
 
         return (ret);
-
     }
     // Test harness.
     public static void Main(String[] args)

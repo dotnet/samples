@@ -7,7 +7,6 @@ public class Example
    {
       for (decimal value = 100m; value <= 102m; value += .1m)
          Console.WriteLine("{0} --> {1}", value, Decimal.Round(value));
-
    }
 }
 // The example displays the following output:

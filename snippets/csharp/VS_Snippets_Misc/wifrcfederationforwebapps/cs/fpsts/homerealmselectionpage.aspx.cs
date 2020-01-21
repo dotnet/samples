@@ -82,6 +82,5 @@ public partial class HomeRealmSelectionPage : System.Web.UI.Page
             RealmSelection.Items.Add("IPSTS-1");
             RealmSelection.Items.Add("IPSTS-2");
         }
-    
     }
 }

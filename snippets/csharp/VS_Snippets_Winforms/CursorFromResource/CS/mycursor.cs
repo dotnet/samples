@@ -123,7 +123,6 @@ private void myButton_MouseLeave(object sender, System.EventArgs e)
 			this.Name = "Form1";
 			this.Text = "Form1";
 			this.ResumeLayout(false);
-
 		}
 		#endregion
 
@@ -137,6 +136,5 @@ private void myButton_MouseLeave(object sender, System.EventArgs e)
 		{
 			this.SetCursor();
 		}
-
 	} // end class
 } // end namespace

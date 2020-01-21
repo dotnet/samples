@@ -38,7 +38,6 @@ namespace DP_L2E_Materialization_Example
                 // Execute the second query and print the count.
                 query2.ToList();
                 Console.WriteLine("Count: " + count);
-
             }
 
             Console.WriteLine("Hit enter...");

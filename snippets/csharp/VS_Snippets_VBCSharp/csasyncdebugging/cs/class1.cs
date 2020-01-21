@@ -20,6 +20,5 @@ namespace AsyncDebuggingCS
             await Task.Delay(1000);
             return 5;
         }
-
     }
 }

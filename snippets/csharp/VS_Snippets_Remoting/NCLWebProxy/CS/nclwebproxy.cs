@@ -102,7 +102,6 @@ public class ExampleForWebProxy
             {
                 Console.WriteLine(bypass[i]);
             }
-        
         }
         //</snippet10>   
         
@@ -178,7 +177,5 @@ public class ExampleForWebProxy
              */
            // CreateProxyAndCheckBypass(false); 
            CreateProxyWithCredentials2( false);
-            
         }
-        
     }

@@ -313,6 +313,5 @@ namespace HowToStrings
                 Console.WriteLine("a and c are not interned.");
             // </Snippet9>
         }
-
     }
 }

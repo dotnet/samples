@@ -41,6 +41,5 @@ namespace UE.Samples
             NetNamedPipeBinding binding = new NetNamedPipeBinding("CalcConfig");
             // </Snippet4>
         }
-
     }
 }

@@ -37,7 +37,6 @@ namespace SDKSample
 
             this.Content = myStackPanel;
         }
-
     }
 }
 // </SnippetSetBackgroundColorOfShapeCodeExampleWholePage>

@@ -644,7 +644,6 @@ namespace RolloverItemDemoLib
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
@@ -660,6 +659,5 @@ namespace RolloverItemDemoLib
             Application.Run(new RolloverItemTestForm());
         }
     }
-
 }
 // </snippet1>

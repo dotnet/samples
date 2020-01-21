@@ -148,5 +148,4 @@ namespace DataBindingLab
         Color,
         Highlight
     }
-
 }

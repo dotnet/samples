@@ -63,7 +63,6 @@ namespace MyProject
 			{
 				Console.WriteLine(e.Message);
 			}
-			
 		}
 
 		//**************************************************
@@ -118,7 +117,6 @@ namespace MyProject
 				Console.WriteLine("____________________________________________");
 
 				returnString =  myMessage.Id;
-				
 			}
 			
 			catch (MessageQueueException)
@@ -177,7 +175,6 @@ namespace MyProject
 
 				// Handle other causes of invalid operation exception.
 			}
-
 		}
 	}
 }

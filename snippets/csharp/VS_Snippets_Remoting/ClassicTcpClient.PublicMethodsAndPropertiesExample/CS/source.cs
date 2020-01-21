@@ -184,7 +184,6 @@ public class MyTcpClientExample
             string returndata = Encoding.UTF8.GetString (bytes);
 
             Console.WriteLine ("This is what the host returned to you: " + returndata);
-            
         }
         else
         {
@@ -198,7 +197,6 @@ public class MyTcpClientExample
         netStream.Close();
 
         // </Snippet14>
-        
     }
 
     public static void Main ()

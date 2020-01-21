@@ -133,7 +133,6 @@ namespace Microsoft.ServiceModel.Samples
           Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result);
 
           eptwcfClient.Close();
-
         }
         catch (TimeoutException timeProblem)
         {

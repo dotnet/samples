@@ -22,5 +22,4 @@ public class Form1: Form
         thisDataSet.ReadXml(fileName);
     }
     // </Snippet1>
-
 }

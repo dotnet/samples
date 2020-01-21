@@ -240,5 +240,4 @@ namespace SDKSample
         #endregion // private variables
 
     }// end:class AnnotationsHelperXps
-
 }// end:namespace SDKSample

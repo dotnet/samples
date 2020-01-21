@@ -27,7 +27,6 @@ namespace UsingXml1
         {
             // Code not shown.
         }
-        
     }
 
     //BankingTransaction is not a data contract class,
@@ -62,7 +61,6 @@ namespace UsingXml1
         public string creditCardNumber;
     }
     //</snippet2>
-
 }
 namespace UsingXml2
 {

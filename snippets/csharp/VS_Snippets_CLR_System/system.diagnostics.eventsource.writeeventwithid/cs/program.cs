@@ -22,7 +22,6 @@ namespace WriteEventRelatedId
             {
                 WriteEventWithRelatedActivityId(1, relatedActivityId, reqId, url);
             }
-
         }
 
         //</snippet1>
@@ -35,7 +34,6 @@ namespace WriteEventRelatedId
             {
                 WriteEventWithRelatedActivityIdCore(1, relatedActivityId, reqId, url);
             }
-
         }
 
         //</snippet5>
@@ -89,7 +87,6 @@ namespace WriteEventRelatedId
             }
 
             //</snippet4>
-
         }
     }
 }

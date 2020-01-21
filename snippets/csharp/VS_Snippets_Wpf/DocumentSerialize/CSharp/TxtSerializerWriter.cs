@@ -336,7 +336,6 @@ namespace SdkSample
             finally
             {
             }
-
         }
 
         private void WalkVisualTree(List<GlyphRun> textObjects, DependencyObject treeObject)
@@ -349,7 +348,6 @@ namespace SdkSample
                 DependencyObject child = VisualTreeHelper.GetChild(treeObject, i);
                 WalkVisualTree(textObjects, child);
             }
-
         }
         private void BuildGlypeTree(List<GlyphRun> textObjects, System.Windows.Media.Drawing drawing)
         {
@@ -364,7 +362,6 @@ namespace SdkSample
                 {
                     BuildGlypeTree(textObjects, children[i]);
                 }
-
             }
         }
 
@@ -423,6 +420,5 @@ namespace SdkSample
             }
              return result;
         }
-        
     }
 }

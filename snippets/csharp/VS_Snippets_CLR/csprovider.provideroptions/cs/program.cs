@@ -34,7 +34,6 @@ namespace ProviderOptions
 
             Console.WriteLine();
         }
-
     }
 }
 //</Snippet1>

@@ -22,7 +22,6 @@ public class Sample
 
     Console.WriteLine("Display the modified XML...");        
     doc.Save(Console.Out);
-
   }
 }
    // </Snippet1>

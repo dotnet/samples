@@ -175,7 +175,6 @@ public class Example
          catch (OverflowException) {
             Console.WriteLine("{0} is outside the range of the UInt64 type.", number);
          }   
-      
       }
       // The example displays the following output:
       //    -32768 is outside the range of the UInt64 type.
@@ -272,7 +271,6 @@ public class Example
          catch (InvalidCastException) {
             Console.WriteLine("No conversion to a UInt64 exists for the {0} value {1}.",
                               value.GetType().Name, value);
-                              
          }
       }                           
       // The example displays the following output:

@@ -26,5 +26,4 @@ public class Form1
         dataSet.EnforceConstraints = true;
     }
     // </Snippet1>
-
 }

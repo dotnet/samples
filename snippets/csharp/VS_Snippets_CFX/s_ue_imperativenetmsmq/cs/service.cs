@@ -86,7 +86,5 @@ namespace Microsoft.ServiceModel.Samples
                 // </Snippet0>
             }
         }
-
     }
-
 }

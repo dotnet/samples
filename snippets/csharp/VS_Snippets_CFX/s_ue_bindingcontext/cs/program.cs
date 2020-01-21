@@ -147,6 +147,5 @@ namespace Program
             XmlDictionaryReaderQuotas quotas = context.GetInnerProperty<XmlDictionaryReaderQuotas>();
             // </Snippet14>
         }
-
     }
 }

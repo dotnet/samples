@@ -12,7 +12,6 @@ namespace ConsoleApplication1
     //A blank example attribute.
     class myAttribute : Attribute
     {
-
     }
 
     //Reflection context with custom rules.
@@ -51,7 +50,6 @@ namespace ConsoleApplication1
                {
                     Console.WriteLine(cd.GetType());
                }
-
             }
 
             Console.WriteLine();

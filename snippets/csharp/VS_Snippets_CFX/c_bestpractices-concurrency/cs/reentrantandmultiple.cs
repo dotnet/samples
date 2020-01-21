@@ -159,5 +159,4 @@ public class SlowHttpFetcher
   {
     return "The return value.";
   }
-  
 }

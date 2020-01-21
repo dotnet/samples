@@ -99,6 +99,5 @@ namespace OperationInfoSnippets
             String infoString = info.ToString();
             //</snippet9>
         }
-
     }
 }

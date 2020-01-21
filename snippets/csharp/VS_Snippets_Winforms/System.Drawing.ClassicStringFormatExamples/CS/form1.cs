@@ -211,7 +211,6 @@ namespace System.Drawing.ClassicStringFormatExamplesCS
             // Paint the regions.
             for (i = 0; i < charRegions.Length; i++)
                 g.FillRegion(redBrush, charRegions[i]);   
-            
         }
         // </snippet3>
 

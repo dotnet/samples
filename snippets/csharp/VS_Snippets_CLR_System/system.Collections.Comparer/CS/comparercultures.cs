@@ -24,9 +24,7 @@ public class SamplesComparer  {
       // Uses the Comparer based on the culture identifier 0x040A (Spanish - Spain, traditional sort).
       Comparer myCompTrad = new Comparer( new CultureInfo( 0x040A, false ) );
       Console.WriteLine( "   Traditional Sort  : {0}", myCompTrad.Compare( str1, str2 ) );
-
    }
-
 }
 
 /*

@@ -86,6 +86,5 @@ namespace WorkflowServiceAttributesSnippets
             attributes.ValidateMustUnderstand = false;
             //</snippet9>
         }
-
     }
 }

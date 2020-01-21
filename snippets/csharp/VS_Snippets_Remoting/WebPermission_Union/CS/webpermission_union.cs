@@ -85,5 +85,4 @@ class WebPermissionUnion
     while (myEnumerator1.MoveNext())
      Console.Write("\t{0}", myEnumerator1.Current);
    }
-
    }

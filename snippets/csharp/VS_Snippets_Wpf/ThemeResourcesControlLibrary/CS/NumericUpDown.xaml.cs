@@ -23,5 +23,4 @@ namespace ThemeReourcesControlLibrary
             InitializeComponent();
         }
     }
-
 }

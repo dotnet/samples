@@ -147,12 +147,10 @@ namespace UIAExpandCollapsePattern_snip
             AutomationPropertyChangedEventHandler expandcollapseStateChange = new AutomationPropertyChangedEventHandler(OnExpandCollapse);
 
             Automation.AddAutomationPropertyChangedEventHandler(targetControl, TreeScope.Element, expandcollapseStateChange, ExpandCollapsePattern.ExpandCollapseStateProperty);
-
         }
 
         private void OnExpandCollapse(object src, AutomationPropertyChangedEventArgs e)
         {
-
         }
 
         ///--------------------------------------------------------------------

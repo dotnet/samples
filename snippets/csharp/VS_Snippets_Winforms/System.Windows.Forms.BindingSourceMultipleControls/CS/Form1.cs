@@ -15,7 +15,6 @@ namespace MultipleControls
         public Form1()
         {
             this.Load += new EventHandler(Form1_Load);
-         
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -143,7 +142,6 @@ namespace MultipleControls
 
             BindingManagerBase bmb = this.BindingContext[set1, "Menu"];
             bmb.BindingComplete += new BindingCompleteEventHandler(bmb_BindingComplete);
-          
         }
 
         private void bmb_BindingComplete(object sender, BindingCompleteEventArgs e)

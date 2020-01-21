@@ -21,8 +21,6 @@ namespace Microsoft.Samples.KeyFrameExamples
         public SampleViewer()
         {
             InitializeComponent();
-
         }
-
     }
 }

@@ -63,8 +63,6 @@ class BarrierDemo
 
         // It's good form to Dispose() a barrier when you're done with it.
         barrier.Dispose();
-
     }
-
 }
 //</snippet01>

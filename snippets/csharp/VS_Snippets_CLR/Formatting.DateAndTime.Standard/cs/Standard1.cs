@@ -176,7 +176,6 @@ public class Class1
       // Displays 2008-04-10T06:30:00.0000000                        
       Console.WriteLine(dateOffset.ToString("o"));
       // Displays 2008-04-10T06:30:00.0000000-07:00                       
-
    }
    
    private static void ShowRSpecifier()

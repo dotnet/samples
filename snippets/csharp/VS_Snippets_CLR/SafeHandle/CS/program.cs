@@ -239,7 +239,6 @@ namespace SafeHandleDemo
                         Console.WriteLine(numIterations);
                 }
             }
-
         }
     }
 }

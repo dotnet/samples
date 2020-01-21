@@ -29,7 +29,6 @@ namespace ControlMembers3
          cust.Name = "Microsoft";
          cust.AccountNumber = 123456;
          this.Tag = cust;
-         
       }
 
       protected override void Dispose( bool disposing )
@@ -152,7 +151,6 @@ namespace ControlMembers3
          this.Name = "Form1";
          this.Text = "Form1";
          this.ResumeLayout(false);
-
       }
 		#endregion
 
@@ -246,7 +244,6 @@ private void menuItemEditInsertCustomerInfo_Click(object sender, EventArgs e)
             textBox1.Font = new Font(menuItem.Text, textBox1.Font.Size);
          }
       }
-
    }
 
    public class CustomerForm : Form
@@ -263,7 +260,6 @@ private void menuItemEditInsertCustomerInfo_Click(object sender, EventArgs e)
       {
          return AccountNumber.ToString() + "\r\n" + Name;
       }
-
    }
 
    public class AboutDialog : Form

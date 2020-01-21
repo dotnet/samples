@@ -13,16 +13,13 @@ public class SamplesDTFI  {
       PrintPattern( "en-US" );
       PrintPattern( "ja-JP" );
       PrintPattern( "fr-FR" );
-
    }
 
    public static void PrintPattern( String myCulture )  {
 
       DateTimeFormatInfo myDTFI = new CultureInfo( myCulture, false ).DateTimeFormat;
       Console.WriteLine( "  {0}     {1}", myCulture, myDTFI.LongDatePattern );
-
    }
-
 }
 
 /*

@@ -53,7 +53,6 @@ namespace Math_Quiz
             sum.Value = 0;
         }
         // </snippet3>
-
     }
 
     public partial class Form2 : Form
@@ -100,7 +99,5 @@ namespace Math_Quiz
             // </snippet18>
             sum.Value = 0;
         }
-
     }
-
 }

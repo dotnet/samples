@@ -12,6 +12,5 @@ namespace TableSnippets
 
     public partial class MyApp : Application
     {
-
     }
 }

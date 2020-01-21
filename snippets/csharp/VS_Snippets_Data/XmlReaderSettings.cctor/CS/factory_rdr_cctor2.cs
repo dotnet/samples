@@ -29,7 +29,5 @@ public class Sample {
 
     // Parse the file. 
     while (reader.Read());
-    
   }
-
 }

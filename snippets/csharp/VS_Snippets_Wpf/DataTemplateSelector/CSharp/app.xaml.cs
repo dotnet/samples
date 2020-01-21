@@ -76,7 +76,6 @@ namespace SDKSample
           item.CurrentPrice = 55;
 
           this.AuctionItems.Add(item);
-
         }
     }
 }

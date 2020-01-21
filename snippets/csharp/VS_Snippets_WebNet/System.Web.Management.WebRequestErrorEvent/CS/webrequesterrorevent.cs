@@ -110,10 +110,8 @@ namespace Samples.AspNet.Management
 
             formatter.AppendLine(
                       "** SampleWebRequestEvent End **");
-
         }
         // </Snippet8>
     }
-
 }
 // </Snippet1>

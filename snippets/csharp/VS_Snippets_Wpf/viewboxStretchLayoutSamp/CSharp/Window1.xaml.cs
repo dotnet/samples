@@ -54,6 +54,5 @@ namespace Viewbox_Stretch_Layout_Samp
             txt2.Text = "StretchDirection is now Both.";
         }
         //</Snippet2>
-
     }
 }

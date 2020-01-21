@@ -17,7 +17,6 @@ public class Form1:
             new EventHandler(ComboBox1_SelectedIndexChanged);
 
         //Add any initialization after the InitializeComponent() call
-
     }
 
     //Form overrides dispose to clean up the component list.
@@ -94,7 +93,6 @@ this.Controls.Add(this.Button2);
         this.Name = "Form1";
         this.Text = "Form1";
         this.ResumeLayout(false);
-
     }
 
     #endregion
@@ -174,7 +172,6 @@ this.Controls.Add(this.Button2);
 
         Button2.Font = new Font(FontFamily.GenericMonospace, 12.0F, 
             FontStyle.Italic, GraphicsUnit.Pixel);
-
     }
     //</snippet3>
     [STAThread]
@@ -182,5 +179,4 @@ this.Controls.Add(this.Button2);
     {
         Application.Run(new Form1());
     }
-
 }

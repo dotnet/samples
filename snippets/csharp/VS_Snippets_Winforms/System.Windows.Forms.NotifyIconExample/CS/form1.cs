@@ -14,7 +14,6 @@ public class Form1:
 		InitializeContextMenu();
 
 		//Add any initialization after the InitializeComponent() call
-
 	}
 
 	//Form overrides dispose to clean up the component list.
@@ -55,7 +54,6 @@ public class Form1:
 		this.ClientSize = new System.Drawing.Size(292, 266);
 		this.Name = "Form1";
 		this.Text = "Form1";
-
 	}
 
 	#endregion
@@ -93,8 +91,6 @@ public class Form1:
 		menuPoint = this.PointToClient(menuPoint);
 
 		NotifyIcon1.ContextMenu.Show(this, menuPoint);
-		
 	}
 	// </snippet1>
-
 }

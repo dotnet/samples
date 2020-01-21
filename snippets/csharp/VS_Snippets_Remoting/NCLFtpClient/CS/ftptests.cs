@@ -852,5 +852,4 @@ public class ApplicationMain
         }
         //</snippet10>
     }
-      
 }

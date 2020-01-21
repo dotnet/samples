@@ -12,6 +12,5 @@ public class Form1: Form
  String username = wp.Identity.Name;
  
 // </Snippet1>
-
  }
 }

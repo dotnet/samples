@@ -18,6 +18,5 @@ namespace FontSizeConverter_Csharp
 			mainWindow.InitializeComponent();
 			mainWindow.Show();
         }
-
 	}
 }

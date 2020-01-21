@@ -76,7 +76,6 @@ namespace Microsoft.Security.Samples
             Test t = new Test();
             Console.WriteLine("Starting....");
             t.Run();
-
         }
 
         private void Run()

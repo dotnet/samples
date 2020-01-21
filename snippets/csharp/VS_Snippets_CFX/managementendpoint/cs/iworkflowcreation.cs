@@ -18,5 +18,4 @@ namespace Microsoft.Samples.WF.ManagementEndpoint
         [OperationContract(Name = "CreateWithInstanceId", IsOneWay=true)]
         void CreateSuspendedWithInstanceId(IDictionary<string, object> inputs, Guid instanceId);
     }
-
 }

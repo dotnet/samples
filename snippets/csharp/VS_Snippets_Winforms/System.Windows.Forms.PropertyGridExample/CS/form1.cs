@@ -111,7 +111,6 @@ public class Form1:
 		// visibility to False so it will not appear when the form loads.
 		propertyGrid1.Visible = false;
 		this.Controls.Add(propertyGrid1);
-
 	}
 	//</snippet2>
 
@@ -133,5 +132,4 @@ public class Form1:
 		propertyGrid1.SelectedObjects = selectedControls;
 	}
 	//</snippet3>
-
 }

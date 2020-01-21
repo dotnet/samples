@@ -22,14 +22,12 @@ namespace HeaderVisibleChangedCS
             this.Validate();
             this.categoriesBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.northwndDataSet);
-
         }
 
         private void HeaderVisibleChanged_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'northwndDataSet.Categories' table. You can move, or remove it, as needed.
             this.categoriesTableAdapter.Fill(this.northwndDataSet.Categories);
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -60,6 +58,5 @@ namespace HeaderVisibleChangedCS
             }
         }
         // </Snippet1>
-
     }
 }

@@ -96,6 +96,5 @@ namespace FloaterFigureSnippets
             FlowDocument flowDoc = new FlowDocument(parx);
             // </Snippet_FloaterProps>
         }
-
     }
 }

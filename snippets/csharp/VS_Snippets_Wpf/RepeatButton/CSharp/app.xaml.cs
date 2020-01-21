@@ -13,6 +13,5 @@ namespace RepeatButtons
 
 	public partial class app : Application
 	{
-
 	}
 }

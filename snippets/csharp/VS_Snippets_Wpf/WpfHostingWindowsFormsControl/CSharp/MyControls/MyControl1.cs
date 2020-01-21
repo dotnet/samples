@@ -37,7 +37,6 @@ namespace MyControls
             InitializeComponent();
 
             // TODO: Add any initialization after the InitComponent call
-
         }
 
         protected override void Dispose(bool disposing)
@@ -202,7 +201,6 @@ namespace MyControls
             this.Size = new System.Drawing.Size(359, 244);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
         #endregion
 

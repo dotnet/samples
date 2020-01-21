@@ -278,7 +278,6 @@ class AssemblyBuilderDemo {
 	// you executed this program.
 
 	return pointType;
-   
    }
 
    public static void Main() {
@@ -295,7 +294,6 @@ class AssemblyBuilderDemo {
 			  null,
 			  ptInstance,
 			  new object[0]); 
-
    }
 }
 

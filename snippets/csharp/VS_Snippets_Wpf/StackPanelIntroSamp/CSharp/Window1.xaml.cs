@@ -24,7 +24,6 @@ namespace StackPanel_layout
             {
 		    sp1.Orientation = System.Windows.Controls.Orientation.Vertical;
             }
-
         }
 
     private void changeHorAlign(object sender, SelectionChangedEventArgs args)
@@ -69,6 +68,5 @@ namespace StackPanel_layout
             }
         }
         //</Snippet2>
-        
     }
 }

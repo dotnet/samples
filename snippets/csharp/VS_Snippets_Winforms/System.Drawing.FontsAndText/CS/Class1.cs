@@ -287,7 +287,6 @@ public class SystemDrawingFontsAndText
 
             // Separate the families with white space.
             pointF.Y += 10;
-
         } // for
         // </snippet51>
     }

@@ -63,6 +63,5 @@ public sealed class CustomTimeSpanMinutesConverter :
         return TimeSpan.FromMinutes((double)min);
     }
     //</Snippet5>
-
 }
 //</Snippet1>

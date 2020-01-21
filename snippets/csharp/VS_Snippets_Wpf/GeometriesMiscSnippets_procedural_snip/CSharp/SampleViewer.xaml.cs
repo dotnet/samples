@@ -24,7 +24,5 @@ namespace SDKSample
             MyPolyQuadraticBezierSegmentExampleFrame.Content = new PolyQuadraticBezierSegmentExample();
             MyPolyBezierSegmentExampleFrame.Content = new PolyBezierSegmentExample();
         }
-        
     }
-
 }

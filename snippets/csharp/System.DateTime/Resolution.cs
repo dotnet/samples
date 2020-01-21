@@ -30,6 +30,5 @@ namespace SystemDateTimeReference
             // Press "Run" to see the output.
             // </Snippet1>
         }
-
     }
 }

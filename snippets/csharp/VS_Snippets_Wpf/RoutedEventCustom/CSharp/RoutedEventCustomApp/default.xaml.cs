@@ -16,6 +16,5 @@ namespace SDKSample
 		{
    			MessageBox.Show("Tapped!");
 		}
-
     }
 }

@@ -41,7 +41,6 @@ public class Example
          foreach (var t in tasks)
             Console.WriteLine("Task {0}: {1}", t.Id, t.Status);
       }
-   
    }
 }
 // The example displays output like the following:

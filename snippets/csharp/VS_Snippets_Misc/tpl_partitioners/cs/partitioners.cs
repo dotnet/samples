@@ -117,7 +117,6 @@ namespace PartitionerTests
                     {
                         Console.WriteLine("    {0:##.###}", (double)(v * .075213));
                     }
-
                 });
         }
     }
@@ -342,7 +341,6 @@ namespace PartitionerTests
             Thread.SpinWait(i * 1000);
             return i;
         }
-
     }
     //</snippet05>
 

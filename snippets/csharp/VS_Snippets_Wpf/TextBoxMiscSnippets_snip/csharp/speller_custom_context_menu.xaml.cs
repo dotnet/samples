@@ -80,7 +80,6 @@ namespace SDKSample
 
             return cm;
         }
-
     }
 }
 // </SnippetSpellerCustomContextMenuCodeExampleWholePage>

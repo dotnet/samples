@@ -95,9 +95,7 @@ namespace Samples.AspNet
             Console.WriteLine("Anonymous identification enabled: {0}",
                 aIdEnabled.ToString());
             // </Snippet11>
-
         }
-
     }
 }
 // </Snippet1>

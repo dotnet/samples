@@ -159,7 +159,5 @@ namespace Microsoft.ServiceModel.Samples
                 serviceHost.Close();
             }
         }
-
     }
-
 }

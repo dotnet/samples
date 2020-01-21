@@ -33,5 +33,4 @@ private void CreateDataTable()
    table.Rows.Add(new object[] {2, "Bill", 56.87});
 }
 // </Snippet1>
-
 }

@@ -19,7 +19,6 @@ namespace ShowStatusUpdates
 
             Console.WriteLine("Enter any key to quit.");
             Console.ReadLine();
-
         }
 
         static void watcher_StatusChanged(object sender, GeoPositionStatusChangedEventArgs e)
@@ -43,7 +42,6 @@ namespace ShowStatusUpdates
                     break;
             }
         }
-
     }
 }
 //</snippet1>

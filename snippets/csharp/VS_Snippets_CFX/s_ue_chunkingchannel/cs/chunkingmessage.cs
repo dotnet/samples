@@ -74,6 +74,5 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
         {
             get { return this.chunkReader; }
         }
-
     }
 }

@@ -20,9 +20,7 @@ public class SamplesTaiwanCalendar  {
             Console.Write( "\t{0}", myCal.IsLeapMonth( y, m, TaiwanCalendar.CurrentEra ) );
          Console.WriteLine();
       }
-
    }
-
 }
 
 /*

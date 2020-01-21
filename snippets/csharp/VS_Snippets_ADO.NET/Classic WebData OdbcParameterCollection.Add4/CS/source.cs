@@ -20,5 +20,4 @@ public class Form1: Form
             "CustomerID", OdbcType.VarChar, 5, "CustomerID");
     }
     // </Snippet1>
-
 }

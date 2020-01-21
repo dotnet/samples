@@ -27,15 +27,11 @@ namespace Microsoft.Samples.Animation
                 StreamWriter wr = new StreamWriter("error.txt");
                 wr.Write(args.ExceptionObject.ToString());
                 wr.Close();
-            
             }catch
             {
-            
             }
 
             MessageBox.Show("Unhandled exception: " + args.ExceptionObject.ToString());
         }     
-    
     }
-
 }

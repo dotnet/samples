@@ -54,7 +54,6 @@ namespace OfficeWalkthroughCS
             wordApp.Documents.Add();
             wordApp.Selection.PasteSpecial(Link: true, DisplayAsIcon: true);
             //</snippet10>
-
         }
 
         //<snippet4>

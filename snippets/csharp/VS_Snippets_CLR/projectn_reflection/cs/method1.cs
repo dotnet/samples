@@ -63,7 +63,6 @@ namespace ContosoApplication
 
           outputBlock.Text += String.Format("'{0}'\n", 
                                Stringify.ConvertToString(new object[] { date, "F", fr }));
-
         }
     }
     // </Snippet8>
@@ -148,5 +147,4 @@ internal class TextBlock
       set { s = value; }
    }
 }
-
 }

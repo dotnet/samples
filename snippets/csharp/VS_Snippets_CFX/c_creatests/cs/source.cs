@@ -39,7 +39,6 @@ namespace CreateSts
         {
             SecurityKeyIdentifier encryptingKeyIdentifier = new SecurityKeyIdentifier(encryptingToken.CreateKeyIdentifierClause<X509ThumbprintKeyIdentifierClause>());
             return new SecurityKeyIdentifier(new EncryptedKeyIdentifierClause(encryptedKey, SecurityAlgorithms.RsaOaepKeyWrap, encryptingKeyIdentifier));
-
         }
         //</snippet3>
 
@@ -155,7 +154,6 @@ namespace Client
             rcc.ScopedCertificates.Add(new Uri("http://fabrikam.com/sts"), cert);
             //</snippet19>
             //</snippet33>
-
         }
 
         //<snippet20>
@@ -231,7 +229,6 @@ namespace Client
             client.ClientCredentials.SupportInteractive = false;
         }
         //</snippet27>
-
     }
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
@@ -293,5 +290,4 @@ namespace Client
             return base.Channel.CalculateTax(a);
         }
     }
-
 }

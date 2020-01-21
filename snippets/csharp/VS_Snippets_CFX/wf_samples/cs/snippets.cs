@@ -121,7 +121,6 @@ class snippets
         // Obtain a reference to the instance's parent runtime
         WorkflowRuntime runtime2 = workflowInstance.WorkflowRuntime;
         //</snippet7>
-
     }
 
     public void Container1()
@@ -352,7 +351,6 @@ class snippets
             {
                 //For the purpose of this sample, return a blank SequentialWorkflowActivity.
                 return new SequentialWorkflowActivity();
-
             }
 
             protected override Activity CreateInstance(Type workflowType)

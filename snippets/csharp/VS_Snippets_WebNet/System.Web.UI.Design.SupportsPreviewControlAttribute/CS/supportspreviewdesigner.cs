@@ -36,7 +36,6 @@ namespace ControlDesignerSamples.CS
 
                 ctrl.Style.Add(HtmlTextWriterStyle.FontStyle, "Italic");
                 html = base.GetDesignTimeHtml();
-
             }
             catch (System.Exception e)
             {
@@ -48,7 +47,6 @@ namespace ControlDesignerSamples.CS
             
             return html;
         }
-
     }
 
     // Derive a simple Web control from Label to render a text string.

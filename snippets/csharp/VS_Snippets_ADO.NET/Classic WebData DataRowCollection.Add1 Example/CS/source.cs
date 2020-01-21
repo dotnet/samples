@@ -22,5 +22,4 @@ public class Form1: Form
         DataRow row = rowCollection.Add(rowVals);
     }
     // </Snippet1>
-
 }

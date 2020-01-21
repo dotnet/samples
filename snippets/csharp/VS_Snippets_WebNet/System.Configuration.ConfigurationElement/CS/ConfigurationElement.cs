@@ -113,7 +113,6 @@ namespace Samples.AspNet
                 Console.WriteLine("[CreateSection: {0}]",
                     e.ToString());
             }
-
         }
         // </Snippet1>
 
@@ -142,14 +141,12 @@ namespace Samples.AspNet
                     elements.RemoveElementName);
                 Console.WriteLine("Default Clear name: {0}",
                     elements.ClearElementName);
-
             }
             catch (ConfigurationErrorsException e)
             {
                 Console.WriteLine("[AddElementName: {0}]",
                     e.ToString());
             }
-
         }
 
         // <Snippet2> 
@@ -194,14 +191,12 @@ namespace Samples.AspNet
                          property.IsRequired.ToString());
                     }
                 }
-
             }
             catch (ConfigurationErrorsException e)
             {
                 Console.WriteLine("[GetProperties: {0}]",
                     e.ToString());
             }
-
         }
         // </Snippet2> 
 
@@ -250,14 +245,12 @@ namespace Samples.AspNet
                 else
                     Console.WriteLine(
                         "Section was locked, could not update.");
-
             }
             catch (ConfigurationErrorsException e)
             {
                 Console.WriteLine("[LockItem: {0}]",
                     e.ToString());
             }
-
         }
         // </Snippet3> 
 
@@ -305,9 +298,7 @@ namespace Samples.AspNet
 
                     // Save the change.
                     config.Save(ConfigurationSaveMode.Full);
-
                 }
-
             }
             catch (ConfigurationErrorsException err)
             {
@@ -431,7 +422,6 @@ namespace Samples.AspNet
                 Console.WriteLine("[ModifyElement: {0}]",
                     err.ToString());
             }
-
         }
 
         // </Snippet6>
@@ -473,7 +463,6 @@ namespace Samples.AspNet
                 Console.WriteLine("[ReadOnlyElements: {0}]",
                     err.ToString());
             }
-
         }
         // </Snippet7>
 
@@ -577,9 +566,7 @@ namespace Samples.AspNet
                         i += 1;
 
                         config.Save(ConfigurationSaveMode.Full);
-
                     }
-
                 }
             }
             catch (ConfigurationErrorsException e)
@@ -587,7 +574,6 @@ namespace Samples.AspNet
                 Console.WriteLine("[LockAttributes: {0}]",
                     e.ToString());
             }
-
         }
         // </Snippet8> 
 
@@ -647,9 +633,7 @@ namespace Samples.AspNet
                         i += 1;
 
                         config.Save(ConfigurationSaveMode.Full);
-
                     }
-
                 }
             }
             catch (ConfigurationErrorsException e)
@@ -658,9 +642,7 @@ namespace Samples.AspNet
                     "[LockAllAttributesExcept: {0}]",
                     e.ToString());
             }
-
         }
         // </Snippet9> 
-
     }
 }

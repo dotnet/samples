@@ -94,7 +94,6 @@ namespace SampleDataGridTableStyle
          this.Load += new System.EventHandler(this.DataGridTableStyle_Sample_Load);
          ((System.ComponentModel.ISupportInitialize)(this.myDataGrid)).EndInit();
          this.ResumeLayout(false);
-
       }
       #endregion
 
@@ -233,5 +232,4 @@ namespace SampleDataGridTableStyle
 // </Snippet2>
 // </Snippet1>
    }
-
 }

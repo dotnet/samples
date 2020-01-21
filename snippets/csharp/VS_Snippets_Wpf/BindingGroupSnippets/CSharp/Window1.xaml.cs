@@ -12,7 +12,6 @@ namespace BindingGroupSnippets
         public Window1()
         {
             InitializeComponent();
-            
         }
 
         //<SnippetWindowLogic>
@@ -25,7 +24,6 @@ namespace BindingGroupSnippets
                 MessageBox.Show("Item submitted");
                 stackPanel1.BindingGroup.BeginEdit();
             }
-
         }
         //</SnippetCommitEdit>
 
@@ -37,7 +35,6 @@ namespace BindingGroupSnippets
             if (e.Action == ValidationErrorEventAction.Added)
             {
                 MessageBox.Show(e.Error.ErrorContent.ToString());
-
             }
         }
         //</SnippetErrorHandler>
@@ -66,6 +63,5 @@ namespace BindingGroupSnippets
         //</SnippetCancelEdit>
 
         //</SnippetWindowLogic>
-
     }
 }

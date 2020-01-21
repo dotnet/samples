@@ -7,7 +7,6 @@ public class Example
    {
       NoMatch();
       Console.WriteLine("-----");
-
    }
 
    private static void NoMatch()

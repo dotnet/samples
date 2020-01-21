@@ -34,13 +34,11 @@ class UsingConfigurationCollectionAttribute
             Console.WriteLine("Created custom section in the application configuration file: {0}",
                 config.FilePath);
             Console.WriteLine();
-
         }
         catch (ConfigurationErrorsException err)
         {
             Console.WriteLine("CreateCustomSection: {0}", err.ToString());
         }
-
     }
 
     static void ReadCustomSection()
@@ -71,13 +69,11 @@ class UsingConfigurationCollectionAttribute
                         myUrlsSection.Urls[i].Port);
                 }
             }
-          
         }
         catch (ConfigurationErrorsException err)
         {
             Console.WriteLine("ReadCustomSection(string): {0}", err.ToString());
         }
-
     }
     
     static void Main(string[] args)

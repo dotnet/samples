@@ -16,7 +16,6 @@ public static void Main()
 
 {
    DataGridTableStuff dg = new DataGridTableStuff();
-   
 }
 
 private void SetUp()
@@ -158,7 +157,6 @@ private void AddCustomDataTableStyle(){
 
    // Use AddRange to add to the collection.
    myDataGrid.TableStyles.AddRange(myGrids);
-
    }
    //</snippet5>
 
@@ -170,5 +168,4 @@ private void AddCustomDataTableStyle(){
       Console.WriteLine(isContained);
    }
    //</snippet6>
-
 }

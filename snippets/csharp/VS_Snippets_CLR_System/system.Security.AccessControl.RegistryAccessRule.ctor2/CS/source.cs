@@ -95,7 +95,6 @@ public class Example
             Console.WriteLine("   Inherited? {0}", ar.IsInherited);
             Console.WriteLine();
         }
-
     }
 }
 

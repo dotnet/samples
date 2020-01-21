@@ -12,7 +12,6 @@ namespace WeakEvents
 
         private SomeEventWeakEventManager()
         {
-
         }
 
         /// <summary>
@@ -100,5 +99,4 @@ namespace WeakEvents
         }
     }
     //</SnippetWeakEventManagerTemplate>
-
 }

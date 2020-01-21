@@ -27,7 +27,6 @@
      Validate(doc1, xsc); //Should pass.
      Validate(doc2, xsc); //Should fail.   
      Validate(doc3, xsc); //Should fail. 
- 
    }    
  
    public static void Main ()
@@ -58,7 +57,6 @@
 
       //Close the reader.
       vreader.Close();
- 
    } 
 
    private void ValidationCallBack (object sender, ValidationEventArgs args)
@@ -66,7 +64,6 @@
       m_success = false;
  
       Console.Write("\r\n\tValidation error: " + args.Message);
-
    }  
  }
    // </Snippet1>

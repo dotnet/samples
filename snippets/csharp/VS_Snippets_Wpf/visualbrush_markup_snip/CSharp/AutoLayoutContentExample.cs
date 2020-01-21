@@ -154,6 +154,5 @@ namespace SDKSample
             // </SnippetAutoLayoutContentParentedUIElementExample>
             return myStackPanel;
         }
-        
     }
 }

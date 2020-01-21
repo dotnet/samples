@@ -815,5 +815,4 @@ namespace SDKSampleHelper
         #endregion // private members
 
     };//end:class WPFContent
-
 }// end:namespace SDKSampleHelper

@@ -115,7 +115,6 @@ namespace IndexersSamples
             }
             catch (ArgumentOutOfRangeException)
             {
-
             }
 
             try
@@ -125,7 +124,6 @@ namespace IndexersSamples
             }
             catch (ArgumentOutOfRangeException)
             {
-
             }
         }
     }

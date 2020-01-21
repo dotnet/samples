@@ -143,7 +143,6 @@ class TestILGenerator {
  	   ivType = ivTypeBld.CreateType();
 
 	   return ivType;
-
  	}
 
 	public static void Main() {
@@ -178,9 +177,7 @@ class TestILGenerator {
 	   // +++ OUTPUT +++
 	   // ---
 	   // (10, 10, 10) . (20, 20, 20) = 600 
-	    
 	}
-    
 }
 
 // </Snippet1>

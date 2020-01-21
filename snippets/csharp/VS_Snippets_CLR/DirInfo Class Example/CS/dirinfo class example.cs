@@ -25,7 +25,6 @@ class Test
             // Delete the directory.
             di.Delete();
             Console.WriteLine("The directory was deleted successfully.");
-
         } 
         catch (Exception e) 
         {

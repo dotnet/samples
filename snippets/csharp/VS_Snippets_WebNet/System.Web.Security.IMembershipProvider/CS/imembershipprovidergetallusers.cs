@@ -786,7 +786,6 @@ public override MembershipUser GetUser(string username, bool userIsOnline)
         updateCmd.ExecuteNonQuery();
       }
     }
-
   }
   catch (OdbcException)
   {
@@ -1206,7 +1205,6 @@ public override MembershipUser GetUser(object providerUserKey, bool userIsOnline
         updateCmd.ExecuteNonQuery();
       }
     }
-
   }
   catch (OdbcException)
   {
@@ -1455,6 +1453,5 @@ public override MembershipUser GetUser(object providerUserKey, bool userIsOnline
         returnBytes[i] = Convert.ToByte(hexString.Substring(i*2, 2), 16);
       return returnBytes;
     }
-
 }
 }

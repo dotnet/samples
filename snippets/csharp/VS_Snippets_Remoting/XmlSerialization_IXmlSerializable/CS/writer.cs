@@ -15,6 +15,5 @@ public class Writer {
     XmlSerializer serializer = new XmlSerializer(typeof(Person));
     serializer.Serialize(writer, fred);
   }
-
 }
 // </snippet10>

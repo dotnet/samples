@@ -139,7 +139,6 @@ for (int ai = 0;
 			}
 		}
 	} // UsingWebPartsSection class end.
-
 } // Samples.Aspnet.SystemWebConfiguration namespace end.
 
 // </Snippet1>

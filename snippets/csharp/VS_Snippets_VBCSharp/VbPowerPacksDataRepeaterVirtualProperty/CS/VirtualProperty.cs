@@ -21,7 +21,6 @@ namespace VirtualPropertyCS
             this.Validate();
             this.productsBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.northwndDataSet);
-
         }
 
         private void VirtualProperty_Load(object sender, EventArgs e)

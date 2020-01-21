@@ -30,6 +30,5 @@ NavigationService frameNS = this.frame.NavigationService;
 NavigationService navigationHostNS = NavigationService.GetNavigationService(this.frame);
 //</SnippetNSFrameDiffCODE2>
         }
-
     }
 }

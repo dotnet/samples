@@ -38,15 +38,12 @@ class Example
             anotherP = (Point)Marshal.PtrToStructure(pnt, typeof(Point));
 
             Console.WriteLine("The value of new point is " + anotherP.x + " and " + anotherP.y + ".");
-
         }
         finally
         {
             // Free the unmanaged memory.
             Marshal.FreeHGlobal(pnt);
         }
-
     }
-
 }
 //</SNIPPET1>

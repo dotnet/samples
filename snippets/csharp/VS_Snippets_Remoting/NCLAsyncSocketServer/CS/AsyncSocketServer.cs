@@ -36,7 +36,6 @@ namespace AsyncSocketSample
             get { return m_socket; }
             set { m_socket = value; }
         }
-
     }
 
     //<Snippet1>
@@ -101,7 +100,6 @@ namespace AsyncSocketSample
             m_freeIndexPool.Push(args.Offset);
             args.SetBuffer(null, 0, 0);
         }
-
     }
     //</Snippet1>
 
@@ -148,7 +146,6 @@ namespace AsyncSocketSample
         {
             get { return m_pool.Count; }
         }
-
     }
     //</Snippet2>
 
@@ -218,7 +215,6 @@ namespace AsyncSocketSample
                 // add SocketAsyncEventArg to the pool
                 m_readWritePool.Push(readWriteEventArg);
             }
-
         }
 
         // Starts the server such that it is listening for 
@@ -313,7 +309,6 @@ namespace AsyncSocketSample
                 default:
                     throw new ArgumentException("The last operation completed on the socket was not a receive or send");
             }       
-    
         }
         
         // This method is invoked when an asynchronous receive operation completes. 
@@ -337,7 +332,6 @@ namespace AsyncSocketSample
                 {
                     ProcessSend(e);
                 }
-              
             }
             else
             {
@@ -391,7 +385,6 @@ namespace AsyncSocketSample
             m_maxNumberAcceptedClients.Release();
             Console.WriteLine("A client has been disconnected from the server. There are {0} clients connected to the server", m_numConnectedSockets);
         }
-
     }    
     //</Snippet3>
     
@@ -460,7 +453,6 @@ namespace AsyncSocketSample
             Server server = new Server(numConnections, receiveSize);
             server.Init();
             server.Start(localEndPoint);
-
         }
     }
 }

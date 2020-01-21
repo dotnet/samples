@@ -71,7 +71,6 @@ namespace SystemTextJsonSamples
             double average = sum / count;
             Console.WriteLine($"Average grade : {average}");
             // </SnippetAverageGrades2>
-
         }
     }
 }

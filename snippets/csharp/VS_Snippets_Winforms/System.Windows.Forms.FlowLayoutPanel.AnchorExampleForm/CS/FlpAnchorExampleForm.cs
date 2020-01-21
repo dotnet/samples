@@ -211,7 +211,6 @@ public class Form1 : Form
 		this.flowLayoutPanel1.ResumeLayout(false);
 		this.flowLayoutPanel1.PerformLayout();
 		this.ResumeLayout(false);
-
 	}
 
 	[STAThread]

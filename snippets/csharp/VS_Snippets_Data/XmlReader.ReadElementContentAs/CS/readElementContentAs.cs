@@ -14,7 +14,6 @@ class Read_Typed_Element {
 	ReadElementContentAs_1() ;
 	ReadElementContentAsObject();
              ReadElementContentAsDouble_1();
-
    }
 
 public static void ReadElementContentAsString_1() {
@@ -136,5 +135,4 @@ using (XmlReader reader = XmlReader.Create("hireDate_1.xml")) {
 }
 //</snippet14>
 }
-
 } // end class.

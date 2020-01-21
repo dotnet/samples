@@ -79,7 +79,6 @@ public class LogicalMethodInfo_Create
       else
          Console.WriteLine("\nThe return type is {0}",
                                  myLogicalMethodInfo.ReturnType);
-
    }
 }
 // </Snippet1>

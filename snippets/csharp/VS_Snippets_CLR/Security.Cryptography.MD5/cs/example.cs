@@ -27,7 +27,6 @@ namespace MD5Sample
                     Console.WriteLine("The hashes are not same.");
                 }
             }
-
         }
         static string GetMd5Hash(MD5 md5Hash, string input)
         {
@@ -68,7 +67,6 @@ namespace MD5Sample
                 return false;
             }
         }
-
     }
 }
 

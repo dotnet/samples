@@ -40,7 +40,6 @@ namespace Samples
                     // Put code here that runs after the LogRequest event completes.
                 }
             }
-
         }
     }
 }

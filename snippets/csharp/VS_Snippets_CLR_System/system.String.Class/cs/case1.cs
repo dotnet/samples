@@ -21,7 +21,6 @@ public class Example
             string upperWord = word.ToUpper(culture);
             sw.WriteLine("   {0,10}: {1,7} {2, 38}", name, 
                          upperWord, ShowHexValue(upperWord));
-     
          }
          sw.WriteLine();  
       }

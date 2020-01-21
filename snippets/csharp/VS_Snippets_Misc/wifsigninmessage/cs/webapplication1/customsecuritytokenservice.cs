@@ -184,7 +184,6 @@ namespace PassiveFlowSTS
                         outgoingIdentity.AddClaim(new Claim(FPSTS_AGE_RANGE_CLAIM, "Age is >= 21", ClaimValueTypes.String));
                     else
                         outgoingIdentity.AddClaim(new Claim(FPSTS_AGE_RANGE_CLAIM, "Age is less than 21", ClaimValueTypes.String));
-
                 }
                 else if (claim.Type.Equals(IPSTS1_IDENTIFIER_CLAIM))
                 {
@@ -255,5 +254,4 @@ namespace PassiveFlowSTS
             }
         }
     }
-
 }

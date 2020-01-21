@@ -5,12 +5,10 @@ using System;
 
 public class Person : person
 {
- 
 }
 
 public class person
 {
- 
 }
 // Compilation produces a compiler warning like the following:
 //    Naming1.cs(11,14): warning CS3005: Identifier 'person' differing 
@@ -52,6 +50,5 @@ public class Example
 {
    public static void Main()
    {
-
    }
 }

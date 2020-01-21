@@ -56,7 +56,6 @@ class XMLDSIGDetached
         {
             Console.WriteLine(e.Message);
         }
-
     }
 
     // Sign an XML file and save the signature in a new file.
@@ -86,7 +85,6 @@ class XMLDSIGDetached
         XmlTextWriter xmltw = new XmlTextWriter(XmlSigFileName, new UTF8Encoding(false));
         xmlDigitalSignature.WriteTo(xmltw);
         xmltw.Close();
-
     }
 
     // Verify the signature of an XML file and return the result.
@@ -112,6 +110,5 @@ class XMLDSIGDetached
         // Check the signature and return the result.
         return signedXml.CheckSignature(Key);
     }
-
 }
 // </Snippet1>

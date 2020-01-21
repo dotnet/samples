@@ -16,6 +16,5 @@ namespace Microsoft.Samples.KeyFrameAnimations
             SampleViewer mainWindow = new SampleViewer();
             mainWindow.Show();
         }
-
     }
 }

@@ -9,7 +9,6 @@ class Typed_Read_Methods {
 
               ReadContentAsBoolean();
               ReadContentAs();                          
-
    }
 
 public static void ReadContentAsBoolean() {
@@ -40,5 +39,4 @@ public static void ReadContentAsBoolean() {
   }
 //</snippet2>
 }
-
 } // end class.

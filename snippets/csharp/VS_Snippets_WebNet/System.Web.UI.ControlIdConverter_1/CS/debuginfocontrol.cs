@@ -60,7 +60,6 @@ namespace Samples.AspNet.CS {
           writer.Write("It is not visible on the page.<BR>");
 
         writer.Write("</Font>");
-
       }
     }
   }

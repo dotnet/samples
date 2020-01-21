@@ -73,7 +73,6 @@ namespace Samples.AspNet.CS.Controls {
                     RecurseDataBindInternal(RootNode, enumerable, 1);
                 }
                 finally {
-                
                 }
             }
         }
@@ -130,7 +129,6 @@ namespace Samples.AspNet.CS.Controls {
                     }
                     
                     if ( _maxDepth < depth) _maxDepth = depth;
-                    
                 }
             }
         }

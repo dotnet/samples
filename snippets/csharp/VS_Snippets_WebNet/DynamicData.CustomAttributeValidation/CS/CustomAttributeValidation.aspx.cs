@@ -22,7 +22,6 @@ public partial class CustomAttributeValidation : System.Web.UI.Page
         // Assign title dynamically.
         Title = string.Concat("Customize <i>Phone</i> Data Field Validation",
             "Using a Custom Attribute");
-
     }
 }
 // </Snippet4> 

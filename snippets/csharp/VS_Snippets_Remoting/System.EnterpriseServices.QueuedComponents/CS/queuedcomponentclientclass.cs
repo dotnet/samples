@@ -23,7 +23,6 @@ namespace QueuedComponentClient
                 // Force the release of the recorder object, to send the message to the queue
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(qc);
                 // </snippet0>
-                
             }
 		}
 	}

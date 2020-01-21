@@ -31,7 +31,6 @@ namespace CommonTypes
             };
 
             return students;
-
         }
     }
 }

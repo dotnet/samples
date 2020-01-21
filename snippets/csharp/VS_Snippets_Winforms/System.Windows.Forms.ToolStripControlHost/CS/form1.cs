@@ -19,7 +19,6 @@ namespace System.Windows.Forms.ToolStripControlHostExample
 			textbox1.Width = 70;
 			toolStrip1.Items.Add(textbox1);
 			InitializeDateTimePickerHost();
-			
 		}
 		static void Main()
 		{
@@ -65,7 +64,6 @@ namespace System.Windows.Forms.ToolStripControlHostExample
 			this.Text = "Form1";
 			this.ResumeLayout(false);
 			this.PerformLayout();
-
 		}
 
 		/// <summary>
@@ -115,7 +113,6 @@ namespace System.Windows.Forms.ToolStripControlHostExample
 
 			// Add the control host to the ToolStrip.
 			toolStrip1.Items.Add(dateTimePickerHost);
-
 		}
 		//</snippet1>
 

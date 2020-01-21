@@ -47,5 +47,4 @@ public class Form1: Form
         Form1 myForm = new Form1();
         myForm.Method(Option.Second, "not an integer string");
     }
-    
 }

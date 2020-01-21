@@ -18,7 +18,6 @@ namespace Microsoft.Samples.BrushExamples
             StackPanel mainPanel = new StackPanel();
             visualBrushAsRectangleFillExample(mainPanel);
             this.Content = mainPanel;
-        
         }
 
         // <SnippetGraphicsMMVisualBrushAsRectangleBackgroundExample>
@@ -67,11 +66,8 @@ namespace Microsoft.Samples.BrushExamples
             // </SnippetGraphicsMMVisualBrushAsRectangleBackgroundExample1>
             
             mainPanel.Children.Add(myRectangle);
-
         }
         // </SnippetGraphicsMMVisualBrushAsRectangleBackgroundExample>
-    
     }
-
 }
 // </SnippetGraphicsMMVisualBrushAsRectangleBackgroundExampleWholePage>

@@ -80,6 +80,5 @@ public class FaultBindingCollection_Remove
 // </Snippet3>
 // </Snippet2>
 // </Snippet1>
-
    }
 }

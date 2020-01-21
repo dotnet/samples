@@ -312,7 +312,6 @@ namespace csrefLINQExamples
           new StudentName {FirstName="Rajesh", LastName="Rotti", ID=114, }
         };
         //</snippet36>
-
     }
 
     // Implicitly Typed Arrays example 1
@@ -544,9 +543,7 @@ namespace csrefLINQExamples
             Console.WriteLine(b.ToString());
 
             Console.ReadKey();
-        
         }
- 
     }
     //</s n i p p e t66>
 
@@ -678,7 +675,5 @@ namespace csrefLINQExamples
             public string Price { get; set; }
         }
         //</snippet87>
- 
     }
-   
 }

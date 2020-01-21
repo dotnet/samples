@@ -81,7 +81,6 @@ namespace SDKSample
             this.Background = Brushes.White;
             this.Margin = new Thickness(20);
             this.Content = imageBorder;
-
         }
     }
 }

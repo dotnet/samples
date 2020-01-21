@@ -29,6 +29,5 @@ namespace Target
             Button targetButton = sender as Button;
             MessageBox.Show(targetButton.Content + " invoked.");
         }
-
     }
 }

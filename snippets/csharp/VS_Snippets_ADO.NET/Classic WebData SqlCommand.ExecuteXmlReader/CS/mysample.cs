@@ -13,7 +13,6 @@ class Program
         string qs = "SELECT OrderID, CustomerID FROM dbo.Orders;";
         string q = "SELECT * FROM dbo.Customers FOR XML AUTO, XMLDATA";
         CreateXMLReader(q, str);
-
     }
     // <Snippet1>
     private static void CreateXMLReader(string queryString,

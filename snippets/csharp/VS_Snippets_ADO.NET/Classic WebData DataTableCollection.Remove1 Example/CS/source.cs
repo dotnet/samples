@@ -22,5 +22,4 @@ public class Form1: Form
             tablesCol.Remove(name);
     }
     // </Snippet1>
-
 }

@@ -31,7 +31,6 @@ namespace BasicAuthentication
                 //Console.WriteLine(ex.InnerException.Message);
                 Console.ReadLine();
             }
-
         }
 
         private void ClientConstructor()
@@ -190,7 +189,6 @@ namespace EndpointIdentityMethods
         }
     }
     //</snippet40>
-
 }
 
 namespace CreateRSAIdentity
@@ -284,7 +282,6 @@ namespace CreateRSAIdentity
                 EndpointAddress epa3 = new EndpointAddress(rsarelativeAddress, EndpointIdentity.CreateRsaIdentity(servercert));
                 ep3.Address = epa3;
              //</snippet41>
-
            }
         }
         // <snippet42>
@@ -311,9 +308,7 @@ namespace CreateRSAIdentity
             if (certs.Count > 1)
                 throw new Exception("Duplicate certificates found in the store");
             return certs[0];
-
         }
-
     }
 }
 
@@ -346,7 +341,6 @@ namespace SecuredUsingWindows
             // Close the service.
             myServiceHost.Close();
             //</snippet3>
-
         }
 
         public static void RunClient()
@@ -394,7 +388,6 @@ namespace SecuredUsingWindows
                 Console.WriteLine("Closed the client");
                 Console.ReadLine();
             }
-
         }
         private static string ReturnUsername()
         {
@@ -405,7 +398,6 @@ namespace SecuredUsingWindows
         {
             return "not";
         }
-
     }
 }
 namespace SecuredByTransportWithAnonymousClient
@@ -487,7 +479,6 @@ namespace SecuredByTransportWithAnonymousClient
                 Console.WriteLine("Closed the client");
                 Console.ReadLine();
             }
-
         }
     }
 }
@@ -577,7 +568,6 @@ namespace SecuredTranserUsingCertificates
                 Console.WriteLine("Closed the client");
                 Console.ReadLine();
             }
-
         }
     }
 }
@@ -704,7 +694,6 @@ namespace SecuredUsingMessageSecurityWithUsername
             // Close the service. 
             myServiceHost.Close();
             //</snippet9>
-
         }
 
         private void ClientRun()
@@ -756,7 +745,6 @@ namespace SecuredUsingMessageSecurityWithUsername
                 Console.WriteLine("Closed the client");
                 Console.ReadLine();
             }
-
         }
 
         private string ReturnUsername()
@@ -807,7 +795,6 @@ namespace SecuredUsingMessageWithCertClient
             // Close the service.
             myServiceHost.Close();
             //</snippet10>
-
         }
         private void ClientRun()
         {
@@ -860,7 +847,6 @@ namespace SecuredUsingMessageWithCertClient
                 Console.ReadLine();
             }
         }
-
     }
 }
 
@@ -895,7 +881,6 @@ namespace SecuredUsingMessageWithWindowsClient
             // Close the service.
             myServiceHost.Close();
             //</snippet11>
-
         }
 
         private void ClientRun()
@@ -941,7 +926,6 @@ namespace SecuredUsingMessageWithWindowsClient
                 Console.WriteLine("Closed the client");
                 Console.ReadLine();
             }
-
         }
     }
 }
@@ -1050,7 +1034,6 @@ namespace MessageSecuritWithKerberosAuth
                 Console.WriteLine("Closed the client");
                 Console.ReadLine();
             }
-
         }
     }
 }
@@ -1092,7 +1075,6 @@ namespace TestPrincipalPermission
             ((IChannel)client).Close();
             Console.ReadLine();
             service.Close();
-
         }
 
         public static Binding GetBinding()
@@ -1209,7 +1191,6 @@ namespace SecuredUsingMessageSecurityWithInteroperableCertClient
                 Console.WriteLine("Closed the client");
                 Console.ReadLine();
             }
-
         }
     }
 }
@@ -1220,7 +1201,6 @@ namespace ServiceModel
     {
         [OperationContract]
         double Add(double a, double b);
-
     }
 
     public class Calculator : ICalculator
@@ -1240,9 +1220,7 @@ namespace ServiceModel
             sb.HttpGetUrl = new Uri("http://localhost:8008/metadata");
             sh.Description.Behaviors.Add(sb);
         }
-
     }
-
 }
 namespace ClientCalculator
 {

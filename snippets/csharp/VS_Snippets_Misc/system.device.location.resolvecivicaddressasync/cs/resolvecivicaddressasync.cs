@@ -28,7 +28,6 @@ namespace ResolveAddressSync
                     resolver.ResolveAddressAsync(watcher.Position.Location);
                 }
             }
-
         }
 
         static void resolver_ResolveAddressCompleted(object sender, ResolveAddressCompletedEventArgs e)
@@ -46,7 +45,6 @@ namespace ResolveAddressSync
         }
 
         //</snippet2>
-
     }
 }
 //</snippet1>

@@ -22,9 +22,7 @@ public class SamplesCultureInfo
             Console.WriteLine("0x{0} {1} {2}", ci.Parent.LCID.ToString("X4"), ci.Parent.Name, ci.Parent.EnglishName);
          }
       }
-
    }
-
 }
 
 /*

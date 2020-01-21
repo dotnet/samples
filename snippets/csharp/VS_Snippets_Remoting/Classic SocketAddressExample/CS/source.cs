@@ -24,7 +24,6 @@ Console.WriteLine("The address family of the socketAddress is: " + socketAddress
 Console.WriteLine("The size of the underlying buffer is: " + socketAddress.Size.ToString());
 
 //</Snippet1>
-
 }
 
 public static void Main(){

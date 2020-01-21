@@ -86,7 +86,6 @@ namespace ASPNet.Design.Samples.CS
                 : base(parent.Component)
             {
                 _parent = parent;
-
             }
 
             // Create the ActionItem collection and add one command

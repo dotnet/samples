@@ -42,7 +42,6 @@ class HttpWebRequest_Accept
          Console.WriteLine("\nException Caught!");
          Console.WriteLine("Message :{0}" , e.Message);
       }
-
    }
    public static void GetPage(String myUri)
    {

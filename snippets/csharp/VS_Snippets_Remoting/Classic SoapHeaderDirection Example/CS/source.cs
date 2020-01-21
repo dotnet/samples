@@ -18,7 +18,6 @@ public class MyWebService {
     public void MySoapHeaderReceivingMethod() {
 
         // Set myHeader.MyValue to some value.
-
     }
 }
    

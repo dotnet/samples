@@ -35,6 +35,5 @@ namespace SDKSample
             FileHandlingGraceful fileHandling = new FileHandlingGraceful();
             fileHandling.Save();
         }
-
     }
 }

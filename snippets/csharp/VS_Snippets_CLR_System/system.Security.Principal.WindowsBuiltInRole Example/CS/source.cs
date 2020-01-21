@@ -23,7 +23,6 @@ class SecurityPrincipalDemo
                 Console.WriteLine("{0}? {1}.", roleName,
                     myPrincipal.IsInRole((WindowsBuiltInRole)roleName));
                 Console.WriteLine("The RID for this role is: " + ((int)roleName).ToString());
-
             }
             catch (Exception)
             {

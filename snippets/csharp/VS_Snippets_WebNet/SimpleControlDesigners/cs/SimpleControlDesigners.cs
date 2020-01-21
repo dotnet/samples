@@ -40,7 +40,6 @@ namespace Samples.AspNet.CS.Brief.Controls
 	{
 	}
 	//</Snippet10>
-
 }
 namespace Samples.AspNet.CS.Controls 
 {
@@ -162,6 +161,5 @@ namespace Samples.AspNet.CS.Controls
         }
     }
 	//</Snippet11>
-
 }
 //</Snippet1>

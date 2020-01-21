@@ -35,7 +35,6 @@ namespace ListViewSnips
 
     // Sample event handler:  
     // private void ButtonClick(object sender, RoutedEventArgs e) {}
-
   }
   public class SelectFavoriteCityTemplate : DataTemplateSelector
   {
@@ -129,5 +128,4 @@ namespace ListViewSnips
         }
     }    
     //</SnippetItemStyleSelector>
-
 }

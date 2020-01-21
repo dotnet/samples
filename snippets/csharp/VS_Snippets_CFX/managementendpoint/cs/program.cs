@@ -55,7 +55,6 @@ namespace Microsoft.Samples.WF.ManagementEndpoint
             {
                 stream = File.OpenRead(xamlPath);
                 activity = ActivityXamlServices.Load(stream);
-
             }
             finally
             {
@@ -64,6 +63,5 @@ namespace Microsoft.Samples.WF.ManagementEndpoint
 
             return activity;
         }
-
     }    
 }

@@ -99,6 +99,5 @@ class XMLSchemaExamples
         return new XmlNode[1] {
                   doc.CreateTextNode(text)};
     }
-
 }
 // </Snippet1>

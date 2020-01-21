@@ -31,5 +31,4 @@ class Program
             + "Integrated Security=SSPI;Packet Size=512";
     }
     // </Snippet1>
-
 }

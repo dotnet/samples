@@ -129,7 +129,6 @@ namespace Example
             // perform its own cryptographic operations.
             return cookieContainer.DecryptCookie();
         }
-
     }
     class CookieContainerSerializer
     {
@@ -214,7 +213,6 @@ namespace Example
             Array.Copy(cookieContainer.EncryptedCookie, 0, buffer, index, cookieContainer.EncryptedCookie.Length);
             return buffer;
         }
-
     }
     class CookieContainer
     {
@@ -275,7 +273,6 @@ namespace Example
 
             // Create a decryptor based on the symmetric key which can be used to decrypt SCT cookie blob.
             this.decryptor = aesAlg.CreateDecryptor(symmetricKey, iv);
-
         }
 
         public void EncryptCookie(byte[] cookie)
@@ -327,5 +324,4 @@ namespace Example
             return intValue;
         }
     }
-
 }

@@ -50,7 +50,6 @@ namespace ClientAppServicesDemo.Properties {
                 this["MySetting"] = value;
             }
         }
-
     }
 }
 //</snippet400>

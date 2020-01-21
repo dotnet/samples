@@ -13,7 +13,6 @@ namespace Samples.AspNet.CS.Controls
        {
 
          return new MyHtmlTableRowControlCollection(this);
-
        }
 
        protected class MyHtmlTableRowControlCollection : ControlCollection
@@ -27,10 +26,7 @@ namespace Samples.AspNet.CS.Controls
            // Always add new rows at the top of the table.
            base.AddAt(0, child);
          }
-
        }
-
     }
-
 }
 // </Snippet2>

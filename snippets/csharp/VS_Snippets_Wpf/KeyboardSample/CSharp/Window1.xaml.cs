@@ -86,11 +86,9 @@ namespace SDKSamples
                 numberOfHits++;
                 lblNumberOfTargetHits.Content = numberOfHits;
             }
-
         }
         //</SnippetKeyboardSampleKeyConverter>
 
         int numberOfHits = 0;
-
     }
 }

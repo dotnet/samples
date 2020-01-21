@@ -17,7 +17,6 @@ public class Sample
     Console.WriteLine("Display the modified XML...");
     doc.PreserveWhitespace = true;
     doc.Save(Console.Out);
-
    }
 }
    // </Snippet1>

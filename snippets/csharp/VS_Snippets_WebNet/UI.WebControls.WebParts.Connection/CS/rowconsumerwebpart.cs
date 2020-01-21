@@ -60,7 +60,6 @@ namespace My
         }
 		//</SNIPPET5>
          }
-    
     }
 //}
 //</SNIPPET2>

@@ -35,5 +35,4 @@ namespace DataBindingLab
             this.memberSince = memberSince;
         }
     }
-
 }

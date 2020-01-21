@@ -20,7 +20,6 @@ namespace cs_conflictmodeenum
             // or
             db.SubmitChanges(ConflictMode.ContinueOnConflict);
             // </Snippet1>
-
         }
     }
 }

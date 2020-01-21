@@ -18,7 +18,6 @@ namespace Microsoft.Samples.WinForms.Cs.HostApp {
             // Required for Windows Form Designer support
             //
             InitializeComponent();
-
         }
 
         /// <summary>
@@ -60,7 +59,6 @@ namespace Microsoft.Samples.WinForms.Cs.HostApp {
         public static void Main(string[] args) {
             Application.Run(new HostApp());
         }
-
     }
 }
 

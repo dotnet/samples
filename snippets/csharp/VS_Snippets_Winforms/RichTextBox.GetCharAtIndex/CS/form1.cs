@@ -72,7 +72,6 @@ namespace RTBCharAtIndexEx
 			this.Name = "Form1";
 			this.Text = "Form1";
 			this.ResumeLayout(false);
-
 		}
 		#endregion
 
@@ -97,7 +96,6 @@ namespace RTBCharAtIndexEx
 				if (tempChar.ToString() != " ")
 					// Display the character in a message box.
 					MessageBox.Show("The character at the specified position is " + tempChar + ".");
-
 			}
 		}
 		//</Snippet1>

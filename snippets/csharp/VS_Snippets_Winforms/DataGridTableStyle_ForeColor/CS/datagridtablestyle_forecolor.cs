@@ -100,7 +100,6 @@ namespace Datagrid
          this.Load += new System.EventHandler(this.Form1_Load);
          ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).EndInit();
          this.ResumeLayout(false);
-
       }
       #endregion
 

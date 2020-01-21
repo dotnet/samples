@@ -74,7 +74,6 @@ class CustomChannel : BaseChannelWithProperties, IChannelReceiverHook,
       IDictionary properties,
       IClientChannelSinkProvider clientSinkProvider,
       IServerChannelSinkProvider serverSinkProvider) {
-
    }
 
    public string ChannelName {
@@ -129,11 +128,9 @@ class CustomChannel : BaseChannelWithProperties, IChannelReceiverHook,
    }
 
    public void StartListening(object data){
-   
    }
 
    public void StopListening(object data){
-      
    }
 
    public string Parse(string url, out string objectURI) {
@@ -171,7 +168,6 @@ class CustomChannel : BaseChannelWithProperties, IChannelReceiverHook,
          ITransportHeaders headers,
          Stream stream
          ) {
-         
       }
 
       public Stream GetResponseStream(

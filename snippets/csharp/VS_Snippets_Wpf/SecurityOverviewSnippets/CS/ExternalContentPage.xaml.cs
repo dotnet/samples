@@ -23,6 +23,5 @@ namespace SecurityOverviewSnippets
         {
             InitializeComponent();
         }
-
     }
 }

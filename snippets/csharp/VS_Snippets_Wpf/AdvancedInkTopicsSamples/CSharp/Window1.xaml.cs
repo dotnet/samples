@@ -80,7 +80,6 @@ namespace AdavancedInkTopicsSamples
 
             System.Diagnostics.Debug.WriteLine("");
         }
-
     }
 
     //<Snippet4>
@@ -108,9 +107,7 @@ namespace AdavancedInkTopicsSamples
                 this.StylusPlugIns.IndexOf(this.DynamicRenderer);
             
             this.StylusPlugIns.Insert(dynamicRenderIndex, filter);
-
         }
-
     }
     //</Snippet5>
 
@@ -137,9 +134,7 @@ namespace AdavancedInkTopicsSamples
             InkCanvasStrokeCollectedEventArgs args = 
                 new InkCanvasStrokeCollectedEventArgs(customStroke);
             base.OnStrokeCollected(args);
-
         }
-
     }
     //</Snippet9>
 }

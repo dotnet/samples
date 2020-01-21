@@ -56,7 +56,6 @@ namespace customer_relationship
             ICustomer.SetLoyaltyThresholds(new TimeSpan(30, 0, 0, 0), 1, 0.25m);
             Console.WriteLine($"Current discount: {theCustomer.ComputeLoyaltyDiscount()}");
             // </SnippetSetLoyaltyThresholds>
-
         }
     }
 }

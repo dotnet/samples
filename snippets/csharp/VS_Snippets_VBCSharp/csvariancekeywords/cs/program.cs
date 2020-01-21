@@ -8,7 +8,6 @@ class Program
 {
     static void Main(string[] args)
     {
-
     }
 }
 
@@ -66,7 +65,6 @@ namespace n1
     }
     //</Snippet2>
     }
-    
 }
 
 namespace n2

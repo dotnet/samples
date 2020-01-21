@@ -12,7 +12,6 @@ namespace MoreEventArgsExamples
 		[STAThread]
 		static void Main(string[] args)
 		{
-
 		}
 	}
 

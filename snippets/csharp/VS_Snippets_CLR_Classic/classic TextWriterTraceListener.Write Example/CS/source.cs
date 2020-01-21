@@ -20,6 +20,5 @@ public class Sample
     myWriter.Flush();
     myWriter.Close();
  }
-
 }
 // </Snippet1>

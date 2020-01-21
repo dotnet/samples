@@ -20,7 +20,6 @@ public partial class AddDynamicDataDetailsView : System.Web.UI.Page
        
         // Get the metadata of the current table.
         table = GridDataSource.GetTable();
-
     }
 
     protected void Page_Load(object sender, EventArgs e)

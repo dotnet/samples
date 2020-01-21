@@ -74,7 +74,6 @@ namespace SDKSample {
         //<SnippetDPDefaultValue>
         PropertyMetadata pmDefault = dp.DefaultMetadata;
         //</SnippetDPDefaultValue>
-
       }
       //<SnippetTrySetValue>
       void TrySetValue(DependencyObject target, DependencyProperty dp, object providedValue) {

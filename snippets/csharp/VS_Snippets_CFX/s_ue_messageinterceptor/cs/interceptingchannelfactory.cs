@@ -347,7 +347,6 @@ namespace Microsoft.ServiceModel.Samples
                     return thisPtr.replyMessage;
                 }
             }
-
         }
 
         class InterceptingOutputSessionChannel : InterceptingOutputChannel, IOutputSessionChannel

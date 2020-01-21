@@ -54,7 +54,6 @@ namespace MyApplication
             {
                 // Create a file that the application will store user specific data in.
                 _userData = new FileStream(Application.UserAppDataPath + "\\appdata.txt", FileMode.OpenOrCreate);
-
             }
             catch (IOException e)
             {
@@ -155,14 +154,12 @@ namespace MyApplication
 
                 _userData.SetLength(dataToWrite.Length);
                 return true;
-
             }
             catch
             {
                 // An error occurred while attempting to write, return false.
                 return false;
             }
-
         }
 
         private bool ReadFormDataFromFile()
@@ -180,7 +177,6 @@ namespace MyApplication
                     // Set the read position to the start of the file and read.
                     _userData.Seek(0, SeekOrigin.Begin);
                     _userData.Read(dataToRead, 0, dataToRead.Length);
-
                 }
                 catch (IOException e)
                 {
@@ -204,7 +200,6 @@ namespace MyApplication
                     _form2Position = (Rectangle)rectConv.ConvertFromString(form2pos);
 
                     return true;
-
                 }
                 catch
                 {
@@ -212,7 +207,6 @@ namespace MyApplication
                     // Return false to use default values.
                     return false;
                 }
-
             }
             else
             {
@@ -234,7 +228,6 @@ namespace MyApplication
             // Run the application with the specific context. It will exit when
             // all forms are closed.
             Application.Run(context);
-
         }
         //</Snippet4>
     }

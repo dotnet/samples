@@ -47,6 +47,5 @@ namespace WFCrossThreadCS
             textBox1.Lines = lines.ToArray();
         }
         // </Snippet2>
-
     }
 }

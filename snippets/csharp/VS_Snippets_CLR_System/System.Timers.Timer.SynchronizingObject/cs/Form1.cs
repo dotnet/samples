@@ -76,7 +76,6 @@
             hasChanged = true;
             timer.Start();
         }
-
     }
     // </Snippet1>
 }

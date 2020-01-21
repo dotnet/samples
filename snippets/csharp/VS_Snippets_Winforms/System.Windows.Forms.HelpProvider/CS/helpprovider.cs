@@ -115,7 +115,6 @@ public class Form1 : System.Windows.Forms.Form
         this.MinimizeBox = false;
         this.ClientSize = new System.Drawing.Size(292, 160);
         this.Text = "Help Provider Demonstration";
-
     }
 }
 //</Snippet1>

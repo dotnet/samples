@@ -808,7 +808,6 @@ namespace Samples.AspNet.Membership.CS
             updateCmd.ExecuteNonQuery();
           }
         }
-
       }
       catch (OdbcException e)
       {
@@ -874,7 +873,6 @@ namespace Samples.AspNet.Membership.CS
             updateCmd.ExecuteNonQuery();
           }
         }
-
       }
       catch (OdbcException e)
       {
@@ -1707,6 +1705,5 @@ namespace Samples.AspNet.Membership.CS
 
       log.WriteEntry(message);
     }
-
   }
 }

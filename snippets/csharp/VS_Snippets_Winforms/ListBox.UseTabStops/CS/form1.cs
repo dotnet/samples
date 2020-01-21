@@ -72,7 +72,6 @@ namespace ListBoxTabStopsEx
 			this.Name = "Form1";
 			this.Text = "Form1";
 			this.ResumeLayout(false);
-
 		}
 		#endregion
 
@@ -105,6 +104,5 @@ namespace ListBoxTabStopsEx
 			this.Controls.Add(listBox1);
 		}
 		//</Snippet1>
-
 	}
 }

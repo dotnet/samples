@@ -63,7 +63,6 @@ public class Extra
                          Console.WriteLine("Request noticed in attached child");
                          ct.ThrowIfCancellationRequested();
                      }
-
                  }
                  Console.WriteLine("Attached child completing.");
                  return 42;
@@ -71,7 +70,6 @@ public class Extra
 
              Console.WriteLine("child.Result = {0}", child.Result);
              return child.Result;
-
          }, tokenSource.Token);
 
          //try
@@ -127,7 +125,6 @@ public class Extra
              {
                  throw ae.InnerException;
              }
-
          });
 
          parent.Start();
@@ -169,7 +166,6 @@ public class Extra
              //});
 
              return child1.Result;
-
          });
 
          parent.Start();

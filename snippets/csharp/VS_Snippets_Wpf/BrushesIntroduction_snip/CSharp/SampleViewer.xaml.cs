@@ -15,6 +15,5 @@ namespace BrushesIntroduction
         {
             InitializeComponent();
         }
-
     }
 }

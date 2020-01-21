@@ -23,7 +23,6 @@ namespace Microsoft.ServiceModel.Samples
                 proxy.DivideBy(2.0D);
                 double result = proxy.Equals();
                 Console.WriteLine("0, + 100, - 50, * 17.65, / 2 = {0}", result);
-
             }
 
             Console.WriteLine();

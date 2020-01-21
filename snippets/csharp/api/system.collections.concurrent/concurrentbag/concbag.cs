@@ -50,6 +50,5 @@ class ConcurrentBagDemo
         if (cb.TryPeek(out unexpectedItem))
             Console.WriteLine("Found an item in the bag when it should be empty");
     }
-
 }
 //</snippet1>

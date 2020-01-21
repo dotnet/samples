@@ -23,6 +23,5 @@ writer.Close();
 
 // Do additonal processing on the stream.
 //</snippet1>
-        
   } 
 } 

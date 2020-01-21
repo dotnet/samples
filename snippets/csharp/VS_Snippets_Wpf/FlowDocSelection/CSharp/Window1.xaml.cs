@@ -28,7 +28,6 @@ namespace FlowDocSelection
         private void ShowSelection_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show(flowdocPageViewer1.Selection.Text);
-
         }
         //</Snippet2>
     }

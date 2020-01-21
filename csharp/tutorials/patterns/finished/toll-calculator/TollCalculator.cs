@@ -107,6 +107,5 @@ namespace toll_calculator
                 return TimeBand.Overnight;
         }
         // </SnippetGetTimeBand>
-
     }
 }

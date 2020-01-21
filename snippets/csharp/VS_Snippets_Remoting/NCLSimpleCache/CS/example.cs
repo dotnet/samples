@@ -159,7 +159,6 @@ namespace Examples.System.Net.Cache
                
             Console.WriteLine(policy.ToString());
             return policy;
-            
         } 
         //</snippet12>
 
@@ -174,7 +173,6 @@ namespace Examples.System.Net.Cache
             Console.WriteLine("Policy level is {0}.", policy.Level.ToString());
             Console.WriteLine("Is the response from the cache? {0}", response.IsFromCache);  
             return response;
-            
         } 
         //</snippet13>
 
@@ -189,7 +187,6 @@ namespace Examples.System.Net.Cache
             Console.WriteLine("Policy is {0}.", policy.ToString());
             Console.WriteLine("Is the response from the cache? {0}", response.IsFromCache);  
             return response;
-            
         } 
         //</snippet14>
 
@@ -252,7 +249,6 @@ namespace Examples.System.Net.Cache
            DisplayResponseStream (response);
             
             Console.WriteLine("done.");  
-
         }
         
         public static void DisplayResponseStream (WebResponse response)

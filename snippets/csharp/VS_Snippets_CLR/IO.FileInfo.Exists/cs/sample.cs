@@ -5,7 +5,6 @@ class Program
 {
     static void Main(string[] args)
     {
-
     }
 
 //<SNIPPET1>
@@ -38,7 +37,6 @@ class Program
 
         // return the buffer.
         return buffer;
-
     }
 //</SNIPPET1>
 }

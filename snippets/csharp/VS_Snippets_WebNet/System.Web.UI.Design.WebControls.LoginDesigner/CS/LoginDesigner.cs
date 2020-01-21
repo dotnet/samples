@@ -100,7 +100,6 @@ namespace Examples.CS.WebControls.Design
             }
 
             return markup;
-
         } // GetDesignTimeHtml
         // </snippet4>
     } // MyLoginDesigner

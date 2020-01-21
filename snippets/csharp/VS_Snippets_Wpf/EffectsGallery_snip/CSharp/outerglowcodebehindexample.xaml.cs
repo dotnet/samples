@@ -43,9 +43,7 @@ namespace SDKSample
 
             // Apply the bitmap effect to the TextBox.
             myTextBox.BitmapEffect = myGlowEffect;
-
         }
-
     }
 }
 // </SnippetCodeBehindOuterGlowCodeBehindExampleWholePage>

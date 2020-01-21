@@ -204,7 +204,6 @@ namespace CsCsrefProgrammingGenerics
             }
             //</Snippet10>
         }
-
     }//WrapParameters
 
     //---------------------------------------------------------------------------
@@ -806,5 +805,4 @@ namespace CsCsrefProgrammingGenerics
         //public class CustomAtt<T> : System.Attribute {}  //Error
         //</Snippet53>
     }
-
 }

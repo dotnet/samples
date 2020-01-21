@@ -32,5 +32,4 @@ protected void BindControls()
 
     // method added so sample will compile
     private void DecimalToCurrencyString(object sender, ConvertEventArgs e) {}
-    
 }

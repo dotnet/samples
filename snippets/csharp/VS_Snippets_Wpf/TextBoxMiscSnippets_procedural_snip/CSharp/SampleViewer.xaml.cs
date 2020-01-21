@@ -17,7 +17,5 @@ namespace SDKSample
             MySpellCheckExampleFrame.Content = new SpellCheckExample();
             MyBeginChangeEndChangeExampleFrame.Content = new BeginChangeEndChangeExample();
         }
-        
     }
-
 }

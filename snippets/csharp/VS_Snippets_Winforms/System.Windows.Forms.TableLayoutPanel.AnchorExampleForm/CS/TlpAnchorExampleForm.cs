@@ -256,7 +256,6 @@ public class Form1 : Form
 		this.tableLayoutPanel2.PerformLayout();
 		this.tableLayoutPanel3.ResumeLayout(false);
 		this.ResumeLayout(false);
-
 	}
 
 	[STAThread]

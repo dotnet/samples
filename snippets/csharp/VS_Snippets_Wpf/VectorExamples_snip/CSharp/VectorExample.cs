@@ -173,7 +173,6 @@ namespace Microsoft.Samples.VectorExamples
             // vectorResult is equal to (10, 20)
 
             return vectorResult;
-
         }
         // </SnippetVectorConverterExample_csharp>
 
@@ -190,7 +189,6 @@ namespace Microsoft.Samples.VectorExamples
             vectorResult = Vector.Add(vector1, vector2);
 
             return vectorResult;
-
         }
         // </SnippetAddTwoVectorsExample_csharp>
 
@@ -206,7 +204,6 @@ namespace Microsoft.Samples.VectorExamples
             pointResult = Vector.Add(vector1, point1);
 
             return pointResult;
-
         }
         // </SnippetAddPointAndVectorExample_csharp>
 
@@ -221,7 +218,6 @@ namespace Microsoft.Samples.VectorExamples
             angleBetween = Vector.AngleBetween(vector1, vector2);
 
             return angleBetween;
-
         }
         // </SnippetAngleBetweenExample_csharp>
 
@@ -236,7 +232,6 @@ namespace Microsoft.Samples.VectorExamples
             crossProduct = Vector.CrossProduct(vector1, vector2);
 
             return crossProduct;
-
         }
         // </SnippetCrossProductExample_csharp>
 
@@ -251,7 +246,6 @@ namespace Microsoft.Samples.VectorExamples
             determinant = Vector.Determinant(vector1, vector2);
 
             return determinant;
-
         }
         // </SnippetDeterminantExample_csharp>
 
@@ -267,7 +261,6 @@ namespace Microsoft.Samples.VectorExamples
             vectorResult = Vector.Divide(vector1, scalar1);
 
             return vectorResult;
-
         }
         // </SnippetDivideExample_csharp>
 
@@ -286,7 +279,6 @@ namespace Microsoft.Samples.VectorExamples
             }
 
             return areEqual;
-
         }
         // </SnippetEqualsExample1_csharp>
 
@@ -306,7 +298,6 @@ namespace Microsoft.Samples.VectorExamples
             }
 
             return areEqual;
-
         }
         // </SnippetEqualsExample2_csharp>
 
@@ -317,7 +308,6 @@ namespace Microsoft.Samples.VectorExamples
             int returnHashCode = vector1.GetHashCode();
 
             return returnHashCode;
-
         }
         // </SnippetGetHashCodeExample_csharp>
 
@@ -333,7 +323,6 @@ namespace Microsoft.Samples.VectorExamples
             vectorResult = Vector.Multiply(vector1, scalar1);
 
             return vectorResult;
-
         }
         // </SnippetMultiplyVectorByScalarExample1_csharp>
 
@@ -349,7 +338,6 @@ namespace Microsoft.Samples.VectorExamples
             vectorResult = Vector.Multiply(scalar1, vector1);
 
             return vectorResult;
-
         }
         // </SnippetMultiplyVectorByScalarExample2_csharp>
 
@@ -367,7 +355,6 @@ namespace Microsoft.Samples.VectorExamples
             doubleResult = Vector.Multiply(vector1, vector2);
 
             return doubleResult;
-
         }
         // </SnippetGetDotProductExample_csharp>
 
@@ -383,7 +370,6 @@ namespace Microsoft.Samples.VectorExamples
             vectorResult = Vector.Multiply(vector1, matrix1);
 
             return vectorResult;
-
         }
         // </SnippetMultiplyVectorByMatrixExample_csharp>
 
@@ -398,7 +384,6 @@ namespace Microsoft.Samples.VectorExamples
             vectorResult.Negate();
 
             return vectorResult;
-
         }
         // </SnippetNegateExample_csharp>
 
@@ -413,7 +398,6 @@ namespace Microsoft.Samples.VectorExamples
             vectorResult.Normalize();
 
             return vectorResult;
-
         }
         // </SnippetNormalizeExample_csharp>
 
@@ -429,7 +413,6 @@ namespace Microsoft.Samples.VectorExamples
             vectorResult = vector1 + vector2;
 
             return vectorResult;
-
         }
         // </SnippetOverloadedAdditionOperatorExample1>
 
@@ -445,7 +428,6 @@ namespace Microsoft.Samples.VectorExamples
             pointResult = point1 + vector1;
 
             return pointResult;
-
         }
         // </SnippetOverloadedAdditionOperatorExample2>
 
@@ -461,7 +443,6 @@ namespace Microsoft.Samples.VectorExamples
             vectorResult = vector1 / scalar1;
 
             return vectorResult;
-
         }
         // </SnippetOverloadedDivisionOperatorExample>
 
@@ -476,7 +457,6 @@ namespace Microsoft.Samples.VectorExamples
             Boolean areEqual = (vector1 == vector2);
 
             return areEqual;
-
         }
         // </SnippetOverloadedEqualityOperatorExample>
 
@@ -490,7 +470,6 @@ namespace Microsoft.Samples.VectorExamples
             Size returnSize = (Size)vector1;
 
             return returnSize;
-            
         }
         // </SnippetOverloadedExplicitOperatorExample1>
 
@@ -504,7 +483,6 @@ namespace Microsoft.Samples.VectorExamples
             Point returnPoint = (Point)vector1;
 
             return returnPoint;
-
         }
         // </SnippetOverloadedExplicitOperatorExample2>
 
@@ -521,7 +499,6 @@ namespace Microsoft.Samples.VectorExamples
             areNotEqual = (vector1 != vector2);
 
             return areNotEqual;
-
         }
         // </SnippetOverloadedInequalityOperatorExample>
 
@@ -535,7 +512,6 @@ namespace Microsoft.Samples.VectorExamples
             Vector vectorResult = vector1 * scalar1;
 
             return vectorResult;
-            
         }
         // </SnippetOverloadedMultiplicationOperatorExample1>
 
@@ -549,7 +525,6 @@ namespace Microsoft.Samples.VectorExamples
             Vector vectorResult = scalar1 * vector1;
 
             return vectorResult;
-
         }
         // </SnippetOverloadedMultiplicationOperatorExample2>
 
@@ -565,7 +540,6 @@ namespace Microsoft.Samples.VectorExamples
             vectorResult = vector1 * matrix1;
 
             return vectorResult;
-
         }
         // </SnippetOverloadedMultiplyVectorByMatrixOperatorExample>
 
@@ -583,7 +557,6 @@ namespace Microsoft.Samples.VectorExamples
             Double doubleResult = Vector.Multiply(vector1, vector2);
 
             return doubleResult;
-
         }
         // </SnippetOverloadedOperatorGetDotProductExample>
 
@@ -599,7 +572,6 @@ namespace Microsoft.Samples.VectorExamples
             Vector vectorResult = vector1 - vector2;
 
             return vectorResult;
-
         }
         // </SnippetOverloadedSubtractionOperatorExample>
 
@@ -613,7 +585,6 @@ namespace Microsoft.Samples.VectorExamples
             Vector vectorResult = -vector1;
 
             return vectorResult;
-
         }
         // </SnippetOverloadedNegationOperatorExample>
 
@@ -626,7 +597,6 @@ namespace Microsoft.Samples.VectorExamples
             Vector vectorResult = Vector.Parse("1,3");
 
             return vectorResult;
-
         }
         // </SnippetParseExample>
 
@@ -642,7 +612,6 @@ namespace Microsoft.Samples.VectorExamples
             Vector vectorResult = Vector.Subtract(vector1, vector2);
 
             return vectorResult;
-
         }
         // </SnippetSubtractExample>
 
@@ -656,7 +625,6 @@ namespace Microsoft.Samples.VectorExamples
             String stringResult = vector1.ToString();
 
             return stringResult;
-
         }
         // </SnippetToStringExample>
 
@@ -671,7 +639,6 @@ namespace Microsoft.Samples.VectorExamples
             Double lengthResult = vector1.Length;
 
             return lengthResult;
-
         }
         // </SnippetLengthExample>
 
@@ -686,7 +653,6 @@ namespace Microsoft.Samples.VectorExamples
             Double lengthSqResult = vector1.LengthSquared;
 
             return lengthSqResult;
-
         }
         // </SnippetLengthSquaredExample>
 
@@ -713,10 +679,7 @@ namespace Microsoft.Samples.VectorExamples
             areEqual = (vector1 == vector2);
 
             return areEqual;
-
         }
         // </SnippetVectorEqualityExample>
-
     }
-
 }

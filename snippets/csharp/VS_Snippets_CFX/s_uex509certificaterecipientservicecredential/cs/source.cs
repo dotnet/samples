@@ -18,13 +18,11 @@ namespace Samples
     interface IMyService {
 
     //Define the contract operations.
-
     }
 
     class MyService : IMyService {
 
     //Implement the IMyService operations.
-
     }
     //</snippet1>
 
@@ -50,7 +48,6 @@ namespace Samples
 
             //</snippet4>
         }
-
     }
     public class Test1
     {
@@ -75,7 +72,6 @@ namespace Samples
             sh.Open();
             //</snippet5>
         }
-
     }
     public class Test
     {

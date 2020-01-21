@@ -8,6 +8,5 @@ namespace Microsoft.TestToolWindowSearch
     {
 
         public const uint cmdidTestSearchWindow =    0x101;
-
     };
 }

@@ -20,7 +20,6 @@ class Program
                 Console.WriteLine(key + "=" + builder[key].ToString());
             Console.WriteLine("Press any key to finish.");
             Console.ReadLine();
-
         }
         catch (System.Collections.Generic.KeyNotFoundException ex)
         {

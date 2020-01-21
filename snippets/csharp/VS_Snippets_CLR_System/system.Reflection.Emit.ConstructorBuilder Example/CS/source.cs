@@ -100,10 +100,8 @@ class TestCtorBuilder {
 			      break;
 	         case "GetZ": mthdIL.Emit(OpCodes.Ldfld, zField);
 			      break;
-
 	      }
 	      mthdIL.Emit(OpCodes.Ret);
-
            }
 	   // Finally, we create the type.
 
@@ -114,7 +112,6 @@ class TestCtorBuilder {
 	   myAsmBuilder.Save("Point.dll");
 	
 	   return pointType;
-
  	}
 
 	public static void Main() {
@@ -195,9 +192,7 @@ class TestCtorBuilder {
 	   // aPoint.x = 4
 	   // aPoint.y = 5
 	   // aPoint.z = 6
-	    
 	}
-    
 }
 
 // </Snippet1>

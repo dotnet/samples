@@ -126,7 +126,6 @@ public class DataProtect
         Console.WriteLine("The encrypted byte array is:");
         if (encryptedSecret != null)
             PrintValues(encryptedSecret);
-
     }
 
     // Decrypt the data and store in a byte array.
@@ -204,7 +203,6 @@ public class DataProtect
         }
         Console.WriteLine();
     }
-
 }
 
 //</Snippet1>

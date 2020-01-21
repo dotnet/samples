@@ -24,7 +24,6 @@ public class AsyncGetExample
             System.Threading.Thread.Sleep (1000);
 
         // Here you can use the object
-
     }
 
     private bool completed = false;
@@ -48,7 +47,6 @@ public class AsyncGetExample
     {
         AsyncGetExample example =
             new AsyncGetExample();
-
     }
 }
 //</Snippet1>

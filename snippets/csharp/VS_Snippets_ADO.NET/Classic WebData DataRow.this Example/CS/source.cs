@@ -37,5 +37,4 @@ public class Form1: Form
         row[table.Columns.Count-1] = newValue;
     }
     // </Snippet1>
-
 }

@@ -66,10 +66,8 @@ namespace VSMCustomControl
             else
             {
                 VisualStateManager.GoToElementState(canvasRoot, "CanvasButtonUp", true);
-
             }
         }
         //</SnippetVSMEasingFunctionLogic>
-
     }
 }

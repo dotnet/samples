@@ -38,7 +38,6 @@ namespace FileSystemExample
         {
 
             File.Encrypt(FileName);
-
         }
 
         // Decrypt a file.

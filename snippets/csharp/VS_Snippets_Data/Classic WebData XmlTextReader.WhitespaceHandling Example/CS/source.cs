@@ -25,7 +25,6 @@ public class Sample
 
     Console.WriteLine("\r\nRead the XML including white space nodes...");
     ReadXML(context, xmlFrag, WhitespaceHandling.All);
-
   }
   
   public static void ReadXML(XmlParserContext context, string xmlFrag, WhitespaceHandling ws){
@@ -59,7 +58,6 @@ public class Sample
   
     //Close the reader.
     reader.Close();     
-  
   }
 } // End class
 

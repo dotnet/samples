@@ -71,7 +71,6 @@ public class SimpleWebExample
           Uri address = null;
           address = new Uri(urls[i]);
           webClients[i].DownloadStringAsync(address, address);
-
       } // end for
 
       // Return the underlying Task. The client code

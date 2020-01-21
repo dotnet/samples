@@ -14,7 +14,5 @@ namespace SDKSample
             InitializeComponent();
             MyBasicBorderExampleFrame.Content = new BasicBorderExample();           
         }
-        
     }
-
 }

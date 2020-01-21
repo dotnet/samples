@@ -42,6 +42,5 @@ namespace SDKSamples
             DockPanel.SetDock(mainTextBox, Dock.Bottom);
         }
         //</SnippetMenuItemCommandingCodeBehind>
-
     }
 }

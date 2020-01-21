@@ -69,6 +69,5 @@ namespace Iterators
                 if (index % 2 == 1)
                     yield return index;
         }
-
     }
 }

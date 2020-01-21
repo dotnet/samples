@@ -40,6 +40,5 @@ class MyClass
 // </Snippet4>
      myServiceDescription = null;
      myBinding = null;
-      
    }
 }

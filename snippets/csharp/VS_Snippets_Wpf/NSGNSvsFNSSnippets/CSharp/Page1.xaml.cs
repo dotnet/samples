@@ -28,6 +28,5 @@ namespace NSGNSvsFNSSnippets
                 object bob = ns;
             };
         }
-
     }
 }

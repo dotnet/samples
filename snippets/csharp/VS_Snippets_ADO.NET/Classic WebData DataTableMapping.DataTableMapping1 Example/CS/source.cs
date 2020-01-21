@@ -16,5 +16,4 @@ public class Form1: Form
             new DataTableMapping("Categories","DataCategories");
     }
     // </Snippet1>
-
 }

@@ -45,7 +45,6 @@ namespace DragDrop
          this.Text = "ImageDrag";
 
          this.ResumeLayout(false);
-
       }
 		#endregion
 
@@ -129,6 +128,5 @@ private void Form1_DragEnter(object sender, DragEventArgs e)
    }
 }
 //</snippet1>
-
    }
 }

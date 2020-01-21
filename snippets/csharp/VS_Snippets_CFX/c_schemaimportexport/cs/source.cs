@@ -62,7 +62,6 @@ internal partial class Vehicle : IExtensibleDataObject
     }
 }
 //</snippet2>
-
 }
 namespace ImportExport3
 {
@@ -180,7 +179,6 @@ namespace ImportExport5
 [CollectionDataContract(ItemName="person")]
 public class people : List<string> {}
 //</snippet6>
-
 }
 namespace ImportExport6
 {

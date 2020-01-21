@@ -148,7 +148,6 @@ class MemoryFailPointExample
         // explicitly keep the byte[] alive to help exhaust the memory.
         GC.KeepAlive(bytes);
         Console.WriteLine("Thread {0} is finished.", state.ThreadNumber);
-
     }
 }
 //</Snippet1>

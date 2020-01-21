@@ -50,7 +50,6 @@ public class Run
       // Serializes the object and closes the TextWriter.
       s.Serialize(writer, group);
       writer.Close();
-
    }
 }
 

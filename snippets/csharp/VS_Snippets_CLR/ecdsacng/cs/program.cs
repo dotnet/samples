@@ -21,7 +21,6 @@ class Alice
              bob.Receive(data, signature);
             }
     }
-
 }
 public class Bob 
 {

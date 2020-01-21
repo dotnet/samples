@@ -72,6 +72,5 @@ namespace WCSamples
         {
             return true;
         }
-
     }
 }

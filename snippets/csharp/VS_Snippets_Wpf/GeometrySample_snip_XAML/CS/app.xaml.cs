@@ -31,6 +31,5 @@ namespace Microsoft.Samples.Graphics.Geometries
         {
             MessageBox.Show("Unhandled exception: " + args.ExceptionObject.ToString());
         }         
-        
     }
 }

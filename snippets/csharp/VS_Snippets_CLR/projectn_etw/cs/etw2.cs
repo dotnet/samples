@@ -27,7 +27,6 @@ public sealed partial class MainPage : Page
 public class Page 
 {
    public void InitializeComponent() {}       
-       
 }
 
 public sealed partial class App : Application 

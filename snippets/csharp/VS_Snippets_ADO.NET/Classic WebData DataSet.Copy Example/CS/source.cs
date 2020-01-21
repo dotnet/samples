@@ -19,5 +19,4 @@ public class Form1: Form
         // Insert code to work with the copy.
     }
     // </Snippet1>
-
 }

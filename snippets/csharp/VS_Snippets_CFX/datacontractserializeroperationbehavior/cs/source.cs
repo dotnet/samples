@@ -132,7 +132,6 @@ namespace Example
 
         [OperationContract]
         string GetInfo(string request);
-
     }
 
     [MessageContract(ProtectionLevel = System.Net.Security.ProtectionLevel.Sign)]

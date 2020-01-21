@@ -59,7 +59,6 @@ namespace System.Drawing.ClassicPensExampleCS
             this.Name = "Form1";
             this.Text = "Form1";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
-
         }
 		#endregion
 

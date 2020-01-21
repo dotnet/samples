@@ -23,9 +23,7 @@ public class SamplesStringEnumerator  {
       myEnumerator.Reset();
       if ( myEnumerator.MoveNext() )
          Console.WriteLine( "The first element is {0}.", myEnumerator.Current );
-
    }
-
 }
 
 /*

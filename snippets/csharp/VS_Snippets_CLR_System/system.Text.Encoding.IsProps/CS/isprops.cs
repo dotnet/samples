@@ -23,9 +23,7 @@ public class SamplesEncoding  {
          Console.Write( "{0,-8} {1,-8} ", e.IsMailNewsDisplay, e.IsMailNewsSave );
          Console.WriteLine( "{0,-8} {1,-8} ", e.IsSingleByte, e.IsReadOnly );
       }
-
    }
-
 }
 
 

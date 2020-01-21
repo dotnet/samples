@@ -40,7 +40,6 @@ namespace Microsoft.ServiceModel.Samples
                 Console.WriteLine("Press <ENTER> to terminate service.");
                 Console.ReadLine();
             }
-           
         }
 
         public static void Snippet4()

@@ -12,6 +12,5 @@ namespace FocusSample
 
     public partial class MyApp : Application
     {
-
     }
 }

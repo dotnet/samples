@@ -54,7 +54,6 @@ namespace Microsoft.ServiceModel.Samples
             Console.WriteLine("The URI of the EndpointAddress is still {0}:", epa2.Uri);
             Console.WriteLine();
             // </Snippet1>
-
         }
     }
 }

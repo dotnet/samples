@@ -27,7 +27,6 @@ namespace MediaElementExample
             media.MediaOpened += new RoutedEventHandler(Media_MediaOpened);
             media.MediaFailed += new EventHandler<ExceptionRoutedEventArgs>(Media_MediaFailed);
             volumeSL.Value = 0.5;
-
         }
 
 //<SnippetUIElementVisibility>
@@ -120,7 +119,6 @@ namespace MediaElementExample
 
             //volumeSL.Maximum = 1.0;
             //MediaCommands.TogglePlayPause.Execute(null, media);
-
         }
 
 //<SnippetExceptionRoutedEventArgs>

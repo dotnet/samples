@@ -13,14 +13,12 @@ class SafeHandlesExample
         {
 
             UnmanagedFileLoader loader = new UnmanagedFileLoader("example.xml");
-
         }
         catch (Exception e)
         {
             Console.WriteLine(e);
         }
         Console.ReadLine();
-
     }
 }
 
@@ -84,8 +82,6 @@ class UnmanagedFileLoader
                 return null;
             }
         }
-
     }
-
 }
 //</Snippet1>

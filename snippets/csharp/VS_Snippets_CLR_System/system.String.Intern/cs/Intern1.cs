@@ -13,6 +13,5 @@ public class Class1
       Console.WriteLine((Object)s2==(Object)s1); // Different references.
       Console.WriteLine((Object)s3==(Object)s1); // The same reference.
       // </Snippet1>
-
    }
 }

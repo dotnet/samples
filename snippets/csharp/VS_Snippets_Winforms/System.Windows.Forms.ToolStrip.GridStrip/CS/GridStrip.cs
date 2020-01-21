@@ -548,7 +548,6 @@ namespace GridStripLib
             this.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table;
             this.ResumeLayout(false);
-
         }
 
         #endregion

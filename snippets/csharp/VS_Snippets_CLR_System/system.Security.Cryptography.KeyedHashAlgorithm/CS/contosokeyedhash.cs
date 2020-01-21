@@ -12,7 +12,6 @@ namespace Contoso
         public ContosoKeyedHash(byte[] rgbKey) 
             : this("System.Security.Cryptography.KeyedHashAlgorithm", rgbKey)
         {
-
         }
 
         public ContosoKeyedHash(String keyedHashName, byte[] rgbKey)
@@ -65,7 +64,6 @@ namespace Contoso
             int ibStart, 
             int cbSize)
         {
-
         }
         protected override byte[] HashFinal()
         {

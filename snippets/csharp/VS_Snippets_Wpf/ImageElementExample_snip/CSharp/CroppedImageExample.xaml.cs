@@ -77,8 +77,6 @@ namespace ImageElementExample
             Grid.SetColumn(clipImage, 1);
             Grid.SetRow(clipImage, 5);
             croppedGrid.Children.Add(clipImage);
-
         }
-
     }
 }

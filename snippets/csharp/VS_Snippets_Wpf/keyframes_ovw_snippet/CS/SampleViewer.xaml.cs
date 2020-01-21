@@ -21,8 +21,6 @@ namespace Microsoft.Samples.KeyFrameAnimations
         public SampleViewer()
         {
             InitializeComponent();
-
         }
-
     }
 }

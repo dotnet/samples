@@ -25,7 +25,5 @@ namespace SdkSample
         }// end:AppStartup()
 
         private Window1 _appWindow = null;      // application main window
-
     }// end:partial class App
-
 }// end:namespace SdkSample

@@ -40,7 +40,6 @@ namespace Examples.CS.WebControls.Design
                  "<b>SelectMethod</b> \"" + myODS.SelectMethod + "\"" );
 
             return markup;
-
         } // GetDesignTimeHtml
         // </snippet3>
 
@@ -59,7 +58,6 @@ namespace Examples.CS.WebControls.Design
                     selectProp, BrowsableAttribute.Yes);
         } // PreFilterProperties
         // </snippet4>
-
     } // MyObjectDataSourceDesigner
 } // Examples.CS.WebControls.Design
 // </snippet1>

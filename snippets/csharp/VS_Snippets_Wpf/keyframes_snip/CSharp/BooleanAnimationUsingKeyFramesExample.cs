@@ -115,7 +115,6 @@ namespace Microsoft.Samples.KeyFrameExamples
 
             Content = myStackPanel;
         }
-
     }
 }
 // </SnippetBooleanAnimationUsingKeyFramesWholePage>

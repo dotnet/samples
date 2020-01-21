@@ -10,6 +10,5 @@ namespace SecurityOverviewSnippets
 
     public partial class App : System.Windows.Application
     {
-
     }
 }

@@ -89,7 +89,6 @@ public class Run
       myGroup = (Group) mySerializer.Deserialize(reader);
       reader.ReadEndElement();
       reader.Close();
-
    }
    
    private XmlSerializer ReturnSOAPSerializer(){

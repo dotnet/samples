@@ -15,7 +15,6 @@ public class Form1:
 		InitializeHelpProvider();
 
 		//Add any initialization after the InitializeComponent() call
-
 	}
 
 	//Form overrides dispose to clean up the component list.
@@ -74,7 +73,6 @@ public class Form1:
 		this.Name = "Form1";
 		this.Text = "Form1";
 		this.ResumeLayout(false);
-
 	}
 
 	#endregion

@@ -19,8 +19,6 @@ namespace FourDPointSample
 
             // displays variables
             mainWindow.ShowVars();
-
         }
-
     }
 }

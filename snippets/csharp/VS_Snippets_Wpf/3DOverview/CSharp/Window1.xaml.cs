@@ -368,8 +368,6 @@ namespace create_cube
             side3.Material = side3Material;
             side4.Material = side4Material;
             side5.Material = side5Material;
-
         }
-
     }
 }

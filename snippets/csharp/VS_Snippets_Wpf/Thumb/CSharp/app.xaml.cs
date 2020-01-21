@@ -13,6 +13,5 @@ namespace Thumb_wcp
 
 	public partial class app : Application
 	{
-
 	}
 }

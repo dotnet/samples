@@ -22,8 +22,6 @@ namespace ListBox_Index
            ListBoxItem lbi = ((sender as ListBox).SelectedItem as ListBoxItem);
            if( lbi == null ) return; // don't tostring null
            label1.Content = "You chose " + lbi.Content.ToString() + "."; 
-           
          } 
        }
-
 }

@@ -144,7 +144,6 @@ namespace SDKSamples
 
                     // Clearing out the OverrideCursor.  
                     Mouse.OverrideCursor = null;
-
                 }
                 if (source.Name == "rbScopeApplication")
                 {

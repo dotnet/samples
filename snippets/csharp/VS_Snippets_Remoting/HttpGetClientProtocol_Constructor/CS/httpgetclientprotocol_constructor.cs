@@ -56,7 +56,6 @@ using System.Web.Services;
 
 public class Math : HttpGetClientProtocol
 {
-
 }
 
 public class HttpGetClientProtocolClass

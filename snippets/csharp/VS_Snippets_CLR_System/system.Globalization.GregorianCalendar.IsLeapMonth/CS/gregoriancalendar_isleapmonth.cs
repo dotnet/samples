@@ -20,9 +20,7 @@ public class SamplesGregorianCalendar  {
             Console.Write( "\t{0}", myCal.IsLeapMonth( y, m, GregorianCalendar.CurrentEra ) );
          Console.WriteLine();
       }
-
    }
-
 }
 
 /*

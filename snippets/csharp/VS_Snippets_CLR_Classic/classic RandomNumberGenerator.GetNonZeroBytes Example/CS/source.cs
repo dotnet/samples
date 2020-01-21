@@ -13,6 +13,5 @@ public class Form1: Form
     RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider();
     rng.GetNonZeroBytes(random); // The array is now filled with cryptographically strong random bytes, and none are zero.
 // </Snippet1>
-
  }
 }

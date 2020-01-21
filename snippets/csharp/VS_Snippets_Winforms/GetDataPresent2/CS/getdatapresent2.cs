@@ -72,7 +72,6 @@ namespace GetDataPresent2
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
-
         }
         #endregion
 
@@ -112,7 +111,6 @@ namespace GetDataPresent2
 
         private void Form1_Load(object sender, System.EventArgs e)
         {
-        
         }
     }
 }

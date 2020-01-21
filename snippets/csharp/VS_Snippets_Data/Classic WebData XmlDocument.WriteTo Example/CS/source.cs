@@ -17,5 +17,4 @@ public static void WriteXml( XmlDocument doc )
     Console.WriteLine();
  }
    // </Snippet1>
-
 }

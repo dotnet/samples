@@ -17,7 +17,6 @@ namespace Examples
         {
             Program p = new Program();
             p.Run();
-
         }
 
         //<snippet1>
@@ -84,9 +83,7 @@ namespace Examples
                 (SecureConversationSecurityTokenParameters)sbe.ProtectionTokenParameters;
             SecurityBindingElement bootstrap = secureTokenParams.BootstrapSecurityBindingElement;
             Console.WriteLine("skew 2 {0}", bootstrap.LocalServiceSettings.MaxClockSkew.ToString());
-
         }
-
     }
 
     [ServiceContract]

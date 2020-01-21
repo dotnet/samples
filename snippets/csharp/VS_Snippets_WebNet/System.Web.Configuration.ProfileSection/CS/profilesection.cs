@@ -237,7 +237,6 @@ profileSection.Enabled = false;
             }
         }
     } // UsingProfileSection class end.
-    
 } // Samples.Aspnet.SystemWebConfiguration namespace end.
 
 // </Snippet3>

@@ -35,7 +35,6 @@ public class MyCollection : NameObjectCollectionBase  {
          this.BaseAdd( (String) de.Key, de.Value );
       }
    }
-
 }
 
 public class SamplesNameObjectCollectionBase  {
@@ -55,7 +54,6 @@ public class SamplesNameObjectCollectionBase  {
       Console.WriteLine( "The key at index 0 is {0}.", myCol[0].Key );
       Console.WriteLine( "The value at index 0 is {0}.", myCol[0].Value );
       Console.WriteLine( "The value associated with the key \"green\" is {0}.", myCol["green"] );
-
    }
 
    public static void PrintKeysAndValues( MyCollection myCol )  {
@@ -63,7 +61,6 @@ public class SamplesNameObjectCollectionBase  {
          Console.WriteLine( "[{0}] : {1}, {2}", i, myCol[i].Key, myCol[i].Value );
       }
    }
-
 }
 
 

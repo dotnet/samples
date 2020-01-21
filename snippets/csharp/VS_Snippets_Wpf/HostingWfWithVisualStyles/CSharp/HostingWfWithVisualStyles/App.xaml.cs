@@ -17,6 +17,5 @@ namespace HostingWfWithVisualStyles
         {
             InitializeComponent();
         }
-
     }
 }

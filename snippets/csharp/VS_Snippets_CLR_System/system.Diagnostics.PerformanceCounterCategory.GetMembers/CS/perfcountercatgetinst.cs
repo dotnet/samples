@@ -38,7 +38,6 @@ class PerfCounterCatGetInstMod
 
             // Get the instances associated with this category.
             instances = pcc.GetInstanceNames();
-
         }
         catch(Exception ex)
         {

@@ -33,5 +33,4 @@ namespace cs_objectmodel
         public string City;
     }
     // </Snippet2>
-
 }

@@ -108,7 +108,6 @@ namespace Microsoft.Samples.Xml.Schema
                     // Validate the first-name element and its content.
                     validator.ValidateElement("first-name", "http://www.contoso.com/books", null);
                     validator.ValidateEndElement(null, book.Author.FirstName);
-
                 }
 
                 if (book.Author.LastName != null)

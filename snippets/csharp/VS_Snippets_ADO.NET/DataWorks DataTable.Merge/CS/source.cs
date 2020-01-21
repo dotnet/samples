@@ -65,7 +65,6 @@ class Program
         Console.WriteLine("Merging");
         table1.Merge(table2);
         PrintValues(table1, "Merged With table1");
-
     }
 
     private static void Row_Changed(object sender, 

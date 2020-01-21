@@ -15,7 +15,6 @@ public class Form1:
 		InitializeToolBar();
 
 		//Add any initialization after the InitializeComponent() call
-
 	}
 
 	//Form overrides dispose to clean up the component list.
@@ -65,7 +64,6 @@ public class Form1:
 		this.Name = "Form1";
 		this.Text = "Form1";
 		this.ResumeLayout(false);
-
 	}
 
 	#endregion
@@ -135,7 +133,6 @@ public class Form1:
 		{
 			e.Button.PartialPush = true;
 			style = style |(FontStyle) e.Button.Tag;
-
 		}
 		else
 		{
@@ -149,7 +146,6 @@ public class Form1:
 		// Set the font using the existing RichTextBox font and the new
 		// style.
 		RichTextBox1.Font = new Font(RichTextBox1.Font, style);
-
 	}
 	//</snippet1>
 }

@@ -35,7 +35,6 @@ public class Form1: Form
             removedRow.AcceptChanges();
             // Try to get the Current row version.
             Console.WriteLine(removedRow[0,DataRowVersion.Current]);
- 
         }
         catch(System.Data.VersionNotFoundException)
         {
@@ -43,5 +42,4 @@ public class Form1: Form
         }
     }
     // </Snippet1>
-
 }

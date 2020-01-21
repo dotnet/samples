@@ -39,7 +39,6 @@ public class Sample {
     StringWriter writer = new StringWriter();
     xslt.Transform(new XPathDocument("books.xml"), null, writer, null);
     HTMLoutput = writer.ToString();
-
   }
 }
 //</snippet1>

@@ -8,7 +8,6 @@ namespace xunit_test
         [Fact]
         public void Test1()
         {
-
         }
     }
 }

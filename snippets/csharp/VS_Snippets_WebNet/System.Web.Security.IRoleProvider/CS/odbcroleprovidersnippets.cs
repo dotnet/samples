@@ -602,6 +602,5 @@ public override string[] FindUsersInRole(string rolename, string usernameToMatch
   return null;
 }
 //</Snippet11>
-
   }
 }

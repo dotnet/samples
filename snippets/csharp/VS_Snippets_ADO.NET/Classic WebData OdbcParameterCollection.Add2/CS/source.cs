@@ -22,5 +22,4 @@ public class Form1: Form
         int paramIndex = paramCollection.Add(paramObject);
     }
     // </Snippet1>
-
 }

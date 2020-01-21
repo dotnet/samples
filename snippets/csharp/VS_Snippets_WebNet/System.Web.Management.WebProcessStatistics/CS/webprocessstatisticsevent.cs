@@ -38,7 +38,6 @@ namespace SamplesAspNet
             // Instantiate the WebProcessStatistics 
             // type.
             processStatistics = new WebProcessStatistics();
-            
         }
         // </Snippet2>
 
@@ -187,11 +186,8 @@ namespace SamplesAspNet
             formatter.IndentationLevel -= 1;
 
             formatter.AppendLine(eventInfo.ToString());
-
         }
         // </Snippet14>
-
     }
-
 }
 // </Snippet1>

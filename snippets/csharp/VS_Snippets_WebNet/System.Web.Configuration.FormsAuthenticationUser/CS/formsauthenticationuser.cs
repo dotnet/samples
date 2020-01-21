@@ -75,9 +75,6 @@ namespace Samples.Aspnet.SystemWebConfiguration
             formsAuthenticationUsers[0].Name = "userName";
 
             // </Snippet5>
-
         }
-
     }
-  
 } 

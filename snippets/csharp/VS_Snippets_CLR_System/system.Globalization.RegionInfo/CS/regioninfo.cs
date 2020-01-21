@@ -27,9 +27,7 @@ public class SamplesRegionInfo  {
          Console.WriteLine( "The two RegionInfo instances are equal." );
       else
          Console.WriteLine( "The two RegionInfo instances are NOT equal." );
-
    }
-
 }
 
 /*

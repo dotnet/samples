@@ -147,6 +147,5 @@ public class ListViewInsertionMarkExample : Form
             return ((ListViewItem)x).Index - ((ListViewItem)y).Index;
         }
     }
-
 }
 //</Snippet1>

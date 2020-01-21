@@ -37,7 +37,6 @@ public class Form1 : Form
         this.Text = "TextBox Example";
         this.ResumeLayout(false);
         this.PerformLayout();
-
     }
 
     [STAThread]

@@ -19,7 +19,6 @@ namespace Microsoft.Samples.Graphics.UsingImageBrush
 
         public InteractiveExample()
         {
-
         }
 
         private void InteractiveExampleLoaded(object sender, RoutedEventArgs args)
@@ -27,7 +26,6 @@ namespace Microsoft.Samples.Graphics.UsingImageBrush
 
           loadInteractiveMenus();
           MyDefaultImageButton.IsChecked = true;
-          
         }
 
         // Initializes the image brush menu options.
@@ -65,7 +63,6 @@ namespace Microsoft.Samples.Graphics.UsingImageBrush
             viewboxUnitsSelector.SelectedItem = myImageBrush.ViewboxUnits.ToString();
             viewportEntry.Text = myImageBrush.Viewport.ToString();
             viewboxEntry.Text = myImageBrush.Viewbox.ToString();
-        
         }
 
         private void setSelectedButton(object sender, RoutedEventArgs args)
@@ -112,7 +109,6 @@ namespace Microsoft.Samples.Graphics.UsingImageBrush
                     viewboxEntry.Text = "Empty";
                     myImageBrush.Viewbox = Rect.Empty;
                 }
-
             }
             catch (InvalidOperationException invalidOpEx)
             {
@@ -122,8 +118,6 @@ namespace Microsoft.Samples.Graphics.UsingImageBrush
             {
                 MessageBox.Show("Invalid Viewport or Viewbox. " + formatEx.ToString());
             }
-
         }
-
     }
 }

@@ -35,7 +35,6 @@ namespace AdvancedInkInputSemples
 
             this.WindowState = WindowState.Maximized;
             //timer = new DispatcherTimer(TimeSpan.FromSeconds(2d), DispatcherPriority.Normal, new EventHandler(Tick), this.Dispatcher);
-
         }
 
         void EnableElement_Click(object sender, RoutedEventArgs e)
@@ -105,7 +104,6 @@ namespace AdvancedInkInputSemples
             {
                 toggleFilter.Content = "filter is off";
             }
-
         }
 
         // To use Loaded event put Loaded="WindowLoaded" attribute in root element of .xaml file.
@@ -113,6 +111,5 @@ namespace AdvancedInkInputSemples
 
         // Sample event handler:  
         // private void ButtonClick(object sender, RoutedEventArgs e) {}
-
     }
 }

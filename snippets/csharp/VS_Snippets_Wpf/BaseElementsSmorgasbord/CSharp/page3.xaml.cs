@@ -7,6 +7,5 @@ namespace MyNamespace
 {
   public partial class MyCode
   {
-
   }
 }

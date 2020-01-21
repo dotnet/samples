@@ -12,7 +12,6 @@ namespace SDKSamples
     {
         public CommandSlider() : base()
         {
-
         }
     //</SnippetImplementICommandSourceClassDefinition>
 

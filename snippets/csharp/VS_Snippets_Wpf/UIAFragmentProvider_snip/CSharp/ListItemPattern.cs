@@ -48,7 +48,6 @@ namespace ElementProvider
             myListItem = listItem;
             parentList = parent;
             selectedItems = new ArrayList();
-
         }
 
         #region ISelectionItemProvider

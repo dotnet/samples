@@ -88,9 +88,7 @@ namespace BrushesIntroduction
             Content = mainPanel;
             Title = "Transforming Brushes";
             Background = Brushes.White;
-
         }
-
     }
 }
 // </SnippetBrushTransformExampleWholePage> 

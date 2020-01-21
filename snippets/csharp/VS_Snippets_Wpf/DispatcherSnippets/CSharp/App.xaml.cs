@@ -12,6 +12,5 @@ namespace DispatcherSnippets
 
     public partial class App : Application
     {
-
     }
 }

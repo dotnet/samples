@@ -33,6 +33,5 @@ using System.Runtime.Remoting.Channels.Tcp;
          Console.WriteLine("The Object type is:"+myEntries[0].ObjectType);
          Console.WriteLine("The Object Url is:"+myEntries[0].ObjectUrl);
 // </Snippet1>
-
       } 
    }

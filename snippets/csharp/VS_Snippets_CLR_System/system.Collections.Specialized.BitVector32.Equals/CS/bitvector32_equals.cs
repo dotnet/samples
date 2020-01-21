@@ -54,9 +54,7 @@ public class SamplesBitVector32  {
          Console.WriteLine( "   Using the \"==\" operator, myBV.Data({0}) equals myInt32({1}).", myBV.Data, myInt32 );
       else
          Console.WriteLine( "   Using the \"==\" operator, myBV.Data({0}) does not equal myInt32({1}).", myBV.Data, myInt32 );
-      
    }
-
 }
 
 /*

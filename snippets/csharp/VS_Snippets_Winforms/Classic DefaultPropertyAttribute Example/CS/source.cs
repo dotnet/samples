@@ -37,7 +37,6 @@ public class Form1: Form
         }
      
         // Insert any additional code.
-     
      }
     // </Snippet1>
 }

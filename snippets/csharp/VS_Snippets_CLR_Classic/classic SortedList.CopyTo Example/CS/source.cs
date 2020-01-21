@@ -40,7 +40,6 @@
           Console.Write( "{0}{1}", mySeparator, myArr[i].Value );
        Console.WriteLine();
     }
-
  }
 
 

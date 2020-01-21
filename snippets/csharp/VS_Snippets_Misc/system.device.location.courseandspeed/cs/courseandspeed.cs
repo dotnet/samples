@@ -32,7 +32,6 @@ namespace CourseAndSpeed
             }
         }
         //</Snippet2>
-
     }
 }
 //</Snippet1>

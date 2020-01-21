@@ -45,7 +45,6 @@ namespace serialization
             serializer.Serialize(SaveFileStream, TestLoan);
             SaveFileStream.Close();
             // </Snippet6>
-
         }
     }
 }

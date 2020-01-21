@@ -82,7 +82,6 @@ class MyApplication
 
       myEnumBuilder.CreateType();
       myEnumBuilder.SetCustomAttribute(myInfo, new byte[]{01,00,01});
-      
    }
 }
 // </Snippet2>

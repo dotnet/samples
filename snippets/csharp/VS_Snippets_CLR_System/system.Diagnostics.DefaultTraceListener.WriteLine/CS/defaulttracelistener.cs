@@ -112,7 +112,6 @@ class DefaultTraceListenerMod
                 result /= iter;
             }
             return result;
-
         }
         catch(Exception ex)
         {

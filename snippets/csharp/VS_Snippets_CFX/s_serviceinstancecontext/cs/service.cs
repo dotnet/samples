@@ -111,5 +111,4 @@ namespace Microsoft.ServiceModel.Samples
             }
         }
     }
- 
 }

@@ -30,7 +30,6 @@ namespace LightSwitchApplication
                     }
                 }
             }
-
         }
         //</Snippet3>
         //<Snippet5>
@@ -99,7 +98,6 @@ namespace LightSwitchApplication
                 spCust.CopiedToDatabase = "Yes";
             }
             this.DataWorkspace.SharePointData.SaveChanges();
-
         }
         //</Snippet11>
         //<Snippet12>
@@ -121,7 +119,6 @@ namespace LightSwitchApplication
                 }
             }
             handled = true;
-
         }
         //</Snippet12>
         //<Snippet14>
@@ -176,6 +173,5 @@ namespace LightSwitchApplication
         }
 
         //</Snippet15>
-
     }
 }

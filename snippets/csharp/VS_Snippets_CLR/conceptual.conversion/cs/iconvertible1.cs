@@ -6,7 +6,6 @@ public class Example
    {
       CallEII();
       Console.WriteLine("-----");
-      
    }
 
    private static void CallEII()

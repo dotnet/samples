@@ -33,7 +33,6 @@ public class Example
             }
             var output = $"{member.Name} ({member.MemberType}): {access}{stat}, Declared by {member.DeclaringType}";
             Console.WriteLine(output);
-
         }
     }
 }

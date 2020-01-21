@@ -18,6 +18,5 @@ namespace grid_getset_methods
 			mainWindow.InitializeComponent();
 			mainWindow.Show();
         }
-
 	}
 }

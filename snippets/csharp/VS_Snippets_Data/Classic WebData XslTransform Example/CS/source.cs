@@ -25,6 +25,5 @@ XmlWriter writer = new XmlTextWriter(Console.Out);
 //Transform the data and send the output to the console.
 xslt.Transform(mydata,null,writer, null);
    // </Snippet1>
-
  }
 }

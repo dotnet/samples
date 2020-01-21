@@ -70,9 +70,6 @@ namespace Samples.Aspnet.SystemWebConfiguration
             currentError1.StatusCode = 404;
 
             // </Snippet5>
-
         }
-
     }
-
 }

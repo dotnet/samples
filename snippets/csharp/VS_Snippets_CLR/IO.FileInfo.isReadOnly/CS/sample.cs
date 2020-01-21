@@ -27,7 +27,6 @@ namespace FileSystemExample
 
             // Display that the file is read-only.
             Console.WriteLine("The file read-only value for " + FileName + " is: " + isReadOnly);
-
         }
 
         // Sets the read-only value of a file.
@@ -38,7 +37,6 @@ namespace FileSystemExample
 
             // Set the IsReadOnly property.
             fInfo.IsReadOnly = SetReadOnly;
-
         }
 
         // Returns wether a file is read-only.
@@ -49,9 +47,7 @@ namespace FileSystemExample
 
             // Return the IsReadOnly property value.
             return fInfo.IsReadOnly;
-
         }
-
     }
 }
 

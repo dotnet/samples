@@ -30,7 +30,6 @@ namespace SamplesAspNet
             eventInfo.Append(string.Format(
                 "Event created at: {0}",
                 EventTime.ToString()));
-
         }
         // </Snippet2>
 

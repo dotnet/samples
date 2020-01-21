@@ -124,5 +124,4 @@ namespace n3
         }
     }
     //</Snippet7>
-
 }

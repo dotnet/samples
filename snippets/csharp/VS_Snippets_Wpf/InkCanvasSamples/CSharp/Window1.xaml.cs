@@ -96,7 +96,6 @@ namespace InkCanvasSamples
 
             inkCanvas1.PreferredPasteFormats = formats;
             //</Snippet26>
-
         }
 
         //<Snippet20>
@@ -247,7 +246,6 @@ namespace InkCanvasSamples
                 {
                     aStroke.DrawingAttributes.Color = inkCanvas1.DefaultDrawingAttributes.Color;
                 }
-
             }
         }
         // </Snippet14>
@@ -258,7 +256,6 @@ namespace InkCanvasSamples
             // Allow the selection to only move horizontally.
             Rect newRect = e.NewRectangle;
             e.NewRectangle = new Rect(newRect.X, e.OldRectangle.Y, newRect.Width, newRect.Height);
-            
         }
         //</Snippet13>
 
@@ -287,7 +284,6 @@ namespace InkCanvasSamples
 
         void inkCanvas1_StrokeErasing(object sender, InkCanvasStrokeErasingEventArgs e)
         {
-                        
         }
 
         void comparePointDescriptionsButton_Click(object sender, RoutedEventArgs e)
@@ -337,7 +333,6 @@ namespace InkCanvasSamples
         void inkCanvas1_StrokeCollected(object sender, InkCanvasStrokeCollectedEventArgs e)
         {
             e.Stroke.AddPropertyData(currentTimeGuid, DateTime.Now);
-
         }
 
         //</Snippet22>
@@ -380,7 +375,6 @@ namespace InkCanvasSamples
             inkCanvas1.UseCustomCursor = true;
             inkCanvas1.Cursor = Cursors.Pen;
             //</Snippet5>
-
         }
 
         void PointEraseStrokes()
@@ -389,7 +383,6 @@ namespace InkCanvasSamples
             inkCanvas1.EditingModeInverted = InkCanvasEditingMode.EraseByPoint;
             inkCanvas1.EraserShape = new EllipseStylusShape(5, 5);
             //</Snippet6>
-
         }
 
         void selectElementsButton_Click(object sender, RoutedEventArgs e)
@@ -422,7 +415,6 @@ namespace InkCanvasSamples
 
             DataObject rectangleData = new DataObject(DataFormats.Xaml, rectString);
             Clipboard.SetDataObject(rectangleData);
-            
         }
 
         void pasteButton_Click(object sender, RoutedEventArgs e)
@@ -431,7 +423,6 @@ namespace InkCanvasSamples
             {
                 inkCanvas1.Paste(new Point(100, 100));
             }
-    
         }
         //</Snippet1>
 
@@ -509,6 +500,5 @@ namespace InkCanvasSamples
 
         // Sample event handler:  
         // private void ButtonClick(object sender, RoutedEventArgs e) {}
-
     }
 }

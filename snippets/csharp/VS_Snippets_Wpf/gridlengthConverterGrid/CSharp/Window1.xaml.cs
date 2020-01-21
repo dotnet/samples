@@ -64,7 +64,6 @@ namespace GridLengthConverter_grid
                GridLength gl6 = (GridLength)myGridLengthConverter2.ConvertFromString(li2.Content.ToString());
                row3.Height = gl6;
             }
-
         }
 
         private void setMinWidth(object sender, RoutedEventArgs e)
@@ -91,6 +90,5 @@ namespace GridLengthConverter_grid
             row2.MaxHeight = 75;
             row3.MaxHeight = 75;
         }
-
     }
 }

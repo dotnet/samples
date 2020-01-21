@@ -41,9 +41,6 @@ namespace WriteToSpoolFile
             anotherStream.Write(anotherByteBuffer, 0, anotherByteBuffer.Length);
             anotherStream.Close();
             //</SnippetAddNamedJob>
-
         }//end Main
-
     }//end Program class
-
 }// end namespace

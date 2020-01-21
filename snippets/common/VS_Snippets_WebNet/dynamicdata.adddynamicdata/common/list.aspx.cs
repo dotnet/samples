@@ -75,5 +75,4 @@ public partial class List : System.Web.UI.Page {
     protected void DynamicFilter_FilterChanged(object sender, EventArgs e) {
         GridView1.PageIndex = 0;
     }
-
 }

@@ -128,7 +128,6 @@ namespace UE.Samples
 		bool receiveSynchronously = s.ReceiveSynchronously;
 
 		// </Snippet17>
-
 	}
     }
     // </Snippet2>

@@ -15,7 +15,6 @@ namespace ExampleControl
 	{
 		public ExampleControl()
 		{
-
 		}
 	}
     //</Snippet1>
@@ -36,5 +35,4 @@ namespace ExampleControl
             return null;
         }
     }
-
 }

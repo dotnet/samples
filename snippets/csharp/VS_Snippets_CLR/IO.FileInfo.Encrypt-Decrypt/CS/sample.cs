@@ -55,7 +55,6 @@ namespace FileSystemExample
             }
             // Remove encryption.
             fInfo.Decrypt();
-
         }
     }
 }

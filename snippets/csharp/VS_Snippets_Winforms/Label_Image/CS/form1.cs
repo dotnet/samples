@@ -47,7 +47,6 @@ namespace Lable_Cs
 			label1.Image = image1;
 
 			// ...Code to add the control to the form...
-
 		}
 
 		//</snippet1>
@@ -81,7 +80,6 @@ namespace Lable_Cs
 			this.Name = "Form1";
 			this.Text = "Form1";
 			this.Load += new System.EventHandler(this.Form1_Load);
-
 		}
 		#endregion
 
@@ -96,7 +94,6 @@ namespace Lable_Cs
 
 		private void Form1_Load(object sender, System.EventArgs e) {
 			CreateMyLabel();
-
 		}
 	}
 }

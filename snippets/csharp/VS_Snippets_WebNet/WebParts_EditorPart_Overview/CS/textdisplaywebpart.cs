@@ -77,7 +77,6 @@ namespace Samples.AspNet.CS.Controls
       update.Text = "Set Label Content";
       update.Click += new EventHandler(this.submit_Click);
       this.Controls.Add(update);
-
     }
 
     private void submit_Click(object sender, EventArgs e)
@@ -175,7 +174,6 @@ namespace Samples.AspNet.CS.Controls
         _partContentFontStyle.Items.Add("None");
 
         Controls.Add(_partContentFontStyle);
-
       }
 
       protected override void RenderContents(HtmlTextWriter writer)

@@ -17,7 +17,6 @@ public class Form1:
 		InitializeComponent();
 
 		//Add any initialization after the InitializeComponent() call
-
 	}
 
 	//Form overrides dispose to clean up the component list.
@@ -53,7 +52,6 @@ public class Form1:
 		this.Name = "Form1";
 		this.Text = "Form1";
 		this.ResumeLayout(false);
-
 	}
 
 	#endregion
@@ -79,7 +77,6 @@ public class Form1:
 
 		// Add the StatusBar to the form.
 		this.Controls.Add(simpleStatusBar);
-
 	}
 	//</snippet1>
 	//<snippet2>
@@ -143,7 +140,6 @@ public class Form1:
 		e.Graphics.DrawString(e.Panel.Text, StatusBar1.Font, 
 			Brushes.DarkBlue, new RectangleF(e.Bounds.X, 
 			e.Bounds.Y, e.Bounds.Width, e.Bounds.Height), textFormat);
-
 	}
 	//</snippet2>
 
@@ -151,5 +147,4 @@ public class Form1:
 	{
 		Application.Run(new Form1());
 	}
-
 }

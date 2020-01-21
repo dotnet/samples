@@ -53,7 +53,6 @@ namespace ControlDesignerSamples.CS
                 }
                 return "";
             }
-            
         }
 
         // Override the control Text property, setting the default
@@ -87,6 +86,5 @@ namespace ControlDesignerSamples.CS
         }
     }
     // </Snippet2>
-
 }
 // </Snippet1>

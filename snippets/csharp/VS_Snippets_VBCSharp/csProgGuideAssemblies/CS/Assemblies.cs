@@ -20,7 +20,6 @@ public class ClassWithFriendMethod
     {
         Console.WriteLine("Sample Method");
     }
-
 }
 //</Snippet2>
 
@@ -60,5 +59,4 @@ namespace CsCsrefProgrammingAssemblies
         Yes, the file is an assembly.
     */
     //</Snippet1>
-
 }

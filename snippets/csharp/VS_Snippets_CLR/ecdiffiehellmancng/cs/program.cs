@@ -24,7 +24,6 @@ class Alice
             Send(aliceKey, "Secret message", out encryptedMessage, out iv);
             bob.Receive(encryptedMessage, iv);
         }
-
     }
 
     //<Snippet2>
@@ -47,7 +46,6 @@ class Alice
         }
     }
     //</Snippet2>
-
 }
 public class Bob 
 {
@@ -62,7 +60,6 @@ public class Bob
             bob.HashAlgorithm = CngAlgorithm.Sha256;
             bobPublicKey = bob.PublicKey.ToByteArray();
             bobKey = bob.DeriveKeyMaterial(CngKey.Import(Alice.alicePublicKey, CngKeyBlobFormat.EccPublicBlob));
-
         }
     }
 
@@ -88,6 +85,5 @@ public class Bob
         }
     }
     //</Snippet3>
-
 }
 //</Snippet1>

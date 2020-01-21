@@ -83,8 +83,6 @@ namespace Examples.SmtpExamples.Permissions
 // </snippet8>
     public static void Main()
     {
-
     }
     }
-
 }

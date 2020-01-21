@@ -72,7 +72,6 @@ namespace Samples.AspNet
                     throw new ConfigurationErrorsException(
                         "Don't take too long trips with that car.");
                 }
-
             }
             catch (ConfigurationErrorsException err)
             {
@@ -119,7 +118,6 @@ namespace Samples.AspNet
             pcolor = color;
             pminYear = year;
             pmaxMiles = miles;
-            
         }
 
         public override ConfigurationValidatorBase ValidatorInstance
@@ -130,6 +128,5 @@ namespace Samples.AspNet
             }
         }
     }
-
 }
 // </Snippet31>

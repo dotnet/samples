@@ -127,6 +127,5 @@ public class EnumsAndComboBox : Form
     {
         Application.Run(new EnumsAndComboBox());
     }
-
 }
 //</snippet00>

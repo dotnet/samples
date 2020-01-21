@@ -26,7 +26,6 @@ using System.Messaging;
              MessageQueue.Create(path);
          }
      }
- 
  }
  // </Snippet3>
 

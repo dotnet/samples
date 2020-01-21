@@ -39,7 +39,6 @@ public class Example
          var outputMsg = outputMessage.GetInvocationList()[ctr];
          if (! outputMsg.GetMethodInfo().Name.Contains("File"))
             outputMsg.DynamicInvoke( new String[] { "Hi!" } );
-         
       }
    }
 

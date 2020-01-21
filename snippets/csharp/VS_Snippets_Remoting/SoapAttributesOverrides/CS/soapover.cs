@@ -75,7 +75,6 @@ public class Run
       test.SerializeOverride("SoapOverrides.xml");
       test.DeserializeOriginal("SoapOriginal.xml");
       test.DeserializeOverride("SoapOverrides.xml");
-   
    }
    public void SerializeOriginal(string filename)
    {
@@ -112,7 +111,6 @@ public class Run
       overRideSerializer.Serialize(writer, myGroup);
       writer.WriteEndElement();
       writer.Close();
-
    }
 
    private Group MakeGroup(){
@@ -155,7 +153,6 @@ public class Run
       myGroup = (Group) mySerializer.Deserialize(reader);
       reader.ReadEndElement();
       reader.Close();
-
    }
 
    public void DeserializeOverride(string filename)

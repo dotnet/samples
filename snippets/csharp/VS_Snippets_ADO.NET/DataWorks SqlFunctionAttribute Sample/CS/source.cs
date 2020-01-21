@@ -19,8 +19,6 @@ public static IEnumerable GetFileDetails(string directoryPath)
    {
       return new string[1] { dnf.ToString() };
    }
-			
 }
 //</Snippet1>
-
 }

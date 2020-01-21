@@ -78,7 +78,6 @@ foreach (var cust in query)
             // </Snippet4>
 
             Console.ReadLine();
-
         } //end of Main
 
         // <Snippet2>
@@ -103,7 +102,5 @@ foreach (var cust in query)
                     cust.City);
             // </Snippet5>
         }
-
     }
-
 }

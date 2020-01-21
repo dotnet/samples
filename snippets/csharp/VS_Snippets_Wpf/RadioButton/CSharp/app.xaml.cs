@@ -13,6 +13,5 @@ namespace RadioButtonSimple
 
 	public partial class app : Application
 	{
-
 	}
 }

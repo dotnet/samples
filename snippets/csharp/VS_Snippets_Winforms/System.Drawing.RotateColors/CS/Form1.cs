@@ -64,9 +64,7 @@ namespace RotateColors
                 height,      // height of source rectangle
                 GraphicsUnit.Pixel,
                imageAttributes);
-
         }
 //</snippet1>
-
     }
 }

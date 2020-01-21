@@ -78,7 +78,6 @@ namespace Samples.AspNet.CS.Controls
 		 string inputstring = Encoding.ASCII.GetString(data).ToUpper();
 		 data = Encoding.ASCII.GetBytes(inputstring);
 	     strSink.Write(data, 0, count);
-       
       }
    }
 }

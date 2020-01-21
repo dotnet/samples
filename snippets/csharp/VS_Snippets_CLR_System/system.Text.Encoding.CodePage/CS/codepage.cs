@@ -25,9 +25,7 @@ public class SamplesEncoding  {
 
          Console.WriteLine();
       }
-
    }
-
 }
 
 

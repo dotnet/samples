@@ -104,7 +104,6 @@ public class HttpConnect : WebResponse{
 
 				// Throw the 'WebException' object with a message string, message status,InnerException and WebResponse
 				throw new WebException("The Requested page is not found.",myException,WebExceptionStatus.ProtocolError,myWebResponse);
-
 			}
 
 			connectSocket.Close();	

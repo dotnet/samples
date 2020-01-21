@@ -56,7 +56,6 @@ void PlaceHolder() {
           // statements that will get executed if the timer ran out
     }  
     // </snippet9>
-
 }
 
         // This integer variable keeps track of the 
@@ -97,7 +96,5 @@ void PlaceHolder() {
         }
     }
     // </snippet10>
-
     }
-
 }

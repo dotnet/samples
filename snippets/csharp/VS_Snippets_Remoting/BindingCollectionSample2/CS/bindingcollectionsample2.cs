@@ -94,7 +94,6 @@ class MyClass
       myServiceDescription.Write("MathService_new.wsdl");
       Console.WriteLine("\nSuccessfully added bindings for SOAP protocol and saved results in file MathService_new.wsdl");
       Console.WriteLine("\n This file should be passed to wsdl tool as input to generate proxy");
-      
    }
    // Creates a Message with name ="messageName" having one MessagePart with name = "partName".
    public static Message CreateMessage(string messageName,string partName,string element,string targetNamespace)

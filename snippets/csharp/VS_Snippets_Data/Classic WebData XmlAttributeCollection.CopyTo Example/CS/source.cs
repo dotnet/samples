@@ -26,7 +26,6 @@ public class Sample
     foreach (XmlAttribute attr in array){
       Console.WriteLine("{0} = {1}",attr.Name,attr.Value);
     } 
-  
   }
 }
 // </Snippet1>

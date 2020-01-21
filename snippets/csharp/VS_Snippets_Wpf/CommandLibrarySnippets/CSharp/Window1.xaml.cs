@@ -18,7 +18,6 @@ namespace SDKSamples
         public Window1()
         {
             InitializeComponent();
-
         }
 
         // <SnippetKeyGestureGetProperties>
@@ -198,13 +197,10 @@ namespace SDKSamples
                         {
                             txtGesture.Text += "No Mouse Gestures" + "\n";
                         }
-                   
                     }
                 }
               //   cmdButton.Command = srcCommand;
-
             }
-            
         }
 
         // <SnippetKeyDownHandlerKeyGestureMatches>
@@ -250,10 +246,7 @@ namespace SDKSamples
                         gesture.Modifiers.ToString() + "   " + 
                         ((RoutedCommand)binding.Command).Name + "\n";
                 }
-
             }
-
         }
-
     }
 }

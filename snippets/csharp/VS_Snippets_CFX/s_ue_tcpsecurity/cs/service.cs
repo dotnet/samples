@@ -107,7 +107,5 @@ namespace Service
                 // </Snippet2>
             }
         }
-
     }
-
 }

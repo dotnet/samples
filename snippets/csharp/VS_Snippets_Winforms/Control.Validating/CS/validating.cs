@@ -37,7 +37,6 @@ using System.Data;
 			this.ClientSize = new System.Drawing.Size(292, 273);
 			this.Controls.AddRange(new System.Windows.Forms.Control[] {this.textBox1,this.button1,this.button2});
 			this.Text = "Form1";
-
 		}
 
 		[STAThread]

@@ -12,6 +12,5 @@ namespace InlineSnippets
 
     public partial class MyApp : Application
     {
-
     }
 }

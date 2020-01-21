@@ -42,7 +42,6 @@ namespace SDKSample {
       CustomType customType = new CustomType();
       Application.Current.Properties["CustomType"] = customType;
       //</SnippetSetApplicationScopePropertyCustomType>
-      
     }
 
     void GetApplicationProperties() {

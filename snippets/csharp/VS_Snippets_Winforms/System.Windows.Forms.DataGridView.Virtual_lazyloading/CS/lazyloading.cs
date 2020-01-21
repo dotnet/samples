@@ -77,7 +77,6 @@ public class VirtualJustInTimeDemo : System.Windows.Forms.Form
     {
         Application.Run(new VirtualJustInTimeDemo());
     }
-
 }
 //</snippet100>
 
@@ -209,7 +208,6 @@ public class DataRetriever : IDataPageRetriever
         adapter.Fill(table);
         return table;
     }
-
 }
 //</snippet200>
 
@@ -357,7 +355,6 @@ public class Cache
             }
             return 0;
         }
-
     }
 
     // Returns a value indicating whether the given row index is contained
@@ -367,7 +364,6 @@ public class Cache
         return rowIndex <= cachePages[pageNumber].HighestIndex &&
             rowIndex >= cachePages[pageNumber].LowestIndex;
     }
-
 }
 //</snippet300>
 //</snippet000>

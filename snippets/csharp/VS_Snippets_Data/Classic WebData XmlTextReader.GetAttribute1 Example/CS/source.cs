@@ -18,7 +18,6 @@ public class Sample
        reader.MoveToContent();
        string isbn = reader.GetAttribute("ISBN");
        Console.WriteLine("The ISBN value: " + isbn);
-
      } 
      finally 
      {
@@ -26,6 +25,5 @@ public class Sample
           reader.Close();
       }
   }
-  
 } // End class
    // </Snippet1>

@@ -162,7 +162,6 @@ class Program
         }
         Console.WriteLine("Done!");
         // </Snippet1>
-
     }
 
     static private string GetConnectionString()

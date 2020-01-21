@@ -21,7 +21,6 @@ namespace cs_walkthru1
             // Get a typed table to run queries.
             Table<Customer> Customers = db.GetTable<Customer>();
             // </Snippet4>
-
         }
     }
     // <Snippet2>
@@ -47,7 +46,6 @@ public string CustomerID
     {
         this._CustomerID = value;
     }
-    
 }
 
 private string _City;
@@ -65,5 +63,4 @@ public string City
 }
 // </Snippet3>
     }
-
 }

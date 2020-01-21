@@ -21,9 +21,7 @@ public class SamplesCultureInfo
          Console.Write(" {0,-40}", ci.DisplayName);
          Console.WriteLine(" {0,-40}", ci.EnglishName);
       }
-
    }
-
 }
 
 

@@ -199,7 +199,6 @@ namespace SDKSample
             // Return the value of the parameter.
             return base.ArrangeOverride(finalSize);
         }
-  
     }
 }
 // </SnippetViewport3DVisualExampleWholePage>

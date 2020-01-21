@@ -157,8 +157,6 @@ public class TreeViewOwnerDraw : Form
          }
         
         return bounds;
-        
     }
-
 }
 //</Snippet1>

@@ -23,6 +23,5 @@ namespace SDKSample
         {
             InitializeComponent();
         }
-
     }
 }

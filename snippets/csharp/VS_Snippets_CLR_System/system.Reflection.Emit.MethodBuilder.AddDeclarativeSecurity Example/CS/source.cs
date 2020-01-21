@@ -31,7 +31,5 @@ class MyMethodBuilderDemo {
 					 myMethodPermissions);
 	
 	//</Snippet1>
-
    }
-
 }

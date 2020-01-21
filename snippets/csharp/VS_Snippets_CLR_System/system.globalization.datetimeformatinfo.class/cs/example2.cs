@@ -26,7 +26,6 @@ public class Example
       dtfi.FullDateTimePattern = originalFullDateTimePattern;
       foreach (var fmt in formats)
          Console.WriteLine("{0}: {1}", fmt, value.ToString(fmt, dtfi));
-
    }
 }
 // The example displays the following output:

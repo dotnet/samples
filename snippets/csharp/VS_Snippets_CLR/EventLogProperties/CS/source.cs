@@ -66,7 +66,6 @@ namespace EventLogSamples
                         Console.WriteLine("Unrecognized overflow policy value.");
                         break;
                 }
-
             }
             Console.WriteLine();
         }

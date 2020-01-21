@@ -8,7 +8,6 @@ public class Example
       // <Snippet2>
       ResourceManager rm = new ResourceManager(typeof(Resource1));
       // </Snippet2>
-
    }
 }
 

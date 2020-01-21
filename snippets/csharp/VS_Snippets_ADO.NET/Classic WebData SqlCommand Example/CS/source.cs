@@ -13,7 +13,6 @@ namespace SqlCommandCS
             string str = "Data Source=(local);Initial Catalog=Northwind;"
                 + "Integrated Security=SSPI";
             ReadOrderData(str);
-
         }
         // <Snippet1>
         private static void ReadOrderData(string connectionString)

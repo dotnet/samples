@@ -41,7 +41,6 @@ namespace NavigatingData
             findButton.Click += new EventHandler(findButton_Click);
             this.Load += new EventHandler(Form1_Load);
             this.customersBindingSource.PositionChanged += new EventHandler(customersBindingSource_PositionChanged);
-
         }
         [STAThread]
         static void Main()
@@ -95,7 +94,6 @@ namespace NavigatingData
             customersDataGridView.DataSource = customersBindingSource;
         }
         //</snippet5>
-   
     }
 }
 //</snippet1>

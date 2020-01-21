@@ -31,6 +31,5 @@ namespace VbPowerPacksShapeCollectionCS
             }
         }
         // </Snippet1>
-
     }
 }

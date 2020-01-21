@@ -93,19 +93,16 @@ public class Form1:
 				new System.IO.DirectoryInfo(textBox1.Text);
 			directory.GetFiles();
 			errorProvider1.SetError(textBox1, "");
-
 		}
 		catch(System.ArgumentException ex1)
 		{
 			errorProvider1.SetError(textBox1, "Please enter a directory");
-
 		}
 		catch(System.IO.DirectoryNotFoundException ex2)
 		{
 			errorProvider1.SetError(textBox1, "The directory does not exist." +
 				"Try again with a different directory.");
 		}
-
 	}
 	//</snippet3>
 
@@ -160,7 +157,6 @@ public class Form1:
 		// Allow the user to select multiple images.
 		this.openFileDialog1.Multiselect = true;
 		this.openFileDialog1.Title = "My Image Browser";
-		
 	}
 
 	private void fileButton_Click(System.Object sender, System.EventArgs e)
@@ -197,5 +193,4 @@ public class Form1:
 		pictureBox1.Image = null;
 	}
 	//</snippet1>
-
 }

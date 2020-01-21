@@ -58,7 +58,6 @@ class Program
             // Clear the RSA key.
             rsaKey.Clear();
         }
-
     }
 
     public static void Encrypt(XmlDocument Doc, string ElementToEncrypt, RSA Alg, string KeyName)
@@ -82,7 +81,6 @@ class Program
         if (elementToEncrypt == null)
         {
             throw new XmlException("The specified element was not found");
-
         }
 
         //////////////////////////////////////////////////
@@ -152,7 +150,6 @@ class Program
         ////////////////////////////////////////////////////
 
         EncryptedXml.ReplaceElement(elementToEncrypt, edElement, false);
-
     }
 
     public static void Decrypt(XmlDocument Doc, RSA Alg, string KeyName)
@@ -175,8 +172,6 @@ class Program
 
         // Decrypt the element.
         exml.DecryptDocument();
-
     }
-
 }
 //</SNIPPET1>

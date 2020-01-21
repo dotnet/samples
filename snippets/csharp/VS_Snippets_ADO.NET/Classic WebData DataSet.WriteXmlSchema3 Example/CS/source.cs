@@ -19,5 +19,4 @@ public class Form1: Form
         thisDataSet.WriteXmlSchema(filename);
     }
     // </Snippet1>
-
 }

@@ -28,7 +28,6 @@ public class SamplesListDictionary  {
       else
          Console.WriteLine( "The collection does not contain the key \"Kiwis\"." );
       Console.WriteLine();
-
    }
 
    public static void PrintKeysAndValues( IDictionary myCol )  {
@@ -37,7 +36,6 @@ public class SamplesListDictionary  {
          Console.WriteLine( "   {0,-25} {1}", de.Key, de.Value );
       Console.WriteLine();
    }
-
 }
 
 

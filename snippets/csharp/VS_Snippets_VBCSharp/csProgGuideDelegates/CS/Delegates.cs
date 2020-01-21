@@ -37,9 +37,7 @@ class DelegatesIntro
         // Keep the console window open in debug mode.
         Console.WriteLine("Press any key to exit.");
         Console.ReadKey();
- 
     }
- 
 }
 //-----------------------------------------------------------------------------
 class TestStuff
@@ -325,7 +323,6 @@ namespace WrapContravariance
             lastActivity = new System.DateTime();
             this.textBox1.KeyDown += this.MultiHandler; //works with KeyEventArgs
             this.button1.MouseClick += this.MultiHandler; //works with MouseEventArgs
-
         }
 
         // Event handler for any event with an EventArgs or
@@ -392,14 +389,12 @@ namespace WrapContravariance
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
-
     }
 
     //-----------------------------------------------------------------------------

@@ -311,7 +311,6 @@ namespace Coding_Conventions_Examples
         public string Name { get; set; }
         public int ID { get; set; }
         public string City { get; set; }
-
     }
 
     class Customer
@@ -320,7 +319,6 @@ namespace Coding_Conventions_Examples
         public string Name { get; set; }
         public int ID { get; set; }
         public string City { get; set; }
-
     }
 
     class ExampleClass
@@ -361,7 +359,6 @@ namespace Coding_Conventions_Examples
 
     class DerivedClass : BaseClass
     {
-
     }
 
     class CompoundFrom
@@ -407,7 +404,6 @@ namespace Coding_Conventions_Examples
             Console.ReadKey();
         }
     }
-
 }
 
 namespace Coding_Conventions_WF2
@@ -428,7 +424,6 @@ namespace Coding_Conventions_WF2
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
         }
     }
 }
@@ -452,7 +447,6 @@ namespace Coding_Conventions_WF2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

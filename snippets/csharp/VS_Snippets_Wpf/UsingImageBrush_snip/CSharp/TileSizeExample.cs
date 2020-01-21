@@ -78,7 +78,6 @@ namespace Microsoft.Samples.Graphics.UsingImageBrush
             Title = "Tile Size Example";
             Background = Brushes.White;
             Margin = new Thickness(20);
-
         }
     }
 }

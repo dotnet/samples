@@ -37,7 +37,6 @@ namespace Transportation
         abstract public bool ConsumesFuel { get; set; }
         abstract public bool Living { get; set; }
     }
-
 }
 // The example displays the following output:
 //    Virtual properties in type Transportation.MeansOfTransportation:

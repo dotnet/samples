@@ -34,8 +34,6 @@ namespace VbPowerPacksShapeFocusCS
 
         private void ovalShape3_Click(object sender, EventArgs e)
         {
-
         }
-        
     }
 }

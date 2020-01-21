@@ -40,7 +40,6 @@ namespace BalloonTip
         {
             notifyIcon1.Visible = true;
             notifyIcon1.ShowBalloonTip(30000);
-
         }
         //</snippet2>
 
@@ -94,7 +93,6 @@ namespace BalloonTip
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
-
         }
 
         #endregion

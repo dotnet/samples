@@ -40,7 +40,6 @@ public class CheckRestricted {
 		catch(Exception e) {
 			Console.WriteLine("Exception is thrown. Message is :" + e.Message);
 		}
-
 	}
 // </Snippet1>
 };

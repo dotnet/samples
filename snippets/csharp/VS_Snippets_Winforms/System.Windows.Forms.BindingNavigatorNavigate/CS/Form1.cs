@@ -38,7 +38,6 @@ namespace System.Windows.Forms.BindingSourceCurrent
             //<snippet3>
             bindingNavigator1.BindingSource = bindingSource1;
             //</snippet3>
-            
         }
         //<snippet2>
         private void LoadData()
@@ -66,7 +65,6 @@ namespace System.Windows.Forms.BindingSourceCurrent
 
             textBox1.DataBindings.Add("Text", bindingSource1, "name");
             textBox2.DataBindings.Add("Text", bindingSource1, "capital");
-           
         }
         //</snippet2>
         

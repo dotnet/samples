@@ -21,5 +21,4 @@ public class Form1: Form
         mapping.ToString(), columnMappings.ToString());
  }
 // </Snippet1>
-
 }

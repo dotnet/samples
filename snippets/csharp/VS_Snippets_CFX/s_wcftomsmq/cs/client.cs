@@ -88,6 +88,5 @@ namespace Microsoft.ServiceModel.Samples
             Console.ReadLine();
             // </Snippet4>
         }
-
     }
 }

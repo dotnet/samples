@@ -27,5 +27,4 @@ namespace VbPowerPacksShapeContainerGetChildCS
         }
         // </Snippet1>
     }
-
 }

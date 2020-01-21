@@ -31,7 +31,6 @@ public class MyCollection : NameObjectCollectionBase  {
    public void Add( String key, Object value )  {
       this.BaseAdd( key, value );
    }
-
 }
 
 public class SamplesNameObjectCollectionBase  {
@@ -56,7 +55,6 @@ public class SamplesNameObjectCollectionBase  {
       // Displays the keys and values of the MyCollection.
       Console.WriteLine( "Read-Only Collection:" );
       PrintKeysAndValues( myROCol );
-
    }
 
    public static void PrintKeysAndValues( MyCollection myCol )  {
@@ -64,7 +62,6 @@ public class SamplesNameObjectCollectionBase  {
          Console.WriteLine( "[{0}] : {1}, {2}", i, myCol[i].Key, myCol[i].Value );
       }
    }
-
 }
 
 

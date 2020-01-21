@@ -28,7 +28,6 @@ public class SamplesStringDictionary  {
       myCol.Clear();
       Console.WriteLine( "The collection contains the following elements after it is cleared:" );
       PrintKeysAndValues( myCol );
-
    }
 
    public static void PrintKeysAndValues( StringDictionary myCol )  {
@@ -37,7 +36,6 @@ public class SamplesStringDictionary  {
          Console.WriteLine( "   {0,-10} {1}", de.Key, de.Value );
       Console.WriteLine();
    }
-
 }
 
 /*

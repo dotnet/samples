@@ -28,6 +28,5 @@ namespace WebServiceHostSnippets
             WebServiceHost host = new WebServiceHost(typeof(CalcService), baseAddresses);
             // </Snippet2>
         }
-
     }
 }

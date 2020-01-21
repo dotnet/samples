@@ -143,7 +143,6 @@
                     CompositionTarget.Rendering -= OnFrameCallback;
                 }
             }
-            
         }
 
         protected override void OnOverlayRender(DrawingContext dc)

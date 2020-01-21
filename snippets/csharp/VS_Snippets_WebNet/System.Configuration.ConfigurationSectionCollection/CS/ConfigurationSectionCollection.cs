@@ -97,7 +97,6 @@ namespace Samples.AspNet.Configuration
                 this["maxIdleTime"] = value;
             }
         }
-
     }
 
     class UsingCustomSectionCollection
@@ -131,7 +130,6 @@ namespace Samples.AspNet.Configuration
             {
                 Console.WriteLine(err.ToString());
             }
-
         }
 
         //<Snippet2>
@@ -152,7 +150,6 @@ namespace Samples.AspNet.Configuration
                     Console.WriteLine(
                      "Key value: {0}", key);
                 }
-
             }
             catch (ConfigurationErrorsException err)
             {
@@ -207,9 +204,7 @@ namespace Samples.AspNet.Configuration
                         customSection.MaxUsers);
                     Console.WriteLine("Max Idle Time:   {0}",
                         customSection.MaxIdleTime);
-
                 }
-
             }
             catch (ConfigurationErrorsException err)
             {
@@ -271,7 +266,6 @@ namespace Samples.AspNet.Configuration
                     Console.WriteLine(
                      "Key value: {0}", key);
                 }
-
             }
             catch (ConfigurationErrorsException err)
             {
@@ -305,7 +299,6 @@ namespace Samples.AspNet.Configuration
 
                 Console.WriteLine(
                     "Section2: {0}", section2.SectionInformation.Name);
-
             }
             catch (ConfigurationErrorsException err)
             {
@@ -338,7 +331,6 @@ namespace Samples.AspNet.Configuration
                 else
                     Console.WriteLine(
                         "CustomSection does not exists.");
-
             }
             catch (ConfigurationErrorsException err)
             {
@@ -399,7 +391,6 @@ namespace Samples.AspNet.Configuration
             // Remove();
             // Clear();
         }
-
     }
 }
 // </Snippet1>

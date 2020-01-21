@@ -181,7 +181,6 @@ namespace csrefKeywordsAccess
                 set { array[param] = value; }
             }
             //</snippet5>
-
         }
     } //end Example2 namespace
 }

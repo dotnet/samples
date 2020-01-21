@@ -80,6 +80,5 @@ namespace NorthwindClient
                 MessageBox.Show(ex.Message);
             }
         }
-
     }
 }

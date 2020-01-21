@@ -38,5 +38,4 @@ namespace VbPowerPacksShapeTagCS
         }
         // </Snippet1>
     }
-
 }

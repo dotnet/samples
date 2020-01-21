@@ -76,7 +76,6 @@ public class Form1 : System.Windows.Forms.Form
         Application.EnableVisualStyles();
         Application.Run(new Form1());
     }
-
 }
 //</Snippet02>
 //</Snippet00>

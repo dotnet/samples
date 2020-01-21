@@ -52,6 +52,5 @@ namespace Thumb_wcp
             myThumb.Background = Brushes.Blue;
         }
         //</SnippetDragCompletedHandler>
-
     }
 }

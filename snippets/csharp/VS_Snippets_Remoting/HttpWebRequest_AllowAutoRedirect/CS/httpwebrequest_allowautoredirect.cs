@@ -51,7 +51,6 @@ class HttpWebRequest_AllowAutoRedirect
 			Console.WriteLine("WebException raised!");
 			Console.WriteLine("\nMessage:{0}",e.Message);
 			Console.WriteLine("\nStatus:{0}",e.Status);
-			
 		} 
 		catch(Exception e)
 		{

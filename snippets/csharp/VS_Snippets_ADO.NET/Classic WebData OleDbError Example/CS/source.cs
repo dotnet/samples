@@ -26,6 +26,5 @@ namespace Classic_WebData_OleDbError_ExampleCS
 			Console.ReadLine();
 		}
 		// </Snippet1>
-																																																																												
 	}
 }

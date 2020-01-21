@@ -32,7 +32,6 @@ namespace RijndaelManaged_Example
                     Console.WriteLine("Original:   {0}", original);
                     Console.WriteLine("Round Trip: {0}", roundtrip);
                 }
-
             }
             catch (Exception e)
             {
@@ -78,7 +77,6 @@ namespace RijndaelManaged_Example
 
             // Return the encrypted bytes from the memory stream.
             return encrypted;
-
         }
         //</Snippet2>
 
@@ -120,11 +118,9 @@ namespace RijndaelManaged_Example
                         }
                     }
                 }
-
             }
 
             return plaintext;
-
         }
         //</Snippet3>
     }

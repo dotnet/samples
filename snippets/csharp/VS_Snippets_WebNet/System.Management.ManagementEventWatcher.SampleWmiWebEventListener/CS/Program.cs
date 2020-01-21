@@ -129,7 +129,6 @@ namespace SamplesAspNet
 
                     // Prompt the user.
                     Console.Beep();
-
                 }
                 catch (Exception e)
                 {

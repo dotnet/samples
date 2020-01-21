@@ -17,7 +17,6 @@ namespace Iterators
 
             foreach (var item in IteratorMethods.GetSingleDigitNumbersAndNumbersOver100())
                 Console.WriteLine(item);
-
         }
     }
 }

@@ -195,7 +195,6 @@ namespace ExplorerStyleInterface
 			this.splitContainer1.Panel2.ResumeLayout(false);
 			this.splitContainer1.ResumeLayout(false);
 			this.ResumeLayout(false);
-
 		}
     }
 }

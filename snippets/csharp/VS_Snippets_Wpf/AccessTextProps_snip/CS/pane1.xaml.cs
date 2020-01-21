@@ -16,6 +16,5 @@ namespace LabelSimple
 
 	public partial class Pane1 : StackPanel
 	{
-		
         }
 }

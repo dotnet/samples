@@ -368,7 +368,6 @@ namespace DataContractSerializerExample
                         Console.WriteLine(reader.Name);
                         break;
                 }
-
             }
             fs.Flush();
             fs.Close();
@@ -567,7 +566,6 @@ namespace DataContractSerializerExample
             dcs.WriteObject(fs, myElement);
             //</snippet15>
         }
-
     }
 
     [DataContract]
@@ -629,7 +627,6 @@ namespace DataContractSerializerExample
     {
         public void ChainSelector(ISurrogateSelector selector)
         {
-
         }
         public ISurrogateSelector GetNextSelector()
         {
@@ -647,7 +644,6 @@ namespace DataContractSerializerExample
             {
                 selector = new MySelector();
                 return new MySerializationSurrogate();
-
             }
         }
 
@@ -677,9 +673,7 @@ namespace DataContractSerializerExample
                 StreamingContext context, ISurrogateSelector selector)
             {
                 return new object();
-
             }
-
         }
     }
 }

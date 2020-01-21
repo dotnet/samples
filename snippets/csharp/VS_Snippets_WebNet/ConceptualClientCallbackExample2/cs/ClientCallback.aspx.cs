@@ -117,7 +117,6 @@ public partial class ClientCallback : System.Web.UI.Page,
                 }
                 break;
         }
-
     }
     //</Snippet5>
     //<Snippet6>

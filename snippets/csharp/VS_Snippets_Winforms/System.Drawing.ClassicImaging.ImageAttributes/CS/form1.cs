@@ -84,7 +84,6 @@ namespace System.Drawing.Imaging.ClassicImageAttributesCS
             Rectangle rect = new Rectangle(150, 20, 100, 100);
             e.Graphics.DrawImage(myImage, rect, 0, 0, 100, 100, 
                 GraphicsUnit.Pixel, imageAttr);      
-            
         }
         // </snippet2>
 
@@ -132,7 +131,6 @@ namespace System.Drawing.Imaging.ClassicImageAttributesCS
             Rectangle rect = new Rectangle(100, 20, 200, 200);
             e.Graphics.DrawImage(myImage, rect, 0, 0, 200, 200, 
                 GraphicsUnit.Pixel, imageAttr);      
-            
         }
         // </snippet3>
 
@@ -220,7 +218,6 @@ namespace System.Drawing.Imaging.ClassicImageAttributesCS
             Rectangle rect = new Rectangle(150, 20, 50, 50);
             e.Graphics.DrawImage(myImage, rect, 0, 0, 50, 50, 
                 GraphicsUnit.Pixel, imageAttr);    
-           
         }
         // </snippet6>
 

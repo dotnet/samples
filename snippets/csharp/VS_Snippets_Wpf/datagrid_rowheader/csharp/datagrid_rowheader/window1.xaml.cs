@@ -27,7 +27,6 @@ namespace DataGrid_RowHeader
             AdventureWorksLT2008DataSet.CustomerDataTable dt = GetData();
 
             DG1.DataContext = dt;
-           
         }
 
         public AdventureWorksLT2008DataSet.CustomerDataTable GetData()
@@ -38,7 +37,6 @@ namespace DataGrid_RowHeader
 
             return custdata;
         }
-
     }
 
     //<Snippet2>
@@ -72,5 +70,4 @@ namespace DataGrid_RowHeader
         #endregion
     }
     //</Snippet2>
-
 }

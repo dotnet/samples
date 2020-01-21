@@ -67,7 +67,6 @@ namespace Samples.AspNet.CS.Controls
         input.Text = String.Empty;
       }
     }
-
   }
 
   [AspNetHostingPermission(SecurityAction.Demand,
@@ -106,8 +105,6 @@ namespace Samples.AspNet.CS.Controls
       DisplayContent = new Label();
       this.Controls.Add(DisplayContent);
     }
-
   }
-
 }
 // </snippet4>

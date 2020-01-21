@@ -31,7 +31,6 @@ public class Example
       Array.Sort(words, new ReverserClass());
       Console.WriteLine("After sorting with the reverse case-insensitive comparer:");
       PrintIndexAndValues(words);
-
    }
  
    public static void PrintIndexAndValues(IEnumerable list)  
@@ -42,7 +41,6 @@ public class Example
 
       Console.WriteLine();
    }
-
 }
 // The example displays the following output:
 //       The array initially contains the following values:

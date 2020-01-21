@@ -17,7 +17,6 @@ namespace TransparencyWarningsDemo
             Beep(10000, 1);
         }
     }
-
 }
 
 //</Snippet1>

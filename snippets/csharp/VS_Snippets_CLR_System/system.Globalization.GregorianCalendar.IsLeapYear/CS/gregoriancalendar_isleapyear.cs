@@ -30,9 +30,7 @@ public class SamplesGregorianCalendar  {
             Console.Write( "\t{0}", myCal.IsLeapYear( y, myCal.Eras[i] ) );
          Console.WriteLine();
       }
-
    }
-
 }
 
 /*

@@ -38,7 +38,6 @@ public class Example
       foreach (var type in types)
          Console.WriteLine("{0} is abstract: {1}",
                            type.Name, type.IsAbstract);
-
    }
 }
 // The example displays the following output:

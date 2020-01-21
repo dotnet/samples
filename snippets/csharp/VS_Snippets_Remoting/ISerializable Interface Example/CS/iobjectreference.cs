@@ -30,7 +30,6 @@ public class MyItemType : ISerializable
     {
         // Use the AddValue method to specify serialized values.
         info.AddValue("props", myProperty_value, typeof(string));
-
     }
 
     // The special constructor is used to deserialize values.

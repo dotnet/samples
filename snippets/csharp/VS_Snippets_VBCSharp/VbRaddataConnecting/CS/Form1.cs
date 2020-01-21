@@ -157,7 +157,6 @@ namespace ObjectBindingWalkthrough
         {
             LoadCustomers();
         }
-
     }
 }
 //</Snippet3>

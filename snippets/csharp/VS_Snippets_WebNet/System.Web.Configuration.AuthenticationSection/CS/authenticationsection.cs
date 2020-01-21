@@ -73,9 +73,6 @@ namespace Samples.AspNet.Configuration
             string domain = currentForms.Domain;
 
             // </Snippet5>
-
         }
-   
     } 
-
 }

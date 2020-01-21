@@ -12,9 +12,7 @@ namespace CsCsrefProgrammingExceptions
         {
             public CustomException(string message)
             {
-               
             }
- 
         }
         private static void TestThrow()
         {
@@ -261,7 +259,6 @@ namespace CsCsrefProgrammingExceptions
             }
         }
         //</Snippet9>
-
     }
 
     //-------------------------------------------------------------------------
@@ -277,7 +274,6 @@ namespace CsCsrefProgrammingExceptions
                 {
                     throw new System.ArgumentException("Parameter cannot be null", "original");
                 }
-
             }
             //</Snippet12>
         }
@@ -313,7 +309,6 @@ namespace CsCsrefProgrammingExceptions
             }
         }
         //</Snippet14>
-
     }
 
     //<Snippet15>
@@ -379,7 +374,6 @@ namespace CsCsrefProgrammingExceptions
             CodeWithoutCleanup();
             Console.ReadKey();
         }
-
     }
 
     //<snippet18>   

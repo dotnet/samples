@@ -62,6 +62,5 @@ namespace SDKSample
             // </SnippetGraphicsMMVideoAsTextBackgroundTiledInline>
             return myTextBlock;
         }
-        
     }
 }

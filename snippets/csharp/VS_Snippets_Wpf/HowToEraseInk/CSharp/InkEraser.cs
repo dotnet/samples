@@ -52,7 +52,6 @@ public class InkEraser : Label
             presenter.Strokes.Clear();
             presenter.Strokes.Add(newStrokes);
         }
-
     }
 
     protected override void OnStylusDown(StylusDownEventArgs e)
@@ -61,7 +60,6 @@ public class InkEraser : Label
         StylusPointCollection points = e.GetStylusPoints(this);
 
         InitializeEraserHitTester(points);
-
     }
 
     protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)

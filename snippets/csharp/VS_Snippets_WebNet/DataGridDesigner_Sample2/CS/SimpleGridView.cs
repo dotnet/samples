@@ -86,7 +86,6 @@ namespace ASPNET.Examples.CS
         {
             return CreatePlaceHolderDesignTimeHtml(
                 "ASPNET.Examples: An error occurred while rendering the GridView.");
-
         }
         //</Snippet4>
         //</Snippet2>

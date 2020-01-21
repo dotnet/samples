@@ -37,7 +37,6 @@ namespace CSCrypto
 				Console.WriteLine("The element was decrypted");
 
 				Console.WriteLine(xmlDoc.InnerXml);
-
 			}
 			catch (Exception e)
 			{
@@ -51,7 +50,6 @@ namespace CSCrypto
 					key.Clear();
 				}
 			}
-
 		}
 
 		public static void Encrypt(XmlDocument Doc, string ElementName, SymmetricAlgorithm Key)
@@ -75,7 +73,6 @@ namespace CSCrypto
 			if (elementToEncrypt == null)
 			{
 				throw new XmlException("The specified element was not found");
-
 			}
 
 			//////////////////////////////////////////////////
@@ -191,10 +188,7 @@ namespace CSCrypto
 			// <snippet13>
 			exml.ReplaceData(encryptedElement, rgbOutput);
 			// </snippet13>
-
 		}
-
 	}
-
 }
 //</snippet1>

@@ -382,7 +382,6 @@ namespace ThreeDPointSample
                     break;
                 //<SnippetMil3DPoints3DN2>
             } //end switch
-	
         }
         //</SnippetMil3DPoints3DN2>
 
@@ -464,7 +463,6 @@ namespace ThreeDPointSample
 
             vector3DResult = Point3D.Subtract(point3D1, point3D2);
             // vector3Dresult is equal to 
-
         }
     }
 }

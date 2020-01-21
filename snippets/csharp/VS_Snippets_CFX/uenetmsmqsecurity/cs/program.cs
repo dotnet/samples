@@ -25,7 +25,6 @@ namespace UEMessageSecurityMsmq
             // <Snippet4>
             MsmqTransportSecurity trnsSecurity = security.Transport;
             // </Snippet4>
-
         }
     }
 }

@@ -21,5 +21,4 @@ public class Form1: Form
         parameter.Direction = ParameterDirection.Output;
     }
     // </Snippet1>
-
 }

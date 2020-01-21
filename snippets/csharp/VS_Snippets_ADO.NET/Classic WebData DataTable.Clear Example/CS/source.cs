@@ -22,8 +22,6 @@ public class Form1: Form
             Console.WriteLine("Exception of type {0} occurred.", 
                 e.GetType());
         }
-    
     }
     // </Snippet1>
-
 }

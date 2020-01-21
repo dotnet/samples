@@ -14,7 +14,6 @@ public class SamplesArray  {
       int IComparer.Compare( Object x, Object y )  {
           return( (new CaseInsensitiveComparer()).Compare( y, x ) );
       }
-
    }
 
    public static void Main()  {
@@ -47,7 +46,6 @@ public class SamplesArray  {
       Array.Sort( myKeys, myValues, myComparer );
       Console.WriteLine( "After sorting the entire Array using the reverse case-insensitive comparer:" );
       PrintKeysAndValues( myKeys, myValues );
-
    }
  
    public static void PrintKeysAndValues( String[] myKeys, String[] myValues )  {

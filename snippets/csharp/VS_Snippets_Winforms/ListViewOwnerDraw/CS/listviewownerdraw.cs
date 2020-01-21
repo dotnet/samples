@@ -265,6 +265,5 @@ public class ListViewOwnerDraw : Form
     {
         listView1.Invalidate();
     }
-
 }
 //</Snippet1>

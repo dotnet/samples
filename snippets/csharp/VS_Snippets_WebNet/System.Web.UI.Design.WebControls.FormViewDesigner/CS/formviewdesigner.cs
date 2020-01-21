@@ -102,7 +102,6 @@ namespace Examples.CS.WebControls.Design
                         capTag.Length).Insert(charX, trClose);
             }
             return markup;
-
         } // GetDesignTimeHtml
         // </snippet4>
     } // MyFormViewDesigner

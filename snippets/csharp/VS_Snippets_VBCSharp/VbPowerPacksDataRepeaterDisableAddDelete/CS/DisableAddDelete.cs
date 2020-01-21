@@ -21,7 +21,6 @@ namespace DisableAddDeleteCS
             this.Validate();
             this.ordersBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.northwndDataSet);
-
         }
 
         private void DisableAddDelete_Load(object sender, EventArgs e)

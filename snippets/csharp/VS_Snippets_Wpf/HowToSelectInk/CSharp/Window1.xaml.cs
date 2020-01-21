@@ -40,7 +40,6 @@ namespace InkSelectorTest
                 {
                     selector.Mode = InkMode.Ink;
                 }
-
             }
             if (e.Key == System.Windows.Input.Key.C)
             {

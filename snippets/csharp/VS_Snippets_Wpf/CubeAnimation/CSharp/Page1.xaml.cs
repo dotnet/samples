@@ -31,7 +31,6 @@ namespace Ribbon
             _trackball.Attach(this);
             _trackball.Slaves.Add(myViewport3D);
             _trackball.Enabled = true;
-
         }
 
         #region Events
@@ -52,5 +51,4 @@ namespace Ribbon
 
         #endregion
     }
-
 }

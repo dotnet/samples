@@ -26,7 +26,6 @@ namespace Samples.AspNet
                 Console.WriteLine(e.Message);
             }
         }
-
     }
 }
 // </Snippet1>

@@ -55,6 +55,5 @@ namespace SdkSample
                 return Visibility.Collapsed;
             }
         }
-
     }
 }

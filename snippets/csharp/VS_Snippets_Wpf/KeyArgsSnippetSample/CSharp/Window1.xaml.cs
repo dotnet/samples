@@ -202,6 +202,5 @@ namespace KeyArgsSnippetSample
 
             btnValue.Content = ((byte)e.KeyStates).ToString();
         }
-
     }
 }

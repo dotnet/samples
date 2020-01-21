@@ -59,6 +59,5 @@ namespace RemotingSamples
       }
    }
 // </Snippet2>
-
 }
 // </Snippet1>

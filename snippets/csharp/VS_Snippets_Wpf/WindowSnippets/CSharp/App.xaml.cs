@@ -12,6 +12,5 @@ namespace WindowSnippetSample_CSharp
 
     public partial class App : Application
     {
-
     }
 }

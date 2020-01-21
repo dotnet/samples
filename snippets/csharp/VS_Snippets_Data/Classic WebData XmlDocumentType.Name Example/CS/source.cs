@@ -19,7 +19,6 @@ public class Sample
     XmlDocumentType doctype = doc.DocumentType;
     Console.WriteLine("Name of the document type:  {0}", doctype.Name);
     Console.WriteLine("The internal subset of the document type:  {0}", doctype.InternalSubset);
-
   }
 }
    // </Snippet1>

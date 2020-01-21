@@ -82,5 +82,4 @@ namespace Microsoft.ServiceModel.Samples
             return strbuf.ToString();
         }
     }
-
 }

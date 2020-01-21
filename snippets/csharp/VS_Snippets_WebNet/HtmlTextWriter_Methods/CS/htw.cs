@@ -16,13 +16,11 @@ namespace Samples.AspNet.CS
         public HTW1(TextWriter writer)
             : base(writer)
         {
-
         }
 
         public HTW1(TextWriter writer, string tabString)
             : base(writer, tabString)
         {
-
         }
 // <snippet1>
         // Override the RenderBeginTag method to check whether

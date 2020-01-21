@@ -170,7 +170,6 @@ namespace CloneBasicAuthentication
         {
             Console.WriteLine("\n The following exception was raised : {0}",e.Message);
         }
-
         }
 
         public static void PrintUsage() 

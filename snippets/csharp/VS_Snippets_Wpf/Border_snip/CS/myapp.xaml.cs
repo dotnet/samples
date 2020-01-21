@@ -10,6 +10,5 @@ namespace ScrollBarSnips
 
     public partial class MyApp : Application
     {
-
     }
 }

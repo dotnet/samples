@@ -21,7 +21,6 @@ public class Sample
     //that although the attribute has not been inserted
     //into the document, it still has an owner document.
     Console.WriteLine(attr.OwnerDocument.OuterXml);
-
    }
 }
    // </Snippet1>

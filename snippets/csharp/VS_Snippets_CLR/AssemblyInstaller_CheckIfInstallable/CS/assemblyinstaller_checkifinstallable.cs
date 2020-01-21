@@ -28,7 +28,6 @@ class MyCheckIfInstallableClass:Installer
       catch( Exception )
       {
       }
-
    }
 }
 // </Snippet1>

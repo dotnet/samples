@@ -126,5 +126,4 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
     {
         return true;
     }
-
 }

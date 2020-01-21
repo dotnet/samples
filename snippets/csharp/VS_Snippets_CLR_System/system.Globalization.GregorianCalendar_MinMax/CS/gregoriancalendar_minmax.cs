@@ -19,9 +19,7 @@ public class SamplesCalendar  {
       // Display the MaxSupportedDateTime.
       DateTime myMax = myCal.MaxSupportedDateTime;
       Console.WriteLine( "MaxSupportedDateTime: {0:D2}/{1:D2}/{2:D4}", myCal.GetMonth(myMax), myCal.GetDayOfMonth(myMax), myCal.GetYear(myMax) );
-
    }
-
 }
 
 

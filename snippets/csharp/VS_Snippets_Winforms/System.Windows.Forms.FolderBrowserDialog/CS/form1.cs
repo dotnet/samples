@@ -110,7 +110,6 @@ public class FolderBrowserDialogExampleForm : System.Windows.Forms.Form
                 s.Close();    
             
                 fileOpened = true;
-
             } 
             catch(Exception exp)
             {

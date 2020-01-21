@@ -26,8 +26,6 @@ public class X509
        
         // Display the value to the console.
         Console.WriteLine(resultsFalse);
-  
     }
-
 }
 // </Snippet1>

@@ -19,7 +19,6 @@ namespace AdvancedInkInputSemples
         {
             base.OnStylusDown(rawStylusInput);
             rawStylusInput.NotifyWhenProcessed(null);
-
         }
 
         protected override void OnStylusDownProcessed(object callbackData, bool targetVerified)
@@ -143,9 +142,7 @@ namespace AdvancedInkInputSemples
             }
 
             drawingContext.DrawGeometry(brush, null, geometry);
-
         }
         //</Snippet11>
-
     }
 }

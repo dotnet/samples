@@ -56,6 +56,5 @@ public class HttpConnect{
 		      throw new WebException();
 		   }
 // </Snippet1>
-
 	  }
 }

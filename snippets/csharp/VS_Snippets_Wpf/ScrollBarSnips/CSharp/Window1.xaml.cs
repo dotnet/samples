@@ -47,7 +47,6 @@ namespace ScrollBarSnips
            aScrollBar.Minimum = 0;
 	       aScrollBar.Maximum = 50;
      	   //</SnippetCreateScrollBar>
-
         }
 
         //<SnippetScrollHandler>
@@ -56,6 +55,5 @@ namespace ScrollBarSnips
            //Things to do when the Scroll event occurs
         }
         //</SnippetScrollHandler>
- 
     }
 }

@@ -38,7 +38,6 @@ namespace PowerMode1
                 Application.SetSuspendState(PowerState.Hibernate, false, false);
             }
             // </snippet2>
-
         }
         
         [STAThread]
@@ -47,5 +46,4 @@ namespace PowerMode1
             Application.Run(new Form1());
         }
     }
-
 }

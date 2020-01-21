@@ -68,6 +68,5 @@ namespace ConBuilderConnectionStringCS
             Console.ReadLine();
         }
         // </Snippet1>
-
     }
 }

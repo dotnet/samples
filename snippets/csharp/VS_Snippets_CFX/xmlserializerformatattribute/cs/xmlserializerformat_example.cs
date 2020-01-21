@@ -22,5 +22,4 @@ namespace XmlSerializerFormatAttributeExample
         private Test() { }
         public static void Main() { }
     }
-
 }

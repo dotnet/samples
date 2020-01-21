@@ -49,7 +49,6 @@ public class Form1 :  Form
          Text = "Form1";
          ((System.ComponentModel.ISupportInitialize)(dataGrid1)).EndInit();
          ResumeLayout(false);
-
       }
       static void Main() 
       {

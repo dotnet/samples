@@ -22,7 +22,6 @@ namespace Microsoft.ServiceModel.Samples
         Stream EchoStream(Stream stream);
         [OperationContract]
         Stream GetReversedStream();
-
     }
     //</snippet1>
 
@@ -243,7 +242,6 @@ namespace Microsoft.ServiceModel.Samples
                 buffer[i] = buffer[j];
                 buffer[j] = currenti;
             }
-
         }
     }
     //</snippet2>

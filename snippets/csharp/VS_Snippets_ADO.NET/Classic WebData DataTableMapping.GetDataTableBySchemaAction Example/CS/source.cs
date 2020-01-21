@@ -22,5 +22,4 @@ public class Form1: Form
             (dataSet, MissingSchemaAction.Ignore);
     }
     // </Snippet1>
-
 }

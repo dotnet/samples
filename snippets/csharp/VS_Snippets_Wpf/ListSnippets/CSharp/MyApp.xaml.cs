@@ -12,6 +12,5 @@ namespace ListSnippets
 
     public partial class MyApp : Application
     {
-
     }
 }

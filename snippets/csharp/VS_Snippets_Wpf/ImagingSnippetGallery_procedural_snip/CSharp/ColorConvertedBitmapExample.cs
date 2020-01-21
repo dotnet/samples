@@ -49,7 +49,6 @@ namespace SDKSample
             //tb.Text = s;
             myStackPanel.Children.Add(myImage);
             this.Content = myStackPanel;
-           
         }
     }
 }

@@ -13,6 +13,5 @@ namespace TabControlSimple
 
 	public partial class MyApp : Application
 	{
-
 	}
 }

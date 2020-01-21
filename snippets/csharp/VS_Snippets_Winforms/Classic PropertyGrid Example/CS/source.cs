@@ -24,5 +24,4 @@ public Form1() {
    propertyGrid1.SelectedObject = textBox1;
 }
 // </Snippet1>
-
 }

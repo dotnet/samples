@@ -39,7 +39,6 @@
                         where Compute(item) > 42
                         select item;
             //</snippet5>
-
         }
 
         static void Test()
@@ -119,7 +118,6 @@
             var parallelQuery3 = source.AsParallel().Where(n => n % 10 == 0).Select(n => n);
 
             Console.ReadLine();
-
         }
         static void DoSomething(int i) { }
         private static void OrderedQuery()
@@ -475,7 +473,6 @@
                 Console.WriteLine("Mean value is = {0}", mean);
                 Console.WriteLine("Standard deviation is {0}", standardDev);
                 Console.ReadLine();
-
             }
         }
     }
@@ -646,7 +643,6 @@
                        ProductID = Convert.ToInt32(fields[0]),
                        ProductName = fields[1].Trim(),
                        UnitPrice = Convert.ToDouble(fields[2])
-
                    };
         }
 
@@ -730,7 +726,6 @@
                                 .ElementAt(48);
 
             Console.WriteLine("Element #48 is: {0}", cust.CustomerID);
-
         }
         //</snippet14>
 
@@ -764,7 +759,6 @@
 
             foreach (var v in q2)
                 Console.WriteLine("{0} {1} {2}", v.ID, v.Customer, v.Product);
-
         }
         //</snippet15>
 

@@ -60,7 +60,6 @@ namespace System.Drawing.ClassicBitmapExamplesCS
             this.Name = "Form1";
             this.Text = "Form1";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
-
         }
         #endregion
         // <snippet1>
@@ -169,7 +168,6 @@ namespace System.Drawing.ClassicBitmapExamplesCS
             // You can now destroy the icon, since the form creates
             // its own copy of the icon accessible through the Form.Icon property.
             DestroyIcon(newIcon.Handle);
-
         }
         // </snippet6>
         // <snippet7>
@@ -264,7 +262,6 @@ namespace System.Drawing.ClassicBitmapExamplesCS
 
         private void Form1_Paint(object sender, System.Windows.Forms.PaintEventArgs e)
         {
-
         }
     }
 }

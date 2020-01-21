@@ -21,7 +21,6 @@ public class Sample
 
      Console.WriteLine("Display the modified XML...");
      Console.WriteLine(doc.OuterXml);
-    
   }
 }
  // </Snippet1>

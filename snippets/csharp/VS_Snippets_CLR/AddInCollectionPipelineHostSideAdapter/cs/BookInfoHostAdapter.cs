@@ -11,7 +11,6 @@ public class BookInfoHostAdapter
             (contract.GetType().Equals(typeof(BookInfoViewToContractHostAdapter))))
         {
             return ((BookInfoViewToContractHostAdapter)(contract)).GetSourceView();
-
         }
         else {
             return new BookInfoContractToViewHostAdapter(contract);

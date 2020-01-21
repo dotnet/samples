@@ -25,7 +25,6 @@ public class Example
 
         outputBlock.Text += String.Format("\n\nCulture of Current Context: {0}\n", ctx.Languages[0]);
         outputBlock.Text += String.Format("{0}\n", String.IsNullOrEmpty(newGreeting) ? greeting : newGreeting);
-        
     }
 }
 // </Snippet2>

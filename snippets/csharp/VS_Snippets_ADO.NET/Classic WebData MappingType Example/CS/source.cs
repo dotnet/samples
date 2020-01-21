@@ -16,7 +16,6 @@ namespace MappingTypeCS
             DataTable dataTable = MakeTable();
             GetColumnMapping(dataTable);
             Console.ReadLine();
-
         }
         // <Snippet1>
         static private void GetColumnMapping(DataTable dataTable)
@@ -36,6 +35,5 @@ namespace MappingTypeCS
             dt.Columns.Add(firstName);
             return dt;
         }
-
     }
 }

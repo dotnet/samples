@@ -56,7 +56,6 @@ namespace CodeDomSerializerSample
         }
     }
 //</Snippet2>
-
 }
 //</snippet1>
 
@@ -65,7 +64,6 @@ namespace CodeDomSerializerSample
     class CodeDomSerializerStart {
         [STAThread]
         static void Main() {
-
         }
     }
 }

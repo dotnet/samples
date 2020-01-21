@@ -22,5 +22,4 @@ private void PrintBindingMemberInfo()
    }
 }
 // </Snippet1>
-
 }

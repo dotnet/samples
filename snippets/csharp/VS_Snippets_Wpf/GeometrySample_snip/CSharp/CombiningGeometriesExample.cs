@@ -19,7 +19,6 @@ namespace SDKSample
             mainPanel.Children.Add(CompositeShape5());
             mainPanel.Children.Add(CompositeShape6());
             this.Content = mainPanel;
-
         }
 
         private Path CompositeShape1()
@@ -54,7 +53,6 @@ namespace SDKSample
             myPath.Data = myGeometryGroup;
             // </Snippet19>
             return myPath;
-
         }
 
         private Path CompositeShape2()
@@ -86,7 +84,6 @@ namespace SDKSample
             myPath.Data = myGeometryGroup;
             // </Snippet20>
             return myPath;
-
         }
 
         private Path CompositeShape3()
@@ -120,7 +117,6 @@ namespace SDKSample
             myPath.Data = myCombinedGeometry;
             // </Snippet21>
             return myPath;
-
         }
 
         private Path CompositeShape4()
@@ -154,7 +150,6 @@ namespace SDKSample
             myPath.Data = myCombinedGeometry;
             // </Snippet22>
             return myPath;
-
         }
 
         private Path CompositeShape5()
@@ -188,7 +183,6 @@ namespace SDKSample
             myPath.Data = myCombinedGeometry;
             // </Snippet23>
             return myPath;
-
         }
 
         private Path CompositeShape6()
@@ -222,8 +216,6 @@ namespace SDKSample
             myPath.Data = myCombinedGeometry;
             // </Snippet24>
             return myPath;
-
         }
-
     }
 }

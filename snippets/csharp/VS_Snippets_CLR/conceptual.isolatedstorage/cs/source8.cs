@@ -38,7 +38,6 @@ public class FindingExistingFilesAndDirectories
         foreach (string file in GetAllFiles("*", isoStore)){
             Console.WriteLine(file);
         }
-
     } // End of Main.
 
     // Method to retrieve all directories, recursively, within a store.

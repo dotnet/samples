@@ -16,7 +16,6 @@ namespace LightSwitchApplication
             (ScreenValidationResultsBuilder results)
         {
             ApprovedCheckBox = false;
-
         }
         //</Snippet2>
     }

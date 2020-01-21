@@ -52,6 +52,5 @@ class AssemblyInstaller_Example
       {
          Console.WriteLine( e.Message );
       }
-
    }
 }

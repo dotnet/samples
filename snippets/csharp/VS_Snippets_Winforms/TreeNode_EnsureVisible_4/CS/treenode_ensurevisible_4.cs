@@ -192,7 +192,6 @@ private void button4_Click(object sender, System.EventArgs e)
      " tree node cloned and added to " + treeView1.Nodes[0].Text);
 }
 // </Snippet3>
-
    }
 
    // Define a Customer Class.

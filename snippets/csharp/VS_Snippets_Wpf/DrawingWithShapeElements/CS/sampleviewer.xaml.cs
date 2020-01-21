@@ -31,15 +31,12 @@ namespace Microsoft.Samples.Graphics
 			navigationArray[9] = new MiterLimitExample();
            	  	navigationArray[10] = new StretchExample();
 			InitializeComponent();
-
 		}
 		
 		private void sampleSelected(object sender, RoutedEventArgs args)
 		{
 			//Page selectedSample = navigationArray[sampleSelector.SelectedIndex];
 			//mainFrame.Navigate(selectedSample);
-
 		}
-
     }
 }

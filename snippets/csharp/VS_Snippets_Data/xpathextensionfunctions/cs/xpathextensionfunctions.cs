@@ -68,7 +68,6 @@ namespace XPathExtensionFunctions
                 {
                     Console.WriteLine(ex.Message);
                 }
-
             }
         }
 

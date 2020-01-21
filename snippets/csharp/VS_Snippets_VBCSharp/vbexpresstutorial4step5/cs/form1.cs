@@ -60,7 +60,5 @@ namespace MatchingGame
         }
     }
     // </snippet6>
-
     }
-
 }

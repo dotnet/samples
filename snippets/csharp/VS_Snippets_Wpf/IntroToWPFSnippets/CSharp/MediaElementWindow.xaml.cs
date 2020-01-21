@@ -43,7 +43,6 @@ namespace SDKSample
             // The Stop method stops and resets the media to be played from
             // the beginning.
             myMediaElement.Stop();
-
         }
 
         // Change the volume of the media.

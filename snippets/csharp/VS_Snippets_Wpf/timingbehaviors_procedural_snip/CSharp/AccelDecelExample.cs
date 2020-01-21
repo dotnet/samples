@@ -147,7 +147,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             myStackPanel.Triggers.Add(myEventTrigger);
 
             this.Content = myStackPanel;
-
           }
      }
 }

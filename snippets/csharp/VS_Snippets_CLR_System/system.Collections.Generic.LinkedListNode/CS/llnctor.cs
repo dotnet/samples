@@ -26,7 +26,6 @@ public class GenericCollection  {
       ll.AddLast( "yellow" );
       Console.WriteLine( "After adding red and yellow ...." );
       DisplayProperties( lln );
-
    }
 
    public static void DisplayProperties( LinkedListNode<String> lln )  {
@@ -49,7 +48,6 @@ public class GenericCollection  {
 
       Console.WriteLine();
    }
-
 }
 
 

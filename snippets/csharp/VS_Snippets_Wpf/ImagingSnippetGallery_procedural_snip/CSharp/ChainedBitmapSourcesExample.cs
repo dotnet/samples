@@ -76,9 +76,7 @@ namespace SDKSample
 
         public void PageLoaded(object sender, RoutedEventArgs args)
         {
-
         }
-
     }
 }
 // </SnippetChainedBitmapSourcesCodeExampleWholePage>

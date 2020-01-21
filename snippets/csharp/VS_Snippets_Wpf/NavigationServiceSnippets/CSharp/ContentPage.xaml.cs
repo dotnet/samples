@@ -20,6 +20,5 @@ namespace NavigationServiceSnippetSample_CSharp
         {
             InitializeComponent();
         }
-
     }
 }

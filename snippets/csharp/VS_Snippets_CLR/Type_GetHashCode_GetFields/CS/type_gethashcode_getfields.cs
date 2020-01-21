@@ -35,7 +35,6 @@ class FieldsSample
         {
             Console.WriteLine("An exception occurred.");
             Console.WriteLine("Message: "+e.Message);
-
         }		
     }
 }	

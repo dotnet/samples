@@ -14,7 +14,6 @@ namespace SqlCommandCS
                 + "Integrated Security=SSPI";
             string qs = "SELECT OrderID, CustomerID FROM dbo.Orders;";
             CreateCommand(qs, str);
-
         }
         // <Snippet1>
         private static void CreateCommand(string queryString,

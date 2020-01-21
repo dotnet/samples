@@ -18,6 +18,5 @@ namespace columndefinitions_grid
 			mainWindow.InitializeComponent();
 			mainWindow.Show();
         }
-
 	}
 }

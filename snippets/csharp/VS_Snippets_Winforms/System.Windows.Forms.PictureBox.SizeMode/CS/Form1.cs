@@ -13,7 +13,6 @@ namespace PictureBoxSixeModeCS
         public Form1()
         { 
             this.Load += new EventHandler(Form1_Load);
-            
         }
         [STAThread]
         static void Main()

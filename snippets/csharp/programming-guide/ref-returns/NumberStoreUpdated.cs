@@ -39,7 +39,6 @@
             //       Original sequence: 1 3 7 15 31 63 127 255 511 1023
             //       New sequence:      1 3 7 15 62 63 127 255 511 1023
             // </Snippet2>
-
         }
     }
 }

@@ -66,6 +66,5 @@ namespace SimpleWebToken
 
             return false;
         }
-
     }
 }

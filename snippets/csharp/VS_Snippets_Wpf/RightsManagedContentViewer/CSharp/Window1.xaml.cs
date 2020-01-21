@@ -581,5 +581,4 @@ namespace SdkSample
         #endregion private fields
 
     }// end:partial class Window1
-
 }// end:namespace SdkSample

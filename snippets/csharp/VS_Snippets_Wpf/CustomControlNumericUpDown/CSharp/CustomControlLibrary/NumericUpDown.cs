@@ -168,7 +168,6 @@ namespace CustomControlLibrary
 
         private static void OnChangeChanged(DependencyObject element, DependencyPropertyChangedEventArgs args)
         {
-
         }
 
         private static object CoerceChange(DependencyObject element, object value)

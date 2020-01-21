@@ -73,6 +73,5 @@ public class MyUninstallActionClass : Installer
       Console.WriteLine("Syntax for uninstall: installutil.exe /u "
          +"UninstallAction_NoAction_Remove_3.exe ");
    }
-
 }
 // </Snippet1>

@@ -161,7 +161,6 @@ namespace SDKSample
         {
             return null;
         }
-
     }// end:class ResourceEntryToComboItemConverter
 
     // ========================= class StyleMetaData ==========================
@@ -186,7 +185,5 @@ namespace SDKSample
         }
 
         public Style Value;
-
     }// end:class StyleMetaData
-
 }// end:namespace SdkSample

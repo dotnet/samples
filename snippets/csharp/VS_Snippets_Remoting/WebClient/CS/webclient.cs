@@ -24,7 +24,6 @@ public class WebClientSample
 		NameValueCollection form = new NameValueCollection();		
 		form.Add("MyName", "MyValue");		
 		Byte[] responseData = client.UploadValues("http://www.contoso.com/form.aspx", form);		
-
         }
         catch (WebException webEx) {
           	Console.WriteLine(webEx.ToString());

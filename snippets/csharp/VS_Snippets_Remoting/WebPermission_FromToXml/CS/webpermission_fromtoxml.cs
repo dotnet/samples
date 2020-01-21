@@ -31,7 +31,6 @@ class WebPermission_FromToXml {
     {
       Console.WriteLine("Exception : " + e.Message);
     }     
-   
   }
    
   public void CallXml()

@@ -36,7 +36,6 @@ class DirectoryFileCount
             // Display the results to the console. 
             Console.WriteLine("Directories: {0}", directories);
             Console.WriteLine("Files: {0}", files);
-
         }
         catch (Exception e)
         {
@@ -77,9 +76,7 @@ class DirectoryFileCount
             {
                 // Add one to the file count.
                 files++;
-
             }
-
         }
     }
 }

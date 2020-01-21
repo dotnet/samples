@@ -74,7 +74,6 @@ namespace cs_sprox
                 Console.WriteLine(cust.CustomerID);
             }
             // </Snippet7>
-
         }
     }
 }

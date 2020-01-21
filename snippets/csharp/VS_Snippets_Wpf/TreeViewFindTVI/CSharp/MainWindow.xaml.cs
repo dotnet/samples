@@ -19,7 +19,6 @@ namespace TreeViewFindTVI
             InitializeComponent();
             data.PopulateItems(2, 5);
             tv1.ItemsSource = data.Items;
-
         }
 
         //<Snippet1>
@@ -243,7 +242,6 @@ namespace TreeViewFindTVI
                 requestedItem.IsSelected = true;                
             }
         }
-
     }
 
     //<Snippet2>
@@ -295,7 +293,6 @@ namespace TreeViewFindTVI
         public string Name
         {
             get { return Key + ": Item " + Id + " on level " + Level; }
-
         }
 
         public override string ToString()
@@ -327,5 +324,4 @@ namespace TreeViewFindTVI
             }
         }
     }
-
 }

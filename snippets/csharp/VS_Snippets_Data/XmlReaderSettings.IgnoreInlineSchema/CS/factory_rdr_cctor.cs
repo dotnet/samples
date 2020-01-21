@@ -20,7 +20,6 @@ public class ValidXSD {
 
     // Parse the file. 
     while (reader.Read());
-    
   }
 
   // Display any warnings or errors.
@@ -29,8 +28,6 @@ public class ValidXSD {
        Console.WriteLine("\tWarning: Matching schema not found.  No validation occurred." + args.Message);
      else
         Console.WriteLine("\tValidation error: " + args.Message);
-
   }  
-
 }
 //</snippet1>

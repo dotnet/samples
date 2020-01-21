@@ -19,7 +19,6 @@ public class Sample
 
     // Add the processing instruction node to the document.
     doc.AppendChild(newPI);
-
   }
 }
    // </Snippet1>

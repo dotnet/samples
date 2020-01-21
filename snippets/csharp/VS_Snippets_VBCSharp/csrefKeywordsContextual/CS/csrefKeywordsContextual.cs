@@ -16,7 +16,6 @@ namespace csrefKeywordsContextual
             get { return _seconds; }
             set { _seconds = value; }
         }
-
     }
     //</snippet1>
 
@@ -232,7 +231,6 @@ namespace csrefKeywordsContextual
     {
         event EventHandler OnDraw;
     }
-
 }
 
 class TestApp { } // for snippet13
@@ -265,7 +263,6 @@ public static class GalaxyClass
                 yield return new Galaxy { Name = "Andromeda", MegaLightYears = 3 };
             }
         }
-
     }
 
     public class Galaxy

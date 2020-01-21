@@ -258,7 +258,6 @@ namespace PhotoStreamingClient
                 this.DialogResult = false;
                 this.Close();
             }
-
         }
     }
 }

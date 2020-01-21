@@ -34,7 +34,6 @@ namespace FileSystemExample
         public static void ReplaceFile(string FileToMoveAndDelete, string FileToReplace, string BackupOfFileToReplace)
         {
             File.Replace(FileToMoveAndDelete, FileToReplace, BackupOfFileToReplace, false);
-
         }
     }
 }

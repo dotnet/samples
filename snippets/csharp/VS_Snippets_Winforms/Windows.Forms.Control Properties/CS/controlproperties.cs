@@ -17,7 +17,6 @@ namespace ControlProperties
       {
          InitializeComponent();
          //this.AddMyGroupBox();
-
       }
 
       protected override void Dispose( bool disposing )
@@ -65,7 +64,6 @@ namespace ControlProperties
          this.Name = "Form1";
          this.Text = "Form1";
          this.ResumeLayout(false);
-
       }
 #endregion
 

@@ -22,7 +22,6 @@ namespace UsageLibrary
                 Dispose(true);
 
                 GC.SuppressFinalize(this);
-
         }
 
         // Disposable types implement a finalizer.

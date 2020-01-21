@@ -10,7 +10,6 @@ namespace attributes
 {
     public class ValidatedContractAttribute : System.Attribute
     {
-
     }
 
     // <Snippet1>

@@ -23,6 +23,5 @@ namespace DataGrid_TextColumn
         {
             InitializeComponent();
         }
-
     }
 }

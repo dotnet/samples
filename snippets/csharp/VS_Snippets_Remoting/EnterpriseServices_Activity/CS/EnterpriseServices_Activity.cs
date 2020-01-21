@@ -14,7 +14,6 @@ namespace EnterpriseServices_ActivitySample
             Console.WriteLine(contextID.ToString());
             System.TimeSpan sleepTime = new System.TimeSpan(0,0,0,10); 
             System.Threading.Thread.Sleep(sleepTime);
-           
         }
     }
     class EnterpriseServicesActivityClass

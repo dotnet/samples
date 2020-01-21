@@ -13,7 +13,6 @@ namespace MyUserControl
         public NumericUpDown()
         {
             InitializeComponent();
-
         }
 
         //<SnippetDependencyProperty>

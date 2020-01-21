@@ -48,7 +48,6 @@ namespace ImplementationOne
         }
     }
     // </SnippetFirstImplementation>
-
 }
 
 namespace ImplementationTwo

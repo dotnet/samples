@@ -15,6 +15,5 @@ namespace SDKSample
                 mainWindow.InitializeComponent();
                 mainWindow.Show();
             }
-
     }
 }

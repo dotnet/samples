@@ -93,6 +93,5 @@ namespace Samples.AspNet.CS
       get { return files; }
     }
   }
-  
 }
 // </Snippet30>

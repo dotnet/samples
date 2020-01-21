@@ -32,5 +32,4 @@ namespace Snippets
     public class PersonType
     {
     };
-    
 }

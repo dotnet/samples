@@ -44,7 +44,6 @@ const string keyName = "Key01";
         public Form1()
         {
             InitializeComponent();
-
         }
 
         private void Close_Click(object sender, EventArgs e)
@@ -66,7 +65,6 @@ private void buttonCreateAsmKeys_Click(object sender, System.EventArgs e)
        label1.Text = "Key: " + cspp.KeyContainerName + " - Public Only";
     else
        label1.Text = "Key: " + cspp.KeyContainerName + " - Full Key Pair";
-
 }
 // </Snippet2>
 #endregion
@@ -210,7 +208,6 @@ private void EncryptFile(string inFile)
             }
             outFs.Close();
     }
-
 }
 // </Snippet5>
 #endregion
@@ -309,7 +306,6 @@ private void DecryptFile(string inFile)
                     count = inFs.Read(data, 0, blockSizeBytes);
                     offset += count;
                     outStreamDecrypted.Write(data, 0, count);
-
                 }
                 while (count > 0);
 
@@ -320,7 +316,6 @@ private void DecryptFile(string inFile)
         }
         inFs.Close();
     }
-
 }
 // </Snippet6>
 #endregion
@@ -338,7 +333,6 @@ private void buttonGetPrivateKey_Click(object sender, EventArgs e)
         label1.Text = "Key: " + cspp.KeyContainerName + " - Public Only";
     else
         label1.Text = "Key: " + cspp.KeyContainerName + " - Full Key Pair";
-
 }
 // </Snippet7>
 #endregion

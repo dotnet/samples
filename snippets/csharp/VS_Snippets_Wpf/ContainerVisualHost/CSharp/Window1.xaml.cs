@@ -54,7 +54,6 @@ namespace SDKSample
 
              return drawingVisual;
          }
-
      }
 
     // <SnippetContainerVisualHost01>

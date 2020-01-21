@@ -86,7 +86,6 @@ public class SamplesSortedList
             Console.WriteLine(e);
         }
         PrintKeysAndValues(mySL4);
-
     }
 
     public static void PrintKeysAndValues(SortedList myList)

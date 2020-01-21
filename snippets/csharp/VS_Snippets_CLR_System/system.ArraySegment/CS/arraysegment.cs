@@ -35,7 +35,6 @@ public class SamplesArray  {
       // Note that the value of its second element also changed.
       Console.WriteLine( "After the first array segment is modified, the second array segment now contains:" );
       PrintIndexAndValues( myArrSegMid );
-
    }
  
    public static void PrintIndexAndValues( ArraySegment<String> arrSeg )  {
@@ -51,7 +50,6 @@ public class SamplesArray  {
       }
       Console.WriteLine();
    }
-
 }
 
 

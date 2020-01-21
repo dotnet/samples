@@ -28,7 +28,6 @@ namespace SDKSample
         private void onClick(object sender, RoutedEventArgs args)
         {
             popup1.IsOpen = !popup1.IsOpen;
-
         }
 
         //<SnippetDelegateInstance>
@@ -47,7 +46,5 @@ namespace SDKSample
             return ttplaces;
         }
         //</SnippetDelegateInstance>
-
     }
-  
 }

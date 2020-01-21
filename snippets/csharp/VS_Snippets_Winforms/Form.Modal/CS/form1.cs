@@ -72,7 +72,6 @@ namespace FormModalEx
 			this.Name = "Form1";
 			this.Text = "Form1";
 			this.ResumeLayout(false);
-
 		}
 		#endregion
 
@@ -107,6 +106,5 @@ namespace FormModalEx
 			}
 		}
 		//</Snippet1>
-
 	}
 }

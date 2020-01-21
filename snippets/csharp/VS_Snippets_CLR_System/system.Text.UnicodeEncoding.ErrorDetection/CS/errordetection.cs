@@ -37,7 +37,6 @@ public class SamplesUnicodeEncoding  {
       // Decode the byte array without error detection.
       Console.WriteLine( "Decoding without error detection:" );
       PrintDecodedString( myBytes, u16noED );
-
    }
 
    // Decode the bytes and display the string.
@@ -51,9 +50,7 @@ public class SamplesUnicodeEncoding  {
       }
 
       Console.WriteLine();
-
    }
-
 }
 
 // </Snippet1>

@@ -24,7 +24,6 @@ namespace DP_Custom_CopyToDataTable_Examples
 
             Console.WriteLine("Hit enter...");
             Console.Read();
-
         } // Main
 
         static void JoinQuery()
@@ -61,7 +60,6 @@ namespace DP_Custom_CopyToDataTable_Examples
             //</SnippetJoin>           
 
             DisplayTable(orderTable);  
-
         }
 
         static void LoadItemsIntoTable()
@@ -84,7 +82,6 @@ namespace DP_Custom_CopyToDataTable_Examples
             DataTable table = query.CopyToDataTable();
             //</SnippetLoadItemsIntoTable>
             DisplayTable(table);
-
         }
 
         static void LoadItemsIntoExistingTable()
@@ -110,7 +107,6 @@ namespace DP_Custom_CopyToDataTable_Examples
             query.CopyToDataTable(table, LoadOption.PreserveChanges);
             //</SnippetLoadItemsIntoExistingTable>
             DisplayTable(table);
-
         }
 
         static void LoadItemsExpandSchema()
@@ -138,7 +134,6 @@ namespace DP_Custom_CopyToDataTable_Examples
             query.CopyToDataTable(table, LoadOption.PreserveChanges);
             //</SnippetLoadItemsExpandSchema>
             DisplayTable(table);
-
         }
 
         static void LoadScalarSequence()
@@ -173,7 +168,6 @@ namespace DP_Custom_CopyToDataTable_Examples
                 }
                 Console.WriteLine("");
             }
-
         }
 
         static void FillDataSet(DataSet ds)
@@ -270,7 +264,6 @@ namespace DP_Custom_CopyToDataTable_Examples
             public string Director { get; set; }
         }
         //</SnippetItemClass>
-
     } // Program
     // <SnippetCustomCopyToDataTableMethods>
     public static class CustomLINQtoDataSetMethods
@@ -285,7 +278,6 @@ namespace DP_Custom_CopyToDataTable_Examples
         {
             return new ObjectShredder<T>().Shred(source, table, options);
         }
-
     }
     // </SnippetCustomCopyToDataTableMethods>
 

@@ -14,7 +14,6 @@ using System.Net;
    
        Stream s = (Stream) GetFile(filename, new XmlUrlResolver());
        XmlTextReader reader = new XmlTextReader(s);
-       
    }
  
    // NOTE:  To test, replace www.contoso.com w/ the local string
@@ -41,5 +40,4 @@ using System.Net;
      return sResolver.GetEntity(fullUri, null, null);
    } 
 //</snippet1> 
- 
  }

@@ -764,7 +764,6 @@ namespace Vector3DSample
 
                 default:
                     break;
-
             }   // end switch
 		}
 
@@ -799,6 +798,5 @@ namespace Vector3DSample
 			txtMatrix1.Text = m1.ToString();
 			txtScalar1.Text = s1.ToString();
 		}
-
 	}
 }

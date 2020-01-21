@@ -22,6 +22,5 @@ namespace PerformanceLibrary
             }
         }
     }
-
 }
 //</Snippet1>

@@ -23,7 +23,6 @@ namespace Microsoft.Samples.Animation
         public FillBehaviorTip()
         {
             InitializeComponent();
-            
         }
 
         // <SnippetFillBehaviorTipStoryboardC1CompletedHandler>
@@ -35,6 +34,5 @@ namespace Microsoft.Samples.Animation
             translationAnimationStoryboard.Begin(this);
         }
         // </SnippetFillBehaviorTipStoryboardC1CompletedHandler>
-
     }
 }

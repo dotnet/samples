@@ -21,7 +21,6 @@ class program
         //ExportSchemas("surrogateEmployee.xml", ref schemas);
         //// Pass the schemas to the importer.
         //ImportSchemas(schemas);
-
     }
 
     static  DataContractSerializer CreateSurrogateSerializer()  
@@ -64,7 +63,6 @@ class program
             {
             Console.WriteLine(exc.Message);
             }
-
     }
 
     static void DeserializeSurrogate( string filename )
@@ -97,7 +95,6 @@ class program
             Console.WriteLine(serEx.Message);
             Console.WriteLine(serEx.StackTrace);
         }
-        
     }
 
     static void ExportSchemas(string filename , ref XmlSchemaSet schemas)
@@ -158,7 +155,6 @@ class program
         Console.WriteLine(" Press ENTER to terminate the sample." );
         Console.ReadLine();
     }
-
 }
 
 // This is the Employee (outer) type used in the sample.
@@ -202,7 +198,6 @@ public class Person
     // by the XmlSerializer.
     [DataMember()]
     public string xmlData;
-
 }
 
  //This is the surrogate that substitutes PersonSurrogated for Person.
@@ -222,7 +217,6 @@ Console.WriteLine("\t returning PersonSurrogated");
             return typeof(PersonSurrogated);
         }
         return type;
-
     }
     //</snippet1>
 
@@ -246,7 +240,6 @@ public object GetObjectToSerialize(object obj, Type targetType)
             return ps;
         }
         return obj;
-
     }
     //</snippet2>
 
@@ -264,7 +257,6 @@ public object GetObjectToSerialize(object obj, Type targetType)
                 return (Person)xs.Deserialize(new StringReader(ps.xmlData));
             }
             return obj;
-
     }
     //</snippet3>
 

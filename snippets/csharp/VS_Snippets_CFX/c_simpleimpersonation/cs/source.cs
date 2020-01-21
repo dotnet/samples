@@ -17,7 +17,6 @@ namespace ProxySample
 
         private void Impersonation()
         {
-
         }
 
         private void ClientCode()
@@ -27,7 +26,6 @@ namespace ProxySample
             client.ClientCredentials.Windows.AllowedImpersonationLevel =
                 System.Security.Principal.TokenImpersonationLevel.Impersonation;
             //</snippet1>
-
         }
 
         public interface ICalculator
@@ -78,7 +76,6 @@ namespace ProxySample
             {
                 return base.Channel.Add(n1, n2);
             }
-
         }
     }
 }

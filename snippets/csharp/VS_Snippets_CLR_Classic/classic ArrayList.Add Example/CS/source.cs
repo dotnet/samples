@@ -39,7 +39,6 @@
           Console.Write( "{0}{1}", mySeparator, obj );
        Console.WriteLine();
     }
-
  }
 
 

@@ -19,7 +19,6 @@ using System.Windows.Forms;
         {
           Application.EnableVisualStyles();
           Application.Run(new Form1());
-
         }
         
         //</snippet5>

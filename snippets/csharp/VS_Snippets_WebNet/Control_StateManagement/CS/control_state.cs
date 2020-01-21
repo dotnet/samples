@@ -37,7 +37,6 @@ namespace LogOnControlSample
          {
             userText = value;
          }
-         
       }
       public string PasswordText
       {

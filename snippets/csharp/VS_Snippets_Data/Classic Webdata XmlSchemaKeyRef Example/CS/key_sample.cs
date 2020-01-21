@@ -97,9 +97,7 @@ public class XmlSchemaObjectGenerator {
             }
         
 	    schema.Write(Console.Out);
-
     }/* Main() */ 
-
 } 
 //XmlSchemaObjectGenerator
 // </Snippet1>  

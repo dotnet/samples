@@ -17,7 +17,6 @@ class TWTLConWriterNameMod
         if (args.Length==0)
         {
             Console.WriteLine("Enter a trace file specification.");
-
         }
         else
         {

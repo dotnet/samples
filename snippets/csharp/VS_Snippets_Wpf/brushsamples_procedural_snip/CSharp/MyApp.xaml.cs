@@ -26,7 +26,6 @@ namespace Microsoft.Samples.BrushExamples
                 StreamWriter wr = new StreamWriter("error.txt");
                 wr.Write(args.ExceptionObject.ToString());
                 wr.Close();
-
             }catch( Exception e)
             {
                throw e;

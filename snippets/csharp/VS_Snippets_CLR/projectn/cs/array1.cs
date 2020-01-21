@@ -15,5 +15,4 @@ public class Example
 
 public class Class1
 {
- 
 }

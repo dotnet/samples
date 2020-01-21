@@ -181,7 +181,6 @@ namespace Mssc.Services.ConnectionManagement
             // Make a request with the same scheme identifier and host fragment
             // used to create the previous ServicePoint object.
             makeWebRequest (hashCode, "http://msdn.microsoft.com/library/");
-        
         }
     }
 }

@@ -56,7 +56,6 @@ namespace Samples.AspNet
 
             return TimeSpan.FromMinutes((double)min);
         }
-    
     }
 
     //<Snippet1>
@@ -68,7 +67,6 @@ namespace Samples.AspNet
 
         public CustomSection() 
         {
-           
         }
 
         //<Snippet0>
@@ -138,7 +136,6 @@ namespace Samples.AspNet
             {
                 this["cdStr"] = value;
             }
-   
         }
         //</Snippet4>
 
@@ -166,7 +163,6 @@ namespace Samples.AspNet
             {
                 this["permission"] = value;
             }
-
         }
         //</Snippet5>
 
@@ -185,8 +181,6 @@ namespace Samples.AspNet
             }
         }
         //</Snippet6>
-
     }
-
 }
 //</Snippet1>

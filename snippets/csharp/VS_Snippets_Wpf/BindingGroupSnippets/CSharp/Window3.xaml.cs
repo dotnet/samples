@@ -35,7 +35,6 @@ namespace BindingGroupSnippets
             if (e.Action == ValidationErrorEventAction.Added)
             {
                 MessageBox.Show(e.Error.ErrorContent.ToString());
-
             }
         }
     }
@@ -96,9 +95,7 @@ namespace BindingGroupSnippets
             }
 
             return ValidationResult.ValidResult;
-
         }
-
     }
     //</SnippetBindingGroupNameValidationRule>
 
@@ -120,5 +117,4 @@ namespace BindingGroupSnippets
         }
     }
     //</SnippetValueIsNotNull>
-
 }

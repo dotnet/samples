@@ -37,13 +37,11 @@ public static void demoDenySite() {
     catch (SecurityException e) {
         Console.WriteLine("Expected exception: " + e.Message);
     }
-
  }
 
 //</Snippet1>
         static void Main()
         {
              demoDenySite();
-            
         }
     }

@@ -108,7 +108,6 @@ namespace ConsoleApplication2
 		{
 			return Convert.ToUInt64(GetDoubleValue());
 		}
-
 	}
 
 	/// <summary>
@@ -125,7 +124,6 @@ namespace ConsoleApplication2
 			WriteObjectInfo(Convert.ToBoolean(testComplex));
 			WriteObjectInfo(Convert.ToDecimal(testComplex));
 			WriteObjectInfo(Convert.ToString(testComplex));
-
 		}
 
 		static void WriteObjectInfo(object testObject)

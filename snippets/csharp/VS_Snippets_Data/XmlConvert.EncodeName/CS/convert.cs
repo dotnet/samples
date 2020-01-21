@@ -18,7 +18,6 @@ public class Sample
      string name2 = XmlConvert.EncodeLocalName("a:book");
      Console.WriteLine("Encoded local name: " + name2);
      Console.WriteLine("Decoded local name: " + XmlConvert.DecodeName(name2));
-
   }
 }
 //</snippet1>

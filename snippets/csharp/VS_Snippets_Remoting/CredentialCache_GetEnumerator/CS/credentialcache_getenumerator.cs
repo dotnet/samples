@@ -61,7 +61,6 @@ class CredentialCacheSnippet {
             
            Console.WriteLine("\nResponse Received.");
             myWebResponse.Close();
-                                  
         } 
         catch(WebException e) 
         {

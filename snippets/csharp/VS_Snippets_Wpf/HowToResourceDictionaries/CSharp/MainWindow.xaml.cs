@@ -28,6 +28,5 @@ namespace HowToResourceDictionaries
             Brush gradientBrush = (Brush)Application.Current.FindResource("StandardLinearGradientBrush");
             //</Snippet3>
         }
-
     }
 }

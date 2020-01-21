@@ -44,7 +44,6 @@ public class Form1 : Form
         this.Name = "Form1";
         this.ResumeLayout(false);
         this.PerformLayout();
-
     }
 
     private void statusStrip1_LocationChanged(object sender, EventArgs e)

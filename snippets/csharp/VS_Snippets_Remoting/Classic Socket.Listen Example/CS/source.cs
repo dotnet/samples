@@ -31,5 +31,4 @@ public class Sample
         Console.WriteLine("enter to exit");
         Console.Read();
     }
-
 }

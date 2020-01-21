@@ -45,6 +45,5 @@ namespace OleDbCommandPrepareCS
             }
         }
         // </Snippet1>
-
     }
 }

@@ -42,7 +42,5 @@ namespace PictureViewer
     {
     }
     // </snippet2>
-
     }
-
 }

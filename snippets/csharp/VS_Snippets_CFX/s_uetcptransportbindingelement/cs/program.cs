@@ -60,7 +60,6 @@ namespace Snippets
             bool SupportsServerAuthentication =
                 b.SupportsServerAuthentication;
             // </Snippet11>
-
         }
 
         static void RunClient()
@@ -81,9 +80,6 @@ namespace Snippets
             IChannelListener<IOutputChannel> listener =
                 binding.BuildChannelListener<IOutputChannel>(bContext);
             // </Snippet10>
-
         }
-
     }
-
 }

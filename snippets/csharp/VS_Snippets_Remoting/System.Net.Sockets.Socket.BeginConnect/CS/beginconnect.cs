@@ -47,7 +47,6 @@ namespace BeginConnectTester
             allDone.WaitOne();
 
             Console.WriteLine("Connection established");
-
         }		
 //</Snippet7>
 //<Snippet2>

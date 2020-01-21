@@ -21,7 +21,6 @@ namespace StylingIntroSample
 
         private string _source;
         public string Source { get { return _source; } }
-
     }
 
     public class PhotoList : ObservableCollection<Photo>

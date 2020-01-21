@@ -22,9 +22,7 @@ public class SamplesTextInfo  {
 
       // Changes a string to titlecase.
       Console.WriteLine( "\"{0}\" to titlecase: {1}", myString, myTI.ToTitleCase( myString ) );
-
    }
-
 }
 
 /*

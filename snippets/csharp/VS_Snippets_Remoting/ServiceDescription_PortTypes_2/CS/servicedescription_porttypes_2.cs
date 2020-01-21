@@ -54,7 +54,6 @@ namespace ServiceDescription1
          {
             Console.WriteLine("This file is not a WSDL file.");
          }
-
       }
       // Creates an Operation for a PortType.
       public static Operation CreateOperation(string operationName, 

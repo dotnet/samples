@@ -31,5 +31,4 @@ private void SetData2()
     {
         Application.Run(new Form1());
     }
-
 }

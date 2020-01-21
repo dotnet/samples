@@ -40,6 +40,5 @@ public class SampleClient : MarshalByRefObject {
     private void OnSomethingHappened (object source, SampleServiceEventArgs e) {
         Console.WriteLine("SomethingHappened event fired: {0}", e.Message);
     }
-    
 }
 // </Snippet2>

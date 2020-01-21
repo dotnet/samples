@@ -27,7 +27,6 @@ public class Address
    {
       City = city;
    }
-
 }
 
 // Another extra type to include.

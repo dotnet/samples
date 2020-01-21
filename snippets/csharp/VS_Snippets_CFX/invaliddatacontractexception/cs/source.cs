@@ -28,7 +28,6 @@ namespace Example
                 Console.WriteLine("You have an invalid data contract: ");
                 Console.WriteLine(iExc.Message);
                 Console.ReadLine();
-                
             }
               catch (Exception exc)
             {
@@ -56,7 +55,6 @@ namespace Example
             
             Console.WriteLine("Listening...");
             Console.ReadLine();
-
         }
 
         private void AddMetadataEndpoint(ref ServiceHost sh)
@@ -67,7 +65,6 @@ namespace Example
             sm.HttpGetUrl = mex;
             sh.Description.Behaviors.Add(sm);
         }
-        
     }
     
     // This class will cause an InvalidDataContractException to be thrown because

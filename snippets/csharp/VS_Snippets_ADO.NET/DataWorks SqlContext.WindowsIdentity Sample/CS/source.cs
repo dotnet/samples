@@ -30,7 +30,6 @@ try
       {
         // Perform some action using impersonation.
       }
-      
    }
    finally
    {
@@ -44,7 +43,5 @@ catch
 }
 
 //</Snippet1>
-
 }
-
 }

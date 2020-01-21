@@ -46,7 +46,6 @@ namespace Samples.AspNet
                 this["maxIdleTime"] = value;
             }
         }
-
     }
 
     //<Snippet2>
@@ -136,7 +135,6 @@ namespace Samples.AspNet
             {
                 Console.WriteLine(err.ToString());
             }
-
         }
 
         // Change custom section and write it to disk.
@@ -169,7 +167,6 @@ namespace Samples.AspNet
             {
                 Console.WriteLine(e.ToString());
             }
-
         }
 
         // Read custom section from disk.
@@ -196,7 +193,6 @@ namespace Samples.AspNet
             {
                 Console.WriteLine(e.ToString());
             }
-
         }
 
         static void Main(string[] args)
@@ -204,7 +200,6 @@ namespace Samples.AspNet
             CreateSection();
             SerializeCustomSection();
             DeserializeCustomSection();
-
         }
     }
 }

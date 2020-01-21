@@ -37,7 +37,6 @@ namespace keywords
     class NotNullContainer<T>
         where T : notnull
     {
-
     }
 #nullable restore
     // </SnippetNotNull>
@@ -136,7 +135,6 @@ namespace keywords
 
     public interface IEmployee
     {
-
     }
 
     // <Snippet10>
@@ -280,6 +278,5 @@ namespace keywords
 
             // </Snippet20>
         }
-
     }
 }

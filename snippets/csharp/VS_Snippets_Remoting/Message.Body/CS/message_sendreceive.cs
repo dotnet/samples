@@ -66,7 +66,6 @@ namespace MyProject
 			{
 				Console.WriteLine(e.Message);
 			}
-			
 		}
 
 		//**************************************************
@@ -95,7 +94,6 @@ namespace MyProject
 			catch(ArgumentException e)
 			{
 				Console.WriteLine(e.Message);
-			
 			}
 
 			return;

@@ -59,6 +59,5 @@ public class HttpConnect{
 		   }
 
 // </Snippet1>
-
 	   }
 }

@@ -24,7 +24,6 @@ namespace EnumDir
             {
                 Console.WriteLine($"{di.ProgDir.Name}");
             }
-
         }
     }
 }

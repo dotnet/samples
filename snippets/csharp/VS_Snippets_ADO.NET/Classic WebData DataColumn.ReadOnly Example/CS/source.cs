@@ -18,5 +18,4 @@ public class Form1: Form
         column.Unique = false;
     }
     // </Snippet1>
-
 }

@@ -47,7 +47,6 @@ namespace PasswordBoxSnippets
             // Change the password masking character to a period.
             pwdBox.PasswordChar = '.';
             // </Snippet_PwdBox_PwdChar>
-
         }
 
         void ClearPwdBox()
@@ -90,7 +89,6 @@ namespace PasswordBoxSnippets
             // call, the value of pwdBox.Password == "Open Sesame!".
             pwdBox.Paste();
             // </Snippet_PwdBox_Paste>
-
         }
     }
 }

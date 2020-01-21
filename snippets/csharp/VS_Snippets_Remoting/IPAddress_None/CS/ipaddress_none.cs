@@ -17,5 +17,4 @@ class NoneFieldAddress
       Console.WriteLine("IP address : " + address);
    }
 // </Snippet1>
-
 }

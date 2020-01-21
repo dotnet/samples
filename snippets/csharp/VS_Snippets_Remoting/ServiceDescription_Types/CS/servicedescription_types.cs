@@ -100,7 +100,6 @@ class ServiceDescription_Types
          myStreamWriter.Close();
          myFileStream.Close();
 // </Snippet2>
-
       }
       catch(Exception e)
       {

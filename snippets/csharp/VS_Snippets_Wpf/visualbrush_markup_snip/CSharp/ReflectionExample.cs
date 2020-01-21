@@ -180,7 +180,6 @@ namespace SDKSample
             myStackPanel.Children.Add(dividerRectangle);
             myStackPanel.Children.Add(reflectionRectangle);
             this.Content = myStackPanel;
-
         }
         /*
     <Rectangle 
@@ -204,7 +203,6 @@ namespace SDKSample
 </Page>
 
 */
-        
     }
 }
 // </SnippetGraphicsMMVisualBrushReflectionExampleWholePage>

@@ -147,7 +147,6 @@ namespace Samples
             //code omitted…
             FileMessage fm = new FileMessage("myFile.xml");
             return fm;
-
         }
         //</snippet7>
     }

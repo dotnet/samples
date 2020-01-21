@@ -31,7 +31,6 @@ public class Sample
     XmlTextWriter writer = new XmlTextWriter(Console.Out);
     writer.Formatting = Formatting.Indented;
     doc.WriteContentTo(writer);
-
   }
 }
 // </Snippet1>

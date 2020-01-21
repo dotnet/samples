@@ -49,7 +49,6 @@ public class Form1 : System.Windows.Forms.Form
         this.Controls.Add(this.colorLabel2);
         this.Name = "Form1";
         this.ResumeLayout(false);
-
     }
 
     [STAThread]
@@ -58,7 +57,6 @@ public class Form1 : System.Windows.Forms.Form
         Form1 f1 = new Form1();
         f1.ShowDialog();
     }
-
 }
 
 /////////////////////////////////////////////////////////////////
@@ -316,6 +314,5 @@ public class ColorLabelActionList :
     }
     //</snippet7>
 }
-
 }
 //</snippet1>

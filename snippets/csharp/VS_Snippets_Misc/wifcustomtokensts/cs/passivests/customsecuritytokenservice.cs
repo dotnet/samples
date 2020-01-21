@@ -141,7 +141,6 @@ namespace PassiveSTS
         }
 
         //</Snippet7>
-       
     }
 }
 // </Snippet3>

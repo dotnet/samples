@@ -15,7 +15,6 @@ public class Example
          months[ctr] = new int[daysInMonth] ;
          for (int ctr2 = 1; ctr2 <= daysInMonth; ctr2++)
             months[ctr][ctr2 - 1] = ctr2;
-
       }
 
       foreach (var month in months) {

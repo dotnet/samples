@@ -49,7 +49,6 @@ namespace Examples
             Type derivedType = typeof(Derived1);
             Object obj = Activator.CreateInstance(derivedType);
             block.Text += obj.GetType().FullName + Environment.NewLine;
-            
         }
     }
 }

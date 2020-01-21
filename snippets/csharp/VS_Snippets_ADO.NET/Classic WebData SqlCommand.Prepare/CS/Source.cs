@@ -11,7 +11,6 @@ namespace SqlPrepareCS
             string connectionString = "Persist Security Info=False;Integrated Security=SSPI;database=Northwind;server=(local)";
             SqlCommandPrepareEx(connectionString);
             Console.ReadLine();
-
         }
         // <Snippet1>
         private static void SqlCommandPrepareEx(string connectionString)

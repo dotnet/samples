@@ -7,7 +7,6 @@ class Program
 {
     static void Main(string[] args)
     {
-
     }
 
 //<SNIPPET1>

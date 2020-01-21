@@ -27,6 +27,5 @@ public interface ICalculator
         public static void Main()
         {
         }
-
     }
 }

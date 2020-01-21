@@ -535,7 +535,6 @@ healthMonitoringSection.Rules.Clear();
             }
         }
     } // UsingHealthMonitoringSection class end.
-    
 } // Samples.Aspnet.SystemWebConfiguration namespace end.
 
 // </Snippet1>

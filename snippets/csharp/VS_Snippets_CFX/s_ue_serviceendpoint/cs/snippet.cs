@@ -86,6 +86,5 @@ namespace ServiceEndpointSnippets
             Console.WriteLine("ListenUriMode: {0}", endpoint.ListenUriMode.ToString());
             // </Snippet5>
         }
-
     }
 }

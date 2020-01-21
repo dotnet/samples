@@ -31,7 +31,6 @@ namespace DesignLibrary
                 return "LastName";
             }
         }
-
     }
 }
 //</Snippet1>

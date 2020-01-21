@@ -49,7 +49,6 @@ public class Form1:
 		this.Name = "Form1";
 		this.Text = "Form1";
 		this.ResumeLayout(false);
-
 	}
 
 	#endregion
@@ -123,5 +122,4 @@ public class Form1:
 			Brushes.Black, 10, 10);
 	}
 	//</snippet1>
-
 }

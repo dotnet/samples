@@ -88,7 +88,6 @@ namespace NorthwindClient
             catch (DataServiceRequestException ex)
             {
                 MessageBox.Show(ex.ToString());
-
             }
         }
         public SalesOrders()

@@ -31,5 +31,4 @@ public class Form1: Form
         GetParentRowForTable(thisTable, relation.RelationName);
     }
     // </Snippet1>
-
 }

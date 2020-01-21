@@ -39,7 +39,6 @@ public static class TestBase64
         fileNew.Flush();
         fileOld.Close();
         fileNew.Close();
-
     }
 
     // Use the WriteBase64 method to create an XML document.  The object  
@@ -64,7 +63,6 @@ public static class TestBase64
                   readByte = br.Read(buffer, 0, bufferSize);
                   xw.WriteBase64(buffer, 0, readByte);
               } while (bufferSize <= readByte);
-
         }
         catch (Exception ex)
         {
@@ -108,7 +106,6 @@ public static class TestBase64
         } while(readByte >= bufferSize);
 
         bw.Flush();
-
     }
 
     // Compare the two files.
@@ -144,11 +141,9 @@ public static class TestBase64
                   return false;
               }
           }
-
         } while (count < readByte);
 
         return true;
-
     }
 
     // Display the usage statement.
@@ -157,6 +152,5 @@ public static class TestBase64
         Console.WriteLine("TestBase64 sourceFile, targetFile \n");
         Console.WriteLine("For example: TestBase64 winlogon.bmp, target.bmp\n");
     }
-
 }
 //</snippet1>

@@ -16,7 +16,6 @@ class SafeHandlesExample
             uMutex.Create();
             Console.WriteLine("Mutex created. Press Enter to release it.");
             Console.ReadLine();
-
         }
         catch (Exception e)
         {
@@ -29,7 +28,6 @@ class SafeHandlesExample
         }
 
         Console.ReadLine();
-
     }
 }
 
@@ -91,7 +89,6 @@ class UnmanagedMutex
                 return null;
             }
         }
-
     }
 
     public string Name
@@ -100,13 +97,11 @@ class UnmanagedMutex
         {
             return nameValue;
         }
-
     }
 
     public void Release()
     {
         ReleaseMutex(handleValue);
     }
-
 }
 //</Snippet1>

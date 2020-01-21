@@ -65,13 +65,11 @@ class DiscoverySoapBindingClass
          myDiscoveryClientProtocol.WriteAll(".","results.discomap");
 
 // </Snippet2>
-
       }
       catch (Exception e)
       {
 
          Console.WriteLine(e.ToString());
-
       }
    }
 }

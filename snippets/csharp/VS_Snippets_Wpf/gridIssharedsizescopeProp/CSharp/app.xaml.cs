@@ -15,6 +15,5 @@ namespace grid_issharedsizescope_prop
 			mainWindow.InitializeComponent();
 			mainWindow.Show();
         }
-
 	}
 }

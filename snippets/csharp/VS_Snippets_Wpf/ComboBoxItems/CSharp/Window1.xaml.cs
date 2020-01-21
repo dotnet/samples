@@ -36,7 +36,6 @@ namespace ComboBox_Index
             
             cbi.IsSelected = true;
             //</Snippet3>
-       
         }
 
         private void GetCity(object sender, RoutedEventArgs e)
@@ -59,7 +58,6 @@ namespace ComboBox_Index
                  (cbi.Content.ToString()) + ".";
         }
         //</Snippet2>           
-
     }
 
     class Cities : ObservableCollection<string>
@@ -71,7 +69,6 @@ namespace ComboBox_Index
             Add("France - Second stop");
             Add("Peru - Third stop");
             Add("Mexico - Fourth stop");
-
         }
     }
 
@@ -89,5 +86,4 @@ namespace ComboBox_Index
         }
     }
     //</SnippetData>
-
 }

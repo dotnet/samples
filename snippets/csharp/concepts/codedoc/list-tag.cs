@@ -26,5 +26,4 @@
 /// </summary>
 public class Math
 {
-
 }

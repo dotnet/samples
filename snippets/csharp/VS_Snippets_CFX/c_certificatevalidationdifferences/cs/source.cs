@@ -134,7 +134,5 @@ public class Test
         {
             return base.Channel.Add(n1, n2);
         }
-
     }
-
 }

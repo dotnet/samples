@@ -19,6 +19,5 @@ namespace SDKSample
             PositionTextBlock.Text = sliderValue.ToString();
         }
     }
-    
 }
 // </SnippetSeekStoryboardSynchronouslyCodeBehindExampleWholePage>

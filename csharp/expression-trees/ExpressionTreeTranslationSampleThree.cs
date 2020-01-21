@@ -50,7 +50,6 @@ namespace ExpressionTreeSamples
                 var sum = leftOperand + rightOperand;
                 Console.WriteLine($"Computed sum: {sum}");
                 return sum;
-
             }
             else
             {

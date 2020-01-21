@@ -19,7 +19,6 @@ public class Page1: Page
 
        // Add column to Columns collection.
        ItemsGrid.Columns.AddAt(2, AddColumn);
-
     }
    
 // </Snippet1>

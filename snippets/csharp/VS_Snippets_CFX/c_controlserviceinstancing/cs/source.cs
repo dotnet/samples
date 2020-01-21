@@ -55,5 +55,4 @@ namespace Microsoft.ServiceModel.Samples
     { }
     public class Class5
     { }
-
 }

@@ -32,7 +32,6 @@ namespace AdvancedInkInputSemples
 
         // Sample event handler:  
         // private void ButtonClick(object sender, RoutedEventArgs e) {}
-
     }
 
     public class FilteredInkCanvas : InkCanvas

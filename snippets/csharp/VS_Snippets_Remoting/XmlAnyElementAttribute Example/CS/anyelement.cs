@@ -77,7 +77,6 @@ public class Test{
       TextWriter writer = new StreamWriter(filename);
       ser.Serialize(writer, myGroup, namespaces);
       writer.Close();
-
    }
 
    private void DeserializeObject(string filename){

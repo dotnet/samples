@@ -22,7 +22,6 @@ namespace Microsoft.Samples.GradientBrushExamples
             createRadialGradientBrushExample();
 
             this.Content = myMainPanel;
-            
         }
 
         private void createRadialGradientBrushExample()
@@ -49,8 +48,6 @@ namespace Microsoft.Samples.GradientBrushExamples
             // </SnippetRadialGradient1CSharp>
             
             myMainPanel.Children.Add(myRectangle); 
-               
         }
-          
     }
 }

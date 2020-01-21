@@ -704,5 +704,4 @@ namespace SDKSampleHelper
         #endregion private members
 
     };//end:class XPFContent
-
 }// end:namespace SDKSampleHelper

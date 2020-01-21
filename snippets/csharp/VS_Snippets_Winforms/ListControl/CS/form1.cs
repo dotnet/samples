@@ -110,7 +110,6 @@ namespace MyListControlSample
                 return myLongName;
             }
         }
-
     }
 }
 // </Snippet1>

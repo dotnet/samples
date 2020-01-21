@@ -79,7 +79,6 @@ namespace SL_AddressHeader
             // </Snippet10>
 
             // </Snippet0>
-
         }
     }
 }

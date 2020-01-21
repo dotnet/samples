@@ -55,7 +55,6 @@ namespace Examples.AspNet
                 return groups;
             }
         }
-
     }
 
     // Define a simple web control, and associate it with the designer.
@@ -65,7 +64,6 @@ namespace Examples.AspNet
     {
         // Define derived control behavior here.
     }
-
 }
 //</Snippet1>
 

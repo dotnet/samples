@@ -28,7 +28,6 @@ private void dataGrid1_MouseDown(object sender, MouseEventArgs e){
       DataGridTextBoxColumn gridCol =
       (DataGridTextBoxColumn) dgt.GridColumnStyles[hi.Column];
       // Insert code to edit the value.
-      
    }
 }
 

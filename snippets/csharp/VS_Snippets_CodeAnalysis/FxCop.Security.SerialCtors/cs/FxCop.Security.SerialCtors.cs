@@ -30,6 +30,5 @@ namespace SecurityRulesLibrary
            info.AddValue("n1", n1);
         }
     }
-
  }
 //</Snippet1>

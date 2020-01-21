@@ -43,9 +43,7 @@ namespace ConfigurationStringSettings
 
                 Console.WriteLine("  Provider Name: {0}",
                     cs.ProviderName);
-
             }
-
         }
 
         static void Main(string[] args)

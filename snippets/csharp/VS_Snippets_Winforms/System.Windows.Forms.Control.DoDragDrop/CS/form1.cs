@@ -76,7 +76,6 @@ namespace Snip_DragNDrop
             this.Text = "drag-and-drop Example";
 
             this.ResumeLayout(false);
-
         }
 
         private void ListDragSource_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e) 
@@ -120,7 +119,6 @@ namespace Snip_DragNDrop
                     try {
                         MyNormalCursor = new Cursor("3dwarro.cur");
                         MyNoDropCursor = new Cursor("3dwno.cur");
-
                     } catch {
                         // An error occurred while attempting to load the cursors, so use
                         // standard cursors.
@@ -173,7 +171,6 @@ namespace Snip_DragNDrop
                 else 
                     Cursor.Current = MyNoDropCursor;
             }
-        
         }
         //</Snippet3>
         //<Snippet4>
@@ -196,30 +193,25 @@ namespace Snip_DragNDrop
 
                 // Link drag-and-drop effect.
                 e.Effect = DragDropEffects.Link;
-
             } else if ((e.KeyState & 32) == 32 && 
                 (e.AllowedEffect & DragDropEffects.Link) == DragDropEffects.Link) {
 
                 // ALT KeyState for link.
                 e.Effect = DragDropEffects.Link;
-
             } else if ((e.KeyState & 4) == 4 && 
                 (e.AllowedEffect & DragDropEffects.Move) == DragDropEffects.Move) {
 
                 // SHIFT KeyState for move.
                 e.Effect = DragDropEffects.Move;
-
             } else if ((e.KeyState & 8) == 8 && 
                 (e.AllowedEffect & DragDropEffects.Copy) == DragDropEffects.Copy) {
 
                 // CTL KeyState for copy.
                 e.Effect = DragDropEffects.Copy;
-
             } else if ((e.AllowedEffect & DragDropEffects.Move) == DragDropEffects.Move)  {
 
                 // By default, the drop action should be move, if allowed.
                 e.Effect = DragDropEffects.Move;
-
             } else
             {
                 e.Effect = DragDropEffects.None;
@@ -260,7 +252,6 @@ namespace Snip_DragNDrop
                         ListDragTarget.Items.Insert(indexOfItemUnderMouseToDrop, item);
                     else
                         ListDragTarget.Items.Add(item);
-                    
                 }
             }
             // Reset the label text.

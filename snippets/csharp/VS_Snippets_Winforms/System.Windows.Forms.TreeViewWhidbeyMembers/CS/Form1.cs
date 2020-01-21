@@ -138,7 +138,6 @@ class Form1 : Form
         this.Name = "Form1";
         this.ResumeLayout(false);
         this.PerformLayout();
-
     }
 
     // The following example code demonstrates how to use the TreeNode.Level, 
@@ -224,7 +223,6 @@ class Form1 : Form
         treeViewWithToolTips.Nodes.AddRange(new TreeNode[] { node1, node2 });
         treeViewWithToolTips.ShowNodeToolTips = true;
         this.Controls.Add(treeViewWithToolTips);
-
     }
     // </snippet7>
 

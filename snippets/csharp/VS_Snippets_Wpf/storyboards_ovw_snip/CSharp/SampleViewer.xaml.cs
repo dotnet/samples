@@ -17,6 +17,5 @@ namespace Microsoft.Samples.Animation
             StoryboardsExampleFrame.Content = new StoryboardsExample();
             IndirectTargetingExampleFrame.Content = new IndirectTargetingExample();
         }
-
     }
 }

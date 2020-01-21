@@ -18,7 +18,6 @@ public class Sample
     // Determine whether the node is read-only.
     if (doc.DocumentType.IsReadOnly)
        Console.WriteLine("Document type nodes are always read-only");
-
   }
 }
    // </Snippet1>

@@ -313,7 +313,6 @@ class BasicDataEntryForm : System.Windows.Forms.Form
         this.tableLayoutPanel1.ResumeLayout(false);
         this.tableLayoutPanel1.PerformLayout();
         this.ResumeLayout(false);
-
     }
 
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;

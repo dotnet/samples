@@ -32,7 +32,6 @@ namespace Microsoft.WCF.Documentation
         //sb.EnableHelpPage= true;
         //sb.HttpsGetUrl = new Uri("https://myMachineName:8036/myEndpoint");
         //myServiceHost.Description.Behaviors.Add(sb);
-
     }
 
       private void SnippetServiceMetadataBehavior()
@@ -50,7 +49,6 @@ namespace Microsoft.WCF.Documentation
           sb.HttpsGetUrl = new Uri("https://myMachineName:8036/myEndpoint");
           myServiceHost.Description.Behaviors.Add(sb);
  */
-
       }
 
     private void Run()
@@ -89,7 +87,6 @@ namespace Microsoft.WCF.Documentation
         // </Snippet#0>
 
 //</Snippet1>
-
       }
       catch (TimeoutException timeProblem)
       {

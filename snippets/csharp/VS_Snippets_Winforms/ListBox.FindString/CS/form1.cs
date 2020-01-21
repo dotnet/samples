@@ -107,7 +107,6 @@ namespace ListBoxFindStringEx
          this.Name = "Form1";
          this.Text = "Form1";
          this.ResumeLayout(false);
-
       }
 		#endregion
 
@@ -153,7 +152,6 @@ namespace ListBoxFindStringEx
                   // Select the item in the ListBox once it is found.
                   listBox1.SetSelected(x,true);
                }
-   
             }while(x != -1);
          }
       }

@@ -40,6 +40,5 @@ namespace HierarchicalUpdateWalkthroughCS
             this.customersBindingSource.EndEdit();
             //</Snippet2>
         }
-
     }
 }

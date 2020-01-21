@@ -62,8 +62,6 @@ namespace FrameSnips
 
         private void onNavigated(object sender, NavigationEventArgs args)
         {
-            
         }
-
     }
 }

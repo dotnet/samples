@@ -35,7 +35,6 @@
             // grid.DataMember = "First";
 
             button1.Click += new EventHandler(OnButtonClick);
-
         }
 
         private void OnButtonClick(object sender, EventArgs e) 
@@ -44,7 +43,6 @@
             // grid[0,0] = "nou";
             // grid.SetDataBinding(null, "");
             //DataGridSample.SortDataGrid.Sort(grid, "First", true);
-
         }
 
         private void grid_Enter(object sender, EventArgs e) 
@@ -62,7 +60,6 @@
                 dRow["First"] = string.Format("FirstName {0}", i) ;
                 dRow["name"] = string.Format("LastName {0}", i);
                 dataTable.Rows.Add(dRow);
-
             }
         }
 

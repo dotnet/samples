@@ -10,6 +10,5 @@ namespace TreeViewSnips
 
     public partial class MyApp : Application
     {
-
     }
 }

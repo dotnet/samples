@@ -129,7 +129,6 @@ namespace GitHubIssueClassification
             // <SnippetReturnModel>
             return trainingPipeline;
             // </SnippetReturnModel>
-
         }
 
         public static void Evaluate(DataViewSchema trainingDataViewSchema)
@@ -163,7 +162,6 @@ namespace GitHubIssueClassification
             // <SnippetCallSaveModel>
             SaveModelAsFile(_mlContext, trainingDataViewSchema, _trainedModel);
             // </SnippetCallSaveModel>
-
         }
 
         public static void PredictIssue()
@@ -188,7 +186,6 @@ namespace GitHubIssueClassification
             // <SnippetDisplayResults>
             Console.WriteLine($"=============== Single Prediction - Result: {prediction.Area} ===============");
             // </SnippetDisplayResults>
-
         }
 
         private static void SaveModelAsFile(MLContext mlContext,DataViewSchema trainingDataViewSchema, ITransformer model)
@@ -199,6 +196,5 @@ namespace GitHubIssueClassification
 
             Console.WriteLine("The model is saved to {0}", _modelPath);
         }
-
     }
 }

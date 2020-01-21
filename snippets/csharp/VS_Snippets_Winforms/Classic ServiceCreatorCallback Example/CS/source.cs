@@ -18,7 +18,6 @@ new ServiceCreatorCallback(myCallBackMethod);
 // Adds the service using its type and the service creator callback.
 serviceContainer.AddService(typeof(myService), callback1);
 // </Snippet1>
-
     }
 
     // Method added so class will compile

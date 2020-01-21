@@ -17,7 +17,6 @@ namespace Microsoft.Samples.BrushExamples
             StackPanel mainPanel = new StackPanel();
             canvasBackgroundExample(mainPanel);
             this.Content = mainPanel;
-        
         }
 
         // <SnippetGraphicsMMImageBrushAsCanvasBackgroundExample>
@@ -41,11 +40,8 @@ namespace Microsoft.Samples.BrushExamples
             // </SnippetGraphicsMMImageBrushAsCanvasBackgroundExample3>
             
             mainPanel.Children.Add(myCanvas);
-
         }
         // </SnippetGraphicsMMImageBrushAsCanvasBackgroundExample>
-    
     }
-
 }
 // </SnippetGraphicsMMImageBrushAsCanvasBackgroundExampleWholePage>

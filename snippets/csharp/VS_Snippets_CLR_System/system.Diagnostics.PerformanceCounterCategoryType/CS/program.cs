@@ -38,7 +38,6 @@ public class PerfCounter1
             Writer.DeleteCounters();
             Console.WriteLine("Press any key to exit.");
             Console.Read();
-
         }
         catch (Exception e)
         {
@@ -89,7 +88,6 @@ public class PerfCounter1
                     PerformanceCounterCategoryType.SingleInstance,
                     "Trucks", "Number of trucks on hand");
             //</Snippet3>
-
         }
         //</Snippet4>
 
@@ -135,7 +133,6 @@ public class PerfCounter1
             {
                 Console.WriteLine(e.ToString());
             }
-
         }
 
         private void OnTimer1(object sender, ElapsedEventArgs args)

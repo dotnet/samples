@@ -138,7 +138,6 @@ class EmitWriteLineDemo {
        writeStrIL.Emit(OpCodes.Ret);
       
        return pointTypeBld.CreateType();
-
    }
 
    public static void Main() {

@@ -21,7 +21,6 @@ public class ValidXSD {
       rdr.ValidationEventHandler += new ValidationEventHandler(ValidationCallBack);
       while (rdr.Read());
     }
-    
   }
 
   private static void ValidationCallBack(object sender, ValidationEventArgs e) {

@@ -23,7 +23,6 @@ namespace Samples.AspNet.CS
         {
             return new HtmlStyledLabelWriter(writer);
         }
-
     }
 // </snippet10>
 

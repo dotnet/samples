@@ -27,7 +27,6 @@ namespace Microsoft.Samples.Graphics.Geometries
             examples[2] = new PathGeometryExample();
             examples[3] = new CombiningGeometriesExample();
             examples[4] = new GeometryAttributeSyntaxExample();     
-       
        }
        
        private void pageLoaded(object sender, RoutedEventArgs args)
@@ -40,7 +39,6 @@ namespace Microsoft.Samples.Graphics.Geometries
        {
            
             mainFrame.Navigate(examples[sampleIndex]);
-        
        }
        
        private void frameContentRendered(object sender, EventArgs args)
@@ -53,7 +51,6 @@ namespace Microsoft.Samples.Graphics.Geometries
        private void zoomInStoryboardCompleted(object sender, EventArgs e)
        {
             scrollViewerBorder.Visibility = Visibility.Visible;
-       
        }
 
        private void sampleSelected(object sender, RoutedEventArgs args)
@@ -102,7 +99,6 @@ namespace Microsoft.Samples.Graphics.Geometries
              sampleIndex = 3;
            else if (button.Content.ToString() == "Geometry Attribute Syntax Example")
             sampleIndex = 4;            
-            
          }           
        }  
     }

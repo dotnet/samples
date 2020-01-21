@@ -31,7 +31,6 @@ public class SamplesCalendar  {
       // Displays the values of the DateTime.
       Console.WriteLine( "After adding 5 to each component of the DateTime:" );
       DisplayValues( myCal, myDT );
-
    }
 
    public static void DisplayValues( Calendar myCal, DateTime myDT )  {
@@ -47,7 +46,6 @@ public class SamplesCalendar  {
       Console.WriteLine( "   Milliseconds: {0}", myCal.GetMilliseconds( myDT ) );
       Console.WriteLine();
    }
-
 }
 
 

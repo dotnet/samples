@@ -54,7 +54,6 @@ namespace Samples.AspNet.CS
              {
                  return base.OnAttributeRender(name, value, key);
              }
-
          }
 // </snippet2>       
         
@@ -102,7 +101,6 @@ namespace Samples.AspNet.CS
            this.Write("A control just rendered.");
         }  
 // </snippet4>
-         
     }
 }
 // </snippet1>

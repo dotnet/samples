@@ -520,7 +520,6 @@ namespace Microsoft.WCF.Documentation
 	    // <Snippet27>
 		string URIstring = endpointAddress.ToString();
 	    // </Snippet27>
-
 	}
 
 	public static void SnippetWriteContentsToAddressingVersionXmlDictionaryWriter()
@@ -542,7 +541,6 @@ namespace Microsoft.WCF.Documentation
 						dictWriter);
 		dictWriter.Close();
 	    // </Snippet29>
-
 	}
 
 	public static void SnippetWriteContentsToAddressingVersionXmlWriter()
@@ -563,7 +561,6 @@ namespace Microsoft.WCF.Documentation
 						writer);
 		writer.Close();
 	    // </Snippet30>
-
 	}
 
 	public static void SnippetWriteToAddressingVersionXmlDictionaryWriter()
@@ -586,7 +583,6 @@ namespace Microsoft.WCF.Documentation
 		writer.Close();
 
 	    // </Snippet31>
-
 	}
 
 	public static void SnippetWriteToAddressingVersionXmlWriter()
@@ -607,7 +603,6 @@ namespace Microsoft.WCF.Documentation
 					writer);
 		writer.Close();
 	    // </Snippet32>
-
 	}
 
 	public static void SnippetWriteToAddressingVersionXmlWriterXmlDictionaryStringXmlDictionaryString()
@@ -636,7 +631,6 @@ namespace Microsoft.WCF.Documentation
 					xdNamespace);
 		writer.Close();
 	    // </Snippet33>
-
 	}
 	
 	public static void SnippetWriteToAddressingVersionXmlWriterStringString()
@@ -659,8 +653,6 @@ namespace Microsoft.WCF.Documentation
 					"http://www.w3.org/2005/08/addressing");
 		writer.Close();
 	    // </Snippet34>
-
 	}
-
     }
 }

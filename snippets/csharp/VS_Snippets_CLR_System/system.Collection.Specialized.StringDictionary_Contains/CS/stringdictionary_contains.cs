@@ -32,7 +32,6 @@ public class SamplesStringDictionary  {
       else
          Console.WriteLine( "The collection does not contain the value \"amarillo\"." );
       Console.WriteLine();
-
    }
 
    public static void PrintKeysAndValues( StringDictionary myCol )  {
@@ -41,7 +40,6 @@ public class SamplesStringDictionary  {
          Console.WriteLine( "   {0,-10} {1}", de.Key, de.Value );
       Console.WriteLine();
    }
-
 }
 
 /*

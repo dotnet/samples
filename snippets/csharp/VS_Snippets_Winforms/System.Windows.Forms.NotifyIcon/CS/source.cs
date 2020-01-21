@@ -53,7 +53,6 @@ public class Form1 : System.Windows.Forms.Form
 
         // Handle the DoubleClick event to activate the form.
         notifyIcon1.DoubleClick += new System.EventHandler(this.notifyIcon1_DoubleClick);
-
     }
 
     protected override void Dispose( bool disposing )

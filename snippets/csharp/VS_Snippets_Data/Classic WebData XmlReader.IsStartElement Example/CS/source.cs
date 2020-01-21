@@ -31,7 +31,6 @@ public class Sample
            }
          }
        } 
-       
      } 
 
      finally 
@@ -40,6 +39,5 @@ public class Sample
           reader.Close();
       }
   }
-  
 } // End class
    // </Snippet1>

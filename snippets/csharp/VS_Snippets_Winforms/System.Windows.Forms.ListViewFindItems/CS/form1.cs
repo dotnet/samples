@@ -52,7 +52,6 @@ namespace ListViewFindItemWithTextHowTo
             this.ClientSize = new System.Drawing.Size(292, 266);
             this.Name = "Form1";
             this.Text = "Form1";
-
         }
 
         #endregion
@@ -87,7 +86,6 @@ namespace ListViewFindItemWithTextHowTo
             // Add the controls to the form.
             this.Controls.Add(textListView);
             this.Controls.Add(searchBox);
-
         }
 
         //<snippet11>
@@ -99,7 +97,6 @@ namespace ListViewFindItemWithTextHowTo
             if (foundItem != null)
             {
                 textListView.TopItem = foundItem;
-
             }
         }
         //</snippet11>
@@ -165,7 +162,5 @@ namespace ListViewFindItemWithTextHowTo
             Application.EnableVisualStyles();
             Application.Run(new Form1());
         }
-
     }
-
 }

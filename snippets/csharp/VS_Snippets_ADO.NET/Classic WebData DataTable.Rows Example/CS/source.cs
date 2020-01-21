@@ -42,5 +42,4 @@ public class Form1: Form
         table.Rows.Add(newRow);
     }
     // </Snippet1>
-
 }

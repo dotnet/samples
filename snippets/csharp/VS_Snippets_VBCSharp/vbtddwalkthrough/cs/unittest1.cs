@@ -82,6 +82,5 @@ namespace TestProject1
             Assert.IsTrue(myAuto.IsRunning == true);
             //</Snippet3>
         }
-
     }
 }

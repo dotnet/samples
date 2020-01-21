@@ -45,7 +45,6 @@ public class TransitionTimeExamples
       Console.WriteLine(tt1.Equals(tt2));        // Returns True (identical property values)
       Console.WriteLine(tt1.Equals(tt3));        // Returns False (different property values)
       // </Snippet1>
-     
    }
 
    private void CompareTransitionTimesForEquality()
@@ -58,7 +57,6 @@ public class TransitionTimeExamples
       Console.WriteLine(tt1.Equals(tt2));        // Returns True (identical property values)
       Console.WriteLine(tt1.Equals(tt3));        // Returns False (different property values)
       // </Snippet7>
-     
    }
 
    private void CreateTransitionRules()

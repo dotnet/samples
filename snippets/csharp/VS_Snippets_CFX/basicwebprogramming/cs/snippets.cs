@@ -56,7 +56,6 @@ namespace BasicWebProgramming
                 Console.WriteLine("Calling EchoWithGet via HTTP GET: ");
                 s = channel.EchoWithGet("Hello, world");
                 Console.WriteLine("   Output: {0}", s);
-
             }
             catch (CommunicationException ex)
             {

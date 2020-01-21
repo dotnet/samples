@@ -52,7 +52,6 @@ namespace Samples.AspNet.CS.Controls
 			{
 				return System.DateTime.Now.ToLongTimeString();
 			}
-
 		}
 
 		public Control MyTemplateContainer
@@ -77,7 +76,6 @@ namespace Samples.AspNet.CS.Controls
 				Controls.Add(new LiteralControl(Text + " " + DateTime));
 			}
 		}
-
 	}
 
     public class FirstTemplateContainer : Control, INamingContainer
@@ -102,9 +100,7 @@ namespace Samples.AspNet.CS.Controls
         {
           return parent.DateTime;
         }
-                  
       }
     }
-    
   }
 //</snippet1>

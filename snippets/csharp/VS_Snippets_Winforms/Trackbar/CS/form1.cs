@@ -134,7 +134,6 @@ namespace TrackBar
             this.Text = "Color builder";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
-
         }
 		#endregion
 

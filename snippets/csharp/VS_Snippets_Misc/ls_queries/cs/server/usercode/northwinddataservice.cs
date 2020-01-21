@@ -62,6 +62,5 @@ namespace LS_Queries_CS
             }
         }
         //</Snippet4>
-        
     }
 }

@@ -39,7 +39,6 @@ public class Sample
         {
             row["name"] = string.Format("vip{0}", row["id"]);
         }
-
     }
 
     private static void Row_Changed(object sender, DataRowChangeEventArgs e)

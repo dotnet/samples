@@ -24,7 +24,6 @@ public partial class CustomValidation : System.Web.UI.Page
         // Assign title dynamically.
         Title = string.Concat("Customize Validation of the ",
             _table1.Name, " and ",  _table2.Name, " Tables");
-
     }
 }
 // </Snippet4> 

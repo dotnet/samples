@@ -21,7 +21,6 @@ namespace DataRepeaterAppCS
             this.Validate();
             this.customersBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.northwndDataSet);
-
         }
 
         private void DataRepeaterWalkthrough_Load(object sender, EventArgs e)

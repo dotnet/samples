@@ -20,7 +20,6 @@ namespace TextBox_MiscCode
         public Window1()
         {
             InitializeComponent();
-
         }
 
         void WindowLoaded(object sender, RoutedEventArgs args)

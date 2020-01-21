@@ -66,7 +66,6 @@ namespace Samples.AspNet.CS.Controls
 		{
 			callback(_table.Rows);
 		}
-
   } // RowProviderWebPart
 
   // This sample code creates a Web Parts control that acts as a consumer 
@@ -128,9 +127,7 @@ namespace Samples.AspNet.CS.Controls
 		{
       _provider = provider;
     }
-
   } // RowConsumerWebPart
-    
 } // Samples.AspNet.CS.Controls 
 
 //</SNIPPET2>

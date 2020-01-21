@@ -10,6 +10,5 @@ namespace ExpanderSnips
 
     public partial class MyApp : Application
     {
-
     }
 }

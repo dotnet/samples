@@ -39,7 +39,6 @@ namespace VSMCustomControl
             set
             {
                 SetValue(ValueProperty, value);
-
             }
         }
 

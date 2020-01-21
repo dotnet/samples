@@ -37,7 +37,6 @@ public partial class _Default : System.Web.UI.Page
             cache.Set(fileContents, policy);
         }
         Label1.Text = (fileContents.Value as string);
-
     }
 }
 //</Snippet1>

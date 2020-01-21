@@ -220,7 +220,6 @@ namespace keywords
                 myC.myBuffer.fixedBuffer[0] = 'B';
                 Console.WriteLine(myC.myBuffer.fixedBuffer[0]);
             }
-
         }
         // </Snippet7>
 
@@ -320,6 +319,5 @@ namespace keywords
             */
         }
         // </Snippet8>
-
     }
 }

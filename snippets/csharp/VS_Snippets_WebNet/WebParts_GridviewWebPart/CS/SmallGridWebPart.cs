@@ -110,7 +110,6 @@ namespace Samples.AspNet.CS.Controls
       grid.Columns.Add(BuildBoundField("Phone"));
 
       this.Controls.Add(grid);
-
     }
 
     private Parameter BuildParam(String paramName, TypeCode dataTypeCode)
@@ -127,8 +126,6 @@ namespace Samples.AspNet.CS.Controls
       theField.SortExpression = fieldName;
       return theField;
     }
-
   } 
-
 }
 // </snippet2>

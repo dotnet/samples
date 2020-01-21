@@ -91,7 +91,6 @@ public class Form1 : System.Windows.Forms.Form
         SqlDataReader reader =
             command.ExecuteReader(CommandBehavior.CloseConnection);
         return reader;
-               
     }
     // </snippet7>
 

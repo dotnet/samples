@@ -43,7 +43,6 @@ namespace ILGenServer
                   SymLanguageType.ILAssembly,SymLanguageVendor.Microsoft);
 
          Console.WriteLine("The object representing the defined document is:"+myDocument);
-
       }
    }
    public class CallerClass

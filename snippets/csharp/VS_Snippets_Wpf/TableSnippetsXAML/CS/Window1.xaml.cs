@@ -19,6 +19,5 @@ namespace TableXAML
         {
             InitializeComponent();
         }
-
     }
 }

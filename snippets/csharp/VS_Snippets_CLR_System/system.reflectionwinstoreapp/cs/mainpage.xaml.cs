@@ -41,7 +41,6 @@ namespace Reflection
             }
             
             textblock1.Text = sb.ToString();
-
         }
     }
 }

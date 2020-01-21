@@ -24,5 +24,4 @@ public class Form1: Form
         DataSet1.Relations.Add(relCustOrder);
     }
     // </Snippet1>
-
 }

@@ -38,7 +38,6 @@ namespace ProducerConsumer
             // Keep the console window open while the
             // consumer thread completes its output.
             Console.ReadKey();
-
         }
 
         static void RunProducer(Object stateInfo)
@@ -61,7 +60,6 @@ namespace ProducerConsumer
                 // slow down the producer thread without sleeping.
 
                 // Thread.SpinWait(100000); 
-
             }
 
             // Important!!! Tell consumers that no more items will be added.
@@ -153,7 +151,6 @@ namespace BlockingCollectionExamples
 
             Console.WriteLine("Press any key");
             Console.ReadKey();
-
         }
 
         // Consume concurrently from other thread until collection is empty.
@@ -166,7 +163,6 @@ namespace BlockingCollectionExamples
             }
             Console.WriteLine("Done");
         }
-
     }
 }
 //</snippet03>
@@ -214,7 +210,6 @@ namespace Demos
                     // Compare results from all
                     ComputeForMyPartition(index);
                     b.SignalAndWait();
-   
                 });
             }
             
@@ -237,7 +232,6 @@ namespace Demos
             }
             results[taskNumber] = (double)((double)total / data[taskNumber].Length);
             Console.WriteLine("results[{0}] = {1}", taskNumber, results[taskNumber]);
-
         }
 
         // In this example, we simply take the average and compare it to other partitions.
@@ -280,9 +274,7 @@ namespace Demos
                 var newVal = val * factor;
                 data[index][i] = newVal > 1 ? (byte)newVal : (byte)255;
             }
-
         }
-
     }
 
     class MyBarrierOld
@@ -563,10 +555,8 @@ namespace Demos
         }
     }
     //</snippet15>
-
     }
 
 class Test5
 {
- 
 }

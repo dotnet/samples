@@ -34,7 +34,6 @@ public class Sample{
     //Close the writer and the reader.
     writer.Close();
     reader.Close();
-
   }
 }
 //</snippet1>

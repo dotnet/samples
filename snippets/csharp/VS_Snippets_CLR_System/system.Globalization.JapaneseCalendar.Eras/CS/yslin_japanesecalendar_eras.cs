@@ -15,9 +15,7 @@ public class SamplesJapaneseCalendar  {
       for ( int i = 0; i < myCal.Eras.Length; i++ )  {
          Console.WriteLine( "Eras[{0}] = {1}", i, myCal.Eras[i] );
       }
-
    }
-
 }
 
 /*

@@ -77,7 +77,6 @@ namespace SymmetricAlgo
                 Console.WriteLine("\tLegal min block size = " + k.MinSize);
                 Console.WriteLine("\tLegal max block size = " + k.MaxSize);
             }
-            
         }
     }
 }

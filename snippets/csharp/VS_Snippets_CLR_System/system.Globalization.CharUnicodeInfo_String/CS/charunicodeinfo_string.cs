@@ -21,9 +21,7 @@ public class SamplesCharUnicodeInfo  {
          Console.Write( " {0,-5}", CharUnicodeInfo.GetDecimalDigitValue( s, i ) );
          Console.WriteLine( "{0}", CharUnicodeInfo.GetUnicodeCategory( s, i ) );
       }
-
    }
-
 }
 
 

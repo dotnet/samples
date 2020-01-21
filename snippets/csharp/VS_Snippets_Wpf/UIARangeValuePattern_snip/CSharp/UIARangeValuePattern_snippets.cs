@@ -299,6 +299,5 @@ namespace UIARangeValuePattern_snip
                 UIARangeValuePattern_snippets app = new UIARangeValuePattern_snippets();
             }
         }
-
     }
 }

@@ -25,7 +25,6 @@ namespace ListBoxGetSelectedEx
 			// Required for Windows Form Designer support
 			//
 			InitializeComponent();
-
 		}
 
 		/// <summary>
@@ -95,7 +94,6 @@ namespace ListBoxGetSelectedEx
          this.Text = "Form1";
          this.Load += new System.EventHandler(this.Form1_Load);
          this.ResumeLayout(false);
-
       }
 		#endregion
 
@@ -159,7 +157,6 @@ namespace ListBoxGetSelectedEx
 
       private void listBox1_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
       {
-         
       }
 
       private void Form1_Load(object sender, System.EventArgs e)

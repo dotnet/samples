@@ -48,7 +48,6 @@ namespace SDKSamples
 
             this.InputBindings.Add(OpenCmdKeyBinding);
             //</SnippetCommandHandlerKeyBindingCodeBehind>
-
         }
 
         //<SnippetCommandHandlerExecutedHandler>
@@ -64,6 +63,5 @@ namespace SDKSamples
             e.CanExecute = true;
         }
         //</SnippetCommandHandlerCanExecuteHandler>
-
     }
 }

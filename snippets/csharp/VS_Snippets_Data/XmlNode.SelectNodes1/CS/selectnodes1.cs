@@ -22,8 +22,6 @@ public class Sample
       foreach (XmlNode isbn in nodeList){
         Console.WriteLine(isbn.Value);
       }
-
    }
-
 }
 //</snippet1>

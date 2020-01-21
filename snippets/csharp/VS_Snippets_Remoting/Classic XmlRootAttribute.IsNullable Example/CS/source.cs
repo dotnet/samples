@@ -18,7 +18,6 @@ public class Run
    Console.WriteLine("Running");
       Run test = new Run();
       test.SerializeObject("NullDoc.xml");
-
    }
 
    public void SerializeObject(string filename)

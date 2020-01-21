@@ -18,5 +18,4 @@ private void CopyDataTable(DataTable table){
     // Insert code to work with the copy.
  }
 // </Snippet1>
-
 }

@@ -23,8 +23,6 @@ namespace Samples.AspNet.CS.Controls
       this.Text = 
         WebPartManager.GetCurrentWebPartManager(Page).ID;
     }
-
   }
-
 }
 // </snippet2>

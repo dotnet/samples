@@ -49,6 +49,5 @@ static void Main(String[] args)
      XmlElement xmlSignature = signedXml.GetXml();
      Console.WriteLine(xmlSignature.OuterXml);
 }
-
 }
 //</Snippet1>

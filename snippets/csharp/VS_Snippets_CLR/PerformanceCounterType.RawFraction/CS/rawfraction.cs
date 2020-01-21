@@ -110,7 +110,6 @@ public class App
 
             System.Threading.Thread.Sleep(50);
         }
-
     }
 
     private static void CalculateResults(ArrayList samplesList)
@@ -127,7 +126,6 @@ public class App
             // Calculate the counter value manually.
             Console.WriteLine("My computed counter value = " +
                 MyComputeCounterValue((CounterSample)samplesList[i]));
-
         }
     }
 
@@ -168,7 +166,6 @@ public class App
         Console.WriteLine("   TimeStamp100nSec = " + s.TimeStamp100nSec);
         Console.WriteLine("++++++++++++++++++++++");
     }
-
 }
 
 //</snippet1>

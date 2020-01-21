@@ -96,7 +96,6 @@ public partial class Form1 : System.Windows.Forms.Form
 
         this.Controls.Add(printButton);
     }
-
 }
 
 // </Snippet1>

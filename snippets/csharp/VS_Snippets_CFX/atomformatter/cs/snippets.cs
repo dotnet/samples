@@ -182,6 +182,5 @@ namespace AtomFeedFormatterSnippets
             atomReader.Close();
             // </Snippet15>
         }
-
     }
 }

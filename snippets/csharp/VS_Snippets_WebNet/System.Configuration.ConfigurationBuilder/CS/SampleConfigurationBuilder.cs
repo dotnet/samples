@@ -23,12 +23,9 @@ namespace Samples.AspNet.Config
             doc.PreserveWhitespace = true;
             doc.LoadXml(rawXmlString);
             return doc.DocumentElement;
-
         }
 
         public override ConfigurationSection ProcessConfigurationSection(ConfigurationSection configSection) 
             => configSection;
-
     }
-
 }

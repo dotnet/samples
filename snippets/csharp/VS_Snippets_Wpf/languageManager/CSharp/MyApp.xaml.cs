@@ -12,6 +12,5 @@ namespace languageManagerSample
 			mainWindow.InitializeComponent();
 			mainWindow.Show();
         }
-
 	}
 }

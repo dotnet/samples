@@ -22,7 +22,6 @@ class NumberFormatInfoSample {
       Console.WriteLine( myInt.ToString( "C", nfi ) );
       nfi.CurrencyGroupSizes = mySizes2;
       Console.WriteLine( myInt.ToString( "C", nfi ) );
-
    }
 }
 

@@ -23,6 +23,5 @@ namespace RichTextBoxInputPanelDemo
         {
             InitializeComponent();
         }
-
     }
 }

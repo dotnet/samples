@@ -59,6 +59,5 @@ class someclass
                 break;
         }
     }
-
 }
 //</Snippet4>

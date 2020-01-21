@@ -38,7 +38,6 @@ class Example
 			Console.WriteLine("Invalid format.");
 			return;
 		}
-
 	}
 }
 // The example displays output like the following when run on a 

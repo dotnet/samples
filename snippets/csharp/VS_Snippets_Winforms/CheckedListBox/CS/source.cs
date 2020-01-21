@@ -90,7 +90,6 @@ namespace Snip_CheckedListBox
                                 "\", is checked. Checked state is: " + 
                                 checkedListBox1.GetItemCheckState(checkedListBox1.Items.IndexOf(itemChecked)).ToString() + ".");
             }
-
         }
         //</Snippet2>
 

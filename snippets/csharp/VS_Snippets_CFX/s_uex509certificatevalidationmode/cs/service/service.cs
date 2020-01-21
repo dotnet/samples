@@ -104,7 +104,6 @@ namespace Microsoft.ServiceModel.Samples
                 // If we get here, return false, denying access.
                 return false;                 
             }
-
         }
 
         public class MyAuthorizationPolicy : IAuthorizationPolicy

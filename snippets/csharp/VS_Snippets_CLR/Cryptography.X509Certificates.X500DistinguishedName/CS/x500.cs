@@ -29,7 +29,6 @@ class X500Sample
 		{
 			Console.WriteLine("Information could not be written out for this certificate.");
 		}
-
 	}
 }
 //</SNIPPET1>

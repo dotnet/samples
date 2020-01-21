@@ -854,7 +854,6 @@ namespace Microsoft.ServiceModel.Samples.Federation
                     // Convert the EndpointAddress10 into an EndpointAddress.
                     ea = ea10.ToEndpointAddress();
 		    // </Snippet11>
-		    
                 }
 
                 // Look for the end-tag that corresponds to the start-tag that the reader was positioned 

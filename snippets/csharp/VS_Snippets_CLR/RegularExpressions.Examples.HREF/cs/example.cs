@@ -15,7 +15,6 @@ public class Class1
                              "<A HREF=\"http://blogs.msdn.com/bclteam\">" +
                              ".NET Base Class Library blog</A></P>";
         DumpHRefs(inputString);
-
     }
     // The example displays the following output:
     //       Found href http://msdn2.microsoft.com at 43

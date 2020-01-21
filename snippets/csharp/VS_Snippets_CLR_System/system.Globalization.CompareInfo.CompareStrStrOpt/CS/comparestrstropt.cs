@@ -24,9 +24,7 @@ public class SamplesCompareInfo  {
       Console.WriteLine( "   With IgnoreCase                   : {0}", myComp.Compare( myStr1, myStr2, CompareOptions.IgnoreCase ) );
       Console.WriteLine( "   With IgnoreSymbols                : {0}", myComp.Compare( myStr1, myStr2, CompareOptions.IgnoreSymbols ) );
       Console.WriteLine( "   With IgnoreCase and IgnoreSymbols : {0}", myComp.Compare( myStr1, myStr2, CompareOptions.IgnoreCase | CompareOptions.IgnoreSymbols ) );
-
    }
-
 }
 
 

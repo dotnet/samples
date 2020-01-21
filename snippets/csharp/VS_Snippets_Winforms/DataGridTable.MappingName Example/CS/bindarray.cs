@@ -75,7 +75,6 @@ namespace BindToArrayGrid
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).EndInit();
             this.ResumeLayout(false);
-
         }
         #endregion
 
@@ -91,7 +90,6 @@ namespace BindToArrayGrid
         private void Form1_Load(object sender, System.EventArgs e)
         {
             BindToArray();
-        
         }
         //<snippet1>
 
@@ -180,7 +178,6 @@ namespace BindToArrayGrid
             partsTable.GridColumnStyles.Add(partIdColumn);
 
             dataGrid1.TableStyles.Add(partsTable);
-
         }
         public class Machine
         {
@@ -226,5 +223,4 @@ namespace BindToArrayGrid
         }
         //</snippet1>
     }
-
 }

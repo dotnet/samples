@@ -191,7 +191,6 @@ namespace Windows.Communication.Foundation.Samples
                 myServiceHost.Credentials.ServiceCertificate.SetCertificate("cn=service.com");
                 //</snippet15>
             }
-
         }
     }
 

@@ -6,7 +6,6 @@ using System.ComponentModel.DataAnnotations;
 [MetadataType(typeof(ProductMetaData))]
 public partial class Product
 {
-
 }
 
 public class ProductMetaData

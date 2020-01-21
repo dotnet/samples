@@ -20,9 +20,7 @@ public class SamplesJapaneseCalendar  {
             Console.Write( "\t{0}", myCal.IsLeapMonth( y, m, JapaneseCalendar.CurrentEra ) );
          Console.WriteLine();
       }
-
    }
-
 }
 
 /*

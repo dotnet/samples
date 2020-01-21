@@ -40,9 +40,7 @@ public class Test
                               groups[1].Index);
         }
 // </snippet4>        
-        
     }
-	
 }
 // The example produces the following output to the console:
 //       3 matches found in:

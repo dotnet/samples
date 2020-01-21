@@ -92,9 +92,6 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
             mainPanel.Children.Add(sampleDisplayControl);
             
             this.Content = mainPanel;
-
         }
-
     }
-
 }

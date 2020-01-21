@@ -53,7 +53,5 @@ public class Sample : Form {
 // </Snippet1>
 
  private void pd_PrintPage(object sender, PrintPageEventArgs e) {
-
  }
-
 }

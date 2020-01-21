@@ -182,7 +182,6 @@ namespace RGBFilter
             Red = sourceRGBFilterBitmapEffect.Red;
             Green = sourceRGBFilterBitmapEffect.Green;
             Blue = sourceRGBFilterBitmapEffect.Blue;
-
         }
         #endregion ProtectedMethods
 

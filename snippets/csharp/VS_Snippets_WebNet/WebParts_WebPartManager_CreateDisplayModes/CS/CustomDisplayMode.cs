@@ -66,8 +66,6 @@ namespace Samples.AspNet.CS.Controls
       }
     }
     // </snippet5>
-
   }
-
 }
 // </snippet3> 

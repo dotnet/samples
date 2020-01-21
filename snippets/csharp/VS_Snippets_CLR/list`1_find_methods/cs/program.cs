@@ -87,7 +87,6 @@ namespace Find
             
             ndx = Books.FindLastIndex(Books.Count - 1, mid, FindComputer);
             Console.WriteLine("Index of last computer book in the second half of the collection: {0}", ndx);
-
         }
 
         // Populates the list with sample data.
@@ -136,11 +135,9 @@ namespace Find
                 }
 
                 Books.Add(book);
-
             }
 
             DisplayResults(Books, "All books:");
-
         }
 
         // Explicit predicate delegate.
@@ -155,7 +152,6 @@ namespace Find
             {
                 return false;
             }
-
         }
 
         private static void DisplayResult(Book result, string title)
@@ -166,7 +162,6 @@ namespace Find
                 result.Author, result.Title, result.Genre, result.Price,
                 result.Publish_date.ToShortDateString());
             Console.WriteLine();
-
         }
 
         private static void DisplayResults(List<Book> results, string title)
@@ -181,9 +176,7 @@ namespace Find
                     b.Publish_date.ToShortDateString());
             }
             Console.WriteLine();
-
         }
-
     }
 
     public class Book

@@ -62,7 +62,6 @@ public class Form1 : Form
         this.Name = "Form1";
         this.ResumeLayout(false);
         this.PerformLayout();
-
     }
 
     private void radioButton2_CheckedChanged(object sender, EventArgs e)

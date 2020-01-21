@@ -24,6 +24,5 @@ class ADGetAssemblies
 			foreach (Assembly assem in assems)
 				Console.WriteLine(assem.ToString());
 	}
-   
 }
 //  </SNIPPET1>

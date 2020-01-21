@@ -18,7 +18,6 @@ namespace ColorPickerApp
             Window1 mainWindow = new Window1();
             mainWindow.Show();
         }
-
     }
     public class ColorGradientConverter : IValueConverter
     {
@@ -47,6 +46,5 @@ namespace ColorPickerApp
         {
             throw new NotSupportedException();
         }
-
     }
 }

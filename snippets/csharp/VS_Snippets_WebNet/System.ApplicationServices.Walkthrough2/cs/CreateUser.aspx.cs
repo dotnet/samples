@@ -5,7 +5,6 @@ using System.Web.Security;
 
 public partial class CreateUser : System.Web.UI.Page {
     protected void Page_Load(object sender, EventArgs e) {
-
     }
     protected void On_CreatedUser(object sender, EventArgs e) {
         string userName = CreateUserWizard1.UserName;

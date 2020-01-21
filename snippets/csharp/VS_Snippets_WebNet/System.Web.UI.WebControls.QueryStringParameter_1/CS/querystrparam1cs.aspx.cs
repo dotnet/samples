@@ -24,6 +24,5 @@ public partial class querystrparam1cs_aspx : System.Web.UI.Page
 // <snippet4>
         MyAccessDataSource.SelectParameters.Add(new QueryStringParameter("employee", "employee"));
 // </snippet4>
-
     }
 }

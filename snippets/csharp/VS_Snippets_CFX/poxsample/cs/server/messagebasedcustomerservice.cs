@@ -205,7 +205,6 @@ namespace Microsoft.ServiceModel.Samples
             response.Properties[HttpResponseMessageProperty.Name] = responseProperties;
 
             return response;
-
         }
 
         Message DeleteCustomer(Message message)

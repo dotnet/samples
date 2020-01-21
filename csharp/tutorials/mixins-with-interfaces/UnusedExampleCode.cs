@@ -28,7 +28,6 @@ namespace NotUsedInFinalSample
         public void SwitchOn() => isOn = true;
 
         public override string ToString() => $"The light is {isOn: \"on\", \"off\"}";
-
     }
     // </SnippetOverheadLightV1>
     

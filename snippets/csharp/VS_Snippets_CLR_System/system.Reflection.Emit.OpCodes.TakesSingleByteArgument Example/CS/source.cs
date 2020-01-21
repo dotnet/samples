@@ -29,9 +29,7 @@ public static void Main()
 	Console.WriteLine("{0}: {1}", opCodeFI.Name, 
 			  OpCodes.TakesSingleByteArgument((OpCode)theOpCode).ToString());
    }
-
 }
 
 // </Snippet1>
-
 }

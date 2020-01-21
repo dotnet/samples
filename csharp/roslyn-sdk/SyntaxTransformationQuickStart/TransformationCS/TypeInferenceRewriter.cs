@@ -58,7 +58,6 @@ namespace TransformationCS
                 return node;
             }
             // </SnippetReplaceNode>
-
         }
     }
 }

@@ -21,14 +21,12 @@ namespace VbPowerPacksDataRepeaterIsCurrentCS
             this.Validate();
             this.productsBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.northwndDataSet);
-
         }
 
         private void IsCurrent_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'northwndDataSet.Products' table. You can move, or remove it, as needed.
             this.productsTableAdapter.Fill(this.northwndDataSet.Products);
-
         }
         // <Snippet1>
         private void dataRepeater1_DrawItem(object sender, 

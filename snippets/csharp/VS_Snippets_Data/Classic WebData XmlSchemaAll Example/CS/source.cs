@@ -85,6 +85,5 @@ public class Sample
     {
         Console.WriteLine(args.Message);
     }
-
 }
 // </Snippet1>

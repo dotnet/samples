@@ -22,7 +22,6 @@ namespace Microsoft.Samples.GradientBrushExamples
             createTransparentGradientStopExample();
 
             this.Content = myMainPanel;
-            
         }
 
         private void createTransparentGradientStopExample()
@@ -46,8 +45,6 @@ namespace Microsoft.Samples.GradientBrushExamples
             // </SnippetTransparentGradientStopExample1CSharp>
             
             myMainPanel.Children.Add(myRectangle); 
-               
         }
-          
     }
 }

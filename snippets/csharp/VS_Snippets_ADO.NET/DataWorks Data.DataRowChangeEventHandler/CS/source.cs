@@ -24,5 +24,4 @@ public class Form1: Form
        e.Row[dataGrid1.CurrentCell.ColumnNumber]);
  }
  // </Snippet1>
-
 }

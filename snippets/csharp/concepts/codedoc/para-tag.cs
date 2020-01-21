@@ -12,5 +12,4 @@
 /// </remarks>
 public class Math
 {
-
 }

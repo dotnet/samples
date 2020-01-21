@@ -140,6 +140,5 @@ namespace CSWinFormDataGridView.DataGridViewPaging
             this.CurrentPageIndex = TotalPage;
             this.dataGridView1.DataSource = GetPageData(this.CurrentPageIndex);
         }
-
     }
 }

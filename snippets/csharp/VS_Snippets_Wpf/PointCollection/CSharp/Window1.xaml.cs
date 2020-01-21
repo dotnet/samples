@@ -21,7 +21,6 @@ namespace PointCollectionSample
         public Window1()
         {
             InitializeComponent();
-
         }
 
         private void PointCollectionOperations(object sender, SelectionChangedEventArgs e)
@@ -303,6 +302,5 @@ namespace PointCollectionSample
         private void ShowResults(String resultValue, String syntax, String resultType, String opString)
         {
         }
-
     }
 }

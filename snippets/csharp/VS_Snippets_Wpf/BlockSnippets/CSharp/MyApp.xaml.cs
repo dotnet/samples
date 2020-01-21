@@ -12,6 +12,5 @@ namespace BlockSnippets
 
     public partial class MyApp : Application
     {
-
     }
 }

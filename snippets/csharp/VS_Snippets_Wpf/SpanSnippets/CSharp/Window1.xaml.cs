@@ -409,7 +409,6 @@ namespace SpanSnippets
                 // contains the specified Inline element, "runx".
                 BlockUIContainer blockUI = new BlockUIContainer(buttonx);
                 // </Snippet_BlockUI_Const1>
-           
             }
         }
         void ParagraphConst()

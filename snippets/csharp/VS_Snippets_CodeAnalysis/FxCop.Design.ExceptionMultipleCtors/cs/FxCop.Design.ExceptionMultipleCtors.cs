@@ -10,7 +10,6 @@ namespace DesignLibrary
       {
          // Add any type-specific logic, and supply the default message.
       }
-
    }  
 
    [Serializable()]

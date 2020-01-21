@@ -39,14 +39,11 @@ class XMLDSIGDetached
             SignDetachedResource(resourceToSign, XmlFileName, Key, Certificate);
 
             Console.WriteLine("XML signature was succesfully computed and saved to {0}.", XmlFileName);
-
         }
         catch(CryptographicException e)
         {
             Console.WriteLine(e.Message);
-
         }
-		
     }
 
     // <Snippet2>
@@ -93,7 +90,6 @@ class XMLDSIGDetached
         XmlTextWriter xmltw = new XmlTextWriter(XmlSigFileName, new UTF8Encoding(false));
         xmlDigitalSignature.WriteTo(xmltw);
         xmltw.Close();
-
     }
     // </Snippet2>
 }

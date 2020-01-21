@@ -23,7 +23,6 @@ public class Sample {
         writer.WriteCharEntity('.');
         writer.WriteString("com");
         writer.WriteEndElement();
- 
     }        
  
     finally {

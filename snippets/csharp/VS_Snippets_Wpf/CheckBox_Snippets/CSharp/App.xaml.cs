@@ -12,6 +12,5 @@ namespace CheckBox_Snippets
 
     public partial class App : System.Windows.Application
     {
-
     }
 }

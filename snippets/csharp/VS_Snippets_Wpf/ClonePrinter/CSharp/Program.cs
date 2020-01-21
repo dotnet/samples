@@ -41,7 +41,6 @@ namespace ClonePrinter
                 Console.WriteLine("Press Return to continue ...");
                 Console.ReadLine();
                 //</SnippetClonePrinter>
-            
         }
     }
 }

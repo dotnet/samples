@@ -44,7 +44,6 @@ namespace BindingListOfTExamples
            this.Controls.Add(this.textBox1);
            this.Text = "Parts Form";
            this.Load += new EventHandler(Form1_Load);
-          
         }
     
         void Form1_Load(object sender, EventArgs e)
@@ -54,7 +53,6 @@ namespace BindingListOfTExamples
             listBox1.DisplayMember = "PartName";
             listOfParts.AddingNew += new AddingNewEventHandler(listOfParts_AddingNew);
             listOfParts.ListChanged += new ListChangedEventHandler(listOfParts_ListChanged);
-            
         }
 
         //<snippet2>
@@ -86,7 +84,6 @@ namespace BindingListOfTExamples
         void listOfParts_AddingNew(object sender, AddingNewEventArgs e)
         {
             e.NewObject = new Part(textBox1.Text, int.Parse(textBox2.Text));
-            
         }
         //</snippet3>
 
@@ -123,7 +120,6 @@ namespace BindingListOfTExamples
             Application.EnableVisualStyles();
             Application.Run(new Form1());
         }
-
     }
     
     // A simple business object for example purposes.

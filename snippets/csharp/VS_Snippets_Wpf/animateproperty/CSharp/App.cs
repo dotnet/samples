@@ -49,9 +49,7 @@ namespace Microsoft.Samples.Animation.LocalAnimations
             
             this.Content = tControl;
             this.Title = "Local Animations Example";
-        
         }
-    
     }
 
     // Starts the application.

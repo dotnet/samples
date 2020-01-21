@@ -70,6 +70,5 @@ namespace ToolBarSimple
 
             bd1.Child = tbartray;
         }
-
     }
 }

@@ -24,7 +24,6 @@ class XmlSchemaObject
 
         s.Items.Add(elem);
         s.Write(Console.Out);
-
     }
 }
 // </Snippet1>

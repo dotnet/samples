@@ -41,7 +41,6 @@ namespace BindToWebService {
 			ZipCodeResolver resolver = new ZipCodeResolver();
 			BindingSource1.Add(resolver.CorrectedAddressXml("0",
 					"One Microsoft Way", "Redmond", "WA"));
-						
 		}
 
 		public void Form1_Load(object sender, EventArgs e)
@@ -98,7 +97,6 @@ namespace BindToWebService {
 			object[] results = this.EndInvoke(asyncResult);
 			return ((USPSAddress) results[0]);
 		}
-
 	}
 
 //<snippet4>

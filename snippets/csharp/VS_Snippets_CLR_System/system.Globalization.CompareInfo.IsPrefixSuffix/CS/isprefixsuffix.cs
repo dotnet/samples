@@ -23,9 +23,7 @@ public class SamplesCompareInfo  {
       // Determines whether myXfix is a suffix of "calle" and "llegar".
       Console.WriteLine( "IsSuffix( {0}, {1} ) : {2}", myStr1, myXfix, myComp.IsSuffix( myStr1, myXfix ) );
       Console.WriteLine( "IsSuffix( {0}, {1} ) : {2}", myStr2, myXfix, myComp.IsSuffix( myStr2, myXfix ) );
-
    }
-
 }
 
 

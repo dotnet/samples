@@ -183,6 +183,5 @@ namespace PrintTicketSample
             }
         }//end Main
         //</SnippetUIForMergeAndValidatePTUtility>
-
     }//end Application class
 }//end namespace

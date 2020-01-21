@@ -12,6 +12,5 @@ namespace XAML
 
     public partial class App : Application
     {
-
     }
 }

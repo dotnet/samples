@@ -27,7 +27,6 @@ public partial class ProfileInfo : System.Web.UI.Page {
             Lbl_FirstName.Text = Profile.FirstName;
             Lbl_LastName.Text = Profile.LastName;
             Lbl_Phone.Text = Profile.PhoneNumber;
-
         } else {
             Lbl_UserName.Text = "User is not logged in.";
             Lbl_UserName.ForeColor = System.Drawing.Color.Red;
@@ -46,7 +45,6 @@ public partial class ProfileInfo : System.Web.UI.Page {
             Lbl_FirstName.Text = Profile.FirstName;
             Lbl_LastName.Text = Profile.LastName;
             Lbl_Phone.Text = Profile.PhoneNumber;
-
         } else {
             Lbl_UserName.Text = "User is not logged in.";
             Lbl_UserName.ForeColor = System.Drawing.Color.Red;

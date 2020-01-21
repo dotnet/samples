@@ -94,7 +94,6 @@ namespace FilterAndSort
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         void Form1_Load(object sender, EventArgs e)
@@ -138,7 +137,6 @@ namespace FilterAndSort
 
 			// Set the data source for dataGridView1 to BindingSource1.
 			dataGridView1.DataSource = BindingSource1;
-
         }
         //</snippet1>
 
@@ -183,7 +181,5 @@ namespace FilterAndSort
             label2.Text = "Count after removal: " + BindingSource1.Count.ToString();
         }
         //</snippet2>
-
     }
-
 }

@@ -10,7 +10,6 @@ namespace InRefOutModifier
         public static void Examples()
         {
             FirstInExample();
-
         }
         private static void FirstInExample()
         {
@@ -35,5 +34,4 @@ namespace InRefOutModifier
         public void SampleMethod(in int i) { }
     }
     // </Snippet2>
-
 }

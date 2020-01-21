@@ -91,7 +91,6 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
         {
             ChunkingBindingElement clone = new ChunkingBindingElement();
             return clone;
-
         }
         public int MaxBufferedChunks
         {
@@ -111,5 +110,4 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
             return context.GetInnerProperty<T>();
         }
     }
-
 }

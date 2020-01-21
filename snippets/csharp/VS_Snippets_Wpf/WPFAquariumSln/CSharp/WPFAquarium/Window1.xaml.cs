@@ -20,7 +20,6 @@ namespace WPFAquarium
     public Window1()
     {
       InitializeComponent();
-
     }
       void WashMe(object sender, RoutedEventArgs e)
       {

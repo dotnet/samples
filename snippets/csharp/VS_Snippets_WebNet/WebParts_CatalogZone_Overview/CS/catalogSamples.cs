@@ -64,7 +64,6 @@ namespace Samples.AspNet.CS.Controls
       update.Text = "Set Label Content";
       update.Click += new EventHandler(this.submit_Click);
       this.Controls.Add(update);
-
     }
 
     private void submit_Click(object sender, EventArgs e)
@@ -78,6 +77,5 @@ namespace Samples.AspNet.CS.Controls
       }
     }
   }
-
 }
 // </snippet1>

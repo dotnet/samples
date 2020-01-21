@@ -41,7 +41,6 @@ namespace TabControlContentTemplateSelector
             }
             //</Snippet4>
         }
-
     }
 
     //<Snippet3>
@@ -66,13 +65,11 @@ namespace TabControlContentTemplateSelector
                 else
                 {
                     return win.FindResource("DetailTemplate") as DataTemplate;
-
                 }
             }
 
             return null;
         }
-
     }
     //</Snippet3>
 }

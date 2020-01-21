@@ -130,7 +130,6 @@ namespace MouseEvent
             label8.Text = "SystemInformation.MouseWheelScrollLines: " + SystemInformation.MouseWheelScrollLines.ToString();
             label9.Text = "SystemInformation.NativeMouseWheelSupport: " + SystemInformation.NativeMouseWheelSupport.ToString();
             //</Snippet6>
-
         }
 
         //<Snippet2>

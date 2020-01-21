@@ -45,7 +45,6 @@ namespace Microsoft.Samples.WF.CreationEndpoint
                     host.Close();
                 }
             }
-
         }
 
         static Sequence CreateWorkflow()
@@ -64,6 +63,5 @@ namespace Microsoft.Samples.WF.CreationEndpoint
 
             return workflow;
         }
-
     }
 }

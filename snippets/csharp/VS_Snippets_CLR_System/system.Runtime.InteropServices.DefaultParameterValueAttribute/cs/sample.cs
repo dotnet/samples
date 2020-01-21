@@ -17,7 +17,6 @@ class Program
 		// DO NOT CONVERT THIS SAMPLE TO ANY OTHER LANGUAGE!!!!
 		// VB and C++ support default parameters.
 		// 
-
 	}
 	//<snippet1>
 	static public void MethodWithDefaultParam([System.Runtime.InteropServices.DefaultParameterValue("DEFAULT_PARAM_VALUE")] string var)
@@ -25,5 +24,4 @@ class Program
 		Console.WriteLine("The passed value is: " + var);
 	}
 	//</snippet1>
-
 }

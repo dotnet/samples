@@ -18,5 +18,4 @@ public class Form1: Form
     Console.WriteLine("Connection State: " + connection.State.ToString());
  }
 // </Snippet1>
-
 }

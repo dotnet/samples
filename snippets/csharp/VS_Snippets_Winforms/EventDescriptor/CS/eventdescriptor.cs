@@ -82,7 +82,6 @@ namespace EventDescriptor
 			this.Text = "Form1";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.ResumeLayout(false);
-
 		}
 		#endregion
 
@@ -106,7 +105,6 @@ foreach (System.ComponentModel.EventDescriptor myEvent in events) {
     textBox1.Text += myEvent.DisplayName + '\n';
 }
 //</snippet1>
-
 		}
 	}
 }

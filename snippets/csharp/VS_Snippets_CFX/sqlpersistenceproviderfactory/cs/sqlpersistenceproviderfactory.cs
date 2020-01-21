@@ -95,6 +95,5 @@ namespace SqlPersistenceProviderFactorySnippets
         {
             public static String ConnectionString = "";
         }
-        
     }
 }

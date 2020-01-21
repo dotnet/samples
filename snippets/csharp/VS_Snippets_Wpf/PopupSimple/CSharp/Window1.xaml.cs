@@ -51,6 +51,5 @@ namespace Popup_Properties_Sample
             codePopup.IsOpen = true;
         }
         //</SnippetCreatePopupCode>
-
     }
 }

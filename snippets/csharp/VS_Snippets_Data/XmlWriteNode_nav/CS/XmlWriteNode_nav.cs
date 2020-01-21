@@ -29,7 +29,6 @@ public class Sample
 
         // Close the writer.
         writer.Close();
-
     }
 }
 //</snippet1>

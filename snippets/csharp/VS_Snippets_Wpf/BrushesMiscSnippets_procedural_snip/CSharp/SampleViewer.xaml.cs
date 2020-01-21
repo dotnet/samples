@@ -15,7 +15,5 @@ namespace SDKSample
             MySetBackgroundColorOfShapeExampleFrame.Content = new SetBackgroundColorOfShapeExample();
             MyCreateColorsFromExampleFrame.Content = new CreateColorsFromExample();
         }
-        
     }
-
 }

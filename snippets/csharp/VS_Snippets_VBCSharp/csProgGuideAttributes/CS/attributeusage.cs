@@ -16,7 +16,6 @@ namespace N2
     [System.AttributeUsage(System.AttributeTargets.All)]
     class NewAttribute : System.Attribute { }
     //</Snippet37>
-
 }
 namespace N3
 {

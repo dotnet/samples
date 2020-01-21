@@ -29,7 +29,6 @@ namespace TripleDESCryptoServiceProvider_Example
                     Console.WriteLine("Original:   {0}", original);
                     Console.WriteLine("Round Trip: {0}", roundtrip);
                 }
-
             }
             catch (Exception e)
             {
@@ -75,7 +74,6 @@ namespace TripleDESCryptoServiceProvider_Example
 
             // Return the encrypted bytes from the memory stream.
             return encrypted;
-
         }
         //</Snippet2>
 
@@ -118,11 +116,9 @@ namespace TripleDESCryptoServiceProvider_Example
                         }
                     }
                 }
-
             }
 
             return plaintext;
-
         }
         //</Snippet3>
     }

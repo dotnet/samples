@@ -135,7 +135,6 @@ namespace MenuItemSelectEx
          this.Text = "Form1";
          ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel1)).EndInit();
          this.ResumeLayout(false);
-
       }
 		#endregion
 

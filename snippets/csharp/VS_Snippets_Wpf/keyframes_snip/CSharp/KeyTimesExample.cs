@@ -29,7 +29,6 @@ namespace Microsoft.Samples.KeyFrameExamples
             createKeyTimePacedExample();
 
             this.Content = mainPanel;
-
         }
 
         private void createKeyTimeTimeSpanExample()
@@ -82,7 +81,6 @@ namespace Microsoft.Samples.KeyFrameExamples
             // </SnippetKeyTimesTimeSpanExample>
 
             mainPanel.Children.Add(aRectangle);
-
         }
 
         private void createKeyTimePercentageExample()
@@ -133,7 +131,6 @@ namespace Microsoft.Samples.KeyFrameExamples
             // </SnippetKeyTimesPercentageExample>
 
             mainPanel.Children.Add(aRectangle);
-
         }
 
         private void createKeyTimeUniformExample()
@@ -194,7 +191,6 @@ namespace Microsoft.Samples.KeyFrameExamples
             // </SnippetKeyTimesUniformExample>
 
             mainPanel.Children.Add(aRectangle);
-
         }
 
         private void createKeyTimePacedExample()
@@ -255,9 +251,7 @@ namespace Microsoft.Samples.KeyFrameExamples
             // </SnippetKeyTimesPacedExample>
 
             mainPanel.Children.Add(aRectangle);
-
         }
-
     }
 }
 // </SnippetKeyTimesExampleUsingWholePage>

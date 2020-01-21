@@ -25,7 +25,6 @@ using System.Configuration;
             {
                 Console.WriteLine("[DisplayAppSettings: {0}]", e.ToString());
             }
-
         }
         // </Snippet2>
 

@@ -101,9 +101,7 @@ namespace TestToolWindowSearch_IntegrationTests.IntegrationTests
                 Assert.IsTrue(File.Exists(newItemTemplatePath));
                 ProjectItem item = project.ProjectItems.AddFromTemplate(newItemTemplatePath, newFileName);
                 Assert.IsNotNull(item);
-
             });
         }
-
     }
 }

@@ -21,7 +21,6 @@ public class MyTcpListenerExample {
 		    	if (!tcpListener.Pending()) {
 
 		    	Console.WriteLine("Sorry, no connection requests have arrived");
-		    	
 		     }
 		     else{
 
@@ -35,11 +34,9 @@ public class MyTcpListenerExample {
                 //</Snippet1>
                //Close the tcpListener and tcpClient instances
                tcpClient.Close();
-
 		     }
 
 	        tcpListener.Stop();
-
                }
                catch (Exception e) {
 			        Console.WriteLine(e.ToString());
@@ -47,5 +44,4 @@ public class MyTcpListenerExample {
               
              	return 0;
 	}
-	
 }

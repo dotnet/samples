@@ -25,9 +25,7 @@ public class SamplesArray  {
       Console.WriteLine( "The Array contains the following values:" );
       while (( myEnumerator.MoveNext() ) && ( myEnumerator.Current != null ))
          Console.WriteLine( "[{0}] {1}", i++, myEnumerator.Current );
-
    }
- 
 }
 
 
