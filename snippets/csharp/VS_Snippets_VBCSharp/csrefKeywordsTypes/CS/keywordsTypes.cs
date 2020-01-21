@@ -99,7 +99,7 @@ namespace csrefKeywordsMethodParams
           set;
        }
 
-       public double Distance 
+       double Distance 
        {
            get;
        }
@@ -115,17 +115,9 @@ namespace csrefKeywordsMethodParams
        }
 
        // Property implementation:
-       public int x
-       {
-          get; // Use auto-implemented properties
-          set;
-       }
+       public int X { get; set; }
 
-       public int y
-       {
-          get;
-          set;
-       }
+       public int Y { get; set; }
 
        // Property implementation
        public double Distance => 
