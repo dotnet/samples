@@ -25,6 +25,10 @@ namespace builtin_types
             Console.WriteLine("========= Enumeration types ======");
             EnumType.Examples();
             Console.WriteLine();
+
+            Console.WriteLine("============ Value types =========");
+            ValueTypes.Examples();
+            Console.WriteLine();
         }
     }
 }
