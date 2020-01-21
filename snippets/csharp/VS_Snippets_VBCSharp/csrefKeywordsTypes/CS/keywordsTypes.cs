@@ -87,13 +87,13 @@ namespace csrefKeywordsMethodParams
     interface IPoint
     {
        // Property signatures:
-       int x
+       int X
        {
           get;
           set;
        }
 
-       int y
+       int Y
        {
           get;
           set;
@@ -129,7 +129,7 @@ namespace csrefKeywordsMethodParams
     {
        static void PrintPoint(IPoint p)
        {
-          Console.WriteLine("x={0}, y={1}", p.x, p.y);
+          Console.WriteLine("x={0}, y={1}", p.X, p.Y);
        }
 
        static void Main()
