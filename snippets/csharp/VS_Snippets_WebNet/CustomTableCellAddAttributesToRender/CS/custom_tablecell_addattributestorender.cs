@@ -14,7 +14,6 @@ namespace Samples.AspNet.CS.Controls
 
       // Call the base AddAttributesToRender method.
       base.AddAttributesToRender(writer);
-
     }
   }
 }

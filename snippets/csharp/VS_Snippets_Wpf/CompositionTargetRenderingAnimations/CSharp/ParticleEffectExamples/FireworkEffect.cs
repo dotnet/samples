@@ -257,7 +257,6 @@
         public FireworkEffect()
             : base()
         {
-
         }
 
         protected override void OnAttachChild(UIElement child)
@@ -268,7 +267,6 @@
             child.PreviewMouseMove += OnMouseMove;
 
             _timeTracker = new TimeTracker();
-
         }
 
         protected override void OnDetachChild(UIElement child)
@@ -350,7 +348,6 @@
                 else
                     i++;
             }
-
         }
 
         protected override void OnOverlayRender(DrawingContext drawingContext)

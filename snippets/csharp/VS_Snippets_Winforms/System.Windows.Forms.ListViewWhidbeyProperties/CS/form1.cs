@@ -28,7 +28,6 @@ namespace ListViewProperties
             listView1.MouseDown += new MouseEventHandler(HandleMouseDown);
             InitializeComponent();
             //InitializeResizingListView();
-            
         }
         // The following code example demonstrates handling the ColumnWidthChanging event. It
         // also demonstrates the NewWidth and Cancel members.  To run this example paste the code
@@ -218,7 +217,6 @@ namespace ListViewProperties
             Bitmap bmp1 = new Bitmap(@"c:\FakePhoto.jpg");
             imageListView.BackgroundImage = new Bitmap(bmp1, new Size(30,40));
             this.Controls.Add(imageListView);
-
         }
 
         //</snippet4>
@@ -248,7 +246,6 @@ namespace ListViewProperties
             this.Controls.Add(findNearestItemListView);
             findNearestItemListView.MouseClick += 
                 new MouseEventHandler(findNearestItemListView_MouseClick);
-
         }
 
         void findNearestItemListView_MouseClick(object sender, MouseEventArgs e)
@@ -279,7 +276,6 @@ namespace ListViewProperties
             this.ClientSize = new System.Drawing.Size(292, 266);
             this.Name = "Form1";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HandleMouseDown);
-
         }
 
         // The following example demonstrates handling the ItemSelectionChanged event.
@@ -343,6 +339,5 @@ namespace ListViewProperties
             resizingListView2.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
 //</snippet9>
-
     }
 }

@@ -82,11 +82,8 @@ namespace CS
           // This is not neccesary for this snippet.
           // PolicyConversionContext myPolicyConversionContext = new PolicyConversionContext ();
           //ImportPolicy(importer, myPolicyConversionContext);
-	  
       }  
-
   }
-
 }    
 
 namespace CS2
@@ -119,7 +116,6 @@ namespace CS2
 		{
 			return context.GetInnerProperty<T>();
 		}
-
 	}
 
 	public class Program {
@@ -140,5 +136,4 @@ namespace CS2
 		}
 	}
 // </Snippet1>
-
 }

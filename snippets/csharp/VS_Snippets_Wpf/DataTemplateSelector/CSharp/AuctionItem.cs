@@ -79,5 +79,4 @@ namespace SDKSample
         Color,
     }
     //</SnippetSpecialFeatureEnum>
-
 }

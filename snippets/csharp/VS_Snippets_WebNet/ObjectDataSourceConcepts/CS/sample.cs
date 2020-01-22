@@ -286,6 +286,5 @@ namespace Samples.AspNet.Controls
       return true;
     }
 //</Snippet9>
-
   }
 }

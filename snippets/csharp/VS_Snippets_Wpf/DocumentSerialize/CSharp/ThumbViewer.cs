@@ -70,7 +70,6 @@ namespace SdkSample
                 new StoreContentChangedEventHandler(_annStore_StoreContentChanged);
             _annServ.Enable(_annStore);
             //</SnippetDocSerEnableAnn>
-
         }// end:AddCommandHandlers()
 
         public static RoutedCommand Exit
@@ -1179,5 +1178,4 @@ namespace SdkSample
         #endregion Event Handling
 
     }// end:partial class ThumbViewer
-
 }// end:namespace SdkSample

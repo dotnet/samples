@@ -14,5 +14,4 @@ public class Form1 : Form
                 table.Constraints.Remove(constraint);
     }
     // </Snippet1>
-
 }

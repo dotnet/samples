@@ -92,7 +92,6 @@ namespace Examples.CS.WebControls.Design
             string markup = base.GetDesignTimeHtml(regions);
 
             return openTableMarkup + markup + closeTableMarkup;
-
         } // GetDesignTimeHtml
         // </snippet4>
 
@@ -105,7 +104,6 @@ namespace Examples.CS.WebControls.Design
 
             // Call the base method to generate the markup.
             base.Initialize(component);
-
         } // Initialize
         // </snippet6>
     } // MyLoginViewDesigner

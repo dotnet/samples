@@ -36,6 +36,5 @@ namespace ImageElementExample
          Grid.SetRow(grayImage, 1);
          convertedGrid.Children.Add(grayImage);
       }
-
    }
 }

@@ -36,7 +36,6 @@ namespace SamplesAspNet
               DateTime.Now.TimeOfDay.ToString());
 
             simulatedEvents.Add(this);
-
         }
 
         // <Snippet3>
@@ -100,9 +99,7 @@ namespace SamplesAspNet
                 "**SampleWebBaseEventCollection Data End **");
 
             formatter.IndentationLevel -= 1;
-
         }
-
     }
 }
 // </Snippet1>

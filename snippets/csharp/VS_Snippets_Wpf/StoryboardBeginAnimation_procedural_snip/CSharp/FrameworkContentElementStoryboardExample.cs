@@ -78,7 +78,6 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
  
             controlsContainer.Child = beginButton; 
             this.Blocks.Add(controlsContainer);
-            
         }
         
         // Begins the storyboard.
@@ -87,7 +86,6 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
         
             myStoryboard.Begin(this);                  
         }
-
     }
 }
 // </SnippetFrameworkContentElementStoryboardExampleUsingWholePage>

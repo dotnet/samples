@@ -25,7 +25,6 @@ namespace cs_compositekeys
                 }
             }
             // </Snippet1>
-
         }
 
         void nextMethod()
@@ -43,6 +42,5 @@ namespace cs_compositekeys
     select new { ord.OrderID, prod.ProductID, det.UnitPrice };
             // </Snippet2>
         }
-
     }
 }

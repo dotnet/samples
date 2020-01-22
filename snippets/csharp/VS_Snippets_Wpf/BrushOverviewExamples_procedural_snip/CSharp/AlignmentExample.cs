@@ -19,7 +19,6 @@ namespace Microsoft.Samples.BrushExamples
             mainPanel.Orientation = Orientation.Horizontal;
             createTopLeftAlignmentExample(mainPanel);
             this.Content = mainPanel;
-
         }
 
         private void createTopLeftAlignmentExample(Panel mainPanel)
@@ -55,9 +54,6 @@ namespace Microsoft.Samples.BrushExamples
             // </SnippetGraphicsMMTopLeftAlignmentExample>
             
             mainPanel.Children.Add(myRectangle);            
-        
         }
-
     }
-
 }

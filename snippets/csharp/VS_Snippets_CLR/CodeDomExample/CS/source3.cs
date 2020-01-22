@@ -17,7 +17,6 @@ class Example
         exefile = sourcefile.Substring(0, sourcefile.LastIndexOf('.')) + ".exe";
         Console.WriteLine("outfile: {0}", exefile);
         CompileCSharpCode(sourcefile, exefile);
-
     }
 
     //<snippet22>

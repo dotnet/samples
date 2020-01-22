@@ -69,7 +69,6 @@ namespace Samples.AspNet
 
             set
             { base.AddElementName = value; }
-
         }
         // </Snippet57>
 
@@ -81,7 +80,6 @@ namespace Samples.AspNet
 
             set
             { base.ClearElementName = value; }
-
         }
         // </Snippet58>
 

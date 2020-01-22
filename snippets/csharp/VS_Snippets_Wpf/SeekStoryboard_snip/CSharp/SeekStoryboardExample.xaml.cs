@@ -18,6 +18,5 @@ namespace SDKSample
             myStoryboard.Seek(myRectangle, new TimeSpan(0, 0, 0, 0, sliderValue), TimeSeekOrigin.BeginTime);
         }
     }
-    
 }
 // </SnippetSeekStoryboardCodeBehindExampleWholePage>

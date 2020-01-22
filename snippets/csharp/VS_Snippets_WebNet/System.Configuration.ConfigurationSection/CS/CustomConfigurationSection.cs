@@ -140,7 +140,6 @@ namespace Samples.AspNet
                 this["maxIdleTime"] = value;
             }
         }
-
     }
     //</Snippet1>
     
@@ -177,7 +176,6 @@ namespace Samples.AspNet
             {
                 Console.WriteLine(err.ToString());
             }
-
         }
 
         //</Snippet2>
@@ -252,14 +250,12 @@ namespace Samples.AspNet
                         customSection.SectionInformation.AllowExeDefinition.ToString());
                     Console.WriteLine("IsLocked:            {0}",
                         customSection.SectionInformation.IsLocked.ToString());
-
                 }
             }
             catch (ConfigurationErrorsException err)
             {
                 Console.WriteLine(err.ToString());
             }
-            
         }
 
         //</Snippet3>
@@ -275,6 +271,5 @@ namespace Samples.AspNet
             Console.WriteLine("[Display the new section information]");
             DisplayCustomSectionInformation();
         }
-
     }
 }

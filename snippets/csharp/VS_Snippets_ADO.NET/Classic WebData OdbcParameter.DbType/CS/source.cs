@@ -32,8 +32,6 @@ public class Form1: Form
         command.Parameters.Add(param);
 
         command.ExecuteNonQuery();
-
      }
     // </Snippet1>
-
 }

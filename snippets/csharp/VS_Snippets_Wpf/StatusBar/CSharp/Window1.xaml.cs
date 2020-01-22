@@ -132,7 +132,6 @@ namespace StatusBarSimple
             printImage.ToolTip = (ttp_print);
             sbar.Items.Add(printImage);
             //</SnippetItemsWithSeparator>
-
         }
     }
 }

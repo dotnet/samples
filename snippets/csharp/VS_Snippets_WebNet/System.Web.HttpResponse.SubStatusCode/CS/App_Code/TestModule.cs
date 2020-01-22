@@ -29,7 +29,6 @@ namespace Samples
             // Set a SubStatusCode for Failed Request Tracing in IIS7
             context.Response.SubStatusCode = 99;
         }
-
     }
 }
 // </Snippet1>

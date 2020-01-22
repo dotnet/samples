@@ -54,8 +54,6 @@ namespace GridSplitterSnips
              mySimpleGridSplitter.VerticalAlignment = VerticalAlignment.Stretch;
              mySimpleGridSplitter.Width = 5;
             //</SnippetGridSplitterSimpleExample>
-
         }
-
     }
 }

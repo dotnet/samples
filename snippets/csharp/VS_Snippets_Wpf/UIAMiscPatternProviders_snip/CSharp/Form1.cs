@@ -15,7 +15,6 @@ namespace ElementProvider
             InitializeComponent();
             CustomGrid grid = new CustomGrid(this, new Rectangle(5, 5, 50, 200));
             this.Controls.Add(grid);
-            
         }
     }
 }

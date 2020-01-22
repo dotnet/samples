@@ -19,7 +19,6 @@ public class Form1:
         InitializeStreamBitmap();
 
         //Add any initialization after the InitializeComponent() call
-
     }
 
     //Form overrides dispose to clean up the component list.
@@ -85,7 +84,6 @@ public class Form1:
         this.Name = "Form1";
         this.Text = "Form1";
         this.ResumeLayout(false);
-
     }
 
     #endregion
@@ -132,7 +130,6 @@ public class Form1:
             MessageBox.Show("There was an error." + 
                 "Check the path to the bitmap.");
         }
-
     }
     //</snippet4>
 
@@ -144,7 +141,6 @@ public class Form1:
             bitmap1.RotateFlip(RotateFlipType.Rotate180FlipY);
             PictureBox1.Image = bitmap1;
         }
-
     }
     //</snippet3>
 
@@ -191,7 +187,6 @@ public class Form1:
                 response.GetResponseStream();
             Bitmap bitmap2 = new Bitmap(responseStream);
             PictureBox1.Image = bitmap2;
-
         }
         catch(System.Net.WebException)
         {
@@ -242,7 +237,6 @@ public class Form1:
 
             // Draw the modified image.
             e.Graphics.DrawImage(bmp, 0, 150);
-
         }
     
     //</snippet5>
@@ -251,5 +245,4 @@ public class Form1:
     {
         Application.Run(new Form1());
     }
-
 }

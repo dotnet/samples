@@ -21,7 +21,6 @@ namespace CodeDomSamples
 
             // string TestString = "Testing";
             //</Snippet2>
-    
         }
     }
 }

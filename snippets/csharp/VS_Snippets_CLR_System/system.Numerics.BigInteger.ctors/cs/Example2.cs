@@ -144,7 +144,6 @@ public class Example
                               constructedNumber);
          else
             Console.WriteLine("{0:N0} ≠ {1:N0}", constructedNumber, assignedNumber);
-
       }
       // The example displays the following output:
       //    Both methods create a BigInteger whose value is 0.

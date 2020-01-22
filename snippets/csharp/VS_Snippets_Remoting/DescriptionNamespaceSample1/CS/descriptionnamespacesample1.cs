@@ -155,7 +155,6 @@ class MyClass1
          "and saved results in the file MathService_new.wsdl");
       Console.WriteLine("\n This file should be passed to the WSDL tool " +
          "as input to generate the proxy");
-
    }
 // <Snippet13>
    // Creates a Message with name = messageName having one MessagePart 

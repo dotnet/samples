@@ -68,7 +68,6 @@ namespace Examples.CS.WebControls.Design
                 throw new ArgumentException();
             
             base.Initialize(component);
-
         } // Initialize
         // </snippet5>
     } // MyPanelContainerDesigner

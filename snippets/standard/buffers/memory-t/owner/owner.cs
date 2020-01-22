@@ -39,5 +39,4 @@ class Example
 
     static void DisplayBufferToConsole(Memory<char> buffer) => 
         Console.WriteLine($"Contents of the buffer: '{buffer}'");
-
 }

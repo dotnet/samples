@@ -49,7 +49,6 @@ class AssemblyInstaller_Example
          // 'Rollback' the installation process.
          myAssemblyInstaller.Rollback( mySavedState );
 // </Snippet1>
-
       }
       catch( ArgumentException )
       {
@@ -58,6 +57,5 @@ class AssemblyInstaller_Example
       {
          Console.WriteLine( e.Message );
       }
-
    }
 }

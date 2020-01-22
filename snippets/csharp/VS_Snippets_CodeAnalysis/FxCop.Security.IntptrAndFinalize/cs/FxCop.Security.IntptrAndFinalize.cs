@@ -46,8 +46,6 @@ namespace SecurityRulesLibrary
       {
         // Use the resource in unmanaged code ...
       }
-      
    }
-
 }
 //</Snippet1>

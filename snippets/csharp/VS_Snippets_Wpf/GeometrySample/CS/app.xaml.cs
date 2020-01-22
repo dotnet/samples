@@ -13,7 +13,6 @@ namespace Microsoft.Samples.Graphics.Geometries
     
         public app()
         {
-
         }
         
         protected override void OnStartup(StartupEventArgs e)
@@ -25,6 +24,5 @@ namespace Microsoft.Samples.Graphics.Geometries
             this.MainWindow = myWindow;
             base.OnStartup(e);       
         }
-
     }
 }

@@ -84,10 +84,8 @@ namespace SamplesAspNet
             formatter.AppendLine(customRaisedMsg);
         
             formatter.IndentationLevel -= 1;
-
         }
         // </Snippet5>
     }
-
 }
 // </Snippet1>

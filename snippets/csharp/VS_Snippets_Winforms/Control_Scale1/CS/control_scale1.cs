@@ -96,7 +96,6 @@ public class MyForm : Form
       this.Text = "MyForm";
       ((System.ComponentModel.ISupportInitialize)(this.myNumericUpDown1)).EndInit();
       this.ResumeLayout(false);
-
    }
 
    [STAThread]

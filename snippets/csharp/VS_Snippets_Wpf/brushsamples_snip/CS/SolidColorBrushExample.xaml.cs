@@ -17,8 +17,6 @@ namespace Microsoft.Samples.Brushes
     {
        public SolidColorBrushExample()
        {
-                 
        }
-       
     }
 }

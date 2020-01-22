@@ -15,7 +15,6 @@ namespace Microsoft.Samples.Graphics
         public FillRuleExample()
         {
             InitializeComponent();
-
         }
     }
 }

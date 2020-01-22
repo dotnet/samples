@@ -73,7 +73,6 @@ namespace MatrixTransform3DView
             myprocTransformGroup.Children.Clear();
             myprocTransformGroup.Children.Add(myMatrixTransform3D);
             topModelVisual3D.Transform = myprocTransformGroup;
-
         }
 
         private void UpdateRotation(object sender, EventArgs e)

@@ -37,6 +37,5 @@ namespace FreeformActivityDesignerSnippets
             }
         }
         //</snippet0>
-
     }
 }

@@ -10,7 +10,6 @@ using System.Web.DynamicData;
 //[TableName(""Prod Model Desc")]
 [DisplayName("Prod Model Desc")]
 public partial class ProductModelProductDescription {
-
 }
 
 public class ProductModelProductDescriptionMetaData {
@@ -21,6 +20,5 @@ public class ProductModelProductDescriptionMetaData {
 
     [DisplayName("Description")]
     public object ProductDescription { get; set; } 
-
 }
 // </snippet11>

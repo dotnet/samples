@@ -23,8 +23,6 @@ public class X509
         {
             Console.Write(b);
         }
-  
     }
-
 }
 // </Snippet1>

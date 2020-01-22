@@ -12,6 +12,5 @@ namespace SpanSnippets
 
     public partial class MyApp : Application
     {
-
     }
 }

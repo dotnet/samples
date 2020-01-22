@@ -53,6 +53,5 @@ namespace DataAdapterIDataAdapterUpdateCS
             return "Provider=sqloledb;Data Source=(local);Initial Catalog=Northwind;"
                 + "Integrated Security=SSPI";
         }
-
     }
 }

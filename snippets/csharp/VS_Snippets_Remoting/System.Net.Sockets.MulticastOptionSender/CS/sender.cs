@@ -55,7 +55,6 @@ namespace Mssc.TransportProtocols.Utilities
         mcastSocket.SetSocketOption(SocketOptionLevel.IP, 
                                     SocketOptionName.AddMembership, 
                                     mcastOption);
-     
       }
       catch (Exception e)
       {

@@ -70,7 +70,6 @@ namespace GCNotify
                             }
                         }
                     }
-
                 }
                 catch (OutOfMemoryException)
                 {
@@ -82,7 +81,6 @@ namespace GCNotify
                 checkForNotify = false;
                 GC.CancelFullGCNotification();
                 // </Snippet7>
-
             }
             catch (InvalidOperationException invalidOp)
             {
@@ -113,7 +111,6 @@ namespace GCNotify
             // a full GC did not already occur since last notified.
             GC.Collect();
             Console.WriteLine("Induced a collection.");
-
         }
         // </Snippet5>
 
@@ -189,7 +186,6 @@ namespace GCNotify
                     break;
                 }
             }
-
         }
         // </Snippet8>
 
@@ -201,7 +197,6 @@ namespace GCNotify
 
             // Suspend work.
             bAllocate = false;
-
         }
 
         private static void FinishExistingRequests()
@@ -211,7 +206,6 @@ namespace GCNotify
 
             // Clear the simulated workload.
             load.Clear();
-
         }
 
         private static void AcceptRequests()
@@ -221,7 +215,6 @@ namespace GCNotify
 
             // Resume work.
             bAllocate = true;
-
         }
         // </Snippet9>
     }

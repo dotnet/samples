@@ -18,7 +18,6 @@ namespace SDKSample
         private void OnClick(object sender, EventArgs e)
         {
         }
-
      }
 
     //<Snippet100> 
@@ -137,7 +136,6 @@ namespace SDKSample
                         // Perform action based on hit test on geometry.
                     }
                 }
-
             }
         }
         //</SnippetVisualsOverviewSnippet4>
@@ -213,6 +211,5 @@ namespace SDKSample
             // Return the value of the parameter.
             return base.ArrangeOverride(finalSize);
         }
-
     }
 }

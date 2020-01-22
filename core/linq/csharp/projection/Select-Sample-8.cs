@@ -54,6 +54,5 @@ namespace Projection
                 Console.WriteLine(num);
             }
         }
-
     }
 }

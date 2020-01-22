@@ -94,7 +94,6 @@ namespace Samples.AspNet.CS.Controls
             {
                 return ((FieldConsumerWebPart)control).ConnectionPointEnabled;
             }
-
         }
     }
 }

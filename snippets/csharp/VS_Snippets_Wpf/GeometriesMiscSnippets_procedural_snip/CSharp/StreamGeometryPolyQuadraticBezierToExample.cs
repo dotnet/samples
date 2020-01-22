@@ -49,7 +49,6 @@ namespace SDKSample
 
                 // Create a Bezier curve using the collection of Point Structures.
                 ctx.PolyQuadraticBezierTo(pointList, true /* is stroked */, false /* is smooth join */);
-
             }
 
             // Freeze the geometry (make it unmodifiable)

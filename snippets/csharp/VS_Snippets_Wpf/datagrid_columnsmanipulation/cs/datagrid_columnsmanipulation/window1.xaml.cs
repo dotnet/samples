@@ -43,7 +43,6 @@ namespace DataGrid_ColumnsManipulation
             textcol.Header = "Last Name";
             //Add the column to the DataGrid
             DG2.Columns.Add(textcol);
-            
         }
         //</SnippetAdd2>
 
@@ -79,7 +78,6 @@ namespace DataGrid_ColumnsManipulation
                     e.Column.Visibility = Visibility.Collapsed;
                     break;
             }
-
         }
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
@@ -118,7 +116,6 @@ namespace DataGrid_ColumnsManipulation
                         break;
                 }
             }
-
         }
         //</SnippetVisible2>
 
@@ -127,9 +124,7 @@ namespace DataGrid_ColumnsManipulation
         {
             //Delete the first column whether visible or not
             DG1.Columns.RemoveAt(0);
-
         }
         //</SnippetDelete2>
-
     }
 }

@@ -643,7 +643,6 @@ namespace MvcApplication1.Tests.Controllers
             {
                 return password.Equals("goodPass");
             }
-
         }
     }
 }

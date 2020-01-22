@@ -50,7 +50,6 @@ namespace WCFDataServicesActivityExample
             //snippet10();
             snippet20();
             //snippet2();
-
         }
 
         private static void snippet20()
@@ -275,7 +274,6 @@ namespace WCFDataServicesActivityExample
         }
     }
     //</snippet200>
-
 }
     // Northwind Entitities from Add Service Reference
 

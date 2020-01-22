@@ -57,7 +57,6 @@ class Sample
     mySingle = null;
     yourSingle = mySingle.GetValueOrDefault(-333.33f);
     Display("B3", mySingle, yourSingle);
-
     }
 
 // Display the values of two nullable of System.Single structures.

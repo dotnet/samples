@@ -16,7 +16,6 @@ public class MyWebService {
     [WebMethod]
     [SoapHeader("myHeader", Direction=SoapHeaderDirection.InOut)]
     public void Hello() {
-    
     }
 }
 // </Snippet1>

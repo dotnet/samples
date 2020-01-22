@@ -36,6 +36,5 @@ namespace WPFPlatformSecuritySnippet
             CodeAccessPermission.RevertAssert();
             //</SnippetPermission>
         }
-
     }
 }

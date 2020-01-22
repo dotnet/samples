@@ -76,5 +76,4 @@ namespace SafeHandleExample
         {
         }
     }
-
 }

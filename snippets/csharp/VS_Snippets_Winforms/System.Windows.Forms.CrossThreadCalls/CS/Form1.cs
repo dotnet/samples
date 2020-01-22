@@ -207,7 +207,6 @@ namespace CrossThreadDemo
 			this.Text = "Form1";
 			this.ResumeLayout(false);
 			this.PerformLayout();
-
 		}
 
 		#endregion
@@ -218,7 +217,6 @@ namespace CrossThreadDemo
 			Application.EnableVisualStyles();
 			Application.Run(new Form1());
 		}
-
 	}
 }
 // </snippet1>

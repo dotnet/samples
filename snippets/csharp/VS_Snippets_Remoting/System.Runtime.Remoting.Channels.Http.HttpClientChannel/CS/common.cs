@@ -13,6 +13,5 @@ public class RemoteObject : MarshalByRefObject
         callCount++;
         return(callCount);
     }
-
 }
 //</snippet30>

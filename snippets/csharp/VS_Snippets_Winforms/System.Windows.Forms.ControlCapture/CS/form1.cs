@@ -62,7 +62,6 @@ public class CaptureForm:
 		this.Name = "CaptureForm";
 		this.Text = "CaptureForm";
 		this.ResumeLayout(false);
-
 	}
 	[System.STAThreadAttribute]
 	public static void Main()
@@ -84,5 +83,4 @@ public class CaptureForm:
 		}
 	}
 	//</snippet1>
-
 }

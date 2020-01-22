@@ -27,12 +27,10 @@ class TestPaint : System.Windows.Forms.Form
         this.Name = "TestPaint";
         this.Load += new System.EventHandler(this.TestPaint_Load);
         this.ResumeLayout(false);
-
     }
 
     private void TestPaint_Load(object sender, EventArgs e)
     {
-
     }
     //</Snippet35>
 }
@@ -1105,7 +1103,6 @@ namespace Polymorphism_Overview
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
         }
-
     }
 
     /* Output:
@@ -1117,7 +1114,6 @@ namespace Polymorphism_Overview
         Performing base class drawing tasks
      */
     //</Snippet50> 
-
 }
 
 namespace ExplicitConversion
@@ -1180,7 +1176,6 @@ namespace RainyDay
             Console.WriteLine("Saving for a rainy day.");
             //</Snippet56> 
         }
-
     }      
 }
 
@@ -1354,7 +1349,6 @@ namespace pieces
                 Console.WriteLine("Base - Method2");
             }
             //</snippet63>
-
         }
 
         class DerivedClass : BaseClass
@@ -1363,9 +1357,7 @@ namespace pieces
             {
                 Console.WriteLine("Derived - Method2");
             }
-
         }
-
     }
 }
 

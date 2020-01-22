@@ -95,7 +95,6 @@ decryptionStreamBacking.ToArray());
             {
                 Console.WriteLine("Error: ", e);
             }
-
         }
     }
 }

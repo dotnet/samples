@@ -59,9 +59,7 @@ namespace DataGrid_FrozenColumns
                header.Column.DisplayIndex = DG1.FrozenColumnCount;
                DG1.FrozenColumnCount++;
            }
-
         }
-     
     }
     //</Snippet3>
 }

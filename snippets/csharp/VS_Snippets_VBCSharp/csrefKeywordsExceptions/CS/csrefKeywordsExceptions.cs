@@ -32,7 +32,6 @@ namespace csrefKeywordsExceptions
             }
             // Do something with buffer...
         }
-
     }
     
     //</snippet1>
@@ -153,12 +152,10 @@ namespace csrefKeywordsExceptions
                 throw new IndexOutOfRangeException();
             }
             return nums[index];
- 
         }
         static void Main() 
         {
             int result = GetNumber(3);
-            
         }
     }
     /*
@@ -221,5 +218,4 @@ namespace csrefKeywordsExceptions
         // Unhandled Exception: System.InvalidCastException: Specified cast is not valid.
     }
     //</snippet6>
-
 }

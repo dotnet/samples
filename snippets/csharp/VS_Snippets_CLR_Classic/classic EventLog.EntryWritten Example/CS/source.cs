@@ -17,7 +17,6 @@ class MySample{
         myNewLog.EnableRaisingEvents = true;
         myNewLog.WriteEntry("Test message", EventLogEntryType.Information);
 	    signal.WaitOne();        
-
     }       
 
     public static void MyOnEntryWritten(object source, EntryWrittenEventArgs e){

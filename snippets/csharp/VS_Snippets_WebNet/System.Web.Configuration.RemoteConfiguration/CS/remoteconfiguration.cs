@@ -117,7 +117,6 @@ namespace Samples.AspNet
 
                 // Read the new appSettings.
                 ReadAppSettings(config);
-              
             }
             catch (Exception err)
             {
@@ -141,7 +140,6 @@ namespace Samples.AspNet
                         key, config.AppSettings.Settings[key].Value);
                 }
                 Console.WriteLine();
-
             }           
             catch (Exception err)
             {
@@ -149,6 +147,5 @@ namespace Samples.AspNet
             }
         }
     }
-
 }
 // </Snippet1>

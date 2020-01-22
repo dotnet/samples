@@ -30,9 +30,7 @@ public class SamplesHijriCalendar  {
             Console.Write( "\t{0}", myCal.GetDaysInMonth( y, 12, myCal.Eras[i] ) );
          Console.WriteLine();
       }
-
    }
-
 }
 
 /*

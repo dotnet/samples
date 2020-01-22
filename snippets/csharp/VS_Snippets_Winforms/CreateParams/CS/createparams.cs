@@ -93,7 +93,6 @@ public class MyIconButton : Button
     // Import the SendMessage method of the User32 DLL.   
     [DllImport("user32.dll", CharSet = CharSet.Auto)]
     public static extern IntPtr SendMessage(IntPtr hWnd, int msg, int wParam, int lParam);
-
 }
 // </snippet1>
 
@@ -141,7 +140,6 @@ public class MyApplication : Form
             this.Controls.Add(stdButton);
             this.Controls.Add(myIconButton);
         }
-
     }
 
     private void myIconButton_Click(object Sender, EventArgs e)
@@ -164,6 +162,5 @@ public class MyApplication : Form
             myIconButton.Icon = new Icon(openDlg.FileName);
         }
     }
-
 }
 // </snippet2>

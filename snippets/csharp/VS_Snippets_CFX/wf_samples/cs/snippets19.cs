@@ -242,7 +242,6 @@ namespace WF_Snippets
 
         private void InitializeComponent()
         {
-
         }
 
         public CreateTask()
@@ -302,7 +301,6 @@ namespace WF_Snippets
             this.ParameterBindings["text"].Value = this.Text;
         }
         //</snippet207>
-
     }
     // </snippet205>
     [ExternalDataExchange]
@@ -537,7 +535,6 @@ namespace WF_Snippets
             this.Activities.Add(this.POStatusListen);
             this.Name = "PurchaseOrderWorkflow";
             this.CanModifyActivities = false;
-
         }
         // </snippet213>
 
@@ -630,5 +627,4 @@ namespace WF_Snippets
     }
     public partial class WebServicePublishWorkflow_WebService : System.Web.Services.Protocols.SoapHttpClientProtocol {
     }
-
 }

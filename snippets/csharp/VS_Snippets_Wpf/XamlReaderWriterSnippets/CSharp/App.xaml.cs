@@ -12,6 +12,5 @@ namespace XamlReaderWriterSnippets
 
     public partial class App : Application
     {
-
     }
 }

@@ -19,7 +19,6 @@ public class Sample {
        XmlNode title = (XmlNode) ienum.Current;
        Console.WriteLine(title.InnerText);
      }    
-    
   }
 }
  // </Snippet1>

@@ -352,7 +352,6 @@ namespace LINQStrings
             Console.WriteLine("Press any key");
             Console.ReadKey();
         }
-
     }
     //<snippet9>
     class CSVFiles
@@ -922,7 +921,6 @@ namespace RegEx
             Console.ReadKey();
         }
     }
-
 }
     // This doesn't seem to be used anywhere
     public class FileList
@@ -997,7 +995,6 @@ namespace RegEx
 
                 foreach (string str in newDirs)
                     dirs.Push(str);
-
             }
 
             return files;

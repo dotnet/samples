@@ -35,7 +35,6 @@ namespace Examples.CS.WebControls.Design
                  "Value: \"" + myHF.Value.ToString() + "\"" );
 
             return markup;
-
         } // GetDesignTimeHtml
         // </snippet3>
     } // MyHiddenFieldDesigner

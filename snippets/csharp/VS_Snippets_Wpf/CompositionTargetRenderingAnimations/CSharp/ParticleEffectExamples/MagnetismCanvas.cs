@@ -278,7 +278,5 @@
         {
             return new Point((r.Left + r.Right) / 2.0, (r.Top + r.Bottom) / 2.0);
         }
-
     }
-
 }

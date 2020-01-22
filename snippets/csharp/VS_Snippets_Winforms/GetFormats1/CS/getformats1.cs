@@ -27,5 +27,4 @@ private void GetFormats1()
     {
         Application.Run(new Form1());
     }
-
 }

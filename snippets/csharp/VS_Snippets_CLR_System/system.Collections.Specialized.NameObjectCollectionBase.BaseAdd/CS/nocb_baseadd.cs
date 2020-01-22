@@ -25,7 +25,6 @@ public class MyCollection : NameObjectCollectionBase  {
          this.BaseAdd( (String) de.Key, de.Value );
       }
    }
-
 }
 
 public class SamplesNameObjectCollectionBase  {
@@ -43,9 +42,7 @@ public class SamplesNameObjectCollectionBase  {
       for ( int i = 0; i < myCol.Count; i++ )  {
          Console.WriteLine( "[{0}] : {1}, {2}", i, myCol[i].Key, myCol[i].Value );
       }
-
    }
-
 }
 
 

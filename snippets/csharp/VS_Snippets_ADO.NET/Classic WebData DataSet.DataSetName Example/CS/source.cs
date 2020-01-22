@@ -24,5 +24,4 @@ public class Form1: Form
             System.Type.GetType("System.String")));
     }
     // </Snippet1>
-
 }

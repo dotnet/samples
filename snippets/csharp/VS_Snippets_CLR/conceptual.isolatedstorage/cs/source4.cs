@@ -63,7 +63,6 @@ public class DeletingFilesDirectories
         isoStore.DeleteDirectory("AnotherTopLevelDirectory/InsideDirectory/");
         Console.WriteLine("AnotherTopLevelDirectory/InsideDirectory/");
         Console.WriteLine();
-
     } // End of main.
 }
 //</snippet4>

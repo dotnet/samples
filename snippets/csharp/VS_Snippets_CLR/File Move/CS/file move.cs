@@ -34,7 +34,6 @@ class Test
             {
                 Console.WriteLine("The original file no longer exists, which is expected.");
             }			
-
         } 
         catch (Exception e) 
         {

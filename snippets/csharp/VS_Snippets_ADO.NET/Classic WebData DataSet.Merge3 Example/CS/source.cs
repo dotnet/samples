@@ -69,7 +69,6 @@ public class Form1: Form
         Console.WriteLine("Merging");
         dataSet.Merge(t2);
         PrintValues(dataSet, "Merged With table.");
-
     }
  
     private void Row_Changed(object sender, 
@@ -96,5 +95,4 @@ public class Form1: Form
         }
     }
     // </Snippet1>
-
 }

@@ -40,7 +40,6 @@ namespace eSQLExamplesCS
             //ExecuteStructuralTypeQuery(@"SELECT VALUE Product FROM AdventureWorksEntities.Product AS Product");
             //ExecuteRefTypeQuery(@"SELECT REF(p) FROM AdventureWorksEntities.Product as p");
             //ExecutePrimitiveTypeQuery(@"SELECT VALUE AVG(p.ListPrice) FROM AdventureWorksEntities.Product as p");
-
         }
 
         static private void PolymorphicQuery()
@@ -100,7 +99,6 @@ namespace eSQLExamplesCS
                 transaction.Commit(); 
             }
             //</snippetTransactionsWithEntityClient>
-
         }
 
         static private void ComplexTypeWithEntityCommand()
@@ -879,6 +877,5 @@ namespace eSQLExamplesCS
                     }
                 }
         //</snippeteSQLPrimitiveTypes>
-         
     }
 }

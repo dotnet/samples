@@ -62,7 +62,6 @@ public static class StaticPattern
       var tcs = new TaskCompletionSource<string>();
       return tcs.Task; 
    }
-
 }
 
 public class Pattern

@@ -20,8 +20,6 @@ namespace Microsoft.Samples.VectorExamples
             InitializeComponent();
             
             VectorExampleFrame.Content = new VectorExample();
-                 
        }
-       
     }
 }

@@ -94,7 +94,6 @@ namespace Snippet3
         static void Main()
         { }
     }
-
 }
 
 namespace DataMemberOrder
@@ -238,5 +237,4 @@ namespace DatacontractEQ2
     // (Order=1 first, then Order=2 in alphabetical order), 
     // which is equivalent to the Employee order}.
     //</snippet8>
-
 }

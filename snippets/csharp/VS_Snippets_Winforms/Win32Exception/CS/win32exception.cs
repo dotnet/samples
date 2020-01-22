@@ -23,7 +23,6 @@ namespace Win32Exception_CS
 		Console.WriteLine(e.Message);
  	    }
 	//</snippet1>
-
 	}
     }
 }

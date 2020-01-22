@@ -59,7 +59,6 @@ namespace SetData4
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-
         }
         #endregion
 
@@ -87,7 +86,6 @@ namespace SetData4
             
             // Show the results in a message box. 
             MessageBox.Show(theResult);
-
         }
         // </snippet1>
 
@@ -98,7 +96,6 @@ namespace SetData4
 
         private void Form1_Load(object sender, System.EventArgs e)
         {
-        
         }
     }
 }

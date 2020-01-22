@@ -46,7 +46,6 @@ namespace StrokeSnippets_CS
                 p.Y = p.Y + 20;
                 points[i] = p;
             }
-
         }
 
         private void setTimeStamp()
@@ -102,7 +101,6 @@ namespace StrokeSnippets_CS
             {
                 context.DrawEllipse(null, new Pen(Brushes.Black, 1), (Point)p, 5, 5);
             }
-          
         }
         //</Snippet23>
 

@@ -23,7 +23,6 @@
        Console.WriteLine();
        Console.WriteLine("InnerText after...");
        Console.WriteLine(doc.DocumentElement.InnerText);
- 
    } 
  }
    // </Snippet1>

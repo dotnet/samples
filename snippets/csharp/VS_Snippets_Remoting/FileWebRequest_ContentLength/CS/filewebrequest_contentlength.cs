@@ -21,7 +21,6 @@ using System.Text;
           {
             Console.WriteLine("\nPlease enter the file name as command line parameter where you want to write:");
           Console.WriteLine("Usage:FileWebRequest_ContentLen <systemname>/<sharedfoldername>/<filename>\nExample:FileWebRequest_ContentLen shafeeque/shaf/hello.txt");
-            
           } 
           else
           {

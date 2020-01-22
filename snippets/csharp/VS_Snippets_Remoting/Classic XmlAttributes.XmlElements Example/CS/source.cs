@@ -94,7 +94,6 @@ public class Test
 
       TextWriter writer = new StreamWriter(filename);
       xSer.Serialize(writer, myTransportation);
-      
    }
 }
 

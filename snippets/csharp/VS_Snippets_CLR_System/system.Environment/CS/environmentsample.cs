@@ -25,7 +25,6 @@ public class EnvironmentSample {
 		Console.WriteLine("WS 3:"+Environment.WorkingSet);	  
 			
 		//</Snippet6>											 			
-		
 	}   
 	
 	//<Snippet3>		
@@ -37,6 +36,5 @@ public class EnvironmentSample {
 		Console.WriteLine("StackTrace after calling Main()->OuterMethod()->InnerMethod():" + Environment.StackTrace);		
 	}
 	//</Snippet3>		
-
 }
 //</Snippet1>

@@ -19,7 +19,6 @@ namespace LightSwitchApplication
 
             Customer cust = order.Customer;
             //Perform some task on the customer entity.
-
         }
         //</Snippet8>
     }

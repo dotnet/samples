@@ -38,7 +38,6 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
             {
                 return default(T);
             }
-
         }
         public static string GetAddressingNamespace(MessageVersion version)
         {

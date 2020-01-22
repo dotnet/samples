@@ -48,7 +48,6 @@ class MyInstallClass
          // Uninstall the 'MyAssembly_Uninstall' assembly.
          myAssemblyInstaller.Uninstall( mySavedState );
 // </Snippet2>
-
       }
       catch( ArgumentException )
       {

@@ -59,6 +59,5 @@ sealed public class PhoneMaskAttribute : ValidationAttribute
         return String.Format(CultureInfo.CurrentCulture,
           ErrorMessageString, name, this.Mask);
     }
-
 }
 // </Snippet1>

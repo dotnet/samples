@@ -17,10 +17,8 @@ void Button_Click_Coord(object sender, EventArgs e)
                 
           Table1.Rows[i].Cells[j].Text = "(" + 
              j.ToString() + ", " + i.ToString() + ")";
-                
        }            
     }
- 
  }
  
 // </Snippet1>

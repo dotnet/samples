@@ -24,7 +24,6 @@ namespace cs_localmethodcall
                     ordObj.ShipVia.Value);
             }
             // </Snippet1>
-
         }
     }
 }

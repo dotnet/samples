@@ -75,9 +75,7 @@ namespace TestToolWindowSearch_IntegrationTests.IntegrationTests
                 //TODO Set Break point and verify that will hit
 
                 //TODO Verify Adding new project item to project
-
             });
         }
-
     }
 }

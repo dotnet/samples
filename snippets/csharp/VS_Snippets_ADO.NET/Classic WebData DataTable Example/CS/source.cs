@@ -161,5 +161,4 @@ public class Form1: Form
         dataGrid1.SetDataBinding(dataSet,"ParentTable");
     }
     // </Snippet1>
-
 }

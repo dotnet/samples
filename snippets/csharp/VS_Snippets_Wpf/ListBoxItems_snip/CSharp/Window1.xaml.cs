@@ -51,6 +51,5 @@ namespace ListBox_Index
             Item.Content = ((ListBoxItem)sender).Name + " was unselected.";
         }
         //</SnippetSelectorUnselected>
-        
     }
 }

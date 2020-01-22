@@ -12,7 +12,6 @@ public class Class1{
 
     public class MyClassConverter:TypeConverter
     {
-
     }
     // <Snippet2>
     public static int Main() {

@@ -15,5 +15,4 @@ public class Form1: Form
         table.Constraints.Add("idNameConstraint", columns, true);
     }
     // </Snippet1>
-
 }

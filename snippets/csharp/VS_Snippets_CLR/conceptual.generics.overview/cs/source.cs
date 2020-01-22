@@ -31,7 +31,6 @@ namespace GenericsExample1
             return temp;
         }
         //</snippet4>
-
     }
 }  // GenericsExample1
 

@@ -150,13 +150,11 @@ class MyClass
         {
             Console.WriteLine(e.Message.ToString());
         }
-
     }
 
     static void Main(string[] args)
     {
         PermissionSetDemo();
     }
-
 }
 //</Snippet1>

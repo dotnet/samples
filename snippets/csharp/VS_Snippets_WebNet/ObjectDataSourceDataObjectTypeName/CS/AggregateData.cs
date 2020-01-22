@@ -20,7 +20,6 @@ namespace Samples.AspNet.CS
 
 		public AggregateData()
 		{
-
 		}
 
 		static DataTable table;
@@ -71,7 +70,6 @@ namespace Samples.AspNet.CS
 			get { return numberValue; }
 			set { numberValue = value; }
 		}
-
 	}
 }
 // </snippet2>

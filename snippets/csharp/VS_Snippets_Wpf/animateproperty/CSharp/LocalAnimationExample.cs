@@ -63,6 +63,5 @@ namespace Microsoft.Samples.Animation.LocalAnimations
             this.Content = myStackPanel;
         }
     }
-    
 }
 //</Snippet11>

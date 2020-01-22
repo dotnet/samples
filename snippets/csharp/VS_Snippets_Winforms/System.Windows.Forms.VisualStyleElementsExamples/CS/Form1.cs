@@ -9007,5 +9007,4 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet435>
-
 }

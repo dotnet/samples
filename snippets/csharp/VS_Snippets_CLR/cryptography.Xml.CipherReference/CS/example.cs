@@ -59,7 +59,6 @@ namespace EncryptedDataSample
 			{
 				Console.WriteLine("File IO error. {0}", e);
 			}
-
 		}
 	}
 }

@@ -13,6 +13,5 @@ namespace HeaderedContentControlSimple
 
 	public partial class app : Application
 	{
-
 	}
 }

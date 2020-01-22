@@ -92,7 +92,6 @@ namespace SimpleServiceCs
             this.Load += new System.EventHandler(this.HiddenForm_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HiddenForm_FormClosing);
             this.ResumeLayout(false);
-
         }
     }
 

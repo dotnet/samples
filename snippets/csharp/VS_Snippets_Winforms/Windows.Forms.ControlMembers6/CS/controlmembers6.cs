@@ -106,7 +106,6 @@ namespace ControlMembers6
          this.Name = "Form1";
          this.Text = "Form1";
          this.ResumeLayout(false);
-
       }
 		#endregion
 
@@ -209,6 +208,5 @@ public void ScaleChildControls()
    }
 }
 // </snippet6>
-
    }
 }

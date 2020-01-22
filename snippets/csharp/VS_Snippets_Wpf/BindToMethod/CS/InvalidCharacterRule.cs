@@ -30,6 +30,5 @@ namespace ObjectDataProviderSample
 
           return new ValidationResult(true, null);
         }
-
     }
 }

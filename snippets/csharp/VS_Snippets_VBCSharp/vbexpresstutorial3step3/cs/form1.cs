@@ -92,6 +92,5 @@ namespace Math_Quiz
             sum.Value = addend1 + addend2;
             // </snippet24>
         }
-           
     }
 }

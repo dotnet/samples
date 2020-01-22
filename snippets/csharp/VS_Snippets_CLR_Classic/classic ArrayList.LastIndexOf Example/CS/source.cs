@@ -44,7 +44,6 @@
           Console.WriteLine( "   [{0}]:    {1}", i++, obj );
        Console.WriteLine();
     }
-
  }
 
 

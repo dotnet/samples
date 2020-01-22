@@ -23,7 +23,6 @@ public class ROCollection : ReadOnlyCollectionBase
    public bool Contains( Object value )  {
       return( InnerList.Contains( value ) );
    }
-
 }
 
 public class SamplesCollectionBase

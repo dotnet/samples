@@ -15,7 +15,6 @@ public partial class Default2 : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
     }
     // <Snippet1>
     protected void Reset_Click(object sender, EventArgs e)

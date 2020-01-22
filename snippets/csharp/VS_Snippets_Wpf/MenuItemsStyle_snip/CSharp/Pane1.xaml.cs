@@ -74,7 +74,5 @@ namespace MenuStyles
             }
         }
         //</SnippetMenuItemsUncheckedEvent>
-
     }
-
 }

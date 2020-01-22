@@ -447,5 +447,4 @@ public class Class1
       }      
       // </Snippet45>
    }
-
 }

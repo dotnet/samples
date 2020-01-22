@@ -15,7 +15,6 @@ public class WebClientAuthSample {
 			Byte[] pageData = client.DownloadData("http://www.contoso.com");
 			string pageHtml = Encoding.ASCII.GetString(pageData);
 			Console.WriteLine(pageHtml);
-
 		} catch (WebException webEx) {
 			Console.Write(webEx.ToString());
 		}

@@ -167,7 +167,6 @@ public class DataSet : IConvertible
         // Limit the range, based on the minimum and maximum values 
         // for the type.
         return avg > max ? max : avg < min ? min : avg;
-
     }
 
     // The following elements are required by IConvertible.

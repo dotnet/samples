@@ -12,6 +12,5 @@ namespace SDKSamples
 
     public partial class app : Application
     {
-
     }
 }

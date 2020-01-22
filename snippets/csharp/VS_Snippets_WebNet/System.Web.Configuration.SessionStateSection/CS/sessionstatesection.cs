@@ -112,5 +112,4 @@ namespace Samples.AspNet
       Console.ReadLine();
     }
   } // UsingSessionStateSection class end.
-
 } // Samples.Aspnet.SystemWebConfiguration namespace end.

@@ -25,7 +25,6 @@ class PerfCounterCatDeleteMod
         {
             PerformanceCounterCategory.Delete(categoryName);
             Console.WriteLine("Category \"{0}\" deleted from this computer.", categoryName);
-
         }
         catch(Exception ex)
         {

@@ -149,5 +149,4 @@ foreach (HttpHandlerAction handlerAction in httpHandlersSection.Handlers)
             }
         }
     } // UsingHttpHandlersSection class end.
-    
 } // Samples.Aspnet.SystemWebConfiguration namespace end.

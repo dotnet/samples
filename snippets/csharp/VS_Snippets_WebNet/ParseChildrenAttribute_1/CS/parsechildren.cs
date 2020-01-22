@@ -146,7 +146,6 @@ namespace Samples.AspNet.CS.Controls
             table.Rows.Add(tr);
          }
          Controls.Add(table);
-         
       }
    }
    // </snippet2>

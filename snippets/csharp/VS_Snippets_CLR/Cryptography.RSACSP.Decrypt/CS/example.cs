@@ -46,7 +46,6 @@ class RSACSPSample
             //Catch this exception in case the encryption did
             //not succeed.
             Console.WriteLine(e.Message);
-
         }
     }
 }

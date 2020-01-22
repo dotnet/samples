@@ -25,7 +25,5 @@ namespace SDKSample
             MyBitmapSourceExampleFrame.Content = new BitmapSourceExample();
             MyBitmapDecoderExampleFrame.Content = new BitmapDecoderExample();
         }
-        
     }
-
 }

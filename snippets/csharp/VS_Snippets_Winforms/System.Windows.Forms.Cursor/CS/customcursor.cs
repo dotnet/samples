@@ -42,7 +42,6 @@ namespace CustomCursor
             // and looks for CustomCursor.MyCursor.Cur in the assemblies manifest.
 	    // NOTE: The cursor name is acase sensitive.
             this.Cursor = new Cursor(GetType(), "MyCursor.cur");  
-           
         }
     }
 }

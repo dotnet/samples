@@ -46,6 +46,5 @@ namespace CustomControlNameSpace
         {
             output.Write("<INPUT TYPE ='Text' name = " + this.UniqueID + " Value = " + this.Text + " >");
         }
-
     }
 }

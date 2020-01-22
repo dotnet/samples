@@ -18,5 +18,4 @@ public class Form1: Form
     command.CommandType = CommandType.Text;
  }
 // </Snippet1>
-
 }

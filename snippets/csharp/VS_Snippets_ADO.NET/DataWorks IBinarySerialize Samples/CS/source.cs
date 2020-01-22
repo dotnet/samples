@@ -35,7 +35,6 @@ static void Main(string [] args)
  
     r.Close();
     fs.Close();
-
 }
 
 public string StringValue;
@@ -103,7 +102,5 @@ public void Write(System.IO.BinaryWriter w)
     w.Write(value);
 }
 //</Snippet2>
-    
 }
-
 }

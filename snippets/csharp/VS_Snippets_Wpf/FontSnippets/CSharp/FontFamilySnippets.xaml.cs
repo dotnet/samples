@@ -48,7 +48,6 @@ namespace SDKSample
                 // Perform action.
             }
             // </SnippetFontsSnippet1>
-
         }
 
         public void Fonts2()
@@ -79,7 +78,6 @@ namespace SDKSample
                 // Perform action.
             }
             // </SnippetFontsSnippet4>
-
         }
 
         public void Fonts5()
@@ -90,7 +88,6 @@ namespace SDKSample
                 // Perform action.
             }
             // </SnippetFontsSnippet5>
-
         }
 
         public void Fonts6()

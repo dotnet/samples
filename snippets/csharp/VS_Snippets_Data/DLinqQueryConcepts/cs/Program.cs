@@ -29,7 +29,6 @@ namespace cs_queryconcepts
                 }
             }
             // </Snippet2>
-
         }
 
         public static void ProcessCustomerOrder(Order ord)
@@ -53,7 +52,6 @@ namespace cs_queryconcepts
                     SendCustomerNotification(ordObj.Customer);
                 ProcessOrder(ordObj);
             }
-
         }
         // </Snippet1>
 
@@ -123,7 +121,6 @@ foreach (Order ord in
     // Do something.
 }
             // </Snippet7>
-
         }
 
         void method8()
@@ -138,7 +135,6 @@ foreach (Order ord in
 {
     // Do something.
 }
-
         }
         // </Snippet8>
 
@@ -169,7 +165,6 @@ foreach (Order ord in
                 }
             }
             // </Snippet9>
-
         }
 
         void method10()
@@ -202,9 +197,6 @@ foreach (Order ord in
                 }
             }
             // </Snippet10>
-
         }
-
     }
-
 }

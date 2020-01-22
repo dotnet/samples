@@ -126,5 +126,4 @@ namespace MethodsOnObjectContext
         }
     }
     //</snippet8>
-
 }

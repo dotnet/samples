@@ -72,7 +72,6 @@ namespace DrawingAttributesSample
             {
                 switchHighlighter.Content = "Use Highlighter";
                 inkCanvas1.DefaultDrawingAttributes = inkDA;
-
             }
         }
         //</Snippet2>
@@ -92,7 +91,6 @@ namespace DrawingAttributesSample
             // Uncomment the following line to assign custom properties.
             //AssignDrawingAttributesInstrument();
             ValidateHeightAndWidth();
-
         }
 
         //<Snippet17>
@@ -210,7 +208,6 @@ namespace DrawingAttributesSample
             //FileStream fs = new FileStream("strokes.isf", FileMode.Create);
             //fs.Write(isf, 0, isf.Length);
             //fs.Close();
-
         }
 
         void LoadStrokes_Click(Object sender, RoutedEventArgs e)
@@ -232,7 +229,6 @@ namespace DrawingAttributesSample
             //inkCanvas1.Strokes = strokes;
 
             //ChangeAuthorsInk(aGuid, anAuthor, Colors.Red);
-
         }
 
         //<Snippet5>
@@ -365,7 +361,6 @@ namespace DrawingAttributesSample
                 MessageBox.Show("The DrawingAttributes are equal");
             }
         //</Snippet13>
-
         }
 
         void CompareAttributes_Click(Object sender, RoutedEventArgs e)

@@ -35,7 +35,6 @@ public class WebClient_DownloadData
             Console.WriteLine("Download successful.");
 // </Snippet1>            
 // </Snippet2>
-
         } 
         catch (WebException e) 
         {

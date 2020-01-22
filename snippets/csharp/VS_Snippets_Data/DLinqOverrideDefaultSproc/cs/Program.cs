@@ -30,7 +30,6 @@ namespace cs_overridedefaultsproc
             }
             db.SubmitChanges();
             // </Snippet5>
-
         }
 
         static void Main(string[] args)

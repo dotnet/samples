@@ -3,5 +3,4 @@
 /// </summary>
 public class SomeClass
 {
-
 }

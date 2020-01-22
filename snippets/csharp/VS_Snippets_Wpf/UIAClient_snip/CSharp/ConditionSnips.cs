@@ -83,7 +83,6 @@ namespace CustomElementClient
             {
                 Console.WriteLine(autoElement.Current.Name);
             }
-
         }
         // </Snippet120>
 
@@ -154,7 +153,6 @@ namespace CustomElementClient
             // Example of getting the conditions from the AndCondition.
             Condition[] conditions = conditionEnabledButtons.GetConditions();
             Console.WriteLine("AndCondition has " + conditions.GetLength(0) + " subconditions.");
-
         }
         // </Snippet176>
 
@@ -219,7 +217,6 @@ namespace CustomElementClient
         public void GetTreeWalkerCondition()
         {
             NotCondition cond1 = (NotCondition)TreeWalker.ContentViewWalker.Condition;
-
         }
 
         #endregion Conditions

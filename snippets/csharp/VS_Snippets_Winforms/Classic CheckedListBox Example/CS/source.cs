@@ -106,7 +106,6 @@ namespace WindowsApplication1
                checkedListBox1.Items.Add(textBox1.Text,CheckState.Checked);
             textBox1.Text = "";
          }
-
       }
       // Activates or deactivates the Add button.
       private void textBox1_TextChanged(object sender, System.EventArgs e)
@@ -119,7 +118,6 @@ namespace WindowsApplication1
          {
             button1.Enabled = true;
          }
-            
         }
 
       // Moves the checked items from the CheckedListBox to the listBox.
@@ -133,7 +131,6 @@ namespace WindowsApplication1
          }
          if (listBox1.Items.Count>0)
             button3.Enabled=true;
-         
       }
         // Activates the move button if there are checked items.
       private void checkedListBox1_ItemCheck(object sender, ItemCheckEventArgs e)

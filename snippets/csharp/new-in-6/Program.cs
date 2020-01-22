@@ -39,6 +39,5 @@ namespace NewInCSharp6
 
     public class RecoverableException : Exception
     {
-
     }
 }

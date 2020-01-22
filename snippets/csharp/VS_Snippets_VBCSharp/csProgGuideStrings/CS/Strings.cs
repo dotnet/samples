@@ -305,7 +305,6 @@ namespace CsCsrefProgrammingStrings
             // Keep the console window open in debug mode.
             System.Console.WriteLine("Press any key to exit.");
             System.Console.ReadKey();
-
         }
     }
     /* Output:
@@ -744,7 +743,6 @@ namespace CsCsrefProgrammingStrings
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
         }
-
     }
     //</snippet29>
 
@@ -768,8 +766,6 @@ namespace CsCsrefProgrammingStrings
             Console.WriteLine(text);
         }
         //</snippet30>     
-
-
     }
 
     #region NOTUSED

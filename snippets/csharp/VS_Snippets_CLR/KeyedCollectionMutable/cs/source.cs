@@ -192,7 +192,6 @@ public class MutableKey
     {
         return String.Format("{0,9} {1}", _key, Value);
     }
-        
 }
 
 /* This code example produces the following output:

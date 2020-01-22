@@ -100,7 +100,6 @@ public class XMLAttributeAttribute_ctr1
       // Serialize the class, and close the TextWriter.
       mySerializer.Serialize(writer, myBook);
       writer.Close();
-
    }
 }
 // </Snippet2>

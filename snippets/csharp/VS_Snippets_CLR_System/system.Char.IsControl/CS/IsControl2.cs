@@ -11,7 +11,6 @@ public class ControlChar
          if (Char.IsControl(sentence, ctr))
            Console.WriteLine("Control character \\U{0} found in position {1}.", 
              Convert.ToInt32(sentence[ctr]).ToString("X4"), ctr);
-         
       }
    }
 }

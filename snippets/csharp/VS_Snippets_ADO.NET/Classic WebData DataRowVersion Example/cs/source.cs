@@ -12,7 +12,6 @@ static class Module1
 	{
 		CheckVersionBeforeAccept();
 		Console.ReadLine();
-
 	}
 	// <Snippet1>
 	private static void CheckVersionBeforeAccept()

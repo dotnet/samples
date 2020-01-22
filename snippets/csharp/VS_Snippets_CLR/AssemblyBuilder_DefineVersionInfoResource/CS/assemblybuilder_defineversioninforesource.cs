@@ -118,7 +118,6 @@ class Example
       //
       myAssembly.DefineVersionInfoResource();
       myAssembly.Save(assemName.Name + ".exe");
-
    }
 }
 // </Snippet1>

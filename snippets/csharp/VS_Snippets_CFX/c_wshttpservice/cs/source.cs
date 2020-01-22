@@ -98,7 +98,6 @@ namespace WsHttp
             }
             //</snippet3>
         }
- 
     }
 
     [ServiceContract]

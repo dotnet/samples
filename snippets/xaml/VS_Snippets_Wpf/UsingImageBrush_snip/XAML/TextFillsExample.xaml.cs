@@ -13,6 +13,5 @@ namespace Microsoft.Samples.Graphics.UsingImageBrush
         public TextFillsExample()
         {
         }
-
     }
 }

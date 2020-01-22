@@ -19,7 +19,6 @@ public class Form1:
         //UseTransparentProperty()
 
         //Add any initialization after the InitializeComponent() call
-
     }
 
     //Form overrides dispose to clean up the component list.
@@ -83,7 +82,6 @@ public class Form1:
         this.Name = "Form1";
         this.Text = "Form1";
         this.ResumeLayout(false);
-
     }
 
     #endregion
@@ -153,7 +151,6 @@ public class Form1:
         //ShowLineAndAlignment(e)
         //DemonstrateBlend(e)
         //ShowStringTrimming(e)
-
     }
 
     // The following code example demonstrates how to use the 
@@ -189,14 +186,12 @@ public class Form1:
             // parent.
             Button1.BackColor = Color.Transparent;
             Button2.BackColor = Color.Transparent;
-
         }
         catch(System.IO.FileNotFoundException)
         {
             MessageBox.Show("There was an error." +
                 "Make sure the image file path is valid.");
         }
-
     }
     //</snippet2>
 
@@ -228,7 +223,6 @@ public class Form1:
                 new object[]{Point1.X, Point2.X, Point1.Y, Point2.Y}),
                 this.Font, Brushes.Black, new PointF(10, 70));
         }
-
     }
     //</snippet3>
 

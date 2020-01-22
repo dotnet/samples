@@ -34,7 +34,6 @@ namespace TcpService
                     t.TcpMessageCert();
                     break;
             }
-
         }
 
         private int Choices()
@@ -64,7 +63,6 @@ namespace TcpService
                 return 1;
             }
             return answer;
-
         }
 
         private void TcpTransportCert()
@@ -275,7 +273,6 @@ namespace TcpService
 
         [OperationContract]
         double CalculateTax(double a);
-
     }
 
     public class Calculator : ICalculator
@@ -291,6 +288,5 @@ namespace TcpService
 
             return a * 1.0862;
         }
-
     }
 }

@@ -218,7 +218,6 @@ namespace LINQAndFiles
             }
             return retval;
         }
-
     }
     //</snippet3>
 

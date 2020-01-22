@@ -21,7 +21,6 @@ namespace cs_mismatch
                 // This branch is executed.
             }
             // </Snippet2>
-
         }
 
         void method3()
@@ -62,7 +61,6 @@ namespace cs_mismatch
             }
             // Only "food" is returned.
             // </Snippet6>
-
         }
 
         void method7()
@@ -76,9 +74,7 @@ namespace cs_mismatch
             }
             // Expected to return true for both "21" and "1021"
             // </Snippet7>
-
         }
-
     }
     // <Snippet1>
     class C1
@@ -103,7 +99,6 @@ namespace cs_mismatch
         }
     }
     // </Snippet4>
-
 }
 
 namespace ns
@@ -124,7 +119,6 @@ namespace ns
         }
     }
     // </Snippet8>
-
 }
 
 namespace ns3
@@ -135,5 +129,4 @@ namespace ns3
         string s;        // Map to T5.Col1.
     }
     // </Snippet9>
-
 }

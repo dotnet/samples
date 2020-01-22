@@ -16,7 +16,6 @@ public class Form1:
 		InitializeComponent();
 		AddHandlers();
 		InitializeFormHelp();
-
 	}
 
 	internal System.Windows.Forms.Label Label1;
@@ -89,7 +88,6 @@ public class Form1:
 		this.Name = "Form1";
 		this.Text = "Form1";
 		this.ResumeLayout(false);
-
 	}
 
 	private void AddHandlers()
@@ -129,7 +127,6 @@ public class Form1:
 		HelpProvider1.SetHelpString(withdrawal, 
 			"Enter an amount in the format xxx.xx" +
 			"and press Enter to withdraw.");
-
 	}
 	//</snippet2>
 
@@ -186,7 +183,6 @@ public class Form1:
 				// to the newBalance value.
 				balance.Text = newBalance.ToString();
 			}
-
 		}
 		catch(FormatException)
 		{
@@ -216,6 +212,5 @@ public class Form1:
 	{
 		Application.Run(new Form1());
 	}
-
 }
 //</snippet1>

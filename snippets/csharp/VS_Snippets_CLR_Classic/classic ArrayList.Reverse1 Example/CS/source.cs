@@ -34,7 +34,6 @@
           Console.WriteLine( "   {0}", obj );
        Console.WriteLine();
     }
-
  }
 
 

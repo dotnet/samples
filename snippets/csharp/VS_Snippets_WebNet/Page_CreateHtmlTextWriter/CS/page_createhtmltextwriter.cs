@@ -47,7 +47,6 @@ namespace WebPage
          writer.Write("<font color=blue> 'MyHtmlTextWriter' is used for rendering.</font>");
       }
    }
-
 }
 
 // </Snippet2>

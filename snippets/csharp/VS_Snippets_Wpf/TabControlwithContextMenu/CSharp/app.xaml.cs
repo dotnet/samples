@@ -13,6 +13,5 @@ namespace TabControlEx
 
 	public partial class app : Application
 	{
-
 	}
 }

@@ -40,7 +40,6 @@ public class Form1:
 		// Associate the event-handling method with the
 		// KeyDown event.
 		this.KeyDown += new KeyEventHandler(Form1_KeyDown);
-
 	}
 
 	// The form will handle all key events before the control with  
@@ -59,7 +58,6 @@ public class Form1:
 	{
 		Application.Run(new Form1());
 	}
-
 }
 
 //<snippet1>
@@ -86,7 +84,6 @@ public class MyMnemonicButton:Button
 		}
 		return false;
 	}
-
 }
 //</snippet1>
 //</snippet2>

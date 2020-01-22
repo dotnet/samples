@@ -23,7 +23,6 @@ class MySample{
 
         // Write an informational entry to the event log.    
         EventLog.WriteEntry("MySource", "Writing to event log.");
-
     }
 }
 

@@ -36,7 +36,6 @@ public class Sample
  
      // Transform the data.
      xsl.Transform(nav, null, fs, null);
-	
   }
 }
 //</snippet1>

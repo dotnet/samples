@@ -30,7 +30,6 @@ public class Part : IEquatable<Part>
             return (this.PartId.Equals(other.PartId));
         }
     // Should also override == and != operators.
-
     }
 public class Example
 {
@@ -134,7 +133,6 @@ public class Example
 
 
          */
-
     }
 }
 //</snippet1>

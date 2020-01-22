@@ -12,6 +12,5 @@ namespace WCSamples
 
     public partial class app : Application
     {
-
     }
 }

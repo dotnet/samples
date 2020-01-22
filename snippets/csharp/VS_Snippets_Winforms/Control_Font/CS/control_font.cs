@@ -76,5 +76,4 @@ private void DateTimePicker_FontChanged(object sender, EventArgs e)
 // </Snippet3>
 }
 // </Snippet2>
-
 }

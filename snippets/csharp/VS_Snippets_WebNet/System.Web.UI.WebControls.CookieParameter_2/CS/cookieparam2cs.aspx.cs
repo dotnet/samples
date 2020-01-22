@@ -29,7 +29,6 @@ public partial class cookieparam2cs_aspx : System.Web.UI.Page
 
             SqlDataSource1.SelectParameters.Add(cookieParam);
         }
-
     }
 }
 // </Snippet2>

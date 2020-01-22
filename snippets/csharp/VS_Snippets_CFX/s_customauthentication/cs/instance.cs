@@ -176,6 +176,5 @@ namespace Microsoft.ServiceModel.Samples
 
 			return result;
 		}
-
 	}
 }

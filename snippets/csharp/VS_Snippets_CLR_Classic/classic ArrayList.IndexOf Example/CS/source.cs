@@ -51,7 +51,6 @@ public class SamplesArrayList
             Console.WriteLine("   [{0}]:    {1}", i++, obj);
         Console.WriteLine();
     }
-
 }
 /* 
 This code produces output similar to the following:

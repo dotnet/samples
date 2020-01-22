@@ -8,7 +8,6 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("The attribute was applied.");
-
     }
 }
 //</snippet1>

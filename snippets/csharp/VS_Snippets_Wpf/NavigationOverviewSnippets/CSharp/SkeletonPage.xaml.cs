@@ -10,7 +10,6 @@ namespace SDKSample
         {
             InitializeComponent();
         }
-
     }
 }
 //</SnippetSkeletonPageCodebehind>

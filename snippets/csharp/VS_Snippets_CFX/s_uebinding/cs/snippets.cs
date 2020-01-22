@@ -191,7 +191,5 @@ namespace UE.ServiceModel.Samples
                 serviceHost.Close();
             }
         }
-
     }
-
 }

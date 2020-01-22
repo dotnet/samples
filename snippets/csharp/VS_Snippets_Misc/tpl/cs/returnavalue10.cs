@@ -36,13 +36,11 @@ class Program
 
         foreach (var name in task3.Result)
             Console.WriteLine(name);
-
     }
     class Test
     {
         public string Name { get; set; }
         public double Number { get; set; }
-
     }
 }
 //</snippet10>

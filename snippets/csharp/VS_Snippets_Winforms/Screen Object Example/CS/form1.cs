@@ -82,7 +82,6 @@ namespace Screen_Example_cs
 			this.Name = "Form1";
 			this.Text = "Form1";
 			this.ResumeLayout(false);
-
 		}
 		#endregion
 
@@ -111,7 +110,6 @@ namespace Screen_Example_cs
                 listBox1.Items.Add("Primary Screen: " + 
                     screen.Primary.ToString());
             }
-
         }
 		//</snippet1>
 	}

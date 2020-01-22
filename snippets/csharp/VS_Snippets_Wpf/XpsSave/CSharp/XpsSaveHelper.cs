@@ -417,5 +417,4 @@ namespace SDKSampleHelper
         #endregion // Private Data
 
     }// end:class SaveHelper
-
 }// end:namespace SDKSampleHelper

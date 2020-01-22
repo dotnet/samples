@@ -97,7 +97,6 @@ namespace Microsoft.ServiceModel.Samples
             equation += " / " + n.ToString();
             callback.Equals(result);
         }
-
     }
     // </Snippet5>
 }

@@ -54,7 +54,6 @@ public class Evidence_Example
             // Constructor used to create null host and null assembly evidence.
             Evidence ev3b = new Evidence(null, null);
             Console.WriteLine("Create new evidence with null host and assembly evidence");
-			
         }
         catch (Exception e)
         {

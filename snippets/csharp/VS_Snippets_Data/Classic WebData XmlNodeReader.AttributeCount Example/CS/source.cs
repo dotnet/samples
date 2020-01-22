@@ -29,7 +29,6 @@ public class Sample
          //Return the reader to the book element.
          reader.MoveToElement();
        }
-
      } 
 
      finally 
@@ -38,6 +37,5 @@ public class Sample
           reader.Close();
       }
   }
-  
 } // End class
    // </Snippet1>

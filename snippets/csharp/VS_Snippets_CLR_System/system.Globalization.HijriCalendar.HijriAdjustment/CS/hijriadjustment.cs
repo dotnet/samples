@@ -33,9 +33,7 @@ public class SamplesHijriCalendar  {
       Console.WriteLine( "   Year is {0}.", myCal.GetYear( myDT ) );
       Console.WriteLine( "   Month is {0}.", myCal.GetMonth( myDT ) );
       Console.WriteLine( "   Day is {0}.", myCal.GetDayOfMonth( myDT ) );
-
    }
-
 }
 
 /*

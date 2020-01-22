@@ -35,7 +35,6 @@ public class MyCollection : NameObjectCollectionBase  {
    public void Remove( int index )  {
       this.BaseRemoveAt( index );
    }
-
 }
 
 public class SamplesNameObjectCollectionBase  {
@@ -60,7 +59,6 @@ public class SamplesNameObjectCollectionBase  {
       myCol.Remove( "red" );
       Console.WriteLine( "After removing the element with the key \"red\" (Count = {0}):", myCol.Count );
       PrintKeysAndValues( myCol );
-
    }
 
    public static void PrintKeysAndValues( MyCollection myCol )  {
@@ -68,7 +66,6 @@ public class SamplesNameObjectCollectionBase  {
          Console.WriteLine( "[{0}] : {1}, {2}", i, myCol[i].Key, myCol[i].Value );
       }
    }
-
 }
 
 

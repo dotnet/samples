@@ -13,7 +13,6 @@ namespace FeedMapping
     public class SomeData
     {
         public SomeData() { }
-
     }
    
     class Snippets

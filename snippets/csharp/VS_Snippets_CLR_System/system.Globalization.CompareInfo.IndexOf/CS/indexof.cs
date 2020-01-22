@@ -48,7 +48,6 @@ public class SamplesCompareInfo  {
       PrintMarker( "           u\u0308 : ", myComp.IndexOf( myStr, "u\u0308", CompareOptions.IgnoreCase ), myComp.LastIndexOf( myStr, "u\u0308", CompareOptions.IgnoreCase ) );
       PrintMarker( "            Ü : ", myComp.IndexOf( myStr, 'Ü', CompareOptions.IgnoreCase ), myComp.LastIndexOf( myStr, 'Ü', CompareOptions.IgnoreCase ) );
       PrintMarker( "            ü : ", myComp.IndexOf( myStr, 'ü', CompareOptions.IgnoreCase ), myComp.LastIndexOf( myStr, 'ü', CompareOptions.IgnoreCase ) );
-
    }
 
    public static void PrintMarker( String Prefix, int First, int Last )  {
@@ -75,14 +74,12 @@ public class SamplesCompareInfo  {
 
          // Displays the array of Char as a String.
          Console.WriteLine( "{0}{1}", Prefix, new String( myCharArr ) );
-
       }
       else
         {
             Console.WriteLine( Prefix );
         }
     }
-
 }
 
 

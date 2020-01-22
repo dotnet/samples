@@ -96,6 +96,5 @@ namespace SamplesAspNet
         }
         // </Snippet7>
     }
-
 }
 // </Snippet1>

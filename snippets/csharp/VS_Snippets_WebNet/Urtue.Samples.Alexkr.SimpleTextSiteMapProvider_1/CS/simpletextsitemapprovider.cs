@@ -300,6 +300,5 @@ namespace Samples.AspNet.CS
     }
     // </Snippet9>
   }
-
 }
 // </Snippet1>

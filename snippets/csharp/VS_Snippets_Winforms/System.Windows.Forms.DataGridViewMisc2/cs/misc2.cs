@@ -116,7 +116,6 @@ public class Form1 : Form
         return clonedRow;
     }
     //</snippet60>
-
 }
 
 public class DerivedDGVCell : DataGridViewCell

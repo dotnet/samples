@@ -30,7 +30,6 @@ public class SamplesArrayList  {
       // Displays the contents of the string array.
       Console.WriteLine( "The string array contains the following values:" );
       PrintIndexAndValues( myArr );
-
    }
  
    public static void PrintIndexAndValues( ArrayList myList )  {

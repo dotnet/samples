@@ -78,8 +78,6 @@ class UsingSqlCacheDependencyDatabase
             "dataBase1", "dataBaseElement1");
         
 // </Snippet6>
-
     }
 } 
-                                    
 }

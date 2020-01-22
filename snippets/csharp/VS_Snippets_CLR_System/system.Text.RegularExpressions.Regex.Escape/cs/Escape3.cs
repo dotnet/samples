@@ -29,7 +29,6 @@ public class Example
       int commentNumber = 0;
       foreach (Match match in matches)
          Console.WriteLine("{0}: {1}", ++commentNumber, match.Groups[1].Value);
-         
    }
 }
 // The example shows possible output from the example:

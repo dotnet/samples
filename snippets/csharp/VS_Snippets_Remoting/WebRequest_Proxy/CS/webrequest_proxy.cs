@@ -92,7 +92,6 @@ class WebRequest_Proxy
 				Console.Read();
 			}
 // </Snippet1>
-
 		}
 		catch(WebException e)
 		{

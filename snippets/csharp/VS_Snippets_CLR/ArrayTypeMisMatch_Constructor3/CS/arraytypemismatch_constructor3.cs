@@ -28,7 +28,6 @@ public class ArrayTypeMisMatchConst
          // Throw an exception of with a message and innerexception.
          throw new ArrayTypeMismatchException("The Source and destination arrays are of not same type.", e);
       }
-   
    }
    static void Main()
    {

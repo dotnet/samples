@@ -18,7 +18,6 @@ public partial class DocGetTable : System.Web.UI.Page
 {
      protected void Page_Load(object sender, EventArgs e) 
      {
-     
      }
 
     // Use GetTable methods.
@@ -80,8 +79,6 @@ public partial class DocGetTable : System.Web.UI.Page
         }
 
         return addressList.ToString();
-        
     }
-
 }
 // </Snippet4>

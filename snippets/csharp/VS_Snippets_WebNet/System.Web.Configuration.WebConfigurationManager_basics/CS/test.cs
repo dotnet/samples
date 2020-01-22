@@ -120,7 +120,6 @@ namespace ConfigPlay
 					Console.WriteLine("No customsetting1 application string");
 			}
 			//</snippet7>
-
 		}
 	}
 }

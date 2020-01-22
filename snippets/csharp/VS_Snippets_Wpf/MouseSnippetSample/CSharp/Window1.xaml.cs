@@ -139,13 +139,11 @@ namespace WCSamples
             //<SnippetMouseEventArgsStylusDevice>
             StylusDevice stylusDevice = e.StylusDevice;
             //</SnippetMouseEventArgsStylusDevice>
-
         }
 
         private void btn1Click(object sender, RoutedEventArgs e)
         {
             this.Background = Brushes.WhiteSmoke;
-
         }
 
         //<SnippetMouseEventArgsChangedButton>
@@ -238,7 +236,6 @@ namespace WCSamples
                     Canvas.SetTop(box, Canvas.GetTop(box) + 1);
                 }
             }
-
         }
         //</SnippetMouseWheelDelta>
 
@@ -320,7 +317,6 @@ namespace WCSamples
                 source.Height += 50;
                 source.Width += 50;
             }
-
         }
         private void MyLostMouseCapture(object sender, MouseEventArgs e)
         {
@@ -331,9 +327,7 @@ namespace WCSamples
                 source.Height -= 50;
                 source.Width -= 50;
             }
-
         }
         //</SnippetMouseSnippetsGotLostMouseCapture>
     }
-
 }

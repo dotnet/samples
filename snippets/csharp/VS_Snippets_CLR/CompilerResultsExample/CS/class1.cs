@@ -22,7 +22,6 @@ namespace CompilerResults
                     Console.WriteLine( cr.Output[i] );
                 for( int i=0; i<cr.Errors.Count; i++ )                
                     Console.WriteLine( i.ToString() + ": " + cr.Errors[i].ToString() );
-                
             }
             else
             {

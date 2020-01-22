@@ -43,7 +43,6 @@ namespace ThemeReourcesControlLibrary
                 Ellipse1.Fill = null;
             }
         }
-
     }
 
     //This is a dummy class with no ControlTemplate.  It exists just so the

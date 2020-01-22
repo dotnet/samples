@@ -22,5 +22,4 @@ public class Form1: Form
         mappings.Clear();
     }
     // </Snippet1>
-
 }

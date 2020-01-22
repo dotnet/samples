@@ -23,7 +23,6 @@ namespace WpfCustomDictionary
         public Window1()
         {
             InitializeComponent();
-            
         }
 
         //<Snippet2>

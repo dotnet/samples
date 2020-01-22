@@ -12,6 +12,5 @@ namespace InkCanvasEditingModeSample
 
     public partial class MyApp : Application
     {
-
     }
 }

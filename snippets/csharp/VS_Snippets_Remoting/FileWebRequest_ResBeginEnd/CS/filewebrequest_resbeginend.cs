@@ -52,7 +52,6 @@ using System.Threading;
 			      // Begin the Asynchronous request for getting file content using 'BeginGetResponse()' method.	
 			      IAsyncResult asyncResult =(IAsyncResult) myRequestDeclare.myFileWebRequest.BeginGetResponse(new AsyncCallback(RespCallback),myRequestDeclare);			
 			      allDone.WaitOne();
-
 			   }
             catch(ArgumentNullException e)
 			   {
@@ -99,7 +98,6 @@ using System.Threading;
 				allDone.Set();
 				Console.WriteLine("File reading is over.");	
 		}
-
 	}
 // </Snippet2>			
 // </Snippet1>

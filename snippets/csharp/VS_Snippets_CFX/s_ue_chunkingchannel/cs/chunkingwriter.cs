@@ -82,7 +82,6 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
                     chunk.Headers.CopyHeaderFrom(headers, i);
                 }
             }
-
         }
         void CreateStartChunk()
         {
@@ -93,7 +92,6 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
                             startBodyWriter);
             SetStartMessageHeaders(this.originalMessage, startMessage);
             this.outputChannel.Send(startMessage, chunkingTimeout.RemainingTime());
-
         }
         void WriteStartChunkCallback(XmlDictionaryWriter writer, object state)
         {
@@ -136,7 +134,6 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
                     CreateChunkMessage();
                 }
             }
-        
         }
         void CreateChunkMessage()
         {
@@ -148,7 +145,6 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
             Console.WriteLine(" > Sent chunk {0} of message {1}", chunkNum, this.messageId);
             this.chunkNum++;
             this.chunkState = new ChunkState();
-
         }
         public override void WriteCData(string text)
         {
@@ -216,7 +212,6 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
             endMessage.Headers.Add(MessageHeader.CreateHeader(ChunkingUtils.ChunkNumberHeader, ChunkingUtils.ChunkNs, this.chunkNum, true));
             this.outputChannel.Send(endMessage, chunkingTimeout.RemainingTime());
             Console.WriteLine(" > Sent chunk {0} of message {1}", chunkNum, this.messageId);
-            
         }
         public override void WriteEntityRef(string name)
         {
@@ -277,7 +272,6 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
             {
                 throw new InvalidOperationException("Chunking channel supports only messages with the format ...<soap:Body><operationElement><paramElement>data to be chunked</paramElement></operationElement></soap:Body>. Check that the service operation has one input parameter and/or one output parameter or return value.");
             }
-
         }
 
         public override WriteState WriteState

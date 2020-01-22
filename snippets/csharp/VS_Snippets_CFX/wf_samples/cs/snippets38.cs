@@ -179,7 +179,6 @@ namespace WF_Snippets
             event EventHandler<TaskEventArgs> TaskCompleted;
         }
         // </snippet312>
-
     }
 
     // <snippet310>
@@ -201,5 +200,4 @@ namespace WF_Snippets
         }
     }
     // </snippet310>
-
 }

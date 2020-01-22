@@ -25,7 +25,6 @@ namespace Microsoft.Samples.ContentBasedCorrelation.Service
                 Console.ReadLine();
                 host.Close();
             }
-
         }
 
         static Activity GetServiceWorkflow()
@@ -152,8 +151,6 @@ namespace Microsoft.Samples.ContentBasedCorrelation.Service
                     new WriteLine { Text = new InArgument<string>( (e) => string.Format("Order will be shipped to {0} as soon as possible", customer.Get(e).Name) ) }
                 }
             };
-
         }
     }
-
 }

@@ -97,5 +97,4 @@ class WebRequest_ContentLength
 			Console.WriteLine("Message : " + e.Message);
 		}
 	}
-		
 }

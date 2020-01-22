@@ -17,7 +17,6 @@ namespace CodeAnalysisSample
             string version = String.Empty;
         }
         //</Snippet2>
-
     }
 }
 //</Snippet1>

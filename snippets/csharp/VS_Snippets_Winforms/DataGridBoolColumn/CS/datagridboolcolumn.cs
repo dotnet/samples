@@ -216,7 +216,6 @@ public class MyForm : System.Windows.Forms.Form
       Text = "MyForm";
       ((System.ComponentModel.ISupportInitialize)(myDataGrid)).EndInit();
       ResumeLayout(false);
-
    }
 
    [STAThread]

@@ -46,7 +46,6 @@ namespace Samples.AspNet
                 this["maxUsers"] = value;
             }
         }
-
     }
 
     // Create the custom section and write it to
@@ -134,7 +133,6 @@ namespace Samples.AspNet
                 string st = err.StackTrace;
                 Console.WriteLine("StackTrace: {0}", st);
                 // </Snippet8> 
-
             }
         }
         // </Snippet2>
@@ -143,7 +141,6 @@ namespace Samples.AspNet
         {
             ModifyCustomSection();
         }
-
     }
 }
 // </Snippet1>

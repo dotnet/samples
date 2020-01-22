@@ -34,6 +34,5 @@ namespace ListBoxSort_snip
 //</SnippetSort>
         }
         //</SnippetHowToCode>
-
     }
 }

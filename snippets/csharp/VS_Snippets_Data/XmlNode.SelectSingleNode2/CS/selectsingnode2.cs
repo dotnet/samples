@@ -21,7 +21,6 @@ public class Sample
      book = root.SelectSingleNode("descendant::bk:book[bk:author/bk:last-name='Atwood']", nsmgr);
 
       Console.WriteLine(book.OuterXml);
-
   }
 }
 //</snippet1>

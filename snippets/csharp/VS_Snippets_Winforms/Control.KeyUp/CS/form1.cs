@@ -69,7 +69,6 @@ namespace ControlKeyUpEx
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
-
         }
 #endregion
 
@@ -84,7 +83,6 @@ namespace ControlKeyUpEx
 
         private void textBox1_MouseUp(object sender, System.Windows.Forms.MouseEventArgs e)
         {
-
         }
 
         //<Snippet1>

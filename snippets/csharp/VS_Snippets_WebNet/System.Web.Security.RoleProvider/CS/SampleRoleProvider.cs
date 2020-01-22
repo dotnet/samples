@@ -741,7 +741,6 @@ namespace Samples.AspNet.Roles
 
       log.WriteEntry(message);
     }
-
   }
 }
 //</Snippet1>

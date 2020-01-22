@@ -123,7 +123,6 @@ namespace BasicCodeDomApp
             snippetMethod = new CodeSnippetTypeMember(sw.ToString());
         }
         //</Snippet3>
-
     }
 }
 //</Snippet1>

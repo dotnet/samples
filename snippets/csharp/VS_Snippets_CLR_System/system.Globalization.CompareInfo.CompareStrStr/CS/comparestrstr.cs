@@ -29,9 +29,7 @@ public class SamplesCompareInfo  {
       Console.WriteLine( "   With myCompIntl.Compare: {0}", myCompIntl.Compare( myStr1, myStr2 ) );
       Console.WriteLine( "   With myCompTrad.Compare: {0}", myCompTrad.Compare( myStr1, myStr2 ) );
       Console.WriteLine( "   With myCompInva.Compare: {0}", myCompInva.Compare( myStr1, myStr2 ) );
-
    }
-
 }
 
 

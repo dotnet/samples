@@ -59,7 +59,6 @@ namespace Samples.AspNet
 
                 data = "Make:" + make + " Color:" + color + 
                         " Miles:" + miles + " Year:" + year;
-
             }
             else
             {
@@ -102,8 +101,6 @@ namespace Samples.AspNet
             
             return selectedCar;
         }
-
     }
-
 }
 // </Snippet1>

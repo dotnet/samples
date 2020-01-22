@@ -64,7 +64,6 @@ public class Run
       // Serialize the class, and close the TextWriter.
       overRideSerializer.Serialize(writer, myGroup);
        writer.Close();
-
    }
 
    public void DeserializeOriginal(string filename)
@@ -94,7 +93,6 @@ public class Run
       myGroup = (Group) overRideSerializer.Deserialize(reader);
 
       Console.WriteLine(myGroup.GroupName);
-
    }
 
    private XmlSerializer CreateOverrideSerializer()
@@ -119,6 +117,5 @@ public class Run
       XmlSerializer ser = new XmlSerializer(myMapping);
       return ser;
    }
-
 }
 //</Snippet1>

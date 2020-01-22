@@ -35,7 +35,6 @@ namespace ResolveAddressSync
             }
         }
 //</Snippet2>
-
     }
 }
 //</Snippet1>

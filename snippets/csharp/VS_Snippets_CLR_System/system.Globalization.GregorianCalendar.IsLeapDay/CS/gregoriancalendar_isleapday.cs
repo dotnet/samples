@@ -37,9 +37,7 @@ public class SamplesGregorianCalendar  {
          }
          Console.WriteLine();
       }
-
    }
-
 }
 
 /*

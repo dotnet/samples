@@ -29,8 +29,6 @@ class ADUnload
 		{
 		Console.WriteLine("The appdomain MyDomain does not exist.");
 		}
-		
 	}
-	
 }
 //  </SNIPPET1>

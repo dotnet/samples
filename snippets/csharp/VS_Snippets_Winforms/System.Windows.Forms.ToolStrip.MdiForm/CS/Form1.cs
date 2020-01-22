@@ -197,7 +197,6 @@ namespace MdiFormCS
             this.toolStripPanel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
@@ -261,7 +260,6 @@ namespace MdiFormCS
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

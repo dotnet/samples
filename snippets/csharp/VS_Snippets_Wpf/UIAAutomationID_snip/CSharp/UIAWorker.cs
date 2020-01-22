@@ -296,6 +296,5 @@ namespace UIAAutomationID_snip
         private void Feedback(string outputStr)
         {
         }
-
     }
 }

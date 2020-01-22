@@ -29,7 +29,6 @@ namespace SomeNamespace
             Vertex[] verts = new Vertex[3];
             SomeUnsafeMethod( verts, verts.Length );
         }
-
     }
 }
 

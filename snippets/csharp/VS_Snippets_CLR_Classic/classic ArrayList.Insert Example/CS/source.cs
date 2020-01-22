@@ -59,7 +59,6 @@
           Console.Write( "   {0}", obj );
        Console.WriteLine();
     }
-
  }
  /* 
  This code produces the following output.

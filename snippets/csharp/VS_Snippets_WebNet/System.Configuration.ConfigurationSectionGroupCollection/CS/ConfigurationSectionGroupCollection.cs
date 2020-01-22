@@ -63,7 +63,6 @@ namespace Samples.Config
                 this["maxIdleTime"] = value;
             }
         }
-       
     }
 
     // Define a custom section group.
@@ -73,7 +72,6 @@ namespace Samples.Config
 
         public CustomSectionGroup()
         {
-            
         }
 
         public CustomSection Custom
@@ -81,7 +79,6 @@ namespace Samples.Config
             get { return (CustomSection) 
                 Sections.Get("CustomSection");}
         }
-
     }
 
     class UsingCustomSectionGroupCollection
@@ -111,13 +108,11 @@ namespace Samples.Config
                     customSectionGroup.ForceDeclaration(true);
                     config.Save(ConfigurationSaveMode.Full);
                 }
-
             }
             catch (ConfigurationErrorsException err)
             {
                 Console.WriteLine(err.ToString());
             }
-
         }
 
         //<Snippet2>
@@ -195,9 +190,7 @@ namespace Samples.Config
                         customGroup.Name);
                     Console.WriteLine("Type:   {0}",
                         customGroup.Type);
-
                 }
-
             }
             catch (ConfigurationErrorsException err)
             {
@@ -261,7 +254,6 @@ namespace Samples.Config
                     Console.WriteLine(
                      "Key value: {0}", key);
                 }
-
             }
             catch (ConfigurationErrorsException err)
             {
@@ -295,7 +287,6 @@ namespace Samples.Config
 
                 Console.WriteLine(
                     "Group2: {0}", group2.Name);
-
             }
             catch (ConfigurationErrorsException err)
             {
@@ -327,7 +318,6 @@ namespace Samples.Config
                 else
                     Console.WriteLine(
                         "CustomGroup does not exists.");
-
             }
             catch (ConfigurationErrorsException err)
             {
@@ -368,7 +358,6 @@ namespace Samples.Config
             {
                 Console.WriteLine(err.ToString());
             }
-
         }
 
         // Exercise the collection.
@@ -390,7 +379,6 @@ namespace Samples.Config
             // Remove();
             // Clear();
         }
-
     }
 }
 // </Snippet1>

@@ -77,7 +77,6 @@ namespace Mssc.TransportProtocols.Utilities
                                     SocketOptionName.AddMembership, 
                                     mcastOption);
 // </Snippet2>
-    
       } 
 
       catch (Exception e) 
@@ -105,7 +104,6 @@ namespace Mssc.TransportProtocols.Utilities
           Console.WriteLine("Received broadcast from {0} :\n {1}\n",
             groupEP.ToString(),
             Encoding.ASCII.GetString(bytes,0,bytes.Length));
-
         }
 
         mcastSocket.Close();

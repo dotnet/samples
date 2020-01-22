@@ -47,7 +47,6 @@ public static void MySocketPermission(){
 	   while (myEnumerator.MoveNext()) {
                Console.WriteLine(((EndpointPermission)myEnumerator.Current).ToString());
 	        }      
-
            }
 
 //</Snippet2>
@@ -87,7 +86,6 @@ public static void MySocketPermission(){
      if (mySocketPermissionUnion.IsUnrestricted()){
      	
           //Do nothing.  There are no restrictions.
-
      }
      else{
          // Enforces the permissions found in mySocketPermissionUnion on any Socket Resources used below this statement. 
@@ -115,7 +113,5 @@ public static void MySocketPermission(){
 
 public static void Main(){
 MySocketPermissionExample.MySocketPermission();
-
 }
-
 }

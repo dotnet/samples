@@ -47,7 +47,6 @@ namespace HeaderedItemsControlSimple
             if (hitemsCtrl.HasHeader == true)
             {
                 MessageBox.Show(hitemsCtrl.Header.ToString());
-                
             }
             //</SnippetHeaderedItemsControl_HasHeader>
         }

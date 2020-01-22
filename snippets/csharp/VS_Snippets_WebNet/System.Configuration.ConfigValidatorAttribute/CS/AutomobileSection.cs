@@ -65,7 +65,6 @@ namespace Samples.AspNet
             {
                 this["commute"] = value;
             }
-
         }
 
         // Apply the FixedValidatorAttribute. Here your choice 
@@ -93,7 +92,6 @@ namespace Samples.AspNet
             {
                 this["dream"] = value;
             }
-
         }
 
         public SelectCar()
@@ -102,6 +100,5 @@ namespace Samples.AspNet
             // initializations, if necessary.
         }
     }    
-
 }
 // </Snippet11>

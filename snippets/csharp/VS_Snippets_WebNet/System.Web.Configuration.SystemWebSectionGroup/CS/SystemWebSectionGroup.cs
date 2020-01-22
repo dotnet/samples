@@ -800,8 +800,6 @@ namespace Samples.AspNet
                 // debugging purposes.
                 msg = e.ToString();
             }
-
         }
-
     }
 }

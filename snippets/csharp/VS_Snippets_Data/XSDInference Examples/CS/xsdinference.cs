@@ -6,7 +6,6 @@ class XSDInference
 {
 	static void Main()
 	{
-        
     }
 
     static void XSDInference_OverallExample()

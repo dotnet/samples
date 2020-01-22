@@ -109,7 +109,6 @@ namespace SDKSamples
             if (source != null)
             {
                 lblMouseClick.Content = source.Name;
-
             }
         }
 
@@ -120,7 +119,6 @@ namespace SDKSamples
             if (source != null)
             {
                 lblLastMouseDown.Content = source.Name;
-
             }
         }
 
@@ -131,7 +129,6 @@ namespace SDKSamples
             if (source != null)
             {
                 lblLastMouseUp.Content = source.Name;
-
             }
         }
         
@@ -147,7 +144,6 @@ namespace SDKSamples
                     source.Width -= 15;
                 }
             }
-       
         }
 
         private void OnButtonMouseWheel(object sender, MouseWheelEventArgs e)

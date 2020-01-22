@@ -16,7 +16,6 @@ public class ReportRouteHandler : System.Web.Routing.IRouteHandler
 {
     public ReportRouteHandler()
     {
-
     }
 
     public IHttpHandler GetHttpHandler(RequestContext requestContext)

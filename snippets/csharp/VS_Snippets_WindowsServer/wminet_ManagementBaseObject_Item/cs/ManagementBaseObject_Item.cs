@@ -10,7 +10,6 @@ public class Sample
         foreach (ManagementObject o in c.GetInstances())
             Console.WriteLine(
                 "Next instance of Win32_Process : {0}", o["Name"]);
-
     }
 }
 //</Snippet1>

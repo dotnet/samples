@@ -101,10 +101,8 @@ namespace SDKSample
                     resourcePart = package.GetPart(uriResourceTarget);
                     ExtractPart(resourcePart, targetDirectory);
                 }
-
             }// end:using(Package package) - Close & dispose package.
             //</SnippetPackageReadUsing>
-
         }// end:ExtractPackageParts()
 
         //<SnippetPackageReadExtract>
@@ -160,7 +158,5 @@ namespace SDKSample
                 target.Write(buf, 0, bytesRead);
         }// end:CopyStream()
         //</SnippetPackageReadExtract>
-
     }// end:class PackageRead
-
 }// end:namespace SDKSample

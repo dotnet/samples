@@ -28,7 +28,5 @@ namespace PictureViewer
         }
     }
     // </snippet1>
-
     }
-
 }

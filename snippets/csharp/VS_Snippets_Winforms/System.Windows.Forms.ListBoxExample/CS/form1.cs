@@ -14,7 +14,6 @@ public class Form1:
 		InitializeComponent();
 		InitializeOwnerDrawnListBox();
 		//Add any initialization after the InitializeComponent() call
-
 	}
 
 	//Form overrides dispose to clean up the component list.
@@ -51,7 +50,6 @@ public class Form1:
 		this.Name = "Form1";
 		this.Text = "Form1";
 		this.ResumeLayout(false);
-
 	}
 
 	#endregion
@@ -87,7 +85,6 @@ public class Form1:
 			new MeasureItemEventHandler(ListBox1_MeasureItem);
 		ListBox1.DrawItem += new DrawItemEventHandler(ListBox1_DrawItem);
 		this.Controls.Add(this.ListBox1);
-		
 	}
 
 	// Handle the DrawItem event for an owner-drawn ListBox.
@@ -144,7 +141,6 @@ public class Form1:
 		{
 			e.ItemHeight += 5;
 		}
-
 	}
 
 	//</snippet1>
@@ -154,5 +150,4 @@ public class Form1:
 	{
 		Application.Run(new Form1());
 	}
-
 }

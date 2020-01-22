@@ -29,5 +29,4 @@ private void AcceptChanges()
    myDataSet.AcceptChanges();
 }
 // </Snippet1>
-
 }

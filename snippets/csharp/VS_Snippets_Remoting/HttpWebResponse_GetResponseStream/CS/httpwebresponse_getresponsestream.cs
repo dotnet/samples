@@ -71,5 +71,4 @@ class HttpWebResponseSnippet
 				Console.WriteLine("\nThe following Exception was raised : {0}",e.Message);
 			}
 	}
-      
 }

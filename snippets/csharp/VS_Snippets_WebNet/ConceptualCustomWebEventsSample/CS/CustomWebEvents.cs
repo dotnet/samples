@@ -23,7 +23,6 @@ namespace Samples.AspNet.Management
 
             httpApp.EndRequest +=
                 new EventHandler(OnEndRequest);
-
         }
 
         // Issues a custom begin request event.
@@ -47,7 +46,6 @@ namespace Samples.AspNet.Management
                 httpApp.Context.Response.Output.WriteLine(
                     ex.ToString());
             }
-
         }
 
         // Issues a custom end request event.
@@ -70,7 +68,6 @@ namespace Samples.AspNet.Management
                 httpApp.Context.Response.Output.WriteLine(
                     ex.ToString());
             }
-
         }
     }
     public class SampleWebRequestEvent : System.Web.Management.WebRequestEvent
@@ -104,7 +101,6 @@ namespace Samples.AspNet.Management
             // Perform custom initialization.
             customCreatedMsg = string.Format("Event created at: {0}",
                 EventTime.ToString());
-
         }
 
         // Raises the SampleWebRequestEvent.

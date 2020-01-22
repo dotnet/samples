@@ -82,7 +82,6 @@ namespace FormClosingEx
          this.Text = "Form1";
          this.Closing += new System.ComponentModel.CancelEventHandler(this.Form1_Closing);
          this.ResumeLayout(false);
-
       }
 		#endregion
 

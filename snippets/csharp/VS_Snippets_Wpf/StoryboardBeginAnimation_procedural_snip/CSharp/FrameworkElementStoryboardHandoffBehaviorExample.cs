@@ -105,7 +105,6 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
 
             // Change the color of the ellipse.
             interactiveEllipse.Fill = Brushes.Lime;
-                    
         }
         
         // When the user right-clicks, use the 
@@ -129,10 +128,7 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
                 
             // Change the color of the ellipse.
             interactiveEllipse.Fill = Brushes.Orange;
-
         }
-        
     }
- 
 }
 // </SnippetGraphicsMMFrameworkElementStoryboardHandoffBehaviorExample>

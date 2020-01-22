@@ -26,7 +26,6 @@ public class Sample {
              
      // Write the XML and close the writer.
      writer.Close();  
-
   }
 }
 //</snippet1>

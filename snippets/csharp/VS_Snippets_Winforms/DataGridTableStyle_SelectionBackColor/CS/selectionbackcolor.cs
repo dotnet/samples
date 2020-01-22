@@ -80,7 +80,6 @@ public class MyForm : System.Windows.Forms.Form
       this.Text = "MyForm";
       this.Load += new System.EventHandler(this.MyForm_Load);
       this.ResumeLayout(false);
-
    }
 #endregion
       

@@ -38,7 +38,6 @@ namespace DataGrid_CustomColumns
             
             //Bind the DataGrid to the customer data
             DG1.DataContext = custdata;
-           
         }
         //</SnippetAll2>
 
@@ -51,7 +50,6 @@ namespace DataGrid_CustomColumns
             public Uri Email { get; set; }
             public bool IsMember { get; set; }
             public OrderStatus Status { get; set; }
-
         }
         //</SnippetCustomerClass>
 
@@ -122,5 +120,4 @@ namespace DataGrid_CustomColumns
         }
     }
     //</SnippetHyperlink3>
-
 }

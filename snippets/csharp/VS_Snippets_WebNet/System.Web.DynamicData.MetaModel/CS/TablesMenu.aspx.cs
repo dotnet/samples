@@ -20,7 +20,6 @@ public partial class TablesMenu : System.Web.UI.Page
      
          GetVisibleTables();
          GetTables();
-      
     }
 
     // <Snippet61> 

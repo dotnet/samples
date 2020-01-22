@@ -15,6 +15,5 @@ namespace layout_information
 			mainWindow.InitializeComponent();
 			mainWindow.Show();
         }
-
 	}
 }

@@ -11,6 +11,5 @@ namespace DragDropWalkthrough
         {
             InitializeComponent();
         }
-
     }
 }

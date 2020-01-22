@@ -25,7 +25,6 @@ public class Sample
     //Transform the file and send the output to the console.
     xslt.Transform(doc, null, writer, null);
     writer.Close();
-
   }
 }
    // </Snippet1>

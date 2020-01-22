@@ -108,7 +108,5 @@ namespace Microsoft.Samples.WF.ResumeBookmarkEndpoint
 
         [OperationContract(Name = "ResumeBookmark", IsOneWay = true)]
         void ResumeBookmark(Guid instanceId, string bookmarkName, string message);
-
     }
-
 }

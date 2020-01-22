@@ -25,6 +25,5 @@ namespace NorthwindService
         }
     }
     //</snippetDataServiceClass>
-
 }
 //</snippetNorthwindServiceFull>

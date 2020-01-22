@@ -16,5 +16,4 @@ public partial class OwnedWindow : System.Windows.Window
     {
         InitializeComponent();
     }
-
 }

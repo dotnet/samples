@@ -278,7 +278,6 @@ namespace AttributesDemoControlTest
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
-
 		}
 	}
 }

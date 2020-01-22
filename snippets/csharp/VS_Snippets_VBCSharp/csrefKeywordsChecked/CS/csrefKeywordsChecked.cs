@@ -173,8 +173,6 @@ namespace csrefKeywordsChecked
                 Console.WriteLine(i3);
             }
             //</Snippet4>
-
         }
     }
-
 }

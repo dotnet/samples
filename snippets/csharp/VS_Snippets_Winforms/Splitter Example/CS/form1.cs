@@ -86,7 +86,6 @@ namespace SplitterEx
 			this.ClientSize = new System.Drawing.Size(384, 365);
 			this.Name = "Form1";
 			this.Text = "Form1";
-
 		}
 		#endregion
 

@@ -78,7 +78,6 @@ namespace Examples.CS.WebControls.Design
             set { subMenuStyles = value; }
         } // LevelSubMenuStyles
         // </snippet5>
-
     } // MyMenuControl
 } // Examples.CS.WebControls.Design
 // </snippet1>

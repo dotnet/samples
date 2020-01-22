@@ -43,7 +43,6 @@ namespace CriticalFinalizer
                 }
             }
         }
-        
     }
 }
 //</Snippet1>

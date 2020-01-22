@@ -18,5 +18,4 @@ public class Form1: Form
             columnMappings.RemoveAt("Picture");
     }
     // </Snippet1>
-
 }

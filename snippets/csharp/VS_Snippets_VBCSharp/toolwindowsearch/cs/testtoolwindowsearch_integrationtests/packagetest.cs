@@ -52,7 +52,6 @@ namespace TestToolWindowSearch_IntegrationTests
                 Guid packageGuid = new Guid(Microsoft.TestToolWindowSearch.GuidList.guidTestToolWindowSearchPkgString);
                 Assert.IsTrue(0 == shellService.LoadPackage(ref packageGuid, out package));
                 Assert.IsNotNull(package, "Package failed to load");
-
             });
         }
     }

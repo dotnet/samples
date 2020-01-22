@@ -80,7 +80,6 @@ namespace StylusSamples
             myDoubleAnimation.RepeatBehavior = RepeatBehavior.Forever;
 
             buttonTransform.BeginAnimation(TranslateTransform.XProperty, myDoubleAnimation);       
-      
         }
         //</Snippet24>
 
@@ -123,7 +122,6 @@ namespace StylusSamples
             {
                 SynchronizeCurrentStylus();
             }
-         
         }
 
         void clearText_Click(object sender, RoutedEventArgs e)
@@ -185,7 +183,6 @@ namespace StylusSamples
             //UIElement elementAfterSynchronize = (UIElement)Mouse.DirectlyOver;
             //MessageBox.Show("Before Mouse.Synchronize: " + elementBeforeSynchronize.ToString() + "\r\n" +
             //    "After Mouse.Synchronize: " + elementAfterSynchronize.ToString());
-            
         }
 
         void inkCanvas1_StylusDown(object sender, StylusDownEventArgs e)

@@ -20,7 +20,6 @@ namespace TransparencyWarningsDemo
     //        return bytes;
     //    }
     }
-
 }
 
 //</Snippet1>

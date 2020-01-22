@@ -35,6 +35,5 @@ namespace ColorPickerApp
             colorPickerValue.Text = e.NewValue.ToString();
         }
         //</SnippetOnColorChangedSnip>
-
     }
 }

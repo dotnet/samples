@@ -19,5 +19,4 @@ public class Form1: Form
         return true;
     }
     // </Snippet1>
-
 }

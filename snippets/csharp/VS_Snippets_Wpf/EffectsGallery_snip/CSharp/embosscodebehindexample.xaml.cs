@@ -38,7 +38,6 @@ namespace SDKSample
             // Apply the bitmap effect to the Image.
             myImage.BitmapEffect = myEmbossEffect;
         }
-
     }
 }
 // </SnippetCodeBehindEmbossCodeBehindExampleWholePage>

@@ -30,7 +30,6 @@ namespace XsdContractImporterExample
                 Console.WriteLine("Press <Enter> to end....");
                 Console.ReadLine();
             }
-
         }
 
         static XmlSchemaSet Export()

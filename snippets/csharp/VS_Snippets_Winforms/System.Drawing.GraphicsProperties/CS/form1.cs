@@ -17,7 +17,6 @@ public class Form1:
         this.Paint += new PaintEventHandler(Form1_Paint);
 
         //Add any initialization after the InitializeComponent() call
-
     }
 
     //Form overrides dispose to clean up the component list.
@@ -48,7 +47,6 @@ public class Form1:
         this.ClientSize = new System.Drawing.Size(292, 266);
         this.Name = "Form1";
         this.Text = "Form1";
-
     }
 
     #endregion
@@ -86,7 +84,6 @@ public class Form1:
         // Dispose of the path and region objects.
         path.Dispose();
         myRegion.Dispose();
-
     }
     //</snippet1>
     // The following code example demonstrates how to use the 
@@ -159,7 +156,6 @@ public class Form1:
 
         // Draw the rectangle again.
         e.Graphics.DrawRectangle(Pens.Tomato, rectangle1);
-
     }
     //</snippet3>
 
@@ -183,7 +179,6 @@ public class Form1:
         // at the outer edge of the region.
         e.Graphics.DrawString("Outside of Clip", new Font("Arial", 
             12.0F, FontStyle.Regular), Brushes.Black, 0.0F, 0.0F);
-
     }
     //</snippet4>
 
@@ -237,7 +232,6 @@ public class Form1:
 
         // Dispose of the font object.
         myFont.Dispose();
-
     }
     //</snippet5>
 

@@ -309,6 +309,5 @@ namespace VbPowerPacksShapeEventsCS
         }
 
         // </Snippet23>
-
     }
 }

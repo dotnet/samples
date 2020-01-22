@@ -7,7 +7,6 @@ using System.ComponentModel;
 [MetadataType(typeof(ProductMetaData))]
 public partial class Product
 {
-
 }
 
 public class ProductMetaData
@@ -29,7 +28,6 @@ public class ProductMetaData
         ErrorMessage = "Value for {0} must be between {1} and {2}")]
     public object SellEndDate;
     // </Snippet13>
-
 }
  
 //</Snippet1>

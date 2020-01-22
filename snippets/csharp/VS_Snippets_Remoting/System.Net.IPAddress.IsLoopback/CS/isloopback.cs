@@ -74,7 +74,6 @@ class IsLoopbackTest
       Console.WriteLine("Source : " + e.Source);
       Console.WriteLine("Message : " + e.Message);
     }
-
    }
 }
 // </Snippet1>

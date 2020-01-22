@@ -30,7 +30,6 @@ namespace VStyles
             this.Controls.Add(this.button1);
 
             this.Text = "Application.EnableVisualStyles Example";
-
         }
     }
 }

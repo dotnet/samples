@@ -199,7 +199,6 @@ namespace ProcessAsyncStreamSamples
                     {
                         p.CancelErrorRead();
                         p.CancelOutputRead();
-
                     }
                 }
                 else 

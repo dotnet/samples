@@ -72,9 +72,7 @@ namespace Mssc.Services.ConnectionManagement
 // </Snippet2>
 
           Console.WriteLine("\r\n");
-
         }
-
       }
       catch (Exception e) 
       {
@@ -146,7 +144,6 @@ namespace Mssc.Services.ConnectionManagement
       // Get additonal address information.
       IPAddressAdditionalInfo();
     }
-
   }
 }
   // </Snippet1>

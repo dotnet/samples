@@ -223,6 +223,5 @@ Key: http://server1.someDomain.contoso.com  - HTTP/server1.someDomain.contoso.co
             //RequestMutualAuth(new Uri("http://sharriso1/test/postaccepter.aspx"));
            // RequestResource(new Uri("http://sharriso1.redmond.corp.microsoft.com/test/postaccepter.aspx"));
            RequestResource(new Uri("http://www.google.com"));
-
         }
     }

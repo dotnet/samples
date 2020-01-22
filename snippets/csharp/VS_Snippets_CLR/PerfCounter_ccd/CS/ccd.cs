@@ -23,7 +23,6 @@ public class Snippet
 
             PerformanceCounterCategory.Create("Orders", "Number of processed orders",
                 PerformanceCounterCategoryType.SingleInstance, ccds);
-
         }
         //</Snippet1>
     }

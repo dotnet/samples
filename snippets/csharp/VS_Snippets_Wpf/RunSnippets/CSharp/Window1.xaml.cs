@@ -51,7 +51,6 @@ namespace RunSnippets
                 Run textRun = new Run("The text contents of this text run.", insertionPoint);
                 // </Snippet_Run_Const2>
             }
-
         }
     }
 }

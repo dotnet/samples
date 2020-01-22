@@ -25,6 +25,5 @@ public class Sample
 //</snippet1>  
     //Close the reader.
     reader.Close();     
-  
   }
 } // End class

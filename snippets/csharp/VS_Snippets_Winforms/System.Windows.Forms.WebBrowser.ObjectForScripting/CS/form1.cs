@@ -70,6 +70,5 @@ public class Form1 : Form
             new String[] { "called from client code" });
         //</snippet8>
     }
-
 }
 //</snippet0>

@@ -14,7 +14,6 @@ namespace CustomWinControls
 
         public FirstControl()
         {
-
         }
 
         // <snippet3>
@@ -78,7 +77,6 @@ namespace CustomWinControls
                 Font, 
                 new SolidBrush(ForeColor), 
                 ClientRectangle, style);
-
         } 
         // </snippet4>
     }

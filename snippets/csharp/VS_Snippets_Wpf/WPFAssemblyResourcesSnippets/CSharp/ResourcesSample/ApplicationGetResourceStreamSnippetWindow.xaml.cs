@@ -53,6 +53,5 @@ Uri pageUri = new Uri("/PageResourceFile.xaml", UriKind.Relative);
 this.pageFrame.Source = pageUri;
 //</SnippetLoadPageResourceFileFromCODE>
 }
-
     }
 }

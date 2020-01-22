@@ -12,7 +12,6 @@ namespace cs_overridedefault
         static void Main(string[] args)
         {
         }
-
     }
     // <Snippet3>
     public partial class Customer
@@ -24,5 +23,4 @@ namespace cs_overridedefault
         }
     }
     // </Snippet3>
-
 }

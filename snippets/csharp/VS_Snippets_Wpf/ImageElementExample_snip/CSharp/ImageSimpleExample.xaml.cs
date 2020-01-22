@@ -71,6 +71,5 @@ namespace ImageElementExample
           // Add Image to the UI
           myStackPanel.Children.Add(myImage1);
       }
-
    }
 }

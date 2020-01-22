@@ -19,7 +19,6 @@ namespace PassiveSTS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         protected void Login_Authenticate(object sender, AuthenticateEventArgs e)

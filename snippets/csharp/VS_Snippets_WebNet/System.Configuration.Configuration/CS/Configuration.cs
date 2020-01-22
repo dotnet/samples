@@ -21,7 +21,6 @@ public sealed class CustomSection : ConfigurationSection
 
     public CustomSection()
     {
-
     }
 
     [ConfigurationProperty("name",
@@ -72,7 +71,6 @@ public sealed class CustomSection : ConfigurationSection
             this["port"] = value;
         }
     }
-
 }
 //</Snippet1>
 
@@ -136,13 +134,11 @@ class UsingConfigurationClass
 
             Console.WriteLine("Created configuration file: {0}",
                 config.FilePath);
-
         }
         catch (ConfigurationErrorsException err)
         {
             Console.WriteLine("CreateConfigurationFile: {0}", err.ToString());
         }
-
     }
     //</Snippet2>
 
@@ -166,13 +162,11 @@ class UsingConfigurationClass
             Console.WriteLine("Section name: {0}", customSection.Name);
             Console.WriteLine("Url: {0}", customSection.Url);
             Console.WriteLine("Port: {0}", customSection.Port);
-
         }
         catch (ConfigurationErrorsException err)
         {
             Console.WriteLine("Using GetSection(string): {0}", err.ToString());
         }
-
     }
     //</Snippet3>
 
@@ -212,13 +206,11 @@ class UsingConfigurationClass
             config.SaveAs("MyConfigMinimal.config");
             Console.WriteLine("Saved config file as MyConfigMinimal.config using the mode: {0}",
                 ConfigurationSaveMode.Minimal.ToString());
-
         }
         catch (ConfigurationErrorsException err)
         {
             Console.WriteLine("SaveConfigurationFile: {0}", err.ToString());
         }
-
     }
     //</Snippet4>
 
@@ -317,13 +309,11 @@ class UsingConfigurationClass
                         "GetSections: Unknown section (0)", section);
                     break;
             }
-
         }
         catch (ConfigurationErrorsException err)
         {
             Console.WriteLine("GetSections: (0)", err.ToString());
         }
-
     }
 
     // Show how to use the Configuration object properties 
@@ -373,13 +363,11 @@ class UsingConfigurationClass
                 sections = config.Sections;
             Console.WriteLine("Sections: {0}", sections.Count.ToString());
             //</Snippet11>
-            
         }
         catch (ConfigurationErrorsException err)
         {
             Console.WriteLine("GetConfigurationInformation: {0}",err.ToString());
         }
-
     }
 
 #endregion 

@@ -123,7 +123,6 @@ namespace UE.Samples.Channel
                 (new Uri("http://localhost:8000/ChannelApp"), "http://localhost:8000/ChannelApp/service",
                 ListenUriMode.Explicit, bindingParameters);
             // </Snippet10>
-
         }
 
         public static void Snippet15()

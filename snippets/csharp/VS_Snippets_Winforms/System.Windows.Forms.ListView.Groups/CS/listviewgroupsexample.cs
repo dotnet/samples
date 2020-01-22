@@ -229,6 +229,5 @@ public class ListViewGroupsExample : Form
             }
         }
     }
-
 }
 //</Snippet1>

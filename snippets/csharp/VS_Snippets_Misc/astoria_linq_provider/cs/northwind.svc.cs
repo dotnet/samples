@@ -42,7 +42,6 @@ namespace NorthwindService
                 return types.AsQueryable<SomeType>();
             }
         }
-
     }
 
     [System.Data.Services.Common.DataServiceKey("Key")]
@@ -57,7 +56,6 @@ namespace NorthwindService
         public int Key {get; set;}
 
         public string Prop { get; set;}
-            
     }
 #endregion
 }

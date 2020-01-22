@@ -12,6 +12,5 @@ namespace FloaterFigureSnippets
 
     public partial class MyApp : Application
     {
-
     }
 }

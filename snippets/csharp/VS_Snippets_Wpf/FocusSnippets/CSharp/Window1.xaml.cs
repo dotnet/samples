@@ -50,6 +50,5 @@ namespace SDKSamples
 
             MessageBox.Show(focusedElement.ToString());
         }
-
     }
 }

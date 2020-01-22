@@ -17,7 +17,6 @@ namespace Microsoft.ServiceModel.Samples
     {
         [OperationContract]
         double Multiply(double n1, double n2);
-
     }
 
     // Service class which implements the service contract.

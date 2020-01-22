@@ -38,7 +38,6 @@ namespace cs_querying
                     empObj.EmployeeID, empObj.HireDate);
             }
             // </Snippet2>
-
         }
 
         void method3()
@@ -70,7 +69,6 @@ namespace cs_querying
                 }
             }
             // </Snippet3>
-
         }
 
         void method4()
@@ -83,7 +81,6 @@ namespace cs_querying
                 WHERE c1.custid = c2.custid"
             );
             // </Snippet4>
-
         }
 
         void method5()
@@ -112,7 +109,6 @@ namespace cs_querying
             return Queries.CustomersByCity(myDb, city);
         }
         // </Snippet7>
-
     }
 
     static class Queries
@@ -127,7 +123,6 @@ namespace cs_querying
             CustomersById = CompiledQuery.Compile((Northwnd db,
             string id) => db.Customers.Where(c => c.CustomerID == id));
         // </Snippet6>
-
     }
 
     // <Snippet8>
@@ -146,5 +141,4 @@ namespace cs_querying
             select new SimpleCustomer { ContactName = c.ContactName });
     }
     // </Snippet8>
-
 }

@@ -12,6 +12,5 @@ namespace HOWTONavigationSnippets
 
     public partial class App : Application
     {
-
     }
 }

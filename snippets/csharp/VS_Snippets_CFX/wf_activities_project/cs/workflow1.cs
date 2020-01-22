@@ -21,5 +21,4 @@ namespace wf_activities_project
 			InitializeComponent();
         }
 	}
-
 }

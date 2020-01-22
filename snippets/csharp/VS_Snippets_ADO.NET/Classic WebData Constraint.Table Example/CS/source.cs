@@ -11,5 +11,4 @@ public class Form1: Form
     Console.WriteLine(table.TableName);
  }
 // </Snippet1>
-
 }

@@ -10,14 +10,12 @@ namespace Samples
     {
 
        //Define the contract operations.
-
     }
 
     class MyService : IMyService 
     {
 
     //Implement the IMyService operations.
-
     }
     //</snippet1>
 
@@ -42,8 +40,6 @@ namespace Samples
 
         private void EnablePortSharing()
         {
-            
         }
-
     }
 }

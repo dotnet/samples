@@ -38,8 +38,6 @@ namespace Microsoft.Samples.CustomControls
             s.Write(args.ExceptionObject.ToString());
             s.Flush();
             s.Close();
-            
         }
     }
-
 }

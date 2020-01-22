@@ -39,7 +39,6 @@ namespace Windows.Communication.Foundation.Samples
                 }
                 //</snippet1>
             }
-
         }
     }
 
@@ -145,5 +144,4 @@ namespace Windows.Communication.Foundation.Samples
             return base.Channel.Divide(n1, n2);
         }
     }
-
 }

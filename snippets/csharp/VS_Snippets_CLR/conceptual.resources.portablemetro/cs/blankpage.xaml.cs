@@ -20,7 +20,6 @@ namespace ConsumerCS
         public BlankPage()
         {
             this.InitializeComponent();
-
          }
 
         /// <summary>

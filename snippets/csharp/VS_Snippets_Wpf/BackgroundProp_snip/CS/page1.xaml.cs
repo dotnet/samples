@@ -13,6 +13,5 @@ namespace BackgroundProp
 	
 	public partial class Page1 : Page
 	{
-          
         }
 }

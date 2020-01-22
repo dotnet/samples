@@ -53,7 +53,6 @@ namespace Samples2
         double Add(double a, double b);
     }
     //</snippet4> 
-
 }
 namespace Samples3
 {
@@ -113,7 +112,6 @@ namespace Samples3
             co.CompanyName = "www.cohowinery.com";
             return co;
         }
-
     }
 
     public class Test
@@ -181,7 +179,6 @@ namespace Samples3
             Console.WriteLine("Listening");
             Console.ReadLine();
             sh.Close();
-
         }
     }
     //</snippet6>
@@ -207,6 +204,5 @@ namespace Samples3
             int Price();
         }
         //</snippet8>
-
     }
 }

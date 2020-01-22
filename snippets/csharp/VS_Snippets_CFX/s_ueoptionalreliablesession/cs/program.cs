@@ -53,7 +53,6 @@ namespace Snippets
             Console.WriteLine("Listening...");
             Console.ReadLine();
             sh.Close();
-
         }
 
         private void PrintBindingInfo(WSHttpBinding b)

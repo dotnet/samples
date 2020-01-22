@@ -11,7 +11,6 @@ public class Sample {
  (HttpWebRequest)WebRequest.Create("http://www.contoso.com/");
  
 // </Snippet1>
-
     }
     public void Method1() {
 // <Snippet2>
@@ -21,7 +20,5 @@ public class Sample {
                
 		myReq.ReadWriteTimeout = 100000;
 // </Snippet2>
-
     }
-
 }

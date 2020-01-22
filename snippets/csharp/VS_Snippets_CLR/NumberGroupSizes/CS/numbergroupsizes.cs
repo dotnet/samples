@@ -22,7 +22,6 @@ class NumberFormatInfoSample {
       Console.WriteLine( myInt.ToString( "N", nfi ) );
       nfi.NumberGroupSizes = mySizes2;
       Console.WriteLine( myInt.ToString( "N", nfi ) );
-
    }
 }
 

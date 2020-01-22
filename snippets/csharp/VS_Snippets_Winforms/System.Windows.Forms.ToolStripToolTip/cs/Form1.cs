@@ -56,7 +56,6 @@ namespace WindowsApplication7
 			this.toolStrip1.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
-
 		}
 	}
 }

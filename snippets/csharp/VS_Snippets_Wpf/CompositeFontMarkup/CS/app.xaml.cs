@@ -12,6 +12,5 @@ namespace CompositeFontMarkup
 
     public partial class App : System.Windows.Application
     {
-
     }
 }

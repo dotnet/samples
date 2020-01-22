@@ -59,7 +59,6 @@ namespace SampleCodeDom
                 new CodeFieldReferenceExpression(new CodeTypeReferenceExpression("System.DateTime"), "Today");
 
             targetClass.Members.Add(testField);
-
         }
 
         /// <summary>

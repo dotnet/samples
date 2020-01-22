@@ -22,8 +22,6 @@ class ADSetup
 		Console.WriteLine();
 		
 		AppDomain.Unload(domain);
-	
 	}
-	
 }
 //  </SNIPPET1>

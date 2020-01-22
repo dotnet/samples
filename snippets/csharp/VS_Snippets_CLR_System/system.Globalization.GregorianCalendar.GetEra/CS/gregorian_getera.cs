@@ -24,9 +24,7 @@ public class SamplesGregorianCalendar  {
          Console.Write( "{0}", myCI.Calendar );
          Console.WriteLine();
       }
-
    }
-
 }
 
 /*

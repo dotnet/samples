@@ -12,6 +12,5 @@ namespace QuaternionView
 
     public partial class app : Application
     {
-
     }
 }

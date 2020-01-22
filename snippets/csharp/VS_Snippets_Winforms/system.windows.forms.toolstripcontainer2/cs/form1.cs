@@ -35,7 +35,6 @@ public class Form1 : Form
         toolStripContainer1.TopToolStripPanel.Controls.Add(toolStrip1);
         // Add the ToolStripContainer to the form.
         Controls.Add(toolStripContainer1);
- 
     }
 }
 // </Snippet1>

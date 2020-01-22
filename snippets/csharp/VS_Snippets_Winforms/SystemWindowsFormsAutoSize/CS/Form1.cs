@@ -38,6 +38,5 @@ private void button2_Click(object sender, EventArgs e)
     this.textBox2.Font = new System.Drawing.Font("ArialBlack", 14, FontStyle.Regular);
 }
 //</Snippet1>
-
     }
 }

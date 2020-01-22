@@ -27,6 +27,5 @@ namespace WindowDragMoveSnippets
             this.DragMove();
         }
         //</SnippetCallWindowDragMoveCODEBEHIND>
-
     }
 }

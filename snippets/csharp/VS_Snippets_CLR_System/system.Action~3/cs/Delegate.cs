@@ -25,6 +25,5 @@ public class TestDelegate
       for (int ctr = startPos; ctr <= source.Length - 1; ctr++)
          target[ctr] = String.Copy(source[ctr]);
    }
-
 }
 // </Snippet1>

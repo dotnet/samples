@@ -92,7 +92,6 @@ namespace Samples.AspNet.CS.Controls
 			return null;
 		}
 		// </Snippet3>
-
 	}
 
 	[ControlBuilderAttribute(typeof(MyHtmlSelectBuilder))]
@@ -117,8 +116,6 @@ namespace Samples.AspNet.CS.Controls
 				base.Items.Add(li);
 			}
 		}
-      
 	}
-
 }
 // </Snippet2> 

@@ -34,7 +34,6 @@
 
                 // Expression statement (postfix increment).
                 counter++;
-
             } // End of foreach statement block
         } // End of Main method body.
     } // End of SimpleStatements class.
@@ -398,7 +397,6 @@
                     Console.WriteLine("Key: {0} Count: {1}", (hashGroup.Key), hashGroup.Count());
                 }
             }
-
         }
     }
 
@@ -647,7 +645,6 @@
                             return s;
                         }
                     }
-
                 }
                 return "Not found.";
                 //</Snippet29>  
@@ -692,7 +689,6 @@
                 // Keep the console open in debug mode.
                 Console.WriteLine("Press any key to exit.");
                 Console.ReadKey();
-
             }
         }
         /*
@@ -702,7 +698,6 @@
             person1 Name = Molly Age = 16
         */
         //</Snippet30> 
-
     }
 
     // Separate namespace to have  struct and class by same name in code examples

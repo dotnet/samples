@@ -68,7 +68,6 @@ static class Program
         int HRESULT = Win32.SHAutoCompleteHRESULT(iPtr, Win32.SHAutoCompleteFlags.SHACF_DEFAULT);
 
         Console.WriteLine("HRESULT handled: " + HRESULT.ToString());
-
     }
 }
 //</snippet1>

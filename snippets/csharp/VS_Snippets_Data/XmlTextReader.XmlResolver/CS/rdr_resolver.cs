@@ -23,7 +23,6 @@ public class Sample {
   
     // Close the reader.
     reader.Close();     
-  
   }
 } 
 //</snippet1>

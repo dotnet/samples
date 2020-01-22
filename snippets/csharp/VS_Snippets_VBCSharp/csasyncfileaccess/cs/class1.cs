@@ -132,5 +132,4 @@ class Class1
         }
     }
     //</Snippet5>
-
 }

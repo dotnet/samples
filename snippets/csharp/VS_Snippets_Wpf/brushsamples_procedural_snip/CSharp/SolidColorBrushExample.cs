@@ -62,6 +62,5 @@ namespace Microsoft.Samples.BrushExamples
 
             this.Content = myStackPanel;
         }
-
     }
 }

@@ -69,7 +69,6 @@ class Program
         {
             Console.WriteLine(e.Message);
         }
-
     }
 
     public static void Encrypt(XmlDocument Doc, string ElementToEncrypt, X509Certificate2 Cert)
@@ -93,7 +92,6 @@ class Program
         if (elementToEncrypt == null)
         {
             throw new XmlException("The specified element was not found");
-
         }
 
         //////////////////////////////////////////////////
@@ -113,7 +111,6 @@ class Program
         ////////////////////////////////////////////////////
 
         EncryptedXml.ReplaceElement(elementToEncrypt, edElement, false);
-
     }
 
     public static void Decrypt(XmlDocument Doc)
@@ -127,8 +124,6 @@ class Program
 
         // Decrypt the XML document.
         exml.DecryptDocument();
-
     }
-
 }
 //</SNIPPET1>

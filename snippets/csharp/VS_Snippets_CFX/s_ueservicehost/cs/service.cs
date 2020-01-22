@@ -138,6 +138,5 @@ namespace ServiceModel.Sample
             serviceHost.AddServiceEndpoint(typeof(ICalculator), binding, address, listenUri);
             // </Snippet6>
         }
-
     }
 }

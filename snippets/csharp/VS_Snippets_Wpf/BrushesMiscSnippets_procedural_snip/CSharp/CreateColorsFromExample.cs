@@ -65,7 +65,6 @@ namespace SDKSample
             myStackPanel.Children.Add(fromAValuesRect);
             myStackPanel.Children.Add(fromValuesRect);
             this.Content = myStackPanel;
-           
         }
         // <SnippetFromRgbExample>
         private Color FromRgbExample()

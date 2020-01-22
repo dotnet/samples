@@ -104,7 +104,6 @@ public class Demo
         Console.WriteLine("\nRemoveAt(0)");
         weekly.RemoveAt(0);
         Display(weekly);
-
     }
     
     private static void Display(SimpleOrder order)

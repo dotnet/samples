@@ -15,7 +15,6 @@ public static void CallTestMethods()
 {
    CreateNewRecord();
    CreateNewRecord1();
-
 }
 
 //<Snippet1>
@@ -67,8 +66,6 @@ record.SetInt32(1, 42);
 
 // Send the record to the calling program.
 SqlContext.Pipe.Send(record);
-   
 }
 //
-
 }

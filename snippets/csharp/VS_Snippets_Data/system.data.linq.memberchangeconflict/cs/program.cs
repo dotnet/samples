@@ -47,7 +47,6 @@ namespace cs_conflictmodeenum
                 }
             }
             // </Snippet1>
-
         }
     }
 }

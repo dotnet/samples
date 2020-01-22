@@ -14,6 +14,5 @@ public class LogOnControl:UserControl
 	{
 		Message.Text="Welcome! Welcome to a simple User Control!";
 	}
-
 }
 // </snippet8>

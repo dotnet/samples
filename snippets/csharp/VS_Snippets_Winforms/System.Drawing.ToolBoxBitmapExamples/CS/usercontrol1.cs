@@ -34,7 +34,6 @@ using System.ComponentModel;
             return controlImage;
         }
         // </snippet4>
-
     }
 
 // The following code example demonstrates how to use the 
@@ -74,7 +73,6 @@ public class StopSignControl:
         this.Controls.Add(this.Button1);
         this.Controls.Add(this.Label1);
         this.Name = "StopSignControl";
-
     }
 
     private void StopSignControl_MouseEnter(object sender, System.EventArgs e)
@@ -94,7 +92,6 @@ public class StopSignControl:
 	    System.Drawing.FontStyle.Regular);
         Button1.Enabled = false;
     }
-
 }
 //</snippet1>
 
@@ -135,7 +132,6 @@ public class StopSignControl2:
         this.Controls.Add(this.Button1);
         this.Controls.Add(this.Label1);
         this.Name = "StopSignControl";
-
     }
 
     private void StopSignControl_MouseEnter(object sender, System.EventArgs e)
@@ -154,7 +150,6 @@ public class StopSignControl2:
 	    System.Drawing.FontStyle.Regular);
         Button1.Enabled = false;
     }
-
 }
 //</snippet2>
 
@@ -194,7 +189,6 @@ public class StopSignControl3:
         this.Controls.Add(this.Button1);
         this.Controls.Add(this.Label1);
         this.Name = "StopSignControl";
-
     }
 
     private void StopSignControl_MouseEnter(object sender, System.EventArgs e)
@@ -212,6 +206,5 @@ public class StopSignControl3:
 	    12.0F, System.Drawing.FontStyle.Regular);
         Button1.Enabled = false;
     }
-
 }
 //</snippet3>

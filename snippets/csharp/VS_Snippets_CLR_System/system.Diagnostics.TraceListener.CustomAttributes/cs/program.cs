@@ -77,7 +77,6 @@ namespace CustomTraceListener
         {
             return new string[] { "Source" };
         }
-
     }
 }
 // This code example creates the following output:

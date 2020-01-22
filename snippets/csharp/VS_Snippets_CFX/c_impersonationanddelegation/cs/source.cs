@@ -94,7 +94,6 @@ namespace SnippetsPart2
             cf.Credentials.Windows.AllowedImpersonationLevel  = 
                 System.Security.Principal.TokenImpersonationLevel.Impersonation;
             //</snippet4>
-
         }
 
         private void BuildStuff()

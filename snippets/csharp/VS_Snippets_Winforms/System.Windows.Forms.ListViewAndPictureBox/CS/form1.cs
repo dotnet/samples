@@ -14,7 +14,6 @@ public class Form1:
 		PopulateListView();
 		InitializePictureBox();
 		//Add any initialization after the InitializeComponent() call
-
 	}
 
 	//Form overrides dispose to clean up the component list.
@@ -64,7 +63,6 @@ public class Form1:
 		this.Name = "Form1";
 		this.Text = "Form1";
 		this.ResumeLayout(false);
-
 	}
 
 	#endregion
@@ -145,7 +143,6 @@ public class Form1:
 
 		// Add the PictureBox to the form.
 		this.Controls.Add(this.PictureBox1);
-
 	}
 
 	private void ListView1_MouseDown(object sender, MouseEventArgs e)

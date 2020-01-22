@@ -17,7 +17,6 @@ namespace ClickOnceAPI
         public Form1()
         {
             InitializeComponent();
-
         }
 
         private void UpdateAppButton_Click(object sender, EventArgs e)
@@ -233,7 +232,6 @@ namespace ClickOnceAPI
                 try
                 {
                     info = ad.CheckForDetailedUpdate();
-
                 }
                 catch (DeploymentDownloadException dde)
                 {

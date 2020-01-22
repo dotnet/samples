@@ -14,7 +14,6 @@ namespace Samples.AspNet
 
         public CustomConfiguration()
         {
-            
         }
 
         // Define a custom section.
@@ -37,7 +36,6 @@ namespace Samples.AspNet
                 get { return (string)base[CustomSection.configString]; }
 
                 set { base[CustomSection.configString] = value; }
-
             }
 
             [ConfigurationProperty(CustomSection.configInteger,
@@ -50,7 +48,6 @@ namespace Samples.AspNet
                 get { return (int)base[CustomSection.configInteger]; }
 
                 set { base[CustomSection.configInteger] = value; }
-
             }
 
             [ConfigurationProperty(CustomSection.configTimeout)]
@@ -61,9 +58,7 @@ namespace Samples.AspNet
                 get { return (TimeSpan)base[CustomSection.configTimeout]; }
 
                 set { base[CustomSection.configTimeout] = value; }
-
             }
-
         }
 
         // Create a custom section and save it in the
@@ -83,7 +78,6 @@ namespace Samples.AspNet
                 // Create section and add it to the configuration.
                 section = new CustomSection();
                 config.Sections.Add("CustomSection", section);
-
             }
 
             // Assign configuration settings.
@@ -97,7 +91,6 @@ namespace Samples.AspNet
             // Save the changes.
 
             config.Save();
-
         }
 
         // Get the custom section stored in 
@@ -117,7 +110,6 @@ namespace Samples.AspNet
             {
                 currentSection = HttpContext.Current.Server.HtmlEncode(
                     section.SectionInformation.GetRawXml());     
-                
             }
             else
             {
@@ -127,6 +119,5 @@ namespace Samples.AspNet
             return currentSection;
         }
     }
-
 }
 //</Snippet1>

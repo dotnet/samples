@@ -17,5 +17,4 @@ public class Form1: Form
         mapping.DataSetTable = "DataCategories";
     }
     // </Snippet1>
-
 }

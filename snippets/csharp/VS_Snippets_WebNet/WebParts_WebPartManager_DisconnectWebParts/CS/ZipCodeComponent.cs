@@ -70,7 +70,6 @@ namespace Samples.AspNet.CS.Controls
         input.Text = String.Empty;
       }
     }
-
   }
   // </snippet4>
 
@@ -111,7 +110,6 @@ namespace Samples.AspNet.CS.Controls
       DisplayContent = new Label();
       this.Controls.Add(DisplayContent);
     }
-
   }
   // </snippet5>
 }

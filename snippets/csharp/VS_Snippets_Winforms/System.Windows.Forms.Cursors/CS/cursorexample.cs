@@ -78,7 +78,6 @@ namespace MCursor
             {
                 cursorSelectionComboBox.Items.Add(cursor);
             }
-        
         }
 
         private Cursor [] CursorList()
@@ -95,7 +94,6 @@ namespace MCursor
                                      Cursors.PanSW, Cursors.PanWest, Cursors.SizeAll,
                                      Cursors.SizeNESW, Cursors.SizeNS, Cursors.SizeNWSE,
                                      Cursors.SizeWE, Cursors.UpArrow, Cursors.VSplit, Cursors.WaitCursor};
-
         }
 
         private void cursorSelectionComboBox_SelectedIndexChanged(object sender, System.EventArgs e)

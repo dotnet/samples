@@ -32,6 +32,5 @@ namespace MyMath {
        {
           return ((int)(this.EndInvoke(asyncResult)));
        }
-         
      }
  }

@@ -12,7 +12,6 @@ namespace cs_testbed
         static void Main(string[] args)
         {
             //Northwnd db = new Northwnd(@"c:\northwnd.mdf");
-
         }
 
         // <Snippet1>
@@ -24,6 +23,5 @@ namespace cs_testbed
             }
         }
         // </Snippet1>
-        
     }
 }

@@ -128,7 +128,6 @@ namespace XMLProcessingApp
                 {
                     return null;
                 }
-
             }
 
             XmlDocument doc = new XmlDocument();
@@ -199,7 +198,6 @@ namespace XMLProcessingApp
                 {
                     return null;
                 }
-
             }
             return schema;
         }
@@ -220,7 +218,6 @@ namespace XMLProcessingApp
 
             // Use an event handler to validate the XML node against the schema.
             doc.Validate(settings_ValidationEventHandler);
-
         }
 
         //************************************************************************************
@@ -242,7 +239,6 @@ namespace XMLProcessingApp
                     ("The following critical validation errors occurred: " + e.Message);
                 Type objectType = sender.GetType();
             }
-
         }
         //</Snippet2>
         #endregion
@@ -390,7 +386,6 @@ namespace XMLProcessingApp
                     case Constants.Genre:
                         xPathQueryPart = "@genre='" + value + "'";
                         break;
-
                 }
 
                 xPathQueryString = xPathQueryString + xPathQueryPart;
@@ -456,7 +451,6 @@ namespace XMLProcessingApp
                 bookElement.InnerXml.Replace(priceElement.OuterXml, priceElement.OuterXml + "   \n  ");
 
             return bookElement;
-             
         }
         //</Snippet5>
 
@@ -636,7 +630,6 @@ namespace XMLProcessingApp
                 InsertBookElement((XmlElement)book, Constants.positionBelow, 
                     NextNode, false, false);
             }
-
         }
 //</Snippet8>
         #endregion

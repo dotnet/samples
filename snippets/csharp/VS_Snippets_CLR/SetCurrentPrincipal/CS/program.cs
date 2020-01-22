@@ -31,7 +31,6 @@ class SecurityPrincipalDemo
         }
 
         Thread.CurrentPrincipal = genericPrincipal;
-
     }
 
     // Create a generic principal based on values from the current
@@ -74,6 +73,5 @@ class SecurityPrincipalDemo
 
         return genericPrincipal;
     }
-
 }
 //</Snippet1>

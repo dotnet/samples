@@ -12,6 +12,5 @@ namespace HelloInkCanvas
 
     public partial class MyApp : Application
     {
-
     }
 }

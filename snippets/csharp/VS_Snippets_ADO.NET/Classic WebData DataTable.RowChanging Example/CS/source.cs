@@ -39,7 +39,6 @@ private static void DataTableRowChanging()
 	{
 		row["name"] = string.Format("vip{0}", row["id"]);
 	}
-
 }
 
 private static void Row_Changing(object sender, DataRowChangeEventArgs e)

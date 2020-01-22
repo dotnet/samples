@@ -9,7 +9,6 @@ internal class Win32
     // the function to set the Win32 error.
     [DllImportAttribute("user32.dll", SetLastError = true, CharSet = CharSet.Unicode)]
     public static extern int MessageBox(IntPtr hwnd, String text, String caption, uint type);
-
 }
 
 class Program

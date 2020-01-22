@@ -39,7 +39,6 @@ namespace Samples.AspNet.CS
             dv.Sort = sortExpression;
             return dv;
         }
-
 	}
 }
 //</Snippet1>

@@ -53,8 +53,6 @@ namespace ImageElementExample
          Grid.SetColumn(chainImage, 1);
          Grid.SetRow(chainImage, 3);
          croppedGrid.Children.Add(chainImage);
-
       }
-
    }
 }

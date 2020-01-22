@@ -106,7 +106,6 @@ namespace SDKSamples
                     // The slider.value propety is passed as the command parameter.
                     ((RoutedCommand)Slider.DecreaseSmall).Execute(
                         source.Value, source);
-
                 }
                 else
                 {

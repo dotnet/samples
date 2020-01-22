@@ -13,6 +13,5 @@ namespace WpfHost
 
   public partial class app : Application
   {
-
   }
 }

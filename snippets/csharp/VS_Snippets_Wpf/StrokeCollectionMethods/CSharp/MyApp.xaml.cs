@@ -23,6 +23,5 @@ namespace StrokeCollectionEraseMethods
             //Window3 thirdWindow = new Window3();
             //thirdWindow.Show();
         }
-
     }
 }

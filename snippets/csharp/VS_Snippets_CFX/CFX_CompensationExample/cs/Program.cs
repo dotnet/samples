@@ -287,7 +287,6 @@ namespace CompensationExample
             syncEvent.WaitOne();
             //</snippet100>
         }
-
     } // End class program
 
     // Flight Activities

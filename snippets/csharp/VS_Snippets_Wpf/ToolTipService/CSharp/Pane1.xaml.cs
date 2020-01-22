@@ -33,7 +33,6 @@ namespace SDKSample
             //</SnippetSetShowDuration>
 
             //</SnippetToolTipServiceTimingCode>
-
         }
 
         void OnLoad(object sender, RoutedEventArgs e)
@@ -165,7 +164,6 @@ namespace SDKSample
             //</SnippetSetToolTip>
 
             //</SnippetNoToolTipCode>            
-
         }
 
         //<SnippetToolTipOpenAndCloseHandler>
@@ -306,7 +304,6 @@ namespace SDKSample
             //</SnippetGetToolTip>
             AddTextString(ttProperties, ttPropertyValues, "ToolTip",
                           target.ToString());
-
         }
 
         private void AddTextString(TextBlock tBlock,
@@ -323,6 +320,5 @@ namespace SDKSample
             tBlock.Text += pName + "\n";
             vBlock.Text += value + "\n";
         }
-
     }
 }

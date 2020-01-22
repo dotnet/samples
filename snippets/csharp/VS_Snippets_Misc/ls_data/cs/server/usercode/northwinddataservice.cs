@@ -49,7 +49,6 @@ namespace LightSwitchApplication
                      where myCustomer.Orders.Count() > 0
                      orderby myCustomer.Orders.Count() descending
                      select myCustomer).Take(System.Convert.ToInt16(TopN));
-
         }
         //<Snippet18>
         partial void Order_Details_Inserting(Order_Detail entity)
@@ -69,7 +68,6 @@ namespace LightSwitchApplication
                 if (cust.CustomerID == entity.Order.Customer.CustomerID)
                     entity.Discount = 0.1F;
             }
-
         }
         //</Snippet18>
     }

@@ -37,7 +37,6 @@ public class PublisherIdentityPermissionDemo
         UnionDemo();
         IntersectDemo();
         ToFromXmlDemo();
-
     }
     // IsSubsetOf determines whether the current permission is a subset of the specified permission.
     //<Snippet2>
@@ -72,7 +71,6 @@ public class PublisherIdentityPermissionDemo
                 publisherPerm2.Certificate.Subject + " = " +
                 ((PublisherIdentityPermission)publisherPerm3).Certificate.Subject.ToString());
         }
-
     }
     //</Snippet3>
     // Intersect creates and returns a new permission that is the intersection of the current
@@ -92,7 +90,6 @@ public class PublisherIdentityPermissionDemo
             Console.WriteLine("The intersection of " + publisherPerm1.Certificate.Subject + " and " +
                 publisherPerm2.Certificate.Subject + " is null.");
         }
-
     }
     //</Snippet4>
     //Copy creates and returns an identical copy of the current permission.

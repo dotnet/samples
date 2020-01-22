@@ -10,7 +10,6 @@ class Whidbey_Write_Methods
     {
 
         // WriteQName();
-
     }
 
     public static void WriteDateTime()
@@ -190,7 +189,6 @@ class Whidbey_Write_Methods
             writer.WriteStartElement("root");
             writer.WriteAttributes(reader, true);
             writer.WriteEndElement();
-            
         }
 	//</snippet12>
     }
@@ -283,5 +281,4 @@ class Whidbey_Write_Methods
         //</snippet19>
         writer.Flush();
     }
-
 } // end class.

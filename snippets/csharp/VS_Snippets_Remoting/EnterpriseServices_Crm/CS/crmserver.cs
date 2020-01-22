@@ -40,7 +40,6 @@ internal static class AccountManager
         }
         return(balance);        
     }
-
 }
 
 // <snippet10>
@@ -116,9 +115,7 @@ public class Account : ServicedComponent
             ContextUtil.SetAbort();
         }
 // </snippet13>
-      
     }
-
 }
 // </snippet10>
 
@@ -223,7 +220,6 @@ public class AccountCompensator : Compensator
         // nothing to do
     }    
 // </snippet29>
-
 }
 // </snippet20>
 // </snippet0>

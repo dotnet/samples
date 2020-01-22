@@ -21,5 +21,4 @@ public class Form1:Form
         internal void myKeyCounter(object sender, KeyPressEventArgs ex){
         }
     }
-
 }

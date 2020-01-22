@@ -39,7 +39,6 @@ class Example
             int result = stack.TryPopRange(resultBuffer, index, numItems);
 
             Console.WriteLine($"TryPopRange expected {numItems}, got {result}.");
-
         }, i * numItems, CancellationToken.None, TaskCreationOptions.LongRunning, TaskScheduler.Default)).ToArray());
 
         for (int i = 0; i < numParallelTasks; i++)

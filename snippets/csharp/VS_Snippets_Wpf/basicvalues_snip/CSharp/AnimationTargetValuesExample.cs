@@ -50,11 +50,9 @@ namespace Microsoft.Samples.Animation.AnimatePathShapeSample
             myRectangle.MouseLeftButtonDown += delegate(object sender, MouseButtonEventArgs args)
                 {
                     myStoryboard.Begin(myRectangle);
-
                 };
             // </SnippetFromToAnimationInline>
             return myRectangle;
-
         }
 
         private Rectangle CreateRectangle2()
@@ -96,11 +94,9 @@ namespace Microsoft.Samples.Animation.AnimatePathShapeSample
             myRectangle.MouseLeftButtonDown += delegate(object sender, MouseButtonEventArgs args)
                 {
                     myStoryboard.Begin(myRectangle);
-
                 };
             // </SnippetToAnimationInline>
             return myRectangle;
-
         }
 
         private Rectangle CreateRectangle3()
@@ -143,11 +139,9 @@ namespace Microsoft.Samples.Animation.AnimatePathShapeSample
             myRectangle.MouseLeftButtonDown += delegate(object sender, MouseButtonEventArgs args)
                 {
                     myStoryboard.Begin(myRectangle);
-
                 };
             // </SnippetByAnimationInline>
             return myRectangle;
-
         }
 
         private Rectangle CreateRectangle4()
@@ -194,7 +188,6 @@ namespace Microsoft.Samples.Animation.AnimatePathShapeSample
                 };
             // </SnippetFromByAnimationInline>
             return myRectangle;
-
         }
 
         private Rectangle CreateRectangle5()
@@ -239,7 +232,6 @@ namespace Microsoft.Samples.Animation.AnimatePathShapeSample
                 };
             // </SnippetFromAnimationInline>
             return myRectangle;
-
         }
 
         public AnimationTargetValuesExample()

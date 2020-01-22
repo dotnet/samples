@@ -37,13 +37,11 @@ public class Sample {
         // Clear the buffer.
         Array.Clear(buffer,0,charbuffersize);
       }
-       
     }
     finally {
       if (reader!=null)
         reader.Close();
     }
   }
-
 } // End class
    // </Snippet1>

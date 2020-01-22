@@ -75,7 +75,6 @@ public class Form1 : System.Windows.Forms.Form
       this.Text = "Layout Sample";
       this.Layout += new System.Windows.Forms.LayoutEventHandler(this.Form1_Layout);
       this.ResumeLayout(false);
-
    }
 
    [STAThread]

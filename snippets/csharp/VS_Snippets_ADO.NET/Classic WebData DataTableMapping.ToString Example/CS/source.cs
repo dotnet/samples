@@ -24,5 +24,4 @@ public class Form1: Form
             "table mapping collection " + mappings.ToString());
     }
     // </Snippet1>
-
 }

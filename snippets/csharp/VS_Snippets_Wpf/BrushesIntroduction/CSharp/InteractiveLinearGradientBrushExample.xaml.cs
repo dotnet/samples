@@ -67,7 +67,6 @@ namespace BrushesIntroduction
                 {
                     StartPointMarkerTranslateTransform.X = p.X;
                     StartPointMarkerTranslateTransform.Y = p.Y;
-
                 }
             }
             catch (InvalidOperationException ex)
@@ -78,7 +77,6 @@ namespace BrushesIntroduction
             {
                 // Ignore errors.
             }
-
         }
 
         private void onEndPointTextBoxKeyUp(object sender, KeyEventArgs args)
@@ -96,9 +94,7 @@ namespace BrushesIntroduction
                 {
                     EndPointMarkerTranslateTransform.X = p.X;
                     EndPointMarkerTranslateTransform.Y = p.Y;
-
                 }
-
             }
             catch (InvalidOperationException ex)
             {
@@ -108,7 +104,6 @@ namespace BrushesIntroduction
             {
                 // Ignore errors.
             }
-
         }
 
         // Determine whether the user clicked a marker.
@@ -149,7 +144,6 @@ namespace BrushesIntroduction
                 {
 
                     p = clickPoint;
-
                 }
 
                 if (s == StartPointMarker)
@@ -200,7 +194,6 @@ namespace BrushesIntroduction
                     // If the MappingMode is absolute, there's no more
                     // work to do.
                     p = currentPoint;
-
                 }
 
                 if (s == StartPointMarker)
@@ -243,7 +236,6 @@ namespace BrushesIntroduction
                 newEndPoint.X = oldEndPoint.X / GradientDisplayElement.ActualWidth;
                 newEndPoint.Y = oldEndPoint.Y / GradientDisplayElement.ActualHeight;
                 InteractiveLinearGradientBrush.EndPoint = newEndPoint;
-
             }
             else
             {
@@ -258,7 +250,6 @@ namespace BrushesIntroduction
                 newEndPoint.Y = oldEndPoint.Y * GradientDisplayElement.ActualHeight;
 
                 InteractiveLinearGradientBrush.EndPoint = newEndPoint;
-
             }
 
             // Update the StartPoint and EndPoint display text.
@@ -298,7 +289,6 @@ namespace BrushesIntroduction
                     "  <GradientStop Offset=\"" + stop.Offset.ToString("F4")
                     + "\" Color=\"" + stop.Color.ToString() + "\" />\n"
                 );
-
             }
             sBuilder.Append("</LinearGradientBrush>");
             return sBuilder.ToString();
@@ -308,7 +298,6 @@ namespace BrushesIntroduction
             DependencyProperty.Register
             ("SelectedMarker", typeof(Shape), typeof(InteractiveLinearGradientBrushExample),
             new PropertyMetadata(null));
-
     }
 
     [ValueConversion(typeof(object), typeof(string[]))]
@@ -318,7 +307,6 @@ namespace BrushesIntroduction
         {
 
             return new System.Collections.ArrayList(Enum.GetNames(value.GetType()));
-
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
@@ -335,7 +323,6 @@ namespace BrushesIntroduction
 
             Point p = (Point)value;
             return p.X.ToString("F4") + "," + p.Y.ToString("F4");
-
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
@@ -359,7 +346,6 @@ namespace BrushesIntroduction
 
             double d = (double)value;
             return d.ToString("F4");
-
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
@@ -374,5 +360,4 @@ namespace BrushesIntroduction
             }
         }
     }
-
 }

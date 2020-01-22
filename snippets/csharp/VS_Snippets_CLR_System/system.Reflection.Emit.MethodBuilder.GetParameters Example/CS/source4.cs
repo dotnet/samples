@@ -37,10 +37,8 @@ class MoreMethodBuilderSnippets
 	   Console.WriteLine("------- Parameter: {0} {1} at pos {2}, with attribute {3}", 
 			     myParam.ParameterType, myParam.Name, myParam.Position,
 			     myParam.Attributes.ToString());
-
         }
 	
 	// </Snippet1>	
    }
-
 }

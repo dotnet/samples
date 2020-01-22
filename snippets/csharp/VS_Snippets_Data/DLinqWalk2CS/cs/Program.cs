@@ -32,7 +32,6 @@ namespace cs_walk2
                     custObj.Orders.Count);
             }
             // </Snippet3>
-
         }
 
         void method5()
@@ -54,7 +53,6 @@ namespace cs_walk2
             // Freeze the console window.
             Console.ReadLine();
             // </Snippet5>
-
         }
     }
 
@@ -99,7 +97,6 @@ namespace cs_walk2
             {
                 this._CustomerID = value;
             }
-
         }
 
         private string _City;
@@ -115,7 +112,6 @@ namespace cs_walk2
                 this._City = value;
             }
         }
-
     }
 
     // <Snippet1>
@@ -151,5 +147,4 @@ namespace cs_walk2
         }
     }
     // </Snippet1>
-
 }

@@ -12,6 +12,5 @@ namespace UIAWindowPattern_snip
 
     public partial class MyApp : Application
     {
-
     }
 }

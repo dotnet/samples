@@ -190,7 +190,6 @@ namespace Mssc.Services.ConnectionManagement
         Console.WriteLine("Message : " + e.Message);
       }
       return serializedSocketAddress;
-
     }
 
     // The requestServerHomePage method obtains the server's home page and returns
@@ -249,9 +248,7 @@ namespace Mssc.Services.ConnectionManagement
                     Console.WriteLine("Input string format not allowed.");
                 }
             }
-
     }
-  
   }
 }
 //</Snippet1>

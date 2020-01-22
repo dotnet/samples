@@ -20,6 +20,5 @@ namespace StylusSamples
             Window2 secondWindow = new Window2();
             secondWindow.Show();
         }
-
     }
 }

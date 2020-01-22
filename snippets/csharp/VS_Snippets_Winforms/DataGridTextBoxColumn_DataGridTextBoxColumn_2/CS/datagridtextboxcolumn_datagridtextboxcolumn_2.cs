@@ -146,6 +146,5 @@ public class MyForm : Form
       // Populate date column.
       myCustomerTable.Rows[0]["Date"] = System.DateTime.Now;
       myCustomerTable.Rows[1]["Date"] = System.DateTime.Today;
-
    }
 }

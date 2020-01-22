@@ -49,7 +49,6 @@ public class Example
       if (n == 0)
          Console.WriteLine("The Example type has no obsolete attributes.");
    } 
-
 }
 // The example displays the following output:
 //       Obsolete members in the Example class:

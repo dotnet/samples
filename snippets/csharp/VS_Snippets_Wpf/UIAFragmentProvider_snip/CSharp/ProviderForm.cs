@@ -84,6 +84,5 @@ namespace ElementProvider
         {
             Application.Exit();
         }
-
     }
 }

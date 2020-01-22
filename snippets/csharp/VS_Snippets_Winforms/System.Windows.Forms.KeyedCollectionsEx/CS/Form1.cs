@@ -115,9 +115,7 @@ namespace KeyedCollectionsEx
             this.Name = "Form1";
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
-
         }
-        
     }
 
     public class OrderForm : Form
@@ -305,9 +303,6 @@ namespace KeyedCollectionsEx
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
-
         }
-      
     }
-    
 }

@@ -18,5 +18,4 @@ public class Form1 : Form {
     MessageBox.Show("The returned exception is: " + myReturnedException.Message);
  }
 // </Snippet1>
-
 }

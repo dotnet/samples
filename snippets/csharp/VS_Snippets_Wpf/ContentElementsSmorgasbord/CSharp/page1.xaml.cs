@@ -117,7 +117,6 @@ namespace Foo {
           m2.Header = "Print";
           cm.Items.Add(m1);
           cm.Items.Add(m2);
-
       }
       //</SnippetCMProcedural>
       //<SnippetIsLoaded>

@@ -20,9 +20,7 @@ public class SamplesHijriCalendar  {
             Console.Write( "\t{0}", myCal.IsLeapMonth( y, m, HijriCalendar.CurrentEra ) );
          Console.WriteLine();
       }
-
    }
-
 }
 
 /*

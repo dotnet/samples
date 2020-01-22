@@ -37,9 +37,7 @@ public class SamplesKoreanCalendar  {
          }
          Console.WriteLine();
       }
-
    }
-
 }
 
 /*

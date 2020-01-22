@@ -74,6 +74,5 @@ namespace OptionalNamespace
     // Provided name: 2, Two, and 10.
     // Provided name: 3, default string, and 10.
     // Default name: 3, default string, and 4.
-
 }
 //</Snippet2>

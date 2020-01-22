@@ -102,7 +102,6 @@ public class SongStream : IXmlSerializable
 
      writer.WriteEndElement();
      inFile.Close();
-
     }
 
     System.Xml.Schema.XmlSchema IXmlSerializable.GetSchema()
@@ -113,7 +112,6 @@ public class SongStream : IXmlSerializable
     void IXmlSerializable.ReadXml(System.Xml.XmlReader reader)
     {
      throw new System.NotImplementedException();
-
     }
 }
 //</snippet2>

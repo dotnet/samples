@@ -17,8 +17,6 @@ namespace Microsoft.Samples.Graphics.UsingImageBrush
 
         public TileSizeExample()
         {
-
         }
-
     }
 }

@@ -16,5 +16,4 @@ namespace Microsoft.Samples.BrushExamples
             MySolidColorBrushExampleFrame.Content = new SolidColorBrushExample();
         }
     }
-
 }

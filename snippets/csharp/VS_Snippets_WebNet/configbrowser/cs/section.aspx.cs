@@ -40,7 +40,6 @@ public partial class Section : System.Web.UI.Page
             noElementsLabel.Text = 
                 noElementsLabel.Text.Replace("[name]", s);
         }
-
     }
     // </Snippet62>
 }

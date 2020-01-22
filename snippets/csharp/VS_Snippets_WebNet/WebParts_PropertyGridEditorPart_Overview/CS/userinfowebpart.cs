@@ -82,7 +82,6 @@ namespace Samples.AspNet.CS.Controls
           return (DateTime)o;
         else
           return _userSpecialDate;
-        
       }
 
       set { _userSpecialDate = value; }
@@ -146,7 +145,6 @@ namespace Samples.AspNet.CS.Controls
       SetControlAttributes(JobTypeLabel);
 
       ChildControlsCreated = true;
-
     }
 
     private void SetControlAttributes(WebControl ctl)

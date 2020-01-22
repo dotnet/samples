@@ -99,7 +99,6 @@ namespace ServiceArchitectureExample
             this.Name = "ServiceForm";
             this.Text = "Service Container Architecture Example";
             this.ResumeLayout(false);
-
         }
 		#endregion
 

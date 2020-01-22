@@ -23,6 +23,5 @@ namespace CompositeFontMarkup
         {
             InitializeComponent();
         }
-
     }
 }

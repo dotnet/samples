@@ -53,7 +53,6 @@ public class Class1
       //    168 (en-US)      168 (fr-FR)      168 (de-DE)      168 (es-ES)
       //    255 (en-US)      255 (fr-FR)      255 (de-DE)      255 (es-ES)            
       // </Snippet3>
-      
    }
 
    private static void SpecifyFormatString()

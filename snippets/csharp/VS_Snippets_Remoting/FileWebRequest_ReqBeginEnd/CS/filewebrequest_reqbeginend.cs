@@ -38,7 +38,6 @@ using System.Threading;
 		  {
    		    Console.WriteLine("\nPlease enter the file name as command line parameter:");
  		       Console.WriteLine("Usage:FileWebRequest_reqbeginend <systemname>/<sharedfoldername>/<filename>\nExample:FileWebRequest_reqbeginend shafeeque/shaf/hello.txt");
-		    
 		  }  
 		  else
 		  {
@@ -104,13 +103,11 @@ using System.Threading;
 				
 			  Console.WriteLine("\nThe String you entered was successfully written into the file.");
 	   	  Console.WriteLine("\nPress Enter to continue.");	
-
          }
         catch(ApplicationException e)
 		  {
 			  Console.WriteLine("ApplicationException is :"+e.Message);
 		  }				
-
 		}
 // </Snippet2>
 // </Snippet1>

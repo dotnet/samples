@@ -16,7 +16,6 @@ public sealed class App
     static void Main()
     {
         WriteIsolatedStorage();
-
     }
     private static void WriteIsolatedStorage()
     {

@@ -62,7 +62,6 @@ class WhereSample2
         {
             Console.Write(s.ToString() + " ");
         }
-
     }
 }
 // Output: 

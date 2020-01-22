@@ -275,7 +275,6 @@ namespace Microsoft.Samples.RectExamples
             // Returns a rectangle with a width of 200, a height of 50 and a position
             // of 0,0.
             return myRectangle;
-
         }
         // </SnippetCreateRectExample2_csharp>
 
@@ -288,7 +287,6 @@ namespace Microsoft.Samples.RectExamples
 
             // Returns a rectangle with a position of 15,30, a width of 35 and height of 40.
             return myRectangle;
-
         }
         // </SnippetCreateRectExample3_csharp>
 
@@ -301,7 +299,6 @@ namespace Microsoft.Samples.RectExamples
 
             // Returns a rectangle with a position of 15,30, a width of 35 and height of 40.
             return myRectangle;
-
         }
         // </SnippetCreateRectExample4_csharp>
 
@@ -315,7 +312,6 @@ namespace Microsoft.Samples.RectExamples
 
             // Returns a rectangle with a position of 15,30, a width of 35 and height of 40.
             return myRectangle;
-
         }
         // </SnippetCreateRectExample5_csharp>
 
@@ -328,7 +324,6 @@ namespace Microsoft.Samples.RectExamples
 
             // Returns a rectangle with a position of 15,30, a width of 35 and height of 40.
             return myRectangle;
-
         }
         // </SnippetCreateRectExample6_csharp>
 
@@ -351,7 +346,6 @@ namespace Microsoft.Samples.RectExamples
             bool doesContain = myRectangle.Contains(new Point(13, 30));
 
             return doesContain;
-
         }
         // </SnippetContainsExample1_csharp>
 
@@ -381,7 +375,6 @@ namespace Microsoft.Samples.RectExamples
             bool doesContain = myRectangle1.Contains(myRectangle2);
 
             return doesContain;
-
         }
         // </SnippetContainsExample2_csharp>
 
@@ -405,7 +398,6 @@ namespace Microsoft.Samples.RectExamples
             bool doesContain = myRectangle.Contains(4, 13);
 
             return doesContain;
-
         }
         // </SnippetContainsExample3_csharp>
 
@@ -434,7 +426,6 @@ namespace Microsoft.Samples.RectExamples
             bool doesEqual = myRectangle1.Equals(myRectangle2);
 
             return doesEqual;
-
         }
         // </SnippetEqualsExample1_csharp>
 
@@ -464,7 +455,6 @@ namespace Microsoft.Samples.RectExamples
             bool doesEqual = Rect.Equals(myRectangle1, myRectangle2);
 
             return doesEqual;
-
         }
         // </SnippetEqualsExample2_csharp>
 
@@ -486,7 +476,6 @@ namespace Microsoft.Samples.RectExamples
             int returnHashCode = myRectangle.GetHashCode();
 
             return returnHashCode;
-
         }
         // </SnippetGetHashCodeExample_csharp>
 
@@ -513,7 +502,6 @@ namespace Microsoft.Samples.RectExamples
             myRectangle.Inflate(new Size(20,30));
 
             return myRectangle.Size;
-
         }
         // </SnippetInflateExample1_csharp>
 
@@ -540,7 +528,6 @@ namespace Microsoft.Samples.RectExamples
             myRectangle.Inflate(-20,50);
 
             return myRectangle.Size;
-
         }
         // </SnippetInflateExample2_csharp>
 
@@ -566,7 +553,6 @@ namespace Microsoft.Samples.RectExamples
             Rect myRectangle2 = Rect.Inflate(myRectangle, new Size(20, 30));
 
             return myRectangle2.Size;
-
         }
         // </SnippetInflateExample3_csharp>
 
@@ -592,7 +578,6 @@ namespace Microsoft.Samples.RectExamples
             Rect myRectangle2 = Rect.Inflate(myRectangle, -20, 50);
 
             return myRectangle2.Size;
-
         }
         // </SnippetInflateExample4_csharp>
 
@@ -624,7 +609,6 @@ namespace Microsoft.Samples.RectExamples
             // myRectangle has been changed into the intersection area between the old myRectangle
             // and myRectangle2 (new size of 190,45 and new location of 10,5).
             return myRectangle;
-
         }
         // </SnippetIntersectExample1_csharp>
 
@@ -653,7 +637,6 @@ namespace Microsoft.Samples.RectExamples
             Rect resultRectangle = Rect.Intersect(myRectangle, myRectangle2);
 
             return resultRectangle;
-
         }
         // </SnippetIntersectExample2_csharp>
 
@@ -683,7 +666,6 @@ namespace Microsoft.Samples.RectExamples
 
             // Returns true.
             return doesIntersect;
-
         }
         // </SnippetIntersectsWithExample_csharp>
 
@@ -710,7 +692,6 @@ namespace Microsoft.Samples.RectExamples
 
             // This rectangle's location changed from 10,5 to 30,35.
             return myRectangle.Location;
-
         }
         // </SnippetOffsetExample1_csharp>
 
@@ -735,7 +716,6 @@ namespace Microsoft.Samples.RectExamples
 
             // This rectangle's location changed from 10,5 to 30,35.
             return myRectangle.Location;
-
         }
         // </SnippetOffsetExample2_csharp>
 
@@ -763,7 +743,6 @@ namespace Microsoft.Samples.RectExamples
 
             // This rectangle's location changed from 10,5 to 30,35.
             return resultRect.Location;
-
         }
         // </SnippetOffsetExample3_csharp>
 
@@ -791,7 +770,6 @@ namespace Microsoft.Samples.RectExamples
 
             // This rectangle's location changed from 10,5 to 30,35.
             return resultRect.Location;
-
         }
         // </SnippetOffsetExample4_csharp>
 
@@ -821,7 +799,6 @@ namespace Microsoft.Samples.RectExamples
 
             // Returns false.
             return areEqual;
-
         }
         // </SnippetOverloadedEqualityOperatorExample>
 
@@ -851,7 +828,6 @@ namespace Microsoft.Samples.RectExamples
 
             // Returns true.
             return notEqual;
-
         }
         // </SnippetOverloadedInequalityOperatorExample>
 
@@ -864,7 +840,6 @@ namespace Microsoft.Samples.RectExamples
             Rect resultRect = Rect.Parse("10,5, 200,50");
 
             return resultRect;
-
         }
         // </SnippetParseExample>
 
@@ -888,7 +863,6 @@ namespace Microsoft.Samples.RectExamples
 
             // Returns a size of 4000,1500.
             return myRectangle.Size;
-
         }
         // </SnippetScaleExample_csharp>
 
@@ -911,7 +885,6 @@ namespace Microsoft.Samples.RectExamples
             string rectString = myRectangle.ToString();
 
             return rectString;
-
         }
         // </SnippetToStringExample_csharp>
 
@@ -936,7 +909,6 @@ namespace Microsoft.Samples.RectExamples
 
             // Returns 0,0,210,55
             return myRectangle;
-
         }
         // </SnippetUnionExample1_csharp>
 
@@ -966,7 +938,6 @@ namespace Microsoft.Samples.RectExamples
 
             // Returns 0,0,210,55
             return myRectangle;
-
         }
         // </SnippetUnionExample2_csharp>
 
@@ -996,7 +967,6 @@ namespace Microsoft.Samples.RectExamples
 
             // Returns 0,0,250,60
             return returnRect;
-
         }
         // </SnippetUnionExample3_csharp>
 
@@ -1031,7 +1001,6 @@ namespace Microsoft.Samples.RectExamples
 
             // Returns 0,0,260,110
             return returnRect;
-
         }
         // </SnippetUnionExample4_csharp>
 
@@ -1054,7 +1023,6 @@ namespace Microsoft.Samples.RectExamples
             myRectangle.Transform(myMatrix);
 
             return myRectangle;
-
         }
         // </SnippetTransformExample1_csharp>
 
@@ -1078,10 +1046,7 @@ namespace Microsoft.Samples.RectExamples
             Rect resultRect = Rect.Transform(myRectangle,myMatrix);
 
             return resultRect;
-
         }
         // </SnippetTransformExample2_csharp>
-
     }
-
 }

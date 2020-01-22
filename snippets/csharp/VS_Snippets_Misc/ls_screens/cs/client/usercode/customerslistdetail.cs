@@ -19,7 +19,6 @@ namespace LightSwitchApplication
             {
                 results.AddPropertyError("This string must have at least 3 letters.");
             }
-
         }
         //</Snippet1>
         
@@ -47,7 +46,6 @@ namespace LightSwitchApplication
 
                 index++;
             }
-
         }
         //</Snippet4>
         
@@ -71,6 +69,5 @@ namespace LightSwitchApplication
                 "Value", System.Windows.Data.BindingMode.TwoWay);
         }
         //</Snippet6>
-
     }
 }

@@ -74,13 +74,11 @@ public class MemoryProtectionSample
             fStream.Close();
 
             Console.WriteLine("Decrypted data: " + UnicodeEncoding.ASCII.GetString(decryptData));
-
         }
         catch (Exception e)
         {
             Console.WriteLine("ERROR: " + e.Message);
         }
-
     }
 
     public static void EncryptInMemoryData(byte[] Buffer, MemoryProtectionScope Scope )
@@ -92,7 +90,6 @@ public class MemoryProtectionSample
 
         // Encrypt the data in memory. The result is stored in the same array as the original data.
         ProtectedMemory.Protect(Buffer, Scope);
-
     }
 
     public static void DecryptInMemoryData(byte[] Buffer, MemoryProtectionScope Scope)
@@ -104,7 +101,6 @@ public class MemoryProtectionSample
 
         // Decrypt the data in memory. The result is stored in the same array as the original data.
         ProtectedMemory.Unprotect(Buffer, Scope);
-
     }
 
     public static byte[] CreateRandomEntropy()
@@ -118,7 +114,6 @@ public class MemoryProtectionSample
 
         // Return the array.
         return entropy;
-
     }
 
     public static int EncryptDataToStream(byte[] Buffer, byte[] Entropy, DataProtectionScope Scope, Stream S)
@@ -149,7 +144,6 @@ public class MemoryProtectionSample
 
         // Return the length that was written to the stream. 
         return length;
-        
     }
 
     public static byte[] DecryptDataFromStream(byte[] Entropy, DataProtectionScope Scope, Stream S, int Length)
@@ -180,8 +174,6 @@ public class MemoryProtectionSample
 
         // Return the length that was written to the stream. 
         return outBuffer;
-
     }
-
 }
 // </snippet1>

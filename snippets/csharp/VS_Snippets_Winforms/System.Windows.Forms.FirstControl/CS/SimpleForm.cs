@@ -55,7 +55,6 @@ namespace CustomWinControls
             this.Name = "SimpleForm";
             this.Text = "SimpleForm";
             this.ResumeLayout(false);
-
         }
     
         [STAThread]
@@ -63,7 +62,6 @@ namespace CustomWinControls
         {
             Application.Run(new SimpleForm());
         }
-
     }
 }
 // </snippet10>

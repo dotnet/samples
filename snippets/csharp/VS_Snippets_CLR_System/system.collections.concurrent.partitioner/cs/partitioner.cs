@@ -132,7 +132,6 @@ namespace PartitionerDemo
                     m_disposed = true;
                 }
             }
-
         }
 
         // Constructor just grabs the collection to wrap

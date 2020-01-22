@@ -10,7 +10,6 @@ namespace cs_inherit
     {
         static void Main(string[] args)
         {
-
         }
     }
 
@@ -62,5 +61,4 @@ namespace cs_inherit
     // Unmapped and not queryable.
     class E: D {  }
     // </Snippet2>
-
 }

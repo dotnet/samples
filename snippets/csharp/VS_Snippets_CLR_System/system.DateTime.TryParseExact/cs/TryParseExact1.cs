@@ -76,7 +76,6 @@ public class Example
                            dateValue.Kind);
       else
          Console.WriteLine("'{0}' is not in an acceptable format.", dateString);
-
    }
 }
 // The example displays the following output:

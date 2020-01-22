@@ -223,13 +223,11 @@ namespace EditingCollectionsSnippets
         {
             currentData = copyData;
             NotifyPropertyChanged("");
-
         }
 
         public void EndEdit()
         {
             copyData = new ItemData();
-
         }
 
         #endregion
@@ -248,7 +246,5 @@ namespace EditingCollectionsSnippets
             Add((new PurchaseItem("TV Drama Series", 39.985, new DateTime(2009, 1, 1))));
             Add((new PurchaseItem("Squash racket", 60, new DateTime(2009, 2, 28))));
         }
-
     }
-
 }

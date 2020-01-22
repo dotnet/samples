@@ -53,7 +53,6 @@ namespace AdvancedInkInputSemples
                 imageBrush.ViewportUnits = BrushMappingMode.Absolute;
                 imageBrush.Viewport = this.ElementBounds;
                 imageBrush.Freeze();
-
             }
             // </Snippet17>
 
@@ -79,7 +78,6 @@ namespace AdvancedInkInputSemples
 
             // Map the brush to the entire bounds of the element.
             imageBrush.ViewportUnits = BrushMappingMode.Absolute;
-            
         }
 
         public ImageStroke(Stroke oldStroke, Rect controlBounds) : base(oldStroke.StylusPoints, oldStroke.DrawingAttributes)
@@ -97,7 +95,6 @@ namespace AdvancedInkInputSemples
         {
             Geometry geometry = this.GetGeometry(drawingAttributes);
             drawingContext.DrawGeometry(imageBrush, null, geometry);
-            
         }
     }
 }

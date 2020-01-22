@@ -80,6 +80,5 @@ namespace cs_debuggingsupport
             Console.ReadLine();
             // </Snippet3>
         }
-
     }
 }

@@ -10,7 +10,6 @@ namespace XMLDSIGExample
     {
         public static void Main()
         {
-
         }
         //<SNIPPET2>
         public static void CheckSignatureWithEncryptedGrant(string fileName, IRelDecryptor decryptor)
@@ -61,7 +60,6 @@ namespace XMLDSIGExample
                     Console.WriteLine("FAILURE: CheckSignatureWithEncryptedGrant - issuer index #" +
                                                     i.ToString());
             }
-
         }
         //</SNIPPET2>
     }

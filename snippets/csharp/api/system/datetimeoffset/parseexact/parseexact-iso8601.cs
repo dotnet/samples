@@ -21,7 +21,6 @@ public class Example
          {
             Console.WriteLine($"FormatException: Unable to convert '{dateString}'");
          }   
-
       } 
    }
 }

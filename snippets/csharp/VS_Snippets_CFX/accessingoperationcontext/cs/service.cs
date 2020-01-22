@@ -30,7 +30,6 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
                 Console.ReadLine();
                 host.Close();
             }
-
         }
 
         static Activity GetServiceWorkflow()
@@ -67,5 +66,4 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
             };
         }
     }
-
 }

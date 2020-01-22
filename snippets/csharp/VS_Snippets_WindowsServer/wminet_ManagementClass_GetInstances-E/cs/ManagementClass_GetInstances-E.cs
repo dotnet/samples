@@ -12,7 +12,6 @@ public class Sample
         ManagementClass c = new ManagementClass("CIM_Service");
         foreach (ManagementObject o in c.GetInstances(opt))
             Console.WriteLine(o["Name"]);
-
     }
 }
 //</Snippet1>

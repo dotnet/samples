@@ -21,7 +21,6 @@ public class SamplesUTF32Encoding  {
       CompareEncodings( u32tf, "u32tf" );
       CompareEncodings( u32ft, "u32ft" );
       CompareEncodings( u32ff, "u32ff" );
-
    }
 
    public static void CompareEncodings( UTF32Encoding a, String name )  {
@@ -45,9 +44,7 @@ public class SamplesUTF32Encoding  {
       Console.WriteLine( "{0} and u32ftf : {1}", name, a.Equals( u32ftf ) );
       Console.WriteLine( "{0} and u32fft : {1}", name, a.Equals( u32fft ) );
       Console.WriteLine( "{0} and u32fff : {1}", name, a.Equals( u32fff ) );
-
    }
-
 }
 
 

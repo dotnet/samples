@@ -17,7 +17,6 @@ namespace Samples.AspNet.CS.Controls
                 base.DataSourceID = value;
             }
         }
-        
     }
     // </Snippet2>
 }

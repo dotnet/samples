@@ -21,5 +21,4 @@ private void Collection_Changed
    Console.WriteLine(gts.Count);
 }
 // </Snippet1>
-
 }

@@ -181,5 +181,4 @@ public class Class3
         }
     }
     //</Snippet33>
-
 }

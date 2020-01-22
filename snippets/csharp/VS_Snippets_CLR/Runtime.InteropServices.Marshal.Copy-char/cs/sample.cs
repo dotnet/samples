@@ -37,15 +37,12 @@ class Example
                                managedArray2[999]);
 
             Console.WriteLine("The array was copied to unmanaged memory and back.");
-
         }
         finally
         {
             // Free the unmanaged memory.
             Marshal.FreeHGlobal(pnt);
         }
-
     }
-
 }
 //</SNIPPET1>

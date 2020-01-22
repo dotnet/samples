@@ -18,5 +18,4 @@ class Program
         Console.WriteLine(parameter.ToString());
     }
     // </Snippet1>
-
 }

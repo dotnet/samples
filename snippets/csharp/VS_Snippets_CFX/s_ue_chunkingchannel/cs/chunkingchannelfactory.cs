@@ -53,7 +53,6 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
             IDuplexSessionChannel innerChannel = this.innerChannelFactory.CreateChannel(address, via) as IDuplexSessionChannel; 
             ChunkingDuplexSessionChannel channel = new ChunkingDuplexSessionChannel(this, innerChannel, operationParams,maxBufferedChunks);
             return channel;
-            
         }
         public override T GetProperty<T>()
         {

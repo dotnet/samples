@@ -34,7 +34,6 @@ namespace Samples.AspNet
                 url.ElementInformation;
 
             return eInfo;
-
         }
         // </Snippet80>
 
@@ -66,7 +65,6 @@ namespace Samples.AspNet
                urls.ElementInformation.IsCollection;
             Console.WriteLine("Urls element is a collection? {0}",
                 isCollection.ToString());
-          
         }
         // </Snippet81>
 
@@ -89,7 +87,6 @@ namespace Samples.AspNet
                 url.ElementInformation.IsLocked;
             Console.WriteLine("Url element is locked? {0}",
                 isLocked.ToString());
-
         }
         // </Snippet82>
 
@@ -112,7 +109,6 @@ namespace Samples.AspNet
                 url.ElementInformation.IsPresent;
             Console.WriteLine("Url element is present? {0}",
                 isPresent.ToString());
-
         }
         // </Snippet83>
 
@@ -135,7 +131,6 @@ namespace Samples.AspNet
                 urls.ElementInformation.LineNumber;
             Console.WriteLine("Urls element line number: {0}",
                 ln.ToString());
-
         }
         // </Snippet84>
 
@@ -165,7 +160,6 @@ namespace Samples.AspNet
                     "Name: {0} Type: {1}", prop.Name,
                     prop.Type.ToString());
             }
-           
         }
         // </Snippet85>
 
@@ -190,7 +184,6 @@ namespace Samples.AspNet
 
             Console.WriteLine("Url element source file: {0}",
                             sourceFile);
-            
         }
         // </Snippet86>
 
@@ -215,7 +208,6 @@ namespace Samples.AspNet
 
             Console.WriteLine("Url element type: {0}",
                             elType.ToString());
-
         }
         // </Snippet87>
 
@@ -240,7 +232,6 @@ namespace Samples.AspNet
 
             Console.WriteLine("Url element validator: {0}",
                             elValidator.ToString());
-
         }
         // </Snippet88>
 
@@ -264,7 +255,6 @@ namespace Samples.AspNet
                 url.ElementInformation.Errors;
             Console.WriteLine("Number of errors: {0)",
                 errors.Count.ToString());
-            
         }
         // </Snippet89>
     }

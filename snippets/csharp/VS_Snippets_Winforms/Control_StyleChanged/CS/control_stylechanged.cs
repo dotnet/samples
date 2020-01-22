@@ -56,7 +56,6 @@ public class MyForm : Form
       this.Load += new EventHandler(MyForm_Load);
       RegisterEventHandler();
       this.ResumeLayout(false);
-
    }
 
    [STAThread]

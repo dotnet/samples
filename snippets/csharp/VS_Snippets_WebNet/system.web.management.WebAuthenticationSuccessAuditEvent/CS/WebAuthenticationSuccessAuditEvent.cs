@@ -98,10 +98,8 @@ namespace SamplesAspNet
                 "* SampleWebAuthenticationSuccessAuditEvent End *");
 
             formatter.IndentationLevel -= 1;
-
         }
         // </Snippet6>
     }
-
 }
 // </Snippet1>

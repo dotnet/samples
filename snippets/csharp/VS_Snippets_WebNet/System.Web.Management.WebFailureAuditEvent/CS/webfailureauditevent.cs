@@ -96,10 +96,8 @@ namespace SamplesAspNet
                 "******** SampleWebFailureAuditEvent End ********");
 
             formatter.IndentationLevel -= 1;
-
         }
         // </Snippet6>
     }
-
 }
 // </Snippet1>

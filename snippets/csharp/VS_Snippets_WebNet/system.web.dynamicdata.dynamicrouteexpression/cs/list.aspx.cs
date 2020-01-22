@@ -73,7 +73,6 @@ public partial class List : System.Web.UI.Page {
                 table.GetActionPath(PageAction.List, rvd);
 
             return routePath;
-
         }
 
         return string.Empty;

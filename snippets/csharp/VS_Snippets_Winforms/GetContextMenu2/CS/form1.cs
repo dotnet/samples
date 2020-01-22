@@ -60,7 +60,6 @@ namespace Contextmnu2
 			this.Name = "Form1";
 			this.Text = "Form1";
 			this.Load += new System.EventHandler(this.Form1_Load);
-
 		}
 		#endregion
 
@@ -126,8 +125,6 @@ namespace Contextmnu2
 
 		private void Form1_Load(object sender, System.EventArgs e)
 		{
-
 		}
-
 	}
 }

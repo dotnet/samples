@@ -226,6 +226,5 @@ public class Form1 : Form
         propertyToChange.SetValue(columnToChange,
             dataGridView1[nameOfPropertyToChange, e.RowIndex].Value, null);
     }
-
 }
 //</snippet00>

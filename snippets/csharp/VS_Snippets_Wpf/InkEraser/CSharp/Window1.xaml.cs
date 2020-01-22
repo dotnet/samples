@@ -18,7 +18,6 @@ namespace InkEraserDemo
             : base()
         {
             InitializeComponent();
-            
         }
 
         // To use Loaded event put Loaded="WindowLoaded" attribute in root element of .xaml file.

@@ -82,7 +82,6 @@ namespace Example
             // It then disconnects from the client and waits for another client. 
             Listen();
          // ListenWithSocket();
-            
         }
 
         public static void Listen()
@@ -119,7 +118,6 @@ namespace Example
                 // Wait until a connection is made and processed before continuing.
                 allDone.WaitOne();
             }
-      
         }
 
         public static void AcceptReceiveCallback(IAsyncResult ar) 

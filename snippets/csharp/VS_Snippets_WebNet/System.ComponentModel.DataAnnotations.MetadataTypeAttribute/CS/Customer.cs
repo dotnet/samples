@@ -7,7 +7,6 @@ using System.ComponentModel.DataAnnotations;
 [MetadataType(typeof(CustomerMetaData))]
 public partial class Customer
 {
-
 }
 
 // </Snippet2>
@@ -19,7 +18,6 @@ public class CustomerMetaData
     [Required(ErrorMessage = "Title is required.")]
     public object Title;
     // </Snippet3>
-
 }
 
 //</Snippet1>

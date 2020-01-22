@@ -49,7 +49,6 @@ class ConsoleApp
             lp.DeleteFiles();
             lp.DeleteDirectories();
         }
-
     }
 
     static void GatherInfoFromUser(LoginPrefs lp)
@@ -255,7 +254,6 @@ public class LoginPrefs
         {
             Console.WriteLine(e.ToString());
         }
-
     }
     //</snippet6>
     //<snippet8>  
@@ -371,7 +369,6 @@ public class LoginPrefs
                         // by checking its Length property.
                         Console.WriteLine("Total Bytes Read: " + source.Length);
                         //</Snippet14>
-
                     }
 
                     // After you have read and written to the streams, close them.

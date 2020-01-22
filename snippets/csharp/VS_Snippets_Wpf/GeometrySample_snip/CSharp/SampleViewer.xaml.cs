@@ -15,7 +15,5 @@ namespace SDKSample
             MyPathGeometryExampleFrame.Content = new PathGeometryExample();
             MyCombiningGeometriesExampleFrame.Content = new CombiningGeometriesExample();
         }
-        
     }
-
 }

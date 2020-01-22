@@ -27,8 +27,6 @@ dcs.WriteObject(writer, cust);
 writer.Close();
 string xml = sb.ToString();
 // </Snippet6>
-
         }
-
     }
 }

@@ -24,7 +24,6 @@ namespace MyClaimsTransformationModule
                 }
             }
             return incomingPrincipal;
-
         }
     }
 }

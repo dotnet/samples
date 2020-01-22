@@ -37,7 +37,6 @@ class CD_Ctor
 
         Console.WriteLine("The square root of 529 is {0} (should be {1})", cd[23], 529 / 23);
         Console.WriteLine("The square of 65 is {0} (should be {1})", cd[HIGHNUMBER + 1], ((HIGHNUMBER + 1) * (HIGHNUMBER + 1)));
-       
     }
 }
 //</snippet1>

@@ -28,7 +28,6 @@ public class App
         CreateCounters();
         CollectSamples(samplesList);
         CalculateResults(samplesList);
-
     }
 
     private static bool SetupCategory()
@@ -102,7 +101,6 @@ public class App
 
             System.Threading.Thread.Sleep(50);
         }
-
     }
 
     private static void CalculateResults(ArrayList samplesList)
@@ -122,7 +120,6 @@ public class App
             Console.WriteLine("My computed counter value = " +
                 MyComputeCounterValue((CounterSample)samplesList[i],
                 (CounterSample)samplesList[i + 1]));
-
         }
     }
 

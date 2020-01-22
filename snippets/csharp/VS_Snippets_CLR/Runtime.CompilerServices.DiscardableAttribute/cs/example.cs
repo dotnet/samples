@@ -10,7 +10,6 @@ class Program
     {
 
         Console.WriteLine("The DiscardableAttribute attribute was applied.");
-
     }
 }
 //</snippet1>

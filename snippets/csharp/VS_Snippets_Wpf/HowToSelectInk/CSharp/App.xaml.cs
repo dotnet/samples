@@ -17,6 +17,5 @@ namespace InkSelectorTest
         {
             InitializeComponent();
         }
-
     }
 }

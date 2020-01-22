@@ -45,11 +45,8 @@ namespace CustomControls
             writer.Write("<span style='background-color:aqua; font:8pt tahoma, verdana;'> "
                         + this.Message + "<br>" + "C# version. The time on the server is " + System.DateTime.Now.ToLongTimeString()
                         + "</span>");
-                  
             }
-      
       }
-
 }
 
 // </snippet1>

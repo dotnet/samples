@@ -13,7 +13,6 @@ public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
     }
     //<Snippet1>
     protected void LinqDataSource_Inserting(object sender, LinqDataSourceInsertEventArgs e)

@@ -21,14 +21,12 @@ namespace FirstDisplayedCS
             this.Validate();
             this.customersBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.northwndDataSet);
-
         }
 
         private void FirstDisplayed_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'northwndDataSet.Customers' table. You can move, or remove it, as needed.
             this.customersTableAdapter.Fill(this.northwndDataSet.Customers);
-
         }
 
         // <Snippet1>

@@ -31,9 +31,7 @@ namespace Samples.AspNet
                 Console.WriteLine
                          ("Provider description: {0}",
                           provider.Description);
-           
             }
- 
         }
         // </Snippet3>
 
@@ -66,7 +64,6 @@ namespace Samples.AspNet
                 "Protected section name: {0}",
                  protectedSectionName);
             // </Snippet6>
-
         }
 
         static void Main(string[] args)
@@ -77,7 +74,6 @@ namespace Samples.AspNet
 
             // Get the providers' collection.
             GetProviders();
-
         }
     }    
 }

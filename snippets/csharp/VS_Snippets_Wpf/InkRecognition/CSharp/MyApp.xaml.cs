@@ -12,6 +12,5 @@ namespace InkRecognition
 
     public partial class MyApp : Application
     {
-
     }
 }

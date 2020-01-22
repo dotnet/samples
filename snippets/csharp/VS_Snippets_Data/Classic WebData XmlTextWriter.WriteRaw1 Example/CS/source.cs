@@ -34,6 +34,5 @@ public class Sample
      // Write the XML to file and close the writer.
      writer.Close();  
   }
-
 }
    // </Snippet1>

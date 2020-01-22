@@ -74,7 +74,6 @@
             Thread.SpinWait(1000000);
             return DateTime.Now.Millisecond;
         }
-
     }
 
     //</snippet11>

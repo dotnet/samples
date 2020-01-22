@@ -82,7 +82,6 @@ namespace FormOwnedFormsEx
          this.Name = "Form1";
          this.Text = "Form1";
          this.ResumeLayout(false);
-
       }
 		#endregion
 
@@ -127,6 +126,5 @@ namespace FormOwnedFormsEx
       {
          ChangeOwnedFormText();
       }
-
 	}
 }

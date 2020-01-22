@@ -15,7 +15,6 @@ public class Form1:
         InitializeComponent();
 
         //Add any initialization after the InitializeComponent() call
-
     }
 
     //Form overrides dispose to clean up the component list.
@@ -47,7 +46,6 @@ public class Form1:
         this.Name = "Form1";
         this.Text = "Form1";
         this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
-
     }
 
     #endregion
@@ -134,5 +132,4 @@ public class Form1:
     {
         Application.Run(new Form1());
     }
-
 }

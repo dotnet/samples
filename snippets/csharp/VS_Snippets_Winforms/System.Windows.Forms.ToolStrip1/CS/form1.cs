@@ -84,7 +84,6 @@ namespace System.Windows.Forms.ToolStripExamplesCS
 			this.Text = "Form1";
 			this.ResumeLayout(false);
 			this.PerformLayout();
-
 		}
 
 		[STAThread]
@@ -121,7 +120,6 @@ namespace System.Windows.Forms.ToolStripExamplesCS
 			InitializeBoldButton();
 			InitializeToolStripStatusLabels();
 			InitializeDropDownButton();
-			
 		}
 
 		// The following example demonstrates setting the drop-down property
@@ -192,7 +190,6 @@ namespace System.Windows.Forms.ToolStripExamplesCS
 			boldButton.Text = "B";
 			boldButton.CheckOnClick = true;
 			toolStrip1.Items.Add(boldButton);
-
 		}
 
 		private void boldButton_CheckedChanged(object sender, EventArgs e)
@@ -205,7 +202,6 @@ namespace System.Windows.Forms.ToolStripExamplesCS
 			{
 				this.Font = new Font(this.Font, FontStyle.Regular);
 			}
-
 		}
 
 		//</snippet50>
@@ -236,7 +232,6 @@ namespace System.Windows.Forms.ToolStripExamplesCS
 
 			// Add the button to the ToolStrip.
 			toolStrip1.Items.Add(imageButton);
-
 		}
 		//</snippet20>
 
@@ -275,7 +270,6 @@ namespace System.Windows.Forms.ToolStripExamplesCS
 				item.TextDirection = ToolStripTextDirection.Vertical270;
 				movingToolStrip.Dock = System.Windows.Forms.DockStyle.Left;
 			}
-
 		}
 		//</snippet4>
 
@@ -309,7 +303,6 @@ namespace System.Windows.Forms.ToolStripExamplesCS
 			// Add both panels to the StatusStripPanel collection of the
 			// StatusStrip.
 			statusStrip1.Items.AddRange(new ToolStripItem[] { panel1, panel2 });
-
 		}
 
 		//</snippet40>
@@ -327,7 +320,6 @@ namespace System.Windows.Forms.ToolStripExamplesCS
 			ToolStripManager.Renderer = new RedTextRenderer();
 			//</snippet8>
 		}
-
 	}
 
 //<snippet1>
@@ -343,7 +335,6 @@ namespace System.Windows.Forms.ToolStripExamplesCS
 			e.TextColor = Color.Red;
 			e.TextFont = new Font("Helvetica", 7, FontStyle.Bold);
 			base.OnRenderItemText(e);
-
 		} 
 	} 
 }

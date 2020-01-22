@@ -176,7 +176,6 @@ namespace Samples.AspNet.CS.Controls
             {
                 EnsureChildControls();
                 emailLabel.Text = value;
-
             }
         }
         #endregion
@@ -431,7 +430,6 @@ namespace Samples.AspNet.CS.Controls
 
             return new Triplet(baseState,
                 buttonStyleState, textBoxStyleState);
-
         }
 
         protected override void TrackViewState()

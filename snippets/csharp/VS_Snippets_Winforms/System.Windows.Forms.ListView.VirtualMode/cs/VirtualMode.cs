@@ -98,7 +98,6 @@ public class Form1 : Form
             x = (i + firstItem) * (i + firstItem);
             myCache[i] = new ListViewItem(x.ToString());
         }
-
     }
     //</snippet3>
 
@@ -117,7 +116,6 @@ public class Form1 : Form
             x = Math.Sqrt(x);
             x = Math.Round(x);
             e.Index = (int)x;
-               
         }
         //If e.Index is not set, the search returns null.
         //Note that this only handles simple searches over the entire

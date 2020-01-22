@@ -66,7 +66,6 @@ namespace SDKSample
             // clicks "OK", load and display the specified XPS document.
             if (dialog.ShowDialog() == WinForms.DialogResult.OK)
                 OpenDocument(dialog.FileName);
-
         }// end:OnOpen()
 
         // --------------------------- OpenDocument ---------------------------
@@ -445,5 +444,4 @@ namespace SDKSample
         #endregion //private fields
 
     }// end:partial class Window1
-
 }// end:namespace SDKSample

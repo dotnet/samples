@@ -27,7 +27,6 @@ namespace tpl_schedulers
 
                 taskB.Start();
                 taskC.Start();
-        
             });
         }
         //</snippet01>

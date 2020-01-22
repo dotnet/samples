@@ -38,7 +38,6 @@ public class SamplesStringCollection  {
 
       Console.WriteLine( "After clearing the collection:" );
       PrintValues( myCol );
-
    }
 
    public static void PrintValues( IEnumerable myCol )  {
@@ -46,7 +45,6 @@ public class SamplesStringCollection  {
          Console.WriteLine( "   {0}", obj );
       Console.WriteLine();
    }
-
 }
 
 /*

@@ -18,7 +18,6 @@ public class Sample
     //Determine whether the node is read-only.
     if (doc.DocumentElement.LastChild.FirstChild.IsReadOnly)
        Console.WriteLine("Entity reference nodes are always read-only");
-
   }
 }
    // </Snippet1>

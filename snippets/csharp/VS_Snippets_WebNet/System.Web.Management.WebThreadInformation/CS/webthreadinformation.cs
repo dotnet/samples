@@ -33,7 +33,6 @@ namespace SamplesAspNet
             eventInfo.Append(string.Format(
             "Event created at: {0}",
             EventTime.ToString()));
-
         }
         // </Snippet2>
 
@@ -114,7 +113,6 @@ namespace SamplesAspNet
             formatter.IndentationLevel -= 1;
 
             formatter.AppendLine(eventInfo.ToString());
-
         }
 
         // </Snippet8>

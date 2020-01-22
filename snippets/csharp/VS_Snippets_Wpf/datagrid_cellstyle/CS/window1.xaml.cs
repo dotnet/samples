@@ -33,7 +33,6 @@ namespace DataGrid_CellStyle
             data.Add(new Animal("goat"));
 
             DG1.DataContext = data;
-
         }
         public class Animal
         {
@@ -47,8 +46,6 @@ namespace DataGrid_CellStyle
             }
 
             public string Name { get; set; }
-
         }
-
     }
 }

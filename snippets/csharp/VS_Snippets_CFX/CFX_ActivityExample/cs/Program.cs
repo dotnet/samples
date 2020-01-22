@@ -157,9 +157,7 @@ namespace ActivityExample
             //Console.WriteLine("GenerateRandomMax: {0}", result2);
 
             WorkflowInvoker.Invoke(new DisplayRandom());
-
         }
-
     }
 
     //<snippet1>
@@ -419,5 +417,4 @@ namespace ActivityExample
         }
     }
     //</snippet12>
-
 }

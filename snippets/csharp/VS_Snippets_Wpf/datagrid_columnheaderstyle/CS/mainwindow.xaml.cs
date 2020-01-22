@@ -33,7 +33,6 @@ namespace DataGrid_ColumnHeaderStyle
             data.Add(new Animal("Salmon", "Fish", false));
 
             dataGrid1.ItemsSource = data;
-
         }
 
         public class Animal
@@ -52,8 +51,6 @@ namespace DataGrid_ColumnHeaderStyle
             public string Name { get; set; }
             public string Classification { get; set; }
             public bool Extinct { get; set; }
-
         }
-
     }
 }

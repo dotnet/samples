@@ -1241,7 +1241,6 @@ namespace SdkSample
 
                     // Advance
                     htmlChildNode = htmlChildNode.NextSibling;
-
                 }
                 else if (htmlChildNode.LocalName.ToLower() == "td")
                 {

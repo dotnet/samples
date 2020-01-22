@@ -48,7 +48,6 @@ namespace NorthwindClient
                 Source.CallServiceOperationVoid();
 
                 System.Threading.Thread.Sleep(System.Threading.Timeout.Infinite);
-
             }
             catch (ApplicationException ex)
             {

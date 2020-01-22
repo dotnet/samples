@@ -12,7 +12,6 @@ namespace SqlPrepareCS
                 "Persist Security Info=False;Integrated Security=true;database=Northwind;server=(local)";
             LocalTrans(connectionString);
             Console.ReadLine();
-
         }
         private static void LocalTrans(string connectionString)
         {

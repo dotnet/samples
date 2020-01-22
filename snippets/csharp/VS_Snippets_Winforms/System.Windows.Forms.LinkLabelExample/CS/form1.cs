@@ -15,7 +15,6 @@ public class Form1:
 		InitializeLinkLabel();
 
 		//Add any initialization after the InitializeComponent() call
-
 	}
 
 	//Form overrides dispose to clean up the component list.
@@ -47,7 +46,6 @@ public class Form1:
 		this.ClientSize = new System.Drawing.Size(272, 266);
 		this.Name = "Form1";
 		this.Text = "Form1";
-
 	}
 
 	#endregion
@@ -132,5 +130,4 @@ public class Form1:
 	{
 		Application.Run(new Form1());
 	}
-
 }

@@ -28,7 +28,6 @@ public class Verify {
         } else {
             Console.WriteLine("Signature check FAILED");
         }
-
     }
 }
 //</Snippet1>

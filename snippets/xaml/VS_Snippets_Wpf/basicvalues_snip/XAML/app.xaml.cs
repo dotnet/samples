@@ -22,7 +22,6 @@ namespace basicvalues_markup
                 StreamWriter wr = new StreamWriter("error.txt");
                 wr.Write(args.ExceptionObject.ToString());
                 wr.Close();
-            
             }catch(IOException ex)
             {
                 MessageBox.Show("Unable to write error file:" + ex.ToString());
@@ -30,6 +29,5 @@ namespace basicvalues_markup
 
             MessageBox.Show("Unhandled exception: " + args.ExceptionObject.ToString());
         }   
-
     }
 }

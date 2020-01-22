@@ -113,7 +113,6 @@ namespace Snippets2 {
 				m_value = value;
 			}
 		}
-
 	}
 	//</snippet2>
 }

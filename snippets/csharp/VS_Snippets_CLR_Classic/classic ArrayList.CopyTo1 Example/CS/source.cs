@@ -47,7 +47,6 @@
  
        // Displays the values of the target Array.
        PrintValues( myTargetArray, ' ' );
-
     }
  
     public static void PrintValues( String[] myArr, char mySeparator )  {
@@ -55,7 +54,6 @@
           Console.Write( "{0}{1}", mySeparator, myArr[i] );
        Console.WriteLine();
     }
-
  }
 
 

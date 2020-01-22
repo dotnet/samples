@@ -12,6 +12,5 @@ public class Remotable : MarshalByRefObject
         callCount++;
         return(callCount);
     }
-
 }
 // </snippet1>

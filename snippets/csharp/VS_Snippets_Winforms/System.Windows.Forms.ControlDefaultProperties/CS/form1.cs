@@ -15,7 +15,6 @@ public class Form1:
 		Populate_ListBox();
 
 		//Add any initialization after the InitializeComponent() call
-
 	}
 
 	//Form overrides dispose to clean up the component list.
@@ -63,7 +62,6 @@ public class Form1:
 		this.Name = "Form1";
 		this.Text = "Form1";
 		this.ResumeLayout(false);
-
 	}
 
 	#endregion
@@ -89,7 +87,6 @@ public class Form1:
 			ListBox.DefaultFont.ToString());
 		ListBox1.Items.Add("Default ForeColor:" + 
 			ListBox.DefaultForeColor.ToString());
-
 	}
 	//</snippet1>
 }
@@ -140,5 +137,4 @@ public class FunButton:
 	{
 		Application.Run(new Form1());
 	}
-
 }

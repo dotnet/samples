@@ -17,7 +17,6 @@ public class Sample
 
     // Display the DocumentType.
     Console.WriteLine(doc.DocumentType.OuterXml);
-
   }
 }
    // </Snippet1>

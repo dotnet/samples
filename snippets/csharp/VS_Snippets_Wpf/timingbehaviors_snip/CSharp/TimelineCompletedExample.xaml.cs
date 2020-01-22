@@ -50,7 +50,6 @@ namespace SDKSample
             currentImageSource = AnimatedImage.Source;
             zoomInStoryboard.Begin(AnimatedImage, HandoffBehavior.SnapshotAndReplace);
         }
-
     }
 }
 // <!-- </SnippetTimelineCompletedExampleCodeBehindUsingWholePage> -->

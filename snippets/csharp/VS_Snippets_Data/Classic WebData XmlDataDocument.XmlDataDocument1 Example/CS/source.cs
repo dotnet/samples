@@ -31,7 +31,6 @@ public class Sample
 
      //Display the XmlDataDocument.
      doc.Save(Console.Out);
-    
   }
 }
    // </Snippet1>

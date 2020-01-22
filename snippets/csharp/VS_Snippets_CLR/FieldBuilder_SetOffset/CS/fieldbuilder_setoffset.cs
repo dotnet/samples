@@ -87,6 +87,5 @@ public class FieldBuilder_Sample
          Console.WriteLine("Exception Caught "+e.Message);
       }
    }
-
 }
 // </Snippet1>

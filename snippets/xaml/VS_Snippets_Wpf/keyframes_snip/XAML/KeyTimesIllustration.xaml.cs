@@ -22,7 +22,6 @@ namespace Microsoft.Samples.KeyFrameExamples
         public KeyTimesIllustration()
         {
             InitializeComponent();
-
         }       
 
         private static Rectangle createGhostRectangle()
@@ -34,6 +33,5 @@ namespace Microsoft.Samples.KeyFrameExamples
             r.StrokeThickness = 5;
             return r;
         }
-
     }
 }

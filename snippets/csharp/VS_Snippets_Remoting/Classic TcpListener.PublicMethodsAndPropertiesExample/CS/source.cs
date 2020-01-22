@@ -88,7 +88,6 @@ public class MyTcpListenerExample{
                socket.Shutdown(SocketShutdown.Both);
                socket.Close();
 	        tcpListener.Stop();
-
                }
                catch (Exception e) {
 			        Console.WriteLine(e.ToString());
@@ -96,5 +95,4 @@ public class MyTcpListenerExample{
       	   }
           return 0;
       }
-
     }

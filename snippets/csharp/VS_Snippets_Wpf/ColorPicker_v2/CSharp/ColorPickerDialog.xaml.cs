@@ -29,7 +29,6 @@ namespace Microsoft.Samples.CustomControls
             m_color = cPicker.SelectedColor;
             DialogResult = true;
             Hide();
-
         }
 
         private void cancelButtonClicked(object sender, RoutedEventArgs e)
@@ -37,7 +36,6 @@ namespace Microsoft.Samples.CustomControls
 
             OKButton.IsEnabled = false;
             DialogResult = false;
-
         }
 
         private void onSelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color> e)
@@ -66,7 +64,6 @@ namespace Microsoft.Samples.CustomControls
             {
                 return m_color;
             }
-
         }
         
         public Color StartingColor
@@ -80,8 +77,6 @@ namespace Microsoft.Samples.CustomControls
                 //cPicker.SelectedColor = value;
                 OKButton.IsEnabled = false;
             }
-
         }        
-
     }
 }

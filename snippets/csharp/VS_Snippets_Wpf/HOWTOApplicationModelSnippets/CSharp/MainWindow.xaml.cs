@@ -23,6 +23,5 @@ namespace SDKSample
             Application.Current.Properties["NumberOfAppSessions"] = int.Parse(Application.Current.Properties["NumberOfAppSessions"].ToString()) + 1;
             this.Title = "Number of app sessions: " + Application.Current.Properties["NumberOfAppSessions"].ToString();
         }
-
     }
 }

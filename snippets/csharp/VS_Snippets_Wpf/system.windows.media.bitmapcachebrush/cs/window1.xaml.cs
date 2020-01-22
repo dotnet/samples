@@ -26,7 +26,6 @@ namespace BitmapCacheBrushDemo
 
         private void button20_Click(object sender, RoutedEventArgs e)
         {
-
         }
     }
 }

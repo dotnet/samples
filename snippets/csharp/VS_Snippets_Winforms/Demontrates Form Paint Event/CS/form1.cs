@@ -29,7 +29,6 @@ namespace Demo1_CS
 			//
 
 			RcDraw = new Rectangle(0, 0, 0, 0);
-
 		}
 
 		/// <summary>
@@ -63,7 +62,6 @@ namespace Demo1_CS
 			this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
 			this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
 			this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
-
 		}
 		#endregion
 
@@ -88,7 +86,6 @@ namespace Demo1_CS
 
 			RcDraw.X = e.X;
 			RcDraw.Y = e.Y;
-		
 		}
 
 		private void Form1_MouseUp(object sender, System.Windows.Forms.MouseEventArgs e)
@@ -119,7 +116,6 @@ namespace Demo1_CS
 			// Force a repaint of the region occupied by the rectangle...
 
 			this.Invalidate(RcDraw);
-		
 		}
 
 		private void Form1_Paint(object sender, System.Windows.Forms.PaintEventArgs e)
@@ -128,10 +124,8 @@ namespace Demo1_CS
 			// Draw the rectangle...
 
 			e.Graphics.DrawRectangle(new Pen(Color.Blue, PenWidth), RcDraw);
-			
 		}
 
 		//</snippet1>
-
 	}
 }

@@ -40,7 +40,6 @@ namespace DatePickerSnippets
             // root is a Panel that is defined elsewhere.
             root.Children.Add(datePickerFor2009);
             //</Snippet1>
-
         }
 
         private void InitializeDatePicker()
@@ -70,7 +69,6 @@ namespace DatePickerSnippets
             // root is a Panel that is defined elsewhere.
             root.Children.Add(datePickerWithBlackoutDates);
             //</Snippet2>
-
         }
 
         //<Snippet3>
@@ -109,6 +107,5 @@ namespace DatePickerSnippets
             textBlock1.Text = "Enter a date or click the calendar";
         }
         //</Snippet8>
-
     }
 }

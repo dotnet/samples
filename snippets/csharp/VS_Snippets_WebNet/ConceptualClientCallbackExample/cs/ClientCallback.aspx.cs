@@ -35,7 +35,6 @@ public partial class ClientCallback : System.Web.UI.Page,
         ListBox1.DataSource = catalog;
         ListBox1.DataTextField = "key";
         ListBox1.DataBind();
-
     }
 
     public void RaiseCallbackEvent(String eventArgument)

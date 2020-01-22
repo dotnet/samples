@@ -35,5 +35,4 @@ namespace Examples.SmtpExamples.Sync
 		    CreateTestMessage(args[0]);
 		}
 	}
-
 }

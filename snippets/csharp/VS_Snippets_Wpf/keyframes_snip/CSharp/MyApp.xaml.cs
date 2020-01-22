@@ -16,6 +16,5 @@ namespace Microsoft.Samples.KeyFrameExamples
             SampleViewer mainWindow = new SampleViewer();
             mainWindow.Show();
         }
-
     }
 }

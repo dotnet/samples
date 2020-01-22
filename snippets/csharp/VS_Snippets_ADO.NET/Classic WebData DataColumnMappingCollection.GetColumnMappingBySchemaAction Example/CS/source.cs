@@ -19,5 +19,4 @@ public class Form1: Form
                 (mappings, "Description", MissingMappingAction.Ignore);
     }
     // </Snippet1>
-
 }

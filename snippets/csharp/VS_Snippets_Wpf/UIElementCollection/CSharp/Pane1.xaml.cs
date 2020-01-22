@@ -77,7 +77,6 @@ namespace ElemCollMethods
 			btn3.Content = "Click for index";
             sp1.Children.Add(btn3);
             btn3.Click += (PrintIndex3);
-
 		}
 		void PrintIndex(object sender, RoutedEventArgs e)
 		{

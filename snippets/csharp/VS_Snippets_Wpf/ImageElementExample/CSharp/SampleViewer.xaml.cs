@@ -15,6 +15,5 @@ namespace ImageElementExample
       {
          InitializeComponent();
       }
-
    }
 }

@@ -168,7 +168,6 @@ public class App
                 PerformanceCounterCategoryType.SingleInstance, CCDC);
             // Return, rerun the application to make use of the new counters.
             return;
-
         }
         else
         {

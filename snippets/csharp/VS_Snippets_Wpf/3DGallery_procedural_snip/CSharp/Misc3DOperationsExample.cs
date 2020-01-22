@@ -69,7 +69,6 @@ namespace SDKSample
             stringResults = stringResults + " vectorResult1: " + vectorResult1.ToString();
             stringResults = stringResults + " vectorResult2: " + vectorResult2.ToString();
             return stringResults;
-
         }
           
         private string subtract3DVectorsExample()
@@ -102,7 +101,6 @@ namespace SDKSample
             string stringResults = "vectorResult1: " + vectorResult1.ToString();
             stringResults = stringResults + " vectorResult2: " + vectorResult2.ToString();
             return stringResults;
-
         }
 
         private string point4DEqualityExample()
@@ -147,7 +145,6 @@ namespace SDKSample
             // </SnippetPoint4DEqualityExample_csharp>
 
             return stringResult;
-
         }
         // <SnippetSize3DEqualityExample_csharp>
         private bool size3DEqualityExample()
@@ -173,10 +170,7 @@ namespace SDKSample
 
             // areEqual is False
             return areEqual;
-
         }
         // </SnippetSize3DEqualityExample_csharp>
-
     }
-
 }

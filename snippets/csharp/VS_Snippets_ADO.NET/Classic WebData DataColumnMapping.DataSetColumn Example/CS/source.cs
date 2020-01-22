@@ -15,5 +15,4 @@ public class Form1: Form
         mapping.DataSetColumn = "DataDescription";
     }
     // </Snippet1>
-
 }

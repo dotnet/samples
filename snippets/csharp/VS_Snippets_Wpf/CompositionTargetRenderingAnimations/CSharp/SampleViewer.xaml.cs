@@ -19,8 +19,6 @@ namespace Microsoft.Samples.PerFrameAnimations
         public SampleViewer()
         {
             InitializeComponent();
-
         }
-
     }
 }

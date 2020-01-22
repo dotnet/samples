@@ -59,7 +59,6 @@ namespace CustomControlBuilders
        {
           return false;
        } 
-
   }
   // </Snippet4>
 
@@ -112,7 +111,6 @@ namespace CustomControlBuilders
        while(myEnumerator.MoveNext())
            this.Controls.Add((TextBox)myEnumerator.Current);
     } 
-
   }
   // </Snippet6>
 }

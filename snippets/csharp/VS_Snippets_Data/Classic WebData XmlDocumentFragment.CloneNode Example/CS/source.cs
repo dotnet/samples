@@ -29,7 +29,6 @@
      XmlNode shallow = docFrag.CloneNode(false);
      Console.WriteLine("Name: " + shallow.Name);
      Console.WriteLine("OuterXml: " + shallow.OuterXml);    
- 
    }
  }
 // </Snippet1>

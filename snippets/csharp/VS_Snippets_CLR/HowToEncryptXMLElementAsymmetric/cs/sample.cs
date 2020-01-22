@@ -59,7 +59,6 @@ class Program
             Console.WriteLine("Decrypted XML:");
             Console.WriteLine();
             Console.WriteLine(xmlDoc.OuterXml);
-
         }
         catch (Exception e)
         {
@@ -99,7 +98,6 @@ class Program
         if (elementToEncrypt == null)
         {
             throw new XmlException("The specified element was not found");
-
         }
         // </snippet5>
         RijndaelManaged sessionKey = null;
@@ -210,9 +208,7 @@ class Program
             {
                 sessionKey.Clear();
             }
-
         }
-
     }
 
     public static void Decrypt(XmlDocument Doc, RSA Alg, string KeyName)
@@ -235,9 +231,7 @@ class Program
 
         // Decrypt the element.
         exml.DecryptDocument();
-
     }
-
 }
 
 // </Snippet1>

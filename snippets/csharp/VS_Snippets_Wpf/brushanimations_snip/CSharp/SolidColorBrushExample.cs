@@ -101,7 +101,6 @@ namespace Microsoft.Samples.Animation
             mainPanel.Children.Add(aRectangle);
             Content = mainPanel;
         }
-
     }
 }
 // </SnippetSolidColorBrushAnimationExample> 

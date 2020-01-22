@@ -25,5 +25,4 @@ public class Form1: Form
         table.Columns.Add(column);
     }
     // </Snippet1>
-
 }

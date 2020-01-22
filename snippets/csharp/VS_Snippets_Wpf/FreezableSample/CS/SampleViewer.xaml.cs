@@ -24,7 +24,6 @@ namespace Microsoft.Samples.FreezableExamples
         public SampleViewer()
         {
             InitializeComponent();
-
         }
     }
 }

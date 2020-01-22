@@ -51,13 +51,11 @@ public class SimpleServiceInstaller : System.Configuration.Install.Installer
         Installers.Add(simpleServiceInstaller);
         Installers.Add(simpleServiceProcessInstaller);
         // </Snippet3>
-        
     }
 
     public static void InstallMain()
     {
         Console.WriteLine("Usage: InstallUtil.exe [<install>.exe | <install>.dll]");
     }
-
 }
 // 

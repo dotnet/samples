@@ -20,5 +20,4 @@ public class Form1: Form
         parameter.SourceColumn = "Description";
     }
     // </Snippet1>
-
 }

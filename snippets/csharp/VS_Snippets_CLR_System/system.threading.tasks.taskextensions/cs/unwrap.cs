@@ -48,7 +48,6 @@ class UnWrapDemo
             {
                 Console.WriteLine("A task has thrown the following (unexpected) exception:\n{0}", e);
             }
-
         }
         // This method represents a remote API.
         static Task<int> RemoteIncrement(int n)
@@ -65,7 +64,6 @@ class UnWrapDemo
                 },
                 n);
         }
-      
 }
 
 //</snippet01>

@@ -13,6 +13,5 @@ namespace ButtonProps
 
 	public partial class App : Application
 	{
-
 	}
 }

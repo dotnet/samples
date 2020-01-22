@@ -82,5 +82,4 @@ class Program
         Console.WriteLine(writer.ToString());
     }
     // </Snippet1>
-
 }

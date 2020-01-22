@@ -51,7 +51,6 @@ namespace Microsoft.ServiceModel.Samples
                 scope.Complete();
             }
             wcfClient.Close();
-
           }
           catch (TimeoutException timeProblem)
           {

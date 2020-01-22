@@ -158,7 +158,6 @@ public class MyTreeNode_FirstNode : Form
 		this.Text = "Form1";
 		this.myGroupBox.ResumeLayout(false);
 		this.ResumeLayout(false);
-
 	}
 
 	static void Main()
@@ -220,7 +219,6 @@ private void myButton_Click(object sender, System.EventArgs e)
 				MessageBox.Show("The name of node being edited: "+
 					mySelectedNode.Text);
 			mySelectedNode.BeginEdit();
-
 		}
 		else
 		{

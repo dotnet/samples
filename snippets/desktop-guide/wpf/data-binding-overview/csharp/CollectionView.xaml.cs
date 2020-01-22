@@ -70,6 +70,5 @@ namespace bindings
             listingDataView.SortDescriptions.Add(new SortDescription("StartDate", ListSortDirection.Ascending));
         }
         // </AddSortChecked>
-
     }
 }

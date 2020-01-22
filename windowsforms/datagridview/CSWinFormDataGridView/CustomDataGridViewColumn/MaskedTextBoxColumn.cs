@@ -327,6 +327,5 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
                 }
             }
         }
-
     }
 }

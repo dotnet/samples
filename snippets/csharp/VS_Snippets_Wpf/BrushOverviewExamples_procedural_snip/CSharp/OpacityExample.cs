@@ -34,7 +34,5 @@ namespace Microsoft.Samples.BrushExamples
  
             this.Content = myMainPanel;
         }
-    
     }
-
 }

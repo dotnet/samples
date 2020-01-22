@@ -12,6 +12,5 @@ namespace StatuxBar_Snips
 
     public partial class App : System.Windows.Application
     {
-
     }
 }

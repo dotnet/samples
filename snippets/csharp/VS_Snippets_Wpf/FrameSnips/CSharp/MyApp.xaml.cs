@@ -10,6 +10,5 @@ namespace FrameSnips
 
     public partial class MyApp : Application
     {
-
     }
 }

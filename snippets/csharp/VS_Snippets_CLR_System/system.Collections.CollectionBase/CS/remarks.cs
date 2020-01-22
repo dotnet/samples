@@ -51,7 +51,6 @@ public class Int16Collection : CollectionBase  {
       if ( value.GetType() != typeof(System.Int16) )
          throw new ArgumentException( "value must be of type Int16.", "value" );
    }
-
 }
 
 public class SamplesCollectionBase

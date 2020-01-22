@@ -34,6 +34,5 @@ namespace String_Example
             // The trimmed value is: c:/temp/.
             //</snippet1>
         }
-
     }
 }

@@ -67,7 +67,6 @@ namespace CustomControls
 		{
 			// Ignores literals between rows.
 		}
-
 	}
 	[AspNetHostingPermission(SecurityAction.Demand,
 		Level = AspNetHostingPermissionLevel.Minimal)]
@@ -128,7 +127,6 @@ namespace CustomControls
 
 			for (int y = 0; y < Columns; y++)
 				appendCell(row, rowNumber, y);
-
 		}
 
 		protected void appendCell(TableRow row, int rowNumber, int cellNumber)
@@ -155,7 +153,6 @@ namespace CustomControls
 				cellNumber.ToString();
 
 			row.Cells.Add(cell);
-
 		}
 
 		// Called at runtime when a child object is added to the collection.  
@@ -166,7 +163,6 @@ namespace CustomControls
 			{
 				_cellObjects.Add(cell.CellID, cell);
 			}
-
 		}
 
 		protected override void OnPreRender(EventArgs e)

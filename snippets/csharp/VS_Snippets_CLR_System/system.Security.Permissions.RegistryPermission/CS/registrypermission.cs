@@ -88,7 +88,6 @@ public class RegistryPermissionDemo
         }
 
         return returnValue;
-
     }
     //</Snippet3>
     //<Snippet4>
@@ -114,7 +113,6 @@ public class RegistryPermissionDemo
         }
 
         return returnValue;
-
     }
     //</Snippet4>
     //<Snippet5>
@@ -148,7 +146,6 @@ public class RegistryPermissionDemo
         Console.WriteLine("Result of ToFromXml = " + readPerm2.ToString() + "\n");
         //</Snippet7>
         return returnValue;
-
     }
     //</Snippet6>
     //<Snippet9> 

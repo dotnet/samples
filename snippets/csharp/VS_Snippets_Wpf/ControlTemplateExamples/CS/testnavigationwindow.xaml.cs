@@ -23,6 +23,5 @@ namespace ControlTemplateExamples
         {
             InitializeComponent();
         }
-
     }
 }

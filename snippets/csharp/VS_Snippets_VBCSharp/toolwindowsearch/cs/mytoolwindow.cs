@@ -337,6 +337,5 @@ namespace Microsoft.TestToolWindowSearch
             }
         }
         //</Snippet12>
-
     }
 }

@@ -29,10 +29,8 @@ namespace GetLocationPropertyHandleUnknown
             {
                 Console.WriteLine("Unknown");
             }
-
         }
         //</Snippet2>
-
     }
 }
 //</Snippet1>

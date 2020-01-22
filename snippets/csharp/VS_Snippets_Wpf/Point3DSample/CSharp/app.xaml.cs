@@ -19,8 +19,6 @@ namespace ThreeDPointSample
 
             // displays variables
             mainWindow.ShowVars();
-
         }
-
     }
 }

@@ -217,7 +217,6 @@ namespace BindingSourceFind
             this.Controls.Add(box1);
             box1.DataBindings.Add("Text", bindingSource1, "Name");
             view1.Columns[7].DisplayIndex = 0;
-            
         }
 
         void bindingSource1_CurrentChanged(object sender, EventArgs e)
@@ -225,7 +224,5 @@ namespace BindingSourceFind
             box1.Font = (Font)bindingSource1.Current;
         }
         //</snippet6>
-       
     }
-        
 }

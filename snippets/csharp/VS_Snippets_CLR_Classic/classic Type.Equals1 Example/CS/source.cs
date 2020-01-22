@@ -33,7 +33,6 @@ class Example
         // and variable b represents type Type.
 
         //Console.ReadLine();
-
     }
 }
 

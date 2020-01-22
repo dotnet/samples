@@ -43,5 +43,4 @@ namespace Microsoft.ServiceModel.Samples
             return n1 / n2;
         }
     }
-
 }

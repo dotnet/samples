@@ -22,7 +22,6 @@ namespace ResourcesSample
         public UriClassSnippetPage()
         {
             InitializeComponent();
-
         }
 
         void bob(object sender, RoutedEventArgs e)
@@ -35,6 +34,5 @@ namespace ResourcesSample
             Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);// RelativeOrAbsoluteAbsolute
             this.NavigationService.Navigate(uri);
         }
-
     }
 }

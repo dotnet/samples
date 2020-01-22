@@ -17,8 +17,6 @@ namespace ScrollViewer_Methods
 			Window1 mainWindow = new Window1();
 			mainWindow.InitializeComponent();
 			mainWindow.Show();
-
 		}
-
 	}
 }

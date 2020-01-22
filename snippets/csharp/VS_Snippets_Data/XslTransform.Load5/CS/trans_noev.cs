@@ -30,5 +30,4 @@ using System.Xml.XPath;
     xslt.Transform("books.xml", "books.html", null);
    } 
 //</snippet1> 
- 
  }

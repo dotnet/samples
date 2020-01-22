@@ -20,7 +20,6 @@ public class myForm:
     public myForm() : base()
     {        
     }
-
 }
 
 //</snippet6>
@@ -41,7 +40,6 @@ public class Form1: myForm
         TruncateAndRoundSizes();
 
         //Add any initialization after the InitializeComponent() call
-
     }
 
     //Form overrides dispose to clean up the component list.
@@ -116,7 +114,6 @@ public class Form1: myForm
         this.Name = "Form1";
         this.Text = "Form1";
         this.ResumeLayout(false);
-
     }
 
     #endregion
@@ -154,7 +151,6 @@ public class Form1: myForm
                 new Font(this.Font, FontStyle.Italic), 
                 Brushes.Indigo, 10.0F, 65.0F);
         }
-
     }
     //</snippet1>
     // The following code example demonstrates the G,B,R, and A 
@@ -185,7 +181,6 @@ public class Form1: myForm
     {
         //CreatePointsAndSizes(e)
         ShowPropertiesOfSlateBlue(e);
-
     }
 
     // The following code example demonstrates the Subtraction operator.  
@@ -232,7 +227,6 @@ public class Form1: myForm
         //Print out the values on two labels.
         Label1.Text = "Rounded size = "+roundedSize.ToString();
         Label2.Text = "Truncated size = "+truncatedSize.ToString();
-
     }
     //</snippet5>
 

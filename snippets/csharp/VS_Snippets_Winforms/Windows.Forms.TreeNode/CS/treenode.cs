@@ -16,7 +16,6 @@ namespace Foo
 		public Form1()
 		{
 			InitializeComponent();
-
 		}
 
 		protected override void Dispose( bool disposing )
@@ -80,7 +79,6 @@ namespace Foo
          this.Name = "Form1";
          this.Text = "Form1";
          this.ResumeLayout(false);
-
       }
 		#endregion
 
@@ -140,6 +138,5 @@ private void treeView1_AfterCollapse(object sender, TreeViewEventArgs e)
    treeView1.Nodes.Add(tn);
 }
 // </snippet3>
-
 	}
 }

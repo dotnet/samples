@@ -8,7 +8,6 @@ class Program
     {
         string connectionString = "Driver={Microsoft Access Driver (*.mdb)};DBQ=C:\\Samples\\Northwind.mdb";
         ExecuteTransaction(connectionString);
-
     }
     // <Snippet1>
     public static void ExecuteTransaction(string connectionString)

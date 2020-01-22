@@ -34,7 +34,6 @@ public class Sample
          //Move the reader back to the node that owns the attribute.
          reader.MoveToElement();
        }
-
      } 
 
      finally 

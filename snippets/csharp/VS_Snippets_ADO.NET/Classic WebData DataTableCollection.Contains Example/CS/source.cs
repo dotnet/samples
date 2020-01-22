@@ -23,5 +23,4 @@ public class Form1: Form
             Console.WriteLine("Table named Suppliers exists");
     }
     // </Snippet1>
-
 }

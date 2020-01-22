@@ -50,6 +50,5 @@ namespace HOWTONavigationSnippets
             this.Refresh();
         }
         //</SnippetNavigateRefreshCODE>
-
     }
 }

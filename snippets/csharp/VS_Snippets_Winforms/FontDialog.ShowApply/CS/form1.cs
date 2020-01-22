@@ -87,7 +87,6 @@ namespace FontDialog_cs
 			this.Name = "Form1";
 			this.Text = "Form1";
 			this.ResumeLayout(false);
-
 		}
 		#endregion
 
@@ -114,7 +113,6 @@ private void fontDialog1_Apply(object sender, System.EventArgs e)
 {
 	// Applies the selected font to the selected text.
 	richTextBox1.Font = fontDialog1.Font;
-			
 }
 //</snippet1>
 	}

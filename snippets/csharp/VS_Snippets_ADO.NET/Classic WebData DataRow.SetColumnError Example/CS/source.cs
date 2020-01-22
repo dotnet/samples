@@ -22,5 +22,4 @@ public class Form1: Form
         Console.WriteLine(row.GetColumnError(columnIndex));
     }
     // </Snippet1>
-
 }

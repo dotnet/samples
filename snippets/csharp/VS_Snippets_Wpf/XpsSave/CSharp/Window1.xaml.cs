@@ -324,7 +324,6 @@ namespace SDKSample
 
             // Leave the new _xpsPackage open for DocumentViewer
             // to access additional required resources.
-
         }// end:LoadDocumentViewer()
         //</SnippetXpsSaveLoadFixedContent>
 
@@ -350,5 +349,4 @@ namespace SDKSample
         #endregion //Private Members
 
     }// end:partial class Window1
-
 }// end:namespace SDKSample

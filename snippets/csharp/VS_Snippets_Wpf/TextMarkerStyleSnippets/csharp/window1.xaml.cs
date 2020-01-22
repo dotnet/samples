@@ -23,6 +23,5 @@ namespace SDKSample
             list.MarkerStyle = TextMarkerStyle.Box;
             // </SnippetTextMarkerStyleSnippet1>
         }
-
     }
 }

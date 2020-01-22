@@ -31,6 +31,5 @@ public class Example
    {
       foreach(var number in Numbers.GetTenPrimes())
          Console.WriteLine(number);
-
    }
 }

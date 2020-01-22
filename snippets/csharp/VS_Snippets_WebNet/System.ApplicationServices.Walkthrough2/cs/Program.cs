@@ -89,7 +89,6 @@ class MyServiceTst {
 
             foreach (string sProp in strProfileProps)
                 Console.WriteLine(sProp + ": " + profileData[sProp]);
-
         }
     }
 
@@ -153,7 +152,6 @@ class MyServiceTst {
         } else {
             Console.WriteLine("Credentials could not be validated.");
         }
-
     }
 }
 
@@ -170,7 +168,6 @@ class Program {
         Console.WriteLine("Press any key to quit.");
         Console.Read();
     }
-
 }
 
 // </snippet999>

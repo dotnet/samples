@@ -129,6 +129,5 @@ public class MailslotPermissionEntry
 		ResourcePermissionBaseEntry baseEntry = new ResourcePermissionBaseEntry((int)this.PermissionAccess, new string[] {this.Name,this.MachineName});            
 		return baseEntry;
 	}
-
 }
 //</snippet1>

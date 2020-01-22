@@ -51,7 +51,6 @@ public sealed class App
     [DllImport("Kernel32", ExactSpelling = true, SetLastError = true)]
     static extern Boolean CloseHandle(IntPtr h);
     //</snippet5>
-    
 }
 
 // This code produces the following output.

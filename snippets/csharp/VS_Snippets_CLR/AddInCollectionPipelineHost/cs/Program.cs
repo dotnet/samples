@@ -160,16 +160,13 @@ internal static IList<BookInfo> CreateBooks()
                       default:
                         break;
                 }
-
             }
             books.Add(new MyBookInfo(ParamId, ParamAuthor, ParamTitle, ParamGenre,
                             ParamPrice, ParamPublish_Date, ParamDescription));
         }
-
     }
     return books;
 }
-
 }
 
 class MyBookInfo : BookInfo

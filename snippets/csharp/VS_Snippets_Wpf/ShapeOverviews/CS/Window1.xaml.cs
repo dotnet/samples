@@ -17,12 +17,10 @@ namespace AvalonTemplate
         public Window1()
         {
             InitializeComponent();
-
         }
 
 	    public void ShowVars()
         {
-
     }
 	}
 }

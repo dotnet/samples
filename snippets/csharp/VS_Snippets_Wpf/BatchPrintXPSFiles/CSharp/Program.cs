@@ -24,9 +24,7 @@ namespace BatchPrintXPSFiles
             // Start the printing thread. The method passed to the Thread 
             // constructor will execute.
             printingThread.Start();
-       
         }//end Main
-
     }//end Program class
 
     public class BatchXPSPrinter
@@ -80,18 +78,13 @@ namespace BatchPrintXPSFiles
                             }
                             Console.WriteLine("\tContinuing with next XPS file.\n");
                         }
-
                     }// end for each XPS file
-               
                 }//end if there are no XPS files in the directory
-
             }//end if the directory does not exist
 
             Console.WriteLine("Press Enter to end program.");
             Console.ReadLine();
-
         }// end PrintXPS method
-
     }// end BatchXPSPrinter class
     //</SnippetBatchPrintXPSFiles>
 }// end namespace

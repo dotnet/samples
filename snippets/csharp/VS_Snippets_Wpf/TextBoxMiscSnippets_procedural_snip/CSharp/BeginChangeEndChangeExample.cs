@@ -36,8 +36,6 @@ namespace SDKSample
 
             myStackPanel.Children.Add(myTextBox);
             this.Content = myStackPanel;
-            
         }
-
     }
 }

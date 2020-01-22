@@ -13,6 +13,5 @@ namespace ContentControlSimple
 
 	public partial class app : Application
 	{
-
 	}
 }

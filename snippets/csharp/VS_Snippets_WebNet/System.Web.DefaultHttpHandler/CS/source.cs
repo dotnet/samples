@@ -90,6 +90,5 @@ class AsyncResultSample : IAsyncResult
             callback(this);
         }
     }
-
 }
 // </Snippet1>

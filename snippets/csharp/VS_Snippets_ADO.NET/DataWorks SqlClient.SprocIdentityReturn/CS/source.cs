@@ -10,7 +10,6 @@ class Program
         string connectionString = GetConnectionString();
         ReturnIdentity(connectionString);
         // Console.ReadLine();
-
     }
 
     private static void ReturnIdentity(string connectionString)

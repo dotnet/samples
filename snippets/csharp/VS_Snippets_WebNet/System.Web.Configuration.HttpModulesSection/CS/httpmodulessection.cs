@@ -51,9 +51,6 @@ for (int i = 0; i < httpModules.Count; i++)
    httpModules[i].Type));
 }
 // </Snippet3>
-
 }
- 
 } // UsingHttpModulesSection class end.
-
 } // Samples.Aspnet.SystemWebManagement namespace end.

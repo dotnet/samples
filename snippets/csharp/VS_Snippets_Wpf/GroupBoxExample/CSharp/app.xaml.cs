@@ -13,6 +13,5 @@ namespace GroupBoxExample
 
   public partial class app : Application
   {
-
   }
 }

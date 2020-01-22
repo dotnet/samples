@@ -104,8 +104,6 @@ namespace Microsoft.Samples.ImplicitExplicitCorrelation.Client
 
             // reset order field
             lblOrderID.ResetText();
-                        
         }
-
     }
 }

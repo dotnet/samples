@@ -20,7 +20,6 @@ using System.Windows.Forms;
          // Display the contents of myFormat.
          Console.WriteLine("The Format Name corresponding to the ID "+myFormat.Id+" is :");
          Console.WriteLine(myFormat.Name);
-
       }
    }
 // </Snippet1>

@@ -226,6 +226,5 @@ namespace Highlighter
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new ClientForm());
         }
-
     } // class
 } // namespace

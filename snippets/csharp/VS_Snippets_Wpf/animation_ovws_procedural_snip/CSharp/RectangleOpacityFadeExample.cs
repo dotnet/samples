@@ -51,7 +51,6 @@ namespace SDKSample
         {
             myStoryboard.Begin(this);
         }
-
     }
 }
 // </SnippetRectangleOpacityFadeCodeExampleWholePage>

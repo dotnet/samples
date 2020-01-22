@@ -38,7 +38,6 @@ namespace whats_new
             //await TLS.ConnectCloudFlare();
 
             //Cipher.Run();
-
         }
 
         // <SnippetPrintJson>

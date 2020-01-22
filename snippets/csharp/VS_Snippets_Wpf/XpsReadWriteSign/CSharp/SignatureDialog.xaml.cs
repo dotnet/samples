@@ -31,7 +31,6 @@ namespace SDKSample
             Done.Click += new RoutedEventHandler(DoneCommandHandler);
             _signatureUtilities = new SignatureUtilites();
             InitializeSignatureDisplay();
-
         }
         #endregion
         #region Public Methods
@@ -78,7 +77,6 @@ namespace SDKSample
                 _signatureUtilities.SignXps(_xpsDocument, cert, spotID);
                 InitializeSignatureDisplay();
             }
-
         }
 
         //<SnippetSignatureDefinitionCommandHandler>
@@ -250,5 +248,4 @@ namespace SDKSample
         private bool isSigned;
         #endregion PrivateMembers
     }
-
 }

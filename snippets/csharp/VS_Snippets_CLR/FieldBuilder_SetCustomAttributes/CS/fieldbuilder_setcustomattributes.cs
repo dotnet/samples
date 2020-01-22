@@ -27,7 +27,6 @@ namespace MySample
       public MyAttribute1(string myString)
       {
          myCustomAttributeValue = myString;
-
       }
    }
    [AttributeUsage(AttributeTargets.All, AllowMultiple = false)]
@@ -37,7 +36,6 @@ namespace MySample
       public MyAttribute2(bool myBool)
       {
          myCustomAttributeValue = myBool;
-
       }
    }
 

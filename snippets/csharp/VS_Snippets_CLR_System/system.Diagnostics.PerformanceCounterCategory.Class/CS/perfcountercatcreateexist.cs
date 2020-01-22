@@ -182,7 +182,6 @@ class PerfCounterCatCreateExistMod
 
             Console.WriteLine("Category \"{0}\" with counter \"{1}\" created.", pcc.CategoryName, counterName);
             //</Snippet23>
-
         }
         else if(instanceName.Length>0)
         {

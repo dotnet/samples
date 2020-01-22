@@ -19,7 +19,6 @@ namespace Microsoft.Samples.CustomControls
         public SampleViewer()
         {
             InitializeComponent();
-
         }
 
         private void pageLoaded(object sender, RoutedEventArgs e)
@@ -35,8 +34,6 @@ namespace Microsoft.Samples.CustomControls
 
             w.StartingColor = Colors.Blue;
             MessageBox.Show(w.ShowDialog().ToString());
-
         }
-
     }
 }

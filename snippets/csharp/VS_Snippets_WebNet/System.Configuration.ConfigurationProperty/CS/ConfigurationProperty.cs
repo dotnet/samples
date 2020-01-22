@@ -259,7 +259,6 @@ namespace ConfigurationPropertyExample
             string validator = _MaxIdleTime.Validator.ToString();
             Console.WriteLine("MaxIdleTime validator: {0}", validator);
             // </Snippet12>
-
         }
 
         public static void Main(string[] args)
@@ -270,6 +269,5 @@ namespace ConfigurationPropertyExample
             GetPropertyCharacteristics();
             Console.ReadLine();
         }
-
     }
 }

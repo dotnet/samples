@@ -15,5 +15,4 @@ public class Form1: Form
         Console.WriteLine("rows count: " + table.Rows.Count);
     }
     // </Snippet1>
-
 }

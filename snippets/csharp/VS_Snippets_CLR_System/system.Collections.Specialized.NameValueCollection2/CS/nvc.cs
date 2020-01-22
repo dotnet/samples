@@ -44,7 +44,6 @@ public class SamplesNameValueCollection  {
       myCol.Clear();
       Console.WriteLine( "The collection contains the following elements after it is cleared:" );
       PrintKeysAndValues( myCol );
-
    }
 
    public static void PrintKeysAndValues( NameValueCollection myCol )  {
@@ -60,7 +59,6 @@ public class SamplesNameValueCollection  {
          Console.WriteLine( "   [{0}]     {1,-10} {2}", i, myCol.GetKey(i), myCol.Get(i) );
       Console.WriteLine();
    }
-
 }
 
 /*

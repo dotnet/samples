@@ -68,7 +68,6 @@ namespace MyProject
 			Console.WriteLine("A message has arrived in the queue.");
 
 			return;
-
 		}
 
 		//**************************************************
@@ -132,7 +131,6 @@ namespace MyProject
 			// Catch other exceptions as necessary.
 
 			return;
-
 		}
 	}
 }

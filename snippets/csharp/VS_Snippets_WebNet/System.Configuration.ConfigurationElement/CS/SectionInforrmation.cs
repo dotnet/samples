@@ -29,7 +29,6 @@ namespace Samples.AspNet
                 section.SectionInformation;
 
             return sInfo;
-
         }
         // </Snippet91>
 
@@ -44,7 +43,6 @@ namespace Samples.AspNet
 
             Console.WriteLine("Parent section : {0}",
                 parentSection.SectionInformation.Name);
-
         }
         // </Snippet92>
 
@@ -59,7 +57,6 @@ namespace Samples.AspNet
 
             Console.WriteLine("Section xml:");
             Console.WriteLine(sectionXml);
-
         }
         // </Snippet93>
 
@@ -94,7 +91,6 @@ namespace Samples.AspNet
 
             Console.WriteLine("Decrypted section:");
             Console.WriteLine(sectionXml);
-
         }
         // </Snippet94>
 
@@ -142,7 +138,6 @@ namespace Samples.AspNet
             Console.WriteLine("Allow override: {0}",
                            allowOverride.ToString());
             // </Snippet99>  
-           
         }
 
         // <Snippet100>  
@@ -155,7 +150,6 @@ namespace Samples.AspNet
                 sInfo.InheritInChildApplications;
             Console.WriteLine("Inherit in child apps: {0}",
                 inheritInChildApps.ToString());
-
         }
         // </Snippet100>  
        
@@ -202,7 +196,6 @@ namespace Samples.AspNet
             Console.WriteLine("Section protected?: {0}",
                 protect.ToString());
             // </Snippet106>
-           
         }
 
         // <Snippet107>
@@ -214,7 +207,6 @@ namespace Samples.AspNet
             string sectionNameProperty = sInfo.Name;
             Console.WriteLine("Section name: {0}", 
                 sectionNameProperty);
-
         }
         // </Snippet107>
 
@@ -231,7 +223,6 @@ namespace Samples.AspNet
             else
                 Console.WriteLine("Protection provider: {0}", 
                     pp.ToString());
-
         }
         // </Snippet108>
 
@@ -245,7 +236,6 @@ namespace Samples.AspNet
                 sInfo.RestartOnExternalChanges;
             Console.WriteLine("Section type: {0}", 
                 restartOnChange.ToString());
-
         }
         // </Snippet109>
 
@@ -257,7 +247,6 @@ namespace Samples.AspNet
 
             string sectionName = sInfo.SectionName;
             Console.WriteLine("Section type: {0}", sectionName);
-
         }
         // </Snippet110>
 
@@ -269,7 +258,6 @@ namespace Samples.AspNet
 
             string sectionType = sInfo.Type;
             Console.WriteLine("Section type: {0}", sectionType);
-
         }
         // </Snippet111>
 
@@ -307,9 +295,7 @@ namespace Samples.AspNet
 
             Console.WriteLine("Decrypted section:");
             Console.WriteLine(sectionXml);
-
         }
         // </Snippet112>
-           
     }
 }

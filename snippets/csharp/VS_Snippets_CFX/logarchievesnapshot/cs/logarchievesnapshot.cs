@@ -34,7 +34,6 @@ namespace Snippets
             writer.WriteEndElement(); 
             writer.Close(); 
             logStore.SetArchiveTail(snapshot.LastSequenceNumber); 
-            
         }
         static void RestoreFromXML(string fileName) 
         { 

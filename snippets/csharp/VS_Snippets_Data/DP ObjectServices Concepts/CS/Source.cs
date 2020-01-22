@@ -1754,7 +1754,6 @@ namespace ObjectServicesConceptsCS
             }
 
             //</snippetObjectContextProxy>
-
         }
         public static void FilterQueryLinq()
         {
@@ -2323,7 +2322,6 @@ namespace ObjectServicesConceptsCS
 
                 // Call AttachObjectGraph.
                 AttachObjectGraph(context, order, items);
-
             }
         }
         //<snippetAttachObjectGraph>
@@ -2574,7 +2572,6 @@ namespace ObjectServicesConceptsCS
 
                 // Save the changes.
                 context.SaveChanges();
-
             }
             //</snippetChangeObjectRelationshipUsingFKProperty>
         }
@@ -2879,7 +2876,6 @@ namespace ObjectServicesConceptsCS
                             result.FirstName, result.LastName);
             }
             //</snippetQueryEntityTypeCollection>
-
         }
         public static void QueryAnonymousType()
         {
@@ -3424,7 +3420,6 @@ namespace ObjectServicesConceptsCS
                 ObjectParameter name = new ObjectParameter("Name", typeof(String));
                 context.GetDepartmentName(1, name);
                 Console.WriteLine(name.Value);
-
             }
             //</snippetExecuteStoredProcWithOutParams>
         }
@@ -3441,7 +3436,6 @@ namespace ObjectServicesConceptsCS
 
                 context.ExecuteFunction("GetProductName", id, name);
                 Console.WriteLine(name.Value);
-
             }
             //</snippetExecuteFunctionWithOutParam>
         }
@@ -3632,24 +3626,20 @@ namespace ObjectServicesConceptsCS
                     foreach (Course course in courses)
                     {
                         Console.WriteLine("CourseID: {0} ", course.CourseID);
-
                     }
                     var onlineCourses = courses.OfType<OnlineCourse>();
                     Console.WriteLine("Online courses only for the selected department.");
                     foreach (OnlineCourse onlineCourse in onlineCourses)
                     {
                         Console.WriteLine("CourseID: {0} ", onlineCourse.CourseID);
-
                     }
                     var onsiteCourses = courses.OfType<OnsiteCourse>();
                     Console.WriteLine("Onsite courses only for the selected department.");
                     foreach (OnsiteCourse onsite in onsiteCourses)
                     {
                         Console.WriteLine("CourseID: {0} ", onsite.CourseID);
-
                     }
                 }
-
             }
             catch (System.Data.MappingException e)
             {
@@ -3702,7 +3692,6 @@ namespace ObjectServicesConceptsCS
 					// The object was saved and the key 
 					// is not temporary any more.
 					Console.WriteLine(dpt.EntityKey.IsTemporary);
-
 				}
 				catch (InvalidOperationException ex)
 				{

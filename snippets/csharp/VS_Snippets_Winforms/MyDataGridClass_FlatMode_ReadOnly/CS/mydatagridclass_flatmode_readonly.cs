@@ -28,7 +28,6 @@ namespace MyDataGridClass
       {
          InitializeComponent();
          SetUp();
-         
       }
 
       protected override void Dispose( bool disposing )
@@ -100,7 +99,6 @@ namespace MyDataGridClass
          this.Text = "Grid Control";
          ((ISupportInitialize)(this.myDataGrid)).EndInit();
          this.ResumeLayout(false);
-
       }
       #endregion
 
@@ -161,7 +159,6 @@ namespace MyDataGridClass
          MessageBox.Show("Flat mode changed to "+strMessage,
             "Message",   MessageBoxButtons.OK,
             MessageBoxIcon.Exclamation);
-         
       }
       // Toggle the 'FlatMode'.
       private void button1_Click(object sender, EventArgs e)

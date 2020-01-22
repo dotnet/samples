@@ -34,7 +34,6 @@ namespace RenderChildrenSample
          {
             _message = value;
          }
-         
       }
 
 // <Snippet1>

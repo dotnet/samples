@@ -65,7 +65,6 @@ namespace CodeExamples
          this.Text = "About";
          this.Load += new System.EventHandler(this.AboutDialog_Load);
          this.ResumeLayout(false);
-
       }
 		#endregion
 
@@ -85,6 +84,5 @@ private void AboutDialog_Load(object sender, EventArgs e)
       this.ProductVersion;  
 }
 // </snippet1>
-
 	}
 }

@@ -93,7 +93,6 @@ namespace TaxiFarePrediction
             Console.WriteLine($"*       Root Mean Squared Error:      {metrics.RootMeanSquaredError:#.##}");
             // </Snippet19>
             Console.WriteLine($"*************************************************");
-
         }
 
         private static void TestSinglePrediction(MLContext mlContext, ITransformer model)

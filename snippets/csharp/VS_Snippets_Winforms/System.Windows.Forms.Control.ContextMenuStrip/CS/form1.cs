@@ -71,7 +71,6 @@ public class Form1 : Form
         this.Name = "Form1";
         this.contextMenuStrip1.ResumeLayout(false);
         this.ResumeLayout(false);
-
     }
 }
 //</Snippet1>

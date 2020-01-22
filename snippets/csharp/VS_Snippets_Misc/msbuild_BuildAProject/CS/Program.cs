@@ -35,7 +35,6 @@ namespace BuildAProjectCS
                 Console.WriteLine("Build succeeded.");
             else
                 Console.WriteLine(@"Build failed. View C:\temp\build.log for details");
-
         }
     }
 }

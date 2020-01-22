@@ -53,5 +53,4 @@ public class Class4
         public int AtomicNumber { get; set; }
     }
     //</Snippet41>
-
 }

@@ -179,5 +179,4 @@ namespace FromClause
     //}
     //Output: 5 8
     //</snippet4>
-
 }

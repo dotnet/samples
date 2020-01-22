@@ -153,7 +153,6 @@ internal class Example
                 //
                 ewh = EventWaitHandle.OpenExisting(ewhName);
                 //</Snippet3>
-
             }
             catch (UnauthorizedAccessException ex)
             {
@@ -161,7 +160,6 @@ internal class Example
                     ex.Message);
                 return;
             }
-
         }
 
         // Wait on the event, and hold it until the program

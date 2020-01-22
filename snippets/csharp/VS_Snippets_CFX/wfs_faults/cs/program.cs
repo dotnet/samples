@@ -28,7 +28,6 @@ namespace Microsoft.Samples.Faults.FaultService
                 Console.ReadLine();
                 host.Close();
             }
-
         }
 
         static Activity GetServiceWorkflow()
@@ -114,8 +113,6 @@ namespace Microsoft.Samples.Faults.FaultService
                     }
                 }
             };
-
         }
     }
-
 }

@@ -55,7 +55,6 @@ public class Form1 : Form
         this.Controls.Add(this.listBox1);
         this.Name = "Form1";
         this.ResumeLayout(false);
-
     }
 }
 //</Snippet1>

@@ -138,7 +138,6 @@ namespace BindingSourceMultipleForms
             textBox4.Location = new Point(10, 120);
             this.Controls.AddRange(new Control[] { textBox1, textBox2, textBox3, textBox4 });
         }
-
     }
 }
 //</snippet1>

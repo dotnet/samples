@@ -46,9 +46,7 @@
        Console.WriteLine( "The read-only ArrayList myReadOnlyAL contains:" );
        foreach ( String myStr in myReadOnlyAL )
           Console.WriteLine( "   {0}", myStr );
-
     }
-
  }
 
 

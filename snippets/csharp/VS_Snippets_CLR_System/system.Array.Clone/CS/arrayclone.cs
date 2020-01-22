@@ -41,14 +41,12 @@ public class SamplesArray  {
       Console.WriteLine( "After changes to the clone:" );
       Console.WriteLine( "   Original: The DateTimeFormatInfo.DateSeparator for {0} is {1}.", arrCI[3].Name, arrCI[3].DateTimeFormat.DateSeparator );
       Console.WriteLine( "      Clone: The DateTimeFormatInfo.DateSeparator for {0} is {1}.", arrCIClone[3].Name, arrCIClone[3].DateTimeFormat.DateSeparator );
-
    }
 
    public static void PrintIndexAndValues( Array myArray )  {
       for ( int i = myArray.GetLowerBound(0); i <= myArray.GetUpperBound(0); i++ )
          Console.WriteLine( "\t[{0}]:\t{1}", i, myArray.GetValue( i ) );
    }
-
 }
 
 

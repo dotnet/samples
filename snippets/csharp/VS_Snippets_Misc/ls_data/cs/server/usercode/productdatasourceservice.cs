@@ -17,7 +17,6 @@ namespace LightSwitchApplication
                     (detail.Product.UnitsInStock - detail.Quantity);
             }
             this.DataWorkspace.ProductDataSource.SaveChanges();
-
         }
         //</Snippet16>
     }

@@ -423,6 +423,5 @@ public class DataGridViewColumnDemo : Form
     {
         Application.Run(new DataGridViewColumnDemo());
     }
-
 }
 //</snippet100>

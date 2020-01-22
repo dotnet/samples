@@ -106,7 +106,6 @@ class ParamBuilderDemo
 	mthdIL.Emit(OpCodes.Ret);
 
 	return myTypeBuilder.CreateType();
-
    }
 
    public static void Main()
@@ -150,9 +149,7 @@ class ParamBuilderDemo
 					null, custObj, passMe));
 	thePool = (double)passMe[0];
 	Console.WriteLine("The new amount in the pool is ${0}", thePool);
-
    }
-
 }
 
 // </Snippet1>

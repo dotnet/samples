@@ -158,6 +158,5 @@ public class Form1 : System.Windows.Forms.Form
         dataGridView1.AutoResizeRows(
             DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
     }
-
 }
 // </snippet10>

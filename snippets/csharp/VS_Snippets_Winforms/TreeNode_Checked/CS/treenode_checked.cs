@@ -90,7 +90,6 @@ public class TreeNode_Bounds : Form
 
       // Begin repainting the TreeView.
       myTreeView.EndUpdate();
-   
    }
 
 // <Snippet1> 
@@ -146,7 +145,6 @@ public void HighlightCheckedNodes()
       this.myButton.Click += new EventHandler(MyButton_Click);
       this.Text = "TreeNode Example";
       this.ResumeLayout(false);
-
    }
    static void Main() 
    {

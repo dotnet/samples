@@ -18,6 +18,5 @@ public class Client
         Counter counter = new Counter();
         Console.WriteLine("This is call number {0}.", counter.Count);
     }
-
 }
 // </snippet20>

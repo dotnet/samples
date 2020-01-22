@@ -25,7 +25,6 @@ namespace ServiceDescription1
        {
          Console.WriteLine("Exception: " + e.Message);
        }
-       
       }
    }
 }

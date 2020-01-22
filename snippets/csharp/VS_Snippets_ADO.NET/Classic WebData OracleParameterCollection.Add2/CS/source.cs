@@ -20,5 +20,4 @@ public void CreateOracleParamColl() {
     int pIndex = paramCollection.Add(parameter);
  }
 // </Snippet1>
-
 }

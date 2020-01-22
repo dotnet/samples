@@ -276,7 +276,6 @@ namespace ExpressionTreesCSharp
             // (5 ^ 3)
             // 6
             //</Snippet9>
-
         }
 
         //GreaterThan(Expression, Expression)
@@ -616,7 +615,6 @@ namespace ExpressionTreesCSharp
             // The result of executing the expression tree:
             // 3
             //</Snippet18>
-
         }
 
         //Expression.AndAlso(Expression, Expression)
@@ -805,7 +803,6 @@ namespace ExpressionTreesCSharp
             // null
 
             //</Snippet22>
-
         }
 
         //Expression.Convert(Expression, Type)
@@ -1059,7 +1056,6 @@ namespace ExpressionTreesCSharp
             var emptyBlock = Expression.Block(emptyExpr);
 
             //</Snippet31>
-
         }
 
         //Expression.IfThen
@@ -1816,6 +1812,5 @@ namespace ExpressionTreesCSharp
             Console.WriteLine("C#");
             Console.ReadLine();
         }
-
     }
 }

@@ -24,7 +24,6 @@
        Console.WriteLine( "   Capacity : {0}", myAL.Capacity );
        Console.Write( "   Values:" );
        PrintValues( myAL );
-
     }
 
     public static void PrintValues( IEnumerable myList )  {
@@ -32,7 +31,6 @@
           Console.Write( "   {0}", obj );
        Console.WriteLine();
     }
-
  }
  /* 
  This code produces the following output.

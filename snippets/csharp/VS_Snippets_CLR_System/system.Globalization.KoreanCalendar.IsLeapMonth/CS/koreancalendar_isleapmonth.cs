@@ -20,9 +20,7 @@ public class SamplesKoreanCalendar  {
             Console.Write( "\t{0}", myCal.IsLeapMonth( y, m, KoreanCalendar.CurrentEra ) );
          Console.WriteLine();
       }
-
    }
-
 }
 
 /*

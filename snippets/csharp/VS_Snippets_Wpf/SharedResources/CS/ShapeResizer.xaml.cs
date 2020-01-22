@@ -22,9 +22,7 @@ namespace ElementResourcesCustomControlLibrary
         public ShapeResizer()
         {
             InitializeComponent();
-
         }
-
     }
 
     //This is a dummy class with no ControlTemplate.  It exists solely so the constructor
@@ -36,7 +34,6 @@ namespace ElementResourcesCustomControlLibrary
         {
             this.Resources.MergedDictionaries.Add(SharedDictionaryManager.SharedDictionary);
             InitializeComponent();
-
         }
         //</Snippet4>
 

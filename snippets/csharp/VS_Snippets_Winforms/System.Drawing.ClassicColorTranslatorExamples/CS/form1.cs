@@ -102,7 +102,6 @@ namespace System.Drawing.ClassicColorTranslatorCS
             // Fill a rectangle with myColor.
             e.Graphics.FillRectangle( new SolidBrush(myColor), 0, 0, 
                 100, 100);
-
         }
         // </snippet3>
 

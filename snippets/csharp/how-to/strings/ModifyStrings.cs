@@ -30,7 +30,6 @@ namespace HowToStrings
             Console.WriteLine($"The source string is <{source}>");
             Console.WriteLine($"The updated string is <{replacement}>");
             // </Snippet1>
-
         }
 
         private static void ReplaceChars()

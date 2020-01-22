@@ -112,7 +112,6 @@ public class Test
         deserializedPerson.IdNumber));
     }
     //</snippet2>
-
 }
 //</snippet0>
 

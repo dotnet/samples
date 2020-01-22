@@ -20,6 +20,5 @@ namespace XAML
         {
             InitializeComponent();
         }
-
     }
 }

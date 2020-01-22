@@ -31,7 +31,6 @@ namespace SDKSample
                 // of the curve.
                 ctx.QuadraticBezierTo(new Point(100, 0), new Point(200, 200), true /* is stroked */, 
                                       false /* is smooth join */);
-
             }
 
             // Freeze the geometry (make it unmodifiable)

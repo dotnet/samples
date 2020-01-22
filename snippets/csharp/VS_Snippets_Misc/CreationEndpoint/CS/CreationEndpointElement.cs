@@ -52,5 +52,4 @@ namespace Microsoft.Samples.WF.CreationEndpoint
     public class CreationEndpointCollection : StandardEndpointCollectionElement<CreationEndpoint, CreationEndpointElement>
     {
     }
-
 }

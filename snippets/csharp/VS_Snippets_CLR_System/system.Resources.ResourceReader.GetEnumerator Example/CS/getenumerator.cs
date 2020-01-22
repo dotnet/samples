@@ -18,7 +18,6 @@ class EnumerateResources
           Console.WriteLine("\n[{0}] \t{1}", id.Key, id.Value); 
 
         rr.Close();     
- 
     }
 }
 //</snippet1>

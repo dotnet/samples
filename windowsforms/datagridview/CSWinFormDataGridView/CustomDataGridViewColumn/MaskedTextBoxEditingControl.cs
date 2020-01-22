@@ -24,7 +24,6 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
 
         public MaskedTextBoxEditingControl()
         {
-            
         }
 
         protected override void OnTextChanged(EventArgs e)
@@ -85,7 +84,6 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
             {
                 return this.Text;
             }
-
         }
 
         //   Get the value of the editing control for formatting.
@@ -255,6 +253,5 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
 
             throw new ArgumentException("Error: Invalid Content Alignment!");
         }
-
     }
 }

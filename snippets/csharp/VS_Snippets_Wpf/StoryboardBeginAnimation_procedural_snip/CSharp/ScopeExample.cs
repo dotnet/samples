@@ -66,7 +66,6 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
             myStoryboard.Children.Add(heightAnimationWithoutTarget);
             
             this.Content = myMainPanel;
-                           
         }  
 
         private void button1Clicked(object sender, RoutedEventArgs args)
@@ -76,7 +75,6 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
             // target name, heightAnimationWithoutTarget, is applied to
             // myMainPanel.
             myStoryboard.Begin(myMainPanel);
-        
         }
         
         private void button2Clicked(object sender, RoutedEventArgs args)
@@ -86,10 +84,7 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
             // target name, heightAnimationWithoutTarget, is applied to
             // button2.
             myStoryboard.Begin(button2);
-        
         }        
-        
     }
-
 }
 // </SnippetNameScopeExample>

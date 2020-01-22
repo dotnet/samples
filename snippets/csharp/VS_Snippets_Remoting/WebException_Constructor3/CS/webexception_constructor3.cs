@@ -48,7 +48,6 @@ public class HttpConnect{
  		      httpSocket.Connect(endPoint);
 		      Console.WriteLine("Connection created successfully");
 		      httpSocket.Close();
-
 		   }
         catch(SocketException e)
 		  {
@@ -57,7 +56,5 @@ public class HttpConnect{
 		      throw new WebException("Unable to locate the Server with 'www.contoso.com' Uri.",WebExceptionStatus.NameResolutionFailure);
 		  }
 // </Snippet1>
-
 	}
-
 }

@@ -17,7 +17,5 @@ public class Form1 : Form {
 // </Snippet1>
 
     protected void InitializeComponent() {
-
     }
-
 }

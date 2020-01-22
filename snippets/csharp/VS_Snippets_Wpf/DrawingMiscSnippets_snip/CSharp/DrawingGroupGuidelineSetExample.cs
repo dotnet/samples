@@ -157,9 +157,7 @@ namespace SDKSample
             //
             this.Content = mainBorder;
             this.Background = Brushes.White;
-
         }
-
 	}
 }
 // </SnippetGraphicsMMDrawingGroupGuidelineSetExampleWholePage>

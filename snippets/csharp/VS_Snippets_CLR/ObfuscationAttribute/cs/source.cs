@@ -48,7 +48,6 @@ public class Type2
     // This member is marked for obfuscation, because the 
     // exclusion of the type is not applied to its members.
     public void MethodB() {}
-
 }
 //</Snippet4>
 

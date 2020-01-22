@@ -23,7 +23,6 @@ namespace IEditableCollectionViewAddItemExample
             TextBox tbx = sender as TextBox;
 
             tbx.SelectAll();
-
         }
     }
 }

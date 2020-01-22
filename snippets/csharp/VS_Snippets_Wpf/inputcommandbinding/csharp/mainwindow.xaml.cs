@@ -73,7 +73,6 @@ namespace InputCommandBinding
 
             InitializeCommand();
         }
-
     }
 
     //<SnippetDelegateCommand>
@@ -101,5 +100,4 @@ namespace InputCommandBinding
         public event EventHandler CanExecuteChanged;
     }
     //</SnippetDelegateCommand>
-
 }

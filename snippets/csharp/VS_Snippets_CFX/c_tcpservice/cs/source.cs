@@ -94,7 +94,6 @@ namespace TcpService
             sb.HttpGetEnabled=true;
             sb.HttpGetUrl = new Uri("http://localhost:90//calcluator");
             sh.Description.Behaviors.Add(sb);
-            
         }
 
         private void TcpMessageCert()
@@ -236,7 +235,6 @@ namespace TcpService
             }          
             //</snippet4>
         }
-
     }
 
     public class Calculator : ICalculator
@@ -252,7 +250,6 @@ namespace TcpService
 
             return a * 1.0862;
         }
-
     }
 }
 

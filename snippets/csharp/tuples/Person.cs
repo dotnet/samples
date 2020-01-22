@@ -83,7 +83,6 @@ namespace TupleEquality
             Console.WriteLine($"sample not equals nil: {sample != nil}");
             Console.WriteLine($"sample not equals blank: {sample != blank}");
             Console.WriteLine($"sample not equals sanple: {sample != sample}");
-
         }
     }
     public class Person
@@ -117,7 +116,5 @@ namespace TupleEquality
         public static bool operator !=(Person left, Person right) => !(left == right);
         public override int GetHashCode() => (LastName, FirstName).GetHashCode();
         // </SnippetEqualityTests>
-
     }
-
 }

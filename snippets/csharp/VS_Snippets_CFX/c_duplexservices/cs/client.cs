@@ -61,6 +61,5 @@ namespace Microsoft.ServiceModel.Samples
             //Closing the client gracefully closes the connection and cleans up resources
             client.Close();
         }
-
     }
 }

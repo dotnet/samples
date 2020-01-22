@@ -43,7 +43,6 @@ class Test
             // Delete the newly created file.
             fi2.Delete();
             Console.WriteLine($"{path2} was successfully deleted.");
-
         } 
         catch (Exception e) 
         {

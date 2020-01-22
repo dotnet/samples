@@ -72,9 +72,7 @@ public partial class _Default : System.Web.UI.Page
             {
                 CustomerListBox.Items.Add(item);
             }
-
         }
-
     }
 }
 // </Snippet2>

@@ -12,6 +12,5 @@ namespace InsertTextClient
 
     public partial class app : Application
     {
-
     }
 }

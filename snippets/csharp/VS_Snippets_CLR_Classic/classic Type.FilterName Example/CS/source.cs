@@ -15,7 +15,6 @@ public class Sample
    Console.WriteLine("Number of methods (includes constructors): " + mi.Length);
 // </Snippet1>
  }
-
 }
 
 // Class added so sample will compile

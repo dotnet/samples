@@ -114,9 +114,7 @@ namespace SDKSample
 
                 // Digitally sign all the Parts and Relationships in the Package.
                 SignAllParts(package);
-
             }// end:using (package) - Close and dispose 'package'
-
         }// end:CreatePackage()
 
         //  ----------------------- ExtractPackageParts -----------------------
@@ -193,9 +191,7 @@ namespace SDKSample
                     MessageBox.Show(msg, "Digital Signature Validation Error",
                         MessageBoxButton.OK, MessageBoxImage.Error);
                 }
-
             }// end:using (package} - Close and dispose 'package'
-
         }// end:ExtractPackageParts()
 
         //  --------------------------- ExtractPart ---------------------------
@@ -274,7 +270,6 @@ namespace SDKSample
 
             // else if (result == VerifyResult.Success)
             return true;        // All signatures are valid.
-
         }// end:ValidateSignatures()
         //</SnippetPackageDigSigValidate>
 
@@ -327,11 +322,8 @@ namespace SDKSample
                     MessageBoxButton.OK,
                     MessageBoxImage.Exclamation);
             }
-
         }// end:SignAllParts()
 
         //</SnippetPackageDigSigSign>
-
     }// end:class PackageDigitalSignatureSample
-
 }// end:namespace SDKSample

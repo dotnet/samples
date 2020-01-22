@@ -13,6 +13,5 @@ namespace ButtonAlign
 
 	public partial class app : Application
 	{
-
 	}
 }

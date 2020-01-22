@@ -96,7 +96,6 @@ namespace DataViewSamples
                                             contact.Columns["ContactID"],
                                             orderHeader2.Columns["ContactID"], true);
             ds.Relations.Add(orderContact);
-
         }
 
         // <SnippetSoundEx>
@@ -254,7 +253,6 @@ namespace DataViewSamples
 
             bindingSource1.DataSource = view;
             // </SnippetCreateLDVFromQuery3>
-            
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -298,7 +296,6 @@ namespace DataViewSamples
 
             bindingSource1.DataSource = view;
             // </SnippetCreateLDVFromQueryOrderBy>
-            
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -364,7 +361,6 @@ namespace DataViewSamples
 
             bindingSource1.DataSource = view;
             // </SnippetCreateLDVFromQueryOrderByDescending>
-
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -396,7 +392,6 @@ namespace DataViewSamples
 
             view.Sort = "";
             // </SnippetLDVClearSort>
-            
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -428,7 +423,6 @@ namespace DataViewSamples
             bindingSource1.DataSource = view;
             dataGridView1.AutoResizeColumns();
             // </SnippetLDVRowFilter>
-            
         }
 
         private void button15_Click(object sender, EventArgs e)
@@ -462,7 +456,6 @@ namespace DataViewSamples
 
             bindingSource1.DataSource = view;
             // </SnippetLDVFromQueryWhere>
-            
         }
 
         private void button17_Click(object sender, EventArgs e)
@@ -495,7 +488,6 @@ namespace DataViewSamples
 
             bindingSource1.DataSource = view;
             // </SnippetLDVFromQueryWhere3>
-            
         }
 
         private void button19_Click(object sender, EventArgs e)
@@ -514,7 +506,6 @@ namespace DataViewSamples
             dataGridView1.AutoResizeColumns();
 
             // </SnippetLDVFromQueryWhereOrderByThenBy>
-
         }
 
         private void button20_Click(object sender, EventArgs e)
@@ -547,7 +538,6 @@ namespace DataViewSamples
             // Find a contact with the last name of Zhu.
             int found = view.Find("Zhu");
             // </SnippetLDVFromQueryOrderByFind>
-            
         }
 
         private void button22_Click(object sender, EventArgs e)
@@ -567,7 +557,6 @@ namespace DataViewSamples
 
             DataRowView[] foundRowsView = view.FindRows(criteria);            
             // </SnippetLDVFromQueryFindRows>
-
         }
 
         private void button23_Click(object sender, EventArgs e)
@@ -673,7 +662,6 @@ namespace DataViewSamples
             // Bind the query results to another DataGridView.
             dataGridView2.DataSource = productQuery.ToList();
             // </SnippetQueryDataView1>
-            
         }
 
         private void button28_Click(object sender, EventArgs e)
@@ -708,6 +696,5 @@ namespace DataViewSamples
             dataGridView2.DataSource = modifiedDeletedQuery.ToList();
             // </SnippetQueryDataView2>
         }
-
     }
 }

@@ -190,7 +190,6 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
                 throw new ArgumentException("IsLastChunk should not be passed a null message", "receivedMessage");
             }
             return (receivedMessage.Headers.FindHeader(ChunkingUtils.ChunkingEndHeader, ChunkingUtils.ChunkNs) > -1);
-
         }
         private bool IsChunkInCurrentMessage(Message receivedMessage)
         {
@@ -209,7 +208,6 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
                 throw new ArgumentException("GetMessageId should not be passed a null message", "receivedMessage");
             }
             return receivedMessage.Headers.GetHeader<Guid>(ChunkingUtils.MessageIdHeader, ChunkingUtils.ChunkNs);
-
         }
         private void ProcessReceivedChunk(Message receivedMessage)
         {
@@ -254,13 +252,11 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
                 this.stopReceive = false;
                 ThreadPool.QueueUserWorkItem(new WaitCallback(this.ReceiveChunkLoop),helper);
                 return currentInputMessage;
-
             }
             else
             {
                 return message;
             }
-
         }
         public Message Receive()
         {
@@ -282,7 +278,6 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
                  timedout = true;
              }
              return (!timedout);
-
         }
 
         public bool WaitForMessage(TimeSpan timeout)
@@ -317,7 +312,6 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
                     ChunkingWriter writer = new ChunkingWriter(message,timeoutHelper,innerChannel);
                     message.WriteBodyContents(writer);
                     this.sendingDone.Set();
-
                 }
                 else
                 {

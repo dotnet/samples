@@ -34,7 +34,6 @@ namespace SDKSample
         {
             RaiseTapEvent();
         }
-
     }
 //</SnippetCustomClass>
 }

@@ -53,7 +53,6 @@ public class Sample
             Console.WriteLine("\tWarning: Matching schema not found.  No validation occurred." + args.Message);
         else
             Console.WriteLine("\tValidation error: " + args.Message);
-
     }
 }
 //</snippet1>

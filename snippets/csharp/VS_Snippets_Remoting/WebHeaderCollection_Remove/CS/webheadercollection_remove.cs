@@ -67,5 +67,4 @@ public class WebHeaderCollection_Remove {
 		for(int i = 0; i < headers.Count; i++) 
 			Console.WriteLine("\t" + headers.AllKeys[i] + " : " + headers[i]);
 	}
-
 };

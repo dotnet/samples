@@ -33,6 +33,5 @@ public class Client
         Remotable remoteObject = new Remotable();
         Console.WriteLine( remoteObject.GetMessage() );
     }
-
 }
 // </snippet30>

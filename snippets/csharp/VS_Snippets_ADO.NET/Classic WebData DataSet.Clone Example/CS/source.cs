@@ -18,5 +18,4 @@ public class Form1: Form
         // Insert code to work with clone of the DataSet.
     }
     // </Snippet1>
-
 }

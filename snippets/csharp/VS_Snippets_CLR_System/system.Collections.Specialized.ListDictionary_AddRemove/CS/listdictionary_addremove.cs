@@ -31,7 +31,6 @@ public class SamplesListDictionary  {
       myCol.Clear();
       Console.WriteLine( "The collection contains the following elements after it is cleared:" );
       PrintKeysAndValues( myCol );
-
    }
 
    public static void PrintKeysAndValues( IDictionary myCol )  {
@@ -40,7 +39,6 @@ public class SamplesListDictionary  {
          Console.WriteLine( "   {0,-25} {1}", de.Key, de.Value );
       Console.WriteLine();
    }
-
 }
 
 

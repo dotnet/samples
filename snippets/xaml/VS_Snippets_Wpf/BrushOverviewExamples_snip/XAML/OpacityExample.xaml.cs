@@ -17,8 +17,6 @@ namespace Microsoft.Samples.BrushExamples
     {
        public OpacityExample()
        {
-                 
        }
-       
     }
 }

@@ -13,7 +13,6 @@ public class Form1:
 		InitializeComponent();
 		ChangeTheLookOfTheTabControl();
 		//Add any initialization after the InitializeComponent() call
-
 	}
 
 	//Form overrides dispose to clean up the component list.
@@ -80,7 +79,6 @@ public class Form1:
 		this.Text = "Form1";
 		this.TabControl1.ResumeLayout(false);
 		this.ResumeLayout(false);
-
 	}
 
 	#endregion
@@ -105,5 +103,4 @@ public class Form1:
 	{
 		Application.Run(new Form1());
 	}
-
 }

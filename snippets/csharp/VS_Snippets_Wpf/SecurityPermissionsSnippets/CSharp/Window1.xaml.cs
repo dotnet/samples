@@ -134,7 +134,6 @@ namespace WindowsApplication1
                 MediaPermissionVideo.SiteOfOriginVideo,
                 MediaPermissionImage.SiteOfOriginImage);
             // </SnippetMediaPermission5>
-
         }
 
         public void Stub15()

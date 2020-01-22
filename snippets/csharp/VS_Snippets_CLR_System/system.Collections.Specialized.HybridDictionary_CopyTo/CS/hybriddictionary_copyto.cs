@@ -44,7 +44,6 @@ public class SamplesHybridDictionary  {
       for ( int i = 0; i < myArr.Length; i++ )
          Console.WriteLine( "   {0,-25} {1}", myArr[i].Key, myArr[i].Value );
       Console.WriteLine();
-
    }
 
    public static void PrintKeysAndValues( IDictionary myCol )  {
@@ -53,7 +52,6 @@ public class SamplesHybridDictionary  {
          Console.WriteLine( "   {0,-25} {1}", de.Key, de.Value );
       Console.WriteLine();
    }
-
 }
 
 /*

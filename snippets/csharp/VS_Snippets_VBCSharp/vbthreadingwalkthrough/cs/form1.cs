@@ -79,6 +79,5 @@ namespace ThreadingWalkthroughCS
             this.backgroundWorker1.CancelAsync();
         }
         // </snippet10>
-
     }
 }

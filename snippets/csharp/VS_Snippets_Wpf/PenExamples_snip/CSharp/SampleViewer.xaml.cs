@@ -14,7 +14,5 @@ namespace SDKSample
             InitializeComponent();
             MyPenExampleFrame.Content = new PenExample();
         }
-        
     }
-
 }

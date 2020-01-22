@@ -24,7 +24,6 @@ namespace SDKSample
             this.Background = Brushes.White;
             this.Margin = new Thickness(20);
             this.Content = mainPanel;
-
         }
 
         private void createSimpleDrawingGroupExample(Panel examplePanel)
@@ -80,7 +79,6 @@ namespace SDKSample
             imageBorder.Child = anImage;
 
             examplePanel.Children.Add(imageBorder);
-
         }
 
         private void createMultipleDrawingGroupExample(Panel examplePanel)
@@ -180,9 +178,7 @@ namespace SDKSample
             imageBorder.Child = anImage;
 
             examplePanel.Children.Add(imageBorder);
-
         }
-
     }
 }
 // </SnippetDrawingGroupExampleWholePage>

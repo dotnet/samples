@@ -74,7 +74,6 @@ public class Demo
         Console.WriteLine("The namespace for this instance of SoapQName " +
             "is {0}.", soapQNameInstance.Namespace);
         //</snippet19>
-
     }
 }
 //</snippet10>

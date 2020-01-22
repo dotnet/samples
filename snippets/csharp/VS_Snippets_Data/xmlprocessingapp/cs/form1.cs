@@ -24,7 +24,6 @@ namespace XMLProcessingApp
         {
             InitializeComponent();
             _xmlHelperMethods = new XMLHelperMethods();
-
         }
 
         //************************************************************************************
@@ -53,7 +52,6 @@ namespace XMLProcessingApp
                 XmlTextBox.Text = _doc.InnerXml;
                 populateTreeView(_doc); 
             }
-         
         }
 
         //************************************************************************************
@@ -97,7 +95,6 @@ namespace XMLProcessingApp
                         addTreeNode_Recursive(node, tempTreeNode);
                     }
                 }
-
             }
             else
             {
@@ -119,7 +116,6 @@ namespace XMLProcessingApp
                     tempTreeNode.Tag = _globalTag;
                     treeView.Nodes.Add(tempTreeNode);
                 }
-
             }
         }
 
@@ -137,7 +133,6 @@ namespace XMLProcessingApp
             {
                 highlightXML();
             }
-
         }
         //************************************************************************************
         //
@@ -275,7 +270,6 @@ namespace XMLProcessingApp
                             newPriceTextBox.Text = "";
                         }
                     }
-
                   }
                 else
                 {
@@ -286,7 +280,6 @@ namespace XMLProcessingApp
             {
                 MessageBox.Show("Please load the XML first by using the Load XML tab");
             }
-
         }
 
         //************************************************************************************
@@ -313,7 +306,6 @@ namespace XMLProcessingApp
             int yOffset = (e.State == DrawItemState.Selected) ? -2 : 1;
             paddedBounds.Offset(1, yOffset);
             TextRenderer.DrawText(e.Graphics, page.Text, this.Font, paddedBounds, page.ForeColor);
-
         }
         //************************************************************************************
         //
@@ -423,13 +415,11 @@ namespace XMLProcessingApp
                     xmlTreeView.SelectedNode = insertedNode;
                 }
                 xmlTreeView.Focus();
-
             }
             else
             {
                 MessageBox.Show("Select the node that you want to reposition in the list");
             }
-
         }
         //************************************************************************************
         //
@@ -473,13 +463,11 @@ namespace XMLProcessingApp
                     xmlTreeView.Focus();
                 }
                 xmlTreeView.Focus();
-                
             }
             else
             {
                 MessageBox.Show("Select the node that you want to reposition in the list");
             }
-
         }
         //************************************************************************************
         //
@@ -626,9 +614,7 @@ namespace XMLProcessingApp
                     break;
                 default:
                     break;
-
             }
-
         }
         //************************************************************************************
         //
@@ -730,7 +716,6 @@ namespace XMLProcessingApp
             {
                 ConditionCheckChanged(condition4CheckBox);
             }
-
         }
         //************************************************************************************
         //
@@ -836,7 +821,5 @@ namespace XMLProcessingApp
         {
             RemoveFilter();
         }
-
     }
-
     }

@@ -52,7 +52,6 @@ public class Int16Collection : CollectionBase  {
       if ( value.GetType() != typeof(System.Int16) )
          throw new ArgumentException( "value must be of type Int16.", "value" );
    }
-
 }
 
 public class SamplesCollectionBase  {
@@ -102,7 +101,6 @@ public class SamplesCollectionBase  {
       // Display the contents of the collection using the Count property and the Item property.
       Console.WriteLine( "Contents of the collection after removing the element 2:" );
       PrintIndexAndValues( myI16 );
-
    }
  
    // Uses the Count property and the Item property.

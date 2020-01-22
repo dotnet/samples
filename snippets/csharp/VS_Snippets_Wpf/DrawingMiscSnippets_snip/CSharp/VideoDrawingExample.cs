@@ -111,7 +111,6 @@ namespace SDKSample
             this.Background = Brushes.White;
             this.Content = exampleBorder;
         }
-
     }
 }
 // </SnippetVideoDrawingExampleWholePage>

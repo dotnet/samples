@@ -95,7 +95,6 @@ class Members
                 // targetBytes array.
                 finalBytes.CopyTo(targetBytes, currentPosition);
             }
-
         }
         catch (Exception ex)
         {

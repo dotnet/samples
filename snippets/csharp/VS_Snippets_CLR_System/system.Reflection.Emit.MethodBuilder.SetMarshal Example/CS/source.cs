@@ -24,7 +24,5 @@ class VariousMethodBuilderSnippets {
 	myMethod.SetMarshal(marshalMeAsI8);	
 
 	// </Snippet1>
-
    }
-
 }

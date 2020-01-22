@@ -52,7 +52,6 @@ namespace Mssc.PluggableProtocols.File
       }
       
       return requestOk;
-
     }
     
     private static void readFile()
@@ -88,7 +87,6 @@ namespace Mssc.PluggableProtocols.File
         
         // Release the response object resources.
         myFileWebResponse.Close();
-      
       }
       catch(WebException e)
       {
@@ -98,7 +96,6 @@ namespace Mssc.PluggableProtocols.File
       {
         Console.WriteLine("The UriFormatException: "+e.Message);
       }
-      
     }
 
     static void Main(string[] args)

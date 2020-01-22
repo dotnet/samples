@@ -98,7 +98,6 @@ public class SignVerifyEnvelope
 
             // Add the reference to the SignedXml object.
             signedXml.AddReference(reference);
-
         }
 
         // Add an RSAKeyValue KeyInfo (optional; helps recipient find key to validate).

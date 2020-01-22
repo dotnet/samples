@@ -13,7 +13,6 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
     
         public app()
         {
-
         }
         
         protected override void OnStartup(StartupEventArgs e)
@@ -24,6 +23,5 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
             MainWindow = myWindow;
             myWindow.Show();
         }
-
     }
 }

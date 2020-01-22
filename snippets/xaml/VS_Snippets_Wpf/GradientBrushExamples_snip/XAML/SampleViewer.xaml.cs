@@ -18,8 +18,6 @@ namespace Microsoft.Samples.GradientBrushExamples
        public SampleViewer()
        {
             InitializeComponent();
-                 
        }
-       
     }
 }

@@ -29,7 +29,6 @@ namespace AesManaged_Examples
                     Console.WriteLine("Original:   {0}", original);
                     Console.WriteLine("Round Trip: {0}", roundtrip);
                 }
-
             }
             catch (Exception e)
             {
@@ -122,7 +121,6 @@ namespace AesManaged_Examples
             }
 
             return plaintext;
-
         }
     }
 }

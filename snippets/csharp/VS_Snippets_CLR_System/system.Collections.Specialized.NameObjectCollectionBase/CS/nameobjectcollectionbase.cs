@@ -84,7 +84,6 @@ public class MyCollection : NameObjectCollectionBase
    public void Clear()  {
       this.BaseClear();
    }
-
 }
 
 public class SamplesNameObjectCollectionBase  {
@@ -134,7 +133,6 @@ public class SamplesNameObjectCollectionBase  {
       myRWCol.Clear();
       Console.WriteLine( "Writable Collection (after clearing the collection):" );
       PrintKeysAndValues( myRWCol );
-
    }
 
    // Prints the indexes, keys, and values.

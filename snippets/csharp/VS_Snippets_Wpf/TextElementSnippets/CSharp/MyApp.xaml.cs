@@ -12,6 +12,5 @@ namespace TextElementSnippets
 
     public partial class MyApp : Application
     {
-
     }
 }

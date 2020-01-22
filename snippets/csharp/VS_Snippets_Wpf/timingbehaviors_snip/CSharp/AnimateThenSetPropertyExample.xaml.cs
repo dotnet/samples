@@ -55,6 +55,5 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             Button4BackgroundBrush.Color = Colors.Blue;
         }    
         // </SnippetGraphicsMMButton4Handler>         
-
     }
 }

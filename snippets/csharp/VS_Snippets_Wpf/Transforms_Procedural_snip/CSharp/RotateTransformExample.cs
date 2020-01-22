@@ -85,7 +85,6 @@ namespace SDKSample
             mainPanel.Children.Add(border2);
 
             this.Content = mainPanel;
-
         }
     }
 }

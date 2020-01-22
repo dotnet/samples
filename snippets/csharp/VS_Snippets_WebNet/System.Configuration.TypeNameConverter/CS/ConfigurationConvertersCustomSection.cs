@@ -56,7 +56,6 @@ namespace Samples.AspNet
 
             return TimeSpan.FromMinutes((double)min);
         }
-    
     }
 
     // Define a custom section.
@@ -66,7 +65,6 @@ namespace Samples.AspNet
 
         public CustomSection() 
         {
-           
         }
 
         [ConfigurationProperty("fileName", DefaultValue="   default.txt  ")]
@@ -129,7 +127,6 @@ namespace Samples.AspNet
             {
                 this["cdStr"] = value;
             }
-   
         }
 
         public enum Permissions
@@ -154,7 +151,6 @@ namespace Samples.AspNet
             {
                 this["permission"] = value;
             }
-
         }
    
         [ConfigurationProperty("maxUsers", DefaultValue="infinite")]
@@ -170,7 +166,5 @@ namespace Samples.AspNet
                 this["maxUsers"] = value;
             }
         }
-     
     }
-
 }

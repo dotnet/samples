@@ -19,5 +19,4 @@ public void CreateCommand()
     command.CommandType = CommandType.Text;
  }
 // </Snippet1>
-
 }

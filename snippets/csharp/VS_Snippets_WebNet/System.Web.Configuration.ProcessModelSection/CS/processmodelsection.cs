@@ -348,7 +348,6 @@ namespace Samples.AspNet.Configuration
                 {
                     configuration.Save();
                 }
-                
             }
             catch (System.ArgumentException e)
             {
@@ -358,9 +357,7 @@ namespace Samples.AspNet.Configuration
                 
                 string msgToDisplay = 
                     "Error detected in UsingProcessModelSection.";
-                
             }
         }
     } 
-    
 }

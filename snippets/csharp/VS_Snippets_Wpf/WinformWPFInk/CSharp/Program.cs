@@ -28,7 +28,6 @@ namespace WinformStylusPointsTest_Console
         public WinformInk()
         {
             theInk = new Ink();
-
         }
 
         private void CreateStrokes()
@@ -89,7 +88,6 @@ namespace WinformStylusPointsTest_Console
             byte[] savedInk = inkToSave.Save();
 
             return (new MemoryStream(savedInk));
-
         }
         //</SnippetSaveWinforms>
 
@@ -245,7 +243,6 @@ namespace WinformStylusPointsTest_Console
             stylusPointTest.ChangeStylusPoints();
 
             Console.ReadLine();
-
         }
     }
 }

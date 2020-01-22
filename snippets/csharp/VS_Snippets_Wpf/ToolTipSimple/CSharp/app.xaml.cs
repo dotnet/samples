@@ -13,6 +13,5 @@ namespace ToolTipSimple_wcp
 
 	public partial class app : Application
 	{
-
 	}
 }

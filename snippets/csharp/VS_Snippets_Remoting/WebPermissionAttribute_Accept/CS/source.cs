@@ -39,13 +39,11 @@ public static void demoDenySite()
 	{
 		Console.WriteLine("Exception trying to access private resource:" + e.Message);
 	}
-
  }
 
 //</Snippet1>
 		static void Main()
 		{
              demoDenySite();
-			
 		}
 	}

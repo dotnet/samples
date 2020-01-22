@@ -19,7 +19,6 @@ public partial class AddDynamicDataListView : System.Web.UI.Page
     {
         // Get the metadata of the current table.
         table = EntityDataSource1.GetMetaTable();
-
     }
 
     protected void Page_Load(object sender, EventArgs e)

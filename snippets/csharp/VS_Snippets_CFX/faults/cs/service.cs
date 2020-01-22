@@ -48,7 +48,6 @@ namespace Microsoft.ServiceModel.Samples
             get { return problemType; }
             set { problemType = value; }
         }
-
     }
 //</snippet2>
 
@@ -84,7 +83,5 @@ namespace Microsoft.ServiceModel.Samples
                 throw new FaultException<MathFault>(mf);
             }
         }
-
     }
-
 }

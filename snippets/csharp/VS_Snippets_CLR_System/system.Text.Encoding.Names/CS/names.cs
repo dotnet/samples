@@ -31,11 +31,8 @@ public class SamplesEncoding  {
             Console.Write( "{0,-18} ", e.WebName );
             Console.WriteLine( "{0} ", e.EncodingName );
          }
-
       }
-
    }
-
 }
 
 

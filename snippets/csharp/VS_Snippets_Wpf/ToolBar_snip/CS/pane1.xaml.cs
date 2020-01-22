@@ -18,6 +18,5 @@ namespace ToolBarStyles
         public partial class Pane1 : Window 
 
 	{
-
        }
 }

@@ -27,8 +27,6 @@ public class Sample {
      // Transform the file.
      xslt.Transform(new XPathDocument("order.xml"), argList, writer);
      writer.Close();
-
   }
-
 }
 //</snippet1>

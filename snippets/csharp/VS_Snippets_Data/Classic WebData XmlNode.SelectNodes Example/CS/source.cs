@@ -23,7 +23,6 @@ public class Sample {
 
     Console.WriteLine("Display the modified XML document....");
     doc.Save(Console.Out);
-    
   }
 }
    // </Snippet1>

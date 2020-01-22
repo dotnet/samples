@@ -18,5 +18,4 @@ public class Form1: Form
     command.CommandTimeout = 20;
  }
 // </Snippet1>
-
 }

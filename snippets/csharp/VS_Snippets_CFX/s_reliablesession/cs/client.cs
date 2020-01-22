@@ -39,7 +39,6 @@ namespace Microsoft.ServiceModel.Samples
                 value2 = 7.00D;
                 result = proxy.Divide(value1, value2);
                 Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result);
-
             }
 
             Console.WriteLine();

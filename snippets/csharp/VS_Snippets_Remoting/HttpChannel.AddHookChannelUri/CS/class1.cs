@@ -93,7 +93,6 @@ namespace TempConvertServer {
          IDictionary properties,
          IClientChannelSinkProvider clientSinkProvider,
          IServerChannelSinkProvider serverSinkProvider) {
-
       }
 
       public string ChannelName {
@@ -137,11 +136,9 @@ namespace TempConvertServer {
       }
 
       public void StartListening(object data){
-      
       }
 
       public void StopListening(object data){
-         
       }
 
       public string Parse(string url, out string objectURI) {
@@ -181,7 +178,6 @@ namespace TempConvertServer {
                         ITransportHeaders headers,
                         Stream stream
                         ) {
-            
          }
          public Stream GetResponseStream(
                      IServerResponseChannelSinkStack sinkStack,

@@ -61,7 +61,6 @@ class Program
         }
 
         Console.ReadLine();
-
     }
 
     public static void Encrypt(XmlDocument Doc, string ElementToEncrypt, string EncryptionElementID, RSA Alg, string KeyName)
@@ -89,7 +88,6 @@ class Program
         if (elementToEncrypt == null)
         {
             throw new XmlException("The specified element was not found");
-
         }
 
         //////////////////////////////////////////////////
@@ -174,7 +172,6 @@ class Program
         ////////////////////////////////////////////////////
 
         EncryptedXml.ReplaceElement(elementToEncrypt, edElement, false);
-
     }
 
     public static void Decrypt(XmlDocument Doc, RSA Alg, string KeyName)
@@ -197,9 +194,7 @@ class Program
 
         // Decrypt the element.
         exml.DecryptDocument();
-
     }
-
 }
 
 // To run this sample, place the following XML

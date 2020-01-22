@@ -358,7 +358,6 @@ public class Sync_Send_Receive
             SendTo4();
         }
         myThread4.Join();
-     
     }
     //Main tests the snippets.
     // To test tcp - run 2 instances source /s runs server, source /c runs client.
@@ -384,7 +383,6 @@ public class Sync_Send_Receive
         {
             host = "localhost";
             isServer = true;
-        
         }
         // Set up the endpoint and create the socket.
         IPHostEntry hostEntry = Dns.GetHostEntry(host);
@@ -432,7 +430,5 @@ public class Sync_Send_Receive
         }
 
         return 0;
-        
     }
- 
 }

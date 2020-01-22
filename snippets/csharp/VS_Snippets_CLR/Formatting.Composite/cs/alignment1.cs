@@ -13,7 +13,6 @@ public class Example
       Console.WriteLine("{0,-20} {1,5}\n", "Name", "Hours");
       for (int ctr = 0; ctr < names.Length; ctr++)
          Console.WriteLine("{0,-20} {1,5:N1}", names[ctr], hours[ctr]);
-
    }
 }
 // The example displays the following output:

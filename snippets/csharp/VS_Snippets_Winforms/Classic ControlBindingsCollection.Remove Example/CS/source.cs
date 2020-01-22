@@ -12,5 +12,4 @@ private void RemoveBackColorBinding()
    textBox1.DataBindings.Remove(colorBinding);
 }
 // </Snippet1>
-
 }

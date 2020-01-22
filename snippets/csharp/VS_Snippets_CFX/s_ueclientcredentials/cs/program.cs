@@ -77,7 +77,6 @@ namespace Microsoft.Security.Samples
                 Console.WriteLine(exc.InnerException.Message);
                 Console.ReadLine();
             }
-
         }
 
         private void NetTcpSecurityWindows()
@@ -233,5 +232,4 @@ namespace Microsoft.Security.Samples
             return base.Channel.Add(n1, n2);
         }
     }
-
 }

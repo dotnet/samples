@@ -17,7 +17,6 @@ public class Sample
 
     //Add the schema to the collection.  
     xsc.Add(null, "invalid.xsd");
-
   }    
 
   //Display the schema error information.

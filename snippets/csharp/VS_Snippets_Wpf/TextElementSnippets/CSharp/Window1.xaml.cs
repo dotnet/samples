@@ -175,6 +175,5 @@ namespace TextElementSnippets
             textBlock.TextEffects.Add(tfe);
             // </Snippet_TextBlock_TextEffects>
         }
-
     }
 }

@@ -44,7 +44,6 @@ namespace SDKSample
             // </SnippetCodeBehindBlurCodeBehindExampleInline>
          }
       }
-
    }
 }
 // </SnippetCodeBehindBlurCodeBehindExampleWholePage>

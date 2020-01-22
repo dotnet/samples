@@ -49,7 +49,6 @@ namespace Samples.AspNet.Management
                             "Buffering: {0}", buffer));
             customInfo.AppendLine(string.Format(
                             "Buffering modality: {0}", bufferMode));
-
         }
 
         // Processes the incoming events.
@@ -75,7 +74,6 @@ namespace Samples.AspNet.Management
 
                 // Store the information in the specified file.
                 StoreToFile(customInfo, logFilePath, FileMode.Append);
-
             }
         }
 
@@ -178,9 +176,7 @@ namespace Samples.AspNet.Management
                     + e.ToString());
             }
         }
-
     }
-
 }
 
 // </Snippet1>

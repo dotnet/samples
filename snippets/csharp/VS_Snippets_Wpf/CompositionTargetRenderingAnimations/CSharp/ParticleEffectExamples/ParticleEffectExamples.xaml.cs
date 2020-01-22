@@ -17,6 +17,5 @@ namespace Microsoft.Samples.PerFrameAnimations
 
     public partial class ParticleEffectExamples : Page
     {
-
     }
 }

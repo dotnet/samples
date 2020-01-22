@@ -301,7 +301,6 @@ class Example28
                 yield return values[index];
             }
         }
-
     }
     //</Snippet28>
 }

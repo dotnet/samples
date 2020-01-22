@@ -72,7 +72,5 @@ public class ObjectStateFormatterTest
 
     private void LogEvent(String message)
     {
-
     }
-
 }

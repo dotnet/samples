@@ -41,7 +41,6 @@ namespace ECFSRV32Lib
 {
    public class BaseComponent
    {
-
    }
 
    public class ObjectActivator : IObjectActivator

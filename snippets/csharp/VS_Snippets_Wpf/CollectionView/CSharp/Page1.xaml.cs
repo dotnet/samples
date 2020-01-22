@@ -59,7 +59,6 @@ namespace SDKSample
           }
       }
     //</SnippetOnButton>
-
    }
   //</Snippet1>
 }

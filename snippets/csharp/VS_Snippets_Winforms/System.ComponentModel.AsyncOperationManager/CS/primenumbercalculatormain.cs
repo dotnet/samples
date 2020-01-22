@@ -532,7 +532,6 @@ namespace AsyncOperationManagerExample
             this.taskGroupBox.ResumeLayout(false);
             this.buttonPanel.ResumeLayout(false);
             this.ResumeLayout(false);
-
         }
 		#endregion
 
@@ -541,7 +540,6 @@ namespace AsyncOperationManagerExample
 		{
 			Application.Run(new PrimeNumberCalculatorMain());
         }
-
     }
 
     // <snippet30>
@@ -1040,6 +1038,5 @@ namespace AsyncOperationManagerExample
     #endregion
 
     // </snippet30>
-    
 }
 // </snippet10>

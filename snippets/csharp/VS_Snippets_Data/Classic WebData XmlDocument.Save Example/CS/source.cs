@@ -19,7 +19,6 @@ public class Sample {
     // preserved (no white space).
     doc.PreserveWhitespace = true;
     doc.Save("data.xml");
- 
   }
 }
 // </Snippet1>

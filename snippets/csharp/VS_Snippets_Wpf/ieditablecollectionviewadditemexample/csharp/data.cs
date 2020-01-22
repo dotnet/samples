@@ -96,13 +96,11 @@ namespace IEditableCollectionViewAddItemExample
         {
             currentData = copyData;
             NotifyPropertyChanged("");
-
         }
 
         public virtual void EndEdit()
         {
             copyData = new ItemData();
-
         }
 
         #endregion
@@ -115,7 +113,6 @@ namespace IEditableCollectionViewAddItemExample
         {
             internal int SongNumber;
             internal string Artist;
-
         }
 
         MusicData copyData;
@@ -353,7 +350,6 @@ namespace IEditableCollectionViewAddItemExample
             
             Add(new Book("Victor and the VB Vehicle", "Tommy Hortono", 
                 "YA Fiction", "YA.HorVic", new DateTime(2010, 3, 1)));
-
         }
     }
 }

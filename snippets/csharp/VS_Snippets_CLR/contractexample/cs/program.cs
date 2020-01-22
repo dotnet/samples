@@ -18,7 +18,6 @@ public interface IArray
     int Count
     {
         get;
-
     }
 
     // Adds an item to the list.  

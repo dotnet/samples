@@ -38,7 +38,6 @@ namespace DataContractAttributeExample
             Name = newName;
             ID = newID;
         }
-
     }
 
     class Test
@@ -99,7 +98,6 @@ namespace DataContractAttributeExample
             newPerson.Name, newPerson.ID));
             fs.Close();
         }
-
     }
 }
 //</snippet1>

@@ -20,7 +20,6 @@ public class Sample {
       Console.WriteLine(book.OuterXml);
       Console.WriteLine();
     }
-
   }
 }
    // </Snippet1>

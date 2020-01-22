@@ -37,7 +37,6 @@ namespace StrokeCollectionEraseMethods
             s = new Stroke(points);
 
             getBoundsButton.Click += new RoutedEventHandler(getBoundsButton_Click);
-            
         }
 
         void getBoundsButton_Click(object sender, RoutedEventArgs e)
@@ -55,7 +54,6 @@ namespace StrokeCollectionEraseMethods
             StrokeCollection strokes = inkCanvas1.Strokes.Clone();
             inkCanvas2.Strokes.Clear();
             inkCanvas2.Strokes.Add(strokes);
-
         }
         //</Snippet21>
 
@@ -66,7 +64,6 @@ namespace StrokeCollectionEraseMethods
                 inkCanvas1.EditingMode = InkCanvasEditingMode.Select;
                 inkCanvas2.EditingMode = InkCanvasEditingMode.Select;
                 switchMode.Content = "Write";
-
             }
             else
             {
@@ -195,7 +192,6 @@ namespace StrokeCollectionEraseMethods
                     fs.Close();
                 }
             }
-
         }
         //</Snippet11>
 
@@ -311,7 +307,6 @@ namespace StrokeCollectionEraseMethods
                 inkCanvas1.Strokes.RemovePropertyData(timestamp);
             }
             //</Snippet28>
-
         }
 
         //<Snippet30>
@@ -324,6 +319,5 @@ namespace StrokeCollectionEraseMethods
             }
         }
         //</Snippet30>
-
     }
 }

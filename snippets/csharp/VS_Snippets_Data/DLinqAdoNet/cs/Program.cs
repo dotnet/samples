@@ -31,7 +31,6 @@ namespace cs_adonet
         where c1.custid = c2.custid"
 );
             // </Snippet3>
-
         }
 
         void another()
@@ -44,7 +43,6 @@ namespace cs_adonet
     "London"
 );
             // </Snippet4>
-
         }
     }
 }

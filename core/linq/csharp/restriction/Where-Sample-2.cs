@@ -52,6 +52,5 @@ namespace Restriction
                 Console.WriteLine("{0} is sold out!", product.ProductName);
             }
         }
-        
     }
 }

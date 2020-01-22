@@ -12,7 +12,6 @@ public partial class ReadWriteCache : System.Web.UI.Page
     {
         if (!IsPostBack)
             Label1.Text = "Application Cache goes here.";
-       
     }
 
     protected void Button1_Click(object sender, EventArgs e)
@@ -59,7 +58,6 @@ public partial class ReadWriteCache : System.Web.UI.Page
 
         // Save the configuration file.
         config.Save(System.Configuration.ConfigurationSaveMode.Modified);      
-
     }
 
     protected void Button2_Click(object sender, EventArgs e)

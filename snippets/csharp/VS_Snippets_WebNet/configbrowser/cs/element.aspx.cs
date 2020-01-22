@@ -90,5 +90,4 @@ public partial class Element : System.Web.UI.Page
             elementHeaderID, propertyHeaderID, columnHeader);
     }
     // </Snippet95>
-
 }

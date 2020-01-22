@@ -25,7 +25,6 @@ namespace MyControls
             _message = value;
          }
       }
-      
    }
 // </Snippet1>
 }

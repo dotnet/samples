@@ -12,6 +12,5 @@ namespace HitTest3D
 
     public partial class App : Application
     {
-
     }
 }

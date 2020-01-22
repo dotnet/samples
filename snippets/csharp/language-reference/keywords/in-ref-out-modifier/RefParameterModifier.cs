@@ -86,9 +86,7 @@ namespace InRefOutModifier
             //       Republic, The, by Plato
             //       Tale of Two Cities, A, by Charles Dickens
             // </Snippet5>
-
         }
-
     }
     //<Snippet2>
     class RefOverloadExample

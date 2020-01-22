@@ -46,7 +46,6 @@ public class VerifyXML
             {
                 Console.WriteLine("The XML signature is not valid.");
             }
-
         }
         catch (Exception e)
         {

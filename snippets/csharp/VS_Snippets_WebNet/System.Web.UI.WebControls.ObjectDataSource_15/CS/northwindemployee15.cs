@@ -24,8 +24,6 @@ using System.Web.UI.WebControls;
       al.Add(_data);        
       return al;
     }
-    
   }
-
 }
 // </snippet2>

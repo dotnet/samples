@@ -15,6 +15,5 @@ namespace Styles
 
     public partial class MyApp : Application
     {
-
     }
 }

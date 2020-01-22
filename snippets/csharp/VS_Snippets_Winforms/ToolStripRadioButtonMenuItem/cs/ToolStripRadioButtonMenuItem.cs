@@ -261,7 +261,6 @@ public class ToolStripRadioButtonMenuItem : ToolStripMenuItem
         Invalidate();
     }
     //</snippet180>
-
 }
 //</snippet100>
 

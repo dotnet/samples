@@ -22,14 +22,12 @@ namespace RepeaterColor
             this.Validate();
             this.contactsBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.northwndDataSet);
-
         }
 
         private void Color_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'northwndDataSet.Contacts' table. You can move, or remove it, as needed.
             this.contactsTableAdapter.Fill(this.northwndDataSet.Contacts);
-
         }
 
         private void button1_Click(System.Object sender, System.EventArgs e)
@@ -57,6 +55,5 @@ namespace RepeaterColor
             }
         }
         // </Snippet1>
-
     }
 }

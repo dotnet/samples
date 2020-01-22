@@ -87,8 +87,6 @@ namespace SamplesAspNet
         sqlCdds.Set(dbElement2);
 
 // </Snippet10>
-  
     }
 } 
-    
 }

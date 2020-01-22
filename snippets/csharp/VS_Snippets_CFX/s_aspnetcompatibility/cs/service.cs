@@ -54,7 +54,6 @@ namespace Microsoft.ServiceModel.Samples
 
         public void Clear()
         {
-            
         }
 
         public void AddTo(double n)

@@ -10,5 +10,4 @@ private void GetControl(ControlBindingsCollection myBindings)
    Console.WriteLine(c.ToString());
 }
 // </Snippet1>
-
 }

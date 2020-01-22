@@ -21,7 +21,6 @@ namespace Samples.Process
 
         public void Dispose()
         {
-
         }
     }
 }

@@ -34,7 +34,6 @@ namespace CustomEasingFunction
 
             return new CustomSeventhPowerEasingFunction();
         }
-
     }
 }
 // </SnippetCustomEasingFunction>

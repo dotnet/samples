@@ -13,7 +13,6 @@ class Program
     {
 
         Console.WriteLine("The StringFreezingAttribute attribute was applied.");
-
     }
 }
 //</snippet1>

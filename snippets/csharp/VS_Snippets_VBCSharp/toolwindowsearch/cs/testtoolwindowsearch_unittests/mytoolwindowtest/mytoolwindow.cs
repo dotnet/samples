@@ -41,7 +41,6 @@ namespace TestToolWindowSearch_UnitTests.MyToolWindowTest
 
             MethodInfo method = target.GetType().GetMethod("get_Content", BindingFlags.Public | BindingFlags.Instance);
             Assert.IsNotNull(method.Invoke(target, null), "MyControl object was not instantiated");
-
         }
 
         /// <summary>
@@ -53,6 +52,5 @@ namespace TestToolWindowSearch_UnitTests.MyToolWindowTest
             MyToolWindow target = new MyToolWindow();
             Assert.IsNotNull(target.Content, "Content property was null");
         }
-
     }
 }

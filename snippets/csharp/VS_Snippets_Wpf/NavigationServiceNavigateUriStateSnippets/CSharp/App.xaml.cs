@@ -12,6 +12,5 @@ namespace CSharp
 
     public partial class App : Application
     {
-
     }
 }

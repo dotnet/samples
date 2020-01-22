@@ -81,7 +81,6 @@ namespace ControlEnterEventEx
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
-
         }
 #endregion
 
@@ -96,7 +95,6 @@ namespace ControlEnterEventEx
 
         private void button1_Enter(object sender, System.EventArgs e)
         {
-
         }
 
         //<Snippet1>
@@ -120,6 +118,5 @@ namespace ControlEnterEventEx
             textBox1.Select(0,0);
         }
         //</Snippet1>
-
     }
 }

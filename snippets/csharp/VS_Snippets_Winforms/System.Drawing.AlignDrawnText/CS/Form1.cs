@@ -109,7 +109,6 @@ namespace AlignText
                 TextFormatFlags flags = TextFormatFlags.WordBreak;
                 TextRenderer.DrawText(e.Graphics, text2, font2, rect2, Color.Blue, flags);
                 e.Graphics.DrawRectangle(Pens.Black, Rectangle.Round(rect2));
-
             }
             //</snippet60>
         }

@@ -19,8 +19,6 @@ namespace AvalonTemplate
 
             ///Displays the values of the variables that will be used
             mainWindow.ShowVars();
-
         }
-
     }
 }

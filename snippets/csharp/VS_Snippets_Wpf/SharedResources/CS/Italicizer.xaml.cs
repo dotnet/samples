@@ -36,6 +36,5 @@ namespace ElementResourcesCustomControlLibrary
                 label1.FontStyle = FontStyles.Italic;
             }
         }
-
     }
 }

@@ -115,7 +115,6 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
 
             myStackPanel.Children.Add(myColorAnimatedButton);
             this.Content = myStackPanel;
-
         }
     }
 }

@@ -13,6 +13,5 @@ WindowsImpersonationContext ImpersonationCtx = WindowsIdentity.Impersonate(userT
  ImpersonationCtx.Undo();
 
 // </Snippet1>
-
  }
 }

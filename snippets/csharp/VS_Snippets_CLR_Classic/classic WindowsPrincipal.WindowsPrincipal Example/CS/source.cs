@@ -13,6 +13,5 @@ public class Form1: Form
  WindowsPrincipal wp = new WindowsPrincipal(wi);
  
 // </Snippet1>
-
  }
 }

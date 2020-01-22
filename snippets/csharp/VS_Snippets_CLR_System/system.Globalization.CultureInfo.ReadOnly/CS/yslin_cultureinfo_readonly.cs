@@ -21,9 +21,7 @@ public class SamplesCultureInfo  {
       Console.WriteLine( "myReadOnlyCI is {0}.", myReadOnlyCI.IsReadOnly ? "read only" : "writable" );
       Console.WriteLine( "myReadOnlyCI.DateTimeFormat is {0}.", myReadOnlyCI.DateTimeFormat.IsReadOnly ? "read only" : "writable" );
       Console.WriteLine( "myReadOnlyCI.NumberFormat is {0}.", myReadOnlyCI.NumberFormat.IsReadOnly ? "read only" : "writable" );
-
    }
-
 }
 
 /*

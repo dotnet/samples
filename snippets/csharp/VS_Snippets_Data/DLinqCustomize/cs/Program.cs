@@ -31,7 +31,6 @@ public class customer
     // ...
 }
 // </Snippet2>
-
 }
 
 // <Snippet3>

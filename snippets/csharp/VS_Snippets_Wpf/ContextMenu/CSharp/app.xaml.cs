@@ -13,6 +13,5 @@ namespace ContextMenus
 
 	public partial class app : Application
 	{
-
 	}
 }

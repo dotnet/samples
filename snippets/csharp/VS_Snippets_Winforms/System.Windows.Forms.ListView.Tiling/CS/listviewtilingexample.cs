@@ -80,6 +80,5 @@ public class ListViewTilingExample : Form
         Application.EnableVisualStyles();
         Application.Run(new ListViewTilingExample());
     }
-
 }
 //</Snippet1>

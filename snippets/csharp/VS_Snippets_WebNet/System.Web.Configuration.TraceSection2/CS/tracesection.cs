@@ -117,7 +117,6 @@ traceSection.Enabled = false;
             }
         }
     } // UsingTraceSection class end.
-    
 } // Samples.Aspnet.SystemWebConfiguration namespace end.
 
 // </Snippet1>

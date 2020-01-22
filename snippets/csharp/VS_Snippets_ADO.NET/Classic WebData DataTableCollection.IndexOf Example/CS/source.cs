@@ -23,5 +23,4 @@ public class Form1: Form
             System.Diagnostics.Debug.WriteLine(tables.IndexOf(table));
     }
     // </Snippet1>
-
 }

@@ -20,5 +20,4 @@ public class Form1: Form
             "pEmpNo", OracleType.Number, 4);
     }
     // </Snippet1>
-
 }

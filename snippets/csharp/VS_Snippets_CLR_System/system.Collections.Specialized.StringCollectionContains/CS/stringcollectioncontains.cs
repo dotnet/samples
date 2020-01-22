@@ -22,7 +22,6 @@ public class SamplesStringCollection  {
          Console.WriteLine( "The collection contains \"orange\" at index {0}.", myCol.IndexOf( "orange" ) );
       else
          Console.WriteLine( "The collection does not contain \"orange\"." );
-
    }
 
    public static void PrintValues( IEnumerable myCol )  {
@@ -30,7 +29,6 @@ public class SamplesStringCollection  {
          Console.WriteLine( "   {0}", obj );
       Console.WriteLine();
    }
-
 }
 
 /*

@@ -43,7 +43,6 @@ namespace Samples.AspNet
                 
             // Save the configuration file.
             config.Save(ConfigurationSaveMode.Modified);
-            
         }
         // </Snippet1>
 
@@ -80,10 +79,8 @@ namespace Samples.AspNet
                 Console.WriteLine("  Provider Name: {0}", 
                     cs.ProviderName);
                 // </Snippet6>
-                
             }
             // </Snippet3>
-
         }
         // </Snippet2>
 
@@ -121,7 +118,6 @@ namespace Samples.AspNet
             config.Save(ConfigurationSaveMode.Modified);
 
             Console.WriteLine("Connection string added.");
-
         }
         // </Snippet7>
 
@@ -144,7 +140,6 @@ namespace Samples.AspNet
             config.Save(ConfigurationSaveMode.Modified);
 
             Console.WriteLine("Connection strings cleared.");
-
         }
         // </Snippet9>
 
@@ -175,7 +170,6 @@ namespace Samples.AspNet
                 Console.WriteLine(
                      "Connection string settings index: {0}", 
                      index.ToString());
-
             }
             catch (ConfigurationErrorsException err)
             {
@@ -220,7 +214,6 @@ namespace Samples.AspNet
                 else
                     Console.WriteLine(
                         "Connection string settings does not exist.");
-
             }
             catch (ConfigurationErrorsException err)
             {
@@ -316,7 +309,6 @@ namespace Samples.AspNet
 
                 Console.WriteLine(
                      "cs: {0}", cs.Name);
-
             }
             catch (ConfigurationErrorsException err)
             {
@@ -348,7 +340,6 @@ namespace Samples.AspNet
                
                 Console.WriteLine(
                     "cs: {0}", cs.Name);
-
             }
             catch (ConfigurationErrorsException err)
             {
@@ -371,7 +362,6 @@ namespace Samples.AspNet
             // GetIndex();
 
             RemoveConnectionStrings2();
-
         }
     }
 }

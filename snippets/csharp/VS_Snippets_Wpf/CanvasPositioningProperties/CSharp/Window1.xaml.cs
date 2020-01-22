@@ -56,6 +56,5 @@ namespace Canvas_Positioning_Properties
 			String st1 = (String)myLengthConverter.ConvertToString(Canvas.GetBottom(text1));
             canvasBottom.Text = "Canvas.Bottom = " + st1;
         }
-
 	}
 }

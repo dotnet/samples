@@ -31,6 +31,5 @@ namespace Microsoft.Office.Core
     public class OlItemType
     {
         public static string olMailItem;
-        
     }
 }

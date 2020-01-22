@@ -87,7 +87,6 @@ public class LogicalMethodInfo_Create
          Console.WriteLine("\n{0} is asynchronous", myLogicalMethodInfo.Name);
       else
          Console.WriteLine("\n{0} is synchronous", myLogicalMethodInfo.Name);
-
    }
 }
 // </Snippet1>

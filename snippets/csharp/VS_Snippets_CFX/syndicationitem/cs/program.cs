@@ -270,7 +270,6 @@ namespace SyndicationItemSnippets
 
         static void Main(string[] args)
         {
-            
         }
     }
 }

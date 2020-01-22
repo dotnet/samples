@@ -14,7 +14,6 @@ public class Example
                            DateTime.IsLeapYear(dateToDisplay.Year) ? 
                                                "(Leap Year)" : ""); 
       }  
-
    }
 }
 // The example displays the following output:

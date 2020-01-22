@@ -12,7 +12,6 @@ public class Example
       foreach (decimal value in values)
       Console.WriteLine("{0,-8} {1,10} {2,10}", value,
                         Decimal.Ceiling(value), Decimal.Floor(value));
-
    }
 }
 // The example displays the following output:

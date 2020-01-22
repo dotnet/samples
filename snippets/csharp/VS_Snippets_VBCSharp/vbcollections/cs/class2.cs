@@ -111,5 +111,4 @@ public class Class2
             Console.WriteLine("found: " + theElement.Name);
     }
     //</Snippet24>
-
 }

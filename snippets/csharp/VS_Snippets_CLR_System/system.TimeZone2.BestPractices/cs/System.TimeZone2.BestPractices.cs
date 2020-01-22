@@ -26,5 +26,4 @@ public class BestTimeZonePractices
       }      
       // </Snippet1>
    }
-
 }

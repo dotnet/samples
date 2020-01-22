@@ -6,7 +6,6 @@ public class Dice
     Random rnd = new Random();
     public Dice()
     {
-
     }
     public int Roll()
     {

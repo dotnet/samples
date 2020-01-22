@@ -33,6 +33,5 @@ namespace CodeMemberField_PublicConst_Example
             testType.Members.Add( constPublicField );            
             return cu;
         }
-        
 	}
 }

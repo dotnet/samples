@@ -23,6 +23,5 @@ namespace Microsoft.Samples.DrawingBrushExamples
         {
             InitializeComponent();
         }
-
     }
 }

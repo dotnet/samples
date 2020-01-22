@@ -116,5 +116,4 @@ namespace Microsoft.Samples.WF.CreationEndpoint
         [OperationContract(Name = "CreateWithInstanceId", IsOneWay=true)]
         void CreateWithInstanceId(IDictionary<string, object> inputs, Guid instanceId);
     }
-
 }

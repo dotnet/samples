@@ -142,7 +142,6 @@ namespace Microsoft.Samples.Entity
                 transaction.Commit();
             }
             //</snippetTransactionsWithEntityClient>
-
         }
 
         static public void ComplexTypeWithEntityCommand()

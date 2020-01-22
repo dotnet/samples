@@ -28,7 +28,5 @@ class MethodBuilderAssortedMembersDemo
 	// Create an ILGenerator for the MethodBuilder and emit MSIL here ...
 
 	// </Snippet1>
-
    }
-
 }

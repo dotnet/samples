@@ -89,7 +89,6 @@ namespace DemoDev
                     _GroupTranslateTransform.OffsetX = t.X;
                     _GroupTranslateTransform.OffsetY = t.Y;
                     _GroupTranslateTransform.OffsetZ = t.Z;
-
                 }
             }
         }
@@ -133,7 +132,6 @@ namespace DemoDev
                 t = _translate + _translateDelta;
 
                 UpdateSlaves(q, _scale * _scaleDelta, t);
-
             }
         }
 //<SnippetUIElementMouseCapture>

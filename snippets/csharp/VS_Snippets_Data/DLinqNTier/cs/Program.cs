@@ -33,7 +33,6 @@ namespace cs_kathytest081707c
 
                 // DataContext knows how to update the order.
                 db.SubmitChanges();
-                               
             }
             // </Snippet1>
         }
@@ -69,7 +68,6 @@ namespace cs_kathytest081707c
                 db.SubmitChanges();
             }
             // </Snippet3>
-
         }
 
         void method4()
@@ -98,7 +96,6 @@ namespace cs_kathytest081707c
                 db2.SubmitChanges();  
             }
             // </Snippet4>
-
         }
 
         // s5 is skipped
@@ -193,9 +190,7 @@ namespace cs_kathytest081707c
                 nw2.SubmitChanges();
             }
             // </Snippet7>
-
         }
-
     }
 
     partial class Northwind_Simplified : Northwnd
@@ -236,7 +231,6 @@ namespace cs_kathytest081707c
             db.SubmitChanges();
         }
         // </Snippet2>
-
     }
     
     public Northwind_Simplified(string connection) :
@@ -262,7 +256,6 @@ namespace cs_kathytest081707c
 	{
 		OnCreated();
 	}
-
     }
 
     class SerializeHelper

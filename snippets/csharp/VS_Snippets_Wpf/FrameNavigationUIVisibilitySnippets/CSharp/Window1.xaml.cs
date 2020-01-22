@@ -20,7 +20,6 @@ namespace CSharp
         public Window1()
         {
             InitializeComponent();
-
         }
 
         protected override void OnInitialized(EventArgs e)

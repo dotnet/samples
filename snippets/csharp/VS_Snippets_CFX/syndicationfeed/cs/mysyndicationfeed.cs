@@ -12,6 +12,5 @@ namespace SyndicationFeedSnippets
 
     public class MyExtension 
     {
-       
     }
 }

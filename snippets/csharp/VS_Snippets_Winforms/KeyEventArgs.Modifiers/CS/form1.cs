@@ -68,7 +68,6 @@ namespace KeyEventArgsModifiers
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
-
         }
 #endregion
 

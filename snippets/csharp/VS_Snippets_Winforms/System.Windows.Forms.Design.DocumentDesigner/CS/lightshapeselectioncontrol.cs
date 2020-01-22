@@ -199,7 +199,6 @@ namespace MarqueeControlLibrary
             this.Name = "LightShapeSelectionControl";
             this.Size = new System.Drawing.Size(150, 80);
             this.ResumeLayout(false);
-
         }
 		#endregion
 

@@ -1044,11 +1044,9 @@ namespace L2E_ExamplesCS
                     {
                         Console.WriteLine(contact.LastName);
                     }
-                    
                 }
             }
             //</SnippetGroupBySimple2_MQ>
-            
         }
 
         static void GroupBySimple3()
@@ -1390,7 +1388,6 @@ namespace L2E_ExamplesCS
                 Console.WriteLine("Initial number of contacts: {0}", contact.Count());
                 Console.WriteLine("First 100, then doubled: {0}", doubledContacts.Count());
                 Console.WriteLine("Number of unique contacts: {0}", uniqueContact.Count());
-
             }
             //</SnippetDistinctRows>
         }
@@ -1648,7 +1645,6 @@ namespace L2E_ExamplesCS
                 Console.WriteLine("There are {0} products.", numProducts);
             }
             //</SnippetCount>
-
         }
 
         static void CountNested()
@@ -1763,7 +1759,6 @@ namespace L2E_ExamplesCS
                     smallestTotalDue);
             }
             //</SnippetMinProjection_MQ>
-
         }
 
         static void MinGrouped_MQ()
@@ -2204,7 +2199,6 @@ namespace L2E_ExamplesCS
                         order.CustomerID,
                         order.OrderCount);
                 }
-
             }
             //</SnippetGroupJoin2_MQ>
         }
@@ -2230,7 +2224,6 @@ namespace L2E_ExamplesCS
                 }
             }
             //</SnippetSelectEachContactsOrders_MQ>
-
         }
 
         static void SelectEachContactsOrders2()
@@ -2255,7 +2248,6 @@ namespace L2E_ExamplesCS
                 }
             }
             //</SnippetSelectEachContactsOrders2>
-
         }
 
         static void SelectEachContactsOrders2_MQ()
@@ -2278,7 +2270,6 @@ namespace L2E_ExamplesCS
                 }
             }
             //</SnippetSelectEachContactsOrders2_MQ>
-
         }
 
         static void SelectEachContactsOrders3()
@@ -2305,7 +2296,6 @@ namespace L2E_ExamplesCS
                 }
             }
             //</SnippetSelectEachContactsOrders3>
-
         }
 
         static void SelectEachContactsOrders3_MQ()
@@ -2330,7 +2320,6 @@ namespace L2E_ExamplesCS
                 }
             }
             //</SnippetSelectEachContactsOrders3_MQ>
-
         }
 
         static void GetOrderInfoThruRelationships()
@@ -2362,7 +2351,6 @@ namespace L2E_ExamplesCS
                 }
             }
             //</SnippetGetOrderInfoThruRelationships>         
-
         }
 
         static void GetOrderInfoThruRelationships_MQ()
@@ -2392,7 +2380,6 @@ namespace L2E_ExamplesCS
                 }
             }
             //</SnippetGetOrderInfoThruRelationships_MQ>         
-
         }
         #endregion
 

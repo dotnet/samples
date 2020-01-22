@@ -47,7 +47,6 @@ class Client
         channel.Close();
         //Do not forget to close the factory.
         factory.Close();
-
     }
     public static void Main()
     {

@@ -72,7 +72,6 @@ namespace CalendarSnippets
             // root is a Panel that is defined elswhere.
             root.Children.Add(yearCalendar);
             //</Snippet4>
-
         }
 
         //<Snippet5>
@@ -92,6 +91,5 @@ namespace CalendarSnippets
             cal.BlackoutDates.AddDatesInPast();
         }
         //</Snippet7>
-
     }
 }

@@ -22,7 +22,6 @@ class SampleClass {
       
       foreach (string url in urls)
          System.Console.WriteLine("{0}", url);
-      
    }
 }
 //</Snippet1>

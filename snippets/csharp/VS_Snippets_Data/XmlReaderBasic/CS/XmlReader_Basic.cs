@@ -6,7 +6,6 @@ using System.Xml;
 class XmlReader_Samples {
 
   static void Main() {
-
 }
 
 static void AttributeCount() {
@@ -215,7 +214,6 @@ using (XmlReader reader = XmlReader.Create("book3.xml")) {
   Console.WriteLine(reader.ReadString());
   reader.ReadEndElement();
   reader.ReadEndElement();
-
 }
 //</snippet11>
     }
@@ -243,7 +241,6 @@ using (XmlReader reader = XmlReader.Create("2books.xml")) {
   // so the book's attributes are also returned.
   Console.WriteLine("Read the second book using ReadOuterXml...");
   Console.WriteLine(reader.ReadOuterXml());      
-
 }
 //</snippet12>
     }
@@ -270,7 +267,6 @@ using (XmlReader reader = XmlReader.Create("books.xml", settings)) {
   // are done, call Close on the inner reader and 
   // continue processing using the original reader.
   inner.Close(); 
-
 }
 //</snippet13>
 }
@@ -304,7 +300,6 @@ using (XmlReader reader = XmlReader.Create("2books.xml")) {
            break;
      }       
   }  while (reader.Read());    
-
 }
 //</snippet14>
 }
@@ -354,5 +349,4 @@ using (XmlReader reader = XmlReader.Create("books.xml")) {
 //</snippet17>        
 }
 }
-
 }

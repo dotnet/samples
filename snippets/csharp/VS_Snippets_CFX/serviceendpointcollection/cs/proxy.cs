@@ -9,7 +9,6 @@ public interface IAdd
         Action = "http://Microsoft.ServiceModel.Samples/IAdd/Add", 
         ReplyAction = "http://Microsoft.ServiceModel.Samples/IAdd/AddResponse")]
 	double Add(double n1, double n2);
-
 }
 
 public interface IAddChannel : IAdd, System.ServiceModel.IClientChannel
@@ -39,7 +38,6 @@ public partial class AddClient : System.ServiceModel.ClientBase<IAdd>, IAdd
 	{
 		return base.Channel.Add(n1, n2);
 	}
-
 }
 
 

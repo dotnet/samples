@@ -12,6 +12,5 @@ namespace InkPresenterSample
 
     public partial class MyApp : Application
     {
-
     }
 }

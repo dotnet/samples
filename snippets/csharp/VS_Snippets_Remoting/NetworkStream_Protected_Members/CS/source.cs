@@ -36,13 +36,10 @@ public class MyNetworkStream_Sub_Class : NetworkStream
     //</Snippet1>
     public static void DoSomethingSignificant()
     {
-          
     }
 
     public static void Main()
     {
         MyNetworkStream_Sub_Class.DoSomethingSignificant();
-
     }
-
 }

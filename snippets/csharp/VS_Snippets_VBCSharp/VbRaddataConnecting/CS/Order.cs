@@ -40,7 +40,6 @@ namespace ObjectBindingWalkthrough
            string shipCity, string shipRegion,
            string shipPostalCode, string shipCountry)
         {
-
         }
 
         private int orderIDValue;
@@ -182,7 +181,6 @@ namespace ObjectBindingWalkthrough
             get { return shipCountryValue; }
             set { shipCountryValue = value; }
         }
-
     }
 
     /// <summary>
@@ -190,7 +188,6 @@ namespace ObjectBindingWalkthrough
     /// </summary>
     class Orders : System.ComponentModel.BindingList<Order>
     {
-
     }
 }
 //</Snippet2>

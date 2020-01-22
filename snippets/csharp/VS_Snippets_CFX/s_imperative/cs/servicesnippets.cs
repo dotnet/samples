@@ -143,6 +143,5 @@ namespace Microsoft.ServiceModel.Samples
             // Close the ServiceHostBase to shutdown the service.
             serviceHost.Close();
         }
- 
     }
 }

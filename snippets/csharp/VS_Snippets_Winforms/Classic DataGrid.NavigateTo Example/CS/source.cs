@@ -20,6 +20,5 @@ namespace DataGrid.NavigateTo
             dataGrid.NavigateTo(2, "OrderDetails");
         }
         // </Snippet1>
-
     }
 }

@@ -18,5 +18,4 @@ public void CreateMyPasswordTextBox()
     textBox1.TextAlign = HorizontalAlignment.Center;
  }
  // </Snippet1>
-
 }

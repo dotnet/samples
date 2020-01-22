@@ -12,6 +12,5 @@ namespace TableXAML
 
     public partial class MyApp : Application
     {
-
     }
 }

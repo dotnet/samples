@@ -329,7 +329,6 @@ namespace L2E_ConceptualExamplesCS
                 }
             }
             // </SnippetJoinOnNull>
-             
         }
 
         static void AnonymousTypeInitialization()
@@ -497,7 +496,6 @@ namespace L2E_ConceptualExamplesCS
                 }
             }
             //</SnippetNavPropLoadError>
-
         }
 
         public static void WhereExpression()
@@ -539,7 +537,6 @@ namespace L2E_ConceptualExamplesCS
                     Console.WriteLine(sale.SalesOrderID);
                 }
             }
-            
         }
 
         //<SnippetMethodParameterExample>
@@ -630,7 +627,6 @@ namespace L2E_ConceptualExamplesCS
 
                 Console.WriteLine("LINQ to Entities returns: " + q.First());
                 Console.WriteLine("CLR returns: " + "Reflector".EndsWith("Reflector "));
-
             }
             //</SnippetCanonicalFuncVsCLRBaseType>
         }
@@ -665,7 +661,6 @@ namespace L2E_ConceptualExamplesCS
                    select p;
             }
             //</SnippetQuery1>
-
         }
         static void Query1_MQ()
         {
@@ -675,7 +670,6 @@ namespace L2E_ConceptualExamplesCS
                 ObjectSet<Product> products = context.Products;
 
                 IQueryable<Product> productNames = products.Select(p => p);
-
             }
             //</SnippetQuery1_MQ>
         }
@@ -696,7 +690,6 @@ namespace L2E_ConceptualExamplesCS
                 }
             }
             //</SnippetQueryExpression>
-
         }
         static void MethodQuery()
         {
@@ -712,7 +705,6 @@ namespace L2E_ConceptualExamplesCS
                 }
             }
             //</SnippetMethodQuery>
-
         }
         static void composing1()
         {
@@ -732,7 +724,6 @@ namespace L2E_ConceptualExamplesCS
                 }
             }
             //</SnippetComposing1>
-
         }
 
         static void composing2()
@@ -761,7 +752,6 @@ namespace L2E_ConceptualExamplesCS
                 {
                     Console.WriteLine(redProduct.Name);
                 }
-
             }
             //</SnippetComposing2>
 
@@ -778,7 +768,6 @@ namespace L2E_ConceptualExamplesCS
                     Console.WriteLine(product.Name);
                 }
              */
-
         }
         # endregion
         # region Query Results Examples
@@ -844,7 +833,6 @@ namespace L2E_ConceptualExamplesCS
                 IQueryable<int> scalarQuery = new ObjectQuery<int>("100", context);
                 bool hasResults = scalarQuery.Any();
                 Console.Write(hasResults);
-
             }
         }
 
@@ -862,7 +850,6 @@ namespace L2E_ConceptualExamplesCS
 
                 foreach (var result in results)
                     Console.WriteLine(result.Count);
-
             }
             // </SnippetSBUDT543840>
         }
@@ -897,10 +884,8 @@ namespace L2E_ConceptualExamplesCS
                 {
                     Console.WriteLine(productName);
                 }
-
             }
             // </SnippetSBUDT544351>
-
         }
         static void SBUDT496552B()
         {
@@ -950,7 +935,6 @@ namespace L2E_ConceptualExamplesCS
                 {
                     Console.WriteLine(c.LastName + ", " + c.FirstName);
                 }
-
             }
             // </SnippetSBUDT496552A>
         }
@@ -974,7 +958,6 @@ namespace L2E_ConceptualExamplesCS
                 {
                     Console.WriteLine("Exception: {0}", ex.Message);
                 }
-
             }
             // </SnippetUIntAsQueryParam_MQ>
         }
@@ -1016,7 +999,6 @@ namespace L2E_ConceptualExamplesCS
                 IEnumerable<bool> q = query.Select(c => c.EndsWith("Reflector "));
                 Console.WriteLine("LINQ to Entities returns: " + q.First());
                 Console.WriteLine("CLR returns: " + "Reflector".EndsWith("Reflector "));
-
             }
             // </SnippetEndsWithComparison>
         }
@@ -1113,7 +1095,6 @@ namespace L2E_ConceptualExamplesCS
                 }
             }
             // </SnippetDistinctHowTo>
-
         }
 
         public static void CSWalkthrough()
@@ -1162,7 +1143,6 @@ namespace L2E_ConceptualExamplesCS
                 }
             }
             // </SnippetFunctionMapping>
-
         }
 
         static void FunctionMapping2()
@@ -1191,7 +1171,6 @@ namespace L2E_ConceptualExamplesCS
             {
             }
             // </SnippetFunctionMappingWorkAround>
-
         }
         # endregion
 
@@ -1410,7 +1389,6 @@ namespace L2E_ConceptualExamplesCS
                 }
             }
             //</snippetProjToAnonType2>
-
         }
     }
 }

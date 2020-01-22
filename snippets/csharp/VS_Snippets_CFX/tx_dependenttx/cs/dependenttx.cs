@@ -50,7 +50,6 @@ namespace Microsoft.Samples.Transactions.Quickstarts
 							break;
 						}
 					}
-
 				}
 			}
 			catch (System.Transactions.TransactionException ex)
@@ -62,7 +61,6 @@ namespace Microsoft.Samples.Transactions.Quickstarts
 				Console.WriteLine("Cannot complete transaction");
 				throw;
 			}
-			
 		}
 
 		private static void WorkerThread(object transaction)

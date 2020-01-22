@@ -79,7 +79,6 @@ class IPEndPointSnippet
 			Console.WriteLine("Exception caught!!!");
 			Console.WriteLine("Message : " + e.Message);
 		}
-		
 	}
 	
 	public static string DoSocketGet(IPEndPoint hostIPEndPoint,string getString) 
@@ -108,7 +107,6 @@ class IPEndPointSnippet
 				strRetPage = strRetPage + ASCII.GetString(recvBytes,0,byteCount);
 			}
    			return strRetPage;
-
 		}
 		catch(Exception e)
 		{

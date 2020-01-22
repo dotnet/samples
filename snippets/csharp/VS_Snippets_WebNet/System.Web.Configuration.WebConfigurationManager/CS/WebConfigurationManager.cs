@@ -224,13 +224,11 @@ namespace Samples.Aspnet
                     section.SectionInformation.Name + "\t" +
                 section.SectionInformation.AllowExeDefinition);
                 i += 1;
-
             }
             Console.WriteLine("[Total number of sections: {0}]", i);
 
             // Display machine.config path.
             Console.WriteLine("[File path: {0}]", config.FilePath); 
-
         }
 
         // </Snippet9>
@@ -257,13 +255,11 @@ namespace Samples.Aspnet
                     section.SectionInformation.Name + "\t" +
                 section.SectionInformation.AllowExeDefinition);
                 i += 1;
-
             }
             Console.WriteLine("[Total number of sections: {0}]", i);
 
             // Display machine.config path.
             Console.WriteLine("[File path: {0}]", config.FilePath);
-
         }
 
         // </Snippet10>
@@ -291,13 +287,11 @@ namespace Samples.Aspnet
                     section.SectionInformation.Name + "\t" +
                 section.SectionInformation.AllowExeDefinition);
                 i += 1;
-
             }
             Console.WriteLine("[Total number of sections: {0}]", i);
 
             // Display machine.config path.
             Console.WriteLine("[File path: {0}]", config.FilePath);
-
         }
 
         // </Snippet11>
@@ -330,13 +324,11 @@ namespace Samples.Aspnet
                     section.SectionInformation.Name + "\t" +
                 section.SectionInformation.AllowExeDefinition);
                 i += 1;
-
             }
             Console.WriteLine("[Total number of sections: {0}]", i);
 
             // Display machine.config path.
             Console.WriteLine("[File path: {0}]", config.FilePath);
-
         }
 
         // </Snippet12>
@@ -371,13 +363,11 @@ namespace Samples.Aspnet
                     section.SectionInformation.Name + "\t" +
                 section.SectionInformation.AllowExeDefinition);
                 i += 1;
-
             }
             Console.WriteLine("[Total number of sections: {0}]", i);
 
             // Display machine.config path.
             Console.WriteLine("[File path: {0}]", config.FilePath);
-
         }
 
         // </Snippet13>
@@ -658,7 +648,6 @@ namespace Samples.Aspnet
 
             // Return the mapping.
             return fileMap;
-
         }
 
         // </Snippet20>
@@ -703,7 +692,6 @@ namespace Samples.Aspnet
                     Console.WriteLine("[{0}] = [{1}]", key, 
                         config.AppSettings.Settings[key].Value);
                 }
-                
             }
             catch (InvalidOperationException err)
             {
@@ -756,7 +744,6 @@ namespace Samples.Aspnet
                     Console.WriteLine("[{0}] = [{1}]", key,
                         config.AppSettings.Settings[key].Value);
                 }
-
             }
             catch (InvalidOperationException err)
             {
@@ -809,7 +796,6 @@ namespace Samples.Aspnet
                     Console.WriteLine("[{0}] = [{1}]", key,
                         config.AppSettings.Settings[key].Value);
                 }
-
             }
             catch (InvalidOperationException err)
             {
@@ -918,7 +904,6 @@ namespace Samples.Aspnet
             }
 
             Console.Read();
-            
         }
     }
 }

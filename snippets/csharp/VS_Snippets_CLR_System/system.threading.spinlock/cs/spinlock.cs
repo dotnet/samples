@@ -163,6 +163,5 @@ class SpinLockDemo
         worker.Wait();
         mres.Dispose();
     }
-
 }
 //</snippet01>

@@ -24,7 +24,6 @@ public class MACTripleDESexample
                     sw.WriteLine("Here is a message to sign");
                 }
             }
-
         }
         else
         {
@@ -53,7 +52,6 @@ public class MACTripleDESexample
         {
             Console.WriteLine("Error: File not found", e);
         }
-
     }  //end main
     // Computes a keyed hash for a source file and creates a target file with the keyed hash
     // prepended to the contents of the source file. 
@@ -128,8 +126,6 @@ public class MACTripleDESexample
             Console.WriteLine("Hash values agree -- no tampering occurred.");
             return true;
         }
-
     } //end VerifyFile
-
 } //end class
 //</SNIPPET1>

@@ -30,7 +30,6 @@ public class class1
         pthGrBrush.SurroundColors = colors;
 
         e.Graphics.FillEllipse(pthGrBrush, 0, 0, 140, 70);
-
     }
     // </snippet11>
 
@@ -77,7 +76,6 @@ public class class1
 
         // Fill the path with the path gradient brush.
         e.Graphics.FillPath(pthGrBrush, path);
-
     }
     // </snippet12>
 

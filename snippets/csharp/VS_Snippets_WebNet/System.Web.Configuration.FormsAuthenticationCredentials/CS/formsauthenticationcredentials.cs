@@ -190,9 +190,6 @@ namespace Samples.AspNet
             object [] keys = 
                 formsAuthenticationCredentials.Users.AllKeys;
             // </Snippet17>
-
         }
-
     }
-
 }

@@ -92,8 +92,6 @@ namespace Microsoft.Samples.GradientBrushExamples
             mainPanel.Children.Add(verticalFillRectangle);
  
             this.Content = mainPanel;
-            
         }
-        
     }
 }

@@ -29,5 +29,4 @@ using System.Xml.Xsl;
     xslt.Transform("books.xml", "books.html", new XmlUrlResolver());
    } 
 //</snippet1> 
- 
  }

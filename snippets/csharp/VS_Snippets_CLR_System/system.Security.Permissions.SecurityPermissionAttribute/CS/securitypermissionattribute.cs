@@ -19,7 +19,6 @@ class MyClass
         {
             Console.WriteLine(e.Message.ToString());
         }
-
     }
 
     // This method demonstrates the use of the SecurityPermissionAttribute to deny individual security permissions.
@@ -267,7 +266,6 @@ class MyClass
         {
             Console.WriteLine("Demand for SecurityPermissionFlag.UnmanagedCode failed: " + e.Message);
         }
-
     }
 
     public static void TestFailed()
@@ -437,7 +435,6 @@ class MyClass
         {
             Console.WriteLine("Demand for SecurityPermissionFlag.UnmanagedCode failed: " + e.Message);
         }
-
     }
 //</Snippet18>
 
@@ -445,6 +442,5 @@ class MyClass
     {
         PermissionDemo();
     }
-
 }
 //</Snippet1>

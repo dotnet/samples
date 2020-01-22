@@ -61,7 +61,6 @@ public class LayoutForm:
 		this.Button1.Click += new System.EventHandler(Button1_Click);
 		this.Button2.Click += new System.EventHandler(Button2_Click);
 		this.Button3.Click += new System.EventHandler(Button3_Click);
-
 	}
 
 	[System.STAThread]
@@ -91,7 +90,6 @@ public class LayoutForm:
 	{
 		LayoutControl1.PerformLayout();
 	}
-
 }
 
 // This custom control has the Layout event implented so that when 
@@ -120,7 +118,6 @@ public class LayoutControl:
 		this.Name = "LayoutControl";
 		this.ResumeLayout(false);
 		this.Layout += new LayoutEventHandler(LayoutControl_Layout);
-
 	}
 
 	// This method is called when the Layout event is fired. 
@@ -147,7 +144,6 @@ public class LayoutControl:
 		}
 		TextBox1.Text = "Left = "+TextBox1.Left+" Top = "+TextBox1.Top;
 	}
-
 }
 
 	//</snippet1>

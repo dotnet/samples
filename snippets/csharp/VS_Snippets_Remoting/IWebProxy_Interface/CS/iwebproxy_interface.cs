@@ -27,7 +27,6 @@ public class WebProxy_Interface : IWebProxy
 	public WebProxy_Interface(Uri proxyUri) {
 
 		webProxyUri = proxyUri;	
-
 	}
 
 	// Get and Set the Credentials property.
@@ -46,7 +45,6 @@ public class WebProxy_Interface : IWebProxy
 
 		// Always use the same proxy.
 		return webProxyUri;
-
 	}
 
 	// Return whether the web proxy should be bypassed for the specified destination(hostUri).
@@ -54,7 +52,6 @@ public class WebProxy_Interface : IWebProxy
 
 		// Never bypass the proxy.
 		return false;
-
 	}
 };
 // </Snippet3>

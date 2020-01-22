@@ -18,5 +18,4 @@ public class Form1: Form
                 columns.Remove(columnName);
     }
     // </Snippet1>
-
 }

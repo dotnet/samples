@@ -16,7 +16,5 @@ namespace SDKSample
         {
             InitializeComponent();
         }
-
     }  // End class Window1
-
 }  // End namespace RichTextBox_NoScrollViewer

@@ -59,11 +59,9 @@ public static void DoSocketGet(string server)
     {
        bytes = s.Receive(RecvBytes, RecvBytes.Length, 0);
        strRetPage = strRetPage + ASCII.GetString(RecvBytes, 0, bytes);
-   
 }
 }
    public static void Main(){
        DoSocketGet("www.contoso.com");
    }
-
 }

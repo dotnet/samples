@@ -39,7 +39,6 @@ namespace Microsoft.Samples.BrushExamples
             // </SnippetSolidColorBrushPredefinedBrush1CSharp>
             
             myMainPanel.Children.Add(myButton);
-              
         }
         
         private void predefinedColorExample()
@@ -55,7 +54,6 @@ namespace Microsoft.Samples.BrushExamples
             // </SnippetSolidColorBrushPredefinedColor1CSharp>
             
             myMainPanel.Children.Add(myButton);
-              
         }        
         
         // Create a button and paint its background red.
@@ -78,7 +76,6 @@ namespace Microsoft.Samples.BrushExamples
             // </SnippetSolidColorBrushfromScRgbExample1CSharp>
 
             myMainPanel.Children.Add(myButton);
-              
         }    
         
         // Create a button and paint its background red.
@@ -101,9 +98,6 @@ namespace Microsoft.Samples.BrushExamples
             // </SnippetSolidColorBrushfromArgbExample1CSharp>
 
             myMainPanel.Children.Add(myButton);
-              
         }            
-    
     }
-
 }

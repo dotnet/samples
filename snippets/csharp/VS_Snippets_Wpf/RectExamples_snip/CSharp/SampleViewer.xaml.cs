@@ -20,8 +20,6 @@ namespace Microsoft.Samples.RectExamples
             InitializeComponent();
             
             RectExampleFrame.Content = new RectExample();
-                 
        }
-       
     }
 }

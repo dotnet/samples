@@ -21,5 +21,4 @@ public class Form1: Form
         sumObject = table.Compute("Sum(Total)", "EmpID = 5");
     }
     // </Snippet1>
-
 }

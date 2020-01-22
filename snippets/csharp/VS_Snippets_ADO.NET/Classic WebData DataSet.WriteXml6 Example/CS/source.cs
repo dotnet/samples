@@ -31,5 +31,4 @@ public class Form1: Form
         xmlWriter.Close();
     }
     // </Snippet1>
-
 }

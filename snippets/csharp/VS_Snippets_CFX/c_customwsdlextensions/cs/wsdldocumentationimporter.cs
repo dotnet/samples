@@ -21,7 +21,6 @@ namespace Microsoft.WCF.Documentation
 		#region WSDL Import
     public WsdlDocumentationImporter()
     { 
-    
     }
     
     public WsdlDocumentationImporter(string text)

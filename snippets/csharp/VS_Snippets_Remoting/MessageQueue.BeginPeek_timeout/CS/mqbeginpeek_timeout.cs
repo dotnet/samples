@@ -59,7 +59,6 @@ namespace MyProject
 				// Restart the asynchronous peek operation, with the 
 				// same time-out.
 				mq.BeginPeek(new TimeSpan(0,1,0));
-
 			}
 
 			catch(MessageQueueException e)

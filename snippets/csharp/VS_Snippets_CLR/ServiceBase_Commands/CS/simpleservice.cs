@@ -149,7 +149,6 @@ namespace SimpleService
                 if (args.Length > 1)
                     EventLog.WriteEntry("SimpleService.Arguments", args[1]);
             }
-
         }
         // </Snippet3>
 
@@ -169,7 +168,6 @@ namespace SimpleService
                 pause.Reset();
                 Thread.Sleep(5000);
                 workerThread.Abort();
-
             }
             if (workerThread != null)
             {
@@ -238,7 +236,6 @@ namespace SimpleService
 
 #endif
                 pause.Set();
-
             }
 #if LOGEVENTS
             if (workerThread != null)

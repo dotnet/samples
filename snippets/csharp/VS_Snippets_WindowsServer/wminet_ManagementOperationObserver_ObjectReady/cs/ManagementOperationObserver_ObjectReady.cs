@@ -40,7 +40,6 @@ public class EnumerateInstancesAsync
         }
  
         this.Reset();
-        
     }
 
     private bool isCompleted = false;
@@ -79,6 +78,5 @@ public class EnumerateInstancesAsync
 
         return;
     }
-    
 }
 //</Snippet1>

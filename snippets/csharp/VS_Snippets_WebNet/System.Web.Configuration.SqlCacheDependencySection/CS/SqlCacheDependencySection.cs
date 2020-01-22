@@ -50,8 +50,6 @@ class UsingSqlCacheDependencySection
         sqlDs.Enabled = false;
 
     // </Snippet4>
-
         }
 }
-    
 }

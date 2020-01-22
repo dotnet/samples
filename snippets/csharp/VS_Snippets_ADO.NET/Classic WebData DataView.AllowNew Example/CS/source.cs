@@ -22,5 +22,4 @@ public class Form1: Form
         rowView["ProductName"] = "New Product Name";
     }
     // </Snippet1>
-
 }

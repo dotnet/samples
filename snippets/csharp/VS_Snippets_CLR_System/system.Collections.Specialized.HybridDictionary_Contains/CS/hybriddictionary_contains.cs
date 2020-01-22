@@ -40,7 +40,6 @@ public class SamplesHybridDictionary  {
       else
          Console.WriteLine( "The collection does not contain the key \"Kiwis\"." );
       Console.WriteLine();
-
    }
 
    public static void PrintKeysAndValues( IDictionary myCol )  {
@@ -49,7 +48,6 @@ public class SamplesHybridDictionary  {
          Console.WriteLine( "   {0,-25} {1}", de.Key, de.Value );
       Console.WriteLine();
    }
-
 }
 
 /*

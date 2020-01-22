@@ -28,7 +28,6 @@ namespace BindingGroupSnippets
 
             customerData = new Customers();
             customerList.DataContext = customerData;
-
         }
 
         void AddCustomer_Click(object sender, RoutedEventArgs e)
@@ -68,7 +67,6 @@ namespace BindingGroupSnippets
             {
                 bindingGroupInError = container.BindingGroup;
             }
-
         }
         //</SnippetUpdateSources>
     }

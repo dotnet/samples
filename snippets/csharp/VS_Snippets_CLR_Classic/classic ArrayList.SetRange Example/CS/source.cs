@@ -35,7 +35,6 @@
        mySubAL = myAL.GetRange( 0, 5 );
        Console.WriteLine( "Index 0 through 4 now contains:" );
        PrintValues( mySubAL, '\t' );
-
     }
  
     public static void PrintValues( IEnumerable myList, char mySeparator )  {
@@ -43,7 +42,6 @@
           Console.Write( "{0}{1}", mySeparator, obj );
        Console.WriteLine();
     }
-
  }
 
 

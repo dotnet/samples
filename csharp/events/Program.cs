@@ -152,5 +152,4 @@ namespace VersionOne
         }
     }
     // </SnippetFileSearcherV1>
-
 }

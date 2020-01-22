@@ -77,7 +77,6 @@ namespace ViewboxCode
             // Set the Window content
             mainWindow.Content = myCanvas;
 			mainWindow.Show();
-            
 		}
 	}
 

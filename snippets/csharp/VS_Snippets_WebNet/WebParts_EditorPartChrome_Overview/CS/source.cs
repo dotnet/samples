@@ -25,7 +25,6 @@ namespace Samples.AspNet.CS.Controls
         public MyEditorPartChrome(EditorZoneBase zone)
             : base(zone)
         {
-
         }
         
         // <Snippet3>

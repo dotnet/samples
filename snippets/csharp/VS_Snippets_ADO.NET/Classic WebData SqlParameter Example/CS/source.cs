@@ -23,8 +23,6 @@ public void AddSqlParameters()
   categoriesAdapter.SelectCommand.Parameters.Add(
     "@SerialNum", SqlDbType.Int).Value = 239;
   categoriesAdapter.Fill(categoriesDataSet);
-
 }
 // </Snippet1>
-
 }

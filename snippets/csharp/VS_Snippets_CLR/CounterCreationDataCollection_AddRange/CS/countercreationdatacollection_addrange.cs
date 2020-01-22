@@ -53,7 +53,6 @@ public class CounterDataCollectionExample
             {
                 Console.WriteLine("The category already exists");
             }
-
         }
         catch (Exception e)
         {

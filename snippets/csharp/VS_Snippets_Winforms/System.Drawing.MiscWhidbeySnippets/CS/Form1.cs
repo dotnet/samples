@@ -14,7 +14,6 @@ namespace DocRefreshSnippets
            // InitializeComponent();
             CharacterRangeInequality();
             this.Paint += new PaintEventHandler(Form1_Paint);
-          
         }
 
         void Form1_Paint(object sender, PaintEventArgs e)
@@ -52,7 +51,6 @@ namespace DocRefreshSnippets
                 MessageBox.Show("The ranges are equal.");
             else
                 MessageBox.Show("The ranges are not equal.");
-    
         }
         //</snippet1>
 
@@ -73,7 +71,6 @@ namespace DocRefreshSnippets
                 MessageBox.Show("The ranges are equal.");
             else
                 MessageBox.Show("The ranges are not equal.");
-
         }
         //</snippet2>
 
@@ -425,7 +422,5 @@ namespace DocRefreshSnippets
             e.Graphics.DrawRectangle(SystemPens.WindowText, rectangle1);
         }
         //</snippet45>
-
     }
-
 }

@@ -26,7 +26,6 @@ class Classa06a1a56dd1644e8bc012c2255511bc6
     private void AMethod()
     {
     }
-
 }
 
 class Class989134663d744f48a2c0f2a2c31a3049
@@ -128,7 +127,6 @@ class Class989134663d744f48a2c0f2a2c31a3049
         TestArea();
         TestArea2();
     }
-
 }
 
 class Class9b72d48b4a6343bbaa60786cc9425182

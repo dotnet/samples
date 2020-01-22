@@ -118,7 +118,6 @@ namespace PermissionSetAttributeDemo
                         {
                             return ((NamedPermissionSet)namedPermission.Current).ToString();
                         }
-   
                     }
                 }
             }

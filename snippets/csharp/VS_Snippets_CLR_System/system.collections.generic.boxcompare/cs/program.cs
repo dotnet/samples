@@ -82,9 +82,7 @@ class Program
         Console.WriteLine();
         Console.WriteLine(x.ToString());
         // </Snippet4>
-
     }
-
 }
 
 // <Snippet5>
@@ -112,7 +110,6 @@ public class BoxLengthFirst : Comparer<Box>
         }
     }
     // </Snippet6>
-
 }
 // </Snippet5>
 
@@ -180,7 +177,6 @@ public class Box : IComparable<Box>
             return 0;
         }
     }
-
 }
 // </Snippet8>
 

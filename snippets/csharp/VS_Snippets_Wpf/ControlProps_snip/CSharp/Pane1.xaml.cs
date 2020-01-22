@@ -59,7 +59,6 @@ namespace ControlProps
             {
                 btn9.BorderThickness = new Thickness(2.0);
                 btn9.Content = "Control BorderThickness changes from 5 to 2.";
-        
             }
             else
             {
@@ -76,7 +75,6 @@ namespace ControlProps
             {
                 btn10.FontStretch = FontStretches.Normal;
                 btn10.Content = "Control FontStretch changes from Condensed to Normal.";
-
             }
             else
             {
@@ -93,7 +91,6 @@ namespace ControlProps
             {
                 btn11.Padding = new Thickness(2.0);
                 btn11.Content = "Control Padding changes from 5 to 2.";
-
             }
             else
             {
@@ -112,6 +109,5 @@ namespace ControlProps
             }
         }
         //</SnippetAdditionalControlProps4>
-        
     }
 }

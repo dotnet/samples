@@ -13,6 +13,5 @@ namespace ListBoxEvent
 
 	public partial class app : Application
 	{
-
 	}
 }

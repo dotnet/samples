@@ -45,7 +45,6 @@ namespace TabControlEx
            backgroundcolor.Content = " "; 
            backgroundcolor.Content = "Some content about background.";
           }
-          
          }
 
          void MyMenuHandler3(object sender, RoutedEventArgs e)

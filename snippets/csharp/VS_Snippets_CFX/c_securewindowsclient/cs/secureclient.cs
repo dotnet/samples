@@ -135,6 +135,5 @@ namespace Client
             return base.Channel.Divide(n1, n2);
         }
     }
-
 }
 //</snippet0>

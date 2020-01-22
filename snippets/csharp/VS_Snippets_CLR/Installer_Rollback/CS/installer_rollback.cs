@@ -31,7 +31,6 @@ namespace MyAssembly
          Exception myException = new Exception();
          Console.WriteLine("Exception thrown during Installation");
          throw myException;
-         
       }
 // <Snippet1>
       // Override 'Rollback' method of Installer class.

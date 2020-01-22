@@ -107,6 +107,5 @@ public class Client : ISampleServiceCallback
   }
   #endregion
   // </snippet5>
-
 }
 // </snippet3>

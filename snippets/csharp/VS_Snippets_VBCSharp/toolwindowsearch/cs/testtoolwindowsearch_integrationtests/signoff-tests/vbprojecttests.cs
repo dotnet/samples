@@ -93,9 +93,7 @@ namespace TestToolWindowSearch_IntegrationTests.IntegrationTests
                 //Verify Adding new code file to project
                 ProjectItem newCodeFileItem = testUtils.AddNewItemFromVsTemplate(project.ProjectItems, itemTemplateName, language, newFileName);
                 Assert.IsNotNull(newCodeFileItem, "Could not create new project item");
-
             });
         }
-
     }
 }

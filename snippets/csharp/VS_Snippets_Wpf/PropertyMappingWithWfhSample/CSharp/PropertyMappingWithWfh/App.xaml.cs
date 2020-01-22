@@ -17,6 +17,5 @@ namespace PropertyMappingWithWfh
         {
             InitializeComponent();
         }
-
     }
 }

@@ -151,7 +151,6 @@ namespace XmlReaderExampleCS
             return false;
         }
         // </Snippet5>
-
     }
 
     class AnotherClass
@@ -187,6 +186,5 @@ namespace XmlReaderExampleCS
             }
         }
         // </Snippet6>
-
     }
 }

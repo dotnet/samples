@@ -28,13 +28,11 @@ namespace Samples.Aspnet
                 Console.WriteLine(
                     "Protected configuration section default provider:");
                 Console.WriteLine("  {0}", pcSection.DefaultProvider);
-
             }
             catch (ConfigurationErrorsException e)
             {
                 Console.WriteLine(e.ToString());
             }
-
         }
         // </Snippet2>
 
@@ -61,13 +59,11 @@ namespace Samples.Aspnet
                 {
                     Console.WriteLine("  {0}", ps.Name);
                 }
-
             }
             catch (ConfigurationErrorsException e)
             {
                 Console.WriteLine(e.ToString());
             }
-
         }
         // </Snippet3>
 

@@ -49,5 +49,4 @@ namespace ShapeCollectionGetChildIndexCS
     }
     // </Snippet2>
 }
-
 }

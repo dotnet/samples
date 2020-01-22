@@ -57,7 +57,6 @@ namespace Microsoft.Samples.AspNet.Configuration
             }
 
             // </Snippet2>
-
         }
     }
 }

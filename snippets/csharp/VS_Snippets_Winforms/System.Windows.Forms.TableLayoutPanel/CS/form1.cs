@@ -762,7 +762,6 @@ public class Form1 : System.Windows.Forms.Form
 		this.DemoTableLayoutPanel1.ResumeLayout(false);
 		this.ResumeLayout(false);
 		this.PerformLayout();
-
 	}
 
     #endregion
@@ -796,7 +795,6 @@ public class DemoTableLayoutPanel : TableLayoutPanel
 				e.CellBounds.Height - 2);
         };
 	}
-    
 }
 // </snippet100>
 // </snippet1>

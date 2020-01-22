@@ -61,19 +61,15 @@ namespace Samples.AspNet
                     Console.WriteLine(
                         "Provider ssettings: {0} has {1} parameters",
                         pSettings.Name, pLength);
-
                 }
                 // </Snippet4>
-
             }
-
         }
 
         static void Main(string[] args)
         {
 
             GetProviderSettings();
-
         }
     }
 }

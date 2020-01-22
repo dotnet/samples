@@ -27,8 +27,6 @@ namespace Microsoft.Samples.KeyFrameExamples
                                 myRectangle.ActualWidth,
                                 myRectangle.ActualHeight        
                             );
-
         }
-
     }
 }

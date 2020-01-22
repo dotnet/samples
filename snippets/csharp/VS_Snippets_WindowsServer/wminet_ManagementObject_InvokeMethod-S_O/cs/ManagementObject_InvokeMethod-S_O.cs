@@ -29,6 +29,5 @@ public class InvokeMethod
             "Creation of process returned: " + result);
         Console.WriteLine("Process id: " + methodArgs[3]);
     }
-
 }
 //</Snippet1>

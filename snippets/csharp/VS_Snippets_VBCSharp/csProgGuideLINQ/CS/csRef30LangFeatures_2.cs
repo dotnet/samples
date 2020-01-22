@@ -340,7 +340,6 @@ namespace csrefLINQExamples
                   new StudentName {FirstName="Rajesh", LastName="Rotti", ID=114}
                 };
                 //</snippet36>
-
             }
 
             // Implicitly Typed Arrays example 1
@@ -510,7 +509,6 @@ namespace csrefLINQExamples
 
                     Console.WriteLine(s + i.ToString());
                 }
-
             }
 
                 //<snippet44>
@@ -728,9 +726,7 @@ namespace csrefLINQExamples
                     Console.WriteLine(b.ToString());
 
                     Console.ReadKey();
-
                 }
-
             }
             //</s n i p p e t66>
 
@@ -863,7 +859,6 @@ namespace csrefLINQExamples
                     // Keep console window open in debug mode.
                     Console.WriteLine("Press any key to exit.");
                     Console.ReadKey();
-
                 }
 
                 void OrderJoin1()
@@ -951,7 +946,6 @@ namespace csrefLINQExamples
                     NullValuesInQueries app = new NullValuesInQueries();
                     Northwind db = new Northwind();
                     app.TestMethod(db);
-
                 }
 
                 void NullHandlingQuery()
@@ -1064,5 +1058,4 @@ namespace csrefLINQExamples
                 }
             }
             //</s n i p p e t 84>
-
 }

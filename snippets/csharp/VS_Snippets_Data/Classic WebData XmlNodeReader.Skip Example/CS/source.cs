@@ -27,7 +27,6 @@ public class Sample
        reader.Skip();   //Skip the title element.
 
        Console.WriteLine(reader.ReadOuterXml());  //Read the price element.
-
      } 
 
      finally 

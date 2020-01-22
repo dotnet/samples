@@ -37,7 +37,6 @@ namespace Samples
             //<snippet11>
             RoleProvider myCustomRoleProvider = myServiceBehavior.RoleProvider;
             //</snippet11>
-
         }
     }
 
@@ -126,7 +125,6 @@ namespace Samples
         }
     }
     //</snippet6>
-
 }
 
 //<snippet14>
@@ -168,7 +166,6 @@ namespace TestPrincipalPermission
             ((IChannel)client).Close();
             Console.ReadLine();
             service.Close();
-            
         }
 
         public static Binding GetBinding()
@@ -192,7 +189,6 @@ namespace CustomMode
             {
                 ShowPrincipalPermissionModeCustom ppwm = new ShowPrincipalPermissionModeCustom();
                 ppwm.Run();
-
             }
             catch (Exception exc)
             {

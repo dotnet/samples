@@ -21,7 +21,6 @@ public partial class Default : System.Web.UI.Page
         // Assign title dinamically.
         Title = string.Concat("Applying the DisplayFormatAttribute to ",
            _table.DisplayName, " Table");
-
     }
 }
 // </Snippet11> 

@@ -15,7 +15,6 @@ namespace Samples.AspNet.CS.Controls
 
             // Write out the HtmlInputButton control's Title tag.
             writer.Write(" Title=\"Text from RenderAttributes.\"");
-            
         }
     }
 }

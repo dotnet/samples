@@ -12,6 +12,5 @@ namespace RichTextBoxSnippets
 
     public partial class MyApp : Application
     {
-
     }
 }

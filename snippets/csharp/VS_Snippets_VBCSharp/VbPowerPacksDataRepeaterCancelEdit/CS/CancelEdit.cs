@@ -21,14 +21,12 @@ namespace VbPowerPacksDataRepeaterCancelEditCS
             this.Validate();
             this.productsBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.northwndDataSet);
-
         }
 
         private void CancelEdit_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'northwndDataSet.Products' table. You can move, or remove it, as needed.
             this.productsTableAdapter.Fill(this.northwndDataSet.Products);
-
         }
 
         // <Snippet1>

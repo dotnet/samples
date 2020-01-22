@@ -18,6 +18,5 @@ namespace Height_MinHeight_MaxHeight
 			mainWindow.InitializeComponent();
 			mainWindow.Show();
         }
-
 	}
 }

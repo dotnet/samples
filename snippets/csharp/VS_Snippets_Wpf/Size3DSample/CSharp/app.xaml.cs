@@ -19,8 +19,6 @@ namespace ThreeDSizeSample
 
             // displays variables
             mainWindow.ShowVars();
-
         }
-
     }
 }

@@ -13,7 +13,6 @@ public static void Main(){
 private void Application_ApplicationExit(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Application.ApplicationExit event.");
-
 }
 //</snippet1>
 
@@ -21,7 +20,6 @@ private void Application_ApplicationExit(Object sender, EventArgs e) {
 private void Application_Idle(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Application.Idle event.");
-
 }
 //</snippet2>
 
@@ -29,7 +27,6 @@ private void Application_Idle(Object sender, EventArgs e) {
 private void Application_EnterThreadModal(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Application.EnterThreadModal event.");
-
 }
 //</snippet3>
 
@@ -37,7 +34,6 @@ private void Application_EnterThreadModal(Object sender, EventArgs e) {
 private void Application_LeaveThreadModal(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Application.LeaveThreadModal event.");
-
 }
 //</snippet4>
 
@@ -56,7 +52,6 @@ MessageBox.Show(messageBoxCS.ToString(), "ThreadException Event" );
 private void Application_ThreadExit(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Application.ThreadExit event.");
-
 }
 //</snippet6>
 
@@ -64,7 +59,6 @@ private void Application_ThreadExit(Object sender, EventArgs e) {
 private void Control1_BackColorChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.BackColorChanged event.");
-
 }
 //</snippet7>
 
@@ -72,7 +66,6 @@ private void Control1_BackColorChanged(Object sender, EventArgs e) {
 private void Control1_BackgroundImageChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.BackgroundImageChanged event.");
-
 }
 //</snippet8>
 
@@ -80,7 +73,6 @@ private void Control1_BackgroundImageChanged(Object sender, EventArgs e) {
 private void Control1_BackgroundImageLayoutChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.BackgroundImageLayoutChanged event.");
-
 }
 //</snippet9>
 
@@ -88,7 +80,6 @@ private void Control1_BackgroundImageLayoutChanged(Object sender, EventArgs e) {
 private void Control1_BindingContextChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.BindingContextChanged event.");
-
 }
 //</snippet10>
 
@@ -96,7 +87,6 @@ private void Control1_BindingContextChanged(Object sender, EventArgs e) {
 private void Control1_CausesValidationChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.CausesValidationChanged event.");
-
 }
 //</snippet11>
 
@@ -104,7 +94,6 @@ private void Control1_CausesValidationChanged(Object sender, EventArgs e) {
 private void Control1_ClientSizeChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.ClientSizeChanged event.");
-
 }
 //</snippet12>
 
@@ -112,7 +101,6 @@ private void Control1_ClientSizeChanged(Object sender, EventArgs e) {
 private void Control1_ContextMenuChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.ContextMenuChanged event.");
-
 }
 //</snippet13>
 
@@ -120,7 +108,6 @@ private void Control1_ContextMenuChanged(Object sender, EventArgs e) {
 private void Control1_ContextMenuStripChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.ContextMenuStripChanged event.");
-
 }
 //</snippet14>
 
@@ -128,7 +115,6 @@ private void Control1_ContextMenuStripChanged(Object sender, EventArgs e) {
 private void Control1_CursorChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.CursorChanged event.");
-
 }
 //</snippet15>
 
@@ -136,7 +122,6 @@ private void Control1_CursorChanged(Object sender, EventArgs e) {
 private void Control1_DockChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.DockChanged event.");
-
 }
 //</snippet16>
 
@@ -144,7 +129,6 @@ private void Control1_DockChanged(Object sender, EventArgs e) {
 private void Control1_EnabledChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.EnabledChanged event.");
-
 }
 //</snippet17>
 
@@ -152,7 +136,6 @@ private void Control1_EnabledChanged(Object sender, EventArgs e) {
 private void Control1_FontChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.FontChanged event.");
-
 }
 //</snippet18>
 
@@ -160,7 +143,6 @@ private void Control1_FontChanged(Object sender, EventArgs e) {
 private void Control1_ForeColorChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.ForeColorChanged event.");
-
 }
 //</snippet19>
 
@@ -168,7 +150,6 @@ private void Control1_ForeColorChanged(Object sender, EventArgs e) {
 private void Control1_LocationChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.LocationChanged event.");
-
 }
 //</snippet20>
 
@@ -176,7 +157,6 @@ private void Control1_LocationChanged(Object sender, EventArgs e) {
 private void Control1_MarginChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.MarginChanged event.");
-
 }
 //</snippet21>
 
@@ -184,7 +164,6 @@ private void Control1_MarginChanged(Object sender, EventArgs e) {
 private void Control1_RegionChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.RegionChanged event.");
-
 }
 //</snippet22>
 
@@ -192,7 +171,6 @@ private void Control1_RegionChanged(Object sender, EventArgs e) {
 private void Control1_RightToLeftChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.RightToLeftChanged event.");
-
 }
 //</snippet23>
 
@@ -200,7 +178,6 @@ private void Control1_RightToLeftChanged(Object sender, EventArgs e) {
 private void Control1_SizeChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.SizeChanged event.");
-
 }
 //</snippet24>
 
@@ -208,7 +185,6 @@ private void Control1_SizeChanged(Object sender, EventArgs e) {
 private void Control1_TabIndexChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.TabIndexChanged event.");
-
 }
 //</snippet25>
 
@@ -216,7 +192,6 @@ private void Control1_TabIndexChanged(Object sender, EventArgs e) {
 private void Control1_TabStopChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.TabStopChanged event.");
-
 }
 //</snippet26>
 
@@ -224,7 +199,6 @@ private void Control1_TabStopChanged(Object sender, EventArgs e) {
 private void Control1_TextChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.TextChanged event.");
-
 }
 //</snippet27>
 
@@ -232,7 +206,6 @@ private void Control1_TextChanged(Object sender, EventArgs e) {
 private void Control1_VisibleChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.VisibleChanged event.");
-
 }
 //</snippet28>
 
@@ -240,7 +213,6 @@ private void Control1_VisibleChanged(Object sender, EventArgs e) {
 private void Control1_Click(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.Click event.");
-
 }
 //</snippet29>
 
@@ -328,7 +300,6 @@ MessageBox.Show(messageBoxCS.ToString(), "DragOver Event" );
 private void Control1_DragLeave(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.DragLeave event.");
-
 }
 //</snippet35>
 
@@ -348,7 +319,6 @@ MessageBox.Show(messageBoxCS.ToString(), "GiveFeedback Event" );
 private void Control1_HandleCreated(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.HandleCreated event.");
-
 }
 //</snippet37>
 
@@ -356,7 +326,6 @@ private void Control1_HandleCreated(Object sender, EventArgs e) {
 private void Control1_HandleDestroyed(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.HandleDestroyed event.");
-
 }
 //</snippet38>
 
@@ -386,7 +355,6 @@ MessageBox.Show(messageBoxCS.ToString(), "Invalidated Event" );
 private void Control1_PaddingChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.PaddingChanged event.");
-
 }
 //</snippet41>
 
@@ -434,7 +402,6 @@ MessageBox.Show(messageBoxCS.ToString(), "QueryAccessibilityHelp Event" );
 private void Control1_DoubleClick(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.DoubleClick event.");
-
 }
 //</snippet45>
 
@@ -442,7 +409,6 @@ private void Control1_DoubleClick(Object sender, EventArgs e) {
 private void Control1_Enter(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.Enter event.");
-
 }
 //</snippet46>
 
@@ -450,7 +416,6 @@ private void Control1_Enter(Object sender, EventArgs e) {
 private void Control1_GotFocus(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.GotFocus event.");
-
 }
 //</snippet47>
 
@@ -536,7 +501,6 @@ MessageBox.Show(messageBoxCS.ToString(), "Layout Event" );
 private void Control1_Leave(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.Leave event.");
-
 }
 //</snippet52>
 
@@ -544,7 +508,6 @@ private void Control1_Leave(Object sender, EventArgs e) {
 private void Control1_LostFocus(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.LostFocus event.");
-
 }
 //</snippet53>
 
@@ -592,7 +555,6 @@ MessageBox.Show(messageBoxCS.ToString(), "MouseDoubleClick Event" );
 private void Control1_MouseCaptureChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.MouseCaptureChanged event.");
-
 }
 //</snippet56>
 
@@ -620,7 +582,6 @@ MessageBox.Show(messageBoxCS.ToString(), "MouseDown Event" );
 private void Control1_MouseEnter(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.MouseEnter event.");
-
 }
 //</snippet58>
 
@@ -628,7 +589,6 @@ private void Control1_MouseEnter(Object sender, EventArgs e) {
 private void Control1_MouseLeave(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.MouseLeave event.");
-
 }
 //</snippet59>
 
@@ -636,7 +596,6 @@ private void Control1_MouseLeave(Object sender, EventArgs e) {
 private void Control1_MouseHover(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.MouseHover event.");
-
 }
 //</snippet60>
 
@@ -704,7 +663,6 @@ MessageBox.Show(messageBoxCS.ToString(), "MouseWheel Event" );
 private void Control1_Move(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.Move event.");
-
 }
 //</snippet64>
 
@@ -736,7 +694,6 @@ MessageBox.Show(messageBoxCS.ToString(), "PreviewKeyDown Event" );
 private void Control1_Resize(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.Resize event.");
-
 }
 //</snippet66>
 
@@ -762,7 +719,6 @@ MessageBox.Show(messageBoxCS.ToString(), "ChangeUICues Event" );
 private void Control1_StyleChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.StyleChanged event.");
-
 }
 //</snippet68>
 
@@ -770,7 +726,6 @@ private void Control1_StyleChanged(Object sender, EventArgs e) {
 private void Control1_SystemColorsChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.SystemColorsChanged event.");
-
 }
 //</snippet69>
 
@@ -788,7 +743,6 @@ MessageBox.Show(messageBoxCS.ToString(), "Validating Event" );
 private void Control1_Validated(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.Validated event.");
-
 }
 //</snippet71>
 
@@ -796,7 +750,6 @@ private void Control1_Validated(Object sender, EventArgs e) {
 private void Control1_ParentChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.ParentChanged event.");
-
 }
 //</snippet72>
 
@@ -804,7 +757,6 @@ private void Control1_ParentChanged(Object sender, EventArgs e) {
 private void Control1_ImeModeChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Control.ImeModeChanged event.");
-
 }
 //</snippet73>
 
@@ -828,7 +780,6 @@ MessageBox.Show(messageBoxCS.ToString(), "Scroll Event" );
 private void ApplicationContext1_ThreadExit(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ApplicationContext.ThreadExit event.");
-
 }
 //</snippet75>
 
@@ -912,7 +863,6 @@ MessageBox.Show(messageBoxCS.ToString(), "BindingComplete Event" );
 private void BindingManagerBase1_CurrentChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the BindingManagerBase.CurrentChanged event.");
-
 }
 //</snippet81>
 
@@ -920,7 +870,6 @@ private void BindingManagerBase1_CurrentChanged(Object sender, EventArgs e) {
 private void BindingManagerBase1_CurrentItemChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the BindingManagerBase.CurrentItemChanged event.");
-
 }
 //</snippet82>
 
@@ -937,7 +886,6 @@ private void BindingManagerBase1_DataError(Object sender, BindingManagerDataErro
 private void BindingManagerBase1_PositionChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the BindingManagerBase.PositionChanged event.");
-
 }
 //</snippet84>
 
@@ -945,7 +893,6 @@ private void BindingManagerBase1_PositionChanged(Object sender, EventArgs e) {
 private void ToolStrip1_AutoSizeChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStrip.AutoSizeChanged event.");
-
 }
 //</snippet85>
 
@@ -953,7 +900,6 @@ private void ToolStrip1_AutoSizeChanged(Object sender, EventArgs e) {
 private void ToolStrip1_BeginDrag(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStrip.BeginDrag event.");
-
 }
 //</snippet86>
 
@@ -961,7 +907,6 @@ private void ToolStrip1_BeginDrag(Object sender, EventArgs e) {
 private void ToolStrip1_CausesValidationChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStrip.CausesValidationChanged event.");
-
 }
 //</snippet87>
 
@@ -969,7 +914,6 @@ private void ToolStrip1_CausesValidationChanged(Object sender, EventArgs e) {
 private void ToolStrip1_CursorChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStrip.CursorChanged event.");
-
 }
 //</snippet88>
 
@@ -977,7 +921,6 @@ private void ToolStrip1_CursorChanged(Object sender, EventArgs e) {
 private void ToolStrip1_EndDrag(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStrip.EndDrag event.");
-
 }
 //</snippet89>
 
@@ -985,7 +928,6 @@ private void ToolStrip1_EndDrag(Object sender, EventArgs e) {
 private void ToolStrip1_ForeColorChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStrip.ForeColorChanged event.");
-
 }
 //</snippet90>
 
@@ -1023,7 +965,6 @@ MessageBox.Show(messageBoxCS.ToString(), "ItemRemoved Event" );
 private void ToolStrip1_LayoutCompleted(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStrip.LayoutCompleted event.");
-
 }
 //</snippet94>
 
@@ -1031,7 +972,6 @@ private void ToolStrip1_LayoutCompleted(Object sender, EventArgs e) {
 private void ToolStrip1_LayoutStyleChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStrip.LayoutStyleChanged event.");
-
 }
 //</snippet95>
 
@@ -1051,7 +991,6 @@ MessageBox.Show(messageBoxCS.ToString(), "PaintGrip Event" );
 private void ToolStrip1_RendererChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStrip.RendererChanged event.");
-
 }
 //</snippet97>
 
@@ -1059,7 +998,6 @@ private void ToolStrip1_RendererChanged(Object sender, EventArgs e) {
 private void ToolStripItem1_AvailableChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripItem.AvailableChanged event.");
-
 }
 //</snippet98>
 
@@ -1067,7 +1005,6 @@ private void ToolStripItem1_AvailableChanged(Object sender, EventArgs e) {
 private void ToolStripItem1_BackColorChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripItem.BackColorChanged event.");
-
 }
 //</snippet99>
 
@@ -1075,7 +1012,6 @@ private void ToolStripItem1_BackColorChanged(Object sender, EventArgs e) {
 private void ToolStripItem1_Click(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripItem.Click event.");
-
 }
 //</snippet100>
 
@@ -1083,7 +1019,6 @@ private void ToolStripItem1_Click(Object sender, EventArgs e) {
 private void ToolStripItem1_DisplayStyleChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripItem.DisplayStyleChanged event.");
-
 }
 //</snippet101>
 
@@ -1091,7 +1026,6 @@ private void ToolStripItem1_DisplayStyleChanged(Object sender, EventArgs e) {
 private void ToolStripItem1_DoubleClick(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripItem.DoubleClick event.");
-
 }
 //</snippet102>
 
@@ -1159,7 +1093,6 @@ MessageBox.Show(messageBoxCS.ToString(), "DragOver Event" );
 private void ToolStripItem1_DragLeave(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripItem.DragLeave event.");
-
 }
 //</snippet106>
 
@@ -1167,7 +1100,6 @@ private void ToolStripItem1_DragLeave(Object sender, EventArgs e) {
 private void ToolStripItem1_EnabledChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripItem.EnabledChanged event.");
-
 }
 //</snippet107>
 
@@ -1175,7 +1107,6 @@ private void ToolStripItem1_EnabledChanged(Object sender, EventArgs e) {
 private void ToolStripItem1_ForeColorChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripItem.ForeColorChanged event.");
-
 }
 //</snippet108>
 
@@ -1195,7 +1126,6 @@ MessageBox.Show(messageBoxCS.ToString(), "GiveFeedback Event" );
 private void ToolStripItem1_LocationChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripItem.LocationChanged event.");
-
 }
 //</snippet110>
 
@@ -1223,7 +1153,6 @@ MessageBox.Show(messageBoxCS.ToString(), "MouseDown Event" );
 private void ToolStripItem1_MouseEnter(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripItem.MouseEnter event.");
-
 }
 //</snippet112>
 
@@ -1231,7 +1160,6 @@ private void ToolStripItem1_MouseEnter(Object sender, EventArgs e) {
 private void ToolStripItem1_MouseLeave(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripItem.MouseLeave event.");
-
 }
 //</snippet113>
 
@@ -1239,7 +1167,6 @@ private void ToolStripItem1_MouseLeave(Object sender, EventArgs e) {
 private void ToolStripItem1_MouseHover(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripItem.MouseHover event.");
-
 }
 //</snippet114>
 
@@ -1287,7 +1214,6 @@ MessageBox.Show(messageBoxCS.ToString(), "MouseUp Event" );
 private void ToolStripItem1_OwnerChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripItem.OwnerChanged event.");
-
 }
 //</snippet117>
 
@@ -1335,7 +1261,6 @@ MessageBox.Show(messageBoxCS.ToString(), "QueryAccessibilityHelp Event" );
 private void ToolStripItem1_RightToLeftChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripItem.RightToLeftChanged event.");
-
 }
 //</snippet121>
 
@@ -1343,7 +1268,6 @@ private void ToolStripItem1_RightToLeftChanged(Object sender, EventArgs e) {
 private void ToolStripItem1_TextChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripItem.TextChanged event.");
-
 }
 //</snippet122>
 
@@ -1351,7 +1275,6 @@ private void ToolStripItem1_TextChanged(Object sender, EventArgs e) {
 private void ToolStripItem1_VisibleChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripItem.VisibleChanged event.");
-
 }
 //</snippet123>
 
@@ -1359,7 +1282,6 @@ private void ToolStripItem1_VisibleChanged(Object sender, EventArgs e) {
 private void BindingNavigator1_RefreshItems(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the BindingNavigator.RefreshItems event.");
-
 }
 //</snippet124>
 
@@ -1431,7 +1353,6 @@ MessageBox.Show(messageBoxCS.ToString(), "DataError Event" );
 private void BindingSource1_DataSourceChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the BindingSource.DataSourceChanged event.");
-
 }
 //</snippet130>
 
@@ -1439,7 +1360,6 @@ private void BindingSource1_DataSourceChanged(Object sender, EventArgs e) {
 private void BindingSource1_DataMemberChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the BindingSource.DataMemberChanged event.");
-
 }
 //</snippet131>
 
@@ -1447,7 +1367,6 @@ private void BindingSource1_DataMemberChanged(Object sender, EventArgs e) {
 private void BindingSource1_CurrentChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the BindingSource.CurrentChanged event.");
-
 }
 //</snippet132>
 
@@ -1455,7 +1374,6 @@ private void BindingSource1_CurrentChanged(Object sender, EventArgs e) {
 private void BindingSource1_CurrentItemChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the BindingSource.CurrentItemChanged event.");
-
 }
 //</snippet133>
 
@@ -1479,7 +1397,6 @@ MessageBox.Show(messageBoxCS.ToString(), "ListChanged Event" );
 private void BindingSource1_PositionChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the BindingSource.PositionChanged event.");
-
 }
 //</snippet135>
 
@@ -1487,7 +1404,6 @@ private void BindingSource1_PositionChanged(Object sender, EventArgs e) {
 private void ButtonBase1_AutoSizeChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ButtonBase.AutoSizeChanged event.");
-
 }
 //</snippet136>
 
@@ -1495,7 +1411,6 @@ private void ButtonBase1_AutoSizeChanged(Object sender, EventArgs e) {
 private void Button1_DoubleClick(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Button.DoubleClick event.");
-
 }
 //</snippet137>
 
@@ -1523,7 +1438,6 @@ MessageBox.Show(messageBoxCS.ToString(), "MouseDoubleClick Event" );
 private void CheckBox1_AppearanceChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the CheckBox.AppearanceChanged event.");
-
 }
 //</snippet139>
 
@@ -1531,7 +1445,6 @@ private void CheckBox1_AppearanceChanged(Object sender, EventArgs e) {
 private void CheckBox1_CheckedChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the CheckBox.CheckedChanged event.");
-
 }
 //</snippet140>
 
@@ -1539,7 +1452,6 @@ private void CheckBox1_CheckedChanged(Object sender, EventArgs e) {
 private void CheckBox1_CheckStateChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the CheckBox.CheckStateChanged event.");
-
 }
 //</snippet141>
 
@@ -1547,7 +1459,6 @@ private void CheckBox1_CheckStateChanged(Object sender, EventArgs e) {
 private void ListControl1_DataSourceChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ListControl.DataSourceChanged event.");
-
 }
 //</snippet142>
 
@@ -1555,7 +1466,6 @@ private void ListControl1_DataSourceChanged(Object sender, EventArgs e) {
 private void ListControl1_DisplayMemberChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ListControl.DisplayMemberChanged event.");
-
 }
 //</snippet143>
 
@@ -1577,7 +1487,6 @@ MessageBox.Show(messageBoxCS.ToString(), "Format Event" );
 private void ListControl1_FormatInfoChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ListControl.FormatInfoChanged event.");
-
 }
 //</snippet145>
 
@@ -1585,7 +1494,6 @@ private void ListControl1_FormatInfoChanged(Object sender, EventArgs e) {
 private void ListControl1_FormatStringChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ListControl.FormatStringChanged event.");
-
 }
 //</snippet146>
 
@@ -1593,7 +1501,6 @@ private void ListControl1_FormatStringChanged(Object sender, EventArgs e) {
 private void ListControl1_FormattingEnabledChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ListControl.FormattingEnabledChanged event.");
-
 }
 //</snippet147>
 
@@ -1601,7 +1508,6 @@ private void ListControl1_FormattingEnabledChanged(Object sender, EventArgs e) {
 private void ListControl1_ValueMemberChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ListControl.ValueMemberChanged event.");
-
 }
 //</snippet148>
 
@@ -1609,7 +1515,6 @@ private void ListControl1_ValueMemberChanged(Object sender, EventArgs e) {
 private void ListControl1_SelectedValueChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ListControl.SelectedValueChanged event.");
-
 }
 //</snippet149>
 
@@ -1617,7 +1522,6 @@ private void ListControl1_SelectedValueChanged(Object sender, EventArgs e) {
 private void ListBox1_TextChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ListBox.TextChanged event.");
-
 }
 //</snippet150>
 
@@ -1625,7 +1529,6 @@ private void ListBox1_TextChanged(Object sender, EventArgs e) {
 private void ListBox1_Click(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ListBox.Click event.");
-
 }
 //</snippet151>
 
@@ -1691,7 +1594,6 @@ MessageBox.Show(messageBoxCS.ToString(), "MeasureItem Event" );
 private void ListBox1_SelectedIndexChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ListBox.SelectedIndexChanged event.");
-
 }
 //</snippet155>
 
@@ -1713,7 +1615,6 @@ MessageBox.Show(messageBoxCS.ToString(), "ItemCheck Event" );
 private void CheckedListBox1_Click(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the CheckedListBox.Click event.");
-
 }
 //</snippet157>
 
@@ -1741,7 +1642,6 @@ MessageBox.Show(messageBoxCS.ToString(), "MouseClick Event" );
 private void CommonDialog1_HelpRequest(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the CommonDialog.HelpRequest event.");
-
 }
 //</snippet159>
 
@@ -1749,7 +1649,6 @@ private void CommonDialog1_HelpRequest(Object sender, EventArgs e) {
 private void ImageList1_RecreateHandle(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ImageList.RecreateHandle event.");
-
 }
 //</snippet160>
 
@@ -1779,7 +1678,6 @@ MessageBox.Show(messageBoxCS.ToString(), "DrawItem Event" );
 private void ComboBox1_DropDown(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ComboBox.DropDown event.");
-
 }
 //</snippet162>
 
@@ -1803,7 +1701,6 @@ MessageBox.Show(messageBoxCS.ToString(), "MeasureItem Event" );
 private void ComboBox1_SelectedIndexChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ComboBox.SelectedIndexChanged event.");
-
 }
 //</snippet164>
 
@@ -1811,7 +1708,6 @@ private void ComboBox1_SelectedIndexChanged(Object sender, EventArgs e) {
 private void ComboBox1_SelectionChangeCommitted(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ComboBox.SelectionChangeCommitted event.");
-
 }
 //</snippet165>
 
@@ -1819,7 +1715,6 @@ private void ComboBox1_SelectionChangeCommitted(Object sender, EventArgs e) {
 private void ComboBox1_DropDownStyleChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ComboBox.DropDownStyleChanged event.");
-
 }
 //</snippet166>
 
@@ -1827,7 +1722,6 @@ private void ComboBox1_DropDownStyleChanged(Object sender, EventArgs e) {
 private void ComboBox1_TextUpdate(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ComboBox.TextUpdate event.");
-
 }
 //</snippet167>
 
@@ -1835,7 +1729,6 @@ private void ComboBox1_TextUpdate(Object sender, EventArgs e) {
 private void ComboBox1_DropDownClosed(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ComboBox.DropDownClosed event.");
-
 }
 //</snippet168>
 
@@ -1843,7 +1736,6 @@ private void ComboBox1_DropDownClosed(Object sender, EventArgs e) {
 private void ContextMenu1_Popup(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ContextMenu.Popup event.");
-
 }
 //</snippet169>
 
@@ -1851,7 +1743,6 @@ private void ContextMenu1_Popup(Object sender, EventArgs e) {
 private void ContextMenu1_Collapse(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ContextMenu.Collapse event.");
-
 }
 //</snippet170>
 
@@ -1859,7 +1750,6 @@ private void ContextMenu1_Collapse(Object sender, EventArgs e) {
 private void ToolStripDropDown1_BackgroundImageChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripDropDown.BackgroundImageChanged event.");
-
 }
 //</snippet171>
 
@@ -1867,7 +1757,6 @@ private void ToolStripDropDown1_BackgroundImageChanged(Object sender, EventArgs 
 private void ToolStripDropDown1_BackgroundImageLayoutChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripDropDown.BackgroundImageLayoutChanged event.");
-
 }
 //</snippet172>
 
@@ -1875,7 +1764,6 @@ private void ToolStripDropDown1_BackgroundImageLayoutChanged(Object sender, Even
 private void ToolStripDropDown1_BindingContextChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripDropDown.BindingContextChanged event.");
-
 }
 //</snippet173>
 
@@ -1901,7 +1789,6 @@ MessageBox.Show(messageBoxCS.ToString(), "ChangeUICues Event" );
 private void ToolStripDropDown1_ContextMenuStripChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripDropDown.ContextMenuStripChanged event.");
-
 }
 //</snippet175>
 
@@ -1909,7 +1796,6 @@ private void ToolStripDropDown1_ContextMenuStripChanged(Object sender, EventArgs
 private void ToolStripDropDown1_DockChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripDropDown.DockChanged event.");
-
 }
 //</snippet176>
 
@@ -1939,7 +1825,6 @@ MessageBox.Show(messageBoxCS.ToString(), "Closing Event" );
 private void ToolStripDropDown1_Enter(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripDropDown.Enter event.");
-
 }
 //</snippet179>
 
@@ -1947,7 +1832,6 @@ private void ToolStripDropDown1_Enter(Object sender, EventArgs e) {
 private void ToolStripDropDown1_FontChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripDropDown.FontChanged event.");
-
 }
 //</snippet180>
 
@@ -1967,7 +1851,6 @@ MessageBox.Show(messageBoxCS.ToString(), "HelpRequested Event" );
 private void ToolStripDropDown1_ImeModeChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripDropDown.ImeModeChanged event.");
-
 }
 //</snippet182>
 
@@ -2039,7 +1922,6 @@ MessageBox.Show(messageBoxCS.ToString(), "KeyUp Event" );
 private void ToolStripDropDown1_Leave(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripDropDown.Leave event.");
-
 }
 //</snippet186>
 
@@ -2057,7 +1939,6 @@ MessageBox.Show(messageBoxCS.ToString(), "Opening Event" );
 private void ToolStripDropDown1_Opened(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripDropDown.Opened event.");
-
 }
 //</snippet188>
 
@@ -2065,7 +1946,6 @@ private void ToolStripDropDown1_Opened(Object sender, EventArgs e) {
 private void ToolStripDropDown1_RegionChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripDropDown.RegionChanged event.");
-
 }
 //</snippet189>
 
@@ -2073,7 +1953,6 @@ private void ToolStripDropDown1_RegionChanged(Object sender, EventArgs e) {
 private void ToolStripDropDown1_StyleChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripDropDown.StyleChanged event.");
-
 }
 //</snippet190>
 
@@ -2107,7 +1986,6 @@ MessageBox.Show(messageBoxCS.ToString(), "ListChanged Event" );
 private void CurrencyManager1_MetaDataChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the CurrencyManager.MetaDataChanged event.");
-
 }
 //</snippet193>
 
@@ -2115,7 +1993,6 @@ private void CurrencyManager1_MetaDataChanged(Object sender, EventArgs e) {
 private void DataGrid1_BorderStyleChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGrid.BorderStyleChanged event.");
-
 }
 //</snippet194>
 
@@ -2123,7 +2000,6 @@ private void DataGrid1_BorderStyleChanged(Object sender, EventArgs e) {
 private void DataGrid1_CaptionVisibleChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGrid.CaptionVisibleChanged event.");
-
 }
 //</snippet195>
 
@@ -2131,7 +2007,6 @@ private void DataGrid1_CaptionVisibleChanged(Object sender, EventArgs e) {
 private void DataGrid1_CurrentCellChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGrid.CurrentCellChanged event.");
-
 }
 //</snippet196>
 
@@ -2139,7 +2014,6 @@ private void DataGrid1_CurrentCellChanged(Object sender, EventArgs e) {
 private void DataGrid1_DataSourceChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGrid.DataSourceChanged event.");
-
 }
 //</snippet197>
 
@@ -2147,7 +2021,6 @@ private void DataGrid1_DataSourceChanged(Object sender, EventArgs e) {
 private void DataGrid1_ParentRowsLabelStyleChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGrid.ParentRowsLabelStyleChanged event.");
-
 }
 //</snippet198>
 
@@ -2155,7 +2028,6 @@ private void DataGrid1_ParentRowsLabelStyleChanged(Object sender, EventArgs e) {
 private void DataGrid1_FlatModeChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGrid.FlatModeChanged event.");
-
 }
 //</snippet199>
 
@@ -2163,7 +2035,6 @@ private void DataGrid1_FlatModeChanged(Object sender, EventArgs e) {
 private void DataGrid1_BackgroundColorChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGrid.BackgroundColorChanged event.");
-
 }
 //</snippet200>
 
@@ -2171,7 +2042,6 @@ private void DataGrid1_BackgroundColorChanged(Object sender, EventArgs e) {
 private void DataGrid1_AllowNavigationChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGrid.AllowNavigationChanged event.");
-
 }
 //</snippet201>
 
@@ -2179,7 +2049,6 @@ private void DataGrid1_AllowNavigationChanged(Object sender, EventArgs e) {
 private void DataGrid1_ReadOnlyChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGrid.ReadOnlyChanged event.");
-
 }
 //</snippet202>
 
@@ -2187,7 +2056,6 @@ private void DataGrid1_ReadOnlyChanged(Object sender, EventArgs e) {
 private void DataGrid1_ParentRowsVisibleChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGrid.ParentRowsVisibleChanged event.");
-
 }
 //</snippet203>
 
@@ -2205,7 +2073,6 @@ MessageBox.Show(messageBoxCS.ToString(), "Navigate Event" );
 private void DataGrid1_Scroll(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGrid.Scroll event.");
-
 }
 //</snippet205>
 
@@ -2213,7 +2080,6 @@ private void DataGrid1_Scroll(Object sender, EventArgs e) {
 private void DataGrid1_BackButtonClick(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGrid.BackButtonClick event.");
-
 }
 //</snippet206>
 
@@ -2221,7 +2087,6 @@ private void DataGrid1_BackButtonClick(Object sender, EventArgs e) {
 private void DataGrid1_ShowParentDetailsButtonClick(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGrid.ShowParentDetailsButtonClick event.");
-
 }
 //</snippet207>
 
@@ -2229,7 +2094,6 @@ private void DataGrid1_ShowParentDetailsButtonClick(Object sender, EventArgs e) 
 private void DataGridColumnStyle1_AlignmentChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridColumnStyle.AlignmentChanged event.");
-
 }
 //</snippet208>
 
@@ -2237,7 +2101,6 @@ private void DataGridColumnStyle1_AlignmentChanged(Object sender, EventArgs e) {
 private void DataGridColumnStyle1_PropertyDescriptorChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridColumnStyle.PropertyDescriptorChanged event.");
-
 }
 //</snippet209>
 
@@ -2245,7 +2108,6 @@ private void DataGridColumnStyle1_PropertyDescriptorChanged(Object sender, Event
 private void DataGridColumnStyle1_FontChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridColumnStyle.FontChanged event.");
-
 }
 //</snippet210>
 
@@ -2253,7 +2115,6 @@ private void DataGridColumnStyle1_FontChanged(Object sender, EventArgs e) {
 private void DataGridColumnStyle1_HeaderTextChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridColumnStyle.HeaderTextChanged event.");
-
 }
 //</snippet211>
 
@@ -2261,7 +2122,6 @@ private void DataGridColumnStyle1_HeaderTextChanged(Object sender, EventArgs e) 
 private void DataGridColumnStyle1_MappingNameChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridColumnStyle.MappingNameChanged event.");
-
 }
 //</snippet212>
 
@@ -2269,7 +2129,6 @@ private void DataGridColumnStyle1_MappingNameChanged(Object sender, EventArgs e)
 private void DataGridColumnStyle1_NullTextChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridColumnStyle.NullTextChanged event.");
-
 }
 //</snippet213>
 
@@ -2277,7 +2136,6 @@ private void DataGridColumnStyle1_NullTextChanged(Object sender, EventArgs e) {
 private void DataGridColumnStyle1_ReadOnlyChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridColumnStyle.ReadOnlyChanged event.");
-
 }
 //</snippet214>
 
@@ -2285,7 +2143,6 @@ private void DataGridColumnStyle1_ReadOnlyChanged(Object sender, EventArgs e) {
 private void DataGridColumnStyle1_WidthChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridColumnStyle.WidthChanged event.");
-
 }
 //</snippet215>
 
@@ -2293,7 +2150,6 @@ private void DataGridColumnStyle1_WidthChanged(Object sender, EventArgs e) {
 private void DataGridBoolColumn1_TrueValueChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridBoolColumn.TrueValueChanged event.");
-
 }
 //</snippet216>
 
@@ -2301,7 +2157,6 @@ private void DataGridBoolColumn1_TrueValueChanged(Object sender, EventArgs e) {
 private void DataGridBoolColumn1_FalseValueChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridBoolColumn.FalseValueChanged event.");
-
 }
 //</snippet217>
 
@@ -2309,7 +2164,6 @@ private void DataGridBoolColumn1_FalseValueChanged(Object sender, EventArgs e) {
 private void DataGridBoolColumn1_AllowNullChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridBoolColumn.AllowNullChanged event.");
-
 }
 //</snippet218>
 
@@ -2329,7 +2183,6 @@ MessageBox.Show(messageBoxCS.ToString(), "CollectionChanged Event" );
 private void DataGridTableStyle1_AllowSortingChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridTableStyle.AllowSortingChanged event.");
-
 }
 //</snippet220>
 
@@ -2337,7 +2190,6 @@ private void DataGridTableStyle1_AllowSortingChanged(Object sender, EventArgs e)
 private void DataGridTableStyle1_AlternatingBackColorChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridTableStyle.AlternatingBackColorChanged event.");
-
 }
 //</snippet221>
 
@@ -2345,7 +2197,6 @@ private void DataGridTableStyle1_AlternatingBackColorChanged(Object sender, Even
 private void DataGridTableStyle1_BackColorChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridTableStyle.BackColorChanged event.");
-
 }
 //</snippet222>
 
@@ -2353,7 +2204,6 @@ private void DataGridTableStyle1_BackColorChanged(Object sender, EventArgs e) {
 private void DataGridTableStyle1_ForeColorChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridTableStyle.ForeColorChanged event.");
-
 }
 //</snippet223>
 
@@ -2361,7 +2211,6 @@ private void DataGridTableStyle1_ForeColorChanged(Object sender, EventArgs e) {
 private void DataGridTableStyle1_GridLineColorChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridTableStyle.GridLineColorChanged event.");
-
 }
 //</snippet224>
 
@@ -2369,7 +2218,6 @@ private void DataGridTableStyle1_GridLineColorChanged(Object sender, EventArgs e
 private void DataGridTableStyle1_GridLineStyleChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridTableStyle.GridLineStyleChanged event.");
-
 }
 //</snippet225>
 
@@ -2377,7 +2225,6 @@ private void DataGridTableStyle1_GridLineStyleChanged(Object sender, EventArgs e
 private void DataGridTableStyle1_HeaderBackColorChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridTableStyle.HeaderBackColorChanged event.");
-
 }
 //</snippet226>
 
@@ -2385,7 +2232,6 @@ private void DataGridTableStyle1_HeaderBackColorChanged(Object sender, EventArgs
 private void DataGridTableStyle1_HeaderFontChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridTableStyle.HeaderFontChanged event.");
-
 }
 //</snippet227>
 
@@ -2393,7 +2239,6 @@ private void DataGridTableStyle1_HeaderFontChanged(Object sender, EventArgs e) {
 private void DataGridTableStyle1_HeaderForeColorChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridTableStyle.HeaderForeColorChanged event.");
-
 }
 //</snippet228>
 
@@ -2401,7 +2246,6 @@ private void DataGridTableStyle1_HeaderForeColorChanged(Object sender, EventArgs
 private void DataGridTableStyle1_LinkColorChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridTableStyle.LinkColorChanged event.");
-
 }
 //</snippet229>
 
@@ -2409,7 +2253,6 @@ private void DataGridTableStyle1_LinkColorChanged(Object sender, EventArgs e) {
 private void DataGridTableStyle1_LinkHoverColorChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridTableStyle.LinkHoverColorChanged event.");
-
 }
 //</snippet230>
 
@@ -2417,7 +2260,6 @@ private void DataGridTableStyle1_LinkHoverColorChanged(Object sender, EventArgs 
 private void DataGridTableStyle1_PreferredColumnWidthChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridTableStyle.PreferredColumnWidthChanged event.");
-
 }
 //</snippet231>
 
@@ -2425,7 +2267,6 @@ private void DataGridTableStyle1_PreferredColumnWidthChanged(Object sender, Even
 private void DataGridTableStyle1_PreferredRowHeightChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridTableStyle.PreferredRowHeightChanged event.");
-
 }
 //</snippet232>
 
@@ -2433,7 +2274,6 @@ private void DataGridTableStyle1_PreferredRowHeightChanged(Object sender, EventA
 private void DataGridTableStyle1_ColumnHeadersVisibleChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridTableStyle.ColumnHeadersVisibleChanged event.");
-
 }
 //</snippet233>
 
@@ -2441,7 +2281,6 @@ private void DataGridTableStyle1_ColumnHeadersVisibleChanged(Object sender, Even
 private void DataGridTableStyle1_RowHeadersVisibleChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridTableStyle.RowHeadersVisibleChanged event.");
-
 }
 //</snippet234>
 
@@ -2449,7 +2288,6 @@ private void DataGridTableStyle1_RowHeadersVisibleChanged(Object sender, EventAr
 private void DataGridTableStyle1_RowHeaderWidthChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridTableStyle.RowHeaderWidthChanged event.");
-
 }
 //</snippet235>
 
@@ -2457,7 +2295,6 @@ private void DataGridTableStyle1_RowHeaderWidthChanged(Object sender, EventArgs 
 private void DataGridTableStyle1_SelectionBackColorChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridTableStyle.SelectionBackColorChanged event.");
-
 }
 //</snippet236>
 
@@ -2465,7 +2302,6 @@ private void DataGridTableStyle1_SelectionBackColorChanged(Object sender, EventA
 private void DataGridTableStyle1_SelectionForeColorChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridTableStyle.SelectionForeColorChanged event.");
-
 }
 //</snippet237>
 
@@ -2473,7 +2309,6 @@ private void DataGridTableStyle1_SelectionForeColorChanged(Object sender, EventA
 private void DataGridTableStyle1_MappingNameChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridTableStyle.MappingNameChanged event.");
-
 }
 //</snippet238>
 
@@ -2481,7 +2316,6 @@ private void DataGridTableStyle1_MappingNameChanged(Object sender, EventArgs e) 
 private void DataGridTableStyle1_ReadOnlyChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridTableStyle.ReadOnlyChanged event.");
-
 }
 //</snippet239>
 
@@ -2501,7 +2335,6 @@ MessageBox.Show(messageBoxCS.ToString(), "CollectionChanged Event" );
 private void TextBoxBase1_AcceptsTabChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the TextBoxBase.AcceptsTabChanged event.");
-
 }
 //</snippet241>
 
@@ -2509,7 +2342,6 @@ private void TextBoxBase1_AcceptsTabChanged(Object sender, EventArgs e) {
 private void TextBoxBase1_BorderStyleChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the TextBoxBase.BorderStyleChanged event.");
-
 }
 //</snippet242>
 
@@ -2517,7 +2349,6 @@ private void TextBoxBase1_BorderStyleChanged(Object sender, EventArgs e) {
 private void TextBoxBase1_Click(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the TextBoxBase.Click event.");
-
 }
 //</snippet243>
 
@@ -2545,7 +2376,6 @@ MessageBox.Show(messageBoxCS.ToString(), "MouseClick Event" );
 private void TextBoxBase1_HideSelectionChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the TextBoxBase.HideSelectionChanged event.");
-
 }
 //</snippet245>
 
@@ -2553,7 +2383,6 @@ private void TextBoxBase1_HideSelectionChanged(Object sender, EventArgs e) {
 private void TextBoxBase1_ModifiedChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the TextBoxBase.ModifiedChanged event.");
-
 }
 //</snippet246>
 
@@ -2561,7 +2390,6 @@ private void TextBoxBase1_ModifiedChanged(Object sender, EventArgs e) {
 private void TextBoxBase1_MultilineChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the TextBoxBase.MultilineChanged event.");
-
 }
 //</snippet247>
 
@@ -2569,7 +2397,6 @@ private void TextBoxBase1_MultilineChanged(Object sender, EventArgs e) {
 private void TextBoxBase1_ReadOnlyChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the TextBoxBase.ReadOnlyChanged event.");
-
 }
 //</snippet248>
 
@@ -2577,7 +2404,6 @@ private void TextBoxBase1_ReadOnlyChanged(Object sender, EventArgs e) {
 private void TextBox1_TextAlignChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the TextBox.TextAlignChanged event.");
-
 }
 //</snippet249>
 
@@ -2585,7 +2411,6 @@ private void TextBox1_TextAlignChanged(Object sender, EventArgs e) {
 private void DataGridView1_AllowUserToAddRowsChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridView.AllowUserToAddRowsChanged event.");
-
 }
 //</snippet250>
 
@@ -2593,7 +2418,6 @@ private void DataGridView1_AllowUserToAddRowsChanged(Object sender, EventArgs e)
 private void DataGridView1_AllowUserToDeleteRowsChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridView.AllowUserToDeleteRowsChanged event.");
-
 }
 //</snippet251>
 
@@ -2601,7 +2425,6 @@ private void DataGridView1_AllowUserToDeleteRowsChanged(Object sender, EventArgs
 private void DataGridView1_AllowUserToOrderColumnsChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridView.AllowUserToOrderColumnsChanged event.");
-
 }
 //</snippet252>
 
@@ -2609,7 +2432,6 @@ private void DataGridView1_AllowUserToOrderColumnsChanged(Object sender, EventAr
 private void DataGridView1_AllowUserToResizeColumnsChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridView.AllowUserToResizeColumnsChanged event.");
-
 }
 //</snippet253>
 
@@ -2617,7 +2439,6 @@ private void DataGridView1_AllowUserToResizeColumnsChanged(Object sender, EventA
 private void DataGridView1_AllowUserToResizeRowsChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridView.AllowUserToResizeRowsChanged event.");
-
 }
 //</snippet254>
 
@@ -2625,7 +2446,6 @@ private void DataGridView1_AllowUserToResizeRowsChanged(Object sender, EventArgs
 private void DataGridView1_AlternatingRowsDefaultCellStyleChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridView.AlternatingRowsDefaultCellStyleChanged event.");
-
 }
 //</snippet255>
 
@@ -2633,7 +2453,6 @@ private void DataGridView1_AlternatingRowsDefaultCellStyleChanged(Object sender,
 private void DataGridView1_AutoGenerateColumnsChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridView.AutoGenerateColumnsChanged event.");
-
 }
 //</snippet256>
 
@@ -2661,7 +2480,6 @@ MessageBox.Show(messageBoxCS.ToString(), "AutoSizeRowsModeChanged Event" );
 private void DataGridView1_BackgroundColorChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridView.BackgroundColorChanged event.");
-
 }
 //</snippet259>
 
@@ -2669,7 +2487,6 @@ private void DataGridView1_BackgroundColorChanged(Object sender, EventArgs e) {
 private void DataGridView1_BorderStyleChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridView.BorderStyleChanged event.");
-
 }
 //</snippet260>
 
@@ -2677,7 +2494,6 @@ private void DataGridView1_BorderStyleChanged(Object sender, EventArgs e) {
 private void DataGridView1_CellBorderStyleChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridView.CellBorderStyleChanged event.");
-
 }
 //</snippet261>
 
@@ -2685,7 +2501,6 @@ private void DataGridView1_CellBorderStyleChanged(Object sender, EventArgs e) {
 private void DataGridView1_ColumnHeadersBorderStyleChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridView.ColumnHeadersBorderStyleChanged event.");
-
 }
 //</snippet262>
 
@@ -2693,7 +2508,6 @@ private void DataGridView1_ColumnHeadersBorderStyleChanged(Object sender, EventA
 private void DataGridView1_ColumnHeadersDefaultCellStyleChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridView.ColumnHeadersDefaultCellStyleChanged event.");
-
 }
 //</snippet263>
 
@@ -2701,7 +2515,6 @@ private void DataGridView1_ColumnHeadersDefaultCellStyleChanged(Object sender, E
 private void DataGridView1_ColumnHeadersHeightChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridView.ColumnHeadersHeightChanged event.");
-
 }
 //</snippet264>
 
@@ -2719,7 +2532,6 @@ MessageBox.Show(messageBoxCS.ToString(), "ColumnHeadersHeightSizeModeChanged Eve
 private void DataGridView1_DataMemberChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridView.DataMemberChanged event.");
-
 }
 //</snippet266>
 
@@ -2727,7 +2539,6 @@ private void DataGridView1_DataMemberChanged(Object sender, EventArgs e) {
 private void DataGridView1_DataSourceChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridView.DataSourceChanged event.");
-
 }
 //</snippet267>
 
@@ -2735,7 +2546,6 @@ private void DataGridView1_DataSourceChanged(Object sender, EventArgs e) {
 private void DataGridView1_DefaultCellStyleChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridView.DefaultCellStyleChanged event.");
-
 }
 //</snippet268>
 
@@ -2743,7 +2553,6 @@ private void DataGridView1_DefaultCellStyleChanged(Object sender, EventArgs e) {
 private void DataGridView1_EditModeChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridView.EditModeChanged event.");
-
 }
 //</snippet269>
 
@@ -2751,7 +2560,6 @@ private void DataGridView1_EditModeChanged(Object sender, EventArgs e) {
 private void DataGridView1_ForeColorChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridView.ForeColorChanged event.");
-
 }
 //</snippet270>
 
@@ -2759,7 +2567,6 @@ private void DataGridView1_ForeColorChanged(Object sender, EventArgs e) {
 private void DataGridView1_FontChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridView.FontChanged event.");
-
 }
 //</snippet271>
 
@@ -2767,7 +2574,6 @@ private void DataGridView1_FontChanged(Object sender, EventArgs e) {
 private void DataGridView1_GridColorChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridView.GridColorChanged event.");
-
 }
 //</snippet272>
 
@@ -2775,7 +2581,6 @@ private void DataGridView1_GridColorChanged(Object sender, EventArgs e) {
 private void DataGridView1_MultiSelectChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridView.MultiSelectChanged event.");
-
 }
 //</snippet273>
 
@@ -2783,7 +2588,6 @@ private void DataGridView1_MultiSelectChanged(Object sender, EventArgs e) {
 private void DataGridView1_ReadOnlyChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridView.ReadOnlyChanged event.");
-
 }
 //</snippet274>
 
@@ -2791,7 +2595,6 @@ private void DataGridView1_ReadOnlyChanged(Object sender, EventArgs e) {
 private void DataGridView1_RowHeadersBorderStyleChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridView.RowHeadersBorderStyleChanged event.");
-
 }
 //</snippet275>
 
@@ -2799,7 +2602,6 @@ private void DataGridView1_RowHeadersBorderStyleChanged(Object sender, EventArgs
 private void DataGridView1_RowHeadersDefaultCellStyleChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridView.RowHeadersDefaultCellStyleChanged event.");
-
 }
 //</snippet276>
 
@@ -2807,7 +2609,6 @@ private void DataGridView1_RowHeadersDefaultCellStyleChanged(Object sender, Even
 private void DataGridView1_RowHeadersWidthChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridView.RowHeadersWidthChanged event.");
-
 }
 //</snippet277>
 
@@ -2825,7 +2626,6 @@ MessageBox.Show(messageBoxCS.ToString(), "RowHeadersWidthSizeModeChanged Event" 
 private void DataGridView1_RowsDefaultCellStyleChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridView.RowsDefaultCellStyleChanged event.");
-
 }
 //</snippet279>
 
@@ -3567,7 +3367,6 @@ MessageBox.Show(messageBoxCS.ToString(), "ColumnWidthChanged Event" );
 private void DataGridView1_CurrentCellChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridView.CurrentCellChanged event.");
-
 }
 //</snippet331>
 
@@ -3575,7 +3374,6 @@ private void DataGridView1_CurrentCellChanged(Object sender, EventArgs e) {
 private void DataGridView1_CurrentCellDirtyStateChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridView.CurrentCellDirtyStateChanged event.");
-
 }
 //</snippet332>
 
@@ -4019,7 +3817,6 @@ MessageBox.Show(messageBoxCS.ToString(), "Scroll Event" );
 private void DataGridView1_SelectionChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridView.SelectionChanged event.");
-
 }
 //</snippet364>
 
@@ -4049,7 +3846,6 @@ MessageBox.Show(messageBoxCS.ToString(), "SortCompare Event" );
 private void DataGridView1_Sorted(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridView.Sorted event.");
-
 }
 //</snippet366>
 
@@ -4089,7 +3885,6 @@ MessageBox.Show(messageBoxCS.ToString(), "UserDeletingRow Event" );
 private void DataGridViewColumn1_Disposed(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DataGridViewColumn.Disposed event.");
-
 }
 //</snippet370>
 
@@ -4133,7 +3928,6 @@ MessageBox.Show(messageBoxCS.ToString(), "CollectionChanged Event" );
 private void DateTimePicker1_FormatChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DateTimePicker.FormatChanged event.");
-
 }
 //</snippet374>
 
@@ -4141,7 +3935,6 @@ private void DateTimePicker1_FormatChanged(Object sender, EventArgs e) {
 private void DateTimePicker1_TextChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DateTimePicker.TextChanged event.");
-
 }
 //</snippet375>
 
@@ -4149,7 +3942,6 @@ private void DateTimePicker1_TextChanged(Object sender, EventArgs e) {
 private void DateTimePicker1_CloseUp(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DateTimePicker.CloseUp event.");
-
 }
 //</snippet376>
 
@@ -4157,7 +3949,6 @@ private void DateTimePicker1_CloseUp(Object sender, EventArgs e) {
 private void DateTimePicker1_RightToLeftLayoutChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DateTimePicker.RightToLeftLayoutChanged event.");
-
 }
 //</snippet377>
 
@@ -4165,7 +3956,6 @@ private void DateTimePicker1_RightToLeftLayoutChanged(Object sender, EventArgs e
 private void DateTimePicker1_ValueChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DateTimePicker.ValueChanged event.");
-
 }
 //</snippet378>
 
@@ -4173,7 +3963,6 @@ private void DateTimePicker1_ValueChanged(Object sender, EventArgs e) {
 private void DateTimePicker1_DropDown(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DateTimePicker.DropDown event.");
-
 }
 //</snippet379>
 
@@ -4181,7 +3970,6 @@ private void DateTimePicker1_DropDown(Object sender, EventArgs e) {
 private void UpDownBase1_AutoSizeChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the UpDownBase.AutoSizeChanged event.");
-
 }
 //</snippet380>
 
@@ -4189,7 +3977,6 @@ private void UpDownBase1_AutoSizeChanged(Object sender, EventArgs e) {
 private void DomainUpDown1_SelectedItemChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the DomainUpDown.SelectedItemChanged event.");
-
 }
 //</snippet381>
 
@@ -4197,7 +3984,6 @@ private void DomainUpDown1_SelectedItemChanged(Object sender, EventArgs e) {
 private void ErrorProvider1_RightToLeftChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ErrorProvider.RightToLeftChanged event.");
-
 }
 //</snippet382>
 
@@ -4215,7 +4001,6 @@ MessageBox.Show(messageBoxCS.ToString(), "FileOk Event" );
 private void Panel1_AutoSizeChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Panel.AutoSizeChanged event.");
-
 }
 //</snippet384>
 
@@ -4223,7 +4008,6 @@ private void Panel1_AutoSizeChanged(Object sender, EventArgs e) {
 private void FontDialog1_Apply(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the FontDialog.Apply event.");
-
 }
 //</snippet385>
 
@@ -4231,7 +4015,6 @@ private void FontDialog1_Apply(Object sender, EventArgs e) {
 private void Form1_AutoSizeChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Form.AutoSizeChanged event.");
-
 }
 //</snippet386>
 
@@ -4239,7 +4022,6 @@ private void Form1_AutoSizeChanged(Object sender, EventArgs e) {
 private void Form1_AutoValidateChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Form.AutoValidateChanged event.");
-
 }
 //</snippet387>
 
@@ -4257,7 +4039,6 @@ MessageBox.Show(messageBoxCS.ToString(), "HelpButtonClicked Event" );
 private void Form1_MaximizedBoundsChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Form.MaximizedBoundsChanged event.");
-
 }
 //</snippet389>
 
@@ -4265,7 +4046,6 @@ private void Form1_MaximizedBoundsChanged(Object sender, EventArgs e) {
 private void Form1_MaximumSizeChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Form.MaximumSizeChanged event.");
-
 }
 //</snippet390>
 
@@ -4273,7 +4053,6 @@ private void Form1_MaximumSizeChanged(Object sender, EventArgs e) {
 private void Form1_MinimumSizeChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Form.MinimumSizeChanged event.");
-
 }
 //</snippet391>
 
@@ -4281,7 +4060,6 @@ private void Form1_MinimumSizeChanged(Object sender, EventArgs e) {
 private void Form1_Activated(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Form.Activated event.");
-
 }
 //</snippet392>
 
@@ -4289,7 +4067,6 @@ private void Form1_Activated(Object sender, EventArgs e) {
 private void Form1_Deactivate(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Form.Deactivate event.");
-
 }
 //</snippet393>
 
@@ -4319,7 +4096,6 @@ MessageBox.Show(messageBoxCS.ToString(), "FormClosed Event" );
 private void Form1_Load(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Form.Load event.");
-
 }
 //</snippet396>
 
@@ -4327,7 +4103,6 @@ private void Form1_Load(Object sender, EventArgs e) {
 private void Form1_MdiChildActivate(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Form.MdiChildActivate event.");
-
 }
 //</snippet397>
 
@@ -4335,7 +4110,6 @@ private void Form1_MdiChildActivate(Object sender, EventArgs e) {
 private void Form1_MenuComplete(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Form.MenuComplete event.");
-
 }
 //</snippet398>
 
@@ -4343,7 +4117,6 @@ private void Form1_MenuComplete(Object sender, EventArgs e) {
 private void Form1_MenuStart(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Form.MenuStart event.");
-
 }
 //</snippet399>
 
@@ -4381,7 +4154,6 @@ MessageBox.Show(messageBoxCS.ToString(), "InputLanguageChanging Event" );
 private void Form1_RightToLeftLayoutChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Form.RightToLeftLayoutChanged event.");
-
 }
 //</snippet402>
 
@@ -4389,7 +4161,6 @@ private void Form1_RightToLeftLayoutChanged(Object sender, EventArgs e) {
 private void Form1_Shown(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Form.Shown event.");
-
 }
 //</snippet403>
 
@@ -4397,7 +4168,6 @@ private void Form1_Shown(Object sender, EventArgs e) {
 private void Form1_ResizeBegin(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Form.ResizeBegin event.");
-
 }
 //</snippet404>
 
@@ -4405,7 +4175,6 @@ private void Form1_ResizeBegin(Object sender, EventArgs e) {
 private void Form1_ResizeEnd(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Form.ResizeEnd event.");
-
 }
 //</snippet405>
 
@@ -4413,7 +4182,6 @@ private void Form1_ResizeEnd(Object sender, EventArgs e) {
 private void GroupBox1_AutoSizeChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the GroupBox.AutoSizeChanged event.");
-
 }
 //</snippet406>
 
@@ -4421,7 +4189,6 @@ private void GroupBox1_AutoSizeChanged(Object sender, EventArgs e) {
 private void GroupBox1_TabStopChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the GroupBox.TabStopChanged event.");
-
 }
 //</snippet407>
 
@@ -4429,7 +4196,6 @@ private void GroupBox1_TabStopChanged(Object sender, EventArgs e) {
 private void GroupBox1_Click(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the GroupBox.Click event.");
-
 }
 //</snippet408>
 
@@ -4457,7 +4223,6 @@ MessageBox.Show(messageBoxCS.ToString(), "MouseClick Event" );
 private void GroupBox1_DoubleClick(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the GroupBox.DoubleClick event.");
-
 }
 //</snippet410>
 
@@ -4609,7 +4374,6 @@ MessageBox.Show(messageBoxCS.ToString(), "MouseMove Event" );
 private void GroupBox1_MouseEnter(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the GroupBox.MouseEnter event.");
-
 }
 //</snippet418>
 
@@ -4617,7 +4381,6 @@ private void GroupBox1_MouseEnter(Object sender, EventArgs e) {
 private void GroupBox1_MouseLeave(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the GroupBox.MouseLeave event.");
-
 }
 //</snippet419>
 
@@ -4641,7 +4404,6 @@ MessageBox.Show(messageBoxCS.ToString(), "Scroll Event" );
 private void ScrollBar1_ValueChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ScrollBar.ValueChanged event.");
-
 }
 //</snippet421>
 
@@ -5855,7 +5617,6 @@ MessageBox.Show(messageBoxCS.ToString(), "Unload Event" );
 private void Label1_AutoSizeChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Label.AutoSizeChanged event.");
-
 }
 //</snippet458>
 
@@ -5863,7 +5624,6 @@ private void Label1_AutoSizeChanged(Object sender, EventArgs e) {
 private void Label1_TextAlignChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Label.TextAlignChanged event.");
-
 }
 //</snippet459>
 
@@ -5871,7 +5631,6 @@ private void Label1_TextAlignChanged(Object sender, EventArgs e) {
 private void LinkLabel1_TabStopChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the LinkLabel.TabStopChanged event.");
-
 }
 //</snippet460>
 
@@ -5891,7 +5650,6 @@ MessageBox.Show(messageBoxCS.ToString(), "LinkClicked Event" );
 private void ListView1_RightToLeftLayoutChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ListView.RightToLeftLayoutChanged event.");
-
 }
 //</snippet462>
 
@@ -6061,7 +5819,6 @@ MessageBox.Show(messageBoxCS.ToString(), "DrawSubItem Event" );
 private void ListView1_ItemActivate(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ListView.ItemActivate event.");
-
 }
 //</snippet473>
 
@@ -6165,7 +5922,6 @@ MessageBox.Show(messageBoxCS.ToString(), "SearchForVirtualItem Event" );
 private void ListView1_SelectedIndexChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ListView.SelectedIndexChanged event.");
-
 }
 //</snippet481>
 
@@ -6187,7 +5943,6 @@ MessageBox.Show(messageBoxCS.ToString(), "VirtualItemsSelectionRangeChanged Even
 private void MainMenu1_Collapse(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the MainMenu.Collapse event.");
-
 }
 //</snippet483>
 
@@ -6195,7 +5950,6 @@ private void MainMenu1_Collapse(Object sender, EventArgs e) {
 private void MaskedTextBox1_IsOverwriteModeChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the MaskedTextBox.IsOverwriteModeChanged event.");
-
 }
 //</snippet484>
 
@@ -6203,7 +5957,6 @@ private void MaskedTextBox1_IsOverwriteModeChanged(Object sender, EventArgs e) {
 private void MaskedTextBox1_MaskChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the MaskedTextBox.MaskChanged event.");
-
 }
 //</snippet485>
 
@@ -6223,7 +5976,6 @@ MessageBox.Show(messageBoxCS.ToString(), "MaskInputRejected Event" );
 private void MaskedTextBox1_TextAlignChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the MaskedTextBox.TextAlignChanged event.");
-
 }
 //</snippet487>
 
@@ -6249,7 +6001,6 @@ MessageBox.Show(messageBoxCS.ToString(), "TypeValidationCompleted Event" );
 private void MenuStrip1_MenuActivate(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the MenuStrip.MenuActivate event.");
-
 }
 //</snippet489>
 
@@ -6257,7 +6008,6 @@ private void MenuStrip1_MenuActivate(Object sender, EventArgs e) {
 private void MenuStrip1_MenuDeactivate(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the MenuStrip.MenuDeactivate event.");
-
 }
 //</snippet490>
 
@@ -6265,7 +6015,6 @@ private void MenuStrip1_MenuDeactivate(Object sender, EventArgs e) {
 private void ToolStripDropDownItem1_DropDownClosed(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripDropDownItem.DropDownClosed event.");
-
 }
 //</snippet491>
 
@@ -6273,7 +6022,6 @@ private void ToolStripDropDownItem1_DropDownClosed(Object sender, EventArgs e) {
 private void ToolStripDropDownItem1_DropDownOpening(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripDropDownItem.DropDownOpening event.");
-
 }
 //</snippet492>
 
@@ -6281,7 +6029,6 @@ private void ToolStripDropDownItem1_DropDownOpening(Object sender, EventArgs e) 
 private void ToolStripDropDownItem1_DropDownOpened(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripDropDownItem.DropDownOpened event.");
-
 }
 //</snippet493>
 
@@ -6299,7 +6046,6 @@ MessageBox.Show(messageBoxCS.ToString(), "DropDownItemClicked Event" );
 private void ToolStripMenuItem1_CheckedChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripMenuItem.CheckedChanged event.");
-
 }
 //</snippet495>
 
@@ -6307,7 +6053,6 @@ private void ToolStripMenuItem1_CheckedChanged(Object sender, EventArgs e) {
 private void ToolStripMenuItem1_CheckStateChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripMenuItem.CheckStateChanged event.");
-
 }
 //</snippet496>
 
@@ -6315,7 +6060,6 @@ private void ToolStripMenuItem1_CheckStateChanged(Object sender, EventArgs e) {
 private void MenuItem1_Click(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the MenuItem.Click event.");
-
 }
 //</snippet497>
 
@@ -6361,7 +6105,6 @@ MessageBox.Show(messageBoxCS.ToString(), "MeasureItem Event" );
 private void MenuItem1_Popup(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the MenuItem.Popup event.");
-
 }
 //</snippet500>
 
@@ -6369,7 +6112,6 @@ private void MenuItem1_Popup(Object sender, EventArgs e) {
 private void MenuItem1_Select(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the MenuItem.Select event.");
-
 }
 //</snippet501>
 
@@ -6401,7 +6143,6 @@ MessageBox.Show(messageBoxCS.ToString(), "DateSelected Event" );
 private void MonthCalendar1_RightToLeftLayoutChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the MonthCalendar.RightToLeftLayoutChanged event.");
-
 }
 //</snippet504>
 
@@ -6409,7 +6150,6 @@ private void MonthCalendar1_RightToLeftLayoutChanged(Object sender, EventArgs e)
 private void NotifyIcon1_BalloonTipClicked(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the NotifyIcon.BalloonTipClicked event.");
-
 }
 //</snippet505>
 
@@ -6417,7 +6157,6 @@ private void NotifyIcon1_BalloonTipClicked(Object sender, EventArgs e) {
 private void NotifyIcon1_BalloonTipClosed(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the NotifyIcon.BalloonTipClosed event.");
-
 }
 //</snippet506>
 
@@ -6425,7 +6164,6 @@ private void NotifyIcon1_BalloonTipClosed(Object sender, EventArgs e) {
 private void NotifyIcon1_BalloonTipShown(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the NotifyIcon.BalloonTipShown event.");
-
 }
 //</snippet507>
 
@@ -6433,7 +6171,6 @@ private void NotifyIcon1_BalloonTipShown(Object sender, EventArgs e) {
 private void NotifyIcon1_Click(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the NotifyIcon.Click event.");
-
 }
 //</snippet508>
 
@@ -6441,7 +6178,6 @@ private void NotifyIcon1_Click(Object sender, EventArgs e) {
 private void NotifyIcon1_DoubleClick(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the NotifyIcon.DoubleClick event.");
-
 }
 //</snippet509>
 
@@ -6549,7 +6285,6 @@ MessageBox.Show(messageBoxCS.ToString(), "MouseUp Event" );
 private void NumericUpDown1_ValueChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the NumericUpDown.ValueChanged event.");
-
 }
 //</snippet515>
 
@@ -6583,7 +6318,6 @@ MessageBox.Show(messageBoxCS.ToString(), "LoadProgressChanged Event" );
 private void PictureBox1_SizeModeChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the PictureBox.SizeModeChanged event.");
-
 }
 //</snippet518>
 
@@ -6591,7 +6325,6 @@ private void PictureBox1_SizeModeChanged(Object sender, EventArgs e) {
 private void ProgressBar1_RightToLeftLayoutChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ProgressBar.RightToLeftLayoutChanged event.");
-
 }
 //</snippet519>
 
@@ -6599,7 +6332,6 @@ private void ProgressBar1_RightToLeftLayoutChanged(Object sender, EventArgs e) {
 private void PropertyGrid1_TextChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the PropertyGrid.TextChanged event.");
-
 }
 //</snippet521>
 
@@ -6731,7 +6463,6 @@ MessageBox.Show(messageBoxCS.ToString(), "MouseMove Event" );
 private void PropertyGrid1_MouseEnter(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the PropertyGrid.MouseEnter event.");
-
 }
 //</snippet528>
 
@@ -6739,7 +6470,6 @@ private void PropertyGrid1_MouseEnter(Object sender, EventArgs e) {
 private void PropertyGrid1_MouseLeave(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the PropertyGrid.MouseLeave event.");
-
 }
 //</snippet529>
 
@@ -6771,7 +6501,6 @@ MessageBox.Show(messageBoxCS.ToString(), "PropertyTabChanged Event" );
 private void PropertyGrid1_PropertySortChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the PropertyGrid.PropertySortChanged event.");
-
 }
 //</snippet532>
 
@@ -6791,7 +6520,6 @@ MessageBox.Show(messageBoxCS.ToString(), "SelectedGridItemChanged Event" );
 private void PropertyGrid1_SelectedObjectsChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the PropertyGrid.SelectedObjectsChanged event.");
-
 }
 //</snippet534>
 
@@ -6799,7 +6527,6 @@ private void PropertyGrid1_SelectedObjectsChanged(Object sender, EventArgs e) {
 private void RadioButton1_AppearanceChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the RadioButton.AppearanceChanged event.");
-
 }
 //</snippet535>
 
@@ -6807,7 +6534,6 @@ private void RadioButton1_AppearanceChanged(Object sender, EventArgs e) {
 private void RadioButton1_CheckedChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the RadioButton.CheckedChanged event.");
-
 }
 //</snippet536>
 
@@ -6865,7 +6591,6 @@ MessageBox.Show(messageBoxCS.ToString(), "DragEnter Event" );
 private void RichTextBox1_HScroll(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the RichTextBox.HScroll event.");
-
 }
 //</snippet540>
 
@@ -6883,7 +6608,6 @@ MessageBox.Show(messageBoxCS.ToString(), "LinkClicked Event" );
 private void RichTextBox1_ImeChange(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the RichTextBox.ImeChange event.");
-
 }
 //</snippet542>
 
@@ -6891,7 +6615,6 @@ private void RichTextBox1_ImeChange(Object sender, EventArgs e) {
 private void RichTextBox1_Protected(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the RichTextBox.Protected event.");
-
 }
 //</snippet543>
 
@@ -6899,7 +6622,6 @@ private void RichTextBox1_Protected(Object sender, EventArgs e) {
 private void RichTextBox1_SelectionChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the RichTextBox.SelectionChanged event.");
-
 }
 //</snippet544>
 
@@ -6907,7 +6629,6 @@ private void RichTextBox1_SelectionChanged(Object sender, EventArgs e) {
 private void RichTextBox1_VScroll(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the RichTextBox.VScroll event.");
-
 }
 //</snippet545>
 
@@ -6915,7 +6636,6 @@ private void RichTextBox1_VScroll(Object sender, EventArgs e) {
 private void SplitContainer1_BackgroundImageChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the SplitContainer.BackgroundImageChanged event.");
-
 }
 //</snippet546>
 
@@ -7035,7 +6755,6 @@ MessageBox.Show(messageBoxCS.ToString(), "PanelClick Event" );
 private void StatusStrip1_PaddingChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the StatusStrip.PaddingChanged event.");
-
 }
 //</snippet553>
 
@@ -7065,7 +6784,6 @@ MessageBox.Show(messageBoxCS.ToString(), "DrawItem Event" );
 private void TabControl1_RightToLeftLayoutChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the TabControl.RightToLeftLayoutChanged event.");
-
 }
 //</snippet555>
 
@@ -7073,7 +6791,6 @@ private void TabControl1_RightToLeftLayoutChanged(Object sender, EventArgs e) {
 private void TabControl1_SelectedIndexChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the TabControl.SelectedIndexChanged event.");
-
 }
 //</snippet556>
 
@@ -7159,7 +6876,6 @@ MessageBox.Show(messageBoxCS.ToString(), "CellPaint Event" );
 private void TabPage1_TextChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the TabPage.TextChanged event.");
-
 }
 //</snippet562>
 
@@ -7167,7 +6883,6 @@ private void TabPage1_TextChanged(Object sender, EventArgs e) {
 private void Timer1_Tick(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the Timer.Tick event.");
-
 }
 //</snippet563>
 
@@ -7175,7 +6890,6 @@ private void Timer1_Tick(Object sender, EventArgs e) {
 private void ToolBar1_AutoSizeChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolBar.AutoSizeChanged event.");
-
 }
 //</snippet564>
 
@@ -7203,7 +6917,6 @@ MessageBox.Show(messageBoxCS.ToString(), "ButtonDropDown Event" );
 private void ToolStripButton1_CheckedChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripButton.CheckedChanged event.");
-
 }
 //</snippet567>
 
@@ -7211,7 +6924,6 @@ private void ToolStripButton1_CheckedChanged(Object sender, EventArgs e) {
 private void ToolStripButton1_CheckStateChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripButton.CheckStateChanged event.");
-
 }
 //</snippet568>
 
@@ -7219,7 +6931,6 @@ private void ToolStripButton1_CheckStateChanged(Object sender, EventArgs e) {
 private void ToolStripControlHost1_Enter(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripControlHost.Enter event.");
-
 }
 //</snippet569>
 
@@ -7227,7 +6938,6 @@ private void ToolStripControlHost1_Enter(Object sender, EventArgs e) {
 private void ToolStripControlHost1_GotFocus(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripControlHost.GotFocus event.");
-
 }
 //</snippet570>
 
@@ -7235,7 +6945,6 @@ private void ToolStripControlHost1_GotFocus(Object sender, EventArgs e) {
 private void ToolStripControlHost1_Leave(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripControlHost.Leave event.");
-
 }
 //</snippet571>
 
@@ -7243,7 +6952,6 @@ private void ToolStripControlHost1_Leave(Object sender, EventArgs e) {
 private void ToolStripControlHost1_LostFocus(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripControlHost.LostFocus event.");
-
 }
 //</snippet572>
 
@@ -7325,7 +7033,6 @@ MessageBox.Show(messageBoxCS.ToString(), "Validating Event" );
 private void ToolStripControlHost1_Validated(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripControlHost.Validated event.");
-
 }
 //</snippet577>
 
@@ -7333,7 +7040,6 @@ private void ToolStripControlHost1_Validated(Object sender, EventArgs e) {
 private void ToolStripComboBox1_DropDown(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripComboBox.DropDown event.");
-
 }
 //</snippet578>
 
@@ -7341,7 +7047,6 @@ private void ToolStripComboBox1_DropDown(Object sender, EventArgs e) {
 private void ToolStripComboBox1_DropDownClosed(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripComboBox.DropDownClosed event.");
-
 }
 //</snippet579>
 
@@ -7349,7 +7054,6 @@ private void ToolStripComboBox1_DropDownClosed(Object sender, EventArgs e) {
 private void ToolStripComboBox1_DropDownStyleChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripComboBox.DropDownStyleChanged event.");
-
 }
 //</snippet580>
 
@@ -7357,7 +7061,6 @@ private void ToolStripComboBox1_DropDownStyleChanged(Object sender, EventArgs e)
 private void ToolStripComboBox1_SelectedIndexChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripComboBox.SelectedIndexChanged event.");
-
 }
 //</snippet581>
 
@@ -7365,7 +7068,6 @@ private void ToolStripComboBox1_SelectedIndexChanged(Object sender, EventArgs e)
 private void ToolStripComboBox1_TextUpdate(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripComboBox.TextUpdate event.");
-
 }
 //</snippet582>
 
@@ -7705,7 +7407,6 @@ MessageBox.Show(messageBoxCS.ToString(), "RenderSeparator Event" );
 private void ToolStripManager1_RendererChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripManager.RendererChanged event.");
-
 }
 //</snippet603>
 
@@ -7713,7 +7414,6 @@ private void ToolStripManager1_RendererChanged(Object sender, EventArgs e) {
 private void ToolStripContentPanel1_Load(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripContentPanel.Load event.");
-
 }
 //</snippet604>
 
@@ -7721,7 +7421,6 @@ private void ToolStripContentPanel1_Load(Object sender, EventArgs e) {
 private void ToolStripContentPanel1_RendererChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripContentPanel.RendererChanged event.");
-
 }
 //</snippet605>
 
@@ -7729,7 +7428,6 @@ private void ToolStripContentPanel1_RendererChanged(Object sender, EventArgs e) 
 private void ToolStripPanel1_AutoSizeChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripPanel.AutoSizeChanged event.");
-
 }
 //</snippet606>
 
@@ -7737,7 +7435,6 @@ private void ToolStripPanel1_AutoSizeChanged(Object sender, EventArgs e) {
 private void ToolStripPanel1_RendererChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripPanel.RendererChanged event.");
-
 }
 //</snippet607>
 
@@ -7745,7 +7442,6 @@ private void ToolStripPanel1_RendererChanged(Object sender, EventArgs e) {
 private void ToolStripProgressBar1_RightToLeftLayoutChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripProgressBar.RightToLeftLayoutChanged event.");
-
 }
 //</snippet608>
 
@@ -7753,7 +7449,6 @@ private void ToolStripProgressBar1_RightToLeftLayoutChanged(Object sender, Event
 private void ToolStripSplitButton1_ButtonClick(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripSplitButton.ButtonClick event.");
-
 }
 //</snippet609>
 
@@ -7761,7 +7456,6 @@ private void ToolStripSplitButton1_ButtonClick(Object sender, EventArgs e) {
 private void ToolStripSplitButton1_ButtonDoubleClick(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripSplitButton.ButtonDoubleClick event.");
-
 }
 //</snippet610>
 
@@ -7769,7 +7463,6 @@ private void ToolStripSplitButton1_ButtonDoubleClick(Object sender, EventArgs e)
 private void ToolStripSplitButton1_DefaultItemChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripSplitButton.DefaultItemChanged event.");
-
 }
 //</snippet611>
 
@@ -7777,7 +7470,6 @@ private void ToolStripSplitButton1_DefaultItemChanged(Object sender, EventArgs e
 private void ToolStripTextBox1_AcceptsTabChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripTextBox.AcceptsTabChanged event.");
-
 }
 //</snippet612>
 
@@ -7785,7 +7477,6 @@ private void ToolStripTextBox1_AcceptsTabChanged(Object sender, EventArgs e) {
 private void ToolStripTextBox1_BorderStyleChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripTextBox.BorderStyleChanged event.");
-
 }
 //</snippet613>
 
@@ -7793,7 +7484,6 @@ private void ToolStripTextBox1_BorderStyleChanged(Object sender, EventArgs e) {
 private void ToolStripTextBox1_HideSelectionChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripTextBox.HideSelectionChanged event.");
-
 }
 //</snippet614>
 
@@ -7801,7 +7491,6 @@ private void ToolStripTextBox1_HideSelectionChanged(Object sender, EventArgs e) 
 private void ToolStripTextBox1_ModifiedChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripTextBox.ModifiedChanged event.");
-
 }
 //</snippet615>
 
@@ -7809,7 +7498,6 @@ private void ToolStripTextBox1_ModifiedChanged(Object sender, EventArgs e) {
 private void ToolStripTextBox1_ReadOnlyChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripTextBox.ReadOnlyChanged event.");
-
 }
 //</snippet616>
 
@@ -7817,7 +7505,6 @@ private void ToolStripTextBox1_ReadOnlyChanged(Object sender, EventArgs e) {
 private void ToolStripTextBox1_TextBoxTextAlignChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the ToolStripTextBox.TextBoxTextAlignChanged event.");
-
 }
 //</snippet617>
 
@@ -7863,7 +7550,6 @@ MessageBox.Show(messageBoxCS.ToString(), "Popup Event" );
 private void TrackBar1_AutoSizeChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the TrackBar.AutoSizeChanged event.");
-
 }
 //</snippet620>
 
@@ -7871,7 +7557,6 @@ private void TrackBar1_AutoSizeChanged(Object sender, EventArgs e) {
 private void TrackBar1_RightToLeftLayoutChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the TrackBar.RightToLeftLayoutChanged event.");
-
 }
 //</snippet621>
 
@@ -7879,7 +7564,6 @@ private void TrackBar1_RightToLeftLayoutChanged(Object sender, EventArgs e) {
 private void TrackBar1_Scroll(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the TrackBar.Scroll event.");
-
 }
 //</snippet622>
 
@@ -7887,7 +7571,6 @@ private void TrackBar1_Scroll(Object sender, EventArgs e) {
 private void TrackBar1_ValueChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the TrackBar.ValueChanged event.");
-
 }
 //</snippet623>
 
@@ -8111,7 +7794,6 @@ MessageBox.Show(messageBoxCS.ToString(), "NodeMouseDoubleClick Event" );
 private void TreeView1_RightToLeftLayoutChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the TreeView.RightToLeftLayoutChanged event.");
-
 }
 //</snippet639>
 
@@ -8119,7 +7801,6 @@ private void TreeView1_RightToLeftLayoutChanged(Object sender, EventArgs e) {
 private void UserControl1_AutoSizeChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the UserControl.AutoSizeChanged event.");
-
 }
 //</snippet640>
 
@@ -8127,7 +7808,6 @@ private void UserControl1_AutoSizeChanged(Object sender, EventArgs e) {
 private void UserControl1_AutoValidateChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the UserControl.AutoValidateChanged event.");
-
 }
 //</snippet641>
 
@@ -8135,7 +7815,6 @@ private void UserControl1_AutoValidateChanged(Object sender, EventArgs e) {
 private void UserControl1_Load(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the UserControl.Load event.");
-
 }
 //</snippet642>
 
@@ -8143,7 +7822,6 @@ private void UserControl1_Load(Object sender, EventArgs e) {
 private void WebBrowser1_CanGoBackChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the WebBrowser.CanGoBackChanged event.");
-
 }
 //</snippet643>
 
@@ -8151,7 +7829,6 @@ private void WebBrowser1_CanGoBackChanged(Object sender, EventArgs e) {
 private void WebBrowser1_CanGoForwardChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the WebBrowser.CanGoForwardChanged event.");
-
 }
 //</snippet644>
 
@@ -8169,7 +7846,6 @@ MessageBox.Show(messageBoxCS.ToString(), "DocumentCompleted Event" );
 private void WebBrowser1_DocumentTitleChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the WebBrowser.DocumentTitleChanged event.");
-
 }
 //</snippet646>
 
@@ -8177,7 +7853,6 @@ private void WebBrowser1_DocumentTitleChanged(Object sender, EventArgs e) {
 private void WebBrowser1_EncryptionLevelChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the WebBrowser.EncryptionLevelChanged event.");
-
 }
 //</snippet647>
 
@@ -8185,7 +7860,6 @@ private void WebBrowser1_EncryptionLevelChanged(Object sender, EventArgs e) {
 private void WebBrowser1_FileDownload(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the WebBrowser.FileDownload event.");
-
 }
 //</snippet648>
 
@@ -8239,7 +7913,6 @@ MessageBox.Show(messageBoxCS.ToString(), "ProgressChanged Event" );
 private void WebBrowser1_StatusTextChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the WebBrowser.StatusTextChanged event.");
-
 }
 //</snippet653>
 
@@ -8247,8 +7920,6 @@ private void WebBrowser1_StatusTextChanged(Object sender, EventArgs e) {
 private void PrintPreviewControl1_StartPageChanged(Object sender, EventArgs e) {
 
    MessageBox.Show("You are in the PrintPreviewControl.StartPageChanged event.");
-
 }
 //</snippet654>
-
 }

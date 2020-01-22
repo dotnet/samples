@@ -21,8 +21,6 @@ namespace keyframes_markup
         public SampleViewer()
         {
             InitializeComponent();
-
         }
-
     }
 }

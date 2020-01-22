@@ -100,7 +100,6 @@ namespace SDKSamples
             cmdSourcePanel.Height = 100;
             cmdSourcePanel.Width = 100;
             mainStackPanel.Children.Add(cmdSourcePanel);
-
         }
 
         private void AddCommand(object sender, RoutedEventArgs e)
@@ -267,9 +266,7 @@ namespace SDKSamples
 
             //set the CommandTarget to the 
             pasteMenuItem.CommandTarget = mainTextBox;
-
         }
-
     }
 
     //***********************************************************************

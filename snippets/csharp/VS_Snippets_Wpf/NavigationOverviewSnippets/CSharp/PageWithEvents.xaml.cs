@@ -39,6 +39,5 @@ namespace SDKSample
         {
             System.Console.WriteLine("PageWithEvents_Loaded");
         }
-
     }
 }

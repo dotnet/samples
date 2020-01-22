@@ -70,7 +70,6 @@ namespace Samples.AspNet.CS.Controls
         callback(Schema.GetValue(_table.DefaultView[0]));
     }
     //</SNIPPET3>
-
   } // end FieldProviderWebPart
 
   // This sample code creates a Web Parts control that acts as a consumer 
@@ -159,8 +158,6 @@ namespace Samples.AspNet.CS.Controls
         return ((FieldConsumerWebPart)control).ConnectionPointEnabled;
       }
     } // end FieldConsumerConnectionPoint
-
   } // end FieldConsumerWebPart
-
 } // end namespace Samples.AspNet.CS.Controls
 //</SNIPPET2>

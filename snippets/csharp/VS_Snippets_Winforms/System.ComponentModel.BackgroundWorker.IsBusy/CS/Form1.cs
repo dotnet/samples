@@ -152,7 +152,6 @@ public class Form1 : Form
         this.Name = "Form1";
         this.Text = "Form1";
         this.ResumeLayout(false);
-
     }
 
     #endregion

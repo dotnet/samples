@@ -34,5 +34,4 @@ public class Form1: Form
             DataRowVersion.Original);
     }
     // </Snippet1>
-
 }

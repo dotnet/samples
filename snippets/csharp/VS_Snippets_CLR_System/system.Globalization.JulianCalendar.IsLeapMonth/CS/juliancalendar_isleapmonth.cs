@@ -20,9 +20,7 @@ public class SamplesJulianCalendar  {
             Console.Write( "\t{0}", myCal.IsLeapMonth( y, m, JulianCalendar.CurrentEra ) );
          Console.WriteLine();
       }
-
    }
-
 }
 
 /*

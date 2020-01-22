@@ -16,6 +16,5 @@ namespace Microsoft.Samples.Graphics
         {
             InitializeComponent();
         }
-
     }
 }

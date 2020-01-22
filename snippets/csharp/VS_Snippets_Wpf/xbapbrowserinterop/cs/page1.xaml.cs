@@ -35,6 +35,5 @@ namespace WpfBrowserApplication1
             scriptObject.Close();
         }
         //</snippet10>
-
     }
 }

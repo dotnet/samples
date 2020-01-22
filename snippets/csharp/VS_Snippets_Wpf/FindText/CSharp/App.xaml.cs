@@ -12,6 +12,5 @@ namespace TextProvider
 
     public partial class App : System.Windows.Application
     {
-
     }
 }

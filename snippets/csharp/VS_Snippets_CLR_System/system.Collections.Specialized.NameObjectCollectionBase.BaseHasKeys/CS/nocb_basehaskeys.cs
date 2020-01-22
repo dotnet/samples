@@ -34,7 +34,6 @@ public class MyCollection : NameObjectCollectionBase  {
          return( this.BaseHasKeys() );
       }
    }
-
 }
 
 public class SamplesNameObjectCollectionBase  {
@@ -54,7 +53,6 @@ public class SamplesNameObjectCollectionBase  {
       Console.WriteLine( "Initial state of the collection (Count = {0}):", myCol.Count );
       PrintKeysAndValues( myCol );
       Console.WriteLine( "HasKeys? {0}", myCol.HasKeys );
-
    }
 
    public static void PrintKeysAndValues( MyCollection myCol )  {
@@ -62,7 +60,6 @@ public class SamplesNameObjectCollectionBase  {
          Console.WriteLine( "[{0}] : {1}, {2}", i, myCol[i].Key, myCol[i].Value );
       }
    }
-
 }
 
 

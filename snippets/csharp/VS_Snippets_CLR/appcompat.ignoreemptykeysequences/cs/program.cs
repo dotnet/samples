@@ -13,6 +13,5 @@ class Example
       // Do not ignore empty key sequences in apps that target .NET 4.5.1 and earlier
       AppContext.SetSwitch("System.Xml.IgnoreEmptyKeySequences", false);
       // </Snippet2>
-
    }
 }

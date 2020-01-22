@@ -17,7 +17,6 @@ namespace Microsoft.Samples.BrushExamples
             StackPanel mainPanel = new StackPanel();
             canvasBackgroundExample(mainPanel);
             this.Content = mainPanel;
-        
         }
 
         // <SnippetGraphicsMMDrawingBrushAsButtonBackgroundExample>
@@ -48,11 +47,8 @@ namespace Microsoft.Samples.BrushExamples
             // </SnippetGraphicsMMDrawingBrushAsButtonBackgroundExample1>
             
             mainPanel.Children.Add(myButton);
-
         }
         // </SnippetGraphicsMMDrawingBrushAsButtonBackgroundExample>
-    
     }
-
 }
 // </SnippetGraphicsMMDrawingBrushAsButtonBackgroundExampleWholePage>

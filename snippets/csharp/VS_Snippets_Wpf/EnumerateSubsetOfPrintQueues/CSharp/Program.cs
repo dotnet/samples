@@ -30,6 +30,5 @@ namespace EnumerateSubsetOfPrintQueues
             Console.ReadLine();
             //</SnippetListSubsetOfPrintQueues>
         }
-
     }
 }

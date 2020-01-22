@@ -78,7 +78,6 @@ public class EmployeeInformation : ServicedComponent
         accountName = constructorString;
     }
     // </snippet8>
-
 }
 // </snippet4>
 // </snippet0>

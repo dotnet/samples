@@ -12,7 +12,6 @@ namespace SqlCommandBuilderCS
             string queryst = "";
             string tablen = "";
             DataSet ds = SelectSqlRows(cnnst, queryst, tablen);
-
         }
         // <Snippet1>
         public static DataSet SelectSqlRows(string connectionString,

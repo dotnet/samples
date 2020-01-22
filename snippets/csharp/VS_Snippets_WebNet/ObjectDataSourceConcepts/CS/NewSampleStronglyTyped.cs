@@ -133,7 +133,6 @@ namespace Samples.AspNet.ObjectDataSource
 
           count++;
         }
-        
       }
       catch (SqlException e)
       {
@@ -369,7 +368,6 @@ namespace Samples.AspNet.ObjectDataSource
 
       return result;
     }
-
   }
 }
 //</Snippet13>

@@ -29,7 +29,6 @@ static void Main()
         this.rtb = new System.Windows.Forms.RichTextBox();
         this.tsc.ContentPanel.Controls.Add(this.rtb);
         this.Controls.Add(this.tsc);
-
     }
 }
 // </Snippet1>

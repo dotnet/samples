@@ -20,7 +20,6 @@ namespace Samples
                 Console.WriteLine(exc.Message);
                 Console.ReadLine();
             }
-            
         }
         private void AllConfig()
         {
@@ -39,7 +38,6 @@ namespace Samples
             //</snippet1>
             b.Security.Transport.ClientCredentialType = HttpClientCredentialType.Windows;
             //</snippet5>
-
         }
         private void MakeMessgeBinding()
         {
@@ -118,7 +116,6 @@ namespace Samples
             Console.ReadLine();
             //</snippet9>
         }
-
     }
 
     [ServiceContract]

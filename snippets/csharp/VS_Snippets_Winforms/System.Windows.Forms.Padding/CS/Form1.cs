@@ -84,7 +84,6 @@ namespace MarginAndPadding
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-
         }
 
         #endregion
@@ -102,6 +101,5 @@ namespace MarginAndPadding
             Application.Run(new Form1());
         }
     }
-
 }
 // </snippet1>

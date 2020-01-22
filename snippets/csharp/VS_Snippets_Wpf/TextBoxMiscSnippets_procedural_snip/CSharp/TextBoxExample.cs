@@ -42,6 +42,5 @@ namespace SDKSample
             this.Content = myStackPanel;
             // </SnippetTextBoxCodeExampleInline1>
         }
-
     }
 }

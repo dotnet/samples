@@ -26,7 +26,6 @@ namespace Ordering
             { 
                 Console.WriteLine(w); 
             } 
-
         }
         //This sample uses orderby to sort a list of words alphabetically.
         //Outputs to the console:
@@ -46,7 +45,6 @@ namespace Ordering
             { 
                 Console.WriteLine(w); 
             } 
-
         }
     }
 }

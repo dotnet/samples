@@ -47,6 +47,5 @@ namespace Microsoft.Samples.Faults.FaultService
             get { return solution; }
             set { solution = value; }
         }
-
     }
 }

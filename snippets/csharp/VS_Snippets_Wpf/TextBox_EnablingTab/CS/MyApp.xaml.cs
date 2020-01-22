@@ -15,7 +15,5 @@ namespace Microsoft.Samples.WinFX.EnablingTab
 			Window mainWindow = new Window1();
 			mainWindow.Show();
 		}
-
     }
-
 }

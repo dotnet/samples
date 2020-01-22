@@ -70,7 +70,6 @@ public class SamplesStringCollection  {
 
       Console.WriteLine( "After clearing the collection:" );
       PrintValues1( myCol );
-
    }
 
    // Uses the foreach statement which hides the complexity of the enumerator.
@@ -96,7 +95,6 @@ public class SamplesStringCollection  {
          Console.WriteLine( "   {0}", myCol[i] );
       Console.WriteLine();
    }
-
 }
 
 /*

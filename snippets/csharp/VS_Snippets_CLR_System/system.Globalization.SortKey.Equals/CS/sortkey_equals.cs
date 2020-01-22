@@ -55,9 +55,7 @@ public class SamplesSortKey  {
       //    created from a different CompareInfo (different culture) 
       //    with the same string and the same CompareOptions.
       Console.WriteLine( "different     different    same             same             {0}", mySK1.Equals( mySK6 ) );
-
    }
-
 }
 
 /*

@@ -12,5 +12,4 @@ protected override void Render(HtmlTextWriter output) {
     }
 }
 // </Snippet1>
-
 }

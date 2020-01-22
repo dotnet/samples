@@ -112,7 +112,6 @@ namespace Samples.AspNet.CS
             writer.Write(HtmlTextWriter.TagRightChar);
             writer.WriteLine();
 // </snippet4>
-
         }
 // </snippet1>
     }

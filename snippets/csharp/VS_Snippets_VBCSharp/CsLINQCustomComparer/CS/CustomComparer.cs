@@ -44,7 +44,6 @@ class ProductComparer : IEqualityComparer<Product>
         //Calculate the hash code for the product.
         return hashProductName ^ hashProductCode;
     }
-
 }
 //</Snippet1>
 
@@ -200,6 +199,5 @@ class Program
 
         //</Snippet8>
         Console.ReadLine();
-
     }
 }

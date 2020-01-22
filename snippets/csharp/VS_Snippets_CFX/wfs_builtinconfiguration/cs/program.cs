@@ -59,6 +59,5 @@ namespace Microsoft.Samples.BuiltInConfiguration
             host.Close();
         }
 //</Snippet1>
-        
     }
 }

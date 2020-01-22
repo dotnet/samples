@@ -12,6 +12,5 @@ namespace HyperlinkSnippets
 
     public partial class MyApp : Application
     {
-
     }
 }

@@ -56,7 +56,6 @@ class IntroSnippets
             return "More work completed.";
         });
     }
-    
 }
 
 //<snippet04>

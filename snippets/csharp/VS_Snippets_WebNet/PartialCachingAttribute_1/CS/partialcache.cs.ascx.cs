@@ -45,7 +45,6 @@ namespace Samples.AspNet.CS.Controls
             MyDataGrid.DataBind();
 
             TimeMsg.Text = DateTime.Now.ToString("G");
-
         }
     }
 }

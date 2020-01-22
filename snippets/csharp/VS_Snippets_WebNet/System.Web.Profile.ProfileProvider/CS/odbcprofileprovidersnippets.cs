@@ -49,7 +49,6 @@ public class SnippetProfileProvider: ProfileProvider
 	public override void SetPropertyValues(SettingsContext context,
 					       SettingsPropertyValueCollection ppvc)
 	{
-
 	}
 
 	//

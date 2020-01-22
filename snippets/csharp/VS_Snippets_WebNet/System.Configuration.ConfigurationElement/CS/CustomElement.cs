@@ -103,7 +103,6 @@ namespace Samples.AspNet
                 serializeCollectionKey);
             // You can enter your custom processing code here.
             return ret;
-
         }
         // </Snippet34>
 

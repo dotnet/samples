@@ -40,7 +40,6 @@
                 {
                     //parent is canvas, so track mouse position and time
                     _parentCanvas.PreviewMouseMove += UpdateLastMousePosition;
-                    
                 }
             }
 

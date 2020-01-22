@@ -147,7 +147,6 @@ namespace PersistChildrenSamples
             table.Rows.Add(tr);
          }
          Controls.Add(table);
-         
       }
    }
 // </snippet2>

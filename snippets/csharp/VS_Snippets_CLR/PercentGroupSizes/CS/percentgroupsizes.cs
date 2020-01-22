@@ -22,7 +22,6 @@ class NumberFormatInfoSample {
       Console.WriteLine( myInt.ToString( "P", nfi ) );
       nfi.PercentGroupSizes = mySizes2;
       Console.WriteLine( myInt.ToString( "P", nfi ) );
-
    }
 }
 

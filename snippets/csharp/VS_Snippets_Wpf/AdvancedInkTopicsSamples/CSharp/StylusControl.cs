@@ -31,7 +31,6 @@ namespace AdavancedInkTopicsSamples
             dr = new DynamicRenderer();
             ip.AttachVisuals(dr.RootVisual, dr.DrawingAttributes);
             this.StylusPlugIns.Add(dr);
-
         }
 
         static InkControl()
@@ -55,7 +54,6 @@ namespace AdavancedInkTopicsSamples
                 e.GetStylusPoints(this, stylusPoints.Description);
 
             stylusPoints.Add(eventPoints);
-
         }
         //</Snippet7>
 
@@ -119,7 +117,6 @@ namespace AdavancedInkTopicsSamples
             stylusPoints = new StylusPointCollection();
             Point pt = e.GetPosition(this);
             stylusPoints.Add(new StylusPoint(pt.X, pt.Y));
-
         }
         //</Snippet11>
 
@@ -174,7 +171,6 @@ namespace AdavancedInkTopicsSamples
             ip.Strokes.Add(stroke);
 
             stylusPoints = null;
-
         }
         //</Snippet13>
     }

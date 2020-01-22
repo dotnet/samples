@@ -18,7 +18,6 @@ namespace HtmlElementProjectCSharp
 
 		private void PrintDOMButton_Click(object sender, EventArgs e)
 		{
-
 		}
 
 		//<SNIPPET1>
@@ -109,7 +108,6 @@ namespace HtmlElementProjectCSharp
 
 		private void enableEditingButton_Click(object sender, EventArgs e)
 		{
-
 		}
 
 		//<SNIPPET3>

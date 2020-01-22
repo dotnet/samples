@@ -352,6 +352,5 @@ namespace SyndicationFeedSnippets
          static void Main(string[] args)
         {
         }
-
     }
 }

@@ -21,7 +21,6 @@ class Program
 
         // Box the value.  (Put it in the heap.)
         object objPntr = RuntimeHelpers.GetObjectValue(pnt);
-
     }
 }
 //</snippet1>

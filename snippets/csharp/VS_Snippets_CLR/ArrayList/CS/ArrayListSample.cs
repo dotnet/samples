@@ -37,7 +37,6 @@ public class SamplesArrayList  {
 		//<snippet5> 
 		string [] names = (string[]) myAL.ToArray (typeof(string));
 		//</snippet5>
-
 	}
 	//<snippet2> 
 	public static void PrintValues(string title, IEnumerable	myList )  {
@@ -58,7 +57,6 @@ public class ReverseStringComparer : IComparer {
 	   string s2 = y as string;	  
 	   //negate the return value to get the reverse order
 	   return - String.Compare (s1,s2);
-
    }
 }
 //</snippet6>

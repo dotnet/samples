@@ -20,7 +20,6 @@ namespace StreamReadWrite
                 foreach (DirectoryInfo dir in cDirs)
                 {
                     sw.WriteLine(dir.Name);
-
                 }
             }
 

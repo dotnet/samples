@@ -63,7 +63,6 @@ namespace Example
             }
             client.Close();
             s.Close();
-           
         }
     }
 }

@@ -43,7 +43,6 @@ namespace Expr
   
             // Decomposed expression: num => num LessThan 5            
             // </Snippet1>
-
         }
 
         static void Example2()
@@ -64,7 +63,6 @@ namespace Expr
                     new ParameterExpression[] { numParam });
 
             // </Snippet2>
-
         }
 
         static void Example3()
@@ -72,7 +70,6 @@ namespace Expr
             //<Snippet3>
             Expression<Func<int, bool>> lambda = num => num < 5;
             //</Snippet3>
-
         }
 
         static void Example4()

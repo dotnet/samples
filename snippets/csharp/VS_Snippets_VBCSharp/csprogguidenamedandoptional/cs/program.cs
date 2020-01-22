@@ -41,5 +41,4 @@ namespace NamedAndOptionalSnippets
         }
     }
 //</Snippet1>
-
 }

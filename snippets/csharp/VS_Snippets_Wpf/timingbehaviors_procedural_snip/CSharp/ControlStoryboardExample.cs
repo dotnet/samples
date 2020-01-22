@@ -97,28 +97,24 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             // Specifying "true" as the second Begin parameter
             // makes this storyboard controllable.
             myStoryboard.Begin(this, true);          
-        
         }
         
         // Pauses the storyboard.
         private void pauseButton_Clicked(object sender, RoutedEventArgs args)
         {
              myStoryboard.Pause(this);          
-        
         }
         
         // Resumes the storyboard.
         private void resumeButton_Clicked(object sender, RoutedEventArgs args)
         {
              myStoryboard.Resume(this);          
-        
         }     
         
         // Advances the storyboard to its fill period.
         private void skipToFillButton_Clicked(object sender, RoutedEventArgs args)
         {
              myStoryboard.SkipToFill(this);          
-        
         } 
         
         // Updates the storyboard's speed.
@@ -126,16 +122,13 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
         {
             // Makes the storyboard progress three times as fast as normal.
             myStoryboard.SetSpeedRatio(this, 3);          
-        
         }           
         
         // Stops the storyboard.
         private void stopButton_Clicked(object sender, RoutedEventArgs args)
         {
              myStoryboard.Stop(this);          
-        
         }         
-
     }
 }
 // </SnippetControlStoryboardExampleUsingWholePage>

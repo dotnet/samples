@@ -38,6 +38,5 @@ namespace Foo
         myButton.Content = "myButton";
         root.Children.Add(myButton);
       }
-
     }
 }

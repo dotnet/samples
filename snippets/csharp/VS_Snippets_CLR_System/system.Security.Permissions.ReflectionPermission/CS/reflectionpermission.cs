@@ -57,7 +57,6 @@ public class ReflectionPermissionDemo
                 restrictedMemberAccessPerm.Flags + " = " +
                 ((ReflectionPermission)reflectionPerm3).Flags.ToString());
         }
-
     }
     //</Snippet3>
     // Intersect creates and returns a new permission that is the intersection of the current
@@ -79,7 +78,6 @@ public class ReflectionPermissionDemo
             Console.WriteLine("The intersection of " + memberAccessPerm.Flags + " and " +
                 restrictedMemberAccessPerm.Flags + " is null.");
         }
-
     }
     //</Snippet4>
     //Copy creates and returns an identical copy of the current permission.

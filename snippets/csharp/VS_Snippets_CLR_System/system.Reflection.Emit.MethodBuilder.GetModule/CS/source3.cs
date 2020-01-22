@@ -36,7 +36,5 @@ class MoreMethodBuilderSnippets
 		Console.WriteLine("------- has type {0}", myModType.FullName);
 	}
 	// </Snippet1>		
-	
    }
-
 }

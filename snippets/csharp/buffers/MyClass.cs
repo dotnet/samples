@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Buffers;
 using System.Buffers.Binary;
 using System.Text;
@@ -206,7 +206,6 @@ namespace MyBuffers
         {
             throw new NotImplementedException();
         }
-
     }
 
     class MyClass2

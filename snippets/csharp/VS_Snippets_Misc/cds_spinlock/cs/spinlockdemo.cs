@@ -75,7 +75,6 @@ namespace SpinLockDemo
                 else
                     Console.WriteLine(sb.ToString());
                 sb.Clear();
-
             }
         }
     }
@@ -106,7 +105,6 @@ namespace SpinLockDemo
             
             Console.WriteLine("Press a key");
             Console.ReadKey();
-
         }
 
         private static void UpdateWithSpinLock(Data d, int i)
@@ -203,6 +201,5 @@ namespace SpinLockDemo
             //  );
 
           //  Task.Factory.ContinueWhenAll(
- 
         }
     }

@@ -106,7 +106,6 @@ namespace AppSettingsSample
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
-
 		}
 
 		#endregion
@@ -118,7 +117,6 @@ namespace AppSettingsSample
         private System.Windows.Forms.TextBox tbStatus;
         private System.Windows.Forms.Button btnReload;
         //</SNIPPET20>
-
 	}
 
     //<SNIPPET1>
@@ -221,7 +219,6 @@ namespace AppSettingsSample
             }
         }
         //</SNIPPET8>
-
     }
 
     //<SNIPPET9>
@@ -260,7 +257,6 @@ namespace AppSettingsSample
             get { return (Color)this["FormBackColor"]; }
             set { this["FormBackColor"] = value; }
         }
-
     }
     //</SNIPPET9>
  

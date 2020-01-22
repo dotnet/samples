@@ -20,7 +20,6 @@ namespace Microsoft.Samples
         {
             Console.WriteLine("Starting");
         }
-
     }
 
     //<snippet1>

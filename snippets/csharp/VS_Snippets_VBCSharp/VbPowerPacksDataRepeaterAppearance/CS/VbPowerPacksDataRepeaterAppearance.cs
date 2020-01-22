@@ -20,7 +20,6 @@ namespace VbPowerPacksDataRepeaterAppearanceCS
         {
             // TODO: This line of code loads data into the 'northwndDataSet.Products' table. You can move, or remove it, as needed.
             this.productsTableAdapter.Fill(this.northwndDataSet.Products);
-
         }
 
         private void productsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -28,7 +27,6 @@ namespace VbPowerPacksDataRepeaterAppearanceCS
             this.Validate();
             this.productsBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.northwndDataSet);
-
         }
 
         private void dataRepeater1_DrawItem(object sender, Microsoft.VisualBasic.PowerPacks.DataRepeaterItemEventArgs e)

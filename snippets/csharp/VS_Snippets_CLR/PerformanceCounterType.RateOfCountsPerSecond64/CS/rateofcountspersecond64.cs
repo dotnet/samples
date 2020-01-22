@@ -59,7 +59,6 @@ public class App
             false);
 
         PC.RawValue = 0;
-
     }
 
     private static void CollectSamples(ArrayList samplesList)
@@ -91,7 +90,6 @@ public class App
 
             System.Threading.Thread.Sleep(50);
         }
-
     }
 
     private static void CalculateResults(ArrayList samplesList)
@@ -111,7 +109,6 @@ public class App
             Console.WriteLine("My computed counter value = " +
                 MyComputeCounterValue((CounterSample)samplesList[i],
                 (CounterSample)samplesList[i + 1]));
-
         }
     }
 

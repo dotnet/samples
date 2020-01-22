@@ -69,7 +69,6 @@ namespace TN_Checked
          this.Name = "Form1";
          this.Text = "Form1";
          this.ResumeLayout(false);
-
       }
 
 		[STAThread]
@@ -119,6 +118,5 @@ private void node_AfterCheck(object sender, TreeViewEventArgs e)
       {
          MessageBox.Show( e.Node.ToString() + "\n" + e.Action.ToString(),"BeforeCheck");
       }
-
    }
 }

@@ -40,7 +40,6 @@ public class Sample {
            binhexlen = reader.ReadBinHex(binhex, 0, 50);            
            for (int i=0; i < binhexlen; i++) Console.Write(binhex[i]);
         }  while (reader.Name == "BinHex");
-            
      }
 
      finally {

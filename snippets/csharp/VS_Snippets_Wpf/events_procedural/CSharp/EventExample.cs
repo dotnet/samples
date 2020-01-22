@@ -64,7 +64,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             // before the storyboard has stopped.
             myRectangle.Fill = Brushes.Blue;
             // </SnippetNeedForEventsFragment>
-
         }
         
         private void betterExample()
@@ -76,7 +75,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             // Register for the CurrentStateInvalidated timing event.
             myStoryboard.CurrentStateInvalidated += new EventHandler(myStoryboard_CurrentStateInvalidated);
             // </SnippetRegisterForStoryboardCurrentStateInvalidatedEvent>
-        
         }
 
         // <SnippetStoryboardCurrentStateInvalidatedEvent2>
@@ -90,7 +88,5 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             }
         }
         // </SnippetStoryboardCurrentStateInvalidatedEvent2>
-
     }
-
 }

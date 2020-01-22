@@ -55,7 +55,6 @@ namespace GeneratPathExample
                 Console.WriteLine("{0}  = {1}", s, xname.LookupNamespace(s));
            
             Console.WriteLine();       
-
         }
     }
 
@@ -70,7 +69,6 @@ namespace GeneratPathExample
             get { return itemsValue; }
             set { itemsValue = value; }
         }
-
     }
 
     [DataContract(Namespace = "http://contoso.com")]

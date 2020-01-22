@@ -25,9 +25,7 @@ public class SamplesCalendar  {
       // Displays the total number of weeks in the current year.
       DateTime LastDay = new System.DateTime( DateTime.Now.Year, 12, 31 );
       Console.WriteLine( "There are {0} weeks in the current year ({1}).", myCal.GetWeekOfYear( LastDay, myCWR, myFirstDOW ), LastDay.Year );
-
    }
-
 }
 
 /*

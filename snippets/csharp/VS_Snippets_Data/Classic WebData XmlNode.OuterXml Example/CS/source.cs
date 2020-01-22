@@ -23,7 +23,6 @@ public class Sample {
     Console.WriteLine();
     Console.WriteLine("Display the InnerXml property...");
     Console.WriteLine(root.InnerXml);
-           
   }
 }
    // </Snippet1>

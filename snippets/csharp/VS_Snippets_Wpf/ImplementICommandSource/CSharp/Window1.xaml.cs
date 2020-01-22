@@ -46,7 +46,6 @@ namespace SDKSamples
                     {
                         MessageBox.Show("in Command \n Parameter: " + e.Parameter);
                     }
-
                 }
             }
         }
@@ -68,7 +67,6 @@ namespace SDKSamples
                 {
                     e.CanExecute = true;
                 }
-
             }
         }
 

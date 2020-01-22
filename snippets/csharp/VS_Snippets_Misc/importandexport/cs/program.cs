@@ -24,7 +24,6 @@ namespace ConsoleApplication3
 
     public interface MyInterface
     {
-
     }
 
     //Specifying the contract type may be important if
@@ -77,7 +76,6 @@ namespace ConsoleApplication3
             Console.WriteLine(test2.importedMember.data);
             Console.WriteLine(test3.importedMember.data);
             Console.ReadLine();
-
         }
     }
     //</snippet1>

@@ -20,7 +20,6 @@ namespace new_in_7
         public const double AvogadroConstant = 6.022_140_857_747_474e23;
         public const decimal GoldenRatio = 1.618_033_988_749_894_848_204_586_834_365_638_117_720_309_179M;
         // </SnippetOtherConstants>
-
     }
     class Program
     {
@@ -70,7 +69,6 @@ namespace new_in_7
             Console.WriteLine(MathUtilities.LambdaFactorial(3));
             Console.WriteLine(MathUtilities.LambdaFactorial(4));
             Console.WriteLine(MathUtilities.LambdaFactorial(5));
-            
         }
 
         private static void TupleMethod()
@@ -103,7 +101,6 @@ namespace new_in_7
             (int maxValue, _) = Range(numbers);
             Console.WriteLine(max);
             // </SnippetDiscardMember>
-
         }
 
         private static void TupleDeclarations()

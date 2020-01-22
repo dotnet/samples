@@ -34,7 +34,6 @@ public class ValidXSD
             {
                 // Schema is successfully compiled. 
                 // Do something with it here.
-
             }
             return 0;
         }
@@ -45,7 +44,6 @@ public class ValidXSD
             Console.WriteLine("Message = {0}", e.Message);
             return -1;
         }
-
     }
 
     private static void ShowCompileError(object sender, ValidationEventArgs e)

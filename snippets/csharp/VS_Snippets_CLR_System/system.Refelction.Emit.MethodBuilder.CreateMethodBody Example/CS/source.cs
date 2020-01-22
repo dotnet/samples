@@ -71,7 +71,6 @@ class MethodBodyDemo {
 			  		       adderInst,
 			  		       new object[] {aVal, bVal})); 
    }
-
 }
 
 // </Snippet1>

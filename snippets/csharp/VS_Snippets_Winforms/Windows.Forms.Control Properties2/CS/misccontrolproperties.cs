@@ -76,7 +76,6 @@ namespace CursorSetStyle
          this.Text = "Form1";
          this.Load += new System.EventHandler(this.Form1_Load);
          this.ResumeLayout(false);
-
       }
 		#endregion
 
@@ -195,6 +194,5 @@ private void treeView1_BeforeExpand(object sender, TreeViewCancelEventArgs e)
       CreateChildNodes(new DirectoryInfo(node.FullPath), node);
    }
 }
-
 	}
 }

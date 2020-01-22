@@ -99,10 +99,8 @@ namespace Samples.AspNet.Management
 
             formatter.AppendLine(
                       "** SampleWebManagementEvent End **");
-          
         }
         // </Snippet6>
     }
-
 }
 // </Snippet1>

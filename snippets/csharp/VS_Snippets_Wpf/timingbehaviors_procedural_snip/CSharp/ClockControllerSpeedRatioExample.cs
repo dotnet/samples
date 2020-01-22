@@ -103,7 +103,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             // This statement triggers a CurrentGlobalSpeedInvalidated
             // event.
             myControllableClock.Controller.SpeedRatio = doubleParseResult; 
-            
         }
         
         // Displays the current global speed.
@@ -114,7 +113,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
                 myControllableClock.CurrentGlobalSpeed.ToString()
                 + " Event triggered at: " 
                 + DateTime.Now.ToString();   
-
         }        
 
         // Verifies that speedRatioSettingTextBox has valid text content.
@@ -130,9 +128,7 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
                 speedRatioButton.IsEnabled = false;
             else 
                 speedRatioButton.IsEnabled = true;
-                    
         }
- 
     }
 }
 // </SnippetGraphicsMMClockControllerSpeedRatioExample>

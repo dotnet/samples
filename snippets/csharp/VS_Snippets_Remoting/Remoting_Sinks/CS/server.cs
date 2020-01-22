@@ -14,8 +14,6 @@ public class Server
         // Wait for method calls.
         Console.WriteLine("Listening...");
         Console.ReadLine();
-
     }
-
 }
 // </snippet50>

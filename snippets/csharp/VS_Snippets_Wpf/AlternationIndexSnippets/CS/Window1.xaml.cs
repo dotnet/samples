@@ -25,7 +25,6 @@ namespace AltnerationIndexSnippets
         {
             InitializeComponent();
             //MessageBox.Show((-10 % 7).ToString());
-
         }
     }
 
@@ -97,7 +96,6 @@ namespace AltnerationIndexSnippets
 
         List<Division> _divisions;
         public List<Division> Divisions { get { return _divisions; } }
-
     }
     public class Division
     {
@@ -105,7 +103,6 @@ namespace AltnerationIndexSnippets
         {
             _name = name;
             _teams = new List<Team>();
-
         }
 
         string _name;
@@ -115,7 +112,6 @@ namespace AltnerationIndexSnippets
         List<Team> _teams;
 
         public List<Team> Teams { get { return _teams; } }
-
     }
 
     public class Team
@@ -174,7 +170,6 @@ namespace AltnerationIndexSnippets
             d.Teams.Add(new Team("Team Delta"));
             d.Teams.Add(new Team("Team Epsilon"));
         }
-
     }
 
     #endregion
@@ -189,7 +184,5 @@ namespace AltnerationIndexSnippets
             Add("item 4");
             Add("item 5");
         }
-
     }
-
 }

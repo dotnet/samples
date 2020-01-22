@@ -48,7 +48,6 @@ class RSACSPSample
         catch(CryptographicException e)
         {
             Console.WriteLine(e.Message);
-
         }
     }
 
@@ -82,7 +81,6 @@ class RSACSPSample
         catch(CryptographicException e)
         {
             Console.WriteLine(e.Message);
-
         }
     }
 }

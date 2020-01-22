@@ -12,6 +12,5 @@ namespace DigitalInkTopics
 
     public partial class MyApp : Application
     {
-
     }
 }

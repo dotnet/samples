@@ -33,18 +33,15 @@ public sealed partial class MainPage : Page
     {
         this.InitializeComponent();
         AppEventSource.Log.MainPageInitialized();
-
     }
 }
 
 public class Page 
 {
    public void InitializeComponent() {}       
-       
 }
 
 public sealed partial class App 
 {
    public void InitializeComponent() {}       
- 
 }

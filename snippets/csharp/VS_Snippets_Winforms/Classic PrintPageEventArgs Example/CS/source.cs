@@ -9,7 +9,6 @@ public class Form1: Form
 
     public Form1() 
     {
-       
     }
 
 PrintDocument pd = new PrintDocument();
@@ -47,5 +46,4 @@ PrintDocument pd = new PrintDocument();
         Application.Run(new Form1());
         Application.EnableVisualStyles();
     }
- 
 }

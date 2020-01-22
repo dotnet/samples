@@ -30,5 +30,4 @@ public class PrincipalPermTest
         PrincipalPermission ppLouise = new PrincipalPermission("Louise", "Administrator");
 // </Snippet3>
     }
-
 }

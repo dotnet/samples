@@ -59,7 +59,6 @@ public class NumberOfItems64
             false);
 
         PC.RawValue=0;
-        
     }
 
     private static void CollectSamples(ArrayList samplesList)
@@ -88,7 +87,6 @@ public class NumberOfItems64
 
             System.Threading.Thread.Sleep(50);
         }
-
     }
 
 	private static void CalculateResults(ArrayList samplesList)
@@ -108,7 +106,6 @@ public class NumberOfItems64
 			Console.WriteLine("My computed counter value = " + 
 				MyComputeCounterValue((CounterSample)samplesList[i],
 				(CounterSample)samplesList[i+1]) );
-
 		}
 	}
 
@@ -135,6 +132,5 @@ public class NumberOfItems64
 		Console.WriteLine("   TimeStamp100nSec = " + s.TimeStamp100nSec);
 		Console.WriteLine("++++++++++++++++++++++");
 	}
-
 }
 //</snippet1>

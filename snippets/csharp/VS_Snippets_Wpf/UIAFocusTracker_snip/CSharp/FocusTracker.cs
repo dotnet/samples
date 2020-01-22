@@ -104,7 +104,6 @@ namespace FocusTracker
 
             Automation.AddAutomationFocusChangedEventHandler(
                 new AutomationFocusChangedEventHandler(OnFocusChanged));
-
         }
 
 // <Snippet106> 
@@ -146,7 +145,6 @@ namespace FocusTracker
                     AddToWindowHandler(element);
                     savedRuntimeIds.Add(rid);
                 }
-
             }
         }
 // </Snippet105>
@@ -254,6 +252,5 @@ namespace FocusTracker
             return node;
         }
         // </Snippet102>
-
     } // Reader class.
 }  // FocusTracker namespace

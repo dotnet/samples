@@ -41,7 +41,6 @@ unsafe class Program
 
         // Free up the unmanaged memory.
         Marshal.FreeHGlobal(memIntPtr);
-
     }
 
     //<snippet01>

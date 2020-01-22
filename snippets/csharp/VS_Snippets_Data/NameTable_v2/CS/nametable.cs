@@ -31,15 +31,12 @@ public class Sample {
             if (title == localname) {
                // Add additional processing here.
             }
-               
           } 
-
        }  // End While
 
       // Close the reader.
       reader.Close();     
 
   //</snippet1>
-  
   }
 }

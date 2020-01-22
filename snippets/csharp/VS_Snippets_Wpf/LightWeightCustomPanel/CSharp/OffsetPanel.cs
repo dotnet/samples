@@ -165,12 +165,9 @@ namespace OffsetPanel
                                     }
                                 }
                         }
-
                     }
-                    
                 }
                 return arrangeSize; // Returns the final Arrange size
-                
             }
 
             // ********* OffsetLeft Property *********
@@ -240,7 +237,6 @@ namespace OffsetPanel
                 if (d == null) { throw new ArgumentNullException("d"); }
                 d.SetValue(ShareCoordinatesProperty, Boolean);
             }
-
         }
     }
 

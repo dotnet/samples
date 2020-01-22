@@ -28,7 +28,6 @@
        Console.WriteLine( "   Count    : {0}", myStack.Count );
        Console.Write( "   Values:" );
        PrintValues( myStack );
-
     }
 
     public static void PrintValues( IEnumerable myCollection )  {
@@ -36,7 +35,6 @@
           Console.Write( "    {0}", obj );
        Console.WriteLine();
     }
-
  }
 
 

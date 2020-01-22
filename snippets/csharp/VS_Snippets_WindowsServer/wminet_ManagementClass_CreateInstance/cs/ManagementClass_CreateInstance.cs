@@ -15,7 +15,6 @@ public class Sample
         newInstance["VariableValue"] = "testValue";
         newInstance["UserName"] = "<SYSTEM>";
         newInstance.Put(); //to commit the new instance.
-
     }
 }
 //</Snippet1>

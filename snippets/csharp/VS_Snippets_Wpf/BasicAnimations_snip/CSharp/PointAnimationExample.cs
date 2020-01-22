@@ -67,7 +67,6 @@ namespace SDKSamples
 
             Content = containerCanvas;
         }
-
     }
 }
 // </SnippetPointAnimationWholePage>

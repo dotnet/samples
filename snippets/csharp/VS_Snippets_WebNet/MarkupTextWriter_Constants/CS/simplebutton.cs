@@ -42,6 +42,5 @@ namespace Samples.AspNet.CS
             writer.Write(HtmlTextWriter.SelfClosingChars);
             writer.Write(HtmlTextWriter.TagRightChar);
         }
-
     }
 }

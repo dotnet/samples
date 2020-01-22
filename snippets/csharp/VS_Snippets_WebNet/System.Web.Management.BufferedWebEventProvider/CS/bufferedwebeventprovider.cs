@@ -45,7 +45,6 @@ using System.Web;
             // Instantiate buffer to contain 
             // local data.
             customInfo = new StringBuilder();
-
         }
 
         // </Snippet8>
@@ -76,7 +75,6 @@ using System.Web;
                 "Buffering: {0}", buffer));
             customInfo.AppendLine(string.Format(
                 "Buffering modality: {0}", bufferModality));
-
         }
         // </Snippet2>
 
@@ -227,7 +225,6 @@ using System.Web;
 
             // Flush the buffer, if needed.
             Flush();
-            
         }
         // </Snippet7>
 
@@ -289,9 +286,7 @@ using System.Web;
             }
         }
         // </Snippet10>
-
     }
-
 }
 
 // </Snippet1>

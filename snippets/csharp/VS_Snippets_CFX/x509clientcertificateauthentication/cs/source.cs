@@ -188,7 +188,6 @@ namespace Example
             }
             //</snippet7>
         }
-
     }
 
     [ServiceContract]

@@ -30,7 +30,6 @@ public class DeletingStores
 
         IsolatedStorageFile.Remove(IsolatedStorageScope.User);
         Console.WriteLine("All isolated stores for this user have been deleted.");
-
     } // End of Main.
 }
 //</snippet3>

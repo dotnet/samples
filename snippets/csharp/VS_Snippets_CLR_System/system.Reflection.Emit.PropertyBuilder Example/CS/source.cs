@@ -108,7 +108,6 @@ class PropertyBuilderDemo
                            custDataType.InvokeMember("CustomerName", BindingFlags.GetProperty,
                                                       null, custData, new object[]{ }));
    }
-
 }
 
 // --- O U T P U T ---

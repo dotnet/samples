@@ -18,6 +18,5 @@ namespace PrintDialog_Sample
 			mainWindow.InitializeComponent();
 			mainWindow.Show();
         }
-
 	}
 }

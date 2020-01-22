@@ -8,7 +8,6 @@ using System.Globalization;
 [DisplayColumn("City", "PostalCode", false)]
 public partial class Address
 {
-   
 }
 //</Snippet2>
 
@@ -16,7 +15,6 @@ public partial class Address
 [DisplayColumn("LastName")]
 public partial class Customer
 {
-
 }
 //</Snippet3>
 

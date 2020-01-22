@@ -108,7 +108,6 @@ namespace System.Drawing.ClassicFontExamplesCS
             e.Graphics.DrawString(
                 "This font is from a GDI HFONT", hfontFont,Brushes.Black, 
                 0, 0);
-
         }
         // </snippet3>
 

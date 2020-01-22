@@ -67,6 +67,5 @@ using System.ServiceModel.Channels;
             // <Snippet14>
             msgVersion.GetHashCode();
             // </Snippet14>
-
         }
     }

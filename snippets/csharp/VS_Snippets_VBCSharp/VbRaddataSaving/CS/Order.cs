@@ -42,7 +42,6 @@ namespace CS
          string shipCity, string shipRegion,
          string shipPostalCode, string shipCountry)
       {
-         
       }
 
       private int orderIDValue;
@@ -184,7 +183,6 @@ namespace CS
          get { return shipCountryValue; }
          set { shipCountryValue = value; }
       }
-      
    }
 
    /// <summary>
@@ -192,7 +190,5 @@ namespace CS
    /// </summary>
    class Orders: System.ComponentModel.BindingList<Order>
    {
-   
    }
-
 }

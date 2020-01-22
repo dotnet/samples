@@ -38,7 +38,6 @@ namespace SetOperators
             { 
                 Console.WriteLine(ch); 
             } 
-
         }
     }
 }

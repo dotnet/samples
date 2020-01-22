@@ -146,6 +146,5 @@ namespace MyMultiplexLog
 
 			return Array.AsReadOnly<ArraySegment<byte>>(segments);
 		}
-
 	}
 }

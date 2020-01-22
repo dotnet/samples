@@ -108,7 +108,6 @@ class App
         People peopleList = new People(peopleArray);
         foreach (Person p in peopleList)
             Console.WriteLine(p.firstName + " " + p.lastName);
-
     }
 }
 

@@ -12,6 +12,5 @@ namespace TextPointer_Snippets
 
     public partial class MyApp : Application
     {
-
     }
 }

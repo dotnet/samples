@@ -77,8 +77,6 @@ public partial class TextField : System.Web.DynamicData.FieldTemplateUserControl
             lbl.ForeColor = System.Drawing.Color.Red;
             Controls.Add(lbl);
         }
-
     }
-
 }
 // </snippet2>

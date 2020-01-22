@@ -29,7 +29,6 @@ public static void demoDenySite()
     catch (SecurityException e) {
         Console.WriteLine("Expected exception" + e.Message);
     }
-
  }
 
 public static void CheckConnectPermission(string uriToCheck) {
@@ -42,6 +41,5 @@ public static void CheckConnectPermission(string uriToCheck) {
         static void Main()
         {
              demoDenySite();
-            
         }
     }

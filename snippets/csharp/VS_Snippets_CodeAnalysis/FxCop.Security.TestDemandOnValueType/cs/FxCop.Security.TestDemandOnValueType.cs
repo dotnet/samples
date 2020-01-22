@@ -22,7 +22,6 @@ namespace TestSecurityExamples
          try
          {
             mystruct = new SecuredTypeStructure(10,10);
-            
          }
          catch (SecurityException e)
          {

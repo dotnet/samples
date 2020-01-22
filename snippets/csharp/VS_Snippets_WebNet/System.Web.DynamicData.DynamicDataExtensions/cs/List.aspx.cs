@@ -17,7 +17,6 @@ public partial class List : System.Web.UI.Page {
         
     protected void Page_Init(object sender, EventArgs e) {
         DynamicDataManager1.RegisterControl(GridView1);
-
     }
 
     protected void Page_Load(object sender, EventArgs e) {
@@ -39,6 +38,5 @@ public partial class List : System.Web.UI.Page {
         FilterRepeater fr = this.FilterRepeater;
         int cnt = fr.Controls.Count;
      //   string s = fr.Table.ToString();
-
     }
 }

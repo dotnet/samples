@@ -36,9 +36,7 @@ namespace SDKSample
                     myMediaElement.Stretch = Stretch.UniformToFill;
                     break;
             }
-
 	    }
-
     }
 }
 // </SnippetMediaElementCSharpExampleWholePage>

@@ -18,13 +18,11 @@ namespace HtmlTW2
         public cstmHtmlTW(TextWriter writer)
             : base(writer)
         {
-
         }
 
         public cstmHtmlTW(TextWriter writer, string tabString)
             : base(writer, tabString)
         {
-
         }
 // <snippet2>
         // Override the RenderBeforeContent method to write

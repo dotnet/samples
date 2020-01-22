@@ -44,7 +44,6 @@ namespace cs_walk3
                     c.CustomerID, c.CompanyName, c.Orders.Count);
             }
             // </Snippet3>
-
         }
 
         void method4()
@@ -93,8 +92,6 @@ namespace cs_walk3
                     c.CustomerID, c.CompanyName, c.Orders.Count);
             }
             // </Snippet7>
-
         }
-
     }
 }

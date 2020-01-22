@@ -31,6 +31,5 @@ public class MyControl : Control
          }
       }
    }
- 
 }
 // </snippet1>

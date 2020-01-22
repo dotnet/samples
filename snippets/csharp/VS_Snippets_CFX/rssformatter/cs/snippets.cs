@@ -247,6 +247,5 @@ namespace RssFormatterSnippets
             rssWriter.Close();
             // </Snippet19>
         }
-
     }
 }

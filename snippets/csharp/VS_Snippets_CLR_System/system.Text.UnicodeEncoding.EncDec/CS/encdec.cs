@@ -43,9 +43,7 @@ public class SamplesUnicodeEncoding  {
       // Print the resulting characters.
       Console.Write( "Using the decoder       : " );
       Console.WriteLine( myDecodedChars );
-
    }
-
 }
 
 

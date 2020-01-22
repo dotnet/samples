@@ -229,7 +229,6 @@ public class Example
          catch (InvalidCastException) {
             Console.WriteLine("No conversion to an Int64 exists for the {0} value {1}.",
                               value.GetType().Name, value);
-                              
          }
       }                           
       // The example displays the following output:

@@ -19,7 +19,6 @@ namespace IndexersSamples.SampleTwo
                 actions[arg]?.Invoke();
             }
         }
-
     }
     public class ArgsActions
     {

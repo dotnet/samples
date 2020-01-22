@@ -12,6 +12,5 @@ namespace TextBox_MiscCode
 
     public partial class MyApp : Application
     {
-
     }
 }

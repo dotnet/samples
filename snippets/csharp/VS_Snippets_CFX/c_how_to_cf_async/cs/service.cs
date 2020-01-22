@@ -32,5 +32,4 @@ namespace Microsoft.ServiceModel.Samples
         double EndDivide(IAsyncResult ar);
     }
     //</snippet4>
-
 }

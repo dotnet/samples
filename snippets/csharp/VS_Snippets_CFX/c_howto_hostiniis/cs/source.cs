@@ -52,6 +52,5 @@ namespace Microsoft.ServiceModel.Samples
         public static void Main()
         {
         }
-
     }
 }

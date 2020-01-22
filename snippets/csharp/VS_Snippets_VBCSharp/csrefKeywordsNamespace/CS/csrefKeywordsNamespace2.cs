@@ -18,7 +18,6 @@ namespace NameSpace1
             return "You are in NameSpace1.MyClass.";
         }
     }
-
 }
 
 namespace NameSpace2
@@ -43,7 +42,6 @@ namespace NameSpace3
 
             var instance2 = new UsingAlias();
             Console.WriteLine(instance2);
-
         }
     }
 }

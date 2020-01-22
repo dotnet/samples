@@ -10,5 +10,4 @@ using System.Configuration;
 
     public partial class App : Application
     {
-
     }

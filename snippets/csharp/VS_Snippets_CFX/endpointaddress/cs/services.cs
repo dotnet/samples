@@ -34,6 +34,5 @@ namespace Microsoft.WCF.Documentation
             Console.WriteLine("Return: {0}", result);
             return result;
         }
-
     }
 }

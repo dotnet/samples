@@ -44,7 +44,6 @@ class SamplesNumberFormatInfo  {
       Console.WriteLine( "\tPerMilleSymbol\t\t\t{0}\t(U+{1:x2}{2:x2})", myInv.PerMilleSymbol, myCodes[0], myCodes[1] );
       Console.WriteLine( "\tPositiveInfinitySymbol\t\t{0}", myInv.PositiveInfinitySymbol );
       Console.WriteLine( "\tPositiveSign\t\t\t{0}", myInv.PositiveSign );
-
    }
 }
 

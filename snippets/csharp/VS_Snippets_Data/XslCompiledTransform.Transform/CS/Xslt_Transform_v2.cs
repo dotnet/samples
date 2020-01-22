@@ -9,7 +9,6 @@ using System.Net;
 class XslCompiledTransform_Samples {
 
    static void Main() {
-	
     }
 
  // Transform files
@@ -174,5 +173,4 @@ static void Print_TempFiles()
         Console.WriteLine(filename);
     //</snippet8>
 }
-
 }

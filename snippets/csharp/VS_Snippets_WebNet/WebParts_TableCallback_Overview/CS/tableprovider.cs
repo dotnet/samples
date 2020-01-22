@@ -86,7 +86,6 @@ namespace Samples.AspNet.CS.Controls
             {
                 return ((TableProviderWebPart)control).ConnectionPointEnabled;
             }
-            
         }
     }
 }

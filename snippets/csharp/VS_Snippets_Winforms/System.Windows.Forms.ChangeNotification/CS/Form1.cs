@@ -42,7 +42,6 @@ namespace UpdateBindings
             this.Load += new EventHandler(Form1_Load);
             this.customerControl1.DataSourceChanged +=  
                 new EventHandler(customerControl1_DataSourceChanged);
-            
         }
         private void customerControl1_DataSourceChanged(Object sender, EventArgs e)
         {
@@ -118,7 +117,6 @@ namespace UpdateBindings
             get { return this.dataGridView1.DataMember; }
 
             set { this.dataGridView1.DataMember = value; }
-
         }
 
         private void OnDataSourceChanged()
@@ -148,7 +146,6 @@ namespace UpdateBindings
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Size = new System.Drawing.Size(350, 216);
-            
         }
     }
     //</snippet3>

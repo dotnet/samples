@@ -13,6 +13,5 @@ namespace ComboBoxSimple
 
 	public partial class app : Application
 	{
-
 	}
 }

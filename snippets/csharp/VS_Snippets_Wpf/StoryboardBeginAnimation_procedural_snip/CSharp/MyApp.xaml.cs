@@ -29,6 +29,5 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
         {
             MessageBox.Show("Unhandled exception: " + args.ExceptionObject.ToString());
         }  
-
     }
 }

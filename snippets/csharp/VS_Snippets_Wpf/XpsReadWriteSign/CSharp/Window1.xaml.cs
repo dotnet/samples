@@ -76,7 +76,6 @@ namespace SDKSample
             AddCommandBindings(ThumbnailCommand, ThumbnailCommandHandler);
             // Add the Close Command
             AddCommandBindings(ApplicationCommands.Close, CloseCommandHandler);
-
         }
         #endregion
 
@@ -313,5 +312,4 @@ namespace SDKSample
         #endregion  Private Members
 
     }// end:partial class Window1
-
 }// end:namespace

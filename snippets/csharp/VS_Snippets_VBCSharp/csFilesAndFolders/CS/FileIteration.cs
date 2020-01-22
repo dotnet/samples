@@ -325,7 +325,6 @@ class WriteTextFile
             // Keep the console window open in debug mode.
             Console.WriteLine("Press any key to exit.");
             System.Console.ReadKey();
-
         }
     }
     //</snippet5>
@@ -568,7 +567,6 @@ class WriteTextFile
             {
                 Console.WriteLine(e.Message);
             }
-
         }
     }
     //</snippet9>

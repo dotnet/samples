@@ -435,7 +435,6 @@ namespace Microsoft.ServiceModel.Samples
         {
             return new CreditCardSecurityTokenSerializer(version);
         }
-
     }
     //</snippet8>
     

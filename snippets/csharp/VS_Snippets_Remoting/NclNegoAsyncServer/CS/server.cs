@@ -36,9 +36,7 @@ namespace Examples.NegotiateStreamExample
                     Console.WriteLine(e);
                     continue;
                 }
-
             }
-        
         }
         //<snippet1>
         public static void AuthenticateClient(TcpClient clientRequest)
@@ -105,7 +103,6 @@ namespace Examples.NegotiateStreamExample
                 id.AuthenticationType
                 );
             cState.Waiter.Set();
-
     }
 //</snippet2>
 //<snippet3>

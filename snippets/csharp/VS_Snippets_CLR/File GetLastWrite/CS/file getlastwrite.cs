@@ -27,7 +27,6 @@ class Test
             File.SetLastWriteTime(path, DateTime.Now);
             dt = File.GetLastWriteTime(path);
             Console.WriteLine("The last write time for this file was {0}.", dt);
-
         } 
 
         catch (Exception e) 

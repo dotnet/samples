@@ -22,7 +22,6 @@ public class Example
       }
       Console.WriteLine("\nUnable to round-trip {0} of {1} format strings.",
                         noRoundTrip, total);
-                        
    }
 }
 // The example displays the following output:

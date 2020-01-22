@@ -27,9 +27,7 @@ public class SamplesCompareInfo  {
       Console.WriteLine( "   With None                         : {0}", myComp.IsPrefix( myStr2, myXfix, CompareOptions.None ) );
       Console.WriteLine( "   With Ordinal                      : {0}", myComp.IsPrefix( myStr2, myXfix, CompareOptions.Ordinal ) );
       Console.WriteLine( "   With IgnoreCase                   : {0}", myComp.IsPrefix( myStr2, myXfix, CompareOptions.IgnoreCase ) );
-
    }
-
 }
 
 

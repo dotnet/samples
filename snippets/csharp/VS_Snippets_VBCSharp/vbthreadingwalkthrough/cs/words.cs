@@ -98,6 +98,5 @@ public class Words
         matches = regex.Matches(SourceString);
         return matches.Count;
     }
-
 }
 // </snippet2>

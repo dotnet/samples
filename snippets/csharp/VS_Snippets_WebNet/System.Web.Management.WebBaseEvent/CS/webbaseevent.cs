@@ -53,7 +53,6 @@ namespace SamplesAspNet
                    timesRaised);
 
             return fireEvent;
-
         }
         //</Snippet22>
 
@@ -131,7 +130,6 @@ namespace SamplesAspNet
             // </Snippet7>
 
             return eCode;
-
         }
 
         // <Snippet8>
@@ -256,11 +254,8 @@ namespace SamplesAspNet
             // </Snippet20>
 
             formatter.IndentationLevel -= 1;
-
         }
         // </Snippet17>
-            
     }
-
 }
 // </Snippet1>

@@ -28,7 +28,6 @@ namespace SortBooks
                     while (childIter.MoveNext())
                     {
                         Console.WriteLine(childIter.Current.Value);
-
                     }
                 }
             }

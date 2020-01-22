@@ -18,5 +18,4 @@ public class Form1: Form
     OracleCommand command = new OracleCommand(queryString, connection);
  }
 // </Snippet1>
-
 }

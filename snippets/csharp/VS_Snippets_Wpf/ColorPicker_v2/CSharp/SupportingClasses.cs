@@ -48,7 +48,6 @@ namespace Microsoft.Samples.CustomControls
             {
                 SetValue(SelectedColorProperty, value);
             }
-
         }
 
         protected override void OnValueChanged(double oldValue, double newValue)
@@ -58,7 +57,6 @@ namespace Microsoft.Samples.CustomControls
             Color? theColor = ColorUtilities.ConvertHsvToRgb(360 - newValue, 1, 1);
             
             SetValue(SelectedColorProperty, theColor);
-
         }
 
         public override void OnApplyTemplate()
@@ -73,7 +71,6 @@ namespace Microsoft.Samples.CustomControls
                 updateColorSpectrum();
                 OnValueChanged(0, 0);
             }
-
         }
 
         private void updateColorSpectrum()
@@ -83,12 +80,10 @@ namespace Microsoft.Samples.CustomControls
             {
                 colorsInitialized = true;
                 createSpectrum();
-
             }
             else
             {
                 colorsInitialized = false;
-
             }
         }
 
@@ -111,13 +106,11 @@ namespace Microsoft.Samples.CustomControls
 
             pickerBrush.GradientStops[i - 1].Offset = 1.0;      
             m_spectrumDisplay.Fill = pickerBrush;
-
         }
 
         private static string SpectrumDisplayName = "PART_SpectrumDisplay";
         private Rectangle m_spectrumDisplay;
         private bool colorsInitialized = false;
-
     }
 
     #endregion SpectrumSlider
@@ -248,11 +241,9 @@ namespace Microsoft.Samples.CustomControls
                         b = q;
                         break;
                 }
-
             }
 
             return Color.FromArgb(255, (byte)(r * 255), (byte)(g * 255), (byte)(b * 255));
-
         }
 
         // Generates a list of colors with hues ranging from 0 360
@@ -269,14 +260,11 @@ namespace Microsoft.Samples.CustomControls
                     ColorUtilities.ConvertHsvToRgb(i * 6, 1, 1)
 
                 );
-
             }
             colorsList.Add(ColorUtilities.ConvertHsvToRgb(0, 1, 1));
 
             return colorsList;
-
         }
-
     }
 
     #endregion ColorUtilities
@@ -296,7 +284,6 @@ namespace Microsoft.Samples.CustomControls
             this.H = h;
             this.S = s;
             this.V = v;
-
         }
     }
     #endregion HsvColor
@@ -363,7 +350,6 @@ namespace Microsoft.Samples.CustomControls
                 SetValue(PointerOutlineBrushProperty, value);
             }
         }
-
     }
     #endregion ColorThumb
 

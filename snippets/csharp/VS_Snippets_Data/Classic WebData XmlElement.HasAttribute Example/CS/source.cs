@@ -20,7 +20,6 @@ public class Sample
       String genre = root.GetAttribute("genre");
       Console.WriteLine(genre);
    }
-
   }
 }
    // </Snippet1>

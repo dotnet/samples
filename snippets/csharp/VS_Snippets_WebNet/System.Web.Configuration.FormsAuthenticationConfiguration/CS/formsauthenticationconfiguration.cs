@@ -160,8 +160,6 @@ namespace Samples.Aspnet.Configuration
                 credentials.Append(Environment.NewLine);
             }
             // </Snippet14>
-
         }
     }
-
 }

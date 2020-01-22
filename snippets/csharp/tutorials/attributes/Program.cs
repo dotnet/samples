@@ -50,7 +50,6 @@ namespace ConsoleApplication
     [Obsolete]
     public class MyClass
     {
-
     }
     // </ObsoleteExample1>
 
@@ -58,14 +57,12 @@ namespace ConsoleApplication
     [Obsolete("ThisClass is obsolete. Use ThisClass2 instead.")]
     public class ThisClass
     {
-
     }
     // </ObsoleteExample2>
 
     // <CreateAttributeExample1>
     public class MySpecialAttribute : Attribute
     {
-
     }
     // </CreateAttributeExample1>
 
@@ -73,7 +70,6 @@ namespace ConsoleApplication
     [MySpecial]
     public class SomeOtherClass
     {
-
     }
     // </CreateAttributeExample2>
     
@@ -81,7 +77,6 @@ namespace ConsoleApplication
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct)]
     public class MyAttributeForClassAndStructOnly : Attribute
     {
-
     }
     // </AttributeUsageExample1>
     
@@ -125,7 +120,6 @@ namespace ConsoleApplication
     public class GotchaAttribute : Attribute
     {
         public GotchaAttribute(Foo myClass, string str) {
-            
         }
     }
     // </AttributeGothca1>
@@ -134,8 +128,6 @@ namespace ConsoleApplication
     [Gotcha(new Foo(), "test")] // does not compile
     public class AttributeFail
     {
-
     }
     // </AttributeGotcha2>
-    
 }

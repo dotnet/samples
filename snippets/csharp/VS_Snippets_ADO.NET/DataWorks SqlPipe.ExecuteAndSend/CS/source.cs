@@ -21,7 +21,6 @@ public partial class StoredProcedures
 
 			// Execute the command and send the results directly to the client.
 			SqlContext.Pipe.ExecuteAndSend(command);
-			
 		}
 	}
 	//</Snippet1>

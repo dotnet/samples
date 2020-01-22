@@ -35,6 +35,5 @@ class SMTP_CredentailCache_Sample
 			      Console.WriteLine("Message: {0} ",e.Message);
 		    }
 // </Snippet1>
-           
     }
 }

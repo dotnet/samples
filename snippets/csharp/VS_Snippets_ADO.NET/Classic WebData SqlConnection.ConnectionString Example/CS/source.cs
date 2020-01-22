@@ -35,5 +35,4 @@ class Program
             + "Integrated Security=true;";
     }
     // </Snippet1>
-
 }

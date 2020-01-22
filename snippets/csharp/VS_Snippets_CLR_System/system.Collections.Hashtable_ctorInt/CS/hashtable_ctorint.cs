@@ -72,9 +72,7 @@ public class SamplesHashtable
         Console.WriteLine("first is in myHT1: {0}", myHT1.ContainsKey("first"));
         Console.WriteLine("first is in myHT2: {0}", myHT2.ContainsKey("first"));
         Console.WriteLine("first is in myHT3: {0}", myHT3.ContainsKey("first"));
-
     }
-
 }
 
 

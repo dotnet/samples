@@ -24,5 +24,4 @@ public class Form1: Form
             + columns.Count);
     }
     // </Snippet1>
-
 }

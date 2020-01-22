@@ -33,7 +33,6 @@ class ParallelOptionsDemo
                         Console.WriteLine("Thread={0}, i={1}", Thread.CurrentThread.ManagedThreadId, i);
                     }
                 );
-
         }
         // No exception is expected in this example, but if one is still thrown from a task,
         // it will be wrapped in AggregateException and propagated to the main thread.
@@ -42,7 +41,6 @@ class ParallelOptionsDemo
             Console.WriteLine("Parallel.For has thrown the following (unexpected) exception:\n{0}", e);
         }
     }
-
 }
 
 

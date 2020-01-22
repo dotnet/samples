@@ -13,7 +13,6 @@ math.Url = "http://www.contoso.com/math.asmx";
 int total = math.Add(Convert.ToInt32(Num1.Text), Convert.ToInt32(Num2.Text));
 
 // </Snippet1>
-
     }
 }
 

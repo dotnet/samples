@@ -127,5 +127,4 @@ namespace usingstatement
             //</snippet7>
     }
 }
-
 }

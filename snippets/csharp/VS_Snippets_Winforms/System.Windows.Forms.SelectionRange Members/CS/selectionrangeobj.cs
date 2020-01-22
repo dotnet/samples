@@ -125,7 +125,6 @@ namespace SelectionRangew
 			this.Name = "Form1";
 			this.Text = "Form1";
 			this.ResumeLayout(false);
-
 		}
 		#endregion
 
@@ -159,6 +158,5 @@ private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
      monthCalendar1.SelectionRange.End.Date.ToShortDateString();
 }
 //</snippet1>
-
 	}
 }

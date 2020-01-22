@@ -17,6 +17,5 @@ namespace InkDragDrop
         {
             InitializeComponent();
         }
-
     }
 }

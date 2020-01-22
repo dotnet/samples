@@ -16,7 +16,6 @@ public class CategoryRouteHandler : System.Web.Routing.IRouteHandler
 {
     public CategoryRouteHandler()
     {
-
     }
 
     public IHttpHandler GetHttpHandler(RequestContext requestContext)

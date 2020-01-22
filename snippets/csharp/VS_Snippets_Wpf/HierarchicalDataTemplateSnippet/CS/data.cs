@@ -24,7 +24,6 @@ namespace SDKSample
 
         List<Division> _divisions;
         public List<Division> Divisions { get { return _divisions; } }
-
     }
     public class Division
     {
@@ -32,7 +31,6 @@ namespace SDKSample
         {
             _name = name;
             _teams = new List<Team>();
-
         }
 
         string _name;
@@ -42,7 +40,6 @@ namespace SDKSample
         List<Team> _teams;
 
         public List<Team> Teams { get { return _teams; } }
-
     }
 
     public class Team
@@ -113,6 +110,5 @@ namespace SDKSample
                 return null;
             }
         }
-
     }
 }

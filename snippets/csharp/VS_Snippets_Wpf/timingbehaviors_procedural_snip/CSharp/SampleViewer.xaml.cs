@@ -40,7 +40,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
                 if (theClock != null)
                 {
                     theClock.CurrentTimeInvalidated -= new EventHandler(onClockTimeInvalidated);
-
                 }
 
                 theClock = value;
@@ -83,7 +82,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
                 SetValue(CurrentTimeAsStringProperty, theClock.CurrentTime.ToString());
                 previousTime = (TimeSpan)theClock.CurrentTime;
             }
-
         }
 
         public static readonly DependencyProperty CurrentTimeAsStringProperty =

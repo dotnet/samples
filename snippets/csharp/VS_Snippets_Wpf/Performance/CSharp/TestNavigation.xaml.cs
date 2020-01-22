@@ -28,6 +28,5 @@ namespace SDKSample
             navWindow.Content = nextPage;
         }
         // </SnippetPerformanceSnippet14>
-
     }
 }

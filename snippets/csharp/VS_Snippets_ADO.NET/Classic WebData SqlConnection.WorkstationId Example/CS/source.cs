@@ -32,5 +32,4 @@ class Program
         return "Data Source=(local);Initial Catalog=AdventureWorks;"
             + "Integrated Security=SSPI;";
     }
-
 }

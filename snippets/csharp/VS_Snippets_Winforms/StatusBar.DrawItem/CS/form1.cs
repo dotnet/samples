@@ -106,7 +106,6 @@ namespace OwnerDrawnStatusBarPanel
          ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel1)).EndInit();
          ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel2)).EndInit();
          this.ResumeLayout(false);
-
       }
 		#endregion
 

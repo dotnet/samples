@@ -76,7 +76,6 @@ namespace ListViewSortFormNamespace
         {
             Application.Run(new ListViewSortForm());
         }
-
     }
 
     // Implements the manual sorting of items by columns.
@@ -96,6 +95,5 @@ namespace ListViewSortFormNamespace
             return String.Compare(((ListViewItem)x).SubItems[col].Text, ((ListViewItem)y).SubItems[col].Text);
         }
     }
-
 }
 //</Snippet1>

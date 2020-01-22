@@ -73,7 +73,6 @@ namespace Blank3DSample
             myViewport.Children.Add(modelsVisual);
 
             mainWindow.Content = myViewport;
-
         }
     }
 }

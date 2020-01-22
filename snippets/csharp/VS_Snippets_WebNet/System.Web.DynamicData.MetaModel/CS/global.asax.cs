@@ -5,5 +5,4 @@
         model.RegisterContext(typeof(AdventureWorksLTDataContext), 
             new ContextConfiguration() { ScaffoldAllTables = true });
         // </Snippet99>
-
     }

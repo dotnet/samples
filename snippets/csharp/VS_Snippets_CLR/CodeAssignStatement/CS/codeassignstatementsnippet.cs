@@ -223,7 +223,6 @@ namespace CodeDOMSamples
             this.Text = "CodeDOM Samples Framework";
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
-
         }
         #endregion
 
@@ -279,7 +278,6 @@ namespace CodeDOMSamples
 
             language=3;
         }            
-
     }
 }
 // </Snippet3>

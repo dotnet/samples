@@ -38,13 +38,11 @@ class DSASample
 			{
 				Console.WriteLine("The signature was not verified.");
 			}
-
 		}
 		catch(CryptographicException e)
 		{
 			Console.WriteLine(e.Message);
 		}
 	}
-
 }
 // </Snippet1>

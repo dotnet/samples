@@ -84,7 +84,6 @@ namespace PropertyDescriptor
 			this.Text = "Form1";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.ResumeLayout(false);
-
 		}
 		#endregion
 
@@ -111,8 +110,6 @@ textBox1.Text = myProperty.DisplayName+ '\n' ;
 textBox1.Text += myProperty.Description + '\n';
 textBox1.Text += myProperty.Category + '\n';
 //</snippet1>
-
 		}
-
 	}
 }

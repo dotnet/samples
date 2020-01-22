@@ -235,7 +235,6 @@ namespace Samples.AspNet.Profile
       cmd.Parameters.Add("@Username", OdbcType.VarChar, 255).Value = username;
       cmd.Parameters.Add("@ApplicationName", OdbcType.VarChar, 255).Value = ApplicationName;
       cmd.Parameters.Add("@IsAnonymous", OdbcType.Bit).Value = !isAuthenticated;
-      
     }
     else
     {
@@ -1033,7 +1032,6 @@ namespace Samples.AspNet.Profile
 
         counter++;
       }
-
     }
     catch (OdbcException e)
     {

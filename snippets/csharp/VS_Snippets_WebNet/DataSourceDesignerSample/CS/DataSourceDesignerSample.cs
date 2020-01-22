@@ -46,7 +46,6 @@ namespace ASPNet.Design.Samples_CS
             ar.Add(_defaultViewName);
             return ar as ICollection;
         }
-
     }
 
     // The runtime data source view
@@ -118,7 +117,6 @@ namespace ASPNet.Design.Samples_CS
         {
             get { return false; }
         }
-
     }
 
     // A class to define each record of the data

@@ -27,5 +27,4 @@ public class Form1: Form
         Text1.DataBindings.Add("Text", view, "CompanyName");
     }
     // </Snippet1>
-
 }

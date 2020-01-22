@@ -91,7 +91,6 @@ namespace System_Windows_Forms_UpdateBinding
         {
             Application.EnableVisualStyles();
             Application.Run(new Form1());
-
         }
     
         // The State class to add to the ArrayList.
@@ -115,7 +114,6 @@ namespace System_Windows_Forms_UpdateBinding
                 stateCapital = capital;
 			}
 		}
-              
 	}
 }
 //</snippet1>

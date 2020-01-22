@@ -64,7 +64,6 @@ namespace InterlockedExchange_Example
                 return false;
             }
         }
-
     }
 }  
 //</snippet1>

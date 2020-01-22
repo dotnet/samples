@@ -12,7 +12,6 @@ public class SamplesArrayList  {
       int IComparer.Compare( Object x, Object y )  {
           return( (new CaseInsensitiveComparer()).Compare( y, x ) );
       }
-
    }
 
    public static void Main()  {
@@ -43,7 +42,6 @@ public class SamplesArrayList  {
       myAL.Sort( 1, 3, myComparer );
       Console.WriteLine( "After sorting from index 1 to index 3 with the reverse case-insensitive comparer:" );
       PrintIndexAndValues( myAL );
-
    }
  
    public static void PrintIndexAndValues( IEnumerable myList )  {
@@ -52,7 +50,6 @@ public class SamplesArrayList  {
          Console.WriteLine( "\t[{0}]:\t{1}", i++, obj );
       Console.WriteLine();
    }
-
 }
 
 

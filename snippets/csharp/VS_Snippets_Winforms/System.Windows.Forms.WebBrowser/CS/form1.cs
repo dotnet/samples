@@ -356,6 +356,5 @@ public class Form1 : Form
         Application.EnableVisualStyles();
         Application.Run(new Form1());
     }
-
 }
 //</Snippet0>

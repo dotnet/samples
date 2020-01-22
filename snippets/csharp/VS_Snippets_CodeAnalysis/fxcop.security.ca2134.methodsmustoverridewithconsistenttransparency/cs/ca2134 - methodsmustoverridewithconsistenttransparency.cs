@@ -49,7 +49,6 @@ namespace TransparencyWarningsDemo
         //   3. Making Derived.CriticalVirtual critical
         public override void CriticalVirtual() { }
     }
-
 }
 
 //</Snippet1>

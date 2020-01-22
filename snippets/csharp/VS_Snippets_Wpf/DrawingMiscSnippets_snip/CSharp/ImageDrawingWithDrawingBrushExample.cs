@@ -69,7 +69,6 @@ namespace SDKSample
             this.Margin = new Thickness(20);
             this.Content = exampleBorder;
         }
-
     }
 }
 // </SnippetImageDrawingWithDrawingBrushExample>

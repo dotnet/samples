@@ -160,5 +160,4 @@ class EntryPoint
     {
         new SingleSnippet.SingleSample();
     }
-
 }

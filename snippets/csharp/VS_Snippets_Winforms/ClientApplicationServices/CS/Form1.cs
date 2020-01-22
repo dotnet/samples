@@ -348,7 +348,6 @@ namespace ClientAppServicesDemo
                 this.Form1_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         [STAThread]
@@ -358,7 +357,6 @@ namespace ClientAppServicesDemo
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
-
     }
 }
 //</snippet000>

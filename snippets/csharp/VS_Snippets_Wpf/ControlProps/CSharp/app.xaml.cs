@@ -13,6 +13,5 @@ namespace ControlProps
 
 	public partial class app : Application
 	{
-
 	}
 }

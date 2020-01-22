@@ -54,7 +54,6 @@ public partial class Window1 : Window
         {
             switchAuthor.Content = "Use student's pen";
             inkCanvas1.DefaultDrawingAttributes = teachersDA;
-
         }
     }
 

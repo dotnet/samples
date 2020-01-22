@@ -130,7 +130,6 @@ namespace ToolBarStuff
          this.Name = "Form1";
          this.Text = "Form1";
          this.ResumeLayout(false);
-
       }
 		#endregion
 
@@ -171,6 +170,5 @@ private void button2_Click(object sender, EventArgs e)
    }
 }
 // </snippet2>
-
 	}
 }

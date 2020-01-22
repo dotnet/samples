@@ -45,7 +45,6 @@ namespace WorkflowInvokerExample
             BeginInvokeExample();
             //snippet33();
             //snippet34();
-
         }
 
         // Using WorkflowInvoker and WorkflowApplication
@@ -556,7 +555,6 @@ namespace WorkflowInvokerExample
     //        };
     //    }
     //}
-
 }
 
 namespace WorkflowExampleX
@@ -618,7 +616,6 @@ namespace WorkflowInvokerExample2
             Console.WriteLine("{0} / {1} = {2} Remainder {3}",
                 dividend, divisor, outputs["Result"], outputs["Remainder"]);
             //</snippet21>
-
         }
 
         public static void snippet23()
@@ -640,8 +637,6 @@ namespace WorkflowInvokerExample2
             Console.WriteLine("{0} / {1} = {2} Remainder {3}",
                 dividend, divisor, outputs["Result"], outputs["Remainder"]);
             //</snippet23>
-
         }
-
     }
 }

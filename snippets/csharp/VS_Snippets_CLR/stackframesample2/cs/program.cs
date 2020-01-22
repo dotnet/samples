@@ -42,7 +42,6 @@ namespace StackFrameExample
                    st2.ToString());
                 throw e;
             }
-
         }
         private static void Method2( int count)
         {

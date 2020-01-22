@@ -11,7 +11,6 @@ public class Example
    public void SomeMethod([MarshalAs(UnmanagedType.LPStr)] String s)
    // </Snippet2>
    {
-      
    }
 
    // <Snippet3>
