@@ -17,7 +17,7 @@ void OpenApplication(String^ myFavoritesPath)
 // Opens urls and .html documents using Internet Explorer.
 void OpenWithArguments()
 {
-    // url's are not considered documents. They can only be opened
+    // URLs are not considered documents. They can only be opened
     // by passing them as arguments.
     Process::Start("IExplore.exe", "www.northwindtraders.com");
 
