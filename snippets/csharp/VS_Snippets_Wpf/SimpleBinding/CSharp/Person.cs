@@ -1,5 +1,6 @@
 ﻿//<SnippetPersonClass>
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace SDKSample
 {
@@ -29,18 +30,15 @@ namespace SDKSample
           {
               name = value;
               // Call OnPropertyChanged whenever the property is updated
-              OnPropertyChanged("PersonName");
+              OnPropertyChanged();
           }
       }
 
       // Create the OnPropertyChanged method to raise the event
-      protected void OnPropertyChanged(string name)
+      // The calling member's name will be used as the parameter.
+      protected void OnPropertyChanged([CallerMemberName] string name = null)
       {
-          PropertyChangedEventHandler handler = PropertyChanged;
-          if (handler != null)
-          {
-              handler(this, new PropertyChangedEventArgs(name));
-          }
+          PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
       }
   }
 }
