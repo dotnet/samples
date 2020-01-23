@@ -1,5 +1,6 @@
 ﻿'<SnippetPersonClass>
 Imports System.ComponentModel
+Imports System.Runtime.CompilerServices
 
 ' This class implements INotifyPropertyChanged
 ' to support one-way and two-way bindings
@@ -27,12 +28,13 @@ Public Class Person
         Set(ByVal value As String)
             personName = value
             ' Call OnPropertyChanged whenever the property is updated
-            OnPropertyChanged("Name")
+            OnPropertyChanged()
         End Set
     End Property
 
     ' Create the OnPropertyChanged method to raise the event
-    Protected Sub OnPropertyChanged(ByVal name As String)
+    ' Use the name of the member that called this method in place of name
+    Protected Sub OnPropertyChanged(<CallerMemberName> Optional name As String = Nothing)
         RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(name))
     End Sub
 
