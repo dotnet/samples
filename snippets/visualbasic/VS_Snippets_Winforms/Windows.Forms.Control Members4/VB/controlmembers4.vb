@@ -138,7 +138,7 @@ Private Sub treeView1_KeyDown(sender As Object, _
    ' allow the user to edit the TreeNode label. 
    If e.Alt And e.KeyCode = Keys.E Then
       treeView1.LabelEdit = True
-      ' If there is a TreeNode under the mose cursor, begin editing. 
+      ' If there is a TreeNode under the mouse cursor, begin editing. 
       Dim editNode As TreeNode = treeView1.GetNodeAt( _
         treeView1.PointToClient(System.Windows.Forms.Control.MousePosition))
       If (editNode IsNot Nothing) Then
