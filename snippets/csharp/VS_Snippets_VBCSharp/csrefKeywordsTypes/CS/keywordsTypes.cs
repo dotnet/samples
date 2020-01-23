@@ -87,64 +87,49 @@ namespace csrefKeywordsMethodParams
     interface IPoint
     {
        // Property signatures:
-       int x
+       int X
        {
           get;
           set;
        }
 
-       int y
+       int Y
        {
           get;
           set;
+       }
+
+       double Distance 
+       {
+           get;
        }
     }
 
     class Point : IPoint
     {
-       // Fields:
-       private int _x;
-       private int _y;
-
        // Constructor:
        public Point(int x, int y)
        {
-          _x = x;
-          _y = y;
+          X = x;
+          Y = y;
        }
 
        // Property implementation:
-       public int x
-       {
-          get
-          {
-             return _x;
-          }
+       public int X { get; set; }
 
-          set
-          {
-             _x = value;
-          }
-       }
+       public int Y { get; set; }
 
-       public int y
-       {
-          get
-          {
-             return _y;
-          }
-          set
-          {
-             _y = value;
-          }
-       }
+       // Property implementation
+       public double Distance => 
+          Math.Sqrt(X * X + Y * Y);
+       
     }
 
     class MainClass
     {
        static void PrintPoint(IPoint p)
        {
-          Console.WriteLine("x={0}, y={1}", p.x, p.y);
+          Console.WriteLine("x={0}, y={1}", p.X, p.Y);
        }
 
        static void Main()
