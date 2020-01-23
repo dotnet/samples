@@ -181,7 +181,7 @@ private void treeView1_KeyDown(object sender, KeyEventArgs e)
          
    {
       treeView1.LabelEdit = true;
-      // If there is a TreeNode under the mose cursor, begin editing. 
+      // If there is a TreeNode under the mouse cursor, begin editing. 
       TreeNode editNode = treeView1.GetNodeAt(
          treeView1.PointToClient(System.Windows.Forms.Control.MousePosition));
       if(editNode != null)
