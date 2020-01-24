@@ -26,7 +26,7 @@ namespace Federation_Conceptual
 namespace FederationSample
 {
     // <snippet1>
-    public class myServiceAuthorizationManager : ServiceAuthorizationManager 
+    public class myServiceAuthorizationManager : ServiceAuthorizationManager
     {
         // Override the CheckAccess method to enforce access control requirements.
         public override bool CheckAccess(OperationContext operationContext)
@@ -124,7 +124,7 @@ namespace FederationSample
 }
 
 // <snippet2>
-public class STS_B_AuthorizationManager : ServiceAuthorizationManager 
+public class STS_B_AuthorizationManager : ServiceAuthorizationManager
 {
 
     // Override AccessCheck to enforce access control requirements.
@@ -263,7 +263,7 @@ public class STS_B_AuthorizationManager : ServiceAuthorizationManager
     //</snippet4>
 
     // <snippet6>
-    public class myService_M_AuthorizationManager : ServiceAuthorizationManager 
+    public class myService_M_AuthorizationManager : ServiceAuthorizationManager
     {
         // set max size for message
         int someMaxSize = 16000;

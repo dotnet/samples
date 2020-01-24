@@ -1,6 +1,6 @@
 ﻿/************************************* Module Header **************************************\
-* Module Name:	EditingControlHosting
-* Project:		CSWinFormDataGridView
+* Module Name:  EditingControlHosting
+* Project:      CSWinFormDataGridView
 * Copyright (c) Microsoft Corporation.
 * 
 * This sample demonstrates how to host a control in the current DataGridViewCell  for 

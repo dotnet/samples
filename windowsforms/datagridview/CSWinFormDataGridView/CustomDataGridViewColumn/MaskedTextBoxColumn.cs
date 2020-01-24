@@ -1,6 +1,6 @@
 ﻿/********************************* Module Header **********************************\
-* Module Name:	MaskedTextBoxColumn.cs
-* Project:		CSWinFormDataGridView
+* Module Name:  MaskedTextBoxColumn.cs
+* Project:      CSWinFormDataGridView
 * Copyright (c) Microsoft Corporation.
 * 
 * This sample demonstrates how to create a custom DataGridView column.

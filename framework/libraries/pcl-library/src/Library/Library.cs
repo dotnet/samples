@@ -8,15 +8,15 @@
 
 namespace Library
 {
-	public static class PCL329CompatLibrary
-	{
-		public static void Foo()
-		{
+    public static class PCL329CompatLibrary
+    {
+        public static void Foo()
+        {
 #if !PORTABLE259
-			// Using a .NET Core library unavailable to PCL Profile 329
+            // Using a .NET Core library unavailable to PCL Profile 329
 #else
-			// Need to use a PCL Profile 329-compatible library here.
+            // Need to use a PCL Profile 329-compatible library here.
 #endif
-		}
-	}
+        }
+    }
 }

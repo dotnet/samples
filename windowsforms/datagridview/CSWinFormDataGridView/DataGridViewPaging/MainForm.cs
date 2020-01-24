@@ -1,6 +1,6 @@
 ﻿/********************************* Module Header **********************************\
-* Module Name:	DataGridViewPaging
-* Project:		CSWinFormDataGridView
+* Module Name:  DataGridViewPaging
+* Project:      CSWinFormDataGridView
 * Copyright (c) Microsoft Corporation.
 * 
 * This sample demonstrates how to page data in the  DataGridView control;

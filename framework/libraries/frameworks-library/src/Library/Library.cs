@@ -2,8 +2,8 @@
 
 namespace FrameworkLibraries
 {
-	public static class Library
-	{
-		public static string Foo => "Hello, World!";
-	}
+    public static class Library
+    {
+        public static string Foo => "Hello, World!";
+    }
 }
