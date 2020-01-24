@@ -553,3 +553,43 @@ namespace Wrap15
     }
     //</Snippet15>
 }
+
+//-----------------------------------------------------------------------------
+namespace Wrap16
+{
+    //<Snippet16>
+    // compile with: -doc:DocFileName.xml 
+
+    /// <summary>
+    /// You may have some primary information about this class.
+    /// </summary>
+    public class MainClass
+    {
+    }
+
+    ///<inheritdoc/>
+    public class TestClass: MainClass
+    {
+    }
+    //</Snippet16>
+}
+
+//-----------------------------------------------------------------------------
+namespace Wrap17
+{
+    //<Snippet17>
+    // compile with: -doc:DocFileName.xml 
+
+    /// <summary>
+    /// You may have some primary information about this interface.
+    /// </summary>
+    public interface TestInterface
+    {
+    }
+
+    ///<inheritdoc cref="TestInterface"/>
+    public class TestClass : TestInterface
+    {
+    }
+    //</Snippet17>
+}
