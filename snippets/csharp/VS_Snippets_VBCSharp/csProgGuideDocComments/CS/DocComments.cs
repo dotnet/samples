@@ -357,6 +357,11 @@ namespace Wrap11
     /// </summary>
     /// <typeparam name="T"></typeparam>
     class C<T> { }
+    
+    class Program
+    {
+        static void Main() { }
+    }
     //</Snippet11>
 }
 
