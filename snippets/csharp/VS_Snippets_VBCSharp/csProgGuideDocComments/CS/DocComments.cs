@@ -583,7 +583,7 @@ namespace Wrap17
     /// <summary>
     /// You may have some primary information about this interface.
     /// </summary>
-    public interface TestInterface
+    public interface ITestInterface
     {
     }
 
