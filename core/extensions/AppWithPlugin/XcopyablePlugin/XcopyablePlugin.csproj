@@ -12,6 +12,7 @@
   <ItemGroup>
     <ProjectReference Include="..\PluginBase\PluginBase.csproj">
       <Private>false</Private>
+      <ExcludeAssets>runtime</ExcludeAssets>
     </ProjectReference>
   </ItemGroup>
 </Project>
