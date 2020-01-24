@@ -588,7 +588,7 @@ namespace Wrap17
     }
 
     ///<inheritdoc cref="ITestInterface"/>
-    public class TestClass : TestInterface
+    public class TestClass : ITestInterface
     {
     }
     //</Snippet17>
