@@ -4,7 +4,7 @@ using System;
 using System.Web.Services;
 using System.Web.Services.Protocols;
 
-// <Snippet1>
+<!-- <Snippet1> -->
 // Binding is defined in this XML Web service and uses the default namespace.
  [ WebServiceBinding(Name="LocalBinding")]
  public class BindingSample  {
@@ -17,5 +17,5 @@ using System.Web.Services.Protocols;
 
  }
    
-// </Snippet1>
+<!-- </Snippet1> -->
 
