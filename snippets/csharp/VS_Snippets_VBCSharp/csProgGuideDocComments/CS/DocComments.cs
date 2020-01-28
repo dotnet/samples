@@ -357,6 +357,11 @@ namespace Wrap11
     /// </summary>
     /// <typeparam name="T"></typeparam>
     class C<T> { }
+    
+    class Program
+    {
+        static void Main() { }
+    }
     //</Snippet11>
 }
 
@@ -552,4 +557,44 @@ namespace Wrap15
         int InterfaceMethod(int n);
     }
     //</Snippet15>
+}
+
+//-----------------------------------------------------------------------------
+namespace Wrap16
+{
+    //<Snippet16>
+    // compile with: -doc:DocFileName.xml 
+
+    /// <summary>
+    /// You may have some primary information about this class.
+    /// </summary>
+    public class MainClass
+    {
+    }
+
+    ///<inheritdoc/>
+    public class TestClass: MainClass
+    {
+    }
+    //</Snippet16>
+}
+
+//-----------------------------------------------------------------------------
+namespace Wrap17
+{
+    //<Snippet17>
+    // compile with: -doc:DocFileName.xml 
+
+    /// <summary>
+    /// You may have some primary information about this interface.
+    /// </summary>
+    public interface ITestInterface
+    {
+    }
+
+    ///<inheritdoc cref="ITestInterface"/>
+    public class TestClass : ITestInterface
+    {
+    }
+    //</Snippet17>
 }
