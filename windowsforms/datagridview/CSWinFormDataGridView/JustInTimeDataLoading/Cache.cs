@@ -1,6 +1,6 @@
 ﻿/************************************* Module Header **************************************\
-* Module Name:	JustInTimeDataLoading.Cache 
-* Project:		CSWinFormDataGridView
+* Module Name:  JustInTimeDataLoading.Cache 
+* Project:      CSWinFormDataGridView
 * Copyright (c) Microsoft Corporation.
 * 
 * 

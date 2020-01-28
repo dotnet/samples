@@ -1,6 +1,6 @@
 ﻿/************************************* Module Header **************************************\
-* Module Name:	MultipleLayeredColumnHeader
-* Project:		CSWinFormDataGridView
+* Module Name:  MultipleLayeredColumnHeader
+* Project:      CSWinFormDataGridView
 * Copyright (c) Microsoft Corporation.
 * 
 * 

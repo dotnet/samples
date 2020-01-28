@@ -1,6 +1,6 @@
 ﻿/********************************* Module Header **********************************\
-* Module Name:	JustInTimeDataLoading
-* Project:		CSWinFormDataGridView
+* Module Name:  JustInTimeDataLoading
+* Project:      CSWinFormDataGridView
 * Copyright (c) Microsoft Corporation.
 * 
 * This sample demonstrates how to use virtual mode in the DataGridView control 

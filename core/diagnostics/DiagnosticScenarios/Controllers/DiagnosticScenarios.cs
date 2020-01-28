@@ -28,14 +28,14 @@ namespace testwebapi.Controllers
             Thread.Sleep(5000);
 
             var threads = new Thread[300];
-            for(int i = 0; i < 300; i++)
+            for (int i = 0; i < 300; i++)
             {
                 (threads[i] = new Thread(() => {
-                    lock (o1) {Thread.Sleep(100);}
+                    lock (o1) { Thread.Sleep(100); }
                 })).Start();
             }
 
-            foreach(Thread thread in threads)
+            foreach (Thread thread in threads)
             {
                 thread.Join();
             }
@@ -63,21 +63,21 @@ namespace testwebapi.Controllers
             var watch = new Stopwatch();
             watch.Start();
 
-            while(true)
+            while (true)
             {
                 p = new Processor();
                 watch.Stop();
-                if(watch.ElapsedMilliseconds > seconds*1000)
+                if (watch.ElapsedMilliseconds > seconds * 1000)
                     break;
                 watch.Start();
 
                 int it = (2000 * 1000);
-                for(int i = 0; i < it; i++)
+                for (int i = 0; i < it; i++)
                 {
                     p.ProcessTransaction(new Customer(Guid.NewGuid().ToString()));
                 }
 
-                Thread.Sleep(5000);	// Sleep for 5 seconds before cleaning up
+                Thread.Sleep(5000); // Sleep for 5 seconds before cleaning up
 
                 // Cleanup
                 p = null;
@@ -87,7 +87,7 @@ namespace testwebapi.Controllers
                 GC.WaitForPendingFinalizers();
                 GC.Collect();
 
-                Thread.Sleep(5000);	// Sleep for 5 seconds before spiking memory again
+                Thread.Sleep(5000); // Sleep for 5 seconds before spiking memory again
             }
             return "success:memspike";
         }
@@ -97,7 +97,7 @@ namespace testwebapi.Controllers
         public ActionResult<string> memleak(int kb)
         {
             int it = (kb * 1000) / 100;
-            for(int i = 0; i < it; i++)
+            for (int i = 0; i < it; i++)
             {
                 p.ProcessTransaction(new Customer(Guid.NewGuid().ToString()));
             }
@@ -121,10 +121,10 @@ namespace testwebapi.Controllers
 
             while (true)
             {
-                 watch.Stop();
-                 if(watch.ElapsedMilliseconds > milliseconds)
-                     break;
-                 watch.Start();
+                watch.Stop();
+                if (watch.ElapsedMilliseconds > milliseconds)
+                    break;
+                watch.Start();
             }
 
             return "success:highcpu";

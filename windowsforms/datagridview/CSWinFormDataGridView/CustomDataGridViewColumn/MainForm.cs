@@ -1,6 +1,6 @@
 ﻿/************************************* Module Header **************************************\
-* Module Name:	MaskedTextBoxColumn.cs
-* Project:		CSWinFormDataGridView
+* Module Name:  MaskedTextBoxColumn.cs
+* Project:      CSWinFormDataGridView
 * Copyright (c) Microsoft Corporation.
 * 
 * This sample demonstrates the use of custom column definitions within the Windows Forms 
