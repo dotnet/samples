@@ -19,7 +19,7 @@ using System.ServiceModel.Security;
 namespace Microsoft.ServiceModel.Samples
 {
     // Define a service contract.
-    [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
+    [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]
     public interface ICalculator
     {
         [OperationContract]
@@ -34,8 +34,8 @@ namespace Microsoft.ServiceModel.Samples
 
     // Service class which implements the service contract.
     // Added code to write output to the console window
-	[ServiceBehavior(IncludeExceptionDetailInFaults=true)]
-	
+    [ServiceBehavior(IncludeExceptionDetailInFaults = true)]
+
     public class CalculatorService : ICalculator
     {
         public double Add(double n1, double n2)
@@ -43,7 +43,7 @@ namespace Microsoft.ServiceModel.Samples
             double result = n1 + n2;
             Console.WriteLine("Received Add({0},{1})", n1, n2);
             Console.WriteLine("Return: {0}", result);
-			return result;
+            return result;
         }
 
         public double Subtract(double n1, double n2)
@@ -72,16 +72,16 @@ namespace Microsoft.ServiceModel.Samples
 
         public class MyServiceAuthorizationManager : ServiceAuthorizationManager
         {
- 
-           protected override bool CheckAccessCore(OperationContext operationContext)
-            {                
+
+            protected override bool CheckAccessCore(OperationContext operationContext)
+            {
                 // Extract the action URI from the OperationContext. Match this against the claims
                 // in the AuthorizationContext.
                 string action = operationContext.RequestContext.RequestMessage.Headers.Action;
                 Console.WriteLine("action: {0}", action);
 
                 // Iterate through the various claimsets in the AuthorizationContext.
-                foreach(ClaimSet cs in 
+                foreach (ClaimSet cs in
                    operationContext.ServiceSecurityContext.AuthorizationContext.ClaimSets)
                 {
                     // Examine only those claim sets issued by System.
@@ -100,9 +100,9 @@ namespace Microsoft.ServiceModel.Samples
                         }
                     }
                 }
-                
+
                 // If we get here, return false, denying access.
-                return false;                 
+                return false;
             }
         }
 
@@ -112,7 +112,7 @@ namespace Microsoft.ServiceModel.Samples
 
             public MyAuthorizationPolicy()
             {
-                id =  Guid.NewGuid().ToString();
+                id = Guid.NewGuid().ToString();
             }
 
             // 
@@ -149,13 +149,13 @@ namespace Microsoft.ServiceModel.Samples
                             foreach (string s in GetAllowedOpList(c.Resource.ToString()))
                             {
                                 // Add claims to the list.
-                                claims.Add(new Claim("http://example.org/claims/allowedoperation", 
+                                claims.Add(new Claim("http://example.org/claims/allowedoperation",
                                  s, Rights.PossessProperty));
                                 Console.WriteLine("Claim added {0}", s);
                             }
 
                     // Add claims to the evaluation context.
-                    evaluationContext.AddClaimSet(this, new DefaultClaimSet(this.Issuer,claims));
+                    evaluationContext.AddClaimSet(this, new DefaultClaimSet(this.Issuer, claims));
 
                     // Record that claims have been added.
                     customstate.ClaimsAdded = true;
@@ -188,17 +188,17 @@ namespace Microsoft.ServiceModel.Samples
             private IEnumerable<string> GetAllowedOpList(string username)
             {
                 IList<string> ret = new List<string>();
-            
+
                 if (username == "test1")
                 {
-                    ret.Add ( "http://Microsoft.ServiceModel.Samples/ICalculator/Add");
-                    ret.Add ("http://Microsoft.ServiceModel.Samples/ICalculator/Multiply");
+                    ret.Add("http://Microsoft.ServiceModel.Samples/ICalculator/Add");
+                    ret.Add("http://Microsoft.ServiceModel.Samples/ICalculator/Multiply");
                     ret.Add("http://Microsoft.ServiceModel.Samples/ICalculator/Subtract");
                 }
                 else if (username == "test2")
                 {
-                    ret.Add ( "http://Microsoft.ServiceModel.Samples/ICalculator/Add");
-                    ret.Add ("http://Microsoft.ServiceModel.Samples/ICalculator/Subtract");
+                    ret.Add("http://Microsoft.ServiceModel.Samples/ICalculator/Add");
+                    ret.Add("http://Microsoft.ServiceModel.Samples/ICalculator/Subtract");
                 }
                 return ret;
             }
@@ -213,8 +213,11 @@ namespace Microsoft.ServiceModel.Samples
                     bClaimsAdded = false;
                 }
 
-                public bool ClaimsAdded { get { return bClaimsAdded; } 
-                                          set {  bClaimsAdded = value; } }
+                public bool ClaimsAdded
+                {
+                    get { return bClaimsAdded; }
+                    set { bClaimsAdded = value; }
+                }
             }
         }
 
@@ -246,16 +249,16 @@ namespace Microsoft.ServiceModel.Samples
         {
             // Get base address from app settings in configuration
             Uri baseAddress = new Uri(ConfigurationManager.AppSettings["baseAddress"]);
-            
+
             // Create a ServiceHost for the CalculatorService type and provide the base address.
             using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress))
             {
                 // Open the ServiceHostBase to create listeners and start listening for messages.
                 serviceHost.Open();
-				
+
                 // The service can now be accessed.
                 Console.WriteLine("The service is ready.");
-				Console.WriteLine("The service is running in the following account: {0}", WindowsIdentity.GetCurrent().Name);
+                Console.WriteLine("The service is running in the following account: {0}", WindowsIdentity.GetCurrent().Name);
                 Console.WriteLine("Press <ENTER> to terminate service.");
                 Console.WriteLine();
                 Console.ReadLine();

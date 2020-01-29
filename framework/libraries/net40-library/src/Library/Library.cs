@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Library
 {
-	public class Net40CompatLibrary
+    public class Net40CompatLibrary
     {
 #if NET40
         private readonly WebClient _client = new WebClient();
