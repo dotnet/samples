@@ -1,5 +1,4 @@
-﻿<!-- <Snippet3> -->
-<%@ Page Language="VB" AutoEventWireup="false" 
+﻿<%@ Page Language="VB" AutoEventWireup="false" 
 CodeFile="GetTable.aspx.vb" 
 Inherits="GetTable" %>
 
@@ -34,4 +33,3 @@ Inherits="GetTable" %>
         ContextTypeName="AdventureWorksLTDataContext" >
       </asp:LinqDataSource>
 </body>
-<!-- </Snippet3> -->
