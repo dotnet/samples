@@ -67,7 +67,7 @@ namespace Coding_Conventions_Examples
             {
                 manyPhrases.Append(phrase);
             }
-            //Console.WriteLine("tra" + manyPhrases);
+            //Console.WriteLine($"tra{manyPhrases}");
             //</snippet7>
 
             //<snippet8>
