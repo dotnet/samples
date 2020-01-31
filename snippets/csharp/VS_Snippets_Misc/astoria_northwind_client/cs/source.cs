@@ -992,19 +992,28 @@ namespace NorthwindClient
                         DataServiceQueryContinuation<Order> nextOrdersLink = 
                             response.GetContinuation(c.Orders);
 
+                        // Print Orders in the first page
+                        foreach (Order o in c.Orders)
+                        {
+                            // Print out the orders.
+                            Console.WriteLine("\t\tOrderID: {0} - Freight: ${1}",
+                                o.OrderID, o.Freight);
+                        }
+
                         //<snippetLoadNextOrdersLink>
                         while (nextOrdersLink != null)
                         {
-                            foreach (Order o in c.Orders)
+                            // Load the next page of Orders.
+                            var ordersResponse = context.LoadProperty(c, "Orders", nextOrdersLink);
+                            nextOrdersLink = ordersResponse.GetContinuation();
+
+                            // Print orders in subsequent pages
+                            foreach (Order o in ordersResponse)
                             {
                                 // Print out the orders.
                                 Console.WriteLine("\t\tOrderID: {0} - Freight: ${1}",
                                     o.OrderID, o.Freight);
                             }
-
-                            // Load the next page of Orders.
-                            var ordersResponse = context.LoadProperty(c, "Orders", nextOrdersLink);
-                            nextOrdersLink = ordersResponse.GetContinuation();
                         }
                         //</snippetLoadNextOrdersLink>
                     }
