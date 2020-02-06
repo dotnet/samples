@@ -128,26 +128,23 @@ namespace HowToStrings
             // </Snippet6>
         }
 
-        private static void UnsafeSample()
+        private static void UsingStringCreate()
         {
             // <Snippet7>
-            unsafe
+            // constructing a string from a char array, prefix it with some additional characters
+            char[] chars = { 'a', 'b', 'c', 'd', '\0' };
+            int length = chars.Length + 2;
+            string result = string.Create (length, chars, (Span<char> strContent, char[] charArray) = >
             {
-                // Compiler will store (intern) 
-                // these strings in same location.
-                string helloOne = "Hello";
-                string helloTwo = "Hello";
-
-                // Change one string using unsafe code.
-                fixed (char* p = helloOne)
-                {
-                    p[0] = 'C';
-                }
-
-                //  Both strings have changed.
-                Console.WriteLine(helloOne);
-                Console.WriteLine(helloTwo);
-            }
+	            strContent[0] = '0';
+	            strContent[1] = '1';
+	            for (int i = 0; i < charArray.Length; i++)
+	            {
+		            strContent[i + 2] = charArray[i];
+	            }
+            });
+            
+            Console.WriteLine(result);
             // </Snippet7>
         }
     }
