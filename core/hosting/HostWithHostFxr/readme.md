@@ -50,6 +50,9 @@ Hello, world! from Lib [count: 2]
 Hello, world! from Lib [count: 3]
 -- message: from host!
 -- number: 2
+Hello, world! from CustomEntryPoint in Lib
+-- message: from host!
+-- number: -1
 ```
 
 Note: The way the sample is built is relatively complicated. The goal is that it's possible to build and run the sample with simple `dotnet run` with minimal requirements on pre-installed tools. Typically, real-world projects that have both managed and native components will use different build systems for each; for example, msbuild/dotnet for managed and CMake for native.
