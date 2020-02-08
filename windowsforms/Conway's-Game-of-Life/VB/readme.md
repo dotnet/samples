@@ -6,7 +6,7 @@ products:
 - windows
 page_type: sample
 name: ".NET Core Windows Forms Conway's Game Of Life (Visual Basic)"
-urlFragment: "ConwaysGameOfLife-vb"
+urlFragment: "Conway's-Game-of-Life-vb"
 description: "The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970."
 ---
 # Conway's Game of Life
