@@ -1,4 +1,4 @@
-# .NET Core 3.0 Windows Forms Samples
+# .NET Core 3.1 Windows Forms Samples
 
 With [.NET Core 3.1](https://github.com/dotnet/core-sdk#installers-and-binaries), you can build Windows Forms applications.
 
