@@ -5,7 +5,7 @@ products:
 - dotnet-core
 - windows
 page_type: sample
-name: ".NET Core WinForms Sudoku (Visual Basic)"
+name: ".NET Core Windows Forms Sudoku (Visual Basic)"
 urlFragment: "sudoku-vb"
 description: "Sudoku is a number puzzle game, played on a nine by nine cell grid"
 ---
@@ -13,7 +13,7 @@ description: "Sudoku is a number puzzle game, played on a nine by nine cell grid
 
 ## Requires
 
-- Visual Studio 2019 Version 16.5.0 Preview 1.0 or later to edit the GUI in the solution designer and you need to enable the designer in the Visual Studio Preview. Go to Tools > Options > Environment > Preview Features and select the Use the preview Windows Forms designer for .NET Core apps option.
+- Visual Studio 2019 Version 16.5.0 Preview 2.0 or later to edit the GUI in the solution designer and you need to enable the designer in the Visual Studio Preview. Go to **Tools** > **Options** > **Environment** > **Preview Features** and select the **Use the preview Windows Forms designer for .NET Core apps** option.
 - .NET Core 3.1
 
 ## License
@@ -35,9 +35,9 @@ description: "Sudoku is a number puzzle game, played on a nine by nine cell grid
 
 ## Description
 
-![Sudoku image](Sudoku-VB.jpg)
+This Windows Forms sample was ported to .NET Core from a [previous .NET Framework 4.5 sample](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Sudoku).
 
-[Online JavaScript version](http://www.scproject.biz/sudoku.php).
+![Sudoku image](Sudoku-VB.jpg)
 
 Sudoku is a number puzzle game, played on a nine by nine cell grid. Within that grid, there are nine sub-regions consisting of three cells by three cells. In this version, there are three levels of difficulty, which are Most clues, Medium clues, and Least clues.
 
