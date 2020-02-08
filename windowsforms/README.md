@@ -1,6 +1,6 @@
 # .NET Core 3.0 Windows Forms Samples
 
-Beginning with [.NET Core 3.0](https://github.com/dotnet/core-sdk#installers-and-binaries), you can build Windows Forms applications.
+With [.NET Core 3.1](https://github.com/dotnet/core-sdk#installers-and-binaries), you can build Windows Forms applications.
 
 ## Why build WinForms applications on top of .NET Core
 
@@ -27,7 +27,7 @@ If you're new to .NET Core, here are a few resources to help you understand the 
 
 ### Prerequisites and getting the tools
 
-Install Visual Studio 2019 Version 16.4.2 or later preview from [https://visualstudio.microsoft.com/vs/preview](https://visualstudio.microsoft.com/vs/preview), selecting the **.NET desktop development** workload with the options: **.NET Framework 4.7.2 development tools** and **.NET Core 3.1 development tools**.
+Visual Studio 2019 Version 16.5.0 Preview 2.0 or later from <https://visualstudio.microsoft.com/vs/preview>, selecting the **.NET desktop development** workload with the options: **.NET Framework 4.7.2 development tools** and **.NET Core 3.1 development tools**.
 
 Install the latest [.NET Core 3.1 SDK released or daily build](https://aka.ms/netcore3sdk) available in the [dotnet/code-sdk repo](https://github.com/dotnet/core-sdk).
 
@@ -47,6 +47,10 @@ cd MyWinFormsApp
 dotnet build
 dotnet run
 ```
+
+### Enable WinForms designers
+
+The WinForms designer for .NET Core 3 in Visual Studio is in preview and must be enabled. To enable the designergo to **Tools** > **Options** > **Environment** > **Preview Features** and select the **Use the preview Windows Forms designer for .NET Core apps** option.
 
 ## Porting existing applications
 
@@ -103,7 +107,7 @@ Visual Studio does not yet support designers and custom tools for .NET Core desk
 
 ## Filing issues and getting help
 
-You can file WinForms and WPF related issues in the [dotnet/core repo](https://github.com/dotnet/core/issues). If you are trying out WPF or WinForms development on top of .NET Core 3.0 and get stuck or have questions, please reach out to netcore3modernize@microsoft.com.
+You can file WinForms and WPF related issues in the [dotnet/core repo](https://github.com/dotnet/core/issues). If you are trying out WPF or WinForms development on top of .NET Core 3.1 and get stuck or have questions, please reach out to netcore3modernize@microsoft.com.
 
 ### Known issues
 
