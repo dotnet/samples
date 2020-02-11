@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 public class Form1:
 	System.Windows.Forms.Form
@@ -30,21 +31,13 @@ public class Form1:
 	// Computes a week one month from today.
 	private void ShowAWeeksVacationOneMonthFromToday()
 	{
-		System.DateTime today = this.MonthCalendar1.TodayDate;
-		int vacationMonth = today.Month + 1;
-		int vacationYear = today.Year;
-
-		if (today.Month == 12)
-		{
-			vacationMonth = 1;
-			++vacationYear;
-		}
+		DateTime today = this.MonthCalendar1.TodayDate;
+		DateTime vacationStart = today.AddMonths(1);
+		DateTime vacationEnd = vacationStart.AddDays(7);
 
 		// Select the week using SelectionStart and SelectionEnd.
-		this.MonthCalendar1.SelectionStart = 
-			new System.DateTime(today.Year, vacationMonth, today.Day-1);
-		this.MonthCalendar1.SelectionEnd = 
-			new System.DateTime(today.Year, vacationMonth, today.Day+6);
+		this.MonthCalendar1.SelectionStart = vacationStart.AddDays(-1);
+		this.MonthCalendar1.SelectionEnd = vacationEnd.AddDays(-1);
 	}
 	//</snippet1>
 	public static void Main()

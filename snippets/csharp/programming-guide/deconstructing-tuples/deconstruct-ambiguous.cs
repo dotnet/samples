@@ -15,9 +15,11 @@ public class Person
         fname = FirstName;
         mname = MiddleName;
         lname = LastName;
-        age = DateTime.Now.Year - DateOfBirth.Year;
 
-        if (DateTime.Now.DayOfYear - (new DateTime(DateTime.Now.Year, DateOfBirth.Month, DateOfBirth.Day)).DayOfYear < 0)
+        // calculate the person's age
+        var today = DateTime.Today;
+        age = today.Year - DateOfBirth.Year;
+        if (DateOfBirth.Date > today.AddYears(-age))
             age--;
     }
 
