@@ -1,11 +1,11 @@
-﻿// <Snippet5>
-using System;
+﻿using System;
 using System.Globalization;
 
 public class Example
 {
    public static void Main()
    {
+      // <Snippet5>
       // Get all custom cultures.
       CultureInfo[] custom = CultureInfo.GetCultures(CultureTypes.UserCustomCulture);
       if (custom.Length == 0) { 
@@ -29,12 +29,13 @@ public class Example
             Console.WriteLine("   {0} -- {1}", culture.Name, culture.DisplayName);    
       }
       Console.WriteLine();
+
+      // The example displays output like the following:
+      //     Custom cultures:
+      //        x-en-US-sample -- English (United States)
+      //        fj-FJ -- Boumaa Fijian (Viti)
+      //     
+      //     There are no replacement cultures.
+      // </Snippet5>
    }
 }
-// The example displays output like the following:
-//     Custom cultures:
-//        x-en-US-sample -- English (United States)
-//        fj-FJ -- Boumaa Fijian (Viti)
-//     
-//     There are no replacement cultures.
-// </Snippet5>

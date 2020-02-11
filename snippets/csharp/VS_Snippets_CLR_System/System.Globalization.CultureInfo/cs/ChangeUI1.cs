@@ -1,11 +1,11 @@
-﻿// <Snippet4>
-using System;
+﻿using System;
 using System.Globalization;
 
 public class Example
 {
    public static void Main()
    {
+      // <Snippet4>
       CultureInfo current = CultureInfo.CurrentUICulture;
       Console.WriteLine("The current UI culture is {0}", current.Name);
       CultureInfo newUICulture;
@@ -17,9 +17,10 @@ public class Example
       CultureInfo.CurrentUICulture = newUICulture;
       Console.WriteLine("The current UI culture is now {0}", 
                         CultureInfo.CurrentUICulture.Name);   
+
+      // The example displays output like the following:
+      //     The current UI culture is en-US
+      //     The current UI culture is now sl-SI
+      // </Snippet4>
    }
 }
-// The example displays output like the following:
-//     The current UI culture is en-US
-//     The current UI culture is now sl-SI
-// </Snippet4>
