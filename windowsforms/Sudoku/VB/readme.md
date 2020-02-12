@@ -35,7 +35,7 @@ description: "Sudoku is a number puzzle game, played on a nine by nine cell grid
 
 ## Description
 
-This Windows Forms sample was ported to .NET Core from a [previous .NET Framework 4.5 sample](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Sudoku).
+This Windows Forms sample was ported to .NET Core 3.1 from a [previous .NET Framework 4.5 sample](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Sudoku).
 
 ![Sudoku image](Sudoku-VB.jpg)
 
