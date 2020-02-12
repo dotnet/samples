@@ -1,11 +1,11 @@
-﻿// <Snippet1>
-using System;
+﻿using System;
 using System.Text;
 
 class Example
 {
    static void Main()
    {
+      // <Snippet1>
       string unicodeString = "This string contains the unicode character Pi (\u03a0)";
 
       // Create two different encodings.
@@ -26,9 +26,10 @@ class Example
       // Display the strings created before and after the conversion.
       Console.WriteLine("Original string: {0}", unicodeString);
       Console.WriteLine("Ascii converted string: {0}", asciiString);
+
+      // The example displays the following output:
+      //    Original string: This string contains the unicode character Pi (Π)
+      //    Ascii converted string: This string contains the unicode character Pi (?)
+      // </Snippet1>
    }
 }
-// The example displays the following output:
-//    Original string: This string contains the unicode character Pi (Π)
-//    Ascii converted string: This string contains the unicode character Pi (?)
-// </Snippet1>
