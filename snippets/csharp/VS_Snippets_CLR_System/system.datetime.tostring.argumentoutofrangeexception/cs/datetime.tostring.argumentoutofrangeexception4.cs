@@ -1,11 +1,11 @@
-﻿// <Snippet4>
-using System;
+﻿using System;
 using System.Globalization;
 
 public class Example
 {
    public static void Main()
    {
+      // <Snippet4>
       CultureInfo arSA = new CultureInfo("ar-SA");
       arSA.DateTimeFormat.Calendar = new UmAlQuraCalendar(); 
       DateTime date1 = new DateTime(1890, 9, 10);
@@ -19,8 +19,9 @@ public class Example
                            arSA.DateTimeFormat.Calendar.MinSupportedDateTime,  
                            arSA.DateTimeFormat.Calendar.MaxSupportedDateTime); 
       }
+
+      // The example displays the following output:
+      //    09/10/1890 is earlier than 04/30/1900 or later than 11/16/2077
+      // </Snippet4>
    }
 }
-// The example displays the following output:
-//    9/10/1890 is earlier than 4/30/1900 or later than 5/13/2029
-// </Snippet4>

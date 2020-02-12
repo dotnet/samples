@@ -5,7 +5,7 @@ namespace CompareTo
     class Class1
     {
         static void Main(string[] args)
-	{
+	     {
             // <Snippet1>
             System.DateTime theDay = new System.DateTime(System.DateTime.Today.Year, 7, 28);
             int compareValue;

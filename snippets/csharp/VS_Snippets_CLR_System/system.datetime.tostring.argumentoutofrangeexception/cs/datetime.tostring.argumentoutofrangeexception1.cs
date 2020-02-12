@@ -1,11 +1,11 @@
-﻿// <Snippet1>
-using System;
+﻿using System;
 using System.Globalization;
 
 public class Example
 {
    public static void Main()
    {
+      // <Snippet1>
       CultureInfo jaJP = new CultureInfo("ja-JP");
       jaJP.DateTimeFormat.Calendar = new JapaneseCalendar(); 
       DateTime date1 = new DateTime(1867, 1, 1);
@@ -19,8 +19,9 @@ public class Example
                            jaJP.DateTimeFormat.Calendar.MinSupportedDateTime,  
                            jaJP.DateTimeFormat.Calendar.MaxSupportedDateTime); 
       }
+
+      // The example displays the following output:
+      //    1/1/1867 is earlier than 9/8/1868 or later than 12/31/9999   }
+      // </Snippet1>
    }
 }
-// The example displays the following output:
-//    1/1/1867 is earlier than 9/8/1868 or later than 12/31/9999   }
-// </Snippet1>
