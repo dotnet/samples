@@ -29,6 +29,10 @@ namespace builtin_types
             Console.WriteLine("============ Value types =========");
             ValueTypes.Examples();
             Console.WriteLine();
+
+            Console.WriteLine("============= void type ==========");
+            VoidType.Examples();
+            Console.WriteLine();
         }
     }
 }
