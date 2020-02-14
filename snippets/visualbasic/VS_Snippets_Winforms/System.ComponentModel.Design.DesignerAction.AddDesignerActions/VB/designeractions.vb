@@ -1,7 +1,7 @@
 ﻿
 '<snippet1>
 '///////////////////////////////////////////////////////////////////
-'Pull model smart tag example.
+'Pull model designer action example.
 'Need references to System.dll, System.Windows.Forms.dll, 
 ' System.Design.dll, and System.Drawing.dll.
 '///////////////////////////////////////////////////////////////////
@@ -13,7 +13,7 @@ Imports System.Windows.Forms
 Imports System.Text
 Imports System.Reflection
 
-Namespace SmartTags
+Namespace DesignerActions
 
     Public Class Form1
         Inherits System.Windows.Forms.Form
@@ -104,8 +104,8 @@ Namespace SmartTags
     End Class
     
     '///////////////////////////////////////////////////////////////
-    'Designer for the ColorLabel control with support for a smart 
-    ' tag panel.
+    'Designer for the ColorLabel control with support for a designer 
+    ' action panel.
     '///////////////////////////////////////////////////////////////
     'Must add reference to System.Design.dll
     <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Demand, Name:="FullTrust")> _
@@ -116,7 +116,7 @@ Namespace SmartTags
         Private lists As DesignerActionListCollection
         '</snippet8>
 
-        'Use pull model to populate smart tag menu.
+        'Use pull model to populate designer action menu.
         '<snippet9>
         Public Overrides ReadOnly Property ActionLists() _
         As DesignerActionListCollection
@@ -133,7 +133,7 @@ Namespace SmartTags
     End Class
     
     '///////////////////////////////////////////////////////////////
-    'DesignerActionList-derived class defines smart tag entries and
+    'DesignerActionList-derived class defines designer action entries and
     ' resultant actions.
     '///////////////////////////////////////////////////////////////
     '<snippet2>
@@ -150,7 +150,7 @@ Namespace SmartTags
         '</snippet10>
 
         'The constructor associates the control 
-        'with the smart tag list.
+        'with the designer action list.
         '<snippet4>
         Public Sub New(ByVal component As IComponent)
 
@@ -244,7 +244,7 @@ Namespace SmartTags
         End Sub
         '</snippet6>
 
-        'Implementation of this virtual method creates smart tag  
+        'Implementation of this virtual method creates designer action  
         ' items, associates their targets, and collects into list.
         '<snippet7>
         Public Overrides Function GetSortedActionItems() _

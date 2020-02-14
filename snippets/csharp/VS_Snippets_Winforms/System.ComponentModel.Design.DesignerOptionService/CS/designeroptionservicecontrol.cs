@@ -159,9 +159,9 @@ namespace DesignerOptionServiceExample
                     new SolidBrush(Color.Black), 200, ypos);
                 ypos += 12;
 
-                // Obtains and shows whether smart tags are automatically opened.
+                // Obtains and shows whether designer actions are automatically opened.
                 pd = designerOptionSvc.Options.Properties["ObjectBoundSmartTagAutoShow"];
-                e.Graphics.DrawString("Automatically Open Smart Tags",
+                e.Graphics.DrawString("Automatically Open Designer Actions",
                     new Font("Arial", 8),
                     new SolidBrush(Color.Black), 4, ypos);
                 e.Graphics.DrawString(pd.GetValue(null).ToString(),
