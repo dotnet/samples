@@ -1,10 +1,10 @@
-﻿'Types:System.IO.ErrorEventHandler Vendor: Richter
-'Types:System.IO.FileSystemEventArgs Vendor: Richter
-'Types:System.IO.FileSystemEventHandler Vendor: Richter
-'Types:System.IO.InternalBufferOverflowException Vendor: Richter
-'Types:System.IO.RenamedEventArgs Vendor: Richter
-'Types:System.IO.RenamedEventHandler Vendor: Richter
-'Types:System.IO.WatcherChangeTypes Vendor: Richter
+﻿'Types:System.IO.ErrorEventHandler
+'Types:System.IO.FileSystemEventArgs
+'Types:System.IO.FileSystemEventHandler
+'Types:System.IO.InternalBufferOverflowException
+'Types:System.IO.RenamedEventArgs
+'Types:System.IO.RenamedEventHandler
+'Types:System.IO.WatcherChangeTypes
 '<snippet1>
 Imports System.IO
 

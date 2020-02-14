@@ -1,4 +1,4 @@
-﻿'Types:System.AppDomain,System.AppDomainSetup Vendor: Richter
+﻿'Types:System.AppDomain,System.AppDomainSetup
 '<snippet1>
 Imports System.Reflection
 Imports System.Threading

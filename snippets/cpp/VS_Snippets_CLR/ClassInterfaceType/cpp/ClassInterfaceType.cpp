@@ -1,5 +1,4 @@
 //Types:System.Runtime.InteropServices.ClassInterfaceType
-//Vendor: Richter
 //<snippet1>
 using namespace System;
 using namespace System::Runtime::InteropServices;

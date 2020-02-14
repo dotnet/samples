@@ -1,4 +1,4 @@
-﻿//Types:System.Globalization.StringInfo Vendor: Richter
+﻿//Types:System.Globalization.StringInfo
 //<snippet1>
 using System;
 using System.Text;

@@ -1,4 +1,4 @@
-//Types:System.Runtime.InteropServices.Marshal Vendor: Richter
+//Types:System.Runtime.InteropServices.Marshal
 //<snippet1>
 using namespace System;
 using namespace System::Runtime::InteropServices;

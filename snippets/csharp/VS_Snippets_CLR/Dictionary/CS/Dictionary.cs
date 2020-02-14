@@ -1,6 +1,6 @@
-﻿//Types:System.Collections.DictionaryEntry  Vendor: Richter
-//Types:System.Collections.IDictionary  Vendor: Richter
-//Types:System.Collections.IDictionaryEnumerator  Vendor: Richter
+﻿//Types:System.Collections.DictionaryEntry 
+//Types:System.Collections.IDictionary 
+//Types:System.Collections.IDictionaryEnumerator 
 //<snippet1>
 using System;
 using System.Collections;

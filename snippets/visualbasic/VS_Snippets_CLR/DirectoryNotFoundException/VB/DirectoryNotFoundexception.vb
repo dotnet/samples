@@ -1,4 +1,4 @@
-﻿'Types:System.IO.DirectoryNotFoundException Vendor: Richter
+﻿'Types:System.IO.DirectoryNotFoundException
 '<snippet1>
 Imports System.IO
 

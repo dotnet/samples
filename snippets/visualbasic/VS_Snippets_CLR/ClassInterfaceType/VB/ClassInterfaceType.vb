@@ -1,4 +1,4 @@
-﻿'Types:System.Runtime.InteropServices.ClassInterfaceType Vendor: Richter
+﻿'Types:System.Runtime.InteropServices.ClassInterfaceType
 '<snippet1>
 Imports System.Runtime.InteropServices
 

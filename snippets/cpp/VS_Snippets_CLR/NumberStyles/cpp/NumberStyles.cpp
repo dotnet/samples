@@ -1,4 +1,4 @@
-//Types:System.Globalization.NumberStyles (enum) Vendor: Richter
+//Types:System.Globalization.NumberStyles (enum)
 //<snippet1>
 using namespace System;
 using namespace System::Text;

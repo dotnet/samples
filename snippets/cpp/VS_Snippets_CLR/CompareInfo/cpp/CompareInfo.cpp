@@ -1,4 +1,4 @@
-// Types:System.Globalization.CompareInfo Vendor: Richter
+// Types:System.Globalization.CompareInfo
 //<snippet1>
 using namespace System;
 using namespace System::Text;

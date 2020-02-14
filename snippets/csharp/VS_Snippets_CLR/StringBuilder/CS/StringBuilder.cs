@@ -7,7 +7,7 @@
 // After
 //sb.AppendFormat("GHI{0}{1}", 'J', 'k');
 //Code Modification: End
-//Types:System.Text.StringBuilder Vendor: Richter
+//Types:System.Text.StringBuilder
 //<snippet1>
 using System;
 using System.Text;
