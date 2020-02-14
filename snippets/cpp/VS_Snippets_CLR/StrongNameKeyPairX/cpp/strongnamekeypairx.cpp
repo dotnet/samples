@@ -1,4 +1,4 @@
-//Types:System.Reflection.StrongNameKeyPair Vendor: Richter
+//Types:System.Reflection.StrongNameKeyPair
 //<snippet1>
 using namespace System;
 using namespace System::IO;

@@ -1,4 +1,4 @@
-﻿'Types:System.IO.FileSystemInfo Vendor: Richter
+﻿'Types:System.IO.FileSystemInfo
 '<snippet1>
 Imports System.IO
 Module Module1

@@ -1,4 +1,4 @@
-//Types:System.Globalization.StringInfo Vendor: Richter
+//Types:System.Globalization.StringInfo
 //<snippet1>
 using namespace System;
 using namespace System::Text;

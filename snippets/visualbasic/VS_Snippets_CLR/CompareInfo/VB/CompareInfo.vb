@@ -1,4 +1,4 @@
-﻿' Types:System.Globalization.CompareInfo Vendor: Richter
+﻿' Types:System.Globalization.CompareInfo
 '<snippet1>
 Imports System.Text
 Imports System.Globalization

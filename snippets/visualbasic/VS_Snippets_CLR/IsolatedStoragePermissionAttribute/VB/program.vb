@@ -1,6 +1,6 @@
-﻿'Types:System.Security.Permissions.IsolatedStorageContainment (enum)  Vendor: Richter
-'Types:System.Security.Permissions.IsolatedStoragePermissionAttribute  Vendor: Richter
-'Types:System.Security.Permissions.SecurityAction  Vendor: Richter
+﻿'Types:System.Security.Permissions.IsolatedStorageContainment (enum) 
+'Types:System.Security.Permissions.IsolatedStoragePermissionAttribute 
+'Types:System.Security.Permissions.SecurityAction 
 '<snippet1>
 Option Strict On
 Imports System.Security.Permissions
