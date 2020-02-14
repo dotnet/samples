@@ -86,7 +86,7 @@ class Program
         PrintValues(table1, "Merged data (preserve changes)");
 
         table1Copy.Merge(modifiedTable, false);
-        PrintValues(modifiedTable, "Merged data (don't preserve changes)");
+        PrintValues(table1Copy, "Merged data (don't preserve changes)");
     }
 
     private static void PrintValues(DataTable table, string label)
