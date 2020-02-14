@@ -36,10 +36,10 @@ class Program
         DisplaySet(numbers);
         //</snippet02>
 
-        void DisplaySet(HashSet<int> set)
+        void DisplaySet(HashSet<int> collection)
         {
             Console.Write("{");
-            foreach (int i in set)
+            foreach (int i in collection)
             {
                 Console.Write(" {0}", i);
             }

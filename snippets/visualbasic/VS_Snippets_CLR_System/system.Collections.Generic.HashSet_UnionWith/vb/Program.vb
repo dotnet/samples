@@ -37,9 +37,9 @@ Class Program
 
     '</snippet02>
 
-    Private Shared Sub DisplaySet(ByVal coll As HashSet(Of Integer))
+    Private Shared Sub DisplaySet(ByVal collection As HashSet(Of Integer))
         Console.Write("{")
-        For Each i As Integer In coll
+        For Each i As Integer In collection
             Console.Write(" {0}", i)
         Next i
         Console.WriteLine(" }")
