@@ -98,8 +98,14 @@ public class Example
             }        
         }
 
-        // There is no Filter clause in this code example. See the Visual 
-        // Basic code for an example of a Filter clause.
+        // This filter clause selects only exceptions that derive
+        // from the ArgumentException class. 
+        // Other exceptions, including ArgumentException itself, 
+        // are not handled by this filter clause.
+        catch (ArgumentException ex) when (ex.GetType().IsSubclassOf(typeof(ArgumentException)))
+        {
+            Console.WriteLine("Filter clause caught: {0}", ex.GetType());
+        }
 
         // This catch clause handles the ArgumentException class, and
         // any other class derived from Exception.
@@ -131,6 +137,12 @@ public class Example
 //</Snippet6>
 //<Snippet7>
 //
+//Filter
+//      Filter Offset: 71
+//      Handler Length: 23
+//      Handler Offset: 116
+//      Try Block Length: 61
+//      Try Block Offset: 10
 //Clause
 //    Type of exception: System.Exception
 //       Handler Length: 21
