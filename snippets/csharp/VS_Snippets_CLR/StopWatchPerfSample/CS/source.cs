@@ -182,12 +182,12 @@ namespace StopWatchSample
                         // for iterations 1-10001.
                         if (maxTicks < ticksThisTime)
                         {
-                            indexSlowest = i;
+                            indexSlowest = i - 1;
                             maxTicks = ticksThisTime;
                         }
                         if (minTicks > ticksThisTime)
                         {
-                            indexFastest = i;
+                            indexFastest = i - 1;
                             minTicks = ticksThisTime;
                         }
                         numTicks += ticksThisTime;
