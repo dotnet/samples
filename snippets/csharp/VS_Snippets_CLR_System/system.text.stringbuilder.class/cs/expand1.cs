@@ -1,11 +1,11 @@
-﻿// <Snippet9>
-using System;
+﻿using System;
 using System.Text;
 
 public class Example
 {
    public static void Main()
    {
+      // <Snippet9>
       // Create a StringBuilder object with no text.
       StringBuilder sb = new StringBuilder();
       // Append some text.
@@ -26,23 +26,24 @@ public class Example
 
       // Convert the StringBuilder to a string and display it.      
       Console.WriteLine(sb.ToString());      
+
+      // The example displays the following output:
+      //    ********** Adding Text to a StringBuilder Object **********
+      //    
+      //    Some code points and their corresponding characters:
+      //    
+      //       Code Unit    Character
+      //            0032            2
+      //            0033            3
+      //            0034            4
+      //            0035            5
+      //            0036            6
+      //            0037            7
+      //            0038            8
+      //            0039            9
+      //            003A            :
+      //            003B            ;
+      //            003C            <
+      // </Snippet9>
    }
 }
-// The example displays the following output:
-//    ********** Adding Text to a StringBuilder Object **********
-//    
-//    Some code points and their corresponding characters:
-//    
-//       Code Unit    Character
-//            0032            2
-//            0033            3
-//            0034            4
-//            0035            5
-//            0036            6
-//            0037            7
-//            0038            8
-//            0039            9
-//            003A            :
-//            003B            ;
-//            003C            <
-// </Snippet9>

@@ -1,11 +1,11 @@
-﻿// <Snippet6>
-using System;
+﻿using System;
 using System.Text;
 
 public class Example
 {
    public static void Main()
    {
+      // <Snippet6>
       string value = "An ordinary string";
       int index = value.IndexOf("An ") + 3;
       int capacity = 0xFFFF;
@@ -23,25 +23,26 @@ public class Example
                                             value.Length - index, 
                                             capacity );
       ShowSBInfo(sb3); 
-   }
 
-   public static void ShowSBInfo(StringBuilder sb)
-   {
-      Console.WriteLine("\nValue: {0}", sb.ToString());
-      foreach (var prop in sb.GetType().GetProperties()) {
-         if (prop.GetIndexParameters().Length == 0)
-            Console.Write("{0}: {1:N0}    ", prop.Name, prop.GetValue(sb));
+      void ShowSBInfo(StringBuilder sb)
+      {
+         Console.WriteLine("\nValue: {0}", sb.ToString());
+         foreach (var prop in sb.GetType().GetProperties()) {
+            if (prop.GetIndexParameters().Length == 0)
+               Console.Write("{0}: {1:N0}    ", prop.Name, prop.GetValue(sb));
+         }
+         Console.WriteLine();
       }
-      Console.WriteLine();
+
+      // The example displays the following output:
+      //    Value: An ordinary string
+      //    Capacity: 18    MaxCapacity: 2,147,483,647    Length: 18
+      //    
+      //    Value: An ordinary string
+      //    Capacity: 65,535    MaxCapacity: 2,147,483,647    Length: 18
+      //    
+      //    Value: ordinary string
+      //    Capacity: 65,535    MaxCapacity: 2,147,483,647    Length: 15
+      // </Snippet6>
    }
 }
-// The example displays the following output:
-//    Value: An ordinary string
-//    Capacity: 18    MaxCapacity: 2,147,483,647    Length: 18
-//    
-//    Value: An ordinary string
-//    Capacity: 65,535    MaxCapacity: 2,147,483,647    Length: 18
-//    
-//    Value: ordinary string
-//    Capacity: 65,535    MaxCapacity: 2,147,483,647    Length: 15
-// </Snippet6>

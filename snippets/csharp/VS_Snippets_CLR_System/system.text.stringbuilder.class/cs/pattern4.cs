@@ -1,5 +1,4 @@
-﻿// <Snippet15>
-using System;
+﻿using System;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -7,6 +6,7 @@ public class Example
 {
    public static void Main()
    {
+      // <Snippet15>
       // Create a StringBuilder object with 4 successive occurrences 
       // of each character in the English alphabet. 
       StringBuilder sb = new StringBuilder();
@@ -32,9 +32,10 @@ public class Example
          Console.WriteLine(sbString.Substring(line * 80, nChars));
          line++;
       } while (line * 80 < sbString.Length);
+
+      // The example displays the following output:
+      //    Aaaa_Bbbb_Cccc_Dddd_Eeee_Ffff_Gggg_Hhhh_Iiii_Jjjj_Kkkk_Llll_Mmmm_Nnnn_Oooo_Pppp_
+      //    Qqqq_Rrrr_Ssss_Tttt_Uuuu_Vvvv_Wwww_Xxxx_Yyyy_Zzzz
+      // </Snippet15>
    }
 }
-// The example displays the following output:
-//    Aaaa_Bbbb_Cccc_Dddd_Eeee_Ffff_Gggg_Hhhh_Iiii_Jjjj_Kkkk_Llll_Mmmm_Nnnn_Oooo_Pppp_
-//    Qqqq_Rrrr_Ssss_Tttt_Uuuu_Vvvv_Wwww_Xxxx_Yyyy_Zzzz
-// </Snippet15>
