@@ -78,7 +78,7 @@ Module Module1
     PrintValues(table1, "Merged data (preserve changes)")
 
     table1Copy.Merge(modifiedTable, False)
-    PrintValues(modifiedTable, "Merged data (don't preserve changes)")
+    PrintValues(table1Copy, "Merged data (don't preserve changes)")
 
   End Sub
 
