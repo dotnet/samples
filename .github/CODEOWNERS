@@ -4,15 +4,15 @@
 # More details are here: https://help.github.com/articles/about-codeowners/
 
 # The '*' pattern is global owners.
-# Not adding in this PR, but I'd like to try adding a global owner set with the entire team.
-# One interpretation of their docs is that global owners are added only if not removed
-# by a more local rule.
 
 # Order is important. The last matching pattern has the most precedence.
 # The folders are ordered as follows:
 
 # In each subsection folders are ordered first by depth, then alphabetically.
 # This should make it easy to add new rules without breaking existing ones.
+
+# Global rule:
+*           @dotnet/docs
 
 # C# samples:
 /csharp/**  @BillWagner
@@ -21,8 +21,7 @@
 /machine-learning/**  @natke
 
 #### Snippets (under samples)
-# C++ snippets
-/snippets/cpp/** @rpetrusha
+
 # C# Snippets:
 /snippets/csharp/** @BillWagner
 # Visual Basic snippets:
