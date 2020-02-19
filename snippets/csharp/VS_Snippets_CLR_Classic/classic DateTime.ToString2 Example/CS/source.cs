@@ -30,7 +30,7 @@ public class MainClass {
             Console.WriteLine(String.Concat(format[i], " :" , date));
         }
         
-        /* This example produces output similar to the following.
+        /* This example produces output similar to the following:
 
             * d :08/17/2000
             * D :Thursday, August 17, 2000

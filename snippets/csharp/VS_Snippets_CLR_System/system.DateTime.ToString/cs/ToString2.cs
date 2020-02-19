@@ -23,7 +23,8 @@ public class DateToStringExample
          Console.WriteLine("'{0}': {1}", customFmt,
                            dateValue.ToString(customFmt));
 
-      // This example displays the following output to the console:
+      // The example produces the following output:
+      //
       //       d: 6/15/2008
       //       D: Sunday, June 15, 2008
       //       f: Sunday, June 15, 2008 9:15 PM
