@@ -31,7 +31,7 @@ public class Example
       ConvertUInt32();
       Console.WriteLine("-----");
       ConvertUInt64();
-    }
+   }
 
    private static void ConvertBoolean()
    {
@@ -43,6 +43,7 @@ public class Example
                         Convert.ToInt32(falseFlag));
       Console.WriteLine("{0} converts to {1}.", trueFlag,
                         Convert.ToInt32(trueFlag));
+
       // The example displays the following output:
       //       False converts to 0.
       //       True converts to 1.
@@ -62,6 +63,7 @@ public class Example
                            byteValue.GetType().Name, byteValue,
                            result.GetType().Name, result);
       }
+
       // The example displays the following output:
       //       Converted the Byte value 0 to the Int32 value 0.
       //       Converted the Byte value 14 to the Int32 value 14.
@@ -90,6 +92,7 @@ public class Example
                               ((int)ch).ToString("X4"));
          }
       }   
+
       // The example displays the following output:
       //       Converted the Char value 'a' to the Int32 value 97.
       //       Converted the Char value 'z' to the Int32 value 122.
@@ -120,6 +123,7 @@ public class Example
                               value);
          }   
       }                                  
+      
       // The example displays the following output:
       //    -79228162514264337593543950335 is outside the range of the Int32 type.
       //    Converted the Decimal value '-1034.23' to the Int32 value -1034.
@@ -151,6 +155,8 @@ public class Example
             Console.WriteLine("{0} is outside the range of the Int32 type.", value);
          }   
       }                                 
+
+      // The example displays the following output:
       //    -1.79769313486232E+308 is outside the range of the Int32 type.
       //    -13800000000 is outside the range of the Int32 type.
       //    Converted the Double value '-1023.299' to the Int32 value -1023.
@@ -176,6 +182,7 @@ public class Example
                               number.GetType().Name, number,
                               result.GetType().Name, result);
       }
+
       // The example displays the following output:
       //    Converted the Int16 value -32768 to a Int32 value -32768.
       //    Converted the Int16 value -1 to a Int32 value -1.
@@ -204,6 +211,7 @@ public class Example
                               number.GetType().Name, number);
          }
       }
+
       // The example displays the following output:
       //    The Int64 value -9223372036854775808 is outside the range of the Int32 type.
       //    Converted the Int64 value -1 to the Int32 value -1.
@@ -243,6 +251,7 @@ public class Example
                               value.GetType().Name, value);
          }
       }                           
+
       // The example displays the following output:
       //    Converted the Boolean value True to the Int32 value 1.
       //    Converted the Int32 value -12 to the Int32 value -12.
@@ -273,6 +282,7 @@ public class Example
                            number.GetType().Name, number,
                            result.GetType().Name, result);
       }
+
       // The example displays the following output:
       //       Converted the SByte value -128 to the Int32 value -128.
       //       Converted the SByte value -1 to the Int32 value -1.
@@ -300,6 +310,7 @@ public class Example
             Console.WriteLine("{0} is outside the range of the Int32 type.", value);
          }   
       }                                 
+
       // The example displays the following output:
       //    -3.40282346638529E+38 is outside the range of the Int32 type.
       //    -13799999488 is outside the range of the Int32 type.
@@ -335,6 +346,7 @@ public class Example
                               value.GetType().Name, value);
          }   
       }                                 
+
       // The example displays the following output:
       //    The String value 'One' is not in a recognizable format.
       //    The String value '1.34e28' is not in a recognizable format.
@@ -366,6 +378,7 @@ public class Example
                               number.GetType().Name, number);
          }
       }
+
       // The example displays the following output:
       //    Converted the UInt16 value 0 to the Int32 value 0.
       //    Converted the UInt16 value 121 to the Int32 value 121.
@@ -392,6 +405,7 @@ public class Example
                               number.GetType().Name, number);
          }
       }
+
       // The example displays the following output:
       //    Converted the UInt32 value 0 to the Int32 value 0.
       //    Converted the UInt32 value 121 to the Int32 value 121.
@@ -418,6 +432,7 @@ public class Example
                               number.GetType().Name, number);
          }
       }
+
       // The example displays the following output:
       //    Converted the UInt64 value 0 to a Int32 value 0.
       //    Converted the UInt64 value 121 to a Int32 value 121.

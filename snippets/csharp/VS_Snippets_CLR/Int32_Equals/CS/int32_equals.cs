@@ -13,15 +13,15 @@ class MyInt32_Equals
      {
          try
          {
-// <Snippet1>            
+            // <Snippet1>            
             Int32 myVariable1 = 60;
             Int32 myVariable2 = 60;
 
             // Get and display the declaring type.
             Console.WriteLine("\nType of 'myVariable1' is '{0}' and"+
-                 " value is :{1}",myVariable1.GetType(), myVariable1); 
+                 " value is: {1}",myVariable1.GetType(), myVariable1); 
             Console.WriteLine("Type of 'myVariable2' is '{0}' and"+
-                 " value is :{1}",myVariable2.GetType(), myVariable2);
+                 " value is: {1}",myVariable2.GetType(), myVariable2);
 
             // Compare 'myVariable1' instance with 'myVariable2' Object.
             if( myVariable1.Equals( myVariable2 ) )
@@ -31,7 +31,12 @@ class MyInt32_Equals
                Console.WriteLine( "\nStructures 'myVariable1' and "+
                      "'myVariable2' are not equal");
             
-// </Snippet1>            
+            // The example displays the following output:
+            //       Type of 'myVariable1' is 'System.Int32' and value is: 60
+            //       Type of 'myVariable2' is 'System.Int32' and value is: 60
+            //       
+            //       Structures 'myVariable1' and 'myVariable2' are equal
+            // </Snippet1>            
          }
          catch(Exception e)
          {

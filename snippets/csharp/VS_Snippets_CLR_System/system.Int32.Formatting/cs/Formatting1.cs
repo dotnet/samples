@@ -25,6 +25,7 @@ public class Example
          // Display value with eight hexadecimal digits.
          Console.WriteLine("{0,14:X8}", number);
       }   
+
       // The example displays the following output:
       //    -1403     -->         -1403     -1,403.0    FFFFFA85      FFFFFA85
       //    0         -->           000          0.0          00      00000000
@@ -45,6 +46,7 @@ public class Example
                            Convert.ToString(number, 8), 
                            Convert.ToString(number, 16));
       }      
+
       // The example displays the following output:
       //       Value                             Binary         Octal          Hex
       //        -146   11111111111111111111111101101110   37777777556     ffffff6e

@@ -1,11 +1,11 @@
-﻿// <Snippet1>
-using System;
+﻿using System;
 using System.Text;
 
 public class Class1
 {
    public static void Main()
    {
+      // <Snippet1>
       StringBuilder sb = new StringBuilder("This is a string.");
       Console.WriteLine("{0} ({1} characters)", sb.ToString(), sb.Length);
       
@@ -14,10 +14,11 @@ public class Class1
 
       sb.Append("This is a second string.");
       Console.WriteLine("{0} ({1} characters)", sb.ToString(), sb.Length);
+
+      // The example displays the following output:
+      //       This is a string. (17 characters)
+      //        (0 characters)
+      //       This is a second string. (24 characters)
+      // </Snippet1>
    }
 }
-// The example displays the following output:
-//       This is a string. (17 characters)
-//        (0 characters)
-//       This is a second string. (24 characters)
-// </Snippet1>
