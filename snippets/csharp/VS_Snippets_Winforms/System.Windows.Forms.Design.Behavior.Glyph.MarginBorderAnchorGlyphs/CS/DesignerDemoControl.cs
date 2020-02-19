@@ -126,7 +126,7 @@ public class DemoControl : UserControl
 // allows you to change the value of the Anchor property 
 // by double-clicking on an AnchorGlyph.
 //
-// This designer also offers a smart tag for changing the 
+// This designer also offers a designer action for changing the 
 // Anchor property.
 [System.Security.Permissions.PermissionSet(System.Security.Permissions.SecurityAction.Demand, Name = "FullTrust")] 
 public class DemoControlDesigner : ControlDesigner
@@ -150,7 +150,7 @@ public class DemoControlDesigner : ControlDesigner
     private BehaviorService behaviorSvc = null;
 
     // This is the collection of DesignerActionLists that
-    // defines the smart tags offered on the control. 
+    // defines the designer actions offered on the control. 
     private DesignerActionListCollection actionLists = null;
     
     public DemoControlDesigner()
@@ -297,7 +297,7 @@ public class DemoControlDesigner : ControlDesigner
     }
 
     // This method creates the DesignerActionList on demand, causing
-    // smart tags to appear on the control being designed.
+    // designer actions to appear on the control being designed.
     public override DesignerActionListCollection ActionLists
     {
         get
@@ -313,9 +313,9 @@ public class DemoControlDesigner : ControlDesigner
         }
     }
 
-    // This class defines the smart tags that appear on the control
+    // This class defines the designer actions that appear on the control
     // being designed. In this case, the Anchor property appears
-    // on the smart tag and its value can be changed through a 
+    // on the designer action and its value can be changed through a 
     // UI Type Editor created automatically by the 
     // DesignerActionService.
     public class AnchorActionList :
@@ -325,7 +325,7 @@ public class DemoControlDesigner : ControlDesigner
         private DemoControl relatedControl;
         
         //The constructor associates the control 
-        //with the smart tag list.
+        //with the designer action list.
         public AnchorActionList(IComponent component): base(component)
         {
             this.relatedControl = component as DemoControl;
@@ -347,7 +347,7 @@ public class DemoControlDesigner : ControlDesigner
 
         // This method creates and populates the 
         // DesignerActionItemCollection which is used to 
-        // display smart tag items.
+        // display designer action items.
         public override DesignerActionItemCollection GetSortedActionItems()
         {
             DesignerActionItemCollection items = 

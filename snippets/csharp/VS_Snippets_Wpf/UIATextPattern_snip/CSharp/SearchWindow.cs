@@ -1237,7 +1237,7 @@ namespace SDKSample
         //    Object oAttribute = textpatternPattern.DocumentRange.GetAttributeValue(TextPattern.IsMarkedSmartTagAttribute);
         //    if (oAttribute == TextPattern.MixedAttributeValue)
         //    {
-        //        Console.WriteLine("Mixture of smart tag marked and non-marked.");
+        //        Console.WriteLine("Mixture of designer action marked and non-marked.");
         //    }
         //    else
         //    {

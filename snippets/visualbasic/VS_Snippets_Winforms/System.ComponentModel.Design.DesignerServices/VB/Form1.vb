@@ -157,11 +157,11 @@ Public Class DemoControlDesigner
     Private lockedValue As Boolean = False
 
     ' This is the collection of DesignerActionLists that
-    ' defines the smart tags offered on the control. 
+    ' defines the designer actions offered on the control. 
     Private actionListsValue As DesignerActionListCollection = Nothing
 
     ' This Timer is created when you select the Create Timer
-    ' smart tag item.
+    ' designer action item.
     Private createdTimer As Timer = Nothing
 
     ' <snippet3>
@@ -238,7 +238,7 @@ Public Class DemoControlDesigner
 
     ' <snippet6>
     ' This method creates the DesignerActionList on demand, causing
-    ' smart tags to appear on the control being designed.
+    ' designer actions to appear on the control being designed.
 
     Public Overrides ReadOnly Property ActionLists() As DesignerActionListCollection
         Get
@@ -454,7 +454,7 @@ Public Class DemoControlDesigner
 #End Region
 
     ' <snippet13>
-    ' This class defines the smart tags that appear on the control
+    ' This class defines the designer actions that appear on the control
     ' that is being designed.
 
     Friend Class DemoActionList
@@ -469,7 +469,7 @@ Public Class DemoControlDesigner
         Private relatedDesigner As DemoControlDesigner = Nothing
 
         'The constructor associates the control 
-        'with the smart tag list.
+        'with the designer action list.
         Public Sub New(ByVal component As IComponent)
             MyBase.New(component)
             Me.relatedControl = component '
@@ -483,7 +483,7 @@ Public Class DemoControlDesigner
 
         ' This method creates and populates the 
         ' DesignerActionItemCollection which is used to 
-        ' display smart tag items.
+        ' display designer action items.
         Public Overrides Function GetSortedActionItems() As DesignerActionItemCollection
             Dim items As New DesignerActionItemCollection()
 
