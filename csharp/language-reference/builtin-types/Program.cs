@@ -33,6 +33,10 @@ namespace builtin_types
             Console.WriteLine("============= void type ==========");
             VoidType.Examples();
             Console.WriteLine();
+
+            Console.WriteLine("========== Structure types =======");
+            StructType.Examples();
+            Console.WriteLine();
         }
     }
 }
