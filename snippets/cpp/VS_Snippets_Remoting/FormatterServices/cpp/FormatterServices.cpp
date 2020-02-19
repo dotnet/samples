@@ -1,5 +1,5 @@
-//Types:System.Runtime.Serialization.FormatterServices Vendor: Richter
-//Types:System.Runtime.Serialization.SerializationInfoEnumerator  Vendor: Richter
+//Types:System.Runtime.Serialization.FormatterServices
+//Types:System.Runtime.Serialization.SerializationInfoEnumerator 
 //<snippet1>
 using namespace System;
 using namespace System::IO;

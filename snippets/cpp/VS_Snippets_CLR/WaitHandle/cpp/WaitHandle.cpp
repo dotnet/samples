@@ -1,4 +1,4 @@
-//Types:System.Threading.WaitHandle Vendor: Richter
+//Types:System.Threading.WaitHandle
 //<snippet1>
 using namespace System;
 using namespace System::Threading;

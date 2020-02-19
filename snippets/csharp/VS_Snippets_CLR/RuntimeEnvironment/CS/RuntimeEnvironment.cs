@@ -1,4 +1,4 @@
-﻿//Types:System.Runtime.InteropServices.RuntimeEnvironment Vendor: Richter
+﻿//Types:System.Runtime.InteropServices.RuntimeEnvironment
 //<snippet1>
 using System;
 using System.Reflection;

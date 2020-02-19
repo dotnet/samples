@@ -1,4 +1,4 @@
-﻿'Types:System.Reflection.StrongNameKeyPair Vendor: Richter
+﻿'Types:System.Reflection.StrongNameKeyPair
 '<snippet1>
 Imports System.Reflection
 Imports System.IO

@@ -1,6 +1,6 @@
-﻿//Types:System.MissingMethodException Vendor: Richter
-//Types:System.MissingMemberException Vendor: Richter
-//Types:System.MissingFieldException Vendor: Richter
+﻿//Types:System.MissingMethodException
+//Types:System.MissingMemberException
+//Types:System.MissingFieldException
 //<snippet1>
 using System;
 using System.Reflection;

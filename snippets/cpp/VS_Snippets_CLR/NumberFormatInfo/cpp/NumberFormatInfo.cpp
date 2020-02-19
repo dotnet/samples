@@ -1,4 +1,4 @@
-//Types:System.Globalization.NumberFormatInfo Vendor: Richter
+//Types:System.Globalization.NumberFormatInfo
 //<snippet1>
 using namespace System;
 using namespace System::Globalization;

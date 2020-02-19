@@ -1,4 +1,4 @@
-﻿'Types:System.Activator Vendor: Richter
+﻿'Types:System.Activator
 '<snippet1>
 Imports System.Reflection
 Imports System.Text
