@@ -109,9 +109,6 @@ class Program
         System.Console.ReadKey();
     }
 }
-// Output: 5
-//</Snippet2>
-}
 
 namespace Wrap2
 {
