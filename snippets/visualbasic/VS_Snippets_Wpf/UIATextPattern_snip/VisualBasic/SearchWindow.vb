@@ -1101,7 +1101,7 @@ Namespace SDKSample
 
         '    Dim oAttribute As Object = textpatternPattern.DocumentRange.GetAttributeValue(TextPattern.IsMarkedSmartTagAttribute)
         '    If (oAttribute = TextPattern.MixedAttributeValue) Then
-        '        Console.WriteLine("Mixture of smart tag marked and non-marked.")
+        '        Console.WriteLine("Mixture of designer action marked and non-marked.")
         '    Else
         '        Console.WriteLine(oAttribute.ToString())
         '    End If

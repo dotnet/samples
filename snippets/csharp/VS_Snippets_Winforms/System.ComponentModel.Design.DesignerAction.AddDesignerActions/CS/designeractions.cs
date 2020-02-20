@@ -1,6 +1,6 @@
 ﻿//<snippet1>
 /////////////////////////////////////////////////////////////////////
-// Pull model smart tag example.
+// Pull model designer action example.
 // Need references to System.dll, System.Windows.Forms.dll, 
 // System.Design.dll, and System.Drawing.dll.
 /////////////////////////////////////////////////////////////////////
@@ -14,7 +14,7 @@ using System.Windows.Forms;
 using System.Text;
 using System.Reflection;
 
-namespace SmartTags
+namespace DesignerActions
 {
 
 public class Form1 : System.Windows.Forms.Form
@@ -29,7 +29,7 @@ public class Form1 : System.Windows.Forms.Form
     // VS Forms Designer generated method
     private void InitializeComponent()
     {
-        this.colorLabel2 = new SmartTags.ColorLabel();
+        this.colorLabel2 = new DesignerActions.ColorLabel();
         this.SuspendLayout();
         // 
         // colorLabel2
@@ -112,8 +112,8 @@ public class ColorLabel : System.Windows.Forms.Label
 }
 
 /////////////////////////////////////////////////////////////////
-// Designer for the ColorLabel control with support for a smart 
-// tag panel.
+// Designer for the ColorLabel control with support for a 
+// designer action panel.
 // Must add reference to System.Design.dll
 /////////////////////////////////////////////////////////////////
 [System.Security.Permissions.PermissionSet(System.Security.Permissions.SecurityAction.Demand, Name = "FullTrust")] 
@@ -124,7 +124,7 @@ public class ColorLabelDesigner :
     private DesignerActionListCollection actionLists;
 //</snippet8>
 
-    // Use pull model to populate smart tag menu.
+    // Use pull model to populate designer action menu.
 //<snippet9>
     public override DesignerActionListCollection ActionLists
     {
@@ -143,7 +143,7 @@ public class ColorLabelDesigner :
 }
 
 /////////////////////////////////////////////////////////////////
-// DesignerActionList-derived class defines smart tag entries and
+// DesignerActionList-derived class defines designer action entries and
 // resultant actions.
 /////////////////////////////////////////////////////////////////
 //<snippet2>
@@ -160,7 +160,7 @@ public class ColorLabelActionList :
     //</snippet10>
 
     //The constructor associates the control 
-    //with the smart tag list.
+    //with the designer action list.
 //<snippet4>
     public ColorLabelActionList( IComponent component ) : base(component) 
     {
@@ -264,7 +264,7 @@ public class ColorLabelActionList :
     }
 //</snippet6>
 
-    // Implementation of this abstract method creates smart tag  
+    // Implementation of this abstract method creates designer action  
     // items, associates their targets, and collects into list.
 //<snippet7>
     public override DesignerActionItemCollection GetSortedActionItems()

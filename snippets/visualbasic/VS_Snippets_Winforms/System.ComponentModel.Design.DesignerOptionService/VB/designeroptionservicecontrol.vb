@@ -172,10 +172,10 @@ Public Class DesignerOptionServiceControl
 
             ypos += 12
 
-            ' Obtains and shows whether smart tags are automatically opened.
+            ' Obtains and shows whether designer actions are automatically opened.
             pd = designerOptionSvc.Options.Properties("ObjectBoundSmartTagAutoShow")
 
-            e.Graphics.DrawString("Automatically Open Smart Tags", _
+            e.Graphics.DrawString("Automatically Open Designer Actions", _
             New Font("Arial", 8), _
             New SolidBrush(Color.Black), 4, ypos)
 

@@ -168,11 +168,11 @@ public class DemoControlDesigner : ControlDesigner
     private bool lockedValue = false;
 
     // This is the collection of DesignerActionLists that
-    // defines the smart tags offered on the control. 
+    // defines the designer actions offered on the control. 
     private DesignerActionListCollection actionLists = null;
 
     // This Timer is created when you select the Create Timer
-    // smart tag item.
+    // designer action item.
     private Timer createdTimer = null;
 
     // <snippet3>
@@ -261,7 +261,7 @@ public class DemoControlDesigner : ControlDesigner
 
     // <snippet6>
     // This method creates the DesignerActionList on demand, causing
-    // smart tags to appear on the control being designed.
+    // designer actions to appear on the control being designed.
     public override DesignerActionListCollection ActionLists
     {
         get
@@ -570,7 +570,7 @@ public class DemoControlDesigner : ControlDesigner
     #endregion
 
     // <snippet13>
-    // This class defines the smart tags that appear on the control
+    // This class defines the designer actions that appear on the control
     // that is being designed.
     internal class DemoActionList :
           System.ComponentModel.Design.DesignerActionList
@@ -585,7 +585,7 @@ public class DemoControlDesigner : ControlDesigner
         private DemoControlDesigner relatedDesigner = null;
 
         //The constructor associates the control 
-        //with the smart tag list.
+        //with the designer action list.
         public DemoActionList(IComponent component)
             : base(component)
         {
@@ -601,7 +601,7 @@ public class DemoControlDesigner : ControlDesigner
 
         // This method creates and populates the 
         // DesignerActionItemCollection which is used to 
-        // display smart tag items.
+        // display designer action items.
         public override DesignerActionItemCollection GetSortedActionItems()
         {
             DesignerActionItemCollection items =
