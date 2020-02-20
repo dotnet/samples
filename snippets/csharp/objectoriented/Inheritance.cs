@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace objectoriented
 {
-    //<Classes>
+    //<SnippetClasses>
     // WorkItem implicitly inherits from the Object class.
     public class WorkItem
     {
@@ -245,7 +245,7 @@ namespace objectoriented
     {
         public static void Example()
         {
-            // <SnippetUseClasses>
+            //<SnippetUseClasses>
             // Create an instance of WorkItem by using the constructor in the 
             // base class that takes three arguments.
             WorkItem item = new WorkItem("Fix Bugs",
@@ -273,7 +273,7 @@ namespace objectoriented
                 1 - Fix Bugs
                 2 - Change the Design of the Base Class
             */
-            // </SnippetUseClasses>
+            //</SnippetUseClasses>
         }
     }
 }
