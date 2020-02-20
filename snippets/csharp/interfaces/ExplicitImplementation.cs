@@ -30,7 +30,7 @@ namespace interfaces
                     Console.WriteLine("Paint method in SampleClass");
                 }
             }
-            // <SnippetDefineTypes>
+            // </SnippetDefineTypes>
 
             public static void MultipleInterfaceMethods()
             {
