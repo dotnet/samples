@@ -28,3 +28,20 @@
 /snippets/visualbasic/** @BillWagner
 # F# Snippets:
 /snippets/fsharp/** @cartermp
+
+# System.Json samples:
+/snippets/core/system-text-json/** @tdykstra
+
+# Text runes:
+/snippets/core/rune/**  @tdykstra
+
+# WPF folders:
+/snippets/xaml/wpf/**   @thraka
+/snippets/csharp/wpf/**   @thraka
+/snippets/visualbasic/wpf/**   @thraka
+/snippets/desktop-guide/wpf/**   @thraka
+
+# Windows forms areas:
+/winforms/** @thraka
+/snippets/winforms/**  @thraka
+
