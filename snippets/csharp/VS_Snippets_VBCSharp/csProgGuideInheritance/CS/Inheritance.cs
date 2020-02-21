@@ -243,8 +243,8 @@ class CarStuff
 //<Snippet8>
 interface IDimensions
 {
-    float getLength();
-    float getWidth();
+    float GetLength();
+    float GetWidth();
 }
 
 class Box : IDimensions
@@ -258,12 +258,12 @@ class Box : IDimensions
         widthInches = width;
     }
     // Explicit interface member implementation: 
-    float IDimensions.getLength()
+    float IDimensions.GetLength()
     {
         return lengthInches;
     }
     // Explicit interface member implementation:
-    float IDimensions.getWidth()
+    float IDimensions.GetWidth()
     {
         return widthInches;
     }
@@ -280,15 +280,15 @@ class Box : IDimensions
         // errors because they try to access an explicitly implemented
         // interface member from a class instance:                   
         //<Snippet45>
-        //System.Console.WriteLine("Length: {0}", box1.getLength());
-        //System.Console.WriteLine("Width: {0}", box1.getWidth());
+        //System.Console.WriteLine("Length: {0}", box1.GetLength());
+        //System.Console.WriteLine("Width: {0}", box1.GetWidth());
         //</Snippet45>
 
         // Print out the dimensions of the box by calling the methods 
         // from an instance of the interface:
         //<Snippet46>
-        System.Console.WriteLine("Length: {0}", dimensions.getLength());
-        System.Console.WriteLine("Width: {0}", dimensions.getWidth());
+        System.Console.WriteLine("Length: {0}", dimensions.GetLength());
+        System.Console.WriteLine("Width: {0}", dimensions.GetWidth());
         //</Snippet46>
     }
 }
