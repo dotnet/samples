@@ -179,7 +179,7 @@ namespace StopWatchSample
                     {
 
                         // Update operation statistics
-                        // for iterations 1-10001.
+                        // for iterations 1-10000.
                         if (maxTicks < ticksThisTime)
                         {
                             indexSlowest = i;
