@@ -14,23 +14,23 @@ class Program
                                     && factors.Contains(1)
                                     && factors.Contains(n));
 
-        foreach(int prime in primes)
+        foreach (int prime in primes)
         {
-            Console.WriteLine("Found prime: " + prime);
+            Console.WriteLine($"Found prime: {prime}");
         }
     }
 
     static IEnumerable<int> Factor(int number) 
     {
         int max = (int)Math.Sqrt(number);
-        for(int i = 1; i <= max; i++) 
+        for (int i = 1; i <= max; i++) 
         {
-            if(number % i == 0)
+            if (number % i == 0)
             {
                 yield return i;
-                if(i != number/i) 
+                if (i != number / i) 
                 {
-                    yield return number/i;
+                    yield return number / i;
                 }
             }
         }
