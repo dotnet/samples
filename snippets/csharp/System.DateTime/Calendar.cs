@@ -23,7 +23,9 @@ namespace SystemDateTimeReference
 
             thTH.DateTimeFormat.Calendar = new System.Globalization.GregorianCalendar();
             Console.WriteLine(value.ToString(thTH));
-            // Press "Run" to see the output.
+            // The example displays the following output:
+            //       28/5/2559 0:00:00
+            //       28/5/2016 0:00:00
             // </Snippet1>
         }
 
@@ -36,7 +38,9 @@ namespace SystemDateTimeReference
 
             thTH.DateTimeFormat.Calendar = new System.Globalization.GregorianCalendar();
             Console.WriteLine(value.ToString(thTH));
-            // Press "Run" to see the output.
+            // The example displays the following output:
+            //       28/5/2559 0:00:00
+            //       28/5/2016 0:00:00
             // </Snippet2>
         }
 
@@ -47,7 +51,9 @@ namespace SystemDateTimeReference
             var dat = new DateTime(2559, 5, 28, thTH.DateTimeFormat.Calendar);
             Console.WriteLine($"Thai Buddhist era date: {dat.ToString("d", thTH)}");
             Console.WriteLine($"Gregorian date:   {dat:d}");
-            // Press "Run" to see the output.
+            // The example displays the following output:
+            //       Thai Buddhist Era Date:  28/5/2559
+            //       Gregorian Date:     28/05/2016
             // </Snippet3>
         }
 
@@ -66,7 +72,16 @@ namespace SystemDateTimeReference
             Console.WriteLine($"Date: {dat:d}");
             Console.WriteLine($"Year: {dat.Year}");
             Console.WriteLine($"Leap year: {DateTime.IsLeapYear(dat.Year)}");
-            // Press "Run" to see the output.
+            // The example displays the following output:
+            //       Using the Thai Buddhist Era calendar
+            //       Date :   28/5/2559
+            //       Year: 2559
+            //       Leap year :   True
+            //
+            //       Using the Gregorian calendar
+            //       Date :   28/05/2016
+            //       Year: 2016
+            //       Leap year :   True
             // </Snippet4>
         }
 
@@ -86,7 +101,16 @@ namespace SystemDateTimeReference
             Console.WriteLine($"Date: {dat:d}");
             Console.WriteLine($"Day of Week: {dat.DayOfWeek}");
             Console.WriteLine($"Week of year: {greg.GetWeekOfYear(dat, System.Globalization.CalendarWeekRule.FirstDay,DayOfWeek.Sunday)}");
-            // Press "Run" to see the output.
+            // The example displays the following output:
+            //       Using the Thai Buddhist Era calendar
+            //       Date :  18/8/1395
+            //       Day of Week: Sunday
+            //       Week of year: 34
+            //       
+            //       Using the Gregorian calendar
+            //       Date :  18/08/0852
+            //       Day of Week: Sunday
+            //       Week of year: 34
             // </Snippet5>
         }
     }
