@@ -5,11 +5,11 @@ using System.Data.Common;
 using System.Windows.Forms;
 
 // <Snippet1>
-public  class DerivedDataSet:System.Data.DataSet 
+public  class DerivedDataSet:System.Data.DataSet
 {
     public void ResetDataSetRelations()
     {
-        // Check the ShouldSerializeRelations methods 
+        // Check the ShouldSerializeRelations methods
         // before invoking Reset.
         if(!this.ShouldSerializeRelations())
         {

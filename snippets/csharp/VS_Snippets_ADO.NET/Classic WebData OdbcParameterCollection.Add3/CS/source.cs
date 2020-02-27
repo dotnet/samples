@@ -11,7 +11,7 @@ public class Form1: Form
     protected DataGrid dataGrid1;
 
     // <Snippet1>
-    public void CreateOdbcParamColl(OdbcConnection connection) 
+    public void CreateOdbcParamColl(OdbcConnection connection)
     {
         OdbcCommand command = new OdbcCommand(
             "SELECT * FROM Customers WHERE CustomerID = ?", connection);

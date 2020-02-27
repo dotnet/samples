@@ -11,7 +11,7 @@ namespace Microsoft.ServiceModel.Samples
 
     public class HttpCookieSessionBindingElementImporter : IPolicyImportExtension
     {
-        void IPolicyImportExtension.ImportPolicy(MetadataImporter importer, 
+        void IPolicyImportExtension.ImportPolicy(MetadataImporter importer,
             PolicyConversionContext context)
         {
             foreach (XmlElement assertion in context.GetBindingAssertions())

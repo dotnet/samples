@@ -2,9 +2,9 @@
 using System;
 using System.Reflection;
 
-class ADGetData 
+class ADGetData
 {
-    public static void Main() 
+    public static void Main()
     {
         // appdomain setup information
         AppDomain currentDomain = AppDomain.CurrentDomain;

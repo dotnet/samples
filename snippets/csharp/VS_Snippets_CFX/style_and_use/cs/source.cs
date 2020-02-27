@@ -1,7 +1,7 @@
 ﻿using System.ServiceModel;
 //<snippet0>
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"),
-XmlSerializerFormat(Style = OperationFormatStyle.Rpc, 
+XmlSerializerFormat(Style = OperationFormatStyle.Rpc,
                                  Use = OperationFormatUse.Encoded)]
 public interface IUseAndStyleCalculator
 {

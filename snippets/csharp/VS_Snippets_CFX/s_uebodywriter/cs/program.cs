@@ -11,11 +11,11 @@ namespace UEBodyWriter
     {
         const string textTag = "text";
         string[] bodySegment;
-   
+
         public MyBodyWriter(string[] strData) : base(true)
         {
             int length = strData.Length;
-            
+
             this.bodySegment = new string[length];
             for (int i = 0; i < length; i++)
             {
@@ -32,7 +32,7 @@ namespace UEBodyWriter
            {
                writer.WriteString(str);
            }
- 
+
             writer.WriteEndElement();
         }
         // </Snippet3>

@@ -11,7 +11,7 @@ namespace Microsoft.ServiceModel.Samples
     /// <summary>
     /// ChannelFactory that performs message Interception
     /// </summary>
-    class InterceptingChannelFactory<TChannel> 
+    class InterceptingChannelFactory<TChannel>
         : ChannelFactoryBase<TChannel>
     {
         ChannelMessageInterceptor interceptor;
@@ -113,7 +113,7 @@ namespace Microsoft.ServiceModel.Samples
             throw new InvalidOperationException();
         }
 
-        class InterceptingOutputChannel 
+        class InterceptingOutputChannel
             : InterceptingChannelBase<IOutputChannel>, IOutputChannel
         {
             public InterceptingOutputChannel(InterceptingChannelFactory<TChannel> factory, IOutputChannel innerChannel)
@@ -173,8 +173,8 @@ namespace Microsoft.ServiceModel.Samples
             {
                 IOutputChannel channel;
                 AsyncCallback sendCallback = new AsyncCallback(OnSend);
-                
-                public SendAsyncResult(IOutputChannel channel, Message message, TimeSpan timeout, AsyncCallback callback, object state) 
+
+                public SendAsyncResult(IOutputChannel channel, Message message, TimeSpan timeout, AsyncCallback callback, object state)
                     : base(callback, state)
                 {
                     if (message != null)
@@ -227,7 +227,7 @@ namespace Microsoft.ServiceModel.Samples
             }
         }
 
-        class InterceptingRequestChannel 
+        class InterceptingRequestChannel
             : InterceptingChannelBase<IRequestChannel>, IRequestChannel
         {
             public InterceptingRequestChannel(

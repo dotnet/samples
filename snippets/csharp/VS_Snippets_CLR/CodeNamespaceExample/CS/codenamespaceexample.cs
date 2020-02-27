@@ -15,7 +15,7 @@ namespace CodeDomSamples
 
             // A C# code generator produces the following source code for the preceeding example code:
 
-            //     namespace TestNamespace {    
+            //     namespace TestNamespace {
             //     }
 
             //</Snippet2>

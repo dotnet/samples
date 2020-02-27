@@ -1,7 +1,7 @@
 ﻿// System.Reflection.AssemblyName.SetPublicKey(byte[])
 // System.Reflection.AssemblyName.SetPublicKeyToken(byte[])
-  
-/* 
+
+/*
    The following example demonstrates the 'SetPublicKey(byte[])' and the
    'SetPublicKeyToken(byte[])' methods of the 'AssemblyName' class. Creates
    a dynamic assembly named 'MyAssembly' with a module named 'MyModule' and
@@ -12,12 +12,12 @@
    the assemblies currently loaded are found and the dynamic assembly that we
    have created is searched for, which is displayed to the console. The dynamic
    assembly is also saved to a file named 'MyAssembly.exe'. The assembly is
-   provided with a strong name. This is done by getting the public key and 
+   provided with a strong name. This is done by getting the public key and
    the public key token from the 'KeyPair.snk' (private and public key file).
    The public key is stored in 'PublicKey.snk' and the public key token is
    stored in 'PublicKeyToken.snk' with the help of the tool named 'sn.exe'.
-   
-   Note : Running 'MyAssembly.exe' with this example does not display 'Hello World!' 
+
+   Note : Running 'MyAssembly.exe' with this example does not display 'Hello World!'
           since this assembly has been stongly signed.
 */
 // <Snippet1>
@@ -84,16 +84,16 @@ public class AssemblyName_CodeBase
       myAssemblyName.Name = "MyAssembly";
       myAssemblyName.Version = new Version("1.0.0.2001");
       MakeAssembly(myAssemblyName, "MyAssembly.exe");
-      
+
       // Get the assemblies loaded in the current application domain.
       Assembly[] myAssemblies = Thread.GetDomain().GetAssemblies();
 
-      // Get the dynamic assembly named 'MyAssembly'. 
+      // Get the dynamic assembly named 'MyAssembly'.
       Assembly myAssembly = null;
       for(int i = 0; i < myAssemblies.Length; i++)
          if(String.Compare(myAssemblies[i].GetName().Name, "MyAssembly") == 0)
             myAssembly = myAssemblies[i];
-  
+
       // Display the full assembly information to the console.
       if(myAssembly != null)
       {

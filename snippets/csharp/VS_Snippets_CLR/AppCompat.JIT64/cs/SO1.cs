@@ -8,7 +8,7 @@ public class Example
    }
    // <Snippet1>
    [MethodImpl(MethodImplOptions.NoOptimization)]
-   void LargeMethodBody() 
+   void LargeMethodBody()
    // </Snippet1>
    {}
 
@@ -27,25 +27,25 @@ public class Example
       }
       try {
          // throw here
-         if (flag) { 
-            // Code to execute conditionally. 
+         if (flag) {
+            // Code to execute conditionally.
          }
-      } 
+      }
       catch (Exception) {     // Turning off optimization prevents the compiler from
                                 // removing the if condition and executing the block
-                                // unconditionally. 
+                                // unconditionally.
          if (flag) { 
-            // Code to execute conditionally. 
-         }  
-      }   
+            // Code to execute conditionally.
+         }
+      }
    }
    // </Snippet3>
 
    // <Snippet4>
    [MethodImpl(MethodImplOptions.NoOptimization)]
-   public bool TestCondition(int i) 
+   public bool TestCondition(int i)
    {
-      // Calls to methods that perform bit tests.    
+      // Calls to methods that perform bit tests.
       return Test1(i) && Test2(i) && Test3(i);
    }
    // </Snippet4>

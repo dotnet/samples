@@ -1,27 +1,27 @@
 ﻿using System;
 using System.Collections;
 
-public class Example  
+public class Example
 {
-   public class ReverserClass : IComparer  
+   public class ReverserClass : IComparer
    {
       // Call CaseInsensitiveComparer.Compare with the parameters reversed.
-      int IComparer.Compare(Object x, Object y)  
+      int IComparer.Compare(Object x, Object y)
       {
           return ((new CaseInsensitiveComparer()).Compare(y, x));
       }
    }
 
-   public static void Main()  
+   public static void Main()
    {
       // Initialize a string array.
       string[] words = { "The", "quick", "brown", "fox", "jumps", "over",
                          "the", "lazy", "dog" };
- 
+
       // Display the array values.
       Console.WriteLine("The array initially contains the following values:" );
       PrintIndexAndValues(words);
- 
+
       // Sort the array values using the default comparer.
       Array.Sort(words);
       Console.WriteLine("After sorting with the default comparer:" );
@@ -32,8 +32,8 @@ public class Example
       Console.WriteLine("After sorting with the reverse case-insensitive comparer:");
       PrintIndexAndValues(words);
    }
- 
-   public static void PrintIndexAndValues(IEnumerable list)  
+
+   public static void PrintIndexAndValues(IEnumerable list)
    {
       int i = 0;
       foreach (var item in list )
@@ -53,7 +53,7 @@ public class Example
 //          [6]:  the
 //          [7]:  lazy
 //          [8]:  dog
-//       
+//
 //       After sorting with the default comparer:
 //          [0]:  brown
 //          [1]:  dog
@@ -64,7 +64,7 @@ public class Example
 //          [6]:  quick
 //          [7]:  the
 //          [8]:  The
-//       
+//
 //       After sorting with the reverse case-insensitive comparer:
 //          [0]:  the
 //          [1]:  The

@@ -46,10 +46,10 @@ public class SamplesDelegate  {
 
 /*
 This code produces the following output:
- 
+
 5 is positive; use the sign "+".
 -3 is negative; use the sign "-".
 0 is zero; use the sign "".
-*/ 
+*/
 
 // </Snippet1>

@@ -30,19 +30,19 @@ public class Form1: Form
         table.AcceptChanges();
         table.Rows[0]["item"]="cat";
         table.Rows[1]["item"] = "dog";
- 
+
         // Create two DataView objects with the same table.
         DataView firstView = new DataView(table);
         DataView secondView = new DataView(table);
- 
+
         // Print current table values.
         PrintTableOrView(table,"Current Values in Table");
-    
-        // Set first DataView to show only modified 
+
+        // Set first DataView to show only modified
         // versions of original rows.
         firstView.RowStateFilter=DataViewRowState.ModifiedOriginal;
 
-        // Print values.   
+        // Print values.
         PrintTableOrView(firstView,"First DataView: ModifiedOriginal");
 
         // Add one New row to the second view.
@@ -50,15 +50,15 @@ public class Form1: Form
         rowView=secondView.AddNew();
         rowView["item"] = "fish";
 
-        // Set second DataView to show modified versions of 
+        // Set second DataView to show modified versions of
         // current rows, or New rows.
-        secondView.RowStateFilter=DataViewRowState.ModifiedCurrent 
+        secondView.RowStateFilter=DataViewRowState.ModifiedCurrent
             | DataViewRowState.Added;
         // Print modified and Added rows.
-        PrintTableOrView(secondView, 
+        PrintTableOrView(secondView,
             "Second DataView: ModifiedCurrent | Added");
     }
- 
+
     private void PrintTableOrView(DataTable table, string label)
     {
         // This function prints values in the table or DataView.
@@ -69,10 +69,10 @@ public class Form1: Form
         }
         Console.WriteLine();
     }
- 
+
     private void PrintTableOrView(DataView view, string label)
     {
- 
+
         // This overload prints values in the table or DataView.
         Console.WriteLine("\n" + label);
         for(int i = 0; i<view.Count;i++)

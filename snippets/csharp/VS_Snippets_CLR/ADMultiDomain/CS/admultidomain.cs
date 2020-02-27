@@ -5,7 +5,7 @@ using System.Security.Policy;
 
 class ADMultiDomain
 {
-   // The following attribute indicates to loader that multiple application 
+   // The following attribute indicates to loader that multiple application
    // domains are used in this application.
    [LoaderOptimizationAttribute( LoaderOptimization.MultiDomainHost)]
    public static void Main()
@@ -22,7 +22,7 @@ class ADMultiDomain
       AppDomain newDomain = AppDomain.CreateDomain("MyMultiDomain", adevidence, domaininfo);
 
       // Load an assembly into the new application domain.
-      Worker w = (Worker) newDomain.CreateInstanceAndUnwrap( 
+      Worker w = (Worker) newDomain.CreateInstanceAndUnwrap(
          typeof(Worker).Assembly.GetName().Name,
          "Worker"
       );

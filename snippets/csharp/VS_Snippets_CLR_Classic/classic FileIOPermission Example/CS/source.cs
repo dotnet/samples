@@ -21,7 +21,7 @@ namespace ConsoleApplication1
             }
 
             // </Snippet1>
-            
+
             // <Snippet2>
             FileIOPermission f2 = new FileIOPermission(FileIOPermissionAccess.Read, "C:\\test_r");
             f2.AddPathList(FileIOPermissionAccess.Write | FileIOPermissionAccess.Read, "C:\\example\\out.txt");

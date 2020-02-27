@@ -1,13 +1,13 @@
 ﻿// <Snippet1>
 using System.AddIn.Pipeline;
 
-namespace CalcAddInViews 
+namespace CalcAddInViews
 {
     // <Snippet2>
     // The AddInBaseAttribute identifies this interface as the basis for
     // the add-in view pipeline segment.
     [AddInBase()]
-    public interface ICalculator 
+    public interface ICalculator
     {
     // </Snippet2>
 	double Add(double a, double b);

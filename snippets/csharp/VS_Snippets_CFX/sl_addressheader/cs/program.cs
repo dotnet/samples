@@ -1,5 +1,5 @@
 ﻿// File name: Program.cs
-// Snippets  for Silverlight 2 RTM 
+// Snippets  for Silverlight 2 RTM
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.
 
 // NSs automatically added to a SL App
@@ -26,7 +26,7 @@ using System.Text;
 
 namespace SL_AddressHeader
 {
-    public class Snippets 
+    public class Snippets
     {
         public static void Main()
         {

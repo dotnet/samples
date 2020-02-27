@@ -42,7 +42,7 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
         {
             //call base.CacheMetadata to add the Activities and Variables to this activity's metadata
             base.CacheMetadata(metadata);
-            //add the private implementation variable: currentIndex 
+            //add the private implementation variable: currentIndex
             metadata.AddImplementationVariable(this.currentIndex);
         }
 

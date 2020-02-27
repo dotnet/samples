@@ -29,7 +29,7 @@ namespace RC2CryptoServiceProvider_Examples
             csEncrypt.FlushFinalBlock();
 
             //Get encrypted array of bytes.
-            byte[] encryptedBytes = msEncrypt.ToArray();            
+            byte[] encryptedBytes = msEncrypt.ToArray();
 
             //Decrypt the previously encrypted message.
             MemoryStream msDecrypt = new MemoryStream(encryptedBytes);

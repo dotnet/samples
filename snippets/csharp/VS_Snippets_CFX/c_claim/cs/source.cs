@@ -24,7 +24,7 @@ namespace Samples
         //
 
         //
-        // Only a client authenticated with a valid certificate that has the 
+        // Only a client authenticated with a valid certificate that has the
         // specified subject name and thumbprint can call this method.
         [PrincipalPermission(SecurityAction.Demand,
             Name = "CN=ReplaceWithSubjectName; 123456712345677E8E230FDE624F841B1CE9D41E")]
@@ -48,13 +48,13 @@ namespace Samples
                 sw.WriteLine();
                 // <snippet2>
                 // Write the claimsets in the authorization context. By default, there is only one claimset
-                // provided by the system. 
+                // provided by the system.
                 foreach (ClaimSet claimset in ServiceSecurityContext.Current.AuthorizationContext.ClaimSets)
                 {
                     foreach (Claim claim in claimset)
                     {
                         // Write out each claim type, claim value, and the right. There are two
-                        // possible values for the right: "identity" and "possessproperty". 
+                        // possible values for the right: "identity" and "possessproperty".
                         sw.WriteLine("Claim Type = {0}", claim.ClaimType);
                         sw.WriteLine("\t Resource = {0}", claim.Resource.ToString());
                         sw.WriteLine("\t Right = {0}", claim.Right);

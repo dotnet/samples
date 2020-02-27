@@ -12,7 +12,7 @@ public class Form1: Form
     protected DataTableMappingCollection mappings;
 
     // <Snippet1>
-    public void PushIntoArray() 
+    public void PushIntoArray()
     {
         // ...
         // create DataTableMappingCollection collection mappings

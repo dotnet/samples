@@ -30,7 +30,7 @@ public class Form1: Form
     {
         DataTable table;
         table = dataSet.Tables["Suppliers"];
-        // Use the NewRow method to create a DataRow with 
+        // Use the NewRow method to create a DataRow with
         // the table's schema.
         DataRow newRow = table.NewRow();
 

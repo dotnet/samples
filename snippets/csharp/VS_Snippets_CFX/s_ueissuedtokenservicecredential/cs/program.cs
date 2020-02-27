@@ -4,7 +4,7 @@
 //
 /* problem to fix, cannot assign different type
             ServiceCredentials creds = new ServiceCredentials();
-            creds.IssuedTokenAuthentication.TrustedStoreLocation =  
+            creds.IssuedTokenAuthentication.TrustedStoreLocation =
                 new X509Certificate2 ("mycert.cer");
  * how is TrustedStoreLocation used?
 */
@@ -41,7 +41,7 @@ namespace CS
             ServiceCredentials creds = new ServiceCredentials();
 //            creds.IssuedTokenAuthentication.TrustedStoreLocation =
 //                (StoreLocation) new X509Certificate2("mycert.cer");
-// </Snippet2>   
+// </Snippet2>
         }
     }
 }

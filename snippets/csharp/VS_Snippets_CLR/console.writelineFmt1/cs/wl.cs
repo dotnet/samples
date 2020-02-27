@@ -3,12 +3,12 @@
 // Formatting for this example uses the "en-US" culture.
 
 using System;
-class Sample 
+class Sample
 {
     enum Color {Yellow = 1, Blue, Green};
     static DateTime thisDate = DateTime.Now;
 
-    public static void Main() 
+    public static void Main()
     {
         Console.Clear();
 
@@ -25,7 +25,7 @@ class Sample
             "(P) Percent:. . . . . . . . . {1:P}\n" +
             "(R) Round-trip: . . . . . . . {1:R}\n" +
             "(X) Hexadecimal:. . . . . . . {0:X}\n",
-            -123, -123.45f); 
+            -123, -123.45f);
 
         // Format the current date in various ways.
         Console.WriteLine("Standard DateTime Format Specifiers");
@@ -44,7 +44,7 @@ class Sample
             "(s) Sortable: . . . . . . . . {0:s}\n" +
             "(u) Universal sortable: . . . {0:u} (invariant)\n" +
             "(U) Universal full date/time: {0:U}\n" +
-            "(Y) Year: . . . . . . . . . . {0:Y}\n", 
+            "(Y) Year: . . . . . . . . . . {0:Y}\n",
             thisDate);
 
         // Format a Color enumeration value in various ways.
@@ -54,8 +54,8 @@ class Sample
             "    (default):. . . . . . . . {0} (default = 'G')\n" +
             "(F) Flags:. . . . . . . . . . {0:F} (flags or integer)\n" +
             "(D) Decimal number: . . . . . {0:D}\n" +
-            "(X) Hexadecimal:. . . . . . . {0:X}\n", 
-            Color.Green);       
+            "(X) Hexadecimal:. . . . . . . {0:X}\n",
+            Color.Green);
     }
 }
 /*

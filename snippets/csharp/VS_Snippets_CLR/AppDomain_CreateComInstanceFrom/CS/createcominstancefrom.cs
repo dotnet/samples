@@ -22,7 +22,7 @@ class Test {
       CreateComInstance("MyComNonVisibleType");   // Fail!
       CreateComInstance("MyComVisibleType");      // OK!
    }
-   
+
    static void CreateComInstance(string typeName) {
       try {
          AppDomain currentDomain = AppDomain.CurrentDomain;

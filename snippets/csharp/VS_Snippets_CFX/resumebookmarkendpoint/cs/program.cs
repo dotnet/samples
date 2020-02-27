@@ -15,7 +15,7 @@ namespace Microsoft.Samples.WF.ResumeBookmarkEndpoint
         static void Main(string[] args)
         {
             Sequence workflow;
-            WorkflowServiceHost host = null;           
+            WorkflowServiceHost host = null;
             try
             {
                 workflow = CreateWorkflow();
@@ -62,7 +62,7 @@ namespace Microsoft.Samples.WF.ResumeBookmarkEndpoint
         }
     }
 
-    //custom activity 
+    //custom activity
     class WriteActivity : NativeActivity
     {
         public string BookmarkName { get; set; }
@@ -83,6 +83,6 @@ namespace Microsoft.Samples.WF.ResumeBookmarkEndpoint
             //write a message when bookmark resumed
             string message = (string)state;
             Console.WriteLine(message);
-        }        
+        }
     }
 }

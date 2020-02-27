@@ -5,10 +5,10 @@ namespace Grouping
 {
     public class GroupByComparer2
     {
-        //This sample uses GroupBy to partition trimmed elements of an array using a 
+        //This sample uses GroupBy to partition trimmed elements of an array using a
         // custom comparer that matches words that are anagrams of each other and
         // then converts the results to uppercase.
-        //Outputs the following to Console: 
+        //Outputs the following to Console:
         //from
         //    FROM
         //    FORM
@@ -25,11 +25,11 @@ namespace Grouping
             string[] anagrams = { "from   ", " salt", " earn ", "  last   ", " near ", " form  " };
 
             var orderGroups = anagrams.GroupBy(
-                    w => w.Trim(), 
+                    w => w.Trim(),
                     a => a.ToUpper(),
                     new AnagramEqualityComparer()
                 );
-            
+
             foreach (var s in orderGroups)
             {
                 Console.WriteLine("--------------");

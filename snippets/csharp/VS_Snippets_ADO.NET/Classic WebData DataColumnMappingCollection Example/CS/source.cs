@@ -9,7 +9,7 @@ public class Form1: Form
 
     // <Snippet1>
 
-    public void ShowColumnMappings() 
+    public void ShowColumnMappings()
     {
         // ...
         // create tableMapping
@@ -18,7 +18,7 @@ public class Form1: Form
         tableMapping.ColumnMappings.Add("Description","DataDescription");
         tableMapping.ColumnMappings.Add("Picture","DataPicture");
         Console.WriteLine("Column Mappings");
-        for(int i=0;i < tableMapping.ColumnMappings.Count;i++) 
+        for(int i=0;i < tableMapping.ColumnMappings.Count;i++)
         {
             Console.WriteLine("  {0} {1}", i,
                 tableMapping.ColumnMappings[i].ToString());

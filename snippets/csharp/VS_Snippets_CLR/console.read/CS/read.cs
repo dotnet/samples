@@ -2,9 +2,9 @@
 // This example demonstrates the Console.Read() method.
 using System;
 
-class Sample 
+class Sample
 {
-    public static void Main() 
+    public static void Main()
     {
     string m1 = "\nType a string of text then press Enter. " +
                 "Type '+' anywhere in the text to quit:\n";
@@ -14,16 +14,16 @@ class Sample
     int x;
 //
     Console.WriteLine(m1);
-    do  
+    do
         {
         x = Console.Read();
-        try 
+        try
             {
             ch = Convert.ToChar(x);
             if (Char.IsWhiteSpace(ch))
                {
                Console.WriteLine(m3, x);
-               if (ch == 0x0a) 
+               if (ch == 0x0a)
                    Console.WriteLine(m1);
                }
             else
@@ -31,7 +31,7 @@ class Sample
                     Console.WriteLine(m2, ch, x);
                 }
             }
-        catch (OverflowException e) 
+        catch (OverflowException e)
             {
             Console.WriteLine("{0} Value read = {1}.", e.Message, x);
             ch = Char.MinValue;

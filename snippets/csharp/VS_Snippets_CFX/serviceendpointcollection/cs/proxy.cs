@@ -6,7 +6,7 @@ public interface IAdd
 {
 
 	[System.ServiceModel.OperationContractAttribute(
-        Action = "http://Microsoft.ServiceModel.Samples/IAdd/Add", 
+        Action = "http://Microsoft.ServiceModel.Samples/IAdd/Add",
         ReplyAction = "http://Microsoft.ServiceModel.Samples/IAdd/AddResponse")]
 	double Add(double n1, double n2);
 }

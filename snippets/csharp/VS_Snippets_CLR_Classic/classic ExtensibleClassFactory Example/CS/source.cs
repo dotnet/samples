@@ -20,12 +20,12 @@ public class EcfInner : ECFSRV32Lib.BaseComponent
    static CallBack callbackInner;
 
    static void RegisterInner()
-   {      
+   {
       callbackInner = new CallBack();
       System.Runtime.InteropServices.ExtensibleClassFactory.RegisterObjectCreationCallback(new System.Runtime.InteropServices.ObjectCreationDelegate(callbackInner.Activate));
    }
 
-   //This is the static initializer.    
+   //This is the static initializer.
    static EcfInner()
    {
       RegisterInner();
@@ -49,7 +49,7 @@ namespace ECFSRV32Lib
       {
          return 0;
       }
-   } 
+   }
 
    interface IObjectActivator
    {

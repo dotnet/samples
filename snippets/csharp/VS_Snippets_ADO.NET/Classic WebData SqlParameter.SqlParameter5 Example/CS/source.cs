@@ -10,7 +10,7 @@ class Program
     // <Snippet1>
     private static void AddSqlParameter(SqlCommand command)
     {
-        SqlParameter parameter = new SqlParameter("@Description", 
+        SqlParameter parameter = new SqlParameter("@Description",
             SqlDbType.VarChar, 88, "Description");
         parameter.IsNullable = true;
         parameter.Direction = ParameterDirection.Output;

@@ -14,10 +14,10 @@ namespace CodeNamespaceCollectionExample
         {
             //<Snippet1>
             //<Snippet2>
-            // Creates an empty CodeNamespaceCollection.            
+            // Creates an empty CodeNamespaceCollection.
             CodeNamespaceCollection collection = new CodeNamespaceCollection();
             //</Snippet2>
-            
+
             //<Snippet3>
             // Adds a CodeNamespace to the collection.
             collection.Add( new CodeNamespace("TestNamespace") );

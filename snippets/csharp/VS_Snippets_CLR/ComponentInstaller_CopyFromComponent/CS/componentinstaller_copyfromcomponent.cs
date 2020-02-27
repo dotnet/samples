@@ -5,8 +5,8 @@
    the 'IsEquivalentInstaller' methods of the 'ComponentInstaller' class.
    It defines a class MyInstallClass, which creates the event log and copies
    the properties of the event log component to the 'EventLogInstaller' object.
-   It also checks whether 'ServiceInstaller' object can handle the same kind of 
-   installation as 'EventLogInstaller' object. 
+   It also checks whether 'ServiceInstaller' object can handle the same kind of
+   installation as 'EventLogInstaller' object.
 */
 
 using System;
@@ -32,16 +32,16 @@ using System.ServiceProcess;
          Console.WriteLine(myEventLogInstaller.Source);
 // <Snippet2>
          ServiceInstaller myServiceInstaller = new  ServiceInstaller();
-         // Check whether 'ServiceInstaller' object can handle the same 
+         // Check whether 'ServiceInstaller' object can handle the same
          // kind of installation as 'EventLogInstaller' object.
          if(myEventLogInstaller.IsEquivalentInstaller(myServiceInstaller))
          {
-            Console.WriteLine("'ServiceInstaller' can handle the same kind" 
+            Console.WriteLine("'ServiceInstaller' can handle the same kind"
                               +" of installation as EventLogInstaller");
          }
          else
          {
-             Console.WriteLine("'ServiceInstaller' can't handle the same" 
+             Console.WriteLine("'ServiceInstaller' can't handle the same"
                           +" kind of installation as 'EventLogInstaller'");
          }
 // </Snippet2>

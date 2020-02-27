@@ -21,7 +21,7 @@ namespace ExpressionTreeSamples
             new ExpressionTreeTranslationSampleTwo(),
             new ExpressionTreeTranslationSampleThree()
         };
-        
+
         public static void Main(string[] args)
         {
             foreach (var sample in allSamples)

@@ -81,7 +81,7 @@ namespace Microsoft.ServiceModel.Samples
                 string action = operationContext.RequestContext.RequestMessage.Headers.Action;
                 Console.WriteLine("action: {0}", action);
 
-                // 
+                //
                 // Iterate through the various claimsets in the authorizationcontext.
                 foreach (ClaimSet cs in
                   operationContext.ServiceSecurityContext.AuthorizationContext.ClaimSets)
@@ -119,7 +119,7 @@ namespace Microsoft.ServiceModel.Samples
                 id = Guid.NewGuid().ToString();
             }
 
-            // 
+            //
             public bool Evaluate(EvaluationContext evaluationContext, ref object state)
             {
                 bool bRet = false;
@@ -176,8 +176,8 @@ namespace Microsoft.ServiceModel.Samples
 
                 return bRet;
             }
-            // 
-            // 
+            //
+            //
             public ClaimSet Issuer
             {
                 get { return ClaimSet.System; }
@@ -188,8 +188,8 @@ namespace Microsoft.ServiceModel.Samples
                 get { return id; }
             }
 
-            // This method returns a collection of action strings that 
-            // indicate the operations the specified username is 
+            // This method returns a collection of action strings that
+            // indicate the operations the specified username is
             // allowed to call.
             private IEnumerable<string> GetAllowedOpList(string username)
             {
@@ -227,13 +227,13 @@ namespace Microsoft.ServiceModel.Samples
             }
         }
 
-        // 
+        //
         public class MyCustomUserNameValidator : UserNamePasswordValidator
         {
-            // 
-            // This method validates users. It allows in two users, test1 and test2 
+            //
+            // This method validates users. It allows in two users, test1 and test2
             // with passwords 1tset and 2tset respectively.
-            // This code is for illustration purposes only and 
+            // This code is for illustration purposes only and
             // MUST NOT be used in a production environment becuase it is NOT secure.	
             public override void Validate(string userName, string password)
             {
@@ -247,9 +247,9 @@ namespace Microsoft.ServiceModel.Samples
                     throw new SecurityTokenException("Unknown Username or Password");
                 }
             }
-            // 
+            //
         }
-        //  
+        //
         // Host the service within this EXE console application.
         public static void Main()
         {

@@ -36,7 +36,7 @@ namespace Microsoft.ServiceModel.Samples
         {
             // Set addresses for the service from configuration.
             Uri baseAddress = new Uri(ConfigurationManager.AppSettings["baseAddress"]);
-          
+
             // Create a ServiceHost for the AddService type at the addAdddress.
             ServiceHost serviceHost = new ServiceHost(typeof(AddService), baseAddress);
 

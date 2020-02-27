@@ -15,14 +15,14 @@ public class Form1: Form
         DataColumn idColumn = new DataColumn("id",
             Type.GetType("System.Int32"));
         idColumn.AutoIncrement=true;
-        DataColumn itemColumn = new DataColumn("item", 
+        DataColumn itemColumn = new DataColumn("item",
             Type.GetType("System.String"));
         table.Columns.Add(idColumn);
         table.Columns.Add(itemColumn);
 
         // Add ten rows.
         DataRow newRow;
-         
+
         for(int i = 0; i <10; i++)
         {
             newRow = table.NewRow();

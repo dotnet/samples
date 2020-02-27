@@ -10,25 +10,25 @@ public class Form1: Form
     protected DataGrid dataGrid1;
 
     // <Snippet1>
-    private void DemonstrateMerge() 
+    private void DemonstrateMerge()
     {
         // Create a DataSet with one table, two columns, and three rows.
         DataSet dataSet = new DataSet("dataSet");
         DataTable table = new DataTable("Items");
-        DataColumn idColumn = new DataColumn("id", 
+        DataColumn idColumn = new DataColumn("id",
             Type.GetType("System.Int32"));
         idColumn.AutoIncrement=true;
-        DataColumn itemColumn = new DataColumn("Item", 
+        DataColumn itemColumn = new DataColumn("Item",
             Type.GetType("System.Int32"));
 
         // DataColumn array to set primary key.
         DataColumn[] keyColumn= new DataColumn[1];
         DataRow row;
 
-        // Create variable for temporary DataSet. 
+        // Create variable for temporary DataSet.
         DataSet changeDataSet;
 
-        // Add columns to table, and table to DataSet.   
+        // Add columns to table, and table to DataSet.
         table.Columns.Add(idColumn);
         table.Columns.Add(itemColumn);
         dataSet.Tables.Add(table);
@@ -62,7 +62,7 @@ public class Form1: Form
         table.Rows[1].RowError= "over 100";
         PrintValues(dataSet, "Modified and New Values");
         // If the table has changes or errors, create a subset DataSet.
-        if(dataSet.HasChanges(DataRowState.Modified | 
+        if(dataSet.HasChanges(DataRowState.Modified |
             DataRowState.Added)& dataSet.HasErrors)
         {
             // Use GetChanges to extract subset.

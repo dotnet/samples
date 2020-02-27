@@ -3,7 +3,7 @@
  using System.Collections;
  public class SamplesHashtable
  {
- 
+
     public static void Main()
     {
        // Creates and initializes a new Hashtable.
@@ -13,16 +13,16 @@
        myHT.Add("three", "brown");
        myHT.Add("four", "fox");
        myHT.Add("five", "jumps");
- 
+
        // Displays the count and values of the Hashtable.
        Console.WriteLine("Initially,");
        Console.WriteLine($"   Count    : {myHT.Count}");
        Console.WriteLine("   Values:");
        PrintKeysAndValues(myHT);
- 
+
        // Clears the Hashtable.
        myHT.Clear();
- 
+
        // Displays the count and values of the Hashtable.
        Console.WriteLine("After Clear,");
        Console.WriteLine("   Count    : {myHT.Count}");
@@ -40,9 +40,9 @@
  }
 
 
- /* 
+ /*
  This code produces the following output.
- 
+
  Initially,
     Count    : 5
     Values:
@@ -58,6 +58,6 @@
     Values:
          -KEY-   -VALUE-
 
- */ 
+ */
 
 // </Snippet1>

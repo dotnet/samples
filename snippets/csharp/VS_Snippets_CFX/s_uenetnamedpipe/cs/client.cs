@@ -28,7 +28,7 @@ namespace UE.Samples
             Console.WriteLine("There was a communication problem. " + commProblem.Message + commProblem.StackTrace);
             Console.ReadLine();
             wcfClient.Abort();
-          } 
+          }
           Console.WriteLine();
           Console.WriteLine("Press <ENTER> to terminate client.");
           Console.ReadLine();

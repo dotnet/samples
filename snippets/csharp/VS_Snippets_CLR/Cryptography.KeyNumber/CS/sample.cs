@@ -16,7 +16,7 @@ namespace RC2CryptoServiceProvider_Examples
             // Specify an exchange key.
             cspParams.KeyNumber = (int) KeyNumber.Exchange;
 
-            // Initialize the RSACryptoServiceProvider  
+            // Initialize the RSACryptoServiceProvider
             // with the CspParameters object.
             RSACryptoServiceProvider RSACSP = new RSACryptoServiceProvider(cspParams);
 	    //</SNIPPET1>

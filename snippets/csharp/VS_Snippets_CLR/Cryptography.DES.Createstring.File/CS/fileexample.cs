@@ -11,9 +11,9 @@ class DESSample
     {
         try
         {
-            // Create a new DES object to generate a key 
-            // and initialization vector (IV).  Specify one 
-            // of the recognized simple names for this 
+            // Create a new DES object to generate a key
+            // and initialization vector (IV).  Specify one
+            // of the recognized simple names for this
             // algorithm.
             DES DESalg = DES.Create("DES");
 
@@ -26,7 +26,7 @@ class DESSample
 
             // Decrypt the text from a file using the file name, key, and IV.
             string Final = DecryptTextFromFile(FileName, DESalg.Key, DESalg.IV);
-            
+
             // Display the decrypted string to the console.
             Console.WriteLine(Final);
         }
@@ -46,19 +46,19 @@ class DESSample
             // Create a new DES object.
             DES DESalg = DES.Create();
 
-            // Create a CryptoStream using the FileStream 
+            // Create a CryptoStream using the FileStream
             // and the passed key and initialization vector (IV).
-            CryptoStream cStream = new CryptoStream(fStream, 
-                DESalg.CreateEncryptor(Key,IV), 
-                CryptoStreamMode.Write); 
+            CryptoStream cStream = new CryptoStream(fStream,
+                DESalg.CreateEncryptor(Key,IV),
+                CryptoStreamMode.Write);
 
             // Create a StreamWriter using the CryptoStream.
             StreamWriter sWriter = new StreamWriter(cStream);
 
-            // Write the data to the stream 
+            // Write the data to the stream
             // to encrypt it.
             sWriter.WriteLine(Data);
-  
+
             // Close the streams and
             // close the file.
             sWriter.Close();
@@ -79,32 +79,32 @@ class DESSample
     {
         try
         {
-            // Create or open the specified file. 
+            // Create or open the specified file.
             FileStream fStream = File.Open(FileName, FileMode.OpenOrCreate);
 
             // Create a new DES object.
             DES DESalg = DES.Create();
-  
-            // Create a CryptoStream using the FileStream 
+
+            // Create a CryptoStream using the FileStream
             // and the passed key and initialization vector (IV).
-            CryptoStream cStream = new CryptoStream(fStream, 
-                DESalg.CreateDecryptor(Key,IV), 
-                CryptoStreamMode.Read); 
+            CryptoStream cStream = new CryptoStream(fStream,
+                DESalg.CreateDecryptor(Key,IV),
+                CryptoStreamMode.Read);
 
             // Create a StreamReader using the CryptoStream.
             StreamReader sReader = new StreamReader(cStream);
 
-            // Read the data from the stream 
+            // Read the data from the stream
             // to decrypt it.
             string val = sReader.ReadLine();
-    
+
             // Close the streams and
             // close the file.
             sReader.Close();
             cStream.Close();
             fStream.Close();
 
-            // Return the string. 
+            // Return the string.
             return val;
         }
         catch(CryptographicException e)

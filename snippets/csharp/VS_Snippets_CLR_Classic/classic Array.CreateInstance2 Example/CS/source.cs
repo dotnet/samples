@@ -1,16 +1,16 @@
 ﻿// <Snippet1>
  using System;
  public class SamplesArray  {
- 
+
     public static void Main()  {
- 
+
        // Creates and initializes a three-dimensional Array of type Object.
        Array my3DArray=Array.CreateInstance( typeof(Object), 2, 3, 4 );
        for ( int i = my3DArray.GetLowerBound(0); i <= my3DArray.GetUpperBound(0); i++ )
           for ( int j = my3DArray.GetLowerBound(1); j <= my3DArray.GetUpperBound(1); j++ )
              for ( int k = my3DArray.GetLowerBound(2); k <= my3DArray.GetUpperBound(2); k++ )
                 my3DArray.SetValue( "abc" + i + j + k, i, j, k );
- 
+
        // Displays the values of the Array.
        Console.WriteLine( "The three-dimensional Array contains the following values:" );
        PrintValues( my3DArray );
@@ -34,7 +34,7 @@
  }
  /*
  This code produces the following output.
- 
+
  The three-dimensional Array contains the following values:
      abc000    abc001    abc002    abc003
      abc010    abc011    abc012    abc013

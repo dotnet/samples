@@ -10,7 +10,7 @@ namespace Microsoft.ServiceModel.Samples
         static void Main(string[] args)
         {
             CalculatorClient client = new CalculatorClient();
-            
+
             //X509Certificate2 cert = new X509Certificate2("c:\\MyClientCert.pfx", "password", X509KeyStorageFlags.DefaultKeySet);
             //client.ClientCredentials.ClientCertificate.Certificate = cert;
             //client.ClientCredentials.UserName.UserName = "migree";

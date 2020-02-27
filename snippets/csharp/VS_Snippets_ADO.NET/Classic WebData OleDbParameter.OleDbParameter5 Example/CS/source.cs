@@ -12,7 +12,7 @@ public class Sample
 
 // <Snippet1>
 
- public static void CreateOleDbParameter() 
+ public static void CreateOleDbParameter()
  {
     OleDbParameter myParameter = new OleDbParameter("Description", "Beverages");
  }

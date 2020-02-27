@@ -10,9 +10,9 @@ public class Form1: Form
     protected DataGrid dataGrid1;
 
     // <Snippet1>
-    public void CreateTableMappings() 
+    public void CreateTableMappings()
     {
-        DataTableMappingCollection mappings = 
+        DataTableMappingCollection mappings =
             new DataTableMappingCollection();
         mappings.Add("Categories","DataCategories");
         mappings.Add("Orders","DataOrders");
@@ -20,7 +20,7 @@ public class Form1: Form
         string message = "TableMappings:\n";
         for(int i=0;i < mappings.Count;i++)
         {
-            message += i.ToString() + " " 
+            message += i.ToString() + " "
                 + mappings[i].ToString() + "\n";
         }
         Console.WriteLine(message);

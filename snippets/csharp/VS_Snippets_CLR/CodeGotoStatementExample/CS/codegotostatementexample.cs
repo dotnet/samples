@@ -11,9 +11,9 @@ namespace CodeDomSamples
         {
             //<Snippet2>
             // Declares a type to contain the example code.
-            CodeTypeDeclaration type1 = new CodeTypeDeclaration("Type1");            
+            CodeTypeDeclaration type1 = new CodeTypeDeclaration("Type1");
             // Declares an entry point method.
-            CodeEntryPointMethod entry1 = new CodeEntryPointMethod();                        
+            CodeEntryPointMethod entry1 = new CodeEntryPointMethod();
             type1.Members.Add( entry1 );
             // Adds a goto statement to continue program flow at the "JumpToLabel" label.
             CodeGotoStatement goto1 = new CodeGotoStatement("JumpToLabel");
@@ -30,10 +30,10 @@ namespace CodeDomSamples
 
             // A C# code generator produces the following source code for the preceeding example code:
 
-            //    public class Type1 
+            //    public class Type1
             //    {
-            //        
-            //        public static void Main() 
+            //
+            //        public static void Main()
             //        {
             //            goto JumpToLabel;
             //            System.Console.WriteLine("Test Output");

@@ -20,7 +20,7 @@ namespace CompilerParametersExample
     {
         // Build a Hello World program graph using System.CodeDom types.
         public static CodeCompileUnit BuildHelloWorldGraph()
-        {            
+        {
             // Create a new CodeCompileUnit to contain the program graph
             CodeCompileUnit compileUnit = new CodeCompileUnit();
 
@@ -30,13 +30,13 @@ namespace CompilerParametersExample
             compileUnit.Namespaces.Add( samples );
 
             // Add the new namespace import for the System namespace.
-            samples.Imports.Add( new CodeNamespaceImport("System") );            
+            samples.Imports.Add( new CodeNamespaceImport("System") );
 
             // Declare a new type called Class1.
             CodeTypeDeclaration class1 = new CodeTypeDeclaration("Class1");
             // Add the new type to the namespace's type collection.
             samples.Types.Add(class1);
-            
+
             // Declare a new code entry point method.
             CodeEntryPointMethod start = new CodeEntryPointMethod();
 
@@ -44,8 +44,8 @@ namespace CompilerParametersExample
             CodeTypeReferenceExpression csSystemConsoleType = new CodeTypeReferenceExpression("System.Console");
 
             // Build a Console.WriteLine statement.
-            CodeMethodInvokeExpression cs1 = new CodeMethodInvokeExpression( 
-                csSystemConsoleType, "WriteLine", 
+            CodeMethodInvokeExpression cs1 = new CodeMethodInvokeExpression(
+                csSystemConsoleType, "WriteLine",
                 new CodePrimitiveExpression("Hello World!") );
 
             // Add the WriteLine call to the statement collection.
@@ -72,7 +72,7 @@ namespace CompilerParametersExample
             return compileUnit;
         }
 
-        public static String GenerateCode(CodeDomProvider provider, 
+        public static String GenerateCode(CodeDomProvider provider,
                                           CodeCompileUnit compileunit)
         {
             // Build the source file name with the language
@@ -82,7 +82,7 @@ namespace CompilerParametersExample
             {
                 sourceFile = "HelloWorld" + provider.FileExtension;
             }
-            else 
+            else
             {
                 sourceFile = "HelloWorld." + provider.FileExtension;
             }
@@ -92,20 +92,20 @@ namespace CompilerParametersExample
             // Generate source code using the code provider.
             provider.GenerateCodeFromCompileUnit(compileunit, tw, new CodeGeneratorOptions());
             // Close the output file.
-            tw.Close();            
+            tw.Close();
 
             return sourceFile;
         }
-    
+
         //<Snippet2>
-        public static bool CompileCode(CodeDomProvider provider, 
-            String sourceFile, 
+        public static bool CompileCode(CodeDomProvider provider,
+            String sourceFile,
             String exeFile)
         {
 
             CompilerParameters cp = new CompilerParameters();
 
-            // Generate an executable instead of 
+            // Generate an executable instead of
             // a class library.
             cp.GenerateExecutable = true;
 
@@ -121,13 +121,13 @@ namespace CompilerParametersExample
             // Save the assembly as a physical file.
             cp.GenerateInMemory = false;
 
-            // Set the level at which the compiler 
+            // Set the level at which the compiler
             // should start displaying warnings.
             cp.WarningLevel = 3;
 
             // Set whether to treat all warnings as errors.
             cp.TreatWarningsAsErrors = false;
-            
+
             // Set compiler argument to optimize output.
             cp.CompilerOptions = "/optimize";
 
@@ -139,11 +139,11 @@ namespace CompilerParametersExample
 
             if (provider.Supports(GeneratorSupport.EntryPointMethod))
             {
-                // Specify the class that contains 
+                // Specify the class that contains
                 // the main method of the executable.
                 cp.MainClass = "Samples.Class1";
             }
-  
+
             if (Directory.Exists("Resources"))
             {
                 if (provider.Supports(GeneratorSupport.Resources))
@@ -166,7 +166,7 @@ namespace CompilerParametersExample
             if(cr.Errors.Count > 0)
             {
                 // Display compilation errors.
-                Console.WriteLine("Errors building {0} into {1}",  
+                Console.WriteLine("Errors building {0} into {1}",
                     sourceFile, cr.PathToAssembly);
                 foreach(CompilerError ce in cr.Errors)
                 {
@@ -181,21 +181,21 @@ namespace CompilerParametersExample
                 Console.WriteLine("{0} temporary files created during the compilation.",
                     cp.TempFiles.Count.ToString());
             }
-          
+
             // Return the results of compilation.
             if (cr.Errors.Count > 0)
             {
                 return false;
             }
-            else 
+            else
             {
                 return true;
             }
         }
         //</Snippet2>
- 
+
         [STAThread]
-        static void Main() 
+        static void Main()
         {
             CodeDomProvider provider = null;
             String exeName = "HelloWorld.exe";
@@ -213,7 +213,7 @@ namespace CompilerParametersExample
             {
                 Console.WriteLine("There is no CodeDomProvider for the input language.");
             }
-            else 
+            else
             {
                 CodeCompileUnit helloWorld = BuildHelloWorldGraph();
 
@@ -224,7 +224,7 @@ namespace CompilerParametersExample
                 if (CompileCode(provider, sourceFile, exeName ))
                 {
                     Console.WriteLine("Starting HelloWorld executable.");
-                    Process.Start(exeName);            
+                    Process.Start(exeName);
                 }
             }
         }

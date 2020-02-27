@@ -20,15 +20,15 @@ public class Example
         }
 
         Console.WriteLine(
-            "\nArray.LastIndexOf(dinosaurs, \"Tyrannosaurus\"): {0}", 
+            "\nArray.LastIndexOf(dinosaurs, \"Tyrannosaurus\"): {0}",
             Array.LastIndexOf(dinosaurs, "Tyrannosaurus"));
 
         Console.WriteLine(
-            "\nArray.LastIndexOf(dinosaurs, \"Tyrannosaurus\", 3): {0}", 
+            "\nArray.LastIndexOf(dinosaurs, \"Tyrannosaurus\", 3): {0}",
             Array.LastIndexOf(dinosaurs, "Tyrannosaurus", 3));
 
         Console.WriteLine(
-            "\nArray.LastIndexOf(dinosaurs, \"Tyrannosaurus\", 4, 4): {0}", 
+            "\nArray.LastIndexOf(dinosaurs, \"Tyrannosaurus\", 4, 4): {0}",
             Array.LastIndexOf(dinosaurs, "Tyrannosaurus", 4, 4));
 
         /* This code example produces the following output:

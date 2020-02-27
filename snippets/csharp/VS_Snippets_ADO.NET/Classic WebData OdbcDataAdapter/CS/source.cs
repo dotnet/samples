@@ -13,10 +13,10 @@ class Program
     public DataSet GetDataSetFromAdapter(
         DataSet dataSet, string connectionString, string queryString)
     {
-        using (OdbcConnection connection = 
+        using (OdbcConnection connection =
                    new OdbcConnection(connectionString))
         {
-            OdbcDataAdapter adapter = 
+            OdbcDataAdapter adapter =
                 new OdbcDataAdapter(queryString, connection);
 
             // Open the connection and fill the DataSet.

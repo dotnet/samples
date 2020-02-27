@@ -2,11 +2,11 @@
 
 /*
    The following example demonstrates the 'ArrayTypeMismatchException(string,innerException)'
-   constructor of class ArrayTypeMismatchException class.It creates a 
-   function which takes two arrays as arguments. It copies elements of 
+   constructor of class ArrayTypeMismatchException class.It creates a
+   function which takes two arrays as arguments. It copies elements of
    one array to another array. If two arrays are of not same type then
    an exception has been thrown. In the 'Catch' block a new 'WebException'
-   object is created and thrown to the caller. That exception is caught 
+   object is created and thrown to the caller. That exception is caught
    in the calling method and the error message is displayed to the console.
  */
 // <Snippet1>

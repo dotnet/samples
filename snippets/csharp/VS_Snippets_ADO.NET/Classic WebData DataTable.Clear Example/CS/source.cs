@@ -19,7 +19,7 @@ public class Form1: Form
         catch (DataException e)
         {
             // Process exception and return.
-            Console.WriteLine("Exception of type {0} occurred.", 
+            Console.WriteLine("Exception of type {0} occurred.",
                 e.GetType());
         }
     }

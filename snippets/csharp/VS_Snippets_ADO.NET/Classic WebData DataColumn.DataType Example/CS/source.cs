@@ -8,17 +8,17 @@ public class Form1: Form
 
 // <Snippet1>
 public DataTable MakeDataTable(){
-    
+
     DataTable myTable;
-    DataRow myNewRow; 
+    DataRow myNewRow;
     // Create a new DataTable.
     myTable = new DataTable("My Table");
 
     // Create DataColumn objects of data types.
     DataColumn colString = new DataColumn("StringCol");
     colString.DataType = System.Type.GetType("System.String");
-    myTable.Columns.Add(colString); 
- 
+    myTable.Columns.Add(colString);
+
     DataColumn colInt32 = new DataColumn("Int32Col");
     colInt32.DataType = System.Type.GetType("System.Int32");
     myTable.Columns.Add(colInt32);
@@ -54,7 +54,7 @@ public DataTable MakeDataTable(){
     myNewRow["DecimalCol"] = 64.0021;
     myNewRow["ByteArrayCol"] = new Byte[] { 1, 5, 120 };
     myTable.Rows.Add(myNewRow);
-    return myTable;  
+    return myTable;
  }
        // </Snippet1>
 }

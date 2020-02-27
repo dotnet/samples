@@ -2,22 +2,22 @@
  using System;
  using System.Collections;
  public class SamplesArrayList  {
- 
+
     public static void Main()  {
- 
+
        // Creates and initializes a new ArrayList.
        ArrayList myAL = new ArrayList();
        myAL.Add( "red" );
        myAL.Add( "orange" );
        myAL.Add( "yellow" );
- 
+
        // Creates a read-only copy of the ArrayList.
        ArrayList myReadOnlyAL = ArrayList.ReadOnly( myAL );
- 
+
        // Displays whether the ArrayList is read-only or writable.
        Console.WriteLine( "myAL is {0}.", myAL.IsReadOnly ? "read-only" : "writable" );
        Console.WriteLine( "myReadOnlyAL is {0}.", myReadOnlyAL.IsReadOnly ? "read-only" : "writable" );
- 
+
        // Displays the contents of both collections.
        Console.WriteLine( "\nInitially," );
        Console.WriteLine( "The original ArrayList myAL contains:" );
@@ -50,7 +50,7 @@
  }
 
 
-/* 
+/*
 This code produces the following output.
 
 myAL is writable.

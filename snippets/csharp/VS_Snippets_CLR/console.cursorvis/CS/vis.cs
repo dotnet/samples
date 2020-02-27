@@ -3,9 +3,9 @@
 
 using System;
 
-class Sample 
+class Sample
 {
-    public static void Main() 
+    public static void Main()
     {
     string m1 = "\nThe cursor is {0}.\nType any text then press Enter. " +
                 "Type '+' in the first column to show \n" +
@@ -20,13 +20,13 @@ class Sample
     saveCursorSize  = Console.CursorSize;
     Console.CursorSize = 100;     // Emphasize the cursor.
 
-    while(true) 
+    while(true)
         {
-        Console.WriteLine(m1, 
-                         ((Console.CursorVisible == true) ? 
+        Console.WriteLine(m1,
+                         ((Console.CursorVisible == true) ?
                            "VISIBLE" : "HIDDEN"));
         s = Console.ReadLine();
-        if (String.IsNullOrEmpty(s) == false) 
+        if (String.IsNullOrEmpty(s) == false)
             if (s[0] == '+')
                 Console.CursorVisible = true;
             else if (s[0] == '-')
@@ -40,7 +40,7 @@ class Sample
 }
 /*
 This example produces the following results. Note that these results
-cannot depict cursor visibility. You must run the example to see the 
+cannot depict cursor visibility. You must run the example to see the
 cursor behavior:
 
 The cursor is VISIBLE.

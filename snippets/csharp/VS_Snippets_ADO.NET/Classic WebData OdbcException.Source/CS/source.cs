@@ -11,17 +11,17 @@ public class Form1: Form
   protected DataGrid dataGrid1;
 
 // <Snippet1>
- public void ShowOdbcException() 
+ public void ShowOdbcException()
  {
     string mySelectQuery = "SELECT column1 FROM table1";
     OdbcConnection myConnection =
        new OdbcConnection("DRIVER={SQL Server};SERVER=MyServer;Trusted_connection=yes;DATABASE=northwind;");
     OdbcCommand myCommand = new OdbcCommand(mySelectQuery,myConnection);
-    try 
+    try
     {
        myCommand.Connection.Open();
     }
-    catch (OdbcException e) 
+    catch (OdbcException e)
     {
       string errorMessage = "Message: " + e.Message + "\n" +
                             "Source: " + e.Source;

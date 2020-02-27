@@ -37,7 +37,7 @@ namespace CompilerErrorCollectionExample
             //</Snippet4>
 
             //<Snippet5>
-            // Tests for the presence of a CompilerError in the 
+            // Tests for the presence of a CompilerError in the
             // collection, and retrieves its index if it is found.
             CompilerError testError = new CompilerError("Testfile.cs", 5, 10, "CS0001", "Example error text");
             int itemIndex = -1;
@@ -46,7 +46,7 @@ namespace CompilerErrorCollectionExample
             //</Snippet5>
 
             //<Snippet6>
-            // Copies the contents of the collection, beginning at index 0, 
+            // Copies the contents of the collection, beginning at index 0,
             // to the specified CompilerError array.
             // 'errors' is a CompilerError array.
             collection.CopyTo( errors, 0 );
@@ -67,7 +67,7 @@ namespace CompilerErrorCollectionExample
             CompilerError error = new CompilerError("Testfile.cs", 5, 10, "CS0001", "Example error text");
             collection.Remove( error );
             //</Snippet9>
-            
+
             //<Snippet10>
             // Removes the CompilerError at index 0.
             collection.RemoveAt(0);

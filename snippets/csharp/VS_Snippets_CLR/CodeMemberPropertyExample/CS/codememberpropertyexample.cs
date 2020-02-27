@@ -27,27 +27,27 @@ namespace CodeDomSamples
 
             // Declares an empty type constructor.
             CodeConstructor constructor1 = new CodeConstructor();
-            constructor1.Attributes = MemberAttributes.Public;            
+            constructor1.Attributes = MemberAttributes.Public;
             type1.Members.Add( constructor1 );
-            
+
             // A C# code generator produces the following source code for the preceeding example code:
 
-            // public class PropertyTest 
+            // public class PropertyTest
             // {
-            //        
+            //
             //     private string testStringField;
             //
-            //     public PropertyTest() 
+            //     public PropertyTest()
             //     {
             //     }
             //
-            //       public virtual string StringProperty 
+            //       public virtual string StringProperty
             //       {
-            //              get 
+            //              get
             //            {
             //                return this.testStringField;
             //            }
-            //            set 
+            //            set
             //            {
             //                this.testStringField = value;
             //            }
@@ -59,7 +59,7 @@ namespace CodeDomSamples
 
         public void SpecificExample()
         {
-            //<Snippet3>            
+            //<Snippet3>
             // Declares a property of type String named StringProperty.
             CodeMemberProperty property1 = new CodeMemberProperty();
             property1.Name = "StringProperty";
@@ -67,20 +67,20 @@ namespace CodeDomSamples
             property1.Attributes = MemberAttributes.Public;
             property1.GetStatements.Add( new CodeMethodReturnStatement( new CodeFieldReferenceExpression(new CodeThisReferenceExpression(), "testStringField") ) );
             property1.SetStatements.Add( new CodeAssignStatement( new CodeFieldReferenceExpression(new CodeThisReferenceExpression(), "testStringField"), new CodePropertySetValueReferenceExpression()));
-            
+
             // A C# code generator produces the following source code for the preceeding example code:
 
-            //       public virtual string StringProperty 
+            //       public virtual string StringProperty
             //       {
-            //              get 
+            //              get
             //            {
             //                return this.testStringField;
             //            }
-            //            set 
+            //            set
             //            {
             //                this.testStringField = value;
             //            }
-            //       }            
+            //       }
             //</Snippet3>
         }
     }

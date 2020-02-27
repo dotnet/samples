@@ -11,7 +11,7 @@ public class Form1: Form
     protected DataTableMappingCollection mappings;
 
     // <Snippet1>
-    public void RemoveDataTableMapping() 
+    public void RemoveDataTableMapping()
     {
         // ...
         // create mappings

@@ -9,7 +9,7 @@ namespace Microsoft.ServiceModel.Samples
     using System.Collections.Generic;
     using System.Threading;
 
-    class HttpCookieReplySessionChannel 
+    class HttpCookieReplySessionChannel
         : ChannelBase, IReplySessionChannel
     {
         EndpointAddress localAddress;
@@ -18,7 +18,7 @@ namespace Microsoft.ServiceModel.Samples
         HttpCookieReplySession session;
         TimeSpan sessionTimeout;
 
-        public HttpCookieReplySessionChannel(HttpCookieReplySessionChannelListener parent, EndpointAddress localAddress) 
+        public HttpCookieReplySessionChannel(HttpCookieReplySessionChannelListener parent, EndpointAddress localAddress)
             : base(parent)
         {
             this.parent = parent;
@@ -77,7 +77,7 @@ namespace Microsoft.ServiceModel.Samples
         {
             return BeginReceiveRequest(this.DefaultReceiveTimeout, callback, state);
         }
-        
+
         public IAsyncResult BeginReceiveRequest(TimeSpan timeout, AsyncCallback callback, object state)
         {
             ValidateTimeSpan(timeout);
@@ -90,7 +90,7 @@ namespace Microsoft.ServiceModel.Samples
         }
 
         public IAsyncResult BeginTryReceiveRequest(
-            TimeSpan timeout, AsyncCallback callback, 
+            TimeSpan timeout, AsyncCallback callback,
             object state)
         {
             ValidateTimeSpan(timeout);
@@ -114,7 +114,7 @@ namespace Microsoft.ServiceModel.Samples
             return this.requestQueue.Dequeue(timeout);
         }
 
-        public bool TryReceiveRequest(TimeSpan timeout, 
+        public bool TryReceiveRequest(TimeSpan timeout,
             out RequestContext context)
         {
             ValidateTimeSpan(timeout);

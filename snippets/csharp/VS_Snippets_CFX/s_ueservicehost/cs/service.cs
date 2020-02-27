@@ -112,12 +112,12 @@ namespace ServiceModel.Sample
             serviceHost.AddServiceEndpoint(typeof(ICalculator), binding, address);
             // </Snippet4>
         }
-        
+
         public static void Snippet5()
         {
             Uri baseAddress = new Uri("http://localhost:8000/servicemodelsamples/service");
             ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress);
-            
+
             // <Snippet5>
             BasicHttpBinding binding = new BasicHttpBinding();
             Uri listenUri = new Uri("http://localhost:8000/MyListenUri");
@@ -130,7 +130,7 @@ namespace ServiceModel.Sample
         {
             Uri baseAddress = new Uri("http://localhost:8000/servicemodelsamples/service");
             ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress);
-            
+
             // <Snippet6>
             BasicHttpBinding binding = new BasicHttpBinding();
             Uri listenUri = new Uri("http://localhost:8000/MyListenUri");

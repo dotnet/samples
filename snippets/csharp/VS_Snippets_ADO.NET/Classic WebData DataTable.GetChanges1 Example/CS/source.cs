@@ -5,7 +5,7 @@ using System.Data.OleDb;
 public class Sample
 {
     // <Snippet1>
-    private void ProcessDeletes(DataTable table, 
+    private void ProcessDeletes(DataTable table,
         OleDbDataAdapter adapter)
     {
         DataTable changeTable = table.GetChanges(DataRowState.Deleted);
@@ -16,7 +16,7 @@ public class Sample
             // Insert code to resolve errors.
         }
 
-        // After fixing errors, update the database with the DataAdapter 
+        // After fixing errors, update the database with the DataAdapter
         adapter.Update(changeTable);
     }
     // </Snippet1>

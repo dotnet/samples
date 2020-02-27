@@ -10,8 +10,8 @@
 
 namespace Formatter {
     using System;
-    
-    
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -23,15 +23,15 @@ namespace Formatter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
-        
+
         private static global::System.Resources.ResourceManager resourceMan;
-        
+
         private static global::System.Globalization.CultureInfo resourceCulture;
-        
+
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         internal Resources() {
         }
-        
+
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -45,7 +45,7 @@ namespace Formatter {
                 return resourceMan;
             }
         }
-        
+
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
@@ -59,7 +59,7 @@ namespace Formatter {
                 resourceCulture = value;
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to &amp;Date and Time.
         /// </summary>
@@ -68,7 +68,7 @@ namespace Formatter {
                 return ResourceManager.GetString("DateBoxText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to &amp;Format String:.
         /// </summary>
@@ -77,7 +77,7 @@ namespace Formatter {
                 return ResourceManager.GetString("FormatLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to &lt;Invariant&gt;.
         /// </summary>
@@ -86,7 +86,7 @@ namespace Formatter {
                 return ResourceManager.GetString("InvariantCultureName", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The value to format is not a valid date and time..
         /// </summary>
@@ -95,7 +95,7 @@ namespace Formatter {
                 return ResourceManager.GetString("MSG_InvalidDate", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The value to format is not a valid date and time with an offset..
         /// </summary>
@@ -104,7 +104,7 @@ namespace Formatter {
                 return ResourceManager.GetString("MSG_InvalidDTO", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The value to format is not a valid floating point number..
         /// </summary>
@@ -113,7 +113,7 @@ namespace Formatter {
                 return ResourceManager.GetString("MSG_InvalidFloat", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The format string is invalid..
         /// </summary>
@@ -122,7 +122,7 @@ namespace Formatter {
                 return ResourceManager.GetString("MSG_InvalidFormat", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The value to format is not a valid integer number..
         /// </summary>
@@ -131,7 +131,7 @@ namespace Formatter {
                 return ResourceManager.GetString("MSG_InvalidInteger", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to &amp;Number.
         /// </summary>
@@ -140,7 +140,7 @@ namespace Formatter {
                 return ResourceManager.GetString("NumberBoxText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to &amp;Display.
         /// </summary>
@@ -149,7 +149,7 @@ namespace Formatter {
                 return ResourceManager.GetString("OKButtonText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to &amp;Result String:.
         /// </summary>
@@ -158,7 +158,7 @@ namespace Formatter {
                 return ResourceManager.GetString("ResultLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to &amp;Value:.
         /// </summary>
@@ -167,7 +167,7 @@ namespace Formatter {
                 return ResourceManager.GetString("ValueLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Formatting Utility.
         /// </summary>

@@ -10,7 +10,7 @@ public class Form1: Form
   protected DataSet DataSet1;
   protected DataGrid dataGrid1;
 // <Snippet1>
-public void CreateOracleCommand(string myScalarQuery, OracleConnection connection) 
+public void CreateOracleCommand(string myScalarQuery, OracleConnection connection)
  {
     OracleCommand command = new OracleCommand(myScalarQuery, connection);
     command.Connection.Open();

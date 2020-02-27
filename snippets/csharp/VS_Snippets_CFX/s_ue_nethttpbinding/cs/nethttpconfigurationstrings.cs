@@ -15,28 +15,28 @@ namespace Microsoft.Samples.Channels {
     using System.ServiceModel.Channels;
     using System.ServiceModel.Configuration;
     using System.Globalization;
-    
-    
+
+
     internal class NetHttpConfigurationStrings {
-        
+
         internal const string BypassProxyOnLocal = "bypassProxyOnLocal";
-        
+
         internal const string HostNameComparisonMode = "hostNameComparisonMode";
-        
+
         internal const string MaxBufferSize = "maxBufferSize";
-        
+
         internal const string MaxBufferPoolSize = "maxBufferPoolSize";
-        
+
         internal const string MaxReceivedMessageSize = "maxReceivedMessageSize";
-        
+
         internal const string ProxyAddress = "proxyAddress";
-        
+
         internal const string SecurityMode = "securityMode";
-        
+
         internal const string TransferMode = "transferMode";
-        
+
         internal const string UseDefaultWebProxy = "useDefaultWebProxy";
-        
+
         internal const string ReaderQuotas = "readerQuotas";
     }
 }

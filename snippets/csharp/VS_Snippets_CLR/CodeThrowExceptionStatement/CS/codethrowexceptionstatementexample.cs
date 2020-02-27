@@ -10,7 +10,7 @@ namespace CodeDomSamples
         {
             //<Snippet2>
             // This CodeThrowExceptionStatement throws a new System.Exception.
-            CodeThrowExceptionStatement throwException = new CodeThrowExceptionStatement( 
+            CodeThrowExceptionStatement throwException = new CodeThrowExceptionStatement(
                 // codeExpression parameter indicates the exception to throw.
                 // You must use an object create expression to new an exception here.
                 new CodeObjectCreateExpression(

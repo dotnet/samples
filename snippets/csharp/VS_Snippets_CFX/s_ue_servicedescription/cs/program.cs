@@ -59,7 +59,7 @@ namespace ServiceDescriptionSnippet
             ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
             smb.HttpGetEnabled = true;
             serviceHost.Description.Behaviors.Add(smb);
- 
+
             serviceHost.Open();
 
             // <Snippet1>
@@ -128,7 +128,7 @@ namespace ServiceDescriptionSnippet
 
             // <Snippet9>
             // Instantiate a service description specifying a service object
-            // Note: Endpoints collection and other properties will be null since 
+            // Note: Endpoints collection and other properties will be null since
             // we have not specified them
             CalculatorService svcObj = new CalculatorService();
             ServiceDescription sd3 = ServiceDescription.GetService(svcObj);

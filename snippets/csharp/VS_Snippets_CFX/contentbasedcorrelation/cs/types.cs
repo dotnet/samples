@@ -40,7 +40,7 @@ namespace Microsoft.Samples.ContentBasedCorrelation.SharedTypes
         {
             get { return customerid; }
             set { customerid = value; }
-        }              
+        }
     }
 
     [DataContract(Name="Customer", Namespace = Constants.DefaultNamespace)]

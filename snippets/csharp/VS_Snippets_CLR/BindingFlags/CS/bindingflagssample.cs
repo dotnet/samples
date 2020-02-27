@@ -16,7 +16,7 @@ namespace BindingFlagsSnippet
             Console.WriteLine();
             Console.WriteLine("Invoking a static method.");
             Console.WriteLine("-------------------------");
-            t.InvokeMember ("SayHello", BindingFlags.InvokeMethod | BindingFlags.Public | 
+            t.InvokeMember ("SayHello", BindingFlags.InvokeMethod | BindingFlags.Public |
                 BindingFlags.Static, null, null, new object [] {});
 
             // BindingFlags.InvokeMethod
@@ -70,11 +70,11 @@ namespace BindingFlagsSnippet
             Console.WriteLine("----------------------------");
             // BindingFlags.GetField
             // Get a field or property.
-            result = t.InvokeMember ("Name", BindingFlags.GetField | BindingFlags.GetProperty, null, c, 
+            result = t.InvokeMember ("Name", BindingFlags.GetField | BindingFlags.GetProperty, null, c,
                 new object [] {});
             Console.WriteLine ("Name == {0}", result);
             // BindingFlags.GetProperty
-            result = t.InvokeMember ("Value", BindingFlags.GetField | BindingFlags.GetProperty, null, c, 
+            result = t.InvokeMember ("Value", BindingFlags.GetField | BindingFlags.GetProperty, null, c,
                 new object [] {});
             Console.WriteLine ("Value == {0}", result);
 
@@ -85,7 +85,7 @@ namespace BindingFlagsSnippet
             // Call a method using named parameters.
             object[] argValues = new object [] {"Mouse", "Micky"};
             String [] argNames = new String [] {"lastName", "firstName"};
-            t.InvokeMember ("PrintName", BindingFlags.InvokeMethod, null, null, argValues, null, null, 
+            t.InvokeMember ("PrintName", BindingFlags.InvokeMethod, null, null, argValues, null, null,
                 argNames);
 
             Console.WriteLine();
@@ -94,7 +94,7 @@ namespace BindingFlagsSnippet
             // BindingFlags.Default
             // Call the default member of a type.
             Type t3 = typeof (TestClass2);
-            t3.InvokeMember ("", BindingFlags.InvokeMethod | BindingFlags.Default, null, new TestClass2(), 
+            t3.InvokeMember ("", BindingFlags.InvokeMethod | BindingFlags.Default, null, new TestClass2(),
                 new object [] {});
 
             // BindingFlags.Static, NonPublic, and Public
@@ -134,7 +134,7 @@ namespace BindingFlagsSnippet
             Console.WriteLine("DeclaredOnly instance members.");
             Console.WriteLine("------------------------------");
             System.Reflection.MemberInfo[] memInfo =
-                t.GetMembers(BindingFlags.DeclaredOnly | BindingFlags.Instance | 
+                t.GetMembers(BindingFlags.DeclaredOnly | BindingFlags.Instance |
                 BindingFlags.Public);
             for(int i=0;i<memInfo.Length;i++)
             {
@@ -145,7 +145,7 @@ namespace BindingFlagsSnippet
             Console.WriteLine();
             Console.WriteLine("Using IgnoreCase and invoking the PrintName method.");
             Console.WriteLine("---------------------------------------------------");
-            t.InvokeMember("printname", BindingFlags.IgnoreCase | BindingFlags.Static | 
+            t.InvokeMember("printname", BindingFlags.IgnoreCase | BindingFlags.Static |
                 BindingFlags.Public | BindingFlags.InvokeMethod, null, null, new object[]
                 {"Brad","Smith"});
 

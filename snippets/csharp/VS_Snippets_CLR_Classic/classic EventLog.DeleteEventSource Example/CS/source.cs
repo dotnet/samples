@@ -13,7 +13,7 @@ class MySample
 
         if (EventLog.SourceExists("MySource"))
         {
-            // Find the log associated with this source.    
+            // Find the log associated with this source.
             logName = EventLog.LogNameFromSourceName("MySource", ".");
             // Make sure the source is in the log we believe it to be in.
             if (logName != "MyLog")

@@ -17,7 +17,7 @@ namespace Microsoft.WCF.Documentation
 			IFibonacci fibonacci = channelFactory.CreateChannel();
 
 			GenerateCSCodeForService(
-        new EndpointAddress("http://localhost:8000/Fibonacci/mex/"), 
+        new EndpointAddress("http://localhost:8000/Fibonacci/mex/"),
         System.Environment.CurrentDirectory + "\\..\\..\\GeneratedContract.cs"
       );
 
@@ -45,12 +45,12 @@ namespace Microsoft.WCF.Documentation
       MetadataExchangeClient mexClient = new MetadataExchangeClient(metadataAddress);
       mexClient.ResolveMetadataReferences = true;
       MetadataSet metaDocs = mexClient.GetMetadata();
- 
+
 			WsdlImporter importer = new WsdlImporter(metaDocs);
       ServiceContractGenerator generator = new ServiceContractGenerator();
       //</snippet10>
 
-      // Add our custom DCAnnotationSurrogate 
+      // Add our custom DCAnnotationSurrogate
       // to write XSD annotations into the comments.
       object dataContractImporter;
       XsdDataContractImporter xsdDCImporter;
@@ -72,14 +72,14 @@ namespace Microsoft.WCF.Documentation
       }
       xsdDCImporter.Options.DataContractSurrogate = new DCAnnotationSurrogate();
 
-      // Uncomment the following code if you are going to do your work programmatically rather than add 
-      // the WsdlDocumentationImporters through a configuration file. 
+      // Uncomment the following code if you are going to do your work programmatically rather than add
+      // the WsdlDocumentationImporters through a configuration file.
       /*
       // <snippet11>
-      // The following code inserts a custom WsdlImporter without removing the other 
+      // The following code inserts a custom WsdlImporter without removing the other
       // importers already in the collection.
       System.Collections.Generic.IEnumerable<IWsdlImportExtension> exts = importer.WsdlImportExtensions;
-      System.Collections.Generic.List<IWsdlImportExtension> newExts 
+      System.Collections.Generic.List<IWsdlImportExtension> newExts
         = new System.Collections.Generic.List<IWsdlImportExtension>();
       foreach (IWsdlImportExtension ext in exts)
       {
@@ -92,7 +92,7 @@ namespace Microsoft.WCF.Documentation
       // </snippet11>
       */
 
-      System.Collections.ObjectModel.Collection<ContractDescription> contracts 
+      System.Collections.ObjectModel.Collection<ContractDescription> contracts
         = importer.ImportAllContracts();
       importer.ImportAllEndpoints();
 			foreach (ContractDescription contract in contracts)
@@ -103,12 +103,12 @@ namespace Microsoft.WCF.Documentation
         throw new Exception("There were errors during code compilation.");
 
       // Write the code dom
-      System.CodeDom.Compiler.CodeGeneratorOptions options 
+      System.CodeDom.Compiler.CodeGeneratorOptions options
         = new System.CodeDom.Compiler.CodeGeneratorOptions();
 			options.BracingStyle = "C";
-			System.CodeDom.Compiler.CodeDomProvider codeDomProvider 
+			System.CodeDom.Compiler.CodeDomProvider codeDomProvider
         = System.CodeDom.Compiler.CodeDomProvider.CreateProvider("C#");
-			System.CodeDom.Compiler.IndentedTextWriter textWriter 
+			System.CodeDom.Compiler.IndentedTextWriter textWriter
         = new System.CodeDom.Compiler.IndentedTextWriter(new System.IO.StreamWriter(outputFile));
 			codeDomProvider.GenerateCodeFromCompileUnit(
         generator.TargetCompileUnit, textWriter, options
@@ -126,7 +126,7 @@ namespace Microsoft.WCF.Documentation
       WsdlImporter importer = new WsdlImporter(metaDocs);
       ServiceContractGenerator generator = new ServiceContractGenerator();
 
-      // Add our custom DCAnnotationSurrogate 
+      // Add our custom DCAnnotationSurrogate
       // to write XSD annotations into the comments.
       object dataContractImporter;
       XsdDataContractImporter xsdDCImporter;
@@ -148,14 +148,14 @@ namespace Microsoft.WCF.Documentation
       }
       xsdDCImporter.Options.DataContractSurrogate = new DCAnnotationSurrogate();
 
-      // Uncomment the following code if you are going to do your work programmatically rather than add 
-      // the WsdlDocumentationImporters through a configuration file. 
+      // Uncomment the following code if you are going to do your work programmatically rather than add
+      // the WsdlDocumentationImporters through a configuration file.
       /*
-      // The following code inserts the custom WSDL programmatically 
-      // adding the custom WsdlImporter without removing the other 
+      // The following code inserts the custom WSDL programmatically
+      // adding the custom WsdlImporter without removing the other
       // importers already in the collection.
       System.Collections.Generic.IEnumerable<IWsdlImportExtension> exts = importer.WsdlImportExtensions;
-      System.Collections.Generic.List<IWsdlImportExtension> newExts 
+      System.Collections.Generic.List<IWsdlImportExtension> newExts
         = new System.Collections.Generic.List<IWsdlImportExtension>();
       foreach (IWsdlImportExtension ext in exts)
       {
@@ -174,7 +174,7 @@ namespace Microsoft.WCF.Documentation
       }
       if (generator.Errors.Count != 0)
         throw new Exception("There were errors during code compilation.");
- 
+
       // Write the code dom.
       System.CodeDom.Compiler.CodeGeneratorOptions options = new System.CodeDom.Compiler.CodeGeneratorOptions();
       options.BracingStyle = "C";

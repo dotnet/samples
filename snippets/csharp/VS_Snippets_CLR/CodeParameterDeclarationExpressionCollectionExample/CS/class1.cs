@@ -24,12 +24,12 @@ namespace CodeParameterDeclarationExpressionCollectionExample
             //</Snippet3>
 
             //<Snippet4>
-            // Adds an array of CodeParameterDeclarationExpression objects 
+            // Adds an array of CodeParameterDeclarationExpression objects
             // to the collection.
             CodeParameterDeclarationExpression[] parameters = { new CodeParameterDeclarationExpression(typeof(int), "testIntArgument"), new CodeParameterDeclarationExpression(typeof(bool), "testBoolArgument") };
             collection.AddRange( parameters );
 
-            // Adds a collection of CodeParameterDeclarationExpression objects 
+            // Adds a collection of CodeParameterDeclarationExpression objects
             // to the collection.
             CodeParameterDeclarationExpressionCollection parametersCollection = new CodeParameterDeclarationExpressionCollection();
             parametersCollection.Add( new CodeParameterDeclarationExpression(typeof(int), "testIntArgument") );
@@ -38,7 +38,7 @@ namespace CodeParameterDeclarationExpressionCollectionExample
             //</Snippet4>
 
             //<Snippet5>
-            // Tests for the presence of a CodeParameterDeclarationExpression 
+            // Tests for the presence of a CodeParameterDeclarationExpression
             // in the collection, and retrieves its index if it is found.
             CodeParameterDeclarationExpression testParameter = new CodeParameterDeclarationExpression(typeof(int), "testIntArgument");
             int itemIndex = -1;
@@ -58,13 +58,13 @@ namespace CodeParameterDeclarationExpressionCollectionExample
             //</Snippet7>
 
             //<Snippet8>
-            // Inserts a CodeParameterDeclarationExpression at index 0 
+            // Inserts a CodeParameterDeclarationExpression at index 0
             // of the collection.
             collection.Insert( 0, new CodeParameterDeclarationExpression(typeof(int), "testIntArgument") );
             //</Snippet8>
 
             //<Snippet9>
-            // Removes the specified CodeParameterDeclarationExpression 
+            // Removes the specified CodeParameterDeclarationExpression
             // from the collection.
             CodeParameterDeclarationExpression parameter = new CodeParameterDeclarationExpression(typeof(int), "testIntArgument");
             collection.Remove( parameter );

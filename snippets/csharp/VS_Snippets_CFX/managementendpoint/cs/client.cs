@@ -155,7 +155,7 @@ namespace Microsoft.Samples.WF.ManagementEndpoint
                 new EndpointAddress(new Uri("http://localhost/DataflowControl.xaml")));
 
             controlClient.Unsuspend(instanceId);
-            
+
             // ...
 
             controlClient.Terminate(instanceId);

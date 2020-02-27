@@ -16,12 +16,12 @@ public class Form1: Form
         DerivedDataSet derivedData = new DerivedDataSet();
 
         // Insert code to change values.
-    
+
         // Invoke the RejectChanges method in the derived class.
         derivedData.RejectDataSetChanges();
     }
 
-    public  class DerivedDataSet:System.Data.DataSet 
+    public  class DerivedDataSet:System.Data.DataSet
     {
         public void RejectDataSetChanges()
         {

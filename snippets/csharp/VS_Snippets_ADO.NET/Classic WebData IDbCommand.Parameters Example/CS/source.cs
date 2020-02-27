@@ -12,16 +12,16 @@ public class Form1: Form
 
 // <Snippet1>
     public void CreateSqlCommand(SqlConnection myConnection,
-        string queryString, SqlParameter[] paramArray) 
+        string queryString, SqlParameter[] paramArray)
     {
         SqlCommand command = new SqlCommand(queryString, myConnection);
-        command.CommandText = 
-            "SELECT CustomerID, CompanyName FROM Customers " 
-            + "WHERE Country = @Country AND City = @City";    
+        command.CommandText =
+            "SELECT CustomerID, CompanyName FROM Customers "
+            + "WHERE Country = @Country AND City = @City";
         command.Parameters.AddRange(paramArray);
 
         string message = "";
-        for (int i = 0; i < command.Parameters.Count; i++) 
+        for (int i = 0; i < command.Parameters.Count; i++)
         {
             message += command.Parameters[i].ToString() + "\n";
         }

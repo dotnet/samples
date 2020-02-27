@@ -12,7 +12,7 @@ public class Form1: Form
 
 // <Snippet1>
 
- public void CreateOleDbParameter() 
+ public void CreateOleDbParameter()
  {
     OleDbParameter parameter = new OleDbParameter(
         "Description",OleDbType.VarChar,

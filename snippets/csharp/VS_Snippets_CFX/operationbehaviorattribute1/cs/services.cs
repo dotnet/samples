@@ -6,7 +6,7 @@ using System.Transactions;
 namespace Microsoft.WCF.Documentation
 {
   [ServiceContract(
-    Namespace="http://microsoft.wcf.documentation", 
+    Namespace="http://microsoft.wcf.documentation",
     SessionMode=SessionMode.Required
   )]
   public interface IBehaviorService
@@ -15,7 +15,7 @@ namespace Microsoft.WCF.Documentation
     string TxWork(string message);
   }
 
-  // Note: To use the TransactionIsolationLevel property, you 
+  // Note: To use the TransactionIsolationLevel property, you
   // must add a reference to the System.Transactions.dll assembly.
   /* The following service implementation:
    *   -- Processes messages on one thread at a time
@@ -43,7 +43,7 @@ namespace Microsoft.WCF.Documentation
     /*
      * The following operation-level behaviors are specified:
      *   -- The executing transaction is committed when
-     *        the operation completes without an 
+     *        the operation completes without an
      *        unhandled exception
      *   -- Always executes under a flowed transaction.
      */

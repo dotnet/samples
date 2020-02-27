@@ -1,7 +1,7 @@
 ﻿// <Snippet1>
 using System;
 using System.Reflection;
- 
+
 class Example
 {
     public static void Main()
@@ -9,13 +9,13 @@ class Example
         // Get the Type and MemberInfo.
         Type t = Type.GetType("System.Empty");
         MemberInfo[] memberArray = t.GetMembers();
-  
+
         // Get and display the type that declares the member.
         Console.WriteLine("There are {0} members in {1}",
                           memberArray.Length, t.FullName);
-  
+
         foreach (var member in memberArray) {
-            Console.WriteLine("Member {0} declared by {1}", 
+            Console.WriteLine("Member {0} declared by {1}",
                               member.Name, member.DeclaringType);
         }
     }

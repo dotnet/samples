@@ -15,7 +15,7 @@ public class Form1 : Form {
       // Create a DataTable with one column
       DataTable dt = new DataTable("MyTable");
       DataColumn column = new DataColumn("Col", typeof(int));
-      dt.Columns.Add(column); 
+      dt.Columns.Add(column);
 
       // Add 5 rows on Added state
       for (int i = 0; i < 5; i++) {

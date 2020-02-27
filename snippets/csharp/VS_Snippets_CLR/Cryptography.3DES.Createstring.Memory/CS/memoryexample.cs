@@ -10,9 +10,9 @@ class TripleDESSample
     {
         try
         {
-            // Create a new TripleDES object to generate a key 
-            // and initialization vector (IV).  Specify one 
-            // of the recognized simple names for this 
+            // Create a new TripleDES object to generate a key
+            // and initialization vector (IV).  Specify one
+            // of the recognized simple names for this
             // algorithm.
             TripleDES TripleDESalg = TripleDES.Create("TripleDES");
 
@@ -24,7 +24,7 @@ class TripleDESSample
 
             // Decrypt the buffer back to a string.
             string Final = DecryptTextFromMemory(Data, TripleDESalg.Key, TripleDESalg.IV);
-            
+
             // Display the decrypted string to the console.
             Console.WriteLine(Final);
         }
@@ -44,10 +44,10 @@ class TripleDESSample
             // Create a new TripleDES object.
             TripleDES tripleDESalg = TripleDES.Create();
 
-            // Create a CryptoStream using the MemoryStream 
+            // Create a CryptoStream using the MemoryStream
             // and the passed key and initialization vector (IV).
-            CryptoStream cStream = new CryptoStream(mStream, 
-                tripleDESalg.CreateEncryptor(Key, IV), 
+            CryptoStream cStream = new CryptoStream(mStream,
+                tripleDESalg.CreateEncryptor(Key, IV),
                 CryptoStreamMode.Write);
 
             // Convert the passed string to a byte array.
@@ -56,9 +56,9 @@ class TripleDESSample
             // Write the byte array to the crypto stream and flush it.
             cStream.Write(toEncrypt, 0, toEncrypt.Length);
             cStream.FlushFinalBlock();
-        
-            // Get an array of bytes from the 
-            // MemoryStream that holds the 
+
+            // Get an array of bytes from the
+            // MemoryStream that holds the
             // encrypted data.
             byte[] ret = mStream.ToArray();
 
@@ -80,17 +80,17 @@ class TripleDESSample
     {
         try
         {
-            // Create a new MemoryStream using the passed 
+            // Create a new MemoryStream using the passed
             // array of encrypted data.
             MemoryStream msDecrypt = new MemoryStream(Data);
 
             // Create a new TripleDES object.
             TripleDES tripleDESalg = TripleDES.Create();
 
-            // Create a CryptoStream using the MemoryStream 
+            // Create a CryptoStream using the MemoryStream
             // and the passed key and initialization vector (IV).
-            CryptoStream csDecrypt = new CryptoStream(msDecrypt, 
-                tripleDESalg.CreateDecryptor(Key, IV), 
+            CryptoStream csDecrypt = new CryptoStream(msDecrypt,
+                tripleDESalg.CreateDecryptor(Key, IV),
                 CryptoStreamMode.Read);
 
             // Create buffer to hold the decrypted data.

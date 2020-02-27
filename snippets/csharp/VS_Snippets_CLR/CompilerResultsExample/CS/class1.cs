@@ -6,7 +6,7 @@ using System.Collections;
 namespace CompilerResults
 {
 	class Class1
-	{        
+	{
         Class1()
         {
         }
@@ -18,9 +18,9 @@ namespace CompilerResults
             // If errors occurred during compilation, output the compiler output and errors.
             if( cr.Errors.Count > 0 )
             {
-                for( int i=0; i<cr.Output.Count; i++ )                
+                for( int i=0; i<cr.Output.Count; i++ )
                     Console.WriteLine( cr.Output[i] );
-                for( int i=0; i<cr.Errors.Count; i++ )                
+                for( int i=0; i<cr.Errors.Count; i++ )
                     Console.WriteLine( i.ToString() + ": " + cr.Errors[i].ToString() );
             }
             else
@@ -32,7 +32,7 @@ namespace CompilerResults
                     Console.WriteLine( "The assembly has been generated in memory." );
                 else
                     Console.WriteLine( "Path to assembly: " + cr.PathToAssembly );
-                
+
                 // Display temporary files information.
                 if( !cr.TempFiles.KeepFiles )
                 {
@@ -42,9 +42,9 @@ namespace CompilerResults
                 {
                     Console.WriteLine( "Temporary build files were not deleted." );
                     // Display a list of the temporary build files
-                    IEnumerator enu = cr.TempFiles.GetEnumerator();                                        
-                    for( int i=0; enu.MoveNext(); i++ )                                          
-                        Console.WriteLine( "TempFile " + i.ToString() + ": " + (string)enu.Current );                  
+                    IEnumerator enu = cr.TempFiles.GetEnumerator();
+                    for( int i=0; enu.MoveNext(); i++ )
+                        Console.WriteLine( "TempFile " + i.ToString() + ": " + (string)enu.Current );
                 }
             }
         }

@@ -24,9 +24,9 @@ class Program
 
     static private string GetConnectionString()
     {
-        // To avoid storing the connection string in your code, 
-        // you can retrieve it from a configuration file, using the 
-        // System.Configuration.ConfigurationSettings.AppSettings property 
+        // To avoid storing the connection string in your code,
+        // you can retrieve it from a configuration file, using the
+        // System.Configuration.ConfigurationSettings.AppSettings property
         return "Data Source=(local);Initial Catalog=AdventureWorks;"
             + "Integrated Security=SSPI;Packet Size=512";
     }

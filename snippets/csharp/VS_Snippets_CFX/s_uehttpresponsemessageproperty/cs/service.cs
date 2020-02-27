@@ -1,7 +1,7 @@
 ﻿// S_UEHttpResponseMessageProperty/cs/Service.cs snippet file
 // based on
 // \dd\Indigo_WAP\ndp\indigo\samples\internal\ChannelSDK\Samples\AlternateChannelDispatcher\Service\Service.cs:
-// 
+//
 using System;
 using System.Diagnostics;
 using System.ServiceModel;

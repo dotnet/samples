@@ -14,7 +14,7 @@
 [System.ServiceModel.ServiceContractAttribute(Namespace="http://Microsoft.WCF.Documentation", ConfigurationName="HelloWorld")]
 public interface HelloWorld
 {
-    
+
     [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.WCF.Documentation/HelloWorld/SampleMethod", ReplyAction="http://Microsoft.WCF.Documentation/HelloWorld/SampleMethodResponse")]
     string SampleMethod(string msg);
 }
@@ -28,31 +28,31 @@ public interface HelloWorldChannel : HelloWorld, System.ServiceModel.IClientChan
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
 public partial class HelloWorldClient : System.ServiceModel.ClientBase<HelloWorld>, HelloWorld
 {
-    
+
     public HelloWorldClient()
     {
     }
-    
-    public HelloWorldClient(string endpointConfigurationName) : 
+
+    public HelloWorldClient(string endpointConfigurationName) :
             base(endpointConfigurationName)
     {
     }
-    
-    public HelloWorldClient(string endpointConfigurationName, string remoteAddress) : 
+
+    public HelloWorldClient(string endpointConfigurationName, string remoteAddress) :
             base(endpointConfigurationName, remoteAddress)
     {
     }
-    
-    public HelloWorldClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+
+    public HelloWorldClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) :
             base(endpointConfigurationName, remoteAddress)
     {
     }
-    
-    public HelloWorldClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+
+    public HelloWorldClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :
             base(binding, remoteAddress)
     {
     }
-    
+
     public string SampleMethod(string msg)
     {
         return base.Channel.SampleMethod(msg);

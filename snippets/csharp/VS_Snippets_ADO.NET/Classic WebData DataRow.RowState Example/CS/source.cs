@@ -13,29 +13,29 @@ public class Form1: Form
         // Run a function to create a DataTable with one column.
         DataTable table = MakeTable();
         DataRow row;
- 
+
         // Create a new DataRow.
         row = table.NewRow();
         // Detached row.
         Console.WriteLine("New Row " + row.RowState);
- 
+
         table.Rows.Add(row);
         // New row.
         Console.WriteLine("AddRow " + row.RowState);
- 
+
         table.AcceptChanges();
         // Unchanged row.
         Console.WriteLine("AcceptChanges " + row.RowState);
- 
+
         row["FirstName"] = "Scott";
         // Modified row.
         Console.WriteLine("Modified " + row.RowState);
- 
+
         row.Delete();
         // Deleted row.
         Console.WriteLine("Deleted " + row.RowState);
     }
- 
+
     private DataTable MakeTable()
     {
         // Make a simple table with one column.

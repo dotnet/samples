@@ -19,7 +19,7 @@ public class Form1: Form
 
         // Set PrimaryKey
         customerTable.Columns[ "id" ].Unique = true;
-        customerTable.PrimaryKey = new DataColumn[] 
+        customerTable.PrimaryKey = new DataColumn[]
             { customerTable.Columns["id"] };
 
         // Add ten rows
@@ -44,8 +44,8 @@ public class Form1: Form
         // Sort descending by column named CompanyName.
         sortOrder = "name DESC";
         // Use the Select method to find all rows matching the filter.
-        DataRow[] foundRows = 
-            customerTable.Select(expression, sortOrder, 
+        DataRow[] foundRows =
+            customerTable.Select(expression, sortOrder,
             DataViewRowState.Added);
 	
         PrintRows(foundRows, "filtered rows");

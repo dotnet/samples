@@ -6,7 +6,7 @@ namespace Element
     public static class FirstSample2
     {
         // This sample uses First to find the first element in the array that starts with 'o'.
-        // Output: 
+        // Output:
         // A string starting with 'o': one
         public static void Example()
         {

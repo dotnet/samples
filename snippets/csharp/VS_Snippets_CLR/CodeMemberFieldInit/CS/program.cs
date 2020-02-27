@@ -9,18 +9,18 @@ using Microsoft.CSharp;
 namespace SampleCodeDom
 {
     /// <summary>
-    /// This code example creates a graph using a CodeCompileUnit and  
+    /// This code example creates a graph using a CodeCompileUnit and
     /// generates source code for the graph using the CSharpCodeProvider.
     /// </summary>
     class Sample
     {
         /// <summary>
-        /// Define the compile unit to use for code generation. 
+        /// Define the compile unit to use for code generation.
         /// </summary>
         CodeCompileUnit targetUnit;
 
         /// <summary>
-        /// The only class in the compile unit. 
+        /// The only class in the compile unit.
         /// </summary>
         CodeTypeDeclaration targetClass;
 
@@ -84,7 +84,7 @@ namespace SampleCodeDom
                 new CodeObjectCreateExpression(
                 new CodeTypeReference("CodeDOMCreatedClass"));
             // Add the statement:
-            // "CodeDOMCreatedClass testClass = 
+            // "CodeDOMCreatedClass testClass =
             //     new CodeDOMCreatedClass();"
             start.Statements.Add(new CodeVariableDeclarationStatement(
                 new CodeTypeReference("CodeDOMCreatedClass"), "testClass",
@@ -96,7 +96,7 @@ namespace SampleCodeDom
                 new CodeMethodInvokeExpression(
                 new CodeVariableReferenceExpression("today"), "ToString");
 
-            // Add a System.Console.WriteLine statement with the previous 
+            // Add a System.Console.WriteLine statement with the previous
             // expression as a parameter.
             start.Statements.Add(new CodeMethodInvokeExpression(
                 new CodeTypeReferenceExpression("System.Console"),

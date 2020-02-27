@@ -9,20 +9,20 @@ public class Form1: Form
     protected DataGrid dataGrid1;
 
     // <Snippet1>
-    private void EditDataRowView(DataRowView rowView, 
-        string columnToEdit) 
+    private void EditDataRowView(DataRowView rowView,
+        string columnToEdit)
     {
         rowView.BeginEdit();
         rowView[columnToEdit] = textBox1.Text;
 
         // Validate the input with a function.
         if (ValidateCompanyName(rowView[columnToEdit]))
-            rowView.EndEdit();   
+            rowView.EndEdit();
         else
             rowView.CancelEdit();
     }
- 
-    private bool ValidateCompanyName(object valuetoCheck) 
+
+    private bool ValidateCompanyName(object valuetoCheck)
     {
         // Insert code to validate the value.
         return true;

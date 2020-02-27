@@ -5,8 +5,8 @@ namespace Aggregate
 {
     public static class CountSample1
     {
-        // This sample uses Count to get the number of unique factors of 300 using method syntax. 
-        // Output: 
+        // This sample uses Count to get the number of unique factors of 300 using method syntax.
+        // Output:
         // There are 3 unique factors of 300.
         public static void MethodSyntaxExample()
         {
@@ -17,9 +17,9 @@ namespace Aggregate
             Console.WriteLine($"There are {uniqueFactors} unique factors of 300.");
         }
 
-        // This sample uses Count to get the number of unique factors of 300 using query syntax. 
+        // This sample uses Count to get the number of unique factors of 300 using query syntax.
         // Output:
-        // There are 3 unique factors of 300. 
+        // There are 3 unique factors of 300.
         public static void QuerySyntaxExample()
         {
             int[] factorsOf300 = {2, 2, 3, 5, 5};

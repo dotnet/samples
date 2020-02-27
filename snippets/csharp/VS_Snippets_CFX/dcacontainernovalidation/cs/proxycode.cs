@@ -13,19 +13,19 @@
 namespace microsoft.wcf.documentation
 {
     using System.Runtime.Serialization;
-    
-    
+
+
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "3.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute()]
     public partial class OriginalPerson : object, System.Runtime.Serialization.IExtensibleDataObject
     {
-        
+
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
+
         private string MessageField;
-        
+
         private string firstNameField;
-        
+
         private string lastNameField;
 
         private System.ArgumentException BlobField;
@@ -45,7 +45,7 @@ namespace microsoft.wcf.documentation
                 this.extensionDataField = value;
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.ArgumentException Blob
         {
@@ -58,7 +58,7 @@ namespace microsoft.wcf.documentation
                 this.BlobField = value;
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Message
         {
@@ -71,7 +71,7 @@ namespace microsoft.wcf.documentation
                 this.MessageField = value;
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string firstName
         {
@@ -84,7 +84,7 @@ namespace microsoft.wcf.documentation
                 this.firstNameField = value;
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string lastName
         {
@@ -105,7 +105,7 @@ namespace microsoft.wcf.documentation
 [System.ServiceModel.ServiceContractAttribute(Namespace="http://microsoft.wcf.documentation", ConfigurationName="ISampleService")]
 public interface ISampleService
 {
-    
+
     [System.ServiceModel.OperationContractAttribute(Action="http://microsoft.wcf.documentation/ISampleService/SampleMethod", ReplyAction="http://microsoft.wcf.documentation/ISampleService/SampleMethodResponse")]
     microsoft.wcf.documentation.OriginalPerson SampleMethod(microsoft.wcf.documentation.OriginalPerson personParam);
 }
@@ -119,31 +119,31 @@ public interface ISampleServiceChannel : ISampleService, System.ServiceModel.ICl
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
 public partial class SampleServiceClient : System.ServiceModel.ClientBase<ISampleService>, ISampleService
 {
-    
+
     public SampleServiceClient()
     {
     }
-    
-    public SampleServiceClient(string endpointConfigurationName) : 
+
+    public SampleServiceClient(string endpointConfigurationName) :
             base(endpointConfigurationName)
     {
     }
-    
-    public SampleServiceClient(string endpointConfigurationName, string remoteAddress) : 
+
+    public SampleServiceClient(string endpointConfigurationName, string remoteAddress) :
             base(endpointConfigurationName, remoteAddress)
     {
     }
-    
-    public SampleServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+
+    public SampleServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) :
             base(endpointConfigurationName, remoteAddress)
     {
     }
-    
-    public SampleServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+
+    public SampleServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :
             base(binding, remoteAddress)
     {
     }
-    
+
     public microsoft.wcf.documentation.OriginalPerson SampleMethod(microsoft.wcf.documentation.OriginalPerson personParam)
     {
         return base.Channel.SampleMethod(personParam);

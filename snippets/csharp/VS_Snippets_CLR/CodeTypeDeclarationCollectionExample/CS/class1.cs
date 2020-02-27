@@ -28,7 +28,7 @@ namespace CodeTypeDeclarationCollectionExample
             CodeTypeDeclaration[] declarations = { new CodeTypeDeclaration("TestType1"), new CodeTypeDeclaration("TestType2") };
             collection.AddRange( declarations );
 
-            // Adds a collection of CodeTypeDeclaration objects to the 
+            // Adds a collection of CodeTypeDeclaration objects to the
             // collection.
             CodeTypeDeclarationCollection declarationsCollection = new CodeTypeDeclarationCollection();
             declarationsCollection.Add( new CodeTypeDeclaration("TestType1") );
@@ -37,7 +37,7 @@ namespace CodeTypeDeclarationCollectionExample
             //</Snippet4>
 
             //<Snippet5>
-            // Tests for the presence of a CodeTypeDeclaration in the 
+            // Tests for the presence of a CodeTypeDeclaration in the
             // collection, and retrieves its index if it is found.
             CodeTypeDeclaration testDeclaration = new CodeTypeDeclaration("TestType");
             int itemIndex = -1;

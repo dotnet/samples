@@ -9,20 +9,20 @@ using System.Xml.Schema;
 
 namespace Microsoft.WCF.Documentation
 {
-	public class WsdlDocumentationImporter : 
+	public class WsdlDocumentationImporter :
     IContractBehavior,
     IOperationBehavior,
-    IWsdlImportExtension, 
-    IServiceContractGenerationExtension, 
+    IWsdlImportExtension,
+    IServiceContractGenerationExtension,
     IOperationContractGenerationExtension
 	{
     private string commentText;
 
 		#region WSDL Import
     public WsdlDocumentationImporter()
-    { 
+    {
     }
-    
+
     public WsdlDocumentationImporter(string text)
     {
       this.commentText = text;
@@ -52,16 +52,16 @@ namespace Microsoft.WCF.Documentation
 		}
     // </snippet4>
 
-		public void BeforeImport(ServiceDescriptionCollection wsdlDocuments, XmlSchemaSet xmlSchemas, ICollection<XmlElement> policy) 
+		public void BeforeImport(ServiceDescriptionCollection wsdlDocuments, XmlSchemaSet xmlSchemas, ICollection<XmlElement> policy)
     {
       Console.WriteLine("BeforeImport called.");
     }
-		public void ImportEndpoint(WsdlImporter importer, WsdlEndpointConversionContext context) 
+		public void ImportEndpoint(WsdlImporter importer, WsdlEndpointConversionContext context)
     {
       Console.WriteLine("ImportEndpoint called.");
     }
 
-		#endregion 
+		#endregion
 	
     #region IServiceContractGenerationExtension Members
     // <snippet12>

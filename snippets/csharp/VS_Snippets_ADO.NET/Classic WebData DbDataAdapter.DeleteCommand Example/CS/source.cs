@@ -28,7 +28,7 @@ public class Sample
 
         // Create the DeleteCommand.
         command = new OleDbCommand(
-            "DELETE * FROM Customers WHERE CustomerID = ?", 
+            "DELETE * FROM Customers WHERE CustomerID = ?",
             connection);
 
         parameter = command.Parameters.Add(

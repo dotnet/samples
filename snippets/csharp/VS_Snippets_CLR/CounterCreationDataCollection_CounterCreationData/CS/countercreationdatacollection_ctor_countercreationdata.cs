@@ -17,7 +17,7 @@ public class CounterCreationExample
     {
         try
         {
-            // 
+            //
             string myCategoryName;
             int numberOfCounters;
             Console.Write("Enter the category Name : ");
@@ -51,7 +51,7 @@ public class CounterCreationExample
             {
                 Console.WriteLine("The category already exists");
             }
-            // 
+            //
         }
         catch (Exception e)
         {

@@ -51,7 +51,7 @@ namespace client
             IRequestChannel channel = factory.CreateChannel(address);
             channel.Open();
 	    // </Snippet30>
-	    
+	
             Message request = Message.CreateMessage(MessageVersion.Default, "hello");
             Message reply = channel.Request(request);
             Console.Out.WriteLine(reply.Headers.Action);
@@ -134,7 +134,7 @@ namespace client
 	       reply.Close();
 	       channel.Close();
 	       factory.Close();
-       }	   
+       }	
        // </Snippet21>
 
        public static void Snippet23()
@@ -159,7 +159,7 @@ namespace client
            EndpointAddress address = new EndpointAddress("http://localhost:8000/ChannelApp");
            BasicHttpBinding binding = new BasicHttpBinding();
            ServiceEndpoint endpoint = new ServiceEndpoint(contract, binding, address);
-           
+
            ChannelFactory<IRequestChannel> factory = new ChannelFactory<IRequestChannel>(endpoint);
            // </Snippet25>
        }
@@ -232,7 +232,7 @@ namespace client
 	       Object[] bindingParams = new Object[2];
 
 	    // <Snippet31>
-	       
+	
 	       EndpointAddress address = new EndpointAddress("http://localhost:8000/ChannelApp");
 	       IRequestChannel channel = ChannelFactory<IRequestChannel>.CreateChannel(binding, address);
 	       channel.Open();

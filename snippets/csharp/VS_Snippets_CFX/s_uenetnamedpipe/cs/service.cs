@@ -107,7 +107,7 @@ namespace UE.Samples
 		//</Snippet18>
 
                 serviceHost.Open();
-        
+
                 Console.WriteLine("The service is ready.");
                 Console.WriteLine("Press <ENTER> to terminate service.");
                 Console.WriteLine();

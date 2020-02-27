@@ -2,11 +2,11 @@
 using System;
 using System.Diagnostics;
 using System.Threading;
-              
+
 class MySample{
 
     public static void Main(){
-    
+
         // Create the source, if it does not already exist.
         if(!EventLog.SourceExists("MySource", "MyServer"))
         {
@@ -20,16 +20,16 @@ class MySample{
             // The source is created.  Exit the application to allow it to be registered.
             return;
         }
-                
+
         // Create an EventLog instance and assign its source.
         EventLog myLog = new EventLog();
         myLog.Source = "MySource";
-        
-        // Write an informational entry to the event log.    
+
+        // Write an informational entry to the event log.
         myLog.WriteEntry("Writing to event log.");
-        
-        Console.WriteLine("Message written to event log.");                                                                        
+
+        Console.WriteLine("Message written to event log.");
     }
 }
-   
+
 // </Snippet1>

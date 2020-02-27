@@ -1,7 +1,7 @@
 ﻿//<snippet0>
 
-using System; 
-using System.IO; 
+using System;
+using System.IO;
 using System.IO.Log;
 using System.Collections.Generic;
 using System.Text;
@@ -9,46 +9,46 @@ using System.Text;
 namespace MyFileRecordSequence
 {
 
-class ReadRecordsSample 
+class ReadRecordsSample
 {
-    static SequenceNumber AppendRecord(IRecordSequence sequence, string message, SequenceNumber user, SequenceNumber previous) 
-    { 
+    static SequenceNumber AppendRecord(IRecordSequence sequence, string message, SequenceNumber user, SequenceNumber previous)
+    {
         MemoryStream data = new MemoryStream();
-        BinaryWriter writer = new BinaryWriter(data); 
-        writer.Write(message); ArraySegment<byte>[] segments; 
-        segments = new ArraySegment<byte>[1]; 
-        segments[0] = new ArraySegment<byte>(data.GetBuffer(), 0, (int)data.Length); 
-        return sequence.Append(segments, user, previous,RecordAppendOptions.None); 
-    } 
-    public static void Main(string[] args) 
-    { 
-        IRecordSequence sequence; 
-        sequence = new FileRecordSequence(args[0]); 
-        SequenceNumber a, b, c, d; 
-        a = AppendRecord(sequence, "This is record A", SequenceNumber.Invalid, SequenceNumber.Invalid); 
-        Console.WriteLine("Record A has sequence number System.IO.Log", a); 
-        b = AppendRecord(sequence, "This is record B", a, a); 
+        BinaryWriter writer = new BinaryWriter(data);
+        writer.Write(message); ArraySegment<byte>[] segments;
+        segments = new ArraySegment<byte>[1];
+        segments[0] = new ArraySegment<byte>(data.GetBuffer(), 0, (int)data.Length);
+        return sequence.Append(segments, user, previous,RecordAppendOptions.None);
+    }
+    public static void Main(string[] args)
+    {
+        IRecordSequence sequence;
+        sequence = new FileRecordSequence(args[0]);
+        SequenceNumber a, b, c, d;
+        a = AppendRecord(sequence, "This is record A", SequenceNumber.Invalid, SequenceNumber.Invalid);
+        Console.WriteLine("Record A has sequence number System.IO.Log", a);
+        b = AppendRecord(sequence, "This is record B", a, a);
         Console.WriteLine("Record B has sequence number System.IO.Log", b);
-        c = AppendRecord(sequence, "This is record C", a, a); 
-        Console.WriteLine("Record C has sequence number System.IO.Log", c); 
-        d = AppendRecord(sequence, "This is record D", b, c); 
-        Console.WriteLine("Record D has sequence number System.IO.Log", d); 
-        foreach(LogRecord record in sequence.ReadLogRecords(a,LogRecordEnumeratorType.Next)) 
-        { 
-            BinaryReader reader = new BinaryReader(record.Data); 
+        c = AppendRecord(sequence, "This is record C", a, a);
+        Console.WriteLine("Record C has sequence number System.IO.Log", c);
+        d = AppendRecord(sequence, "This is record D", b, c);
+        Console.WriteLine("Record D has sequence number System.IO.Log", d);
+        foreach(LogRecord record in sequence.ReadLogRecords(a,LogRecordEnumeratorType.Next))
+        {
+            BinaryReader reader = new BinaryReader(record.Data);
             Console.WriteLine("System.IO.Log: T:System.IO.Log.IRecordSequence", record.SequenceNumber, reader.ReadString());
-        } 
-        foreach(LogRecord record in sequence.ReadLogRecords(d, LogRecordEnumeratorType.User)) 
-        { 
-            BinaryReader reader = new BinaryReader(record.Data); 
-            Console.WriteLine("System.IO.Log: T:System.IO.Log.IRecordSequence", record.SequenceNumber, reader.ReadString()); 
-        } 
-        foreach(LogRecord record in sequence.ReadLogRecords(d, LogRecordEnumeratorType.Previous)) 
-        { 
-            BinaryReader reader = new BinaryReader(record.Data); 
-            Console.WriteLine("System.IO.Log: T:System.IO.Log.IRecordSequence", record.SequenceNumber, reader.ReadString()); 
-        } 
-    } 
+        }
+        foreach(LogRecord record in sequence.ReadLogRecords(d, LogRecordEnumeratorType.User))
+        {
+            BinaryReader reader = new BinaryReader(record.Data);
+            Console.WriteLine("System.IO.Log: T:System.IO.Log.IRecordSequence", record.SequenceNumber, reader.ReadString());
+        }
+        foreach(LogRecord record in sequence.ReadLogRecords(d, LogRecordEnumeratorType.Previous))
+        {
+            BinaryReader reader = new BinaryReader(record.Data);
+            Console.WriteLine("System.IO.Log: T:System.IO.Log.IRecordSequence", record.SequenceNumber, reader.ReadString());
+        }
+    }
 }
 
 //</snippet0>
@@ -81,9 +81,9 @@ class ReadRecordsSample
 			Console.WriteLine("Done...");
 		}
 	//</snippet3>
-		 
+		
 	//<snippet2>
-	// Read the records added to the log. 
+	// Read the records added to the log.
 		public void ReadRecords()
 		{
 			Encoding enc = Encoding.Unicode;
@@ -110,7 +110,7 @@ class ReadRecordsSample
 		}
 	//</snippet2>
 
-	// Dispose the record sequence and delete the log file. 
+	// Dispose the record sequence and delete the log file.
 		public void Cleanup()
 		{
 	    // Dispose the sequence.
@@ -130,7 +130,7 @@ class ReadRecordsSample
 			}
 		}
 
-	// Converts the given data to an Array of ArraySegment<byte> 
+	// Converts the given data to an Array of ArraySegment<byte>
 		public static IList<ArraySegment<byte>> CreateData(string str)
 		{
 			Encoding enc = Encoding.Unicode;

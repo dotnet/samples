@@ -13,12 +13,12 @@ namespace Microsoft.WCF.Documentation
     public static void Main()
     {
       // Picks up configuration from the config file.
-      BehaviorServiceClient wcfClient 
+      BehaviorServiceClient wcfClient
         = new BehaviorServiceClient("NetTcpBinding_IBehaviorService");
       // Create a transaction to flow
       TransactionOptions transactionOptions = new TransactionOptions();
       transactionOptions.IsolationLevel = IsolationLevel.ReadCommitted;
-      using (TransactionScope tx 
+      using (TransactionScope tx
         = new TransactionScope(TransactionScopeOption.RequiresNew, transactionOptions)
       )
       {
@@ -29,7 +29,7 @@ namespace Microsoft.WCF.Documentation
           Console.ReadLine();
           Console.WriteLine("The service responded: " + wcfClient.TxWork("Hello from the client."));
           // Write the tx information.
-          System.Transactions.TransactionInformation info 
+          System.Transactions.TransactionInformation info
             = System.Transactions.Transaction.Current.TransactionInformation;
           Console.WriteLine("The distributed tx ID: {0}.", info.DistributedIdentifier);
           Console.WriteLine("The tx status: {0}.", info.Status);

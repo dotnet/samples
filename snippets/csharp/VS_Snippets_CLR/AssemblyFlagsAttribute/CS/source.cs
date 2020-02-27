@@ -2,7 +2,7 @@
 using System;
 using System.Reflection;
 
-// Specify a combination of AssemblyNameFlags for this 
+// Specify a combination of AssemblyNameFlags for this
 // assembly.
 [assembly:AssemblyFlagsAttribute(
     AssemblyNameFlags.EnableJITcompileOptimizer |
@@ -47,13 +47,13 @@ public class Example
         }
         else
         {
-            if (0!=(anf & AssemblyNameFlags.Retargetable)) 
+            if (0!=(anf & AssemblyNameFlags.Retargetable))
                 Console.WriteLine("AssemblyNameFlags.Retargetable");
-            if (0!=(anf & AssemblyNameFlags.PublicKey)) 
+            if (0!=(anf & AssemblyNameFlags.PublicKey))
                 Console.WriteLine("AssemblyNameFlags.PublicKey");
-            if (0!=(anf & AssemblyNameFlags.EnableJITcompileOptimizer)) 
+            if (0!=(anf & AssemblyNameFlags.EnableJITcompileOptimizer))
                 Console.WriteLine("AssemblyNameFlags.EnableJITcompileOptimizer");
-            if (0!=(anf & AssemblyNameFlags.EnableJITcompileTracking)) 
+            if (0!=(anf & AssemblyNameFlags.EnableJITcompileTracking))
                 Console.WriteLine("AssemblyNameFlags.EnableJITcompileTracking");
         }
     }

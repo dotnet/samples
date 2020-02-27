@@ -19,7 +19,7 @@ public class Form1: Form
         string filename="Schema.xml";
 
         // Create a StreamReader object with the file path and name.
-        System.IO.StreamReader readStream = 
+        System.IO.StreamReader readStream =
             new System.IO.StreamReader(filename);
 
         // Invoke the ReadXmlSchema method with the StreamReader object.

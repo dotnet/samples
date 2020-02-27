@@ -38,7 +38,7 @@ namespace Microsoft.Samples.ContentBasedCorrelation.Client
                 Endpoint = clientEndpoint,
                 ServiceContractName = Constants.POContractName,
                 OperationName = Constants.SubmitPOName,
-                Content = new SendMessageContent(new InArgument<PurchaseOrder>(po))               
+                Content = new SendMessageContent(new InArgument<PurchaseOrder>(po))
             };
             // </Snippet0>
             // <Snippet3>
@@ -46,8 +46,8 @@ namespace Microsoft.Samples.ContentBasedCorrelation.Client
             {
                 Variables = { po, customer },
                 Activities =
-                {                    
-                    new Assign<PurchaseOrder> 
+                {
+                    new Assign<PurchaseOrder>
                     {
                         To = po,
                         Value = new InArgument<PurchaseOrder>( (e) => new PurchaseOrder() { PartName = "Widget", Quantity = 150 } )
@@ -61,8 +61,8 @@ namespace Microsoft.Samples.ContentBasedCorrelation.Client
                     new CorrelationScope
                     {
                         Body = new Sequence
-                        { 
-                            Activities = 
+                        {
+                            Activities =
                             {
                                 submitPO,
                                 new ReceiveReply
@@ -72,7 +72,7 @@ namespace Microsoft.Samples.ContentBasedCorrelation.Client
                                 }
                             }
                         }
-                    },                    
+                    },
                     new WriteLine { Text = new InArgument<string>( (e) => string.Format("Received ID for new PO: {0}", po.Get(e).Id) ) },
                     new Assign<int> { To = new OutArgument<int>( (e) => po.Get(e).Quantity ), Value = 250 },
                     new WriteLine { Text = "Updated PO with new quantity: 250.  Resubmitting updated PurchaseOrder based on POId." },
@@ -83,11 +83,11 @@ namespace Microsoft.Samples.ContentBasedCorrelation.Client
                         ServiceContractName = Constants.POContractName,
                         OperationName = Constants.UpdatePOName,
                         Content = SendContent.Create(new InArgument<PurchaseOrder>(po))
-                    },           
+                    },
                     // </Snippet1>
-                    new Assign<int> 
-                    { 
-                        To = new OutArgument<int>( (e) => po.Get(e).CustomerId ), 
+                    new Assign<int>
+                    {
+                        To = new OutArgument<int>( (e) => po.Get(e).CustomerId ),
                         Value = new InArgument<int>( (e) => customer.Get(e).Id )
                     },
                     new WriteLine { Text = "Updating customer data based on CustomerId." },
@@ -97,7 +97,7 @@ namespace Microsoft.Samples.ContentBasedCorrelation.Client
                         ServiceContractName = Constants.POContractName,
                         OperationName = Constants.AddCustomerInfoName,
                         Content = SendContent.Create(new InArgument<PurchaseOrder>(po))
-                    },                    
+                    },
                     new Send
                     {
                         Endpoint = clientEndpoint,

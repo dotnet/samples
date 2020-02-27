@@ -20,14 +20,14 @@ namespace CodeDomSamples
 
             // A C# code generator produces the following source code for the preceeding example code:
 
-            // if (boolean) 
+            // if (boolean)
             // {
                 //     // If condition is true, execute these statements.
             // }
             // else {
             //     // Else block. If condition is false, execute these statements.
-                // }        
-    
+                // }
+
             //</Snippet2>
         }
     }

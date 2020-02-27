@@ -43,7 +43,7 @@ namespace Example
             // Change the settings of the behavior.
             serializerBehavior.MaxItemsInObjectGraph = 10000;
             serializerBehavior.IgnoreExtensionDataObject = true;
-            
+
             sh.Open();
             Console.WriteLine("Listening");
             Console.ReadLine();
@@ -69,7 +69,7 @@ namespace Example
             for (c = 0; c < servDesc.Behaviors.Count; c++)
             {
                 servBeh = servDesc.Behaviors[c];
-                Console.WriteLine("\t{0}", servBeh.ToString());                
+                Console.WriteLine("\t{0}", servBeh.ToString());
             }
 
             // Print the endpoint descriptions of the service.
@@ -90,10 +90,10 @@ namespace Example
                     Console.WriteLine("\t\tActions:");
                     for (k  = 0; k < opDesc.Messages.Count; k++)
                     {
-                        // Print the message action. 
+                        // Print the message action.
                         methDesc = opDesc.Messages[k];
                         Console.WriteLine("\t\t\tAction:{0}", methDesc.Action);
-                       
+
                         // Check for the existence of a body, then the body description.
                         mBodyDesc = methDesc.Body;
                         if (mBodyDesc.Parts.Count > 0)
@@ -137,7 +137,7 @@ namespace Example
     [MessageContract(ProtectionLevel = System.Net.Security.ProtectionLevel.Sign)]
     public class Calculator : ICalculator
     {
-        
+
         public double Add(double a, double b)
         {
             return a + b;

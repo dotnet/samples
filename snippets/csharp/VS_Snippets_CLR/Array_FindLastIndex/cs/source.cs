@@ -5,9 +5,9 @@ public class Example
 {
     public static void Main()
     {
-        string[] dinosaurs = { "Compsognathus", 
-            "Amargasaurus",   "Oviraptor",      "Velociraptor", 
-            "Deinonychus",    "Dilophosaurus",  "Gallimimus", 
+        string[] dinosaurs = { "Compsognathus",
+            "Amargasaurus",   "Oviraptor",      "Velociraptor",
+            "Deinonychus",    "Dilophosaurus",  "Gallimimus",
             "Triceratops" };
 
         Console.WriteLine();
@@ -17,7 +17,7 @@ public class Example
         }
 
         Console.WriteLine(
-            "\nArray.FindLastIndex(dinosaurs, EndsWithSaurus): {0}", 
+            "\nArray.FindLastIndex(dinosaurs, EndsWithSaurus): {0}",
             Array.FindLastIndex(dinosaurs, EndsWithSaurus));
 
         Console.WriteLine(
@@ -32,7 +32,7 @@ public class Example
     // Search predicate returns true if a string ends in "saurus".
     private static bool EndsWithSaurus(String s)
     {
-        if ((s.Length > 5) && 
+        if ((s.Length > 5) &&
             (s.Substring(s.Length - 6).ToLower() == "saurus"))
         {
             return true;

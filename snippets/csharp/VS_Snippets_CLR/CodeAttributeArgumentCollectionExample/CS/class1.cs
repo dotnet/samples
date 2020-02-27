@@ -29,7 +29,7 @@ namespace CodeAttributeArgumentCollectionExample
             CodeAttributeArgument[] arguments = { new CodeAttributeArgument(), new CodeAttributeArgument() };
             collection.AddRange( arguments );
 
-            // Adds a collection of CodeAttributeArgument objects to 
+            // Adds a collection of CodeAttributeArgument objects to
             // the collection.
             CodeAttributeArgumentCollection argumentsCollection = new CodeAttributeArgumentCollection();
             argumentsCollection.Add( new CodeAttributeArgument("TestBooleanArgument", new CodePrimitiveExpression(true)) );
@@ -38,7 +38,7 @@ namespace CodeAttributeArgumentCollectionExample
             //</Snippet4>
 
             //<Snippet5>
-            // Tests for the presence of a CodeAttributeArgument 
+            // Tests for the presence of a CodeAttributeArgument
             // within the collection, and retrieves its index if it is found.
             CodeAttributeArgument testArgument = new CodeAttributeArgument("Test Boolean Argument", new CodePrimitiveExpression(true));
             int itemIndex = -1;

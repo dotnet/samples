@@ -2,9 +2,9 @@
 // System.Reflection.Emit.AssemblyBuilder.DefineVersionInfoResource(string, string, string, string, string)
 
 /*
-   The following program demonstrates the 'DefineResource' and 'DefineVersionInfoResource' 
+   The following program demonstrates the 'DefineResource' and 'DefineVersionInfoResource'
    methods of 'AssemblyBuilder' class. It builds an assembly and a resource file at runtime.
-   The unmanaged version information like product, product version, Company, Copyright, 
+   The unmanaged version information like product, product version, Company, Copyright,
    trademark are defined with 'DefineVersionInfoResource' method. The EmittedTest.cs file
    calls the methods of "MyEmitAssembly.dll" assembly and the message is displayed to console.
 */
@@ -15,16 +15,16 @@ using System.Reflection;
 using System.Reflection.Emit;
 using System.Resources;
 
-public class MyEmitTest 
+public class MyEmitTest
 {
-// <Snippet1>  
-// <Snippet2> 
-   public static void Main() 
+// <Snippet1>
+// <Snippet2>
+   public static void Main()
    {
       AssemblyBuilder myAssembly;
-      IResourceWriter myResourceWriter; 
+      IResourceWriter myResourceWriter;
       myAssembly = (AssemblyBuilder)CreateAssembly(Thread.GetDomain()).Assembly;
-         
+
       myResourceWriter = myAssembly.DefineResource("myResourceFile",
          "A sample Resource File", "MyEmitAssembly.MyResource.resources");
       myResourceWriter.AddResource("AddResource 1", "First added resource");
@@ -38,20 +38,20 @@ public class MyEmitTest
    }
 
    // Create the callee transient dynamic assembly.
-   private static Type CreateAssembly(AppDomain appDomain) 
+   private static Type CreateAssembly(AppDomain appDomain)
    {
       AssemblyName myAssemblyName = new AssemblyName();
       myAssemblyName.Name = "MyEmitAssembly";
-      AssemblyBuilder myAssembly = appDomain.DefineDynamicAssembly(myAssemblyName, 
+      AssemblyBuilder myAssembly = appDomain.DefineDynamicAssembly(myAssemblyName,
          AssemblyBuilderAccess.Save);
       ModuleBuilder myModule = myAssembly.DefineDynamicModule("EmittedModule",
          "EmittedModule.mod");
 
       // Define a public class named "HelloWorld" in the assembly.
-      TypeBuilder helloWorldClass = 
+      TypeBuilder helloWorldClass =
          myModule.DefineType("HelloWorld", TypeAttributes.Public);
       // Define the Display method.
-      MethodBuilder myMethod = helloWorldClass.DefineMethod("Display", 
+      MethodBuilder myMethod = helloWorldClass.DefineMethod("Display",
          MethodAttributes.Public, typeof(String), null);
 
       // Generate IL for GetGreeting.
@@ -61,7 +61,7 @@ public class MyEmitTest
 
       // Returns the type HelloWorld.
       return(helloWorldClass.CreateType());
-   }   
+   }
 // </Snippet2>
-// </Snippet1> 
+// </Snippet1>
 }

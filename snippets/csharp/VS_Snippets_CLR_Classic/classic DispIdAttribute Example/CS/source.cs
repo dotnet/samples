@@ -7,11 +7,11 @@ public class MyClass
 
    [DispId(8)]
    public void MyMethod() {}
-   
+
    public int MyOtherMethod() {
       return 0;
    }
-   
+
    [DispId(9)]
    public bool MyField;
 }

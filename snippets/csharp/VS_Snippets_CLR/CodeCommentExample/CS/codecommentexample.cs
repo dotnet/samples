@@ -21,7 +21,7 @@ namespace CodeDomSamples
             CodeCommentStatement commentStatement = new CodeCommentStatement( comment );
 
             // A C# code generator produces the following source code for the preceeding example code:
-            
+
             // // This comment was generated from a System.CodeDom.CodeComment
             //</Snippet2>
         }

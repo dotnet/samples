@@ -12,16 +12,16 @@ public class Form1: Form
     // <Snippet1>
     // Put the next line into the Declarations section.
     private System.Data.DataSet dataSet;
- 
+
     private void MakeDataTables()
     {
-        // Run all of the functions. 
+        // Run all of the functions.
         MakeParentTable();
         MakeChildTable();
         MakeDataRelation();
         BindToDataGrid();
     }
- 
+
     private void MakeParentTable()
     {
         // Create a new DataTable.
@@ -29,9 +29,9 @@ public class Form1: Form
         // Declare variables for DataColumn and DataRow objects.
         DataColumn column;
         DataRow row;
- 
-        // Create new DataColumn, set DataType, 
-        // ColumnName and add to DataTable.    
+
+        // Create new DataColumn, set DataType,
+        // ColumnName and add to DataTable.
         column = new DataColumn();
         column.DataType = System.Type.GetType("System.Int32");
         column.ColumnName = "id";
@@ -39,7 +39,7 @@ public class Form1: Form
         column.Unique = true;
         // Add the Column to the DataColumnCollection.
         table.Columns.Add(column);
- 
+
         // Create second column.
         column = new DataColumn();
         column.DataType = System.Type.GetType("System.String");
@@ -50,18 +50,18 @@ public class Form1: Form
         column.Unique = false;
         // Add the column to the table.
         table.Columns.Add(column);
- 
+
         // Make the ID column the primary key column.
         DataColumn[] PrimaryKeyColumns = new DataColumn[1];
         PrimaryKeyColumns[0] = table.Columns["id"];
         table.PrimaryKey = PrimaryKeyColumns;
- 
+
         // Instantiate the DataSet variable.
         dataSet = new DataSet();
         // Add the new DataTable to the DataSet.
         dataSet.Tables.Add(table);
- 
-        // Create three new DataRow objects and add 
+
+        // Create three new DataRow objects and add
         // them to the DataTable
         for (int i = 0; i<= 2; i++)
         {
@@ -71,14 +71,14 @@ public class Form1: Form
             table.Rows.Add(row);
         }
     }
- 
+
     private void MakeChildTable()
     {
         // Create a new DataTable.
         DataTable table = new DataTable("childTable");
         DataColumn column;
         DataRow row;
- 
+
         // Create first column and add to the DataTable.
         column = new DataColumn();
         column.DataType= System.Type.GetType("System.Int32");
@@ -90,7 +90,7 @@ public class Form1: Form
 
         // Add the column to the DataColumnCollection.
         table.Columns.Add(column);
- 
+
         // Create second column.
         column = new DataColumn();
         column.DataType= System.Type.GetType("System.String");
@@ -100,7 +100,7 @@ public class Form1: Form
         column.ReadOnly = false;
         column.Unique = false;
         table.Columns.Add(column);
- 
+
         // Create third column.
         column = new DataColumn();
         column.DataType= System.Type.GetType("System.Int32");
@@ -110,10 +110,10 @@ public class Form1: Form
         column.ReadOnly = false;
         column.Unique = false;
         table.Columns.Add(column);
- 
+
         dataSet.Tables.Add(table);
 
-        // Create three sets of DataRow objects, 
+        // Create three sets of DataRow objects,
         // five rows each, and add to DataTable.
         for(int i = 0; i <= 4; i ++)
         {
@@ -140,23 +140,23 @@ public class Form1: Form
             table.Rows.Add(row);
         }
     }
- 
+
     private void MakeDataRelation()
     {
-        // DataRelation requires two DataColumn 
+        // DataRelation requires two DataColumn
         // (parent and child) and a name.
-        DataColumn parentColumn = 
+        DataColumn parentColumn =
             dataSet.Tables["ParentTable"].Columns["id"];
-        DataColumn childColumn = 
+        DataColumn childColumn =
             dataSet.Tables["ChildTable"].Columns["ParentID"];
-        DataRelation relation = new 
+        DataRelation relation = new
             DataRelation("parent2Child", parentColumn, childColumn);
         dataSet.Tables["ChildTable"].ParentRelations.Add(relation);
     }
- 
+
     private void BindToDataGrid()
     {
-        // Instruct the DataGrid to bind to the DataSet, with the 
+        // Instruct the DataGrid to bind to the DataSet, with the
         // ParentTable as the topmost DataTable.
         dataGrid1.SetDataBinding(dataSet,"ParentTable");
     }

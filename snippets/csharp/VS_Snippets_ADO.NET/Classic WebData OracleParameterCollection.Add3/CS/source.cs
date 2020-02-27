@@ -11,7 +11,7 @@ public class Form1: Form
     protected DataGrid dataGrid1;
 
     // <Snippet1>
-    public void CreateOracleParamColl(OracleConnection connection) 
+    public void CreateOracleParamColl(OracleConnection connection)
     {
         OracleCommand command = new OracleCommand(
             "SELECT Ename, DeptNo FROM Emp WHERE EmpNo = :pEmpNo", connection);

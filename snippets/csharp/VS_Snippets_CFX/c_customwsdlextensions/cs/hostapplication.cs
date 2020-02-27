@@ -28,7 +28,7 @@ namespace Microsoft.WCF.Documentation
             foreach (OperationDescription op in ep.Contract.Operations)
             {
               if (op.Behaviors.Find<DataContractSerializerOperationBehavior>() == null)
-              { 
+              {
                 DataContractSerializerOperationBehavior dcserBehave = new DataContractSerializerOperationBehavior(op);
                 dcserBehave.DataContractSurrogate = new DCAnnotationSurrogate();
                 op.Behaviors.Add(dcserBehave);

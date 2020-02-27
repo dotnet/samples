@@ -1,11 +1,11 @@
 ﻿//<snippet1>
-// This example demonstrates the Convert.ToBase64String() and 
+// This example demonstrates the Convert.ToBase64String() and
 //                               Convert.FromBase64String() methods
 
 using System;
-class Sample 
+class Sample
 {
-    public static void Main() 
+    public static void Main()
     {
     byte[] inArray  = new byte[256];
     byte[] outArray = new byte[256];
@@ -25,11 +25,11 @@ class Sample
     string ruler1b = "         5         6         7      ";
     string ruler2b = "123456789012345678901234567890123456";
     string ruler3b = "----+----+----+----+----+----+----+-";
-    string ruler   = String.Concat(ruler1a, ruler1b, nl, 
+    string ruler   = String.Concat(ruler1a, ruler1b, nl,
                                    ruler2a, ruler2b, nl,
                                    ruler3a, ruler3b, nl);
 
-// 1) Display an arbitrary array of input data (inArray). The data could be 
+// 1) Display an arbitrary array of input data (inArray). The data could be
 //    derived from user input, a file, an algorithm, etc.
 
     Console.WriteLine(step1);
@@ -42,15 +42,15 @@ class Sample
         }
     Console.Write("{0}{0}", nl);
 
-// 2) Convert a subarray of the input data to a base64 string. In this case, 
+// 2) Convert a subarray of the input data to a base64 string. In this case,
 //    the subarray is the entire input data array. New lines (CRLF) are inserted.
 
     Console.WriteLine(step2);
-    s2 = Convert.ToBase64String(inArray, 0, inArray.Length, 
+    s2 = Convert.ToBase64String(inArray, 0, inArray.Length,
                                 Base64FormattingOptions.InsertLineBreaks);
     Console.WriteLine("{0}{1}{2}{3}", nl, ruler, s2, nl);
 
-// 3) Convert the input data to a base64 string. In this case, the entire 
+// 3) Convert the input data to a base64 string. In this case, the entire
 //    input data array is converted by default. New lines (CRLF) are inserted.
 
     Console.WriteLine(step3);

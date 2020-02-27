@@ -36,13 +36,13 @@ namespace CS
             // <Snippet5>
             string[] ultDestsS12 = envS12.GetUltimateDestinationActorValues();
             // </Snippet5>
-             
+
             string ultS12 = ultDestsS12[1];
 
             // <Snippet6>
             string toStrS12 = envS12.ToString();
             // </Snippet6>
-             
+
             EnvelopeVersion envNone = EnvelopeVersion.None;
             string nextDestNone = envNone.NextDestinationActorValue;
             //The following code throws a System.ArgumentReferenceException.

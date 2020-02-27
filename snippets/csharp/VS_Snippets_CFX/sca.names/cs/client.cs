@@ -2,7 +2,7 @@
 using System;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
- 
+
 public class Client
 {
   public static void Main()
@@ -16,7 +16,7 @@ public class Client
       string greeting = Console.ReadLine();
       Console.WriteLine("The service responded: " + wcfClient.SampleMethod(greeting));
 
-      // Done with service. 
+      // Done with service.
       wcfClient.Close();
       Console.WriteLine("Done!");
     }

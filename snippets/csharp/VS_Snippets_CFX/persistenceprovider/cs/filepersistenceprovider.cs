@@ -226,7 +226,7 @@ namespace PersistenceProviderSample
             Guid providerId = provider.Id;
             //</snippet10>
         }
-    
+
         class FilePersistenceProvider : PersistenceProvider
         {
             FilePersistenceProviderFactory factory;

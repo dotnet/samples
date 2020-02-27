@@ -28,7 +28,7 @@ public class Form1: Form
         {
             // Insert code to resolve errors.
         }
-        // After fixing errors, update the data source with 
+        // After fixing errors, update the data source with
         // the DataAdapter used to create the DataSet.
         myOleDbDataAdapter.Update(tempDataSet);
     }

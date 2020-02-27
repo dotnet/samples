@@ -70,7 +70,7 @@ namespace SendActivitySnippets
         {
             Console.WriteLine("SendActivity1 AfterResponse event fired.");
         }
-            
+
         //</snippet2>
     }
     class Snippets2
@@ -168,7 +168,7 @@ namespace SendActivitySnippets
             Dictionary<String, String> Context = (Dictionary<String, String>)SendActivity.GetContext(sendActivity1, channelToken1, contractType);
             //</snippet12>
         }
-        
+
         void Container15()
         {
             //SendActivity.GetContext(Activity, String, String, Type)

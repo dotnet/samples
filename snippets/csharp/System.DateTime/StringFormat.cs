@@ -46,7 +46,7 @@ namespace SystemDateTimeReference
             var date1 = new DateTime(2008, 3, 1, 7, 0, 0);
             Console.WriteLine(date1.ToString("F", new System.Globalization.CultureInfo("fr-FR")));
             // Displays samedi 1 mars 2008 07:00:00
-            // </Snippet4>      
+            // </Snippet4>
         }
 
         private static void ShowIso8601Format()
@@ -55,7 +55,7 @@ namespace SystemDateTimeReference
             var date1 = new DateTime(2008, 3, 1, 7, 0, 0);
             Console.WriteLine(date1.ToString("yyyyMMddTHH:mm:ssZ"));
             // Displays 20080301T07:00:00Z
-            // </Snippet5>      
+            // </Snippet5>
         }
     }
 }

@@ -12,7 +12,7 @@ namespace Aes_Example
             string original = "Here is some data to encrypt!";
 
             // Create a new instance of the AesManaged
-            // class.  This generates a new key and initialization 
+            // class.  This generates a new key and initialization
             // vector (IV).
             using (AesManaged myAes = new AesManaged())
             {
@@ -38,7 +38,7 @@ namespace Aes_Example
             if (IV == null || IV.Length <= 0)
                 throw new ArgumentNullException("IV");
             byte[] encrypted;
-            
+
             // Create an AesManaged object
             // with the specified key and IV.
             using (AesManaged aesAlg = new AesManaged())

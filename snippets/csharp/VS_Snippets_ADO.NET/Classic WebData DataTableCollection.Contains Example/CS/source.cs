@@ -19,7 +19,7 @@ public class Form1: Form
         DataTableCollection tablesCol = thisDataSet.Tables;
 
         // Check if the named table exists.
-        if (tablesCol.Contains("Suppliers")) 
+        if (tablesCol.Contains("Suppliers"))
             Console.WriteLine("Table named Suppliers exists");
     }
     // </Snippet1>

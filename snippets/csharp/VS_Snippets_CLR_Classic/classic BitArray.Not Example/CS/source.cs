@@ -2,9 +2,9 @@
  using System;
  using System.Collections;
  public class SamplesBitArray  {
- 
+
     public static void Main()  {
- 
+
        // Creates and initializes two BitArrays of the same size.
        BitArray myBA1 = new BitArray( 4 );
        BitArray myBA2 = new BitArray( 4 );
@@ -12,7 +12,7 @@
        myBA1[2] = myBA1[3] = true;
        myBA2[0] = myBA2[2] = false;
        myBA2[1] = myBA2[3] = true;
- 
+
        // Performs a bitwise NOT operation between BitArray instances of the same size.
        Console.WriteLine( "Initial values" );
        Console.Write( "myBA1:" );
@@ -20,10 +20,10 @@
        Console.Write( "myBA2:" );
        PrintValues( myBA2, 8 );
        Console.WriteLine();
- 
+
        myBA1.Not();
        myBA2.Not();
- 
+
        Console.WriteLine( "After NOT" );
        Console.Write( "myBA1:" );
        PrintValues( myBA1, 8 );
@@ -47,7 +47,7 @@
  }
 
 
- /* 
+ /*
  This code produces the following output.
 
  Initial values
@@ -58,5 +58,5 @@
  myBA1:    True    True   False   False
  myBA2:    True   False    True   False
 
- */ 
+ */
 // </Snippet1>

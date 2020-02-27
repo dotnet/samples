@@ -15,7 +15,7 @@ using System.Xml;
 namespace Snippets
 {
     class Snippet
-    {        
+    {
         private void ShowUse()
         {
             //<snippet17>

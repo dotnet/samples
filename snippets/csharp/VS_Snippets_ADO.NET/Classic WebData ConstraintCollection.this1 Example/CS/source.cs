@@ -11,7 +11,7 @@ public class Form1: Form
     {
         if(table.Constraints.Contains("CustomersOrdersConstraint"))
         {
-            Constraint constraint = 
+            Constraint constraint =
                 table.Constraints["CustomersOrdersConstraint"];
         }
     }

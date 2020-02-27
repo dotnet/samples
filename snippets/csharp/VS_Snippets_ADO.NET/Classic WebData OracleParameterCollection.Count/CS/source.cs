@@ -11,7 +11,7 @@ public class Form1: Form
     protected DataGrid dataGrid1;
 
     // <Snippet1>
-    public void CreateOracleParamColl(OracleCommand command) 
+    public void CreateOracleParamColl(OracleCommand command)
     {
         OracleParameterCollection paramCollection = command.Parameters;
         paramCollection.Add("pDName", OracleType.VarChar);

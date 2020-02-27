@@ -7,7 +7,7 @@ using System;
 using System.ServiceModel.Channels;
 using System.ServiceModel;
 using System.ServiceModel.Description;
-   
+
 namespace UE.ServiceModel.Samples
 {
     [ServiceContract(Namespace = "http://UE.ServiceModel.Samples")]

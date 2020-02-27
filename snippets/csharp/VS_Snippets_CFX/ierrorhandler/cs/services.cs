@@ -13,10 +13,10 @@ namespace Microsoft.WCF.Documentation
     [FaultContractAttribute(typeof(GreetingFault))]
     string SampleMethod(string msg);
   }
- 
+
   [DataContractAttribute]
   public class GreetingFault
-  { 
+  {
     private string report;
 
     public GreetingFault(string message)
@@ -37,7 +37,7 @@ namespace Microsoft.WCF.Documentation
     public string  SampleMethod(string msg)
     {
       Console.WriteLine("Client said: " + msg);
-      // Note: Not a contractually specified exception. If 
+      // Note: Not a contractually specified exception. If
       // ServiceBehaviorAttribute.IncludeExceptionDetailInFaults is set to true,
       // this fault is experienced on a WCF client as a FaultException.
       throw new Exception("A Greeting error occurred. You said: " + msg);
@@ -47,7 +47,7 @@ namespace Microsoft.WCF.Documentation
 // </snippet1>
 
 /* <snippet8>
-The service output is: 
+The service output is:
 
 EnforceGreetingFaultBehavior created.
 Validate is called.
@@ -59,9 +59,9 @@ ProvideFault called. Converting Exception to GreetingFault....
 HandleError called.
 
 And the client output is:
- 
+
 Enter the greeting to send:
 Why Hello there!
 A Greeting error occurred. You said: Why Hello there!
 Done!
-*/ //</snippet8> 
+*/ //</snippet8>

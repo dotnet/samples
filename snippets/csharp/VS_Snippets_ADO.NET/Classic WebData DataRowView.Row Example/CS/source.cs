@@ -9,7 +9,7 @@ public class Form1: Form
     protected DataGrid dataGrid1;
 
     // <Snippet1>
-    private void ShowColumn3() 
+    private void ShowColumn3()
     {
         DataView view = (DataView) dataGrid1.DataSource;
 

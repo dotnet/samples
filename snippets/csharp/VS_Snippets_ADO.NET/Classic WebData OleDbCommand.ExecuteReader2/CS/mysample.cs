@@ -10,13 +10,13 @@ public class Form1: Form
   protected DataSet DataSet1;
   protected DataGrid dataGrid1;
 // <Snippet1>
-public void CreateMyOleDbDataReader(string queryString,string connectionString) 
+public void CreateMyOleDbDataReader(string queryString,string connectionString)
 {
    OleDbConnection connection = new OleDbConnection(connectionString);
    OleDbCommand command = new OleDbCommand(queryString, connection);
    connection.Open();
    OleDbDataReader reader = command.ExecuteReader(CommandBehavior.CloseConnection);
-   while(reader.Read()) 
+   while(reader.Read())
    {
       Console.WriteLine(reader.GetString(0));
    }

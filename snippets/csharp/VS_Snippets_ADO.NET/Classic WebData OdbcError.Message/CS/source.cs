@@ -11,7 +11,7 @@ public class Form1: Form
   protected DataGrid dataGrid;
 
 // <Snippet1>
- public void DisplayOdbcErrorCollection(OdbcException exception) 
+ public void DisplayOdbcErrorCollection(OdbcException exception)
  {
     for (int i=0; i < exception.Errors.Count; i++)
     {

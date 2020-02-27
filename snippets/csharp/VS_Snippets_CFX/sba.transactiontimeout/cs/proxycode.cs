@@ -14,7 +14,7 @@
 [System.ServiceModel.ServiceContractAttribute(Namespace="http://microsoft.wcf.documentation", ConfigurationName="IBehaviorService", SessionMode=System.ServiceModel.SessionMode.Required)]
 public interface IBehaviorService
 {
-    
+
     [System.ServiceModel.OperationContractAttribute(Action="http://microsoft.wcf.documentation/IBehaviorService/TxWork", ReplyAction="http://microsoft.wcf.documentation/IBehaviorService/TxWorkResponse")]
     [System.ServiceModel.TransactionFlowAttribute(System.ServiceModel.TransactionFlowOption.Mandatory)]
     string TxWork(string message);
@@ -29,31 +29,31 @@ public interface IBehaviorServiceChannel : IBehaviorService, System.ServiceModel
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
 public partial class BehaviorServiceClient : System.ServiceModel.ClientBase<IBehaviorService>, IBehaviorService
 {
-    
+
     public BehaviorServiceClient()
     {
     }
-    
-    public BehaviorServiceClient(string endpointConfigurationName) : 
+
+    public BehaviorServiceClient(string endpointConfigurationName) :
             base(endpointConfigurationName)
     {
     }
-    
-    public BehaviorServiceClient(string endpointConfigurationName, string remoteAddress) : 
+
+    public BehaviorServiceClient(string endpointConfigurationName, string remoteAddress) :
             base(endpointConfigurationName, remoteAddress)
     {
     }
-    
-    public BehaviorServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+
+    public BehaviorServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) :
             base(endpointConfigurationName, remoteAddress)
     {
     }
-    
-    public BehaviorServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+
+    public BehaviorServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :
             base(binding, remoteAddress)
     {
     }
-    
+
     public string TxWork(string message)
     {
         return base.Channel.TxWork(message);

@@ -5,7 +5,7 @@ using System.Diagnostics;
 public class Form1: Form
 {
     protected TextBox textBox1;
-    
+
     // <Snippet1>
     private void GetFilePrivatePart()
     {

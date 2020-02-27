@@ -14,7 +14,7 @@ public class Form1: Form
     {
         // If there are errors, try to reconcile.
         if(table.HasErrors)
-        { 
+        {
             if(Reconcile(table))
             {
                 // Fixed all errors.
@@ -32,7 +32,7 @@ public class Form1: Form
             table.AcceptChanges();
         }
     }
- 
+
     private bool Reconcile(DataTable thisTable)
     {
         foreach(DataRow row in thisTable.Rows)

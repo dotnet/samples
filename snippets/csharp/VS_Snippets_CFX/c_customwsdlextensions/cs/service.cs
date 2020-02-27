@@ -18,7 +18,7 @@ namespace Microsoft.WCF.Documentation
 
     public Person GetPerson(int a, int b)
     {
-      return new Person("Last name, first name"); 
+      return new Person("Last name, first name");
     }
 	}
 }

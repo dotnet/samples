@@ -22,7 +22,7 @@ class DESCSPSample
 
             // Decrypt the buffer back to a string.
             string Final = DecryptTextFromMemory(Data, DESalg.Key, DESalg.IV);
-            
+
             // Display the decrypted string to the console.
             Console.WriteLine(Final);
         }
@@ -39,10 +39,10 @@ class DESCSPSample
             // Create a MemoryStream.
             MemoryStream mStream = new MemoryStream();
 
-            // Create a CryptoStream using the MemoryStream 
+            // Create a CryptoStream using the MemoryStream
             // and the passed key and initialization vector (IV).
-            CryptoStream cStream = new CryptoStream(mStream, 
-                new DESCryptoServiceProvider().CreateEncryptor(Key, IV), 
+            CryptoStream cStream = new CryptoStream(mStream,
+                new DESCryptoServiceProvider().CreateEncryptor(Key, IV),
                 CryptoStreamMode.Write);
 
             // Convert the passed string to a byte array.
@@ -51,9 +51,9 @@ class DESCSPSample
             // Write the byte array to the crypto stream and flush it.
             cStream.Write(toEncrypt, 0, toEncrypt.Length);
             cStream.FlushFinalBlock();
-        
-            // Get an array of bytes from the 
-            // MemoryStream that holds the 
+
+            // Get an array of bytes from the
+            // MemoryStream that holds the
             // encrypted data.
             byte[] ret = mStream.ToArray();
 
@@ -75,14 +75,14 @@ class DESCSPSample
     {
         try
         {
-            // Create a new MemoryStream using the passed 
+            // Create a new MemoryStream using the passed
             // array of encrypted data.
             MemoryStream msDecrypt = new MemoryStream(Data);
 
-            // Create a CryptoStream using the MemoryStream 
+            // Create a CryptoStream using the MemoryStream
             // and the passed key and initialization vector (IV).
-            CryptoStream csDecrypt = new CryptoStream(msDecrypt, 
-                new DESCryptoServiceProvider().CreateDecryptor(Key, IV), 
+            CryptoStream csDecrypt = new CryptoStream(msDecrypt,
+                new DESCryptoServiceProvider().CreateDecryptor(Key, IV),
                 CryptoStreamMode.Read);
 
             // Create buffer to hold the decrypted data.

@@ -3,7 +3,7 @@ using System;
 using System.Reflection;
 using System.Globalization;
 
-public class MyBinder : Binder 
+public class MyBinder : Binder
 {
     public MyBinder() : base()
     {
@@ -112,7 +112,7 @@ public class MyBinder : Binder
         for(int i = 0; i < match.Length; i++)
         {
             // Count the number of parameters that match.
-            int count = 0; 
+            int count = 0;
             ParameterInfo[] parameters = match[i].GetParameters();
             // Go on to the next method if the number of parameters do not match.
             if(types.Length != parameters.Length)
@@ -285,7 +285,7 @@ public class MyBinder : Binder
 public class MyClass1
 {
     public short myFieldB;
-    public int myFieldA; 
+    public int myFieldA;
     public void MyMethod(long i, char k)
     {
         Console.WriteLine("\nThis is MyMethod(long i, char k)");

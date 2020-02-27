@@ -42,19 +42,19 @@ namespace Microsoft.ServiceModel.Samples
             "af1f50b20cd413ed9cd00c315bbb6dc1c08da5e6");
 	    sh.Open();
         //</snippet4>
-	    
+	
         //</snippet20>
         }
 
         private void EnablePortSharing()
         {
             //<snippet3>
-            
+
             NetTcpBinding portsharingBinding = new NetTcpBinding();
             portsharingBinding.PortSharingEnabled = true;
-            
+
             ServiceHost host = new ServiceHost( typeof( MyService ) );
-            host.AddServiceEndpoint( typeof( IMyService ), 
+            host.AddServiceEndpoint( typeof( IMyService ),
                                      portsharingBinding,
                                      "net.tcp://localhost/MyService" );
 

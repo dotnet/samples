@@ -12,8 +12,8 @@ public class Form1: Form
     // <Snippet1>
     private void PrintAllErrs(DataSet dataSet)
     {
-        DataRow[] rowsInError; 
-      
+        DataRow[] rowsInError;
+
         foreach(DataTable table in dataSet.Tables)
         {
             // Test if the table has errors. If not, skip it.
@@ -26,7 +26,7 @@ public class Form1: Form
                 {
                     foreach(DataColumn column in table.Columns)
                     {
-                        Console.WriteLine(column.ColumnName + " " + 
+                        Console.WriteLine(column.ColumnName + " " +
                             rowsInError[i].GetColumnError(column));
                     }
                     // Clear the row errors

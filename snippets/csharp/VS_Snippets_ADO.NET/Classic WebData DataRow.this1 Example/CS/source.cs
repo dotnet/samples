@@ -14,7 +14,7 @@ public class Form1: Form
         // Get the DataTable the grid is bound to.
         DataGrid thisGrid = (DataGrid) sender;
         DataTable table = (DataTable) thisGrid.DataSource;
-        DataRow currentRow = 
+        DataRow currentRow =
             table.Rows[thisGrid.CurrentCell.RowNumber];
 
         // Get the value of the column 1 in the DataTable.
@@ -22,11 +22,11 @@ public class Form1: Form
         // You can also use the index:
         // Console.WriteLine(currentRow[1]);
     }
- 
+
     private void SetDataRowValue(
         DataGrid grid, object newValue)
     {
-        // Set the value of the first column in 
+        // Set the value of the first column in
         // the last row of a DataGrid.
         DataTable table = (DataTable) grid.DataSource;
         DataRow row = table.Rows[table.Rows.Count-1];

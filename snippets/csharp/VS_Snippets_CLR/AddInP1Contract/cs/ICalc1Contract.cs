@@ -5,7 +5,7 @@ using System.AddIn.Pipeline;
 namespace CalculatorContracts
 {
     // <Snippet2>
-    // The AddInContractAttribute identifies this pipeline segment as a 
+    // The AddInContractAttribute identifies this pipeline segment as a
     // contract.
     [AddInContract]
     public interface ICalc1Contract : IContract

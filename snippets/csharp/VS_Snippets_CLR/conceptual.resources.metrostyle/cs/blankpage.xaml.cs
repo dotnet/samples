@@ -36,10 +36,10 @@ namespace ResourceCS1
         // <Snippet1>
         public BlankPage()
         {
-            
+
             InitializeComponent();
             Example.Run(outputBlock);
         }
-        // </Snippet1>    
+        // </Snippet1>
     }
 }

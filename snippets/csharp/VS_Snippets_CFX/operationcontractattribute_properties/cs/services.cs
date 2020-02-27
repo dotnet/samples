@@ -41,11 +41,11 @@ namespace Microsoft.WCF.Documentation
 //<snippet2>
 <s:Envelope xmlns:a="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
   <s:Header>
-    <a:Action s:mustUnderstand="1">http://Microsoft.WCF.Documentation/ResponseToOCAMethod</a:Action> 
+    <a:Action s:mustUnderstand="1">http://Microsoft.WCF.Documentation/ResponseToOCAMethod</a:Action>
   </s:Header>
   <s:Body>
     <OCAMethodResponse xmlns="http://Microsoft.WCF.Documentation">
-      <OCAMethodResult>The service greets you: Hello!</OCAMethodResult> 
+      <OCAMethodResult>The service greets you: Hello!</OCAMethodResult>
     </OCAMethodResponse>
   </s:Body>
 </s:Envelope>

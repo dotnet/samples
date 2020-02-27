@@ -12,7 +12,7 @@ public class Form1: Form
     // <Snippet1>
     private void AddTable()
     {
-        // Presuming a DataGrid is displaying more than one table, 
+        // Presuming a DataGrid is displaying more than one table,
         // get its DataSet.
         DataSet thisDataSet = (DataSet)DataGrid1.DataSource;
 

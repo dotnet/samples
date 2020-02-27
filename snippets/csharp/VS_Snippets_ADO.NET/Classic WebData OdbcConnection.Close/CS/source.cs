@@ -24,7 +24,7 @@ namespace Classic_WebData_OdbcConnection.CloseCS
                 Console.WriteLine("ServerVersion: " + connection.ServerVersion
                     + "\nDatabase: " + connection.Database);
 
-                // The connection is automatically closed at 
+                // The connection is automatically closed at
                 // the end of the Using block.
             }
         }

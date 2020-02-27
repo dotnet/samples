@@ -23,7 +23,7 @@ public class Form1: Form
             (filename,System.IO.FileMode.Open);
 
         // Create a new XmlTextReader object with the FileStream.
-        System.Xml.XmlTextReader xmlReader= 
+        System.Xml.XmlTextReader xmlReader=
             new System.Xml.XmlTextReader(stream);
 
         // Read the schema into the DataSet and close the reader.

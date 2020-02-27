@@ -3,9 +3,9 @@
 //                           and Char.ConvertToUtf32() overloads.
 using System;
 
-class Sample 
+class Sample
 {
-    public static void Main() 
+    public static void Main()
     {
     int letterA = 0x0041;  //U+00041 = LATIN CAPITAL LETTER A
     int music   = 0x1D161; //U+1D161 = MUSICAL SYMBOL SIXTEENTH NOTE
@@ -15,7 +15,7 @@ class Sample
     string comment2b = "Create a code point from a surrogate pair at a certain position in a string.";
     string comment2c = "Create a code point from a high surrogate and a low surrogate code point.";
 
-//  Convert code point U+0041 to UTF-16. The UTF-16 equivalent of 
+//  Convert code point U+0041 to UTF-16. The UTF-16 equivalent of
 //  U+0041 is a Char with hexadecimal value 0041.
 
     Console.WriteLine(comment);
@@ -35,7 +35,7 @@ class Sample
 
 // -------------------------------------------------------------------
 
-//  Convert the code point U+1D161 to UTF-16. The UTF-16 equivalent of 
+//  Convert the code point U+1D161 to UTF-16. The UTF-16 equivalent of
 //  U+1D161 is a surrogate pair with hexadecimal values D834 and DD61.
 
     Console.WriteLine(comment);
@@ -44,7 +44,7 @@ class Sample
     Show(s1);
     Console.WriteLine();
 
-//  Convert the surrogate pair in the string at index position 
+//  Convert the surrogate pair in the string at index position
 //  zero to a code point.
 
     Console.WriteLine(comment2b);
@@ -66,8 +66,8 @@ class Sample
     {
     for (int x = 0; x < s.Length; x++)
         {
-        Console.Write("0x{0:X}{1}", 
-                       (int)s[x], 
+        Console.Write("0x{0:X}{1}",
+                       (int)s[x],
                        ((x == s.Length-1)? String.Empty : ", "));
         }
     }

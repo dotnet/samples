@@ -10,9 +10,9 @@ namespace Microsoft.ServiceModel.Samples
     using System.Configuration;
 
     // Configuration for HttpCookieSessionBinding.
-    public class HttpCookieSessionBindingCollectionElement  : 
-        StandardBindingCollectionElement<HttpCookieSessionBinding, 
+    public class HttpCookieSessionBindingCollectionElement  :
+        StandardBindingCollectionElement<HttpCookieSessionBinding,
         HttpCookieSessionBindingConfigurationElement>
-    {     
+    {
     }
 }

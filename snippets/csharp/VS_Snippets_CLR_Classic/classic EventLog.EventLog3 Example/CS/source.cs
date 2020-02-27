@@ -2,7 +2,7 @@
 using System;
 using System.Diagnostics;
 using System.Threading;
-              
+
 class MySample{
 
     public static void Main(){
@@ -22,9 +22,9 @@ class MySample{
         // Create an EventLog instance and assign its source.
         EventLog myLog = new EventLog("myNewLog", ".", "MySource");
 
-        // Write an entry to the log.        
+        // Write an entry to the log.
         myLog.WriteEntry("Writing to event log on " + myLog.MachineName);
     }
 }
-   
+
 // </Snippet1>

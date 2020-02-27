@@ -12,7 +12,7 @@ namespace KnownTypeAttributeExample
     using System.Text;
     using System.Runtime.Serialization;
     using System.IO;
-    // The constructor names the method that returns an array 
+    // The constructor names the method that returns an array
     // of types that can be used during deserialization.
     [KnownTypeAttribute("KnownTypes")]
     [DataContract]
@@ -46,7 +46,7 @@ namespace KnownTypeAttributeExample
         public Manager(string newFName, string newLName)
             : base(newFName, newLName)
         { }
-        
+
         [DataMember]
         internal Employee[] Reports;
     }
@@ -79,8 +79,8 @@ namespace KnownTypeAttributeExample
             Manager theBoss = new Manager("Michiyo", "Sato");
             theBoss.id = 41;
             emp.Boss = theBoss;
-            
-            DataContractSerializer ser = 
+
+            DataContractSerializer ser =
                 new DataContractSerializer(typeof(Employee));
 
             FileStream fs =
@@ -90,7 +90,7 @@ namespace KnownTypeAttributeExample
         }
         static void Deserialize(string path)
         {
-            DataContractSerializer ser = 
+            DataContractSerializer ser =
                 new DataContractSerializer(typeof(Employee));
             FileStream fs = new FileStream(path,
             FileMode.Open);

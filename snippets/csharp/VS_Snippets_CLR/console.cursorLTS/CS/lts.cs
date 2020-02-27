@@ -1,12 +1,12 @@
 ﻿//<snippet1>
-// This example demonstrates the 
-//     Console.CursorLeft and 
+// This example demonstrates the
+//     Console.CursorLeft and
 //     Console.CursorTop properties, and the
-//     Console.SetCursorPosition and 
+//     Console.SetCursorPosition and
 //     Console.Clear methods.
 using System;
 
-class Sample 
+class Sample
 {
     protected static int origRow;
     protected static int origCol;
@@ -25,7 +25,7 @@ class Sample
         }
     }
 
-    public static void Main() 
+    public static void Main()
     {
 // Clear the screen, then save the top and left coordinates.
     Console.Clear();

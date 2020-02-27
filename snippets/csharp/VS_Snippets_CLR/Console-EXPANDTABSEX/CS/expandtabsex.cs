@@ -48,7 +48,7 @@ public class ExpandTabs
                 Console.Write(c);
         }
         writer.Close();
-        // Recover the standard output stream so that a 
+        // Recover the standard output stream so that a
         // completion message can be displayed.
         StreamWriter standardOutput = new StreamWriter(Console.OpenStandardOutput());
         standardOutput.AutoFlush = true;

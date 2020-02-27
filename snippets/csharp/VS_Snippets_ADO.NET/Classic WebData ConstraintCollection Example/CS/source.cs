@@ -15,7 +15,7 @@ public class Form1: Form
         table.Columns.Add(column);
 
         // Print count, name, and type.
-        Console.WriteLine("Constraints.Count " 
+        Console.WriteLine("Constraints.Count "
             + table.Constraints.Count);
         Console.WriteLine(table.Constraints[0].ConstraintName);
         Console.WriteLine(table.Constraints[0].GetType() );
@@ -26,12 +26,12 @@ public class Form1: Form
         table.Columns.Add(column);
 
         // Print info again.
-        Console.WriteLine("Constraints.Count " 
+        Console.WriteLine("Constraints.Count "
             + table.Constraints.Count);
         Console.WriteLine(table.Constraints[1].ConstraintName);
         Console.WriteLine(table.Constraints[1].GetType() );
     }
-     
+
     private void MakeTableWithForeignConstraint()
     {
         // Create a DataSet.
@@ -46,32 +46,32 @@ public class Form1: Form
         DataColumn id = new DataColumn("ID");
         DataColumn orderId = new DataColumn("OrderID");
         DataColumn cDate = new DataColumn("OrderDate");
- 
+
         // Add columns to tables.
         customersTable.Columns.Add(name);
         customersTable.Columns.Add(id);
         ordersTable.Columns.Add(orderId);
         ordersTable.Columns.Add(cDate);
- 
+
         // Add tables to the DataSet.
         dataSet.Tables.Add(customersTable);
-        dataSet.Tables.Add(ordersTable); 
+        dataSet.Tables.Add(ordersTable);
 
         // Create a DataRelation for two of the columns.
-        DataRelation myRelation = new 
+        DataRelation myRelation = new
             DataRelation("CustomersOrders",id,orderId,true);
         dataSet.Relations.Add(myRelation);
 
-        // Print TableName, Constraints.Count, 
+        // Print TableName, Constraints.Count,
         // ConstraintName and Type.
         foreach(DataTable t in dataSet.Tables)
         {
             Console.WriteLine(t.TableName);
-            Console.WriteLine("Constraints.Count " 
+            Console.WriteLine("Constraints.Count "
                 + t.Constraints.Count);
-            Console.WriteLine("ParentRelations.Count " 
+            Console.WriteLine("ParentRelations.Count "
                 + t.ParentRelations.Count);
-            Console.WriteLine("ChildRelations.Count " 
+            Console.WriteLine("ChildRelations.Count "
                 + t.ChildRelations.Count);
             foreach(Constraint cstrnt in t.Constraints)
             {

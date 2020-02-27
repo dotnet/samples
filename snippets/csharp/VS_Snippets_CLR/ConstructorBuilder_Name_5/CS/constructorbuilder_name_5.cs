@@ -6,8 +6,8 @@
 
 /* The following program demonstrates the 'ConstructorBuilder' class,
    its 'Name', 'ReflectedType', 'Signature' properties and 'ToString'
-   method. Create the assembly in the current domain with dynamic module 
-   in the assembly. ConstructorBuilder is used in conjunction with the 
+   method. Create the assembly in the current domain with dynamic module
+   in the assembly. ConstructorBuilder is used in conjunction with the
    'TypeBuilder' class to create constructor at run time. Display the
    'Name', 'Signature' and 'ReflectedType' to the console.
 */
@@ -41,7 +41,7 @@ public class MyConstructorBuilder
          myModuleBuilder.DefineUninitializedData("myField", 2, FieldAttributes.Public);
       // Create a type in the module.
       TypeBuilder myTypeBuilder = myModuleBuilder.DefineType("TempClass",TypeAttributes.Public);
-      FieldBuilder myGreetingField = myTypeBuilder.DefineField("Greeting", 
+      FieldBuilder myGreetingField = myTypeBuilder.DefineField("Greeting",
                                           typeof(String), FieldAttributes.Public);
       Type[] myConstructorArgs = { typeof(String) };
       // Define a constructor of the dynamic class.

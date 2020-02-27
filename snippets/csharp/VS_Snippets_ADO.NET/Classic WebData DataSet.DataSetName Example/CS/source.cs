@@ -20,7 +20,7 @@ public class Form1: Form
 
         // Add a DataColumn to the DataTable.
         dataSet.Tables["Suppliers"].Columns.Add
-            (new DataColumn("CompanyName", 
+            (new DataColumn("CompanyName",
             System.Type.GetType("System.String")));
     }
     // </Snippet1>

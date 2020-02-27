@@ -29,7 +29,7 @@ public class Sample
         // Add MergeFailed event handler for the table.
         dataSet.MergeFailed += new MergeFailedEventHandler(Merge_Failed);
 
-        // Create a second DataTable identical to the first, 
+        // Create a second DataTable identical to the first,
         DataTable t2 = table.Clone();
 
         // Set the primary key of the new table to the second column.

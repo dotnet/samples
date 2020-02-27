@@ -15,7 +15,7 @@ public class Form1: Form
         // To test, print the number rows in each table.
         foreach(DataTable table in dataSet.Tables)
         {
-            Console.WriteLine(table.TableName + "Rows.Count = " 
+            Console.WriteLine(table.TableName + "Rows.Count = "
                 + table.Rows.Count.ToString());
         }
         // Clear all rows of each table.
@@ -24,7 +24,7 @@ public class Form1: Form
         // Print the number of rows again.
         foreach(DataTable table in dataSet.Tables)
         {
-            Console.WriteLine(table.TableName + "Rows.Count = "  
+            Console.WriteLine(table.TableName + "Rows.Count = "
                 + table.Rows.Count.ToString());
         }
     }

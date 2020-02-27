@@ -13,12 +13,12 @@ public class Form1: Form
     protected DataTableMapping mapping;
 
     // <Snippet1>
-    public void FindDataTableMapping() 
+    public void FindDataTableMapping()
     {
         // ...
         // create mappings and mapping
         // ...
-        if (mappings.Contains("Categories")) 
+        if (mappings.Contains("Categories"))
         {
             mapping = DataTableMappingCollection.GetTableMappingBySchemaAction
                 (mappings, "Categories", "", MissingMappingAction.Ignore);

@@ -43,7 +43,7 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
         {
             if(version.Addressing == AddressingVersion.WSAddressing10)
             {
-                
+
                     return ChunkingUtils.WsAddressing10Ns;
             }
             else

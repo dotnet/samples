@@ -3,10 +3,10 @@ using System;
 using System.Reflection;
 using System.Security.Policy;
 
-class ADGetAssemblies 
+class ADGetAssemblies
 {
 
-	public static void Main() 
+	public static void Main()
 	{
 		AppDomain currentDomain = AppDomain.CurrentDomain;
 		//Provide the current application domain evidence for the assembly.

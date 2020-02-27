@@ -46,7 +46,7 @@ namespace keywords
         {
             // <Snippet4>
             int n = 0;
-            do 
+            do
             {
                 Console.WriteLine(n);
                 n++;

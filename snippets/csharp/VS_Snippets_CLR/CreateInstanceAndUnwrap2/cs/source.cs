@@ -1,16 +1,16 @@
 ﻿//<Snippet1>
 using System;
 using System.Reflection;
- 
+
 public class Worker : MarshalByRefObject
 {
-    public void PrintDomain() 
-    { 
+    public void PrintDomain()
+    {
         Console.WriteLine("Object is executing in AppDomain \"{0}\"",
-            AppDomain.CurrentDomain.FriendlyName); 
+            AppDomain.CurrentDomain.FriendlyName);
     }
 }
- 
+
 class Example
 {
     public static void Main()
@@ -18,7 +18,7 @@ class Example
         // Create an ordinary instance in the current AppDomain
         Worker localWorker = new Worker();
         localWorker.PrintDomain();
- 
+
         // Create a new application domain, create an instance
         // of Worker in the application domain, and execute code
         // there.

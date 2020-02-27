@@ -5,7 +5,7 @@ using System.Security.Permissions;
 // <Snippet1>
  public class MyClass : MarshalByRefObject
  {
-   [SecurityPermissionAttribute(SecurityAction.Demand, 
+   [SecurityPermissionAttribute(SecurityAction.Demand,
                                 Flags=SecurityPermissionFlag.Infrastructure)]
    public override Object InitializeLifetimeService()
    {

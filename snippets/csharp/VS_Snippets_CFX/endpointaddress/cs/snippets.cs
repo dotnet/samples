@@ -14,7 +14,7 @@ namespace Microsoft.WCF.Documentation
 {
     public class Snippets
     {
-	    
+	
         public static void Snippet2()
         {
             // Get base address from app settings in configuration
@@ -26,9 +26,9 @@ namespace Microsoft.WCF.Documentation
             AddressHeader addressHeader2 = AddressHeader.CreateAddressHeader("specialservice2", "http://localhost:8000/service", 2);
 
             AddressHeader[] addressHeaders = new AddressHeader[2] { addressHeader1, addressHeader2 };
-           
+
             EndpointIdentity endpointIdentity = EndpointIdentity.CreateUpnIdentity(WindowsIdentity.GetCurrent().Name);
-	    
+	
             EndpointAddress endpointAddress = new EndpointAddress(
                 new Uri
 		    ("http://localhost:8003/servicemodelsamples/service/incode/identity"),
@@ -46,7 +46,7 @@ namespace Microsoft.WCF.Documentation
             //Create new address headers for special services and add them to an array
             AddressHeader addressHeader1 = AddressHeader.CreateAddressHeader("specialservice1", "http://localhost:8000/service", 1);
             AddressHeader addressHeader2 = AddressHeader.CreateAddressHeader("specialservice2", "http://localhost:8000/service", 2);
-            
+
             AddressHeader[] addressHeaders = new AddressHeader[2] { addressHeader1, addressHeader2 };
             AddressHeaderCollection addressHeaderColl = new AddressHeaderCollection(addressHeaders);
 
@@ -58,7 +58,7 @@ namespace Microsoft.WCF.Documentation
 		    addressHeaderColl);
 	    EndpointIdentity thisEndpointIdentity = endpointAddress.Identity;
 	    // </Snippet#15>
-	    
+	
             // </Snippet3>
         }
 
@@ -68,7 +68,7 @@ namespace Microsoft.WCF.Documentation
             AddressHeader addressHeader2 = AddressHeader.CreateAddressHeader("specialservice2", "http://localhost:8000/service", 2);
 
             AddressHeader[] addressHeaders = new AddressHeader[2] { addressHeader1, addressHeader2 };
-           
+
             EndpointIdentity endpointIdentity = EndpointIdentity.CreateUpnIdentity(WindowsIdentity.GetCurrent().Name);
             EndpointAddress endpointAddress = new EndpointAddress(
                 new Uri("http://localhost:8003/servicemodelsamples/service/incode/identity"), endpointIdentity, addressHeaders);
@@ -84,7 +84,7 @@ namespace Microsoft.WCF.Documentation
             AddressHeader addressHeader2 = AddressHeader.CreateAddressHeader("specialservice2", "http://localhost:8000/service", 2);
 
             AddressHeader[] addressHeaders = new AddressHeader[2] { addressHeader1, addressHeader2 };
-            
+
             // <Snippet5>
             EndpointAddress endpointAddress = new EndpointAddress(
                 new Uri("http://localhost:8003/servicemodelsamples/service/incode/identity"), addressHeaders);
@@ -95,7 +95,7 @@ namespace Microsoft.WCF.Documentation
                 Console.WriteLine("The two endpoint addresses are equal");
             else
                 Console.WriteLine("The two endpoint addresses are not equal");
-            // </Snippet5>            
+            // </Snippet5>
         }
 
         public static void Snippet6()
@@ -120,7 +120,7 @@ namespace Microsoft.WCF.Documentation
 
             EndpointAddress endpointAddress2 = new EndpointAddress(
                 new Uri("http://localhost:8003/servicemodelsamples/service/incode/identity"), identity, headers, metadataReader, extensionReader);
-            // </Snippet6>            
+            // </Snippet6>
         }
 
         public static void Snippet9()
@@ -140,7 +140,7 @@ namespace Microsoft.WCF.Documentation
                 Console.WriteLine("The two endpoint addresses are not equal");
             else
                 Console.WriteLine("The two endpoint addresses are equal");
-            // </Snippet9>            
+            // </Snippet9>
         }
 
         public static void Snippet10()
@@ -161,7 +161,7 @@ namespace Microsoft.WCF.Documentation
             // <Snippet10>
             XmlDictionaryReader reader = (XmlDictionaryReader) XmlDictionaryReader.Create("addressdata.xml");
             EndpointAddress createdEA = EndpointAddress.ReadFrom(reader);
-            // </Snippet10>          
+            // </Snippet10>
         }
 
         public static void Snippet11()
@@ -174,7 +174,7 @@ namespace Microsoft.WCF.Documentation
 
             EndpointAddress endpointAddress = new EndpointAddress(
                 new Uri("http://localhost:8003/servicemodelsamples/service/incode/identity"), addressHeaders);
-            
+
 	    XmlWriter writer = XmlWriter.Create("addressdata.xml");
 	    XmlDictionaryWriter dictWriter = XmlDictionaryWriter.CreateDictionaryWriter(writer);
             endpointAddress.WriteTo(AddressingVersion.WSAddressing10, dictWriter);
@@ -186,7 +186,7 @@ namespace Microsoft.WCF.Documentation
             XmlDictionaryString xdLocalName = new XmlDictionaryString(XmlDictionary.Empty, "EndpointReference",0);
             XmlDictionaryString xdNamespace = new XmlDictionaryString(XmlDictionary.Empty, "http://www.w3.org/2005/08/addressing", 0);
             EndpointAddress createdEA = EndpointAddress.ReadFrom(dictReader, xdLocalName, xdNamespace);
-            // </Snippet11>          
+            // </Snippet11>
         }
 
         public static void Snippet12()
@@ -213,7 +213,7 @@ namespace Microsoft.WCF.Documentation
 		 dictReader,
 		 "EndpointReference",
 		 "http://www.w3.org/2005/08/addressing");
-            // </Snippet12>          
+            // </Snippet12>
         }
 
 	public static void SnippetAnonymousUri()
@@ -470,7 +470,7 @@ namespace Microsoft.WCF.Documentation
 		EndpointAddress createdEA = EndpointAddress.ReadFrom
 					    (AddressingVersion.WSAddressing10,
 					     dictReader);
-	    // </Snippet25>          
+	    // </Snippet25>
 	}
 
 	public static void SnippetReadFrom4()
@@ -503,7 +503,7 @@ namespace Microsoft.WCF.Documentation
 					     xdLocalName,
 					     xdNamespace
 					    );
-	    // </Snippet26>          
+	    // </Snippet26>
 	}
 
 	public static void SnippetReadFromVersionToString()

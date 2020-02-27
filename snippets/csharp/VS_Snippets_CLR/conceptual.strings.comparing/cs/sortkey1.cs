@@ -3,9 +3,9 @@ using System;
 using System.Threading;
 using System.Globalization;
 
-public class SortKeySample 
+public class SortKeySample
 {
-   public static void Main(String[] args) 
+   public static void Main(String[] args)
    {
       String str1 = "Apple";
       String str2 = "Æble";
@@ -22,7 +22,7 @@ public class SortKeySample
       // Compare the two sort keys and display the results.
       int result1 = SortKey.Compare(sc1, sc2);
       Console.WriteLine("When the CurrentCulture is \"da-DK\",");
-      Console.WriteLine("the result of comparing {0} with {1} is: {2}\n", 
+      Console.WriteLine("the result of comparing {0} with {1} is: {2}\n",
                         str1, str2, result1);
 
       // Set the CurrentCulture to "en-US".
@@ -37,14 +37,14 @@ public class SortKeySample
       // Compare the two sort keys and display the results.
       int result2 = SortKey.Compare(sc3, sc4);
       Console.WriteLine("When the CurrentCulture is \"en-US\",");
-      Console.WriteLine("the result of comparing {0} with {1} is: {2}", 
+      Console.WriteLine("the result of comparing {0} with {1} is: {2}",
                         str1, str2, result2);
    }
 }
 // The example displays the following output:
 //       When the CurrentCulture is "da-DK",
 //       the result of comparing Apple with Æble is: -1
-//       
+//
 //       When the CurrentCulture is "en-US",
 //       the result of comparing Apple with Æble is: 1
 // </Snippet4>

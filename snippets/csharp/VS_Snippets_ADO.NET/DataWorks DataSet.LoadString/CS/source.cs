@@ -12,7 +12,7 @@ class Program
 
         DataTableReader reader = GetReader();
 
-        // The tables listed as parameters for the Load method 
+        // The tables listed as parameters for the Load method
         // should be in the same order as the tables within the IDataReader.
         dataSet.Load(reader, LoadOption.Upsert, "Customers", "Products");
         foreach (DataTable table in dataSet.Tables)
@@ -34,7 +34,7 @@ class Program
         // list of table names in the parameters. If you specify
         // a new table name here, the Load method will create
         // a corresponding new table.
-        dataSet.Load(reader, LoadOption.Upsert, 
+        dataSet.Load(reader, LoadOption.Upsert,
             "NewCustomers", "Products");
         foreach (DataTable table in dataSet.Tables)
         {

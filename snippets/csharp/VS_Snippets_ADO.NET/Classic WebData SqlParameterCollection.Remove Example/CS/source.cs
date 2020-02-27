@@ -13,7 +13,7 @@ public class Form1: Form
     protected SqlParameter param;
 
     // <Snippet1>
-    public void SearchSqlParams() 
+    public void SearchSqlParams()
     {
         // ...
         // create SqlCommand command and SqlParameter param

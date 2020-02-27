@@ -3,9 +3,9 @@
 
 /*
    This example demonstrates the 'GetAssemblyName(string)' and 'ToString()'
-   methods of the 'AssemblyName' class. Get the path of 'System.dll' from 
+   methods of the 'AssemblyName' class. Get the path of 'System.dll' from
    the path of 'mscorlib.dll'. Get the assembly information from 'System.dll'
-   and display the information to the console. 
+   and display the information to the console.
  */
 
 // <Snippet1>

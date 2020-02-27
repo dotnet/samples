@@ -43,7 +43,7 @@ class ADDyno
 				     new Type[] { typeof(string) });
 	MethodInfo writeLine2objMI = typeof(Console).GetMethod("WriteLine",
 				     new Type[] { typeof(string), typeof(object), typeof(object) });
-	MethodInfo getFilesMI = typeof(Directory).GetMethod("GetFiles", 
+	MethodInfo getFilesMI = typeof(Directory).GetMethod("GetFiles",
 				new Type[] { typeof(string) });
 
 	myFCMethod.InitLocals = true;
@@ -114,12 +114,12 @@ class ADDyno
 
 	myAsmBuilder.SetEntryPoint(myFCMethod);
 	myAsmBuilder.Save(executableName);		
-	Console.WriteLine("-- Method generated, type completed, and assembly saved to disk."); 
+	Console.WriteLine("-- Method generated, type completed, and assembly saved to disk.");
 
 	return myType;
    }
 
-   public static void Main() 
+   public static void Main()
    {
 
 	string domainDir, executableName = null;
@@ -147,11 +147,11 @@ class ADDyno
 	Console.WriteLine("Creating a new AppDomain '{0}'...",
 					executableNameNoExe);
 
-	Console.WriteLine("-- Base Directory = '{0}'", myDomain.BaseDirectory); 
-	Console.WriteLine("-- Shadow Copy? = '{0}'", myDomain.ShadowCopyFiles); 
+	Console.WriteLine("-- Base Directory = '{0}'", myDomain.BaseDirectory);
+	Console.WriteLine("-- Shadow Copy? = '{0}'", myDomain.ShadowCopyFiles);
 
 	Console.WriteLine("---");
-	Type myFCType = CreateADynamicAssembly(ref curDomain, 
+	Type myFCType = CreateADynamicAssembly(ref curDomain,
 					 executableNameNoExe);
 
 	Console.WriteLine("Loading '{0}' from '{1}'...", executableName,
@@ -161,7 +161,7 @@ class ADDyno
 			       BindingFlags.Instance);
 
 	Object myObjInstance = myDomain.CreateInstanceAndUnwrap(executableNameNoExe,
-				executableNameNoExe, false, bFlags, 
+				executableNameNoExe, false, bFlags,
 				null, null, null, null, null);
 
 	Console.WriteLine("Executing method 'CountLocalFiles' in {0}...",

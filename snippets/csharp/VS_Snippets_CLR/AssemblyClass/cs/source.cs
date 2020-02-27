@@ -13,8 +13,8 @@ public class Example
         factor = f;
     }
 
-    public int SampleMethod(int x) 
-    { 
+    public int SampleMethod(int x)
+    {
         Console.WriteLine("\nExample.SampleMethod({0}) executes.", x);
         return x * factor;
     }
@@ -29,7 +29,7 @@ public class Example
         // The AssemblyName type can be used to parse the full name.
         AssemblyName assemName = assem.GetName();
         Console.WriteLine("\nName: {0}", assemName.Name);
-        Console.WriteLine("Version: {0}.{1}", 
+        Console.WriteLine("Version: {0}.{1}",
             assemName.Version.Major, assemName.Version.Minor);
 
         Console.WriteLine("\nAssembly CodeBase:");
@@ -37,11 +37,11 @@ public class Example
 
         // Create an object from the assembly, passing in the correct number
         // and type of arguments for the constructor.
-        Object o = assem.CreateInstance("Example", false, 
-            BindingFlags.ExactBinding, 
+        Object o = assem.CreateInstance("Example", false,
+            BindingFlags.ExactBinding,
             null, new Object[] { 2 }, null, null);
 
-        // Make a late-bound call to an instance method of the object.    
+        // Make a late-bound call to an instance method of the object.
         MethodInfo m = assem.GetType("Example").GetMethod("SampleMethod");
         Object ret = m.Invoke(o, new Object[] { 42 });
         Console.WriteLine("SampleMethod returned {0}.", ret);

@@ -44,7 +44,7 @@ namespace Microsoft.WCF.Documentation
   }
 
   [ServiceBehaviorAttribute(
-    IgnoreExtensionDataObject=false, 
+    IgnoreExtensionDataObject=false,
     ValidateMustUnderstand=false
   )]
   class SampleService : ISampleService

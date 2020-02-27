@@ -19,7 +19,7 @@ public class Example
             Console.WriteLine(p);
 
         // Convert each PointF element to a Point object.
-        Point[] ap = Array.ConvertAll(apf, 
+        Point[] ap = Array.ConvertAll(apf,
             new Converter<PointF, Point>(PointFToPoint));
 
         // Display each element in the Point array.

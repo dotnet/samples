@@ -20,7 +20,7 @@ class Class1
                 "SELECT * FROM Customers WHERE CustomerID = 'ALFKI'", connection);
 
             adapter.InsertCommand = new OleDbCommand(
-                "INSERT INTO Customers (CustomerID, CompanyName) VALUES(?, ?)", 
+                "INSERT INTO Customers (CustomerID, CompanyName) VALUES(?, ?)",
                 connection);
 
             adapter.InsertCommand.Parameters.Add(
@@ -56,13 +56,13 @@ class Class1
         }
     }
 
-    protected static void OnRowUpdating(object sender, 
+    protected static void OnRowUpdating(object sender,
         OleDbRowUpdatingEventArgs args)
     {
         if (args.StatementType == StatementType.Insert)
         {
             System.IO.TextWriter writer = System.IO.File.AppendText("Inserts.log");
-            writer.WriteLine("{0}: Customer {1} Inserted.", 
+            writer.WriteLine("{0}: Customer {1} Inserted.",
                 DateTime.Now, args.Row["CustomerID"]);
             writer.Close();
         }

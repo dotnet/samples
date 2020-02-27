@@ -1,12 +1,12 @@
 ﻿// <Snippet5>
 using System;
 
-namespace LibraryContractsAddInAdapters 
+namespace LibraryContractsAddInAdapters
 {
-public class BookInfoViewToContractAddInAdapter : System.AddIn.Pipeline.ContractBase, Library.IBookInfoContract 
+public class BookInfoViewToContractAddInAdapter : System.AddIn.Pipeline.ContractBase, Library.IBookInfoContract
 {
     private LibraryContractsBase.BookInfo _view;
-    public BookInfoViewToContractAddInAdapter(LibraryContractsBase.BookInfo view) 
+    public BookInfoViewToContractAddInAdapter(LibraryContractsBase.BookInfo view)
     {
         _view = view;
     }

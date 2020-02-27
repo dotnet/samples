@@ -10,7 +10,7 @@ namespace SyndicationFeedSnippets
         public MySyndicationFeed() : base() { }
     }
 
-    public class MyExtension 
+    public class MyExtension
     {
     }
 }

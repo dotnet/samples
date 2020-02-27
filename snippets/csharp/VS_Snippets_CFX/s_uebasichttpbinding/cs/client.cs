@@ -11,7 +11,7 @@ using System.Xml;
 using System.ServiceModel.Channels;
 using System.ServiceModel.Configuration;
 using System.Net.Security;
-   
+
 // Define a service contract.
 [ServiceContract(Namespace = "http://UE.ServiceModel.Samples")]
 public interface ICalculator
@@ -39,7 +39,7 @@ namespace UE.ServiceModel.Samples
 		    ISecurityCapabilities b =
 			    binding.GetProperty<ISecurityCapabilities>
 			    (new BindingParameterCollection());
-		    
+		
 		    bool SupportsServerAuthentication =
 			    b.SupportsServerAuthentication;
 		    // </Snippet36>
@@ -89,7 +89,7 @@ namespace UE.ServiceModel.Samples
 		    bool queuedDelivery = s.QueuedDelivery;
 		    // </Snippet32>
 	    }
-	    
+	
 	    static void SnippetSupportsClientWindowsIdentity()
 	    {
 		    // <Snippet31>
@@ -101,7 +101,7 @@ namespace UE.ServiceModel.Samples
 		    //	s.SupportedClientWindowsIdentity;
 		    // </Snippet31>
 	    }
-	    
+	
 	    static void SnippetSupportedResponseProtectionLevel ()
 	    {
 		    // <Snippet30>
@@ -121,10 +121,10 @@ namespace UE.ServiceModel.Samples
 		    IBindingRuntimePreferences s  =
 			    (binding as IBindingRuntimePreferences);
 		    bool receiveSynchronously = s.ReceiveSynchronously;
-		    
+		
 		    // </Snippet29>
 	    }
-	    
+	
 	    static void SnippetAssuresOrderedDelivery ()
 	    {
 	          // <Snippet28>
@@ -136,7 +136,7 @@ namespace UE.ServiceModel.Samples
 
 		// </Snippet28>
 	    }
-	    
+	
 	    static void SnippetUseDefaultWebProxy()
 	    {
 
@@ -145,7 +145,7 @@ namespace UE.ServiceModel.Samples
 		    binding.UseDefaultWebProxy = false;
 		// </Snippet27>
 	    }
-	    
+	
 	    static void SnippetCreateBindingElements()
 	    {
 		// from S_UEBinding\cs\Snippets.cs
@@ -164,7 +164,7 @@ namespace UE.ServiceModel.Samples
 
 		// </Snippet25>
 	    }
-	    
+	
 	    static void SnippetBasicTextEncoding()
 	    {
 		// <Snippet24>
@@ -179,10 +179,10 @@ namespace UE.ServiceModel.Samples
 		// <Snippet23>
 		    BasicHttpBinding binding = new BasicHttpBinding();
 		    BasicHttpSecurity security = binding.Security;
-		    		    
+		    		
 		// </Snippet23>
 	    }
-	    
+	
 	    static void SnippetSchmeme ()
 	    {
 		// <Snippet22>
@@ -190,7 +190,7 @@ namespace UE.ServiceModel.Samples
 		string thisScheme = binding.Scheme;
 		// </Snippet22>
 	    }
-	    
+	
 	    static void SnippetReaderQuotas ()
 	    {
                 // <Snippet21>
@@ -202,7 +202,7 @@ namespace UE.ServiceModel.Samples
 	        binding.ReaderQuotas = readerQuotas;
 		// </Snippet21>
 	    }
-	    
+	
 	    static void SnippetMessageProxyAddress ()
 	    {
 	    // <Snippet20>
@@ -220,14 +220,14 @@ namespace UE.ServiceModel.Samples
 	    static void SnippetMessageEncoding ()
 	    {
 	    // <Snippet19>
-		    
+		
 		    BasicHttpBinding binding = new BasicHttpBinding();
 		    // Use double the default value
 		    binding.MessageEncoding = WSMessageEncoding.Text;
 
 	    // </Snippet19>
 	    }
-	    
+	
 	    static void SnippetMaxReceivedMessageSize ()
 	    {
 	    // <Snippet18>
@@ -242,7 +242,7 @@ namespace UE.ServiceModel.Samples
 	    {
 	    // <Snippet17>
 		    BasicHttpBinding binding = new BasicHttpBinding();
-		    
+		
 		    // set to one million
 		    binding.MaxBufferSize = 1000000;
 
@@ -258,7 +258,7 @@ namespace UE.ServiceModel.Samples
 
 	    // </Snippet16>
 	    }
-	    
+	
 	static void SnippetHostNameComparisonMode ()
 	{
 	    // <Snippet14>
@@ -289,7 +289,7 @@ namespace UE.ServiceModel.Samples
 	    // <Snippet13>
 	    if (binding.EnvelopeVersion == EnvelopeVersion.Soap11)
 		    i++;
-	    
+	
 	    // </Snippet13>
 
             binding.Name = "binding1";

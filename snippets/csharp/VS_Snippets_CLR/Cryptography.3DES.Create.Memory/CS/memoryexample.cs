@@ -14,7 +14,7 @@ namespace AesManaged_Examples
                 string original = "Here is some data to encrypt!";
 
                 // Create a new instance of the AesCryptoServiceProvider
-                // class.  This generates a new key and initialization 
+                // class.  This generates a new key and initialization
                 // vector (IV).
                 using (AesCryptoServiceProvider myAesManaged = new AesCryptoServiceProvider())
                 {
@@ -97,7 +97,7 @@ namespace AesManaged_Examples
                 // Create an AesCryptoServiceProvider object
                 // with the specified key and IV.
                 using (AesCryptoServiceProvider AesManagedAlg = new AesCryptoServiceProvider())
-                { 
+                {
                 AesManagedAlg.Key = Key;
                 AesManagedAlg.IV = IV;
 

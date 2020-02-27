@@ -8,9 +8,9 @@ public class Form1: Form
     protected DataSet DataSet1;
 
     // <Snippet1>
-    private void GetChildRowsFromDataRelation(DataTable table) 
+    private void GetChildRowsFromDataRelation(DataTable table)
     {
-        DataRow[] arrRows;  
+        DataRow[] arrRows;
         foreach(DataRelation relation in table.ChildRelations)
         {
             foreach(DataRow row in table.Rows)

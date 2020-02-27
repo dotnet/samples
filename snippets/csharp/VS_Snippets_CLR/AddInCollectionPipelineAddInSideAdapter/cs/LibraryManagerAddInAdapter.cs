@@ -10,12 +10,12 @@
 using System.IO;
 using System;
 namespace LibraryContractsAddInAdapters {
-    
-    
+
+
 public class LibraryManagerAddInAdapter
 {
 
-    internal static LibraryContractsBase.LibraryManager ContractToViewAdapter(Library.ILibraryManagerContract contract) 
+    internal static LibraryContractsBase.LibraryManager ContractToViewAdapter(Library.ILibraryManagerContract contract)
     {
         StreamWriter sw = new StreamWriter(@"c:\meow\adaptercalls.txt", true);
         sw.WriteLine("Called LibraryManagerAddInAdapter.ContractToViewAdapter");
@@ -29,7 +29,7 @@ public class LibraryManagerAddInAdapter
         }
     }
 
-    internal static Library.ILibraryManagerContract ViewToContractAdapter(LibraryContractsBase.LibraryManager view) 
+    internal static Library.ILibraryManagerContract ViewToContractAdapter(LibraryContractsBase.LibraryManager view)
     {
         StreamWriter sw = new StreamWriter(@"c:\meow\adaptercalls.txt", true);
         sw.WriteLine("Called LibraryManagerAddInAdapter.ViewToContractAdapter");

@@ -15,8 +15,8 @@ namespace SqlPersistenceProviderFactorySnippets
             //Constructor: SqlPersistenceProviderFactory(String, Boolean, TimeSpan)
             //<snippet0>
             SqlPersistenceProviderFactory factory = new SqlPersistenceProviderFactory(
-                DataBaseConstants.ConnectionString, 
-                false, 
+                DataBaseConstants.ConnectionString,
+                false,
                 TimeSpan.FromSeconds(60));
             //</snippet0>
         }
@@ -45,7 +45,7 @@ namespace SqlPersistenceProviderFactorySnippets
             parameters.Add("connectionStringName", DataBaseConstants.ConnectionString);
             parameters.Add("lockTimeout", "00:01:00");
             parameters.Add("serializeAsText", "false");
-            
+
             SqlPersistenceProviderFactory factory = new SqlPersistenceProviderFactory(
                 parameters);
             //</snippet3>

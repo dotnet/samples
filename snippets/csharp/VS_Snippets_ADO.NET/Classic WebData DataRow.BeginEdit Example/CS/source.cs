@@ -11,9 +11,9 @@ public class Form1: Form
     private void DemonstrateRowBeginEdit()
     {
         DataTable table = new DataTable("table1");
-        DataColumn column = new 
+        DataColumn column = new
             DataColumn("col1",Type.GetType("System.Int32"));
-        table.RowChanged+=new 
+        table.RowChanged+=new
             DataRowChangeEventHandler(Row_Changed);
         table.Columns.Add(column);
 
@@ -22,7 +22,7 @@ public class Form1: Form
 
         // Add five rows.
         DataRow newRow;
-       
+
         for(int i = 0;i<5; i++)
         {
             // RowChanged event will occur for every addition.
@@ -38,12 +38,12 @@ public class Form1: Form
             "\n Begin Edit and print original and proposed values \n");
         foreach(DataRow row in table.Rows)
         {
-       
+
             row.BeginEdit();
             row[0]=(int) row[0]+10;
-            Console.Write("\table Original \table" + 
+            Console.Write("\table Original \table" +
                 row[0, DataRowVersion.Original]);
-            Console.Write("\table Proposed \table" + 
+            Console.Write("\table Proposed \table" +
                 row[0,DataRowVersion.Proposed] + "\n");
         }
         Console.WriteLine("\n");
@@ -64,16 +64,16 @@ public class Form1: Form
         catch(Exception e)
         {
             // Process exception and return.
-            Console.WriteLine("Exception of type {0} occurred.", 
+            Console.WriteLine("Exception of type {0} occurred.",
                 e.GetType());
         }
     }
- 
-    private void Row_Changed(object sender, 
+
+    private void Row_Changed(object sender,
         System.Data.DataRowChangeEventArgs e)
     {
         DataTable table = (DataTable)  sender;
-        Console.WriteLine("RowChanged " + e.Action.ToString() 
+        Console.WriteLine("RowChanged " + e.Action.ToString()
             + "\table" + e.Row.ItemArray[0]);
     }
     // </Snippet1>

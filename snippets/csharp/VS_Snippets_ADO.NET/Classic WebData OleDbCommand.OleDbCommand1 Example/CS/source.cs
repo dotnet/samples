@@ -11,7 +11,7 @@ public class Form1: Form
   protected DataGrid dataGrid1;
 
 // <Snippet1>
- public void CreateMyOleDbCommand() 
+ public void CreateMyOleDbCommand()
  {
     string queryString = "SELECT * FROM Categories ORDER BY CategoryID";
     OleDbCommand command = new OleDbCommand(queryString);

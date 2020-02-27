@@ -81,12 +81,12 @@ namespace ContentCorrelationDemo
                 CorrelatesOn = new MessageQuerySet
                 {
                     {
-                        "OrderId", 
+                        "OrderId",
                           new XPathMessageQuery("sm:body()/tempuri:AddItem/tempuri:OrderId")
                     }
                 },
                 Content = ReceiveParametersContent.Create(new Dictionary<string, OutArgument>
-                    { { "OrderId", new OutArgument<string>(OrderId) },  
+                    { { "OrderId", new OutArgument<string>(OrderId) },
                     { "Item", new OutArgument<string>(Item) } })
             };
 
@@ -158,7 +158,7 @@ namespace ContentCorrelationDemo
                         MessageQuerySet = new MessageQuerySet
                         {
                             {
-                                "OrderId", 
+                                "OrderId",
                                 new XPathMessageQuery("sm:body()/tempuri:StartOrderResponse/tempuri:OrderId")
                             }
                         }
@@ -176,12 +176,12 @@ namespace ContentCorrelationDemo
                 CorrelatesOn = new MessageQuerySet
                 {
                     {
-                        "OrderId", 
+                        "OrderId",
                           new XPathMessageQuery("sm:body()/tempuri:AddItem/tempuri:OrderId")
                     }
                 },
                 Content = ReceiveParametersContent.Create(new Dictionary<string, OutArgument>
-                    { { "OrderId", new OutArgument<string>(OrderId) },  
+                    { { "OrderId", new OutArgument<string>(OrderId) },
                     { "Item", new OutArgument<string>(Item) } })
             };
             //</snippet3>

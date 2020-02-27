@@ -3,7 +3,7 @@
  using System.Collections;
  public class SamplesHashtable
  {
- 
+
     public static void Main()
     {
        // Creates and initializes a new Hashtable.
@@ -17,14 +17,14 @@
        myHT.Add("3a", "the");
        myHT.Add("3b", "lazy");
        myHT.Add("3c", "dog");
- 
+
        // Displays the Hashtable.
        Console.WriteLine("The Hashtable initially contains the following:");
        PrintKeysAndValues(myHT);
- 
+
        // Removes the element with the key "3b".
        myHT.Remove("3b");
- 
+
        // Displays the current state of the Hashtable.
        Console.WriteLine("After removing \"lazy\":");
        PrintKeysAndValues(myHT);
@@ -41,7 +41,7 @@
 
  /*
  This code produces the following output.
- 
+
  The Hashtable initially contains the following:
      2c:    over
      3a:    the

@@ -2,7 +2,7 @@
 using System;
 using System.Diagnostics;
 using System.Threading;
-              
+
 class MySample{
 
     public static void Main()
@@ -26,8 +26,8 @@ class MySample{
         // Read the event log entries.
         foreach(EventLogEntry entry in myLog.Entries){
             Console.WriteLine("\tEntry: " + entry.Message);
-        }                                                                     
-    } 
+        }
+    }
 }
-   
+
 // </Snippet1>

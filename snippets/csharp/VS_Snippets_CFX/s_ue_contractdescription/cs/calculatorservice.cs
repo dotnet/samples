@@ -60,7 +60,7 @@ namespace Server
             ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
             smb.HttpGetEnabled = true;
             serviceHost.Description.Behaviors.Add(smb);
- 
+
             serviceHost.Open();
 
             // <Snippet1>
@@ -79,7 +79,7 @@ namespace Server
             // <Snippet15>
             ContractDescription cd4 = ContractDescription.GetContract(typeof(ICalculator), typeof(CalculatorService));
             // </Snippet15>
-            ContractDescription cd = serviceHost.Description.Endpoints[0].Contract;         
+            ContractDescription cd = serviceHost.Description.Endpoints[0].Contract;
 
             Console.WriteLine("Displaying information for contract: {0}", cd.Name.ToString());
 

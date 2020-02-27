@@ -19,7 +19,7 @@ public class Sample
 
         // set PrimaryKey
         customerTable.Columns[ "id" ].Unique = true;
-        customerTable.PrimaryKey = new DataColumn[] 
+        customerTable.PrimaryKey = new DataColumn[]
             { customerTable.Columns["id"] };
 
         // add a RowDeleting event handler for the table.
@@ -28,8 +28,8 @@ public class Sample
         // add ten rows
         for( int id=1; id<=10; id++)
         {
-            customerTable.Rows.Add( 
-                new object[] { id, string.Format("customer{0}", id), 
+            customerTable.Rows.Add(
+                new object[] { id, string.Format("customer{0}", id),
                 string.Format("address{0}", id) });
         }
 	
@@ -40,10 +40,10 @@ public class Sample
             row.Delete();
     }
 
-    private static void Row_Deleting( object sender, 
+    private static void Row_Deleting( object sender,
         DataRowChangeEventArgs e )
     {
-        Console.WriteLine( "Row_Deleting Event: name={0}; action={1}", 
+        Console.WriteLine( "Row_Deleting Event: name={0}; action={1}",
             e.Row["name"], e.Action );
     }
     // </Snippet1>

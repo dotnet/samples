@@ -8,12 +8,12 @@ public class Form1: Form
     protected DataSet DataSet1;
 
     // <Snippet1>
-    private void GetParentRowForTable(DataTable thisTable, 
+    private void GetParentRowForTable(DataTable thisTable,
         DataRelation relation,
-        DataRowVersion version) 
+        DataRowVersion version)
     {
         if(thisTable ==null){return;}
-        // For each row in the table, print column 1 of the 
+        // For each row in the table, print column 1 of the
         // parent DataRow.
         DataRow parentRow;
         foreach(DataRow row in thisTable.Rows)
@@ -23,8 +23,8 @@ public class Form1: Form
             Console.Write("\table parent row: " + parentRow[1]+ "\n");
         }
     }
- 
-    private void CallGetParentRowForTable() 
+
+    private void CallGetParentRowForTable()
     {
         // An example of calling the function.
         DataTable thisTable = DataSet1.Tables["Products"];

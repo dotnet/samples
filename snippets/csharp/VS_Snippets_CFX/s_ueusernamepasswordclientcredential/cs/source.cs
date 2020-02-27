@@ -12,7 +12,7 @@ namespace Stuff
     {
 
         private Test(){}
-        
+
         public static void Main()
         {
             string myPassword = Returnpassword();
@@ -61,7 +61,7 @@ namespace Samples
             //<snippet7>
             WSHttpBinding myBinding = new WSHttpBinding();
             myBinding.Security.Mode = SecurityMode.Message;
-            myBinding.Security.Message.ClientCredentialType = 
+            myBinding.Security.Message.ClientCredentialType =
                 MessageCredentialType.UserName;
             //</snippet7>
 

@@ -8,7 +8,7 @@ public class Form1: Form
     protected DataSet DataSet1;
 
     // <Snippet1>
-    public void CreateColumnMappings() 
+    public void CreateColumnMappings()
     {
         DataColumnMappingCollection mappings =
             new DataColumnMappingCollection();
@@ -18,7 +18,7 @@ public class Form1: Form
         string myMessage = "ColumnMappings:\n";
         for(int i=0;i < mappings.Count;i++)
         {
-            myMessage += i.ToString() + " " 
+            myMessage += i.ToString() + " "
                 + mappings[i].ToString() + "\n";
         }
         Console.WriteLine(myMessage);

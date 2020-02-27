@@ -28,7 +28,7 @@ public class Sample
         for(int id=1; id<=10; id++)
         {
             customerTable.Rows.Add(
-                new object[] { id, string.Format("customer{0}", id), 
+                new object[] { id, string.Format("customer{0}", id),
                 string.Format("address{0}", id) });
         }
 	
@@ -41,7 +41,7 @@ public class Sample
 
     private static void Row_Deleted(object sender, DataRowChangeEventArgs e)
     {
-        Console.WriteLine("Row_Deleted Event: name={0}; action={1}", 
+        Console.WriteLine("Row_Deleted Event: name={0}; action={1}",
             e.Row["name", DataRowVersion.Original], e.Action);
     }
     // </Snippet1>

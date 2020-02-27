@@ -14,22 +14,22 @@ using System.ServiceModel.Channels;
 
 // MetadataImporter is abstract class
 // wsdlImporter is concrete class derived from MetadataImporter
-// 
+//
 //
 namespace CS
 {
 
     class Program
     {
-// <Snippet0>    
-        public void ImportPolicy(MetadataImporter importer, 
+// <Snippet0>
+        public void ImportPolicy(MetadataImporter importer,
             PolicyConversionContext context)
         {
             Console.WriteLine("The custom policy importer has been called.");
             foreach (XmlElement assertion in context.GetBindingAssertions())
             {
                 // locate a particular assertion by Name and NamespaceURI
-                if ((assertion.Name == "name") && 
+                if ((assertion.Name == "name") &&
                     assertion.NamespaceURI == "http://localhost/name/uri")
                 {
                     // write assertion name in red.
@@ -38,7 +38,7 @@ namespace CS
 
                     //write contents in gray.
                     Console.WriteLine(assertion.OuterXml);
-                    Console.ForegroundColor = ConsoleColor.Gray; 
+                    Console.ForegroundColor = ConsoleColor.Gray;
 
                     // Here if you find the custom policy assertion that you are looking for,
                     // add the custom binding element that handles the functionality that the policy indicates
@@ -72,7 +72,7 @@ namespace CS
             );
           //</snippet10>
 
-          MetadataExchangeClient mexClient = 
+          MetadataExchangeClient mexClient =
               new MetadataExchangeClient(mexAddress);
           mexClient.ResolveMetadataReferences = true;
 
@@ -82,9 +82,9 @@ namespace CS
           // This is not neccesary for this snippet.
           // PolicyConversionContext myPolicyConversionContext = new PolicyConversionContext ();
           //ImportPolicy(importer, myPolicyConversionContext);
-      }  
+      }
   }
-}    
+}
 
 namespace CS2
 {
@@ -97,13 +97,13 @@ namespace CS2
 		 MetadataExporter exporter, PolicyConversionContext context)
 		{
 			XmlDocument xmlDoc = new XmlDocument();
-			XmlElement xmlElement = 
+			XmlElement xmlElement =
 			       xmlDoc.CreateElement("MyPolicyAssertion");
 			context.GetBindingAssertions().Add(xmlElement);
 		}
 
-		// Note: All custom binding elements must return a deep clone 
-		// to enable the run time to support multiple bindings using the 
+		// Note: All custom binding elements must return a deep clone
+		// to enable the run time to support multiple bindings using the
 		// same custom binding.
 		public override BindingElement Clone()
 		{
@@ -120,9 +120,9 @@ namespace CS2
 
 	public class Program {
 		public static void Main(string[] args) {
-			EndpointAddress address = 
+			EndpointAddress address =
 				new EndpointAddress("http://localhost/metadata");
-			CustomBinding customBinding = 
+			CustomBinding customBinding =
 				new CustomBinding(new BasicHttpBinding());
 			customBinding.Elements.Add(new MyBindingElement());
 			ContractDescription contract =

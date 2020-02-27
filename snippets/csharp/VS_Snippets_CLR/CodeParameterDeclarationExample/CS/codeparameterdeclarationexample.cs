@@ -3,18 +3,18 @@ using System;
 using System.CodeDom;
 
 namespace CodeDomSamples
-{    
+{
     public class CodeParameterDeclarationExample
     {
         public CodeParameterDeclarationExample()
         {
-            //<Snippet2>            
+            //<Snippet2>
             // Declares a new type to contain the example methods.
             CodeTypeDeclaration type1 = new CodeTypeDeclaration("Type1");
 
             CodeConstructor constructor1 = new CodeConstructor();
-            constructor1.Attributes = MemberAttributes.Public;            
-            type1.Members.Add( constructor1 );    
+            constructor1.Attributes = MemberAttributes.Public;
+            type1.Members.Add( constructor1 );
 
             //<Snippet3>
             // Declares a method.

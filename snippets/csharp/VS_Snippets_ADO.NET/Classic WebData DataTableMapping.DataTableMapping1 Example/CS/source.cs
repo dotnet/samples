@@ -10,9 +10,9 @@ public class Form1: Form
     protected DataGrid dataGrid1;
 
     // <Snippet1>
-    public void CreateDataTableMapping() 
+    public void CreateDataTableMapping()
     {
-        DataTableMapping mapping = 
+        DataTableMapping mapping =
             new DataTableMapping("Categories","DataCategories");
     }
     // </Snippet1>

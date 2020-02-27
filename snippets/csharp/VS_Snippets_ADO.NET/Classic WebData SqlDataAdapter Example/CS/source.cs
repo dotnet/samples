@@ -12,9 +12,9 @@ public class Form1: Form
 
 // <Snippet1>
 private static DataSet SelectRows(DataSet dataset,
-    string connectionString,string queryString) 
+    string connectionString,string queryString)
 {
-    using (SqlConnection connection = 
+    using (SqlConnection connection =
         new SqlConnection(connectionString))
     {
         SqlDataAdapter adapter = new SqlDataAdapter();

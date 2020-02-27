@@ -19,7 +19,7 @@ public class Form1: Form
             Console.WriteLine(row[1]);
         }
     }
- 
+
     private void AddRow(DataTable table)
     {
         DataRowCollection rowCollection = table.Rows;

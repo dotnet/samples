@@ -63,9 +63,9 @@ namespace Microsoft.ServiceModel.Samples
             MsmqIntegrationBindingElement msmqBindingElement = new MsmqIntegrationBindingElement();
             CustomBinding binding = new CustomBinding(msmqBindingElement);
 
-            BindingParameterCollection bindingParameterCollection = new BindingParameterCollection();      
-                
-            BindingContext bindingContext = new BindingContext(binding, bindingParameterCollection);   
+            BindingParameterCollection bindingParameterCollection = new BindingParameterCollection();
+
+            BindingContext bindingContext = new BindingContext(binding, bindingParameterCollection);
             IChannelListener<IInputChannel> listener = msmqBindingElement.BuildChannelListener<IInputChannel>(bindingContext);
             listener.Open();
             IInputChannel channel = listener.AcceptChannel();

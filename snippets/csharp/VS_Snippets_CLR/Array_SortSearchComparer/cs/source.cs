@@ -15,11 +15,11 @@ public class Example
 {
     public static void Main()
     {
-        string[] dinosaurs = {"Pachycephalosaurus", 
-                              "Amargasaurus", 
-                              "Tyrannosaurus", 
-                              "Mamenchisaurus", 
-                              "Deinonychus", 
+        string[] dinosaurs = {"Pachycephalosaurus",
+                              "Amargasaurus",
+                              "Tyrannosaurus",
+                              "Mamenchisaurus",
+                              "Deinonychus",
                               "Edmontosaurus"};
 
         Console.WriteLine();

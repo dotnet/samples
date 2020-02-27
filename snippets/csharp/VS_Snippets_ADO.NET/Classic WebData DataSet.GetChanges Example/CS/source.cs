@@ -12,21 +12,21 @@ public class Form1: Form
     // <Snippet1>
     private void DemonstrateMerge()
     {
-        // Create a DataSet with one table, two columns, 
+        // Create a DataSet with one table, two columns,
         // and three rows.
         DataSet dataSet = new DataSet("dataSet");
         DataTable table = new DataTable("Items");
-        DataColumn idColumn = new DataColumn("id", 
+        DataColumn idColumn = new DataColumn("id",
             Type.GetType("System.Int32"),"");
         idColumn.AutoIncrement=true;
-        DataColumn itemColumn = new DataColumn("Item", 
+        DataColumn itemColumn = new DataColumn("Item",
             Type.GetType("System.Int32"),"");
 
         // DataColumn array to set primary key.
         DataColumn[] keyColumn= new DataColumn[1];
         DataRow row;
 
-        // Create variable for temporary DataSet. 
+        // Create variable for temporary DataSet.
         DataSet changesDataSet;
 
         // Add RowChanged event handler for the table.
@@ -63,9 +63,9 @@ public class Form1: Form
         table.Rows[1].RowError= "over 100";
         PrintValues(dataSet, "Modified and New Values");
 
-        // If the table has changes or errors, 
+        // If the table has changes or errors,
         // create a subset DataSet.
-        if(dataSet.HasChanges(DataRowState.Modified | 
+        if(dataSet.HasChanges(DataRowState.Modified |
             DataRowState.Added)&& dataSet.HasErrors)
         {
             // Use GetChanges to extract subset.
@@ -94,18 +94,18 @@ public class Form1: Form
                 new DataColumn("newColumn"));
             PrintValues(changesDataSet, "Reconciled subset values");
             // Merge changes back to first DataSet.
-            dataSet.Merge(changesDataSet, false, 
+            dataSet.Merge(changesDataSet, false,
                 System.Data.MissingSchemaAction.Add);
         }
         PrintValues(dataSet, "Merged Values");
     }
- 
+
     private void Row_Changed(object sender, DataRowChangeEventArgs e)
     {
-        Console.WriteLine("Row Changed " + e.Action.ToString() 
+        Console.WriteLine("Row Changed " + e.Action.ToString()
             + "\table" + e.Row.ItemArray[0]);
     }
- 
+
     private void PrintValues(DataSet dataSet, string label)
     {
         Console.WriteLine(label + "\n");

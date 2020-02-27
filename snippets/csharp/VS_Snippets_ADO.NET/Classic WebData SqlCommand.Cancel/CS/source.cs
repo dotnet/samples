@@ -60,7 +60,7 @@ class Program
     }
     static private string GetConnectionString()
     {
-        // To avoid storing the connection string in your code, 
+        // To avoid storing the connection string in your code,
         // you can retrieve it from a configuration file.
         return "Data Source=(local);Initial Catalog=AdventureWorks;"
             + "Integrated Security=SSPI";

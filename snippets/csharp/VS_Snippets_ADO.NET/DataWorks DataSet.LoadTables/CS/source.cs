@@ -19,7 +19,7 @@ class Program
         dataSet.Tables.Add(customerTable);
         dataSet.Tables.Add(productTable);
 
-        // Load the data into the existing DataSet. 
+        // Load the data into the existing DataSet.
         DataTableReader reader = GetReader();
         dataSet.Load(reader, LoadOption.OverwriteChanges,
             customerTable, productTable);

@@ -13,7 +13,7 @@ using System.Messaging;
 
 namespace Microsoft.ServiceModel.Samples
 {
-    // Define a service contract. 
+    // Define a service contract.
     [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]
     [ServiceKnownType(typeof(PurchaseOrder))]
     public interface IOrderProcessor
@@ -32,14 +32,14 @@ namespace Microsoft.ServiceModel.Samples
             PurchaseOrder po = (PurchaseOrder)ordermsg.Body;
             Random statusIndexer = new Random();
             po.Status = (OrderStates)statusIndexer.Next(3);
-            Console.WriteLine("Processing {0} ", po);          
+            Console.WriteLine("Processing {0} ", po);
         }
 
         // Host the service within this EXE console application.
         public static void Main()
         {
             Snippets.Snippet6();
-            
+
             // <Snippet0>
             // Get MSMQ queue name from appsettings in configuration.
             string queueName = @".\private$\Orders";
@@ -51,7 +51,7 @@ namespace Microsoft.ServiceModel.Samples
             // Create a ServiceHost for the CalculatorService type.
             using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
             {
-                
+
                 // <Snippet2>
                 // <Snippet1>
                 MsmqIntegrationBindingElement msmqBindingElement = new MsmqIntegrationBindingElement();
@@ -62,7 +62,7 @@ namespace Microsoft.ServiceModel.Samples
                 // </Snippet2>
 
                 Type[] types = msmqBindingElement.TargetSerializationTypes;
-                
+
                 CustomBinding binding = new CustomBinding(msmqBindingElement);
 
                 serviceHost.AddServiceEndpoint(typeof(IOrderProcessor), binding, @"msmq.formatname:DIRECT=OS:.\private$\Orders");
@@ -75,6 +75,6 @@ namespace Microsoft.ServiceModel.Samples
                 Console.ReadLine();
             }
             // </Snippet0>
-        }  
+        }
     }
 }

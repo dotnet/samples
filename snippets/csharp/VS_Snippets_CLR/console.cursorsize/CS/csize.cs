@@ -2,9 +2,9 @@
 // This example demonstrates the Console.CursorSize property.
 using System;
 
-class Sample 
+class Sample
 {
-    public static void Main() 
+    public static void Main()
     {
     string m0 = "This example increments the cursor size from 1% to 100%:\n";
     string m1 = "Cursor size = {0}%. (Press any key to continue...)";

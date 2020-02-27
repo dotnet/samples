@@ -12,9 +12,9 @@ public class Form1: Form
         System.Type decimalType;
         decimalType = System.Type.GetType("System.Decimal");
 
-        // Create the column. The name is 'Tax,' with data type Decimal,and 
+        // Create the column. The name is 'Tax,' with data type Decimal,and
         // an expression ('UnitPrice * .0862) to calculate the tax.
-        DataColumn column = new DataColumn("Tax", 
+        DataColumn column = new DataColumn("Tax",
             decimalType, "UnitPrice * .0862");
 
         // Set various properties.

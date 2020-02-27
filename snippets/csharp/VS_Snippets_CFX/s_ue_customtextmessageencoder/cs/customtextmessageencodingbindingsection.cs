@@ -32,7 +32,7 @@ namespace Microsoft.ServiceModel.Samples
         {
             if (readerQuotas == null)
                 throw new ArgumentNullException("readerQuotas");
-            
+
             if (this.ReaderQuotasElement.MaxDepth != 0)
             {
                 readerQuotas.MaxDepth = this.ReaderQuotasElement.MaxDepth;
@@ -57,9 +57,9 @@ namespace Microsoft.ServiceModel.Samples
 
         public override Type BindingElementType
         {
-            get 
-            { 
-                return typeof(CustomTextMessageBindingElement); 
+            get
+            {
+                return typeof(CustomTextMessageBindingElement);
             }
         }
 
@@ -70,7 +70,7 @@ namespace Microsoft.ServiceModel.Samples
             return binding;
         }
 
-        [ConfigurationProperty(ConfigurationStrings.MessageVersion, 
+        [ConfigurationProperty(ConfigurationStrings.MessageVersion,
             DefaultValue = ConfigurationStrings.DefaultMessageVersion)]
         [TypeConverter(typeof(MessageVersionConverter))]
         public MessageVersion MessageVersion
@@ -79,7 +79,7 @@ namespace Microsoft.ServiceModel.Samples
             set { base[ConfigurationStrings.MessageVersion] = value; }
         }
 
-        [ConfigurationProperty(ConfigurationStrings.MediaType, 
+        [ConfigurationProperty(ConfigurationStrings.MediaType,
             DefaultValue = ConfigurationStrings.DefaultMediaType)]
         public string MediaType
         {
@@ -112,9 +112,9 @@ namespace Microsoft.ServiceModel.Samples
         [ConfigurationProperty(ConfigurationStrings.ReaderQuotas)]
         public XmlDictionaryReaderQuotasElement ReaderQuotasElement
         {
-            get 
-            { 
-                return (XmlDictionaryReaderQuotasElement)base[ConfigurationStrings.ReaderQuotas]; 
+            get
+            {
+                return (XmlDictionaryReaderQuotasElement)base[ConfigurationStrings.ReaderQuotas];
             }
         }
     }

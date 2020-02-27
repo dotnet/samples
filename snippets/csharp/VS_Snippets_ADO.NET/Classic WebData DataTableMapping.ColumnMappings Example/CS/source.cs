@@ -12,16 +12,16 @@ public class Form1: Form
     protected DataColumnMappingCollection mappings;
 
     // <Snippet1>
-    public void CreateDataTableMapping() 
+    public void CreateDataTableMapping()
     {
         // ...
         // create mappings
         // ...
         DataColumnMapping[] columns = {};
-        // Copy mappings to array    
+        // Copy mappings to array
         mappings.CopyTo(columns, 0);
         DataTableMapping mapping =
-            new DataTableMapping("Categories", "DataCategories", columns);    
+            new DataTableMapping("Categories", "DataCategories", columns);
     }
     // </Snippet1>
 }

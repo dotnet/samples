@@ -2,8 +2,8 @@
 
 /* The following example demonstrates the 'CheckIfInstallable' method
    of the 'AssemblyInstaller' class.
-   The 'CheckIfInstallable' method is applied to an existent and 
-   nonexistent assembly and the results of the call are displayed 
+   The 'CheckIfInstallable' method is applied to an existent and
+   nonexistent assembly and the results of the call are displayed
    onto the console.
 */
 // <Snippet1>

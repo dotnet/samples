@@ -9,7 +9,7 @@ namespace Microsoft.ServiceModel.Samples
     using System.ServiceModel.Channels;
     using System.Xml;
 
-    public class HttpCookieSessionBindingElement 
+    public class HttpCookieSessionBindingElement
         : BindingElement
         , IPolicyExportExtension
     {
@@ -18,12 +18,12 @@ namespace Microsoft.ServiceModel.Samples
 
         TimeSpan sessionTimeout;
 
-        // Indicates whether the terminate message is 
-        // exchanged when the client closes the request 
+        // Indicates whether the terminate message is
+        // exchanged when the client closes the request
         // channel.
         bool exchangeTerminateMessage;
-        
-        // XmlDocument is used to generate the Policy assertion elements.        
+
+        // XmlDocument is used to generate the Policy assertion elements.
         static XmlDocument xmlDocument = new XmlDocument();
 
         public HttpCookieSessionBindingElement()
@@ -33,7 +33,7 @@ namespace Microsoft.ServiceModel.Samples
             exchangeTerminateMessage = HttpCookieSessionDefaults.ExchangeTerminateMessage;
         }
 
-        protected HttpCookieSessionBindingElement(HttpCookieSessionBindingElement other) 
+        protected HttpCookieSessionBindingElement(HttpCookieSessionBindingElement other)
             : base(other)
         {
             sessionTimeout = other.sessionTimeout;
@@ -47,9 +47,9 @@ namespace Microsoft.ServiceModel.Samples
         }
 
         /// <summary>
-        /// Checks whehter the terminate message should be exchanged when the 
+        /// Checks whehter the terminate message should be exchanged when the
         /// client closes the request channel.
-        /// </summary>        
+        /// </summary>
         public bool ExchangeTerminateMessage
         {
             get { return this.exchangeTerminateMessage; }
@@ -103,7 +103,7 @@ namespace Microsoft.ServiceModel.Samples
 
         /// <summary>
         /// Used by the higher layers to determine what types of channel factories this
-        /// binding element supports. 
+        /// binding element supports.
         /// </summary>
         public override bool CanBuildChannelFactory<TChannel>(BindingContext context)
         {
@@ -124,7 +124,7 @@ namespace Microsoft.ServiceModel.Samples
 
         /// <summary>
         /// Used by the higher layers to determine what types of channel listeners this
-        /// binding element supports. 
+        /// binding element supports.
         /// </summary>
         public override bool CanBuildChannelListener<TChannel>(BindingContext context)
         {
@@ -186,20 +186,20 @@ namespace Microsoft.ServiceModel.Samples
             }
 
             XmlElement mhscElement = xmlDocument.CreateElement(HttpCookiePolicyStrings.Prefix,
-                HttpCookiePolicyStrings.HttpCookiePolicyElement, 
+                HttpCookiePolicyStrings.HttpCookiePolicyElement,
                 HttpCookiePolicyStrings.Namespace);
 
             if (exchangeTerminateMessage)
             {
                 XmlAttribute attribute = xmlDocument.CreateAttribute(
                     HttpCookiePolicyStrings.ExchangeTerminateAttribute);
-                
+
                 attribute.Value = "true";
 
                 mhscElement.Attributes.Append(attribute);
             }
 
-            context.GetBindingAssertions().Add(mhscElement);            
+            context.GetBindingAssertions().Add(mhscElement);
         }
     }
 }

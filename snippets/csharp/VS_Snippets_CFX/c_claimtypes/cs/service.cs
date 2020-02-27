@@ -4,9 +4,9 @@
 using System;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
-using System.IdentityModel.Claims; 
-using System.IdentityModel.Policy; 
-using System.IdentityModel.Tokens; 
+using System.IdentityModel.Claims;
+using System.IdentityModel.Policy;
+using System.IdentityModel.Tokens;
 using System.IdentityModel.Selectors;
 using System.ServiceModel;
 

@@ -24,7 +24,7 @@ namespace Microsoft.Samples.ChannelCache.EchoWorkflowClient
             CreateClientWorkflow();
 
 	    // <Snippet0>
-            
+
             //sharing a channel cache between two workflow applications in a single app-domain.
             sharedChannelCache = new SendMessageChannelCache(new ChannelCacheSettings { MaxItemsInCache = 5 }, new ChannelCacheSettings { MaxItemsInCache = 5 });
 
@@ -38,7 +38,7 @@ namespace Microsoft.Samples.ChannelCache.EchoWorkflowClient
 
             //disabling the channel cache so that channels are closed after being used.
             SendMessageChannelCache disabledChannelCache = new SendMessageChannelCache(new ChannelCacheSettings { MaxItemsInCache = 0 }, new ChannelCacheSettings { MaxItemsInCache = 0 });
-            
+
             WorkflowApplication workflowApp3 = new WorkflowApplication(workflow);
             workflowApp3.Completed = new Action<WorkflowApplicationCompletedEventArgs>(OnCompleted);
             workflowApp3.Extensions.Add(disabledChannelCache);
@@ -46,7 +46,7 @@ namespace Microsoft.Samples.ChannelCache.EchoWorkflowClient
 	    // </Snippet0>
 
             try
-            {                
+            {
                 workflowApp1.Run();
                 completeEvent.WaitOne();
                 Console.WriteLine("Workflow 1 completed successfully.");
@@ -68,7 +68,7 @@ namespace Microsoft.Samples.ChannelCache.EchoWorkflowClient
         }
 
         static void OnCompleted(WorkflowApplicationCompletedEventArgs completedArgs)
-        {            
+        {
             completeEvent.Set();
         }
 
@@ -77,7 +77,7 @@ namespace Microsoft.Samples.ChannelCache.EchoWorkflowClient
             // <Snippet2>
             Variable<string> message = new Variable<string>("message", "client");
             Variable<string> result = new Variable<string> { Name = "result" };
-            
+
             Endpoint endpoint = new Endpoint
             {
                 AddressUri = new Uri(Common.Constants.ServiceBaseAddress),
@@ -91,8 +91,8 @@ namespace Microsoft.Samples.ChannelCache.EchoWorkflowClient
                 OperationName = "Echo",
                 Content = new SendParametersContent
                 {
-                    Parameters = 
-                        { 
+                    Parameters =
+                        {
                             { "message", new InArgument<string>(message) }
                         }
                 }
@@ -111,14 +111,14 @@ namespace Microsoft.Samples.ChannelCache.EchoWorkflowClient
                         new ReceiveReply
                         {
                             Request = requestEcho,
-                            Content = new ReceiveParametersContent                            
+                            Content = new ReceiveParametersContent
                             {
-                                Parameters = 
+                                Parameters =
                                 {
                                     { "echo", new OutArgument<string>(result) }
                                 }
                             }
-                        },                        
+                        },
                         new WriteLine {
                             Text = new InArgument<string>(result)
                         }

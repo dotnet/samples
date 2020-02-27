@@ -22,7 +22,7 @@ public class Form1: Form
             PrintRowErrs(DataSet1);
         }
     }
- 
+
     private void PrintRowErrs(DataSet dataSet)
     {
         foreach(DataTable table in dataSet.Tables)

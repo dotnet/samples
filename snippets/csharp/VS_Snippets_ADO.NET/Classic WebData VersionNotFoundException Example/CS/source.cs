@@ -18,7 +18,7 @@ public class Form1: Form
         DataColumn column = new DataColumn("NewColumn");
         table.Columns.Add(column);
         DataRow newRow;
-      
+
         for(int i = 0;i <10;i++)
         {
             newRow = table.NewRow();

@@ -10,7 +10,7 @@ public class Form1: Form
     protected DataGrid dataGrid1;
 
     // <Snippet1>
-    private void WriteXmlToFile(DataSet thisDataSet) 
+    private void WriteXmlToFile(DataSet thisDataSet)
     {
         if (thisDataSet == null) { return; }
 
@@ -22,12 +22,12 @@ public class Form1: Form
             (filename, System.IO.FileMode.Create);
 
         // Create an XmlTextWriter with the fileStream.
-        System.Xml.XmlTextWriter xmlWriter = 
-            new System.Xml.XmlTextWriter(stream, 
+        System.Xml.XmlTextWriter xmlWriter =
+            new System.Xml.XmlTextWriter(stream,
             System.Text.Encoding.Unicode);
 
         // Write to the file with the WriteXml method.
-        thisDataSet.WriteXml(xmlWriter);   
+        thisDataSet.WriteXml(xmlWriter);
         xmlWriter.Close();
     }
     // </Snippet1>

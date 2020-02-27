@@ -25,7 +25,7 @@ namespace HowToReferenceCertificates
 
             abe.SetKeyDerivation(false);
             //</snippet3>
-            
+
             X509SecurityTokenParameters istp =
                abe.InitiatorTokenParameters as X509SecurityTokenParameters;
             if (istp != null)
@@ -43,9 +43,9 @@ namespace HowToReferenceCertificates
             }
             //</snippet5>
 
-            HttpTransportBindingElement transport = 
+            HttpTransportBindingElement transport =
                 new HttpTransportBindingElement();
- 
+
             return new CustomBinding(abe, transport);
         }
         //</snippet1>

@@ -18,7 +18,7 @@ public class Form1: Form
             }
         }
     }
- 
+
     private void AddColumn(DataTable table)
     {
         DataColumn column;

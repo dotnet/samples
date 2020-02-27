@@ -8,9 +8,9 @@ namespace IExtensibleDataObjectExample
     using System.Xml;
     using System.Runtime.Serialization;
     using System.IO;
-    
+
     //<snippet1>
-    // Implement the IExtensibleDataObject interface 
+    // Implement the IExtensibleDataObject interface
     // to store the extra data for future versions.
     [DataContract(
         Name = "Person",
@@ -37,11 +37,11 @@ namespace IExtensibleDataObjectExample
         public string Name;
     }
 
-    // The second version of the class adds a new field. The field's 
+    // The second version of the class adds a new field. The field's
     // data is stored in the ExtensionDataObject field of
-    // the first version (Person). You must also set the Name property 
-    // of the DataContractAttribute to match the first version. 
-    // If necessary, also set the Namespace property so that the 
+    // the first version (Person). You must also set the Name property
+    // of the DataContractAttribute to match the first version.
+    // If necessary, also set the Namespace property so that the
     // name of the contracts is the same.
     [DataContract(Name = "Person",
         Namespace = "http://www.cohowinery.com/employees")]
@@ -93,8 +93,8 @@ namespace IExtensibleDataObjectExample
             }
         }
 
-        // Create an instance of the version 2.0 class. It has  
-        // extra data (ID field) that version 1.0 does 
+        // Create an instance of the version 2.0 class. It has
+        // extra data (ID field) that version 1.0 does
         // not understand.
         static void WriteVersion2(string path)
         {
@@ -148,7 +148,7 @@ namespace IExtensibleDataObjectExample
             fs.Close();
         }
 
-        // Deserialize a version 2.0 object. 
+        // Deserialize a version 2.0 object.
         public static void ReadVersion2(string path)
         {
             FileStream fs = new FileStream(path, FileMode.Open);

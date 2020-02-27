@@ -1,6 +1,6 @@
 ﻿// Snippet for X509CertificateValidationMode
 /*
- * 
+ *
  *  CalculatorChannel is not consistent with store, so changed everything else
               ChannelFactory<ISimpleChannel> cf =
                     new ChannelFactory<ISimpleChannel>();
@@ -13,10 +13,10 @@
                     X509FindType.FindByThumbprint, "33 93 68 cc 7c 75 80 24 a2 80 9f 45 8c 81 fa 92 ad 5b 04 39");
                 cf.Credentials.ServiceCertificate.Authentication.CertificateValidationMode = X509CertificateValidationMode.PeerOrChainTrust;
     using System.ServiceModel.Security;
- * 
-* 
- * 
- * 
+ *
+*
+ *
+ *
  */
 
 //  Copyright (c) Microsoft Corporation.  All Rights Reserved.

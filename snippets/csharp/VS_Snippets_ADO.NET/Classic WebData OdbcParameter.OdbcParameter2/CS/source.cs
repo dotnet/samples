@@ -12,7 +12,7 @@ public class Form1: Form
 
 // <Snippet1>
 
- public void CreateOdbcParameter() 
+ public void CreateOdbcParameter()
  {
     OdbcParameter parameter = new OdbcParameter("Description",OdbcType.VarChar,88);
     parameter.Direction = ParameterDirection.Output;

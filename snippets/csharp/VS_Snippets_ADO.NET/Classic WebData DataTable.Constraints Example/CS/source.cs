@@ -8,10 +8,10 @@ public class Form1
     protected DataSet DataSet1;
 
     // <Snippet1>
-    private void CreateConstraint(DataSet dataSet, 
+    private void CreateConstraint(DataSet dataSet,
         string table1, string table2, string column1, string column2)
     {
-        ForeignKeyConstraint idKeyRestraint = new 
+        ForeignKeyConstraint idKeyRestraint = new
             ForeignKeyConstraint(dataSet.Tables[table1].Columns[column1],
             dataSet.Tables[table2].Columns[column2]);
 
@@ -21,7 +21,7 @@ public class Form1
 
         // Set AcceptRejectRule to cascade changes.
         idKeyRestraint.AcceptRejectRule = AcceptRejectRule.Cascade;
- 
+
         dataSet.Tables[table1].Constraints.Add(idKeyRestraint);
         dataSet.EnforceConstraints = true;
     }

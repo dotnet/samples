@@ -5,7 +5,7 @@ using System.ServiceModel.Channels;
 using microsoft.wcf.documentation;
 // for the client behavior
 using Microsoft.WCF.Documentation;
- 
+
 // <snippet10>
 public class Client
 {
@@ -26,7 +26,7 @@ public class Client
       Console.WriteLine("Press ENTER to exit:");
       Console.ReadLine();
 
-      // Done with service. 
+      // Done with service.
       wcfClient.Close();
       Console.WriteLine("Done!");
     }

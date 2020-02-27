@@ -12,19 +12,19 @@ public class CspKeyContainerInfoExample
 
         try
         {
-            // Note: In cases where a random key is generated,   
-            // a key container is not created until you call  
+            // Note: In cases where a random key is generated,
+            // a key container is not created until you call
             // a method that uses the key.  This example calls
             // the Encrypt method before calling the
             // CspKeyContainerInfo property so that a key
-            // container is created.  
+            // container is created.
 
             // Create some data to encrypt and display it.
             string data = "Here is some data to encrypt.";
 
             Console.WriteLine("Data to encrypt: " + data);
 
-            // Convert the data to an array of bytes and 
+            // Convert the data to an array of bytes and
             // encrypt it.
             byte[] byteData = Encoding.ASCII.GetBytes(data);
 

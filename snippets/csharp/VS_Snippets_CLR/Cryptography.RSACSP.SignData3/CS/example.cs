@@ -14,7 +14,7 @@ class RSACSPSample
 
             // Create some bytes to be signed.
             byte[] dataBytes = ByteConverter.GetBytes("Here is some data to sign!");
-   
+
             // Create a buffer for the memory stream.
             byte[] buffer = new byte[dataBytes.Length];
 
@@ -26,7 +26,7 @@ class RSACSPSample
 
             mStream.Flush();
 
-            // Create a new instance of the RSACryptoServiceProvider class 
+            // Create a new instance of the RSACryptoServiceProvider class
             // and automatically create a new key-pair.
             RSACryptoServiceProvider RSAalg = new RSACryptoServiceProvider();
 
@@ -39,7 +39,7 @@ class RSACSPSample
             // Hash and sign the data.
             byte[] signedData = HashAndSignBytes(mStream, Key);
 
-            // Verify the data and display the result to the 
+            // Verify the data and display the result to the
             // console.
             if(VerifySignedHash(dataBytes, signedData, Key))
             {
@@ -48,8 +48,8 @@ class RSACSPSample
             else
             {
                 Console.WriteLine("The data does not match the signature.");
-            } 
-            
+            }
+
             // Close the MemoryStream.
             mStream.Close();
         }
@@ -61,15 +61,15 @@ class RSACSPSample
     public static byte[] HashAndSignBytes(Stream DataStream, RSAParameters Key)
     {
         try
-        { 
-            // Reset the current position in the stream to 
+        {
+            // Reset the current position in the stream to
             // the beginning of the stream (0). RSACryptoServiceProvider
             // can't verify the data unless the stream position
             // is set to the starting position of the data.
             DataStream.Position = 0;
 
-            // Create a new instance of RSACryptoServiceProvider using the 
-            // key from RSAParameters.  
+            // Create a new instance of RSACryptoServiceProvider using the
+            // key from RSAParameters.
             RSACryptoServiceProvider RSAalg = new RSACryptoServiceProvider();
 
             RSAalg.ImportParameters(Key);
@@ -90,7 +90,7 @@ class RSACSPSample
     {
         try
         {
-            // Create a new instance of RSACryptoServiceProvider using the 
+            // Create a new instance of RSACryptoServiceProvider using the
             // key from RSAParameters.
             RSACryptoServiceProvider RSAalg = new RSACryptoServiceProvider();
 
@@ -98,7 +98,7 @@ class RSACSPSample
 
             // Verify the data using the signature.  Pass a new instance of SHA1CryptoServiceProvider
             // to specify the use of SHA1 for hashing.
-            return RSAalg.VerifyData(DataToVerify, new SHA1CryptoServiceProvider(), SignedData); 
+            return RSAalg.VerifyData(DataToVerify, new SHA1CryptoServiceProvider(), SignedData);
         }
         catch(CryptographicException e)
         {

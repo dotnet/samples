@@ -39,12 +39,12 @@ namespace Microsoft.WCF.Documentation
     )
     {
       Console.WriteLine("ProvideFault called. Converting Exception to GreetingFault....");
-      FaultException<GreetingFault> fe 
+      FaultException<GreetingFault> fe
         = new FaultException<GreetingFault>(new GreetingFault(error.Message));
       MessageFault fault = fe.CreateMessageFault();
       msg = Message.CreateMessage(
-        ver, 
-        fault, 
+        ver,
+        fault,
         "http://microsoft.wcf.documentation/ISampleService/SampleMethodGreetingFaultFault"
       );
     }
@@ -55,23 +55,23 @@ namespace Microsoft.WCF.Documentation
     // This behavior modifies no binding parameters.
     #region IServiceBehavior Members
     public void AddBindingParameters(
-      ServiceDescription description, 
-      ServiceHostBase serviceHostBase, 
-      System.Collections.ObjectModel.Collection<ServiceEndpoint> endpoints, 
+      ServiceDescription description,
+      ServiceHostBase serviceHostBase,
+      System.Collections.ObjectModel.Collection<ServiceEndpoint> endpoints,
       System.ServiceModel.Channels.BindingParameterCollection parameters
     )
     {
       return;
     }
 
-    // This behavior is an IErrorHandler implementation and 
+    // This behavior is an IErrorHandler implementation and
     // must be applied to each ChannelDispatcher.
     public void ApplyDispatchBehavior(ServiceDescription description, ServiceHostBase serviceHostBase)
     {
       Console.WriteLine("The EnforceGreetingFaultBehavior has been applied.");
       foreach(ChannelDispatcher chanDisp in serviceHostBase.ChannelDispatchers)
       {
-        chanDisp.ErrorHandlers.Add(this);      
+        chanDisp.ErrorHandlers.Add(this);
       }
     }
 
@@ -89,7 +89,7 @@ namespace Microsoft.WCF.Documentation
         {
           if (opDesc.Faults.Count == 0)
             throw new InvalidOperationException(String.Format(
-              "EnforceGreetingFaultBehavior requires a "  
+              "EnforceGreetingFaultBehavior requires a "
               + "FaultContractAttribute(typeof(GreetingFault)) in each operation contract.  "
               + "The \"{0}\" operation contains no FaultContractAttribute.",
               opDesc.Name)

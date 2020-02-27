@@ -16,7 +16,7 @@ namespace CodeDomSamples
             // Represents a floating point number.
             CodePrimitiveExpression floatPrimitive = new CodePrimitiveExpression(1.03189);
             // Represents a null value expression.
-            CodePrimitiveExpression nullPrimitive = new CodePrimitiveExpression(null);            
+            CodePrimitiveExpression nullPrimitive = new CodePrimitiveExpression(null);
             //</Snippet2>
         }
     }

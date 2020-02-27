@@ -50,7 +50,7 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
         }
         protected override IDuplexSessionChannel OnCreateChannel(EndpointAddress address, Uri via)
         {
-            IDuplexSessionChannel innerChannel = this.innerChannelFactory.CreateChannel(address, via) as IDuplexSessionChannel; 
+            IDuplexSessionChannel innerChannel = this.innerChannelFactory.CreateChannel(address, via) as IDuplexSessionChannel;
             ChunkingDuplexSessionChannel channel = new ChunkingDuplexSessionChannel(this, innerChannel, operationParams,maxBufferedChunks);
             return channel;
         }

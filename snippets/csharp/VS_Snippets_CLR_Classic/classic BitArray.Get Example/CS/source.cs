@@ -2,30 +2,30 @@
  using System;
  using System.Collections;
  public class SamplesBitArray  {
- 
+
     public static void Main()  {
- 
+
        // Creates and initializes a BitArray.
        BitArray myBA = new BitArray( 5 );
- 
+
        // Displays the properties and values of the BitArray.
        Console.WriteLine( "myBA values:" );
        PrintIndexAndValues( myBA );
- 
+
        // Sets all the elements to true.
        myBA.SetAll( true );
- 
+
        // Displays the properties and values of the BitArray.
        Console.WriteLine( "After setting all elements to true," );
        PrintIndexAndValues( myBA );
- 
+
        // Sets the last index to false.
        myBA.Set( myBA.Count - 1, false );
- 
+
        // Displays the properties and values of the BitArray.
        Console.WriteLine( "After setting the last element to false," );
        PrintIndexAndValues( myBA );
- 
+
        // Gets the value of the last two elements.
        Console.WriteLine( "The last two elements are: " );
        Console.WriteLine( "    at index {0} : {1}", myBA.Count - 2, myBA.Get( myBA.Count - 2 ) );
@@ -40,9 +40,9 @@
        Console.WriteLine();
     }
  }
- /* 
+ /*
  This code produces the following output.
- 
+
  myBA values:
      [0]:    False
      [1]:    False
@@ -68,5 +68,5 @@
      at index 3 : True
      at index 4 : False
 
- */ 
+ */
 // </Snippet1>

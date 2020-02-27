@@ -32,6 +32,6 @@ namespace AdapterUpdateCS
                 return customers;
             }
         }
-        // </Snippet1>    
+        // </Snippet1>
     }
 }

@@ -12,9 +12,9 @@ class Class1
     public static OleDbDataAdapter CreateDataAdapter(
         OleDbConnection connection)
     {
-        string selectCommand = 
+        string selectCommand =
             "SELECT CustomerID, CompanyName FROM Customers";
-        OleDbDataAdapter adapter = 
+        OleDbDataAdapter adapter =
             new OleDbDataAdapter(selectCommand, connection);
 
         adapter.MissingSchemaAction = MissingSchemaAction.AddWithKey;
@@ -32,21 +32,21 @@ class Class1
             "DELETE FROM Customers WHERE CustomerID = ?");
 
         // Create the parameters.
-        adapter.InsertCommand.Parameters.Add("@CustomerID", 
+        adapter.InsertCommand.Parameters.Add("@CustomerID",
             OleDbType.Char, 5, "CustomerID");
-        adapter.InsertCommand.Parameters.Add("@CompanyName", 
+        adapter.InsertCommand.Parameters.Add("@CompanyName",
             OleDbType.VarChar, 40, "CompanyName");
 
-        adapter.UpdateCommand.Parameters.Add("@CustomerID", 
+        adapter.UpdateCommand.Parameters.Add("@CustomerID",
             OleDbType.Char, 5, "CustomerID");
-        adapter.UpdateCommand.Parameters.Add("@CompanyName", 
+        adapter.UpdateCommand.Parameters.Add("@CompanyName",
             OleDbType.VarChar, 40, "CompanyName");
-        adapter.UpdateCommand.Parameters.Add("@oldCustomerID", 
-            OleDbType.Char, 5, "CustomerID").SourceVersion = 
+        adapter.UpdateCommand.Parameters.Add("@oldCustomerID",
+            OleDbType.Char, 5, "CustomerID").SourceVersion =
             DataRowVersion.Original;
 
-        adapter.DeleteCommand.Parameters.Add("@CustomerID", 
-            OleDbType.Char, 5, "CustomerID").SourceVersion = 
+        adapter.DeleteCommand.Parameters.Add("@CustomerID",
+            OleDbType.Char, 5, "CustomerID").SourceVersion =
             DataRowVersion.Original;
 
         return adapter;

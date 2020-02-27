@@ -9,7 +9,7 @@ namespace FileSystemExample
     {
         public static void Main()
         {
-            try 
+            try
             {
                 string FileName = "test.xml";
 
@@ -41,11 +41,11 @@ namespace FileSystemExample
         public static void AddFileAuditRule(string FileName, string Account, FileSystemRights Rights, AuditFlags AuditRule)
         {
 
-            // Get a FileSecurity object that represents the 
+            // Get a FileSecurity object that represents the
             // current security settings.
             FileSecurity fSecurity = File.GetAccessControl(FileName);
 
-            // Add the FileSystemAuditRule to the security settings. 
+            // Add the FileSystemAuditRule to the security settings.
             fSecurity.AddAuditRule(new FileSystemAuditRule(Account,
                                                             Rights,
                                                             AuditRule));
@@ -58,11 +58,11 @@ namespace FileSystemExample
         public static void RemoveFileAuditRule(string FileName, string Account, FileSystemRights Rights, AuditFlags AuditRule)
         {
 
-            // Get a FileSecurity object that represents the 
+            // Get a FileSecurity object that represents the
             // current security settings.
             FileSecurity fSecurity = File.GetAccessControl(FileName);
 
-            // Add the FileSystemAuditRule to the security settings. 
+            // Add the FileSystemAuditRule to the security settings.
             fSecurity.RemoveAuditRule(new FileSystemAuditRule(Account,
                                                             Rights,
                                                             AuditRule));

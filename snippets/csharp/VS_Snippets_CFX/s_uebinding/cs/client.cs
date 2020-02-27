@@ -28,7 +28,7 @@ namespace UE.ServiceModel.Samples
         {
             BasicHttpBinding binding = new BasicHttpBinding();
             binding.Name = "binding1";
- 
+
             String url = "http://localhost:8000/servicemodelsamples/service/calc";
             EndpointAddress address = new EndpointAddress(url);
             ChannelFactory<ICalculator> channelFactory = new ChannelFactory<ICalculator>(binding, address);

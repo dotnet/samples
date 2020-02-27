@@ -1,7 +1,7 @@
 ﻿// <Snippet1>
 using System;
 
-class Sample 
+class Sample
 {
     public static void Main()
     {
@@ -47,21 +47,21 @@ class Sample
 // The example displays output similar to the following:
 //    Press any key, or 'X' to quit, or CTRL+C to interrupt the read operation:
 //      Key pressed: J
-//    
+//
 //    Press any key, or 'X' to quit, or CTRL+C to interrupt the read operation:
 //      Key pressed: Enter
-//    
+//
 //    Press any key, or 'X' to quit, or CTRL+C to interrupt the read operation:
-//    
+//
 //    The read operation has been interrupted.
 //      Key pressed: ControlC
 //      Cancel property: False
 //    Setting the Cancel property to true...
 //      Cancel property: True
 //    The read operation will resume...
-//    
+//
 //      Key pressed: Q
-//    
+//
 //    Press any key, or 'X' to quit, or CTRL+C to interrupt the read operation:
 //      Key pressed: X
 // </Snippet1>

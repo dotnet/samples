@@ -7,7 +7,7 @@ public class Sample
     // <Snippet1>
     private void GetTables(DataSet dataSet)
     {
-        // Get Each DataTable in the DataTableCollection and 
+        // Get Each DataTable in the DataTableCollection and
         // print each row value.
         foreach (DataTable table in dataSet.Tables)
             foreach (DataRow row in table.Rows)

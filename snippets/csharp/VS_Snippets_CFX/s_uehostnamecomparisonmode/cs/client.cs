@@ -22,11 +22,11 @@ namespace UE.Samples
           }
           catch (CommunicationException commProblem)
           {
-            Console.WriteLine("There was a communication problem. " 
+            Console.WriteLine("There was a communication problem. "
               + commProblem.Message + commProblem.StackTrace);
             Console.ReadLine();
             wcfClient.Abort();
-          } 
+          }
           Console.WriteLine();
           Console.WriteLine("Press <ENTER> to terminate client.");
           Console.ReadLine();

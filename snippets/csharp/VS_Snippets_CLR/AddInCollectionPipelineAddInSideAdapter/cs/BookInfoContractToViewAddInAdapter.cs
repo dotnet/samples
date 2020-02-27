@@ -1,14 +1,14 @@
 ﻿// <Snippet4>
 using System;
 using System.AddIn.Pipeline;
-namespace LibraryContractsAddInAdapters 
+namespace LibraryContractsAddInAdapters
 {
-    
-public class BookInfoContractToViewAddInAdapter : LibraryContractsBase.BookInfo 
+
+public class BookInfoContractToViewAddInAdapter : LibraryContractsBase.BookInfo
 {
     private Library.IBookInfoContract _contract;
     private System.AddIn.Pipeline.ContractHandle _handle;
-    public BookInfoContractToViewAddInAdapter(Library.IBookInfoContract contract) 
+    public BookInfoContractToViewAddInAdapter(Library.IBookInfoContract contract)
     {
         _contract = contract;
         _handle = new ContractHandle(contract);

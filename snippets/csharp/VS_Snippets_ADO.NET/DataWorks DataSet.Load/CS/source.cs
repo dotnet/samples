@@ -19,7 +19,7 @@ class Program
         DataTable table = GetIntegerTable();
         dataSet.Tables.Add(table);
         DataTableReader reader = new DataTableReader(GetStringTable());
-        dataSet.Load(reader, LoadOption.OverwriteChanges, 
+        dataSet.Load(reader, LoadOption.OverwriteChanges,
             FillErrorHandler, table);
 
         Console.WriteLine("Press any key to continue.");
@@ -69,14 +69,14 @@ class Program
         // went wrong.
         if (e.Errors.GetType() == typeof(System.FormatException))
         {
-            Console.WriteLine("Error when attempting to update the value: {0}", 
+            Console.WriteLine("Error when attempting to update the value: {0}",
                 e.Values[0]);
         }
 
         // Setting e.Continue to True tells the Load
         // method to continue trying. Setting it to False
-        // indicates that an error has occurred, and the 
-        // Load method raises the exception that got 
+        // indicates that an error has occurred, and the
+        // Load method raises the exception that got
         // you here.
         e.Continue = true;
     }

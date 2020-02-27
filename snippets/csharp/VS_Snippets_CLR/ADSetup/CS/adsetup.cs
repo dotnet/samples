@@ -2,7 +2,7 @@
 using System;
 using System.IO;
 using System.Reflection;
-using System.Security.Policy;  
+using System.Security.Policy;
 
 class ADSetup
 {
@@ -10,7 +10,7 @@ class ADSetup
     {
         // Create application domain setup information
         var domaininfo = new AppDomainSetup();
-        domaininfo.ConfigurationFile = System.Environment.CurrentDirectory + 
+        domaininfo.ConfigurationFile = System.Environment.CurrentDirectory +
                                        Path.DirectorySeparatorChar +
                                        "ADSetup.exe.config";
         domaininfo.ApplicationBase = System.Environment.CurrentDirectory;
@@ -34,7 +34,7 @@ class ADSetup
 // The example displays output like the following:
 //    Host domain: adsetup.exe
 //    Child domain: Domain2
-//    
+//
 //    Configuration file: C:\Test\ADSetup.exe.config
 //    Application Base Directory: C:\Test
 //  </SNIPPET1>

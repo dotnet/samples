@@ -19,7 +19,7 @@ public class Example
         //
         Evidence ev = new Evidence(current.Evidence);
 
-        // Create an AppDomainInitializer delegate that represents the 
+        // Create an AppDomainInitializer delegate that represents the
         // callback method, AppDomainInit. Assign this delegate to the
         // AppDomainInitializer property of the AppDomainSetup object.
         //
@@ -32,7 +32,7 @@ public class Example
         string[] initArgs = {"String1", "String2"};
         ads.AppDomainInitializerArguments = initArgs;
 
-        // Create a child application domain named "ChildDomain", using 
+        // Create a child application domain named "ChildDomain", using
         // the evidence and the AppDomainSetup object.
         //
         AppDomain ad = AppDomain.CreateDomain("ChildDomain", ev, ads);
@@ -47,7 +47,7 @@ public class Example
     //
     public static void AppDomainInit(string[] args)
     {
-        Console.WriteLine("AppDomain \"{0}\" is initialized with these arguments:", 
+        Console.WriteLine("AppDomain \"{0}\" is initialized with these arguments:",
             AppDomain.CurrentDomain.FriendlyName);
         foreach (string arg in args)
         {

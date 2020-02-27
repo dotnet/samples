@@ -22,7 +22,7 @@ public class Sample
         custTable.PrimaryKey = new DataColumn[] { custTable.Columns["id"] };
 
         // add a ColumnChanging event handler for the table.
-        custTable.ColumnChanging += new 
+        custTable.ColumnChanging += new
             DataColumnChangeEventHandler(Column_Changing );
 
         // add ten rows
@@ -42,11 +42,11 @@ public class Sample
         }
     }
 
-    private static void Column_Changing(object sender, 
+    private static void Column_Changing(object sender,
         DataColumnChangeEventArgs e )
     {
         Console.WriteLine(
-            "Column_Changing Event: name={0}; Column={1}; proposed name={2}", 
+            "Column_Changing Event: name={0}; Column={1}; proposed name={2}",
             e.Row["name"], e.Column.ColumnName, e.ProposedValue );
     }
     // </Snippet1>

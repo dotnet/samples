@@ -36,7 +36,7 @@ namespace CodeExpressionCollectionExample
             //</Snippet4>
 
             //<Snippet5>
-            // Tests for the presence of a CodeExpression in the 
+            // Tests for the presence of a CodeExpression in the
             // collection, and retrieves its index if it is found.
             CodeExpression testComment = new CodePrimitiveExpression(true);
             int itemIndex = -1;
@@ -69,7 +69,7 @@ namespace CodeExpressionCollectionExample
             //<Snippet10>
             // Removes the CodeExpression at index 0.
             collection.RemoveAt(0);
-            //</Snippet10>           
+            //</Snippet10>
             //</Snippet1>
         }
 	}

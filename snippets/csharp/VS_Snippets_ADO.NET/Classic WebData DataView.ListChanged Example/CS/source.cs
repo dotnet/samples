@@ -5,17 +5,17 @@ using System.Data.SqlClient;
 public class Sample
 {
     // <Snippet1>
-    public void CreateDataView(DataTable table) 
+    public void CreateDataView(DataTable table)
     {
-        DataView view = new DataView(table, "", 
+        DataView view = new DataView(table, "",
             "ContactName", DataViewRowState.CurrentRows);
 
-        view.ListChanged  += new 
+        view.ListChanged  += new
             System.ComponentModel.ListChangedEventHandler(
             OnListChanged);
     }
 
-    private void OnListChanged(object sender, 
+    private void OnListChanged(object sender,
         System.ComponentModel.ListChangedEventArgs args)
     {
         Console.WriteLine("ListChanged:");

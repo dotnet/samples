@@ -9,7 +9,7 @@ namespace CodeCommentStatementCollectionExample
 		public Class1()
 		{
 		}
-        
+
         // CodeCommentStatementCollection
         public void CodeCommentStatementCollectionExample()
         {
@@ -37,7 +37,7 @@ namespace CodeCommentStatementCollectionExample
             //</Snippet4>
 
             //<Snippet5>
-            // Tests for the presence of a CodeCommentStatement in the 
+            // Tests for the presence of a CodeCommentStatement in the
             // collection, and retrieves its index if it is found.
             CodeCommentStatement testComment = new CodeCommentStatement("Test comment");
             int itemIndex = -1;
@@ -46,7 +46,7 @@ namespace CodeCommentStatementCollectionExample
             //</Snippet5>
 
             //<Snippet6>
-            // Copies the contents of the collection, beginning at index 0, 
+            // Copies the contents of the collection, beginning at index 0,
             // to the specified CodeCommentStatement array.
             // 'comments' is a CodeCommentStatement array.
             collection.CopyTo( comments, 0 );

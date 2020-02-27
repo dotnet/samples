@@ -26,9 +26,9 @@ namespace Microsoft.WCF.Documentation
     [return: WsdlParameterDocumentation("The Person object to be returned.")]
     Person GetPerson(
      [WsdlParameterDocumentation("The value for the first parameter.")]
-      int FirstParameter, 
+      int FirstParameter,
       [WsdlParameterDocumentation("The value for the second parameter.")]
-      int SecondParameter  
+      int SecondParameter
     );
   }
 
@@ -40,7 +40,7 @@ namespace Microsoft.WCF.Documentation
 
     public Person(string n)
     {
-      this.internalName = n; 
+      this.internalName = n;
     }
 
     [DataMember]

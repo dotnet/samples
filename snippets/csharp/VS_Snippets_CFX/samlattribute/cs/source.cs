@@ -84,7 +84,7 @@ namespace Microsoft.ServiceModel.Samples.Federation
 
         #region Helper Methods
         /// <summary>
-        /// Wrapper for the Application level check performed at the BookStoreSTS for 
+        /// Wrapper for the Application level check performed at the BookStoreSTS for
         /// the existence of required purchase limit.
         /// </summary>
         private static void EnsurePurchaseLimitSufficient(string bookName)
@@ -129,7 +129,7 @@ namespace Microsoft.ServiceModel.Samples.Federation
             AuthorizationContext authContext = OperationContext.Current.ServiceSecurityContext.AuthorizationContext;
 
             // If there are no Claims in the AuthorizationContext, return false.
-            // The issued token used to authenticate should contain claims. 
+            // The issued token used to authenticate should contain claims.
             if (authContext.ClaimSets == null)
                 return false;
 
@@ -162,7 +162,7 @@ namespace Microsoft.ServiceModel.Samples.Federation
             // Get the price of the book being purchased.
             double bookPrice = GetBookPrice(bookID);
 
-            // Iterate through the PurchaseLimit claims and verify that the Resource value is 
+            // Iterate through the PurchaseLimit claims and verify that the Resource value is
             // greater than or equal to the price of the book being purchased.
             foreach (Claim c in purchaseLimitClaims)
             {
@@ -196,7 +196,7 @@ namespace Microsoft.ServiceModel.Samples.Federation
             if (issuerClaims == null)
                 return false;
 
-            // Get the enumerator for the set of Thumbprint claims...                        
+            // Get the enumerator for the set of Thumbprint claims...
             IEnumerator<Claim> issuerClaimsEnum = issuerClaims.GetEnumerator();
 
             // ...and set issuerClaim to the first such Claim.
@@ -242,7 +242,7 @@ namespace Microsoft.ServiceModel.Samples.Federation
         }
         #endregion
     }
-    
+
     /// <summary>
     /// Abstract base class for STS implementations.
     /// </summary>
@@ -253,7 +253,7 @@ namespace Microsoft.ServiceModel.Samples.Federation
         SecurityToken proofKeyEncryptionToken; // The SecurityToken used to encrypt the proof key in the issued token.
 
         /// <summary>
-        /// constructor 
+        /// constructor
         /// </summary>
         /// <param name="stsName">The name of the STS. Used to populate saml:Assertion/@Issuer.</param>
         /// <param name="token">The X509SecurityToken that the STS uses to sign SAML assertions.</param>
@@ -314,7 +314,7 @@ namespace Microsoft.ServiceModel.Samples.Federation
         }
 
         /// <summary>
-        /// Helper method to create proof token. Creates BinarySecretSecuryToken 
+        /// Helper method to create proof token. Creates BinarySecretSecuryToken
         /// with the requested number of bits of random key material.
         /// </summary>
         /// <param name="keySize">keySize</param>
@@ -339,7 +339,7 @@ namespace Microsoft.ServiceModel.Samples.Federation
         /// <param name="samlToken">The SAML Token to be issued</param>
         /// <returns>RequestSecurityTokenResponse</returns>
         protected static RequestSecurityTokenBase GetRequestSecurityTokenResponse(RequestSecurityTokenBase requestSecurityToken,
-                                                                                      int keySize, 
+                                                                                      int keySize,
                                                                                       SecurityToken proofToken,
                                                                                       SecurityToken samlToken,
                                                                                       byte[] senderEntropy,
@@ -364,7 +364,7 @@ namespace Microsoft.ServiceModel.Samples.Federation
             {
                 rstr.RequestedProofToken = proofToken;
             }
-            
+
             return rstr;
         }
         #endregion
@@ -439,10 +439,10 @@ namespace Microsoft.ServiceModel.Samples.Federation
 
             // Set up RSTR.
             RequestSecurityTokenBase rstr = GetRequestSecurityTokenResponse(rst, keySize, proofToken, samlToken, senderEntropy, stsEntropy);
-            
+
             // Create a message from the RSTR.
             Message rstrMessage = Message.CreateMessage(message.Version, Constants.Trust.Actions.IssueReply, rstr);
-            
+
             // Set RelatesTo of the response message to MessageID of the request message.
             rstrMessage.Headers.RelatesTo = requestMessageID;
 
@@ -497,9 +497,9 @@ namespace Microsoft.ServiceModel.Samples.Federation
         // public properties
 
         /// <summary>
-        /// Context for the RST/RSTR exchange. 
+        /// Context for the RST/RSTR exchange.
         /// The value of the wst:RequestSecurityToken/@Context attribute from RequestSecurityToken messages.
-        /// The value of the wst:RequestSecurityTokenResponse/@Context attribute from RequestSecurityTokenResponse messages.        
+        /// The value of the wst:RequestSecurityTokenResponse/@Context attribute from RequestSecurityTokenResponse messages.
         /// </summary>
         public string Context
         {
@@ -510,7 +510,7 @@ namespace Microsoft.ServiceModel.Samples.Federation
         /// <summary>
         /// The type of token requested or returned.
         /// The value of the wst:RequestSecurityToken/wst:TokenType element from RequestSecurityToken messages.
-        /// The value of the wst:RequestSecurityTokenResponse/wst:TokenType element from RequestSecurityTokenResponse messages.       
+        /// The value of the wst:RequestSecurityTokenResponse/wst:TokenType element from RequestSecurityTokenResponse messages.
         /// </summary>
         public string TokenType
         {
@@ -521,7 +521,7 @@ namespace Microsoft.ServiceModel.Samples.Federation
         /// <summary>
         /// The size of the requested proof key.
         /// The value of the wst:RequestSecurityToken/wst:KeySize element from RequestSecurityToken messages.
-        /// The value of the wst:RequestSecurityTokenResponse/wst:KeySize element from RequestSecurityTokenResponse messages.       
+        /// The value of the wst:RequestSecurityTokenResponse/wst:KeySize element from RequestSecurityTokenResponse messages.
         /// </summary>
         public int KeySize
         {
@@ -530,9 +530,9 @@ namespace Microsoft.ServiceModel.Samples.Federation
         }
 
         /// <summary>
-        /// The EndpointAddress a token is being requested or returned for. 
+        /// The EndpointAddress a token is being requested or returned for.
         /// The content of the wst:RequestSecurityToken/wsp:AppliesTo element from RequestSecurityToken messages.
-        /// The content of the wst:RequestSecurityTokenResponse/wsp:AppliesTo element from RequestSecurityTokenResponse messages.       
+        /// The content of the wst:RequestSecurityTokenResponse/wsp:AppliesTo element from RequestSecurityTokenResponse messages.
         /// </summary>public int KeySize
         public EndpointAddress AppliesTo
         {
@@ -566,7 +566,7 @@ namespace Microsoft.ServiceModel.Samples.Federation
         /// <param name="tokenType">The content of the wst:RequestSecurityToken/wst:TokenType element.</param>
         /// <param name="keySize">The content of the wst:RequestSecurityToken/wst:KeySize element.</param>
         /// <param name="appliesTo">An EndpointReference that corresponds to the content of the wst:RequestSecurityToken/wsp:AppliesTo element.</param>
-        /// <param name="entropy">A SecurityToken that represents entropy provided by the requestor in the wst:RequestSecurityToken/wst:Entropy element.</param>        
+        /// <param name="entropy">A SecurityToken that represents entropy provided by the requestor in the wst:RequestSecurityToken/wst:Entropy element.</param>
         public RequestSecurityToken(string context,
                                     string tokenType,
                                     int keySize,
@@ -593,7 +593,7 @@ namespace Microsoft.ServiceModel.Samples.Federation
         // Static methods
 
         /// <summary>
-        /// Reads a wst:RequestSecurityToken element, its attributes and children and 
+        /// Reads a wst:RequestSecurityToken element, its attributes and children and
         /// creates a RequestSecurityToken instance with the appropriate values.
         /// </summary>
         /// <param name="xr">An XmlReader positioned on wst:RequestSecurityToken.</param>
@@ -693,7 +693,7 @@ namespace Microsoft.ServiceModel.Samples.Federation
             // Store the initial depth so this function can be exited when the corresponding end-tag is reached.
             int initialDepth = xr.Depth;
 
-            // Extract the @Context attribute value.                        
+            // Extract the @Context attribute value.
             string context = xr.GetAttribute(Constants.Trust.Attributes.Context, String.Empty);
 
             // Set up some default values.
@@ -740,7 +740,7 @@ namespace Microsoft.ServiceModel.Samples.Federation
                     }
                 }
 
-                // Look for the end-tag that corresponds to the start-tag the reader was positioned 
+                // Look for the end-tag that corresponds to the start-tag the reader was positioned
                 // on when the method was called. When we find it, break out of the read loop.
                 if (Constants.Trust.Elements.RequestSecurityToken == xr.LocalName &&
                     Constants.Trust.NamespaceUri == xr.NamespaceURI &&
@@ -789,7 +789,7 @@ namespace Microsoft.ServiceModel.Samples.Federation
                     // Move reader to the content of wst:BinarySecret element...
                     xr.Read();
 
-                    // ...and read that content as base64. Store the actual number of bytes retrieved.                    
+                    // ...and read that content as base64. Store the actual number of bytes retrieved.
                     int nBytes = xr.ReadContentAsBase64(temp, 0, temp.Length);
 
                     // Allocate a new array of the correct size to hold the provided entropy.
@@ -803,7 +803,7 @@ namespace Microsoft.ServiceModel.Samples.Federation
                     st = new BinarySecretSecurityToken(entropy);
                 }
 
-                // Look for the end-tag that corresponds to the start-tag that the reader was positioned 
+                // Look for the end-tag that corresponds to the start-tag that the reader was positioned
                 // on when the method was called. When it is found, break out of the read loop.
                 if (Constants.Trust.Elements.Entropy == xr.LocalName &&
                     Constants.Trust.NamespaceUri == xr.NamespaceURI &&
@@ -856,7 +856,7 @@ namespace Microsoft.ServiceModel.Samples.Federation
 		    // </Snippet11>
                 }
 
-                // Look for the end-tag that corresponds to the start-tag that the reader was positioned 
+                // Look for the end-tag that corresponds to the start-tag that the reader was positioned
                 // on when the method was called. When it is found, break out of the read loop.
                 if (Constants.Policy.Elements.AppliesTo == xr.LocalName &&
                     Constants.Policy.NamespaceUri == xr.NamespaceURI &&
@@ -996,7 +996,7 @@ namespace Microsoft.ServiceModel.Samples.Federation
         }
 
         /// <summary>
-        /// A SecurityToken that represents the proof token associated with 
+        /// A SecurityToken that represents the proof token associated with
         /// the requested SecurityToken.
         /// </summary>
         public SecurityToken RequestedProofToken
@@ -1006,7 +1006,7 @@ namespace Microsoft.ServiceModel.Samples.Federation
         }
 
         /// <summary>
-        /// A SecurityKeyIdentifierClause that can be used to refer to the requested 
+        /// A SecurityKeyIdentifierClause that can be used to refer to the requested
         /// SecurityToken when that token is present in messages.
         /// </summary>
         public SecurityKeyIdentifierClause RequestedAttachedReference
@@ -1016,7 +1016,7 @@ namespace Microsoft.ServiceModel.Samples.Federation
         }
 
         /// <summary>
-        /// A SecurityKeyIdentifierClause that can be used to refer to the requested 
+        /// A SecurityKeyIdentifierClause that can be used to refer to the requested
         /// SecurityToken when that token is present in messages.
         /// </summary>
         public SecurityKeyIdentifierClause RequestedUnattachedReference
@@ -1062,7 +1062,7 @@ namespace Microsoft.ServiceModel.Samples.Federation
 
             for (int i = 0; i < key.Length; )
             {
-                // Calculate A(i+1).                
+                // Calculate A(i+1).
                 kha.Initialize();
                 a = kha.ComputeHash(a);
 
@@ -1084,7 +1084,7 @@ namespace Microsoft.ServiceModel.Samples.Federation
             return key;
         }
 
-        // Methods of BodyWriter        
+        // Methods of BodyWriter
         /// <summary>
         /// Writes out an XML representation of the instance.
         /// </summary>
@@ -1265,7 +1265,7 @@ namespace Microsoft.ServiceModel.Samples.Federation
                                                         SamlConditions samlConditions,
                                                         IEnumerable<SamlAttribute> samlAttributes)
         {
-            // Create a security token reference to the issuer certificate. 
+            // Create a security token reference to the issuer certificate.
             SecurityKeyIdentifierClause skic = issuerToken.CreateKeyIdentifierClause<X509ThumbprintKeyIdentifierClause>();
             SecurityKeyIdentifier issuerKeyIdentifier = new SecurityKeyIdentifier(skic);
 

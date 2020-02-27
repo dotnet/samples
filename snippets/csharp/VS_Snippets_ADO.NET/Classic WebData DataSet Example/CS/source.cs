@@ -43,7 +43,7 @@ namespace Microsoft.AdoNet.DataSetDemo
                 adapter.Fill(dataSet);
 
                 // Create a second Adapter and Command to get
-                // the Products table, a child table of Suppliers. 
+                // the Products table, a child table of Suppliers.
                 SqlDataAdapter productsAdapter = new SqlDataAdapter();
                 productsAdapter.TableMappings.Add("Table", "Products");
 
@@ -77,7 +77,7 @@ namespace Microsoft.AdoNet.DataSetDemo
 
         static private string GetConnectionString()
         {
-            // To avoid storing the connection string in your code, 
+            // To avoid storing the connection string in your code,
             // you can retrieve it from a configuration file.
             return "Data Source=(local);Initial Catalog=Northwind;"
                 + "Integrated Security=SSPI";

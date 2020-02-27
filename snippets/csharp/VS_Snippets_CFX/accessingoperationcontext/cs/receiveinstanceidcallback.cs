@@ -15,7 +15,7 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         public const string HeaderNS = "http://Microsoft.Samples.AccessingOperationContext";
 
         public void OnReceiveMessage(System.ServiceModel.OperationContext operationContext, System.Activities.ExecutionProperties activityExecutionProperties)
-        {            
+        {
             try
             {
                 Guid instanceId = operationContext.IncomingMessageHeaders.GetHeader<Guid>(HeaderName, HeaderNS);

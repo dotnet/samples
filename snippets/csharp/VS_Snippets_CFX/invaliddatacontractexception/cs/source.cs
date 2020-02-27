@@ -11,7 +11,7 @@ using System.Data;
 
 namespace Example
 {
-    //<snippet1>    
+    //<snippet1>
     public  class Test
     {
         static void Main()
@@ -21,7 +21,7 @@ namespace Example
                 Test t = new Test();
                 t.Run();
             }
-                 
+
             // Catch the InvalidDataContractException here.
             catch(InvalidDataContractException iExc)
             {
@@ -43,7 +43,7 @@ namespace Example
             WSHttpBinding b = new WSHttpBinding(SecurityMode.Message);
 
             // Create a ServiceHost instance, and add a metadata endpoint.
-            Uri baseUri= new Uri("http://localhost:1008/");            
+            Uri baseUri= new Uri("http://localhost:1008/");
             ServiceHost sh = new ServiceHost(typeof(Calculator), baseUri);
 
             // Optional. Add a metadata endpoint. The method is defined below.
@@ -52,7 +52,7 @@ namespace Example
             // Add an endpoint using the binding, and open the service.
             sh.AddServiceEndpoint(typeof(ICalculator), b, "myCalculator");
             sh.Open();
-            
+
             Console.WriteLine("Listening...");
             Console.ReadLine();
         }
@@ -66,7 +66,7 @@ namespace Example
             sh.Description.Behaviors.Add(sm);
         }
     }
-    
+
     // This class will cause an InvalidDataContractException to be thrown because
     // neither the DataContractAttribute nor DataMemberAttribute has been applied to it.
     public class ExtraData
@@ -85,7 +85,7 @@ namespace Example
     }
 
     public class Calculator : ICalculator
-    { 
+    {
         public double Add(double a, double b)
         {
             return a + b;

@@ -44,7 +44,7 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
             ICollection<string> operationParams = GetOperationParams(context);
 
             //pass the list of actions and maxBufferedChunks to ChunkingChannelFactory
-            ChunkingChannelFactory factory = 
+            ChunkingChannelFactory factory =
                 new ChunkingChannelFactory(context.BuildInnerChannelFactory<IDuplexSessionChannel>(), operationParams, this.maxBufferedChunks);
 
             return (IChannelFactory<TChannel>)factory;
@@ -82,7 +82,7 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
                 return new List<string>();
             }
         }
-    
+
         #endregion
 
         #region Other stuff

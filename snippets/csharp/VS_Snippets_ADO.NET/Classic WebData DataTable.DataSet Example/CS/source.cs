@@ -13,7 +13,7 @@ public class Form1: Form
     private DataSet GetDataSetFromTable()
     {
         DataTable table;
- 
+
         // Check to see if the DataGrid's DataSource
         // is a DataTable.
         if( dataGrid1.DataSource is DataTable)

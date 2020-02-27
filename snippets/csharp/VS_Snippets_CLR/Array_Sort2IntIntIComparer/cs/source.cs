@@ -16,11 +16,11 @@ public class Example
     public static void Main()
     {
         string[] dinosaurs = {
-            "Seismosaurus", 
-            "Chasmosaurus", 
-            "Coelophysis", 
-            "Mamenchisaurus", 
-            "Caudipteryx", 
+            "Seismosaurus",
+            "Chasmosaurus",
+            "Coelophysis",
+            "Mamenchisaurus",
+            "Caudipteryx",
             "Cetiosaurus"  };
 
         int[] dinosaurSizes = { 40, 5, 3, 22, 1, 18 };
@@ -28,7 +28,7 @@ public class Example
         Console.WriteLine();
         for (int i = 0; i < dinosaurs.Length; i++)
         {
-            Console.WriteLine("{0}: up to {1} meters long.", 
+            Console.WriteLine("{0}: up to {1} meters long.",
                 dinosaurs[i], dinosaurSizes[i]);
         }
 
@@ -38,7 +38,7 @@ public class Example
         Console.WriteLine();
         for (int i = 0; i < dinosaurs.Length; i++)
         {
-            Console.WriteLine("{0}: up to {1} meters long.", 
+            Console.WriteLine("{0}: up to {1} meters long.",
                 dinosaurs[i], dinosaurSizes[i]);
         }
 
@@ -50,7 +50,7 @@ public class Example
         Console.WriteLine();
         for (int i = 0; i < dinosaurs.Length; i++)
         {
-            Console.WriteLine("{0}: up to {1} meters long.", 
+            Console.WriteLine("{0}: up to {1} meters long.",
                 dinosaurs[i], dinosaurSizes[i]);
         }
 
@@ -60,7 +60,7 @@ public class Example
         Console.WriteLine();
         for (int i = 0; i < dinosaurs.Length; i++)
         {
-            Console.WriteLine("{0}: up to {1} meters long.", 
+            Console.WriteLine("{0}: up to {1} meters long.",
                 dinosaurs[i], dinosaurSizes[i]);
         }
 
@@ -70,7 +70,7 @@ public class Example
         Console.WriteLine();
         for (int i = 0; i < dinosaurs.Length; i++)
         {
-            Console.WriteLine("{0}: up to {1} meters long.", 
+            Console.WriteLine("{0}: up to {1} meters long.",
                 dinosaurs[i], dinosaurSizes[i]);
         }
     }

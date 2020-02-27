@@ -18,11 +18,11 @@ public class Form1: Form
         else
             row.CancelEdit();
     }
- 
+
     private bool ValidateRow(DataRow thisRow)
     {
-        bool isValid = true; 
-        // Insert code to validate the row values. 
+        bool isValid = true;
+        // Insert code to validate the row values.
         // Set the isValid variable.
         return isValid;
     }

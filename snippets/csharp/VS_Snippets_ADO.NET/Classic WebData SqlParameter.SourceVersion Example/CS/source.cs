@@ -11,7 +11,7 @@ public class Form1: Form
     protected DataGrid dataGrid1;
 
     // <Snippet1>
-    public void CreateSqlParameter() 
+    public void CreateSqlParameter()
     {
         SqlParameter parameter = new SqlParameter(
             "@Description", SqlDbType.VarChar);

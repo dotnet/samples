@@ -6,8 +6,8 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Soap;
 using System.Security;
 
-// [assembly: SecurityCritical(SecurityCriticalScope.Everything)] 
-// Using the SecurityCriticalAttribute prohibits usage of the 
+// [assembly: SecurityCritical(SecurityCriticalScope.Everything)]
+// Using the SecurityCriticalAttribute prohibits usage of the
 // ISafeSerializationData interface.
 [assembly: AllowPartiallyTrustedCallers]
 namespace ISafeSerializationDataExample
@@ -18,7 +18,7 @@ namespace ISafeSerializationDataExample
         {
             try
             {
-                // This code forces a division by 0 and catches the 
+                // This code forces a division by 0 and catches the
                 // resulting exception.
                 try
                 {
@@ -75,7 +75,7 @@ namespace ISafeSerializationDataExample
     [Serializable]
     public class NewException : Exception
     {
-        // Because we don't want the exception state to be serialized normally, 
+        // Because we don't want the exception state to be serialized normally,
         // we take care of that in the constructor.
         [NonSerialized]
         private NewExceptionState m_state = new NewExceptionState();
@@ -86,10 +86,10 @@ namespace ISafeSerializationDataExample
             m_state.StringData = stringData;
             m_state.IntData = intData;
 
-            // In response to SerializeObjectState, we need to provide 
-            // any state to serialize with the exception.  In this 
+            // In response to SerializeObjectState, we need to provide
+            // any state to serialize with the exception.  In this
             // case, since our state is already stored in an
-            // ISafeSerializationData implementation, we can 
+            // ISafeSerializationData implementation, we can
             // just provide that.
 
             SerializeObjectState += delegate(object exception,
@@ -97,14 +97,14 @@ namespace ISafeSerializationDataExample
             {
                 eventArgs.AddSerializedState(m_state);
             };
-            // An alternate implementation would be to store the state 
-            // as local member variables, and in response to this 
+            // An alternate implementation would be to store the state
+            // as local member variables, and in response to this
             // method create a new instance of an ISafeSerializationData
-            // object and populate it with the local state here before 
-            // passing it through to AddSerializedState.        
+            // object and populate it with the local state here before
+            // passing it through to AddSerializedState.
         }
-        // There is no need to supply a deserialization constructor 
-        // (with SerializationInfo and StreamingContext parameters), 
+        // There is no need to supply a deserialization constructor
+        // (with SerializationInfo and StreamingContext parameters),
         // and no need to supply a GetObjectData implementation.
 
         // Data access is through the state object (m_State).
@@ -118,10 +118,10 @@ namespace ISafeSerializationDataExample
             get { return m_state.IntData; }
         }
 
-        // Implement the ISafeSerializationData interface 
-        // to contain custom  exception data in a partially trusted 
-       // assembly. Use this interface to replace the 
-       // Exception.GetObjectData method, 
+        // Implement the ISafeSerializationData interface
+        // to contain custom  exception data in a partially trusted
+       // assembly. Use this interface to replace the
+       // Exception.GetObjectData method,
         // which is now marked with the SecurityCriticalAttribute.
         [Serializable]
         private struct NewExceptionState : ISafeSerializationData
@@ -142,14 +142,14 @@ namespace ISafeSerializationDataExample
             }
 
             //<snippet2>
-            // This method is called when deserialization of the 
+            // This method is called when deserialization of the
             // exception is complete.
             void ISafeSerializationData.CompleteDeserialization
                 (object obj)
             {
-                // Since the exception simply contains an instance of 
-                // the exception state object, we can repopulate it 
-                // here by just setting its instance field to be equal 
+                // Since the exception simply contains an instance of
+                // the exception state object, we can repopulate it
+                // here by just setting its instance field to be equal
                 // to this deserialized state instance.
                 NewException exception = obj as NewException;
                 exception.m_state = this;

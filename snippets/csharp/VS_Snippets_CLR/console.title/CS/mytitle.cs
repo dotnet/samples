@@ -2,9 +2,9 @@
 // This example demonstrates the Console.Title property.
 using System;
 
-class Sample 
+class Sample
 {
-    public static void Main() 
+    public static void Main()
     {
     Console.WriteLine("The current console title is: \"{0}\"",
                       Console.Title);

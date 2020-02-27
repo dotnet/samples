@@ -11,7 +11,7 @@ public class Form1: Form
   protected DataGrid dataGrid1;
 
 // <Snippet1>
- public void DisplayOleDbErrorCollection(OleDbException exception) 
+ public void DisplayOleDbErrorCollection(OleDbException exception)
  {
     for (int i=0; i < exception.Errors.Count; i++)
     {

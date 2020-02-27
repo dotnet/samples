@@ -7,17 +7,17 @@ namespace CodeDomSamples
     public class CodeReferenceExample
     {
         public CodeReferenceExample()
-        {                        
+        {
         }
 
         public void CodeFieldReferenceExample()
         {
             //<Snippet2>
-            CodeFieldReferenceExpression fieldRef1 = 
+            CodeFieldReferenceExpression fieldRef1 =
                 new CodeFieldReferenceExpression(new CodeThisReferenceExpression(), "TestField");
 
             // A C# code generator produces the following source code for the preceeding example code:
-            
+
             //    this.TestField
             //</Snippet2>
         }
@@ -25,9 +25,9 @@ namespace CodeDomSamples
         public void CodePropertyReferenceExample()
         {
             //<Snippet3>
-            CodePropertyReferenceExpression propertyRef1 = 
+            CodePropertyReferenceExpression propertyRef1 =
                 new CodePropertyReferenceExpression(new CodeThisReferenceExpression(), "TestProperty");
-            
+
             // A C# code generator produces the following source code for the preceeding example code:
 
             //    this.TestProperty
@@ -39,7 +39,7 @@ namespace CodeDomSamples
             //<Snippet4>
             CodeVariableReferenceExpression variableRef1 =
                 new CodeVariableReferenceExpression("TestVariable");
-            
+
             // A C# code generator produces the following source code for the preceeding example code:
 
             //    TestVariable

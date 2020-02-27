@@ -3,7 +3,7 @@
  using System.Collections;
  public class SamplesHashtable
  {
- 
+
     public static void Main()
     {
        // Creates and initializes a new Hashtable.
@@ -12,7 +12,7 @@
        myHT.Add("two", "quick");
        myHT.Add("three", "brown");
        myHT.Add("four", "fox");
- 
+
        // Displays the Hashtable.
        Console.WriteLine("The Hashtable contains the following:");
        PrintKeysAndValues(myHT);
@@ -26,14 +26,14 @@
        Console.WriteLine();
     }
  }
- /* 
+ /*
  This code produces the following output.
- 
+
  The Hashtable contains the following:
          -KEY-   -VALUE-
          two:    quick
          three:  brown
          four:   fox
          one:    The
- */ 
+ */
 // </Snippet1>

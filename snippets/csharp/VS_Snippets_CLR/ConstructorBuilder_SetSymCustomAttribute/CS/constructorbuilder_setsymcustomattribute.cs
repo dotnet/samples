@@ -1,12 +1,12 @@
 ﻿// System.Reflection.Emit.ConstructorBuilder.SetSymCustomAttribute()
 
 /* The following program demonstrates the 'SetSymCustomAttribute' method
-   of ConstructorBuilder class. It creates an assembly in the current 
+   of ConstructorBuilder class. It creates an assembly in the current
    domain with dynamic module in the assembly. Constructor builder is
    used in conjunction with the 'TypeBuilder' class to create constructor
    at run time. It then sets this constructor's custom attribute associated
    with symbolic information.
-*/ 
+*/
 
 using System;
 using System.Reflection;
@@ -36,7 +36,7 @@ internal class MyConstructorBuilder
          myModuleBuilder.DefineUninitializedData("myField", 2, FieldAttributes.Public);
       // Create a type in the module.
       TypeBuilder myTypeBuilder = myModuleBuilder.DefineType("TempClass",TypeAttributes.Public);
-      FieldBuilder myGreetingField = myTypeBuilder.DefineField("Greeting", 
+      FieldBuilder myGreetingField = myTypeBuilder.DefineField("Greeting",
                                           typeof(String), FieldAttributes.Public);
       Type[] myConstructorArgs = { typeof(String) };
       // Define a constructor of the dynamic class.

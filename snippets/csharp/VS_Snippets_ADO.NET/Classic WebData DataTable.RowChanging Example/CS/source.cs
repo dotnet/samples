@@ -28,7 +28,7 @@ private static void DataTableRowChanging()
 	for(int id=1; id<=10; id++)
 	{
 		custTable.Rows.Add(
-			new object[] { id, string.Format("customer{0}", id), 
+			new object[] { id, string.Format("customer{0}", id),
             string.Format("address{0}", id) });
 	}
 	
@@ -43,7 +43,7 @@ private static void DataTableRowChanging()
 
 private static void Row_Changing(object sender, DataRowChangeEventArgs e)
 {
-	Console.WriteLine("Row_Changing Event: name={0}; action={1}", 
+	Console.WriteLine("Row_Changing Event: name={0}; action={1}",
 		e.Row["name"], e.Action);
 }
 // </Snippet1>

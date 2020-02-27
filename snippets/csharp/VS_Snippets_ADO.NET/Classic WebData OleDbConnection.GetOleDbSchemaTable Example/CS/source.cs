@@ -15,7 +15,7 @@ class Class1
     // <Snippet1>
     static DataTable GetSchemaTable(string connectionString)
     {
-        using (OleDbConnection connection = new 
+        using (OleDbConnection connection = new
                    OleDbConnection(connectionString))
         {
             connection.Open();

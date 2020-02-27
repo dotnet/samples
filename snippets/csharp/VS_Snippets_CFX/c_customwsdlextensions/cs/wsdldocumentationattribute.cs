@@ -31,7 +31,7 @@ namespace Microsoft.WCF.Documentation
         }
 
         /// <summary>
-        /// This constructor takes an XmlElement if the sample 
+        /// This constructor takes an XmlElement if the sample
         /// were to be modified to import the documentation element
         /// as XML. This sample does not use this constructor.
         /// </summary>
@@ -83,7 +83,7 @@ namespace Microsoft.WCF.Documentation
             {
                 // Inside this block it is the contract-level comment attribute.
                 // This.Text returns the string for the contract attribute.
-                // Set the doc element; if this isn't done first, there is no XmlElement in the 
+                // Set the doc element; if this isn't done first, there is no XmlElement in the
                 // DocumentElement property.
                 context.WsdlPortType.Documentation = string.Empty;
                 // Contract comments.
@@ -100,7 +100,7 @@ namespace Microsoft.WCF.Documentation
                         string opComment = ((WsdlDocumentationAttribute)opAttrs[0]).Text;
 
                         // This.Text returns the string for the operation-level attributes.
-                        // Set the doc element; if this isn't done first, there is no XmlElement in the 
+                        // Set the doc element; if this isn't done first, there is no XmlElement in the
                         // DocumentElement property.
                         operation.Documentation = String.Empty;
 

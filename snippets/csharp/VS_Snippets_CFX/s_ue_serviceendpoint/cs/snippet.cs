@@ -40,9 +40,9 @@ namespace ServiceEndpointSnippets
 
             ServiceEndpoint endpoint = new ServiceEndpoint(
                 ContractDescription.GetContract(
-                    typeof(ICalculator), 
-                    typeof(CalculatorService)), 
-                    new WSHttpBinding(), 
+                    typeof(ICalculator),
+                    typeof(CalculatorService)),
+                    new WSHttpBinding(),
                     new EndpointAddress(address));
             // </Snippet2>
         }

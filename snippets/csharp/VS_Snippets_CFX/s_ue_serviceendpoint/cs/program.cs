@@ -53,8 +53,8 @@ namespace ServiceEndpointSnippets
             ContractDescription cd = new ContractDescription("Calculator");
             ServiceEndpoint svcEndpoint = new ServiceEndpoint(cd);
             // </Snippet1>
-            
-            // <Snippet3>                       
+
+            // <Snippet3>
             ServiceEndpoint endpnt = serviceHost.AddServiceEndpoint(
                 typeof(ICalculator),
                 new WSHttpBinding(),

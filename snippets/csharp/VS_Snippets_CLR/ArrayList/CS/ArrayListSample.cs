@@ -6,7 +6,7 @@ using System.Collections;
 public class SamplesArrayList  {
 
 	public static void Main()  {
-		//<snippet1> 
+		//<snippet1>
 		// Creates and initializes a new ArrayList.
 		ArrayList myAL = new ArrayList();
 		myAL.Add("Eric");
@@ -25,20 +25,20 @@ public class SamplesArrayList  {
 		//</snippet1>
 		
 		PrintValues ("Unsorted", myAL );
-		//<snippet3> 
+		//<snippet3>
 		myAL.Sort();
 		PrintValues("Sorted", myAL );
 		//</snippet3>
-		//<snippet4> 
+		//<snippet4>
 		myAL.Sort(new ReverseStringComparer() );
 		PrintValues ("Reverse" , myAL );
 		//</snippet4>
 
-		//<snippet5> 
+		//<snippet5>
 		string [] names = (string[]) myAL.ToArray (typeof(string));
 		//</snippet5>
 	}
-	//<snippet2> 
+	//<snippet2>
 	public static void PrintValues(string title, IEnumerable	myList )  {
 		Console.Write ("{0,10}: ", title);
 		StringBuilder sb = new StringBuilder();
@@ -50,11 +50,11 @@ public class SamplesArrayList  {
 	}
 	//</snippet2>
 }
-//<snippet6> 
+//<snippet6>
 public class ReverseStringComparer : IComparer {
    public int Compare (object x, object y) {
 	   string s1 = x as string;
-	   string s2 = y as string;	  
+	   string s2 = y as string;	
 	   //negate the return value to get the reverse order
 	   return - String.Compare (s1,s2);
    }

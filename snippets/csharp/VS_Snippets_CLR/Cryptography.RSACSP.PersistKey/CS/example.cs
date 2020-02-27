@@ -10,8 +10,8 @@ class RSACSPSample
 
         string KeyContainerName = "MyKeyContainer";
 
-        //Create a new key and persist it in 
-        //the key container.  
+        //Create a new key and persist it in
+        //the key container.
         RSAPersistKeyInCSP(KeyContainerName);
 
         //Delete the key from the key container.
@@ -31,9 +31,9 @@ class RSACSPSample
             cspParams.KeyContainerName = ContainerName;
 
             //Create a new instance of RSACryptoServiceProvider to generate
-            //a new key pair.  Pass the CspParameters class to persist the 
-            //key in the container.  The PersistKeyInCsp property is true by 
-            //default, allowing the key to be persisted. 
+            //a new key pair.  Pass the CspParameters class to persist the
+            //key in the container.  The PersistKeyInCsp property is true by
+            //default, allowing the key to be persisted.
             RSACryptoServiceProvider RSAalg = new RSACryptoServiceProvider(cspParams);
 
             //Indicate that the key was persisted.
@@ -57,8 +57,8 @@ class RSACSPSample
             // Specify the container name using the passed variable.
             cspParams.KeyContainerName = ContainerName;
 
-            //Create a new instance of RSACryptoServiceProvider. 
-            //Pass the CspParameters class to use the 
+            //Create a new instance of RSACryptoServiceProvider.
+            //Pass the CspParameters class to use the
             //key in the container.
             RSACryptoServiceProvider RSAalg = new RSACryptoServiceProvider(cspParams);
 

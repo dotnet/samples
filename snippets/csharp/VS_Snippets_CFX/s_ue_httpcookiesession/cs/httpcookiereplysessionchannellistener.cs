@@ -11,7 +11,7 @@ namespace Microsoft.ServiceModel.Samples
     using System.Net;
     using System.Threading;
 
-    class HttpCookieReplySessionChannelListener : 
+    class HttpCookieReplySessionChannelListener :
         ChannelListenerBase<IReplySessionChannel>
     {
         // Tracks mapping session ID->Channel.
@@ -76,7 +76,7 @@ namespace Microsoft.ServiceModel.Samples
 
         protected override void OnOpen(TimeSpan timeout)
         {
-            // Because the inner listener is a Datagram (singleton) listener, we 
+            // Because the inner listener is a Datagram (singleton) listener, we
             // accept the singleton channel and then dispose of the listener because
             // the lifetimes are decoupled.
             TimeoutHelper timeoutHelper = new TimeoutHelper(timeout);
@@ -294,7 +294,7 @@ namespace Microsoft.ServiceModel.Samples
             bool continueReceiving = false;
             bool isRequestAvailable = false;
 
-            while (result != null) 
+            while (result != null)
             {
                 Exception exceptionToEnqueue = null;
                 try
@@ -356,7 +356,7 @@ namespace Microsoft.ServiceModel.Samples
         // Return true if the receive loop should continue.
         bool ProcessRequest(RequestContext requestContext)
         {
-            if (requestContext == null) 
+            if (requestContext == null)
             {
                 // This is EOF, signal EOF to all the channels.
                 HttpCookieReplySessionChannel[] channels;
@@ -408,9 +408,9 @@ namespace Microsoft.ServiceModel.Samples
             else if (exchangeTerminateMessage &&
                 requestMessage.Headers.Action == HttpCookieSessionBindingElement.TerminateAction)
             {
-                // If both ends are WCF ends, this channel is capable 
-                // of exchanging a message, when the client closes the request 
-                // channel. Consequently the server is able to clean up the 
+                // If both ends are WCF ends, this channel is capable
+                // of exchanging a message, when the client closes the request
+                // channel. Consequently the server is able to clean up the
                 // session channel in real-time fashion.
                 // Send the terminate acknowledgment to the client.
                 Message terminateResponse = Message.CreateMessage(requestMessage.Version,
@@ -512,7 +512,7 @@ namespace Microsoft.ServiceModel.Samples
                 this.timeoutHelper = new TimeoutHelper(timeout);
                 IAsyncResult result = parent.innerChannelListener.BeginOpen(timeoutHelper.RemainingTime(),
                     new AsyncCallback(OnInnerChannelListenerOpen), null);
-                
+
                 if (!result.CompletedSynchronously)
                 {
                     return;
@@ -558,7 +558,7 @@ namespace Microsoft.ServiceModel.Samples
             {
                 parent.innerChannelListener.EndOpen(result);
 
-                // We can call the sync overload because it is a datagram listener and we can 
+                // We can call the sync overload because it is a datagram listener and we can
                 // get our singleton channel immediately.
                 parent.innerChannel = parent.innerChannelListener.AcceptChannel(timeoutHelper.RemainingTime());
                 IAsyncResult openChannelResult =

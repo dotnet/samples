@@ -8,7 +8,7 @@ namespace CalcHostSideAdapters {
 [HostAdapter]
 public class CalculatorContractToViewHostAdapter : Calculator {
 
-// <Snippet2>        
+// <Snippet2>
     private CalculatorContracts.ICalc2Contract _contract;
 
     private System.AddIn.Pipeline.ContractHandle _handle;
@@ -21,9 +21,9 @@ public class CalculatorContractToViewHostAdapter : Calculator {
 
     public override string Operations
     {
-        get 
-        { 
-            return _contract.GetAvailableOperations(); 
+        get
+        {
+            return _contract.GetAvailableOperations();
         }
     }
 

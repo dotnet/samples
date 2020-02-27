@@ -39,9 +39,9 @@ namespace DataRowViewRowVersionCS
             row["Column"] = "World";
             table.Rows.Add(row);
 
-            // Set the RowStateFilter to display only added 
+            // Set the RowStateFilter to display only added
             // and modified rows.
-            view.RowStateFilter = DataViewRowState.Added | 
+            view.RowStateFilter = DataViewRowState.Added |
                 DataViewRowState.ModifiedCurrent;
 
             // Print those rows. Output includes "Hello" and "World".
@@ -80,7 +80,7 @@ namespace DataRowViewRowVersionCS
             for (int i = 0; i < view.Count; i++)
             {
                 Console.WriteLine(view[i]["Column"]);
-                Console.WriteLine("DataViewRow.RowVersion: {0}", 
+                Console.WriteLine("DataViewRow.RowVersion: {0}",
                     view[i].RowVersion);
             }
         }

@@ -9,7 +9,7 @@ public class Form1: Form
 
     // <Snippet1>
 
-    public void RemoveDataColumnMapping() 
+    public void RemoveDataColumnMapping()
     {
         // ...
         // create mappings

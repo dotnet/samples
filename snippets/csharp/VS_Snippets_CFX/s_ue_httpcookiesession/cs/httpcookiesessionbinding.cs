@@ -27,7 +27,7 @@ namespace Microsoft.ServiceModel.Samples
             encodingElement.MessageVersion = MessageVersion.Soap11WSAddressing10;
         }
 
-        public HttpCookieSessionBinding(string configurationName) 
+        public HttpCookieSessionBinding(string configurationName)
             : this()
         {
             ApplyConfiguration(configurationName);
@@ -55,11 +55,11 @@ namespace Microsoft.ServiceModel.Samples
         {
 
             BindingElementCollection bindingElements = new BindingElementCollection();
-            
+
             bindingElements.Add(sessionElement);
             bindingElements.Add(encodingElement);
             bindingElements.Add(transportElement);
-            
+
             return bindingElements.Clone();
         }
 

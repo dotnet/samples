@@ -11,7 +11,7 @@ namespace Plugin
         {
             PluginClass plugin = new PluginClass();
 
-            // We register handler for the Unloading event of the context that we are running in 
+            // We register handler for the Unloading event of the context that we are running in
             // so that we can perform cleanup of stuff that would otherwise prevent unloading
             // (Like freeing GCHandles for objects of types loaded into the unloadable AssemblyLoadContext,
             // terminating threads running code in assemblies loaded into the unloadable AssemblyLoadContext,

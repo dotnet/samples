@@ -18,7 +18,7 @@ namespace Microsoft.Samples.WF.ManagementEndpoint
             // Same workflow as Dataflow sample
             Activity workflow = LoadProgram("Dataflow.xaml");
             WorkflowServiceHost host = new WorkflowServiceHost(workflow,
-                new Uri("http://localhost/Dataflow.xaml"));            
+                new Uri("http://localhost/Dataflow.xaml"));
 
             WorkflowControlEndpoint controlEndpoint = new WorkflowControlEndpoint(
                 new BasicHttpBinding(),
@@ -45,7 +45,7 @@ namespace Microsoft.Samples.WF.ManagementEndpoint
             Console.WriteLine("Hit any key to exit Host...");
             Console.ReadLine();
         }
-        
+
         public static Activity LoadProgram(string xamlPath)
         {
             FileStream stream = null;
@@ -63,5 +63,5 @@ namespace Microsoft.Samples.WF.ManagementEndpoint
 
             return activity;
         }
-    }    
+    }
 }

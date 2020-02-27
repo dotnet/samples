@@ -15,7 +15,7 @@ public class Form1: Form
         // Create a DataSet with one table and two columns.
         DataSet originalDataSet = new DataSet("dataSet");
         DataTable table = new DataTable("table");
-        DataColumn idColumn = new DataColumn("id", 
+        DataColumn idColumn = new DataColumn("id",
             Type.GetType("System.Int32"));
         idColumn.AutoIncrement= true;
 
@@ -34,7 +34,7 @@ public class Form1: Form
         }
         originalDataSet.AcceptChanges();
 
-        // Print out values of each table in the DataSet  
+        // Print out values of each table in the DataSet
         // using the function defined below.
         PrintValues(originalDataSet, "Original DataSet");
 
@@ -48,23 +48,23 @@ public class Form1: Form
 
         // Close the FileStream.
         streamWrite.Close();
-       
+
         // Dispose of the original DataSet.
         originalDataSet.Dispose();
         // Create a new DataSet.
         DataSet newDataSet = new DataSet("New DataSet");
-       
-        // Read the XML document back in. 
+
+        // Read the XML document back in.
         // Create new FileStream to read schema with.
         System.IO.FileStream streamRead = new System.IO.FileStream
             (xmlFilename,System.IO.FileMode.Open);
         newDataSet.ReadXml(streamRead);
 
-        // Print out values of each table in the DataSet 
+        // Print out values of each table in the DataSet
         // using the function defined below.
         PrintValues(newDataSet,"New DataSet");
     }
- 
+
     private void PrintValues(DataSet dataSet, string label)
     {
         Console.WriteLine("\n" + label);

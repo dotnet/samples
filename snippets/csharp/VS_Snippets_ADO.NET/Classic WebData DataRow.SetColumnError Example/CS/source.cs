@@ -15,7 +15,7 @@ public class Form1: Form
         // Set the error for the specified column of the row.
         row.SetColumnError(columnIndex, errorString);
     }
- 
+
     private void PrintColError(DataRow row, int columnIndex)
     {
         // Print the error of a specified column.

@@ -20,8 +20,8 @@ public class Form1: Form
             (filename,System.IO.FileMode.Create);
 
         // Create a new XmlTextWriter object with the FileStream.
-        System.Xml.XmlTextWriter writer = 
-            new System.Xml.XmlTextWriter(stream, 
+        System.Xml.XmlTextWriter writer =
+            new System.Xml.XmlTextWriter(stream,
             System.Text.Encoding.Unicode);
 
         // Write the schema into the DataSet and close the reader.

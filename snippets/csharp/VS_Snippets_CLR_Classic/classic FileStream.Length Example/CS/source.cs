@@ -12,5 +12,5 @@ public class Form1: Form
     Console.WriteLine("End of file has been reached.");
  }
 // </Snippet1>
- } 
+ }
 }

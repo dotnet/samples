@@ -13,19 +13,19 @@ namespace Ordering
         //  blueberry
         public static void QuerySyntaxExample()
         {
-            string[] words = { "cherry", "apple", "blueberry" }; 
-        
-            var sortedWords = 
-                from w in words 
-                orderby w.Length 
-                select w; 
-        
-            Console.WriteLine("The sorted list of words (by length):"); 
-            foreach (var w in sortedWords) 
-            { 
-                Console.WriteLine(w); 
+            string[] words = { "cherry", "apple", "blueberry" };
+
+            var sortedWords =
+                from w in words
+                orderby w.Length
+                select w;
+
+            Console.WriteLine("The sorted list of words (by length):");
+            foreach (var w in sortedWords)
+            {
+                Console.WriteLine(w);
             }
-        } 
+        }
         //This sample uses orderby to sort a list of words by length.
         //Outputs to the console:
         // The sorted list of words (by length):
@@ -34,16 +34,16 @@ namespace Ordering
         //  blueberry
         public static void MethodSyntaxExample()
         {
-            string[] words = { "cherry", "apple", "blueberry" }; 
-  
-            var sortedWords = words.OrderBy(w => w.Length); 
-        
-            Console.WriteLine("The sorted list of words:"); 
-            
-            foreach (var w in sortedWords) 
-            { 
-                Console.WriteLine(w); 
-            } 
+            string[] words = { "cherry", "apple", "blueberry" };
+
+            var sortedWords = words.OrderBy(w => w.Length);
+
+            Console.WriteLine("The sorted list of words:");
+
+            foreach (var w in sortedWords)
+            {
+                Console.WriteLine(w);
+            }
         }
     }
 }

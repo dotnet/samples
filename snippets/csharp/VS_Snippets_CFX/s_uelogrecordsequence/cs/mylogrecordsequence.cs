@@ -31,14 +31,14 @@ namespace MyLogRecordSequence
 
             // At least one container/extent must be added for Log Record Sequence.
             sequence.LogStore.Extents.Add(this.logContainer, this.containerSize);
-     
+
             MySequence = sequence;
 	    // </Snippet1>
         }
 
         public void AddExtents()
         {
-            // Add two additional extents. The extents are 
+            // Add two additional extents. The extents are
             // of the same size as the first extent.
             sequence.LogStore.Extents.Add("MyExtent1");
             sequence.LogStore.Extents.Add("MyExtent2");
@@ -58,7 +58,7 @@ namespace MyLogRecordSequence
                                   extent.Size,
                                   extent.State);
             }
-            Console.WriteLine("    Free Extents: {0} Free", store.Extents.FreeCount);   
+            Console.WriteLine("    Free Extents: {0} Free", store.Extents.FreeCount);
         }
 
         public void SetLogPolicy()
@@ -75,59 +75,59 @@ namespace MyLogRecordSequence
             // when the existing extents are full. New extents are added until
             // we reach the MaximumExtentCount extents.
             // AutoGrow policy is supported only in Windows Vista and not available in R2.
-            
+
             //policy.AutoGrow = true;
 
             // Set the Growth Rate in terms of extents. This policy specifies
-            // "how much" the log should grow. 
+            // "how much" the log should grow.
             policy.GrowthRate = new PolicyUnit(2, PolicyUnitType.Extents);
 
             // Set the AutoShrink policy. This enables the log to automatically
-            // shrink if the available free space exceeds the shrink percentage. 
+            // shrink if the available free space exceeds the shrink percentage.
             // AutoGrow/shrink policy is supported only in Windows Vista and not available in R2.
-            
+
             //policy.AutoShrinkPercentage = new PolicyUnit(30, PolicyUnitType.Percentage);
 
             // Set the PinnedTailThreshold policy.
             // A tail pinned event is triggered when there is no
             // log space available and log space may be freed by advancing the base.
-            // The user must handle the tail pinned event by advancing the base of the log. 
+            // The user must handle the tail pinned event by advancing the base of the log.
             // If the user is not able to move the base of the log, the user should report with exception in
             // the tail pinned handler.
-            // PinnedTailThreashold policy dictates the amount of space that the TailPinned event requests 
-            // for advancing the base of the log. The amount of space can be in percentage or in terms of bytes 
+            // PinnedTailThreashold policy dictates the amount of space that the TailPinned event requests
+            // for advancing the base of the log. The amount of space can be in percentage or in terms of bytes
             // which is rounded off to the nearest containers in CLFS. The default is 35 percent.
 
             policy.PinnedTailThreshold = new PolicyUnit(10, PolicyUnitType.Percentage);
 
             // Set the maximum extents the log can have.
             policy.MaximumExtentCount = 6;
-            
+
             // Set the minimum extents the log can have.
             policy.MinimumExtentCount = 2;
-            
-            // Set the prefix for new containers that are added. 
+
+            // Set the prefix for new containers that are added.
             // when AutoGrow is enabled.
             //policy.NewExtentPrefix = "MyLogPrefix";
-            
+
             // Set the suffix number for new containers that are added.
-            // when AutoGrow is enabled. 
+            // when AutoGrow is enabled.
             policy.NextExtentSuffix = 3;
 
             // Commit the log policy.
             policy.Commit();
 
-            // Refresh updates the IO.Log policy properties with current log policy 
-            // set in the log. 
+            // Refresh updates the IO.Log policy properties with current log policy
+            // set in the log.
             policy.Refresh();
 
             // LOG POLICY END
-            // 
+            //
             // </Snippet2>
 
             //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
             // Setting up IO.Log provided capabilities...
-            // 
+            //
 
 	    // <Snippet3>
             // SET RETRY APPEND
@@ -135,9 +135,9 @@ namespace MyLogRecordSequence
             // IO.Log provides a mechanism similar to AutoGrow.
             // If the existing log is full and an append fails, setting RetryAppend
             // invokes the CLFS policy engine to add new extents and re-tries
-            // record appends. If MaximumExtent count has been reached, 
-            // a SequenceFullException is thrown. 
-            // 
+            // record appends. If MaximumExtent count has been reached,
+            // a SequenceFullException is thrown.
+            //
 
             sequence.RetryAppend = true;
 
@@ -149,13 +149,13 @@ namespace MyLogRecordSequence
 
             // Register for TailPinned Event by passing in an event handler.
             // An event is raised when the log full condition is reached.
-            // The user should either advance the base sequence number to the 
+            // The user should either advance the base sequence number to the
             // nearest valid sequence number recommended in the tail pinned event or
-            // report a failure that it is not able to advance the base sequence 
-            // number. 
+            // report a failure that it is not able to advance the base sequence
+            // number.
             //
 
-            sequence.TailPinned += new EventHandler<TailPinnedEventArgs>(HandleTailPinned);  
+            sequence.TailPinned += new EventHandler<TailPinnedEventArgs>(HandleTailPinned);
 
 	    // </Snippet4>
             Console.WriteLine("Done...");
@@ -179,7 +179,7 @@ namespace MyLogRecordSequence
 	}
 
         // <Snippet5>
-        // Append records. Appending three records.  
+        // Append records. Appending three records.
         public void AppendRecords()
         {
             Console.WriteLine("Appending Log Records...");
@@ -188,12 +188,12 @@ namespace MyLogRecordSequence
             previous = sequence.Append(CreateData("Hello World!"), SequenceNumber.Invalid, SequenceNumber.Invalid, RecordAppendOptions.ForceFlush);
             previous = sequence.Append(CreateData("This is my first Logging App"), SequenceNumber.Invalid, SequenceNumber.Invalid, RecordAppendOptions.ForceFlush);
             previous = sequence.Append(CreateData("Using LogRecordSequence..."), SequenceNumber.Invalid, SequenceNumber.Invalid, RecordAppendOptions.ForceFlush);
-	    
+	
             Console.WriteLine("Done...");
         }
         // </Snippet5>
 
-        // Read the records added to the log. 
+        // Read the records added to the log.
         public void ReadRecords()
         {
             Encoding enc = Encoding.Unicode;
@@ -238,7 +238,7 @@ namespace MyLogRecordSequence
             }
         }
 
-        // Dispose the record sequence and delete the log file. 
+        // Dispose the record sequence and delete the log file.
         public void Cleanup()
         {
             // Dispose the sequence
@@ -259,7 +259,7 @@ namespace MyLogRecordSequence
             }
         }
 
-        // Converts the given data to an Array of ArraySegment<byte> 
+        // Converts the given data to an Array of ArraySegment<byte>
         public static IList<ArraySegment<byte>> CreateData(string str)
         {
             Encoding enc = Encoding.Unicode;
@@ -290,10 +290,10 @@ namespace MyLogRecordSequence
             SequenceNumber targetSequenceNumber = SequenceNumber.Invalid;
 
             Console.WriteLine("Getting actual target sequence number...");
-            
-            // 
+
+            //
             // Implement the logic for returning a valid sequence number closer to
-            // recommended target sequence number. 
+            // recommended target sequence number.
             //
 
             return targetSequenceNumber;
@@ -304,24 +304,24 @@ namespace MyLogRecordSequence
             Console.WriteLine("TailPinned has fired");
 
             // Based on the implementation of a logging application, the log base can be moved
-            // to free up more log space and if it is not possible to move the 
+            // to free up more log space and if it is not possible to move the
             // base, the application should report by throwing an exception.
 
             if(MyLog.AdvanceBase)
             {
                 try
                 {
-                    // TailPnnedEventArgs has the recommended sequence number and its generated 
-                    // based on PinnedTailThreshold policy. 
+                    // TailPnnedEventArgs has the recommended sequence number and its generated
+                    // based on PinnedTailThreshold policy.
                     // This does not map to an actual sequence number in the record sequence
                     // but an approximation and potentially frees up the threshold % log space
-                    // when the log base is advanced to a valid sequence number closer to the 
-                    // recommended sequence number. 
+                    // when the log base is advanced to a valid sequence number closer to the
+                    // recommended sequence number.
                     // The user should use this sequence number to locate a closest valid sequence
                     // number to advance the base of the log.
 
-                    SequenceNumber recommendedTargetSeqNum = tailPinnedEventArgs.TargetSequenceNumber; 
-                    
+                    SequenceNumber recommendedTargetSeqNum = tailPinnedEventArgs.TargetSequenceNumber;
+
                     // Get the actual Target sequence number.
                     SequenceNumber actualTargetSeqNum = MyLog.GetAdvanceBaseSeqNumber(recommendedTargetSeqNum);
 
@@ -356,12 +356,12 @@ namespace MyLogRecordSequence
             // Enumerate the current log extents.
             log.EnumerateExtents();
 
-            // Set log policies and register for TailPinned event notifications. 
+            // Set log policies and register for TailPinned event notifications.
             log.SetLogPolicy();
 
             log.ShowLogPolicy();
-            
-            // Append a few records and read the appended records. 
+
+            // Append a few records and read the appended records.
             log.AppendRecords();
             log.ReadRecords();
 

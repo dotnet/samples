@@ -3,16 +3,16 @@
  using System.Collections;
  public class SamplesHashtable
  {
- 
+
     public static void Main()
     {
- 
+
        // Creates and initializes a new Hashtable.
        var myHT = new Hashtable();
        myHT.Add("First", "Hello");
        myHT.Add("Second", "World");
        myHT.Add("Third", "!");
- 
+
        // Displays the properties and values of the Hashtable.
        Console.WriteLine("myHT");
        Console.WriteLine($"  Count:    {myHT.Count}");
@@ -30,9 +30,9 @@
  }
 
 
- /* 
+ /*
  This code produces the following output.
- 
+
  myHT
    Count:    3
    Keys and Values:
@@ -41,5 +41,5 @@
          Third:  !
          First:  Hello
 
- */ 
+ */
 // </Snippet1>

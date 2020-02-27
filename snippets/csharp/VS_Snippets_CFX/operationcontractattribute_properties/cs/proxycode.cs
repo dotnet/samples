@@ -14,7 +14,7 @@
 [System.ServiceModel.ServiceContractAttribute(Namespace="http://Microsoft.WCF.Documentation", ConfigurationName="ISampleService")]
 public interface ISampleService
 {
-    
+
     [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.WCF.Documentation/OperationContractMethod", ReplyAction="http://Microsoft.WCF.Documentation/ResponseToOCAMethod")]
     string OCAMethod(string msg);
 }
@@ -28,31 +28,31 @@ public interface ISampleServiceChannel : ISampleService, System.ServiceModel.ICl
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
 public partial class SampleServiceClient : System.ServiceModel.ClientBase<ISampleService>, ISampleService
 {
-    
+
     public SampleServiceClient()
     {
     }
-    
-    public SampleServiceClient(string endpointConfigurationName) : 
+
+    public SampleServiceClient(string endpointConfigurationName) :
             base(endpointConfigurationName)
     {
     }
-    
-    public SampleServiceClient(string endpointConfigurationName, string remoteAddress) : 
+
+    public SampleServiceClient(string endpointConfigurationName, string remoteAddress) :
             base(endpointConfigurationName, remoteAddress)
     {
     }
-    
-    public SampleServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+
+    public SampleServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) :
             base(endpointConfigurationName, remoteAddress)
     {
     }
-    
-    public SampleServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+
+    public SampleServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :
             base(binding, remoteAddress)
     {
     }
-    
+
     public string OCAMethod(string msg)
     {
         return base.Channel.OCAMethod(msg);

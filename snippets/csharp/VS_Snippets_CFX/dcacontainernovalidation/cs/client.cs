@@ -54,7 +54,7 @@ public class Client
                 Console.WriteLine("Press ENTER to exit:");
                 Console.ReadLine();
 
-                // Done with service. 
+                // Done with service.
                 wcfClient.Close();
                 Console.WriteLine("Done!");
             }

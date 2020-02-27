@@ -67,7 +67,7 @@ public partial class EmployeeList : System.Web.UI.UserControl
     private void EmployeesGridView_SelectedIndexChanged(object sender, EventArgs e)
     {
         this.SelectedIndexChanged(this, e);
-        
+
         ViewState["SelectedEmployeeID"] = this.EmployeeID;
     }
 

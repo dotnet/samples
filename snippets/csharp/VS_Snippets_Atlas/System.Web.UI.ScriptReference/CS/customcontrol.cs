@@ -59,7 +59,7 @@ namespace SampleControl
                    CultureInfo.InvariantCulture,
                    @"
 Sys.Application.add_load(function(sender, args) {{
-var {0}_borderAnimation = new BorderAnimation('{1}');    
+var {0}_borderAnimation = new BorderAnimation('{1}');
 var panelElement = document.getElementById('{0}');
      if (args.get_isPartialLoad()) {{
         {0}_borderAnimation.animate(panelElement);

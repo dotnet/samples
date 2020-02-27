@@ -33,7 +33,7 @@ namespace Microsoft.ServiceModel.Samples
           {
             Console.WriteLine(timeout.Message);
             Console.Read();
-            client.Abort();          
+            client.Abort();
           }
           catch(CommunicationException commException)
           {

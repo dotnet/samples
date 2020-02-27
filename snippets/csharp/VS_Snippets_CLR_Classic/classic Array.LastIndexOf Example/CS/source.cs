@@ -42,7 +42,7 @@ public class SamplesArray  {
             Console.WriteLine( "\t[{0}]:\t{1}", i, anArray.GetValue( i ) );
       }
 
-      /* 
+      /*
       This code produces the following output.
 
       The Array contains the following values:

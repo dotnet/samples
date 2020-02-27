@@ -154,7 +154,7 @@ namespace Microsoft.WCF.Documentation
 
 			if (completedSynchronously)
 			{
-				// If we completedSynchronously, then there's no chance that the 
+				// If we completedSynchronously, then there's no chance that the
 				// manualResetEvent was created so we don't need to worry about a race
 				this.isCompleted = true;
 				if (this.manualResetEvent != null)

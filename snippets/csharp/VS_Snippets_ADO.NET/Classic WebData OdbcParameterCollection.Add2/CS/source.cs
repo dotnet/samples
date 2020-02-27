@@ -12,7 +12,7 @@ public class Form1: Form
 
     public OdbcConnection connection;
     // <Snippet1>
-    public void CreateParamCollection() 
+    public void CreateParamCollection()
     {
         OdbcCommand command = new OdbcCommand(
             "SELECT * FROM Customers WHERE CustomerID = ?", connection);

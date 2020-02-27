@@ -2,11 +2,11 @@
 using System;
 using System.Diagnostics;
 using System.Threading;
-              
+
 class MySample{
 
     public static void Main(){
-    
+
         // Create the source, if it does not already exist.
         if(!EventLog.SourceExists("MySource"))
         {
@@ -21,7 +21,7 @@ class MySample{
             return;
         }
 
-        // Write an informational entry to the event log.    
+        // Write an informational entry to the event log.
         EventLog.WriteEntry("MySource", "Writing to event log.");
     }
 }

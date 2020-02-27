@@ -14,7 +14,7 @@ namespace SyndicationItemSnippets
         public static void Snippet0()
         {
             // <Snippet0>
-            // <Snippet2>          
+            // <Snippet2>
             SyndicationItem item = new SyndicationItem("My Item", "This is some content", new Uri("http://SomeServer/MyItem"), "Item ID", DateTime.Now);
             item.Authors.Add(new SyndicationPerson("jesper@contoso.com", "Jesper Aaberg", "http://contoso/jesper"));
             item.Categories.Add(new SyndicationCategory("Category One"));

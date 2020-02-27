@@ -16,22 +16,22 @@ class program
         SerializeWithSurrogate("surrogateEmployee.xml");
         DeserializeSurrogate("surrogateEmployee.xml");
         // Create an XmlSchemaSet to hold schemas from the
-        // schema exporter. 
+        // schema exporter.
         //XmlSchemaSet schemas = new XmlSchemaSet();
         //ExportSchemas("surrogateEmployee.xml", ref schemas);
         //// Pass the schemas to the importer.
         //ImportSchemas(schemas);
     }
 
-    static  DataContractSerializer CreateSurrogateSerializer()  
+    static  DataContractSerializer CreateSurrogateSerializer()
     {
-        // Create an instance of the DataContractSerializer. The 
-        // constructor demands a knownTypes and surrogate. 
-        // Create a Generic List for the knownTypes. 
+        // Create an instance of the DataContractSerializer. The
+        // constructor demands a knownTypes and surrogate.
+        // Create a Generic List for the knownTypes.
         List<Type> knownTypes = new List<Type>();
         LegacyPersonTypeSurrogate surrogate = new LegacyPersonTypeSurrogate ();
-        DataContractSerializer surrogateSerializer = 
-            new DataContractSerializer(typeof(Employee), 
+        DataContractSerializer surrogateSerializer =
+            new DataContractSerializer(typeof(Employee),
            knownTypes, Int16.MaxValue, false, true, surrogate);
         return surrogateSerializer;
     }
@@ -50,7 +50,7 @@ class program
         emp.person.last_name = "Ray";
         emp.person.age = 44;
 
-        // Create a new writer. Then serialize with the 
+        // Create a new writer. Then serialize with the
         // surrogate serializer.
         FileStream  fs =new FileStream(filename, FileMode.Create);
         DataContractSerializer surrogateSerializer = CreateSurrogateSerializer();
@@ -69,7 +69,7 @@ class program
     {
         // Create a new reader object.
         FileStream fs2 = new FileStream(filename, FileMode.Open);
-        XmlDictionaryReader reader = 
+        XmlDictionaryReader reader =
             XmlDictionaryReader.CreateTextReader(fs2, new XmlDictionaryReaderQuotas());
 
         Console.WriteLine("Trying to deserialize with surrogate.");
@@ -115,19 +115,19 @@ class program
             {
                 sch.Write(fs3);
             }
-        } 
+        }
     }
 
     static void ImportSchemas(XmlSchemaSet schemas ){
         Console.WriteLine("Now doing schema import.");
-        // The following code demonstrates schema import with 
-        // a surrogate. The surrogate is used to indicate that 
-        // the Person class already exists and that there is no 
+        // The following code demonstrates schema import with
+        // a surrogate. The surrogate is used to indicate that
+        // the Person class already exists and that there is no
         // need to generate a new class when importing the
-        // PersonSurrogated data contract. If the surrogate 
-        // was not used, schema import would generate a 
-        // PersonSurrogated class, and the person field 
-        // of Employee would be imported as 
+        // PersonSurrogated data contract. If the surrogate
+        // was not used, schema import would generate a
+        // PersonSurrogated class, and the person field
+        // of Employee would be imported as
         // PersonSurrogated and not Person.
         XsdDataContractImporter xsdimp = new XsdDataContractImporter();
         xsdimp.Options = new ImportOptions();
@@ -159,10 +159,10 @@ class program
 
 // This is the Employee (outer) type used in the sample.
 
-[DataContract()] 
+[DataContract()]
 public class Employee
 {
-    [DataMember()] 
+    [DataMember()]
     public DateTime date_hired ;
 
     [DataMember()]
@@ -186,7 +186,7 @@ public class Person
     [XmlAttribute("Age")]
     public Int16 age ;
 
-    public Person()  {}   
+    public Person()  {}
 }
 
 // This is the surrogated version of the Person type
@@ -194,7 +194,7 @@ public class Person
 
 [DataContract] class PersonSurrogated
 {
-    // xmlData will store the XML returned for a Person instance 
+    // xmlData will store the XML returned for a Person instance
     // by the XmlSerializer.
     [DataMember()]
     public string xmlData;
@@ -204,14 +204,14 @@ public class Person
 public class LegacyPersonTypeSurrogate:IDataContractSurrogate
 {
     //<snippet1>
-    public Type GetDataContractType(Type type) 
+    public Type GetDataContractType(Type type)
 {
         Console.WriteLine("GetDataContractType invoked");
         Console.WriteLine("\t type name: {0}", type.Name);
         // "Person" will be serialized as "PersonSurrogated"
         // This method is called during serialization,
         // deserialization, and schema export.
-        if (typeof(Person).IsAssignableFrom(type)) 
+        if (typeof(Person).IsAssignableFrom(type))
 {
 Console.WriteLine("\t returning PersonSurrogated");
             return typeof(PersonSurrogated);
@@ -222,7 +222,7 @@ Console.WriteLine("\t returning PersonSurrogated");
 
     //<snippet2>
 public object GetObjectToSerialize(object obj, Type targetType)
-{ 
+{
         Console.WriteLine("GetObjectToSerialize Invoked");
         Console.WriteLine("\t type name: {0}", obj.ToString());
         Console.WriteLine("\t target type: {0}", targetType.Name);
@@ -244,7 +244,7 @@ public object GetObjectToSerialize(object obj, Type targetType)
     //</snippet2>
 
     //<snippet3>
-    public object GetDeserializedObject(Object obj , Type targetType) 
+    public object GetDeserializedObject(Object obj , Type targetType)
     {
         Console.WriteLine("GetDeserializedObject invoked");
         // This method is called on deserialization.
@@ -266,28 +266,28 @@ public object GetObjectToSerialize(object obj, Type targetType)
     {
         Console.WriteLine("GetReferencedTypeOnImport invoked");
         // This method is called on schema import.
-        // If a PersonSurrogated data contract is 
-        // in the specified namespace, do not create a new type for it 
+        // If a PersonSurrogated data contract is
+        // in the specified namespace, do not create a new type for it
         // because there is already an existing type, "Person".
         Console.WriteLine( "\t Type Name: {0}", typeName);
-        
+
         if (typeName.Equals("PersonSurrogated") )
         {
             Console.WriteLine("Returning Person");
             return typeof(Person);
-        }        
+        }
         return null;
     }
     //</snippet4>
 
     public System.CodeDom.CodeTypeDeclaration ProcessImportedType(
-        System.CodeDom.CodeTypeDeclaration typeDeclaration, 
+        System.CodeDom.CodeTypeDeclaration typeDeclaration,
         System.CodeDom.CodeCompileUnit compileUnit)
     {
         // Console.WriteLine("ProcessImportedType invoked")
         // Not used in this sample.
-        // You could use this method to construct an entirely new CLR 
-        // type when a certain type is imported, or modify a 
+        // You could use this method to construct an entirely new CLR
+        // type when a certain type is imported, or modify a
         // generated type in some way.
         return typeDeclaration;
     }

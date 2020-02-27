@@ -13,7 +13,7 @@ public class Form1: Form
     // <Snippet1>
     private void DemonstrateRowNotInTableException()
     {
-        // Create a DataTable with one column and ten rows.      
+        // Create a DataTable with one column and ten rows.
         DataTable table = new DataTable("NewTable");
         DataColumn column = new DataColumn("NewColumn");
         table.Columns.Add(column);

@@ -31,14 +31,14 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
         #endregion
 
         #region Constructor
-        internal ChunkingDuplexSessionChannel(ChannelManagerBase channelManager, 
+        internal ChunkingDuplexSessionChannel(ChannelManagerBase channelManager,
             IDuplexSessionChannel innerChannel, ICollection<string> operationParams,
             int maxBufferedChunks)
             : base(channelManager)
         {
             this.Initialize(channelManager, innerChannel, operationParams, maxBufferedChunks);
         }
-        void Initialize(ChannelManagerBase channelManager, 
+        void Initialize(ChannelManagerBase channelManager,
             IDuplexSessionChannel innerChannel, ICollection<string> operationParams,
             int maxBufferedChunks)
         {
@@ -66,7 +66,7 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
             {
                 throw new TimeoutException("Close timeout exceeded");
             }
-            
+
             //we don't call base.OnClose because it does nothing
         }
         protected override void OnAbort()
@@ -84,7 +84,7 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
         }
         protected override IAsyncResult OnBeginClose(TimeSpan timeout, AsyncCallback callback, object state)
         {
-            // TO DO should stop the receive loop asynchronously            
+            // TO DO should stop the receive loop asynchronously
             return innerChannel.BeginClose(timeout, callback, state);
         }
         protected override void OnEndClose(IAsyncResult result)
@@ -117,7 +117,7 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
                 }
 
                 //add this chunk to current message
-                //this can throw a TimeoutException if 
+                //this can throw a TimeoutException if
                 ProcessReceivedChunk(message);
 
                 if (IsLastChunk(message))
@@ -131,7 +131,7 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
                 }
             //stopReceive is Set if stopClose is called or if we received the endChunk message
             //also stop if we received a null message indicating the session was closed
-            } while (!stopReceive &&  message != null); 
+            } while (!stopReceive &&  message != null);
             receiveStopped.Set();
         }
         #endregion

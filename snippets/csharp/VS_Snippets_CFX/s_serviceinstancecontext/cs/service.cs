@@ -65,7 +65,7 @@ namespace Microsoft.ServiceModel.Samples
             info += "    " + "State: " + instanceContext.State.ToString() + "\n";
             info += "    " + "ManualFlowControlLimit: " + instanceContext.ManualFlowControlLimit.ToString() + "\n";
             info += "    " + "HashCode: " + instanceContext.GetHashCode().ToString() + "\n";
-                     
+
             return info;
             // </Snippet1>
         }

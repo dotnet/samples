@@ -20,7 +20,7 @@ public class Form1: Form
         table.Locale = myCultureInfo;
 
         // Print the new LCID.
-        Console.WriteLine(table.Locale.LCID); 
+        Console.WriteLine(table.Locale.LCID);
     }
     // </Snippet1>
 }

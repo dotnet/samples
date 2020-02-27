@@ -4,7 +4,7 @@ using System.Security.Cryptography.Xml;
 using System.Xml;
 using System.IO;
 
-/// This sample used the GetXml method in the CipherReference class to 
+/// This sample used the GetXml method in the CipherReference class to
 /// write the XML values for the CipherReference to the console.
 namespace CipherReference2
 {

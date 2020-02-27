@@ -44,7 +44,7 @@ namespace Samples.CS
 
             base.OnPreRender(e);
         }
-        
+
         protected override void Render(HtmlTextWriter writer)
         {
             if (!this.DesignMode)

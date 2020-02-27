@@ -17,7 +17,7 @@ namespace KnownTypeAttributeExample
                 Serialize("KnownTypeAttributeExample.xml");
                 Deserialize("KnownTypeAttributeExample.xml");
                 // Run this twice. The second time, comment out the
-                // Serialize call and comment out the 
+                // Serialize call and comment out the
                 // KnownTypeAttribute on the Person class. The
                 // deserialization will then fail.
             }
@@ -73,7 +73,7 @@ namespace KnownTypeAttributeExample
             }
         }
 
-        // Apply the KnownTypeAttribute to the class that 
+        // Apply the KnownTypeAttribute to the class that
         // includes a member that returns a Hashtable.
         [KnownType(typeof(IDInformation))]
         [DataContract]

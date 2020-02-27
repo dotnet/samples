@@ -18,7 +18,7 @@ public class PublicClass
     public class PublicNestedClass {}
 
     protected class ProtectedNestedClass {}
- 
+
     internal class FriendNestedClass {}
 
     private class PrivateNestedClass {}

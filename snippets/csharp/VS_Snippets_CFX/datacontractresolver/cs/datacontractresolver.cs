@@ -108,7 +108,7 @@ namespace Microsoft.Samples.DCR
 
         //<Snippet0>
         // Used at deserialization
-        // Allows users to map xsi:type name to any Type 
+        // Allows users to map xsi:type name to any Type
         public override Type ResolveName(string typeName, string typeNamespace, Type declaredType, DataContractResolver knownTypeResolver)
         {
             XmlDictionaryString tName;
@@ -130,7 +130,7 @@ namespace Microsoft.Samples.DCR
         {
             string name = type.Name;
             string namesp = type.Namespace;
-            typeName = new XmlDictionaryString(XmlDictionary.Empty, name, 0); 
+            typeName = new XmlDictionaryString(XmlDictionary.Empty, name, 0);
             typeNamespace = new XmlDictionaryString(XmlDictionary.Empty, namesp, 0);
             if (!dictionary.ContainsKey(type.Name))
             {

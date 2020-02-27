@@ -1,9 +1,9 @@
 ﻿// <Snippet1>
 using System;
 
-class Example 
+class Example
 {
-   public static void Main() 
+   public static void Main()
    {
       ConsoleKeyInfo cki;
       // Prevent example from ending if CTL+C is pressed.
@@ -11,7 +11,7 @@ class Example
 
       Console.WriteLine("Press any combination of CTL, ALT, and SHIFT, and a console key.");
       Console.WriteLine("Press the Escape (Esc) key to quit: \n");
-      do 
+      do
       {
          cki = Console.ReadKey();
          Console.Write(" --- You pressed ");
@@ -25,14 +25,14 @@ class Example
 // This example displays output similar to the following:
 //       Press any combination of CTL, ALT, and SHIFT, and a console key.
 //       Press the Escape (Esc) key to quit:
-//       
-//       a --- You pressed A 
-//       k --- You pressed ALT+K 
-//       ► --- You pressed CTL+P 
-//         --- You pressed RightArrow 
-//       R --- You pressed SHIFT+R 
-//                --- You pressed CTL+I 
-//       j --- You pressed ALT+J 
-//       O --- You pressed SHIFT+O 
-//       § --- You pressed CTL+U 
+//
+//       a --- You pressed A
+//       k --- You pressed ALT+K
+//       ► --- You pressed CTL+P
+//         --- You pressed RightArrow
+//       R --- You pressed SHIFT+R
+//                --- You pressed CTL+I
+//       j --- You pressed ALT+J
+//       O --- You pressed SHIFT+O
+//       § --- You pressed CTL+U
 // </Snippet1>

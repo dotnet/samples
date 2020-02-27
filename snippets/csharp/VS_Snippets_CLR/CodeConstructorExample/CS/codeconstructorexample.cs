@@ -20,13 +20,13 @@ namespace CodeDomSamples
             // Adds the namespace object to the compile unit.
             CompileUnit.Namespaces.Add( Samples );
             // Adds a new namespace import for the System namespace.
-            Samples.Imports.Add( new CodeNamespaceImport("System") );            
-            
+            Samples.Imports.Add( new CodeNamespaceImport("System") );
+
             // Declares a new type and names it.
-            CodeTypeDeclaration BaseType = new CodeTypeDeclaration("BaseType");                                                
+            CodeTypeDeclaration BaseType = new CodeTypeDeclaration("BaseType");
             // Adds the new type to the namespace object's type collection.
             Samples.Types.Add(BaseType);
-            
+
             // Declares a default constructor that takes no arguments.
             CodeConstructor defaultConstructor = new CodeConstructor();
             defaultConstructor.Attributes = MemberAttributes.Public;
@@ -40,32 +40,32 @@ namespace CodeDomSamples
             stringConstructor.Parameters.Add( new CodeParameterDeclarationExpression("System.String", "TestStringParameter") );
             // Adds the constructor to the Members collection of the BaseType.
             BaseType.Members.Add(stringConstructor);
-                        
+
             // Declares a type that derives from BaseType and names it.
             CodeTypeDeclaration DerivedType = new CodeTypeDeclaration("DerivedType");
             // The DerivedType class inherits from the BaseType class.
             DerivedType.BaseTypes.Add( new CodeTypeReference("BaseType") );
             // Adds the new type to the namespace object's type collection.
-            Samples.Types.Add(DerivedType);        
-                    
+            Samples.Types.Add(DerivedType);
+
             // Declare a constructor that takes a string argument and calls the base class constructor with it.
             CodeConstructor baseStringConstructor = new CodeConstructor();
             baseStringConstructor.Attributes = MemberAttributes.Public;
-            // Declares a parameter of type string named "TestStringParameter".    
+            // Declares a parameter of type string named "TestStringParameter".
             baseStringConstructor.Parameters.Add( new CodeParameterDeclarationExpression("System.String", "TestStringParameter") );
             // Calls a base class constructor with the TestStringParameter parameter.
             baseStringConstructor.BaseConstructorArgs.Add( new CodeVariableReferenceExpression("TestStringParameter") );
             // Adds the constructor to the Members collection of the DerivedType.
             DerivedType.Members.Add(baseStringConstructor);
-            
+
             // Declares a constructor overload that calls another constructor for the type with a predefined argument.
             CodeConstructor overloadConstructor = new CodeConstructor();
             overloadConstructor.Attributes = MemberAttributes.Public;
             // Sets the argument to pass to a base constructor method.
             overloadConstructor.ChainedConstructorArgs.Add( new CodePrimitiveExpression("Test") );
             // Adds the constructor to the Members collection of the DerivedType.
-            DerivedType.Members.Add(overloadConstructor);        
-            
+            DerivedType.Members.Add(overloadConstructor);
+
             // Declares a constructor overload that calls the default constructor for the type.
             CodeConstructor overloadConstructor2 = new CodeConstructor();
             overloadConstructor2.Attributes = MemberAttributes.Public;
@@ -73,30 +73,30 @@ namespace CodeDomSamples
             // Sets the argument to pass to a base constructor method.
             overloadConstructor2.ChainedConstructorArgs.Add( new CodeSnippetExpression("") );
             // Adds the constructor to the Members collection of the DerivedType.
-            DerivedType.Members.Add(overloadConstructor2);            
-        
+            DerivedType.Members.Add(overloadConstructor2);
+
             // A C# code generator produces the following source code for the preceeding example code:
 
             // public class BaseType {
-            //     
+            //
             //     public BaseType() {
             //     }
-            //        
+            //
             //     public BaseType(string TestStringParameter) {
             //     }
             // }
-            //    
+            //
             // public class DerivedType : BaseType {
-            //        
-            //     public DerivedType(string TestStringParameter) : 
+            //
+            //     public DerivedType(string TestStringParameter) :
             //             base(TestStringParameter) {
             //     }
-            //        
-            //     public DerivedType() : 
+            //
+            //     public DerivedType() :
             //             this("Test") {
             //     }
             //
-            //     public DerivedType(int TestIntParameter) : 
+            //     public DerivedType(int TestIntParameter) :
             //                this() {
             //     }
             // }

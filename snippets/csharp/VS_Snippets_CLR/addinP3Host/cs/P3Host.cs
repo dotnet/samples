@@ -15,8 +15,8 @@ namespace MathHost
 
 // <Snippet2>
 // Get path for the pipeline root.
-// Assumes that the current directory is the  
-// pipeline directory structure root directory. 
+// Assumes that the current directory is the
+// pipeline directory structure root directory.
 String pipeRoot = Environment.CurrentDirectory;
 
 // <Snippet3>
@@ -35,7 +35,7 @@ foreach (string warning in warnings)
 // specifying the host's application base, instead of a path,
 // for the FindAddIns method.
 
-Collection<AddInToken> tokens = 
+Collection<AddInToken> tokens =
             AddInStore.FindAddIns(typeof(Calculator),PipelineStoreLocation.ApplicationBase);
 // </Snippet4>
 // </Snippet2>
@@ -47,7 +47,7 @@ AddInToken selectedToken = ChooseAddIn(tokens);
 //Activate the selected AddInToken in a new
 //application domain with the Internet trust level.
 Calculator CalcAddIn = selectedToken.Activate<Calculator>(AddInSecurityLevel.Internet);
-            
+
 //Run the add-in using a custom method.
 RunCalculator(CalcAddIn);
 // </Snippet5>
@@ -58,7 +58,7 @@ RunCalculator(CalcAddIn);
 // Construct the path to the add-in.
 string addInFilePath = pipeRoot + @"\AddIns\P3AddIn2\P3AddIn2.dll";
 
-// The fourth parameter, addinTypeName, takes the full name 
+// The fourth parameter, addinTypeName, takes the full name
 // of the type qualified by its namespace. Same as AddInToken.AddInFullName.
 Collection<AddInToken> tokenColl = AddInStore.FindAddIn(typeof(Calculator),
     pipeRoot, addInFilePath, "CalcAddIns.P3AddIn2");
@@ -66,7 +66,7 @@ Console.WriteLine("Found {0}", tokenColl[0].Name);
 // </Snippet6>
 
 // <Snippet8>
-// Get the AddInController of a 
+// Get the AddInController of a
 // currently actived add-in (CalcAddIn).
 AddInController aiController = AddInController.GetAddInController(CalcAddIn);
 
@@ -120,7 +120,7 @@ Console.WriteLine("Add-in in host's process: {0}",
 	AddinCtl.AddInEnvironment.Process.IsCurrentProcess);
 // </Snippet10>
 // <Snippet11>
-// Use qualification data to control 
+// Use qualification data to control
 // how an add-in should be activated.
 
 if (selectedToken.QualificationData[AddInSegmentType.AddIn]["Isolation"].Equals("NewProcess"))
@@ -150,8 +150,8 @@ else
     {
         Console.WriteLine("{0} {1}\n\t QD Name: {2}, QD Value: {3}",
             token.Name,
-            qdi.Segment, 
-            qdi.Name, 
+            qdi.Segment,
+            qdi.Name,
             qdi.Value);
     }
 }
@@ -160,7 +160,7 @@ else
  }
 
 // <Snippet13>
-// Method to select a token by 
+// Method to select a token by
 // enumeratng the AddInToken collection.
 private static AddInToken ChooseAddIn(Collection<AddInToken> tokens)
 {
@@ -173,14 +173,14 @@ private static AddInToken ChooseAddIn(Collection<AddInToken> tokens)
     Console.WriteLine("Available add-ins: ");
 
 	// <Snippet7>
-	// Show the token properties for each token 
+	// Show the token properties for each token
 	// in the AddInToken collection (tokens),
 	// preceded by the add-in number in [] brackets.
     int tokNumber = 1;
 	foreach (AddInToken tok in tokens)
 	{
 		Console.WriteLine(String.Format("\t[{0}]: {1} - {2}\n\t{3}\n\t\t {4}\n\t\t {5} - {6}",
-			tokNumber.ToString(), 
+			tokNumber.ToString(),
 			tok.Name,
 			tok.AddInFullName,
 			tok.AssemblyName,
@@ -208,7 +208,7 @@ private static AddInToken ChooseAddIn(Collection<AddInToken> tokens)
 
         private static void RunCalculator(Calculator calc)
         {
-            
+
             if (calc == null)
             {
                 //No calculators were found, read a line and exit.
@@ -230,7 +230,7 @@ private static AddInToken ChooseAddIn(Collection<AddInToken> tokens)
                     Console.WriteLine("Invalid command: {0}. Commands must be formated: [number] [operation] [number]", line);
                     Console.WriteLine("Available operations: " + calc.Operations);
                 }
-                
+
                 line = Console.ReadLine();
             }
         }

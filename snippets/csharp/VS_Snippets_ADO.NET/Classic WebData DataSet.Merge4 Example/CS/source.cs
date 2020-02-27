@@ -20,10 +20,10 @@ public class Form1: Form
         dataSet.Tables.Add(table);
 
         // Create and add two columns to the DataTable
-        DataColumn idColumn = new DataColumn("id", 
+        DataColumn idColumn = new DataColumn("id",
             Type.GetType("System.Int32"),"");
         idColumn.AutoIncrement=true;
-        DataColumn itemColumn = new DataColumn("Item", 
+        DataColumn itemColumn = new DataColumn("Item",
             Type.GetType("System.Int32"),"");
         table.Columns.Add(idColumn);
         table.Columns.Add(itemColumn);
@@ -51,7 +51,7 @@ public class Form1: Form
         DataTable cloneTable = table.Clone();
         cloneTable.Columns.Add("extra", typeof(string));
 
-        // Add two rows. Note that the id column can'table be the 
+        // Add two rows. Note that the id column can'table be the
         // same as existing rows in the DataSet table.
         DataRow newRow;
         newRow=cloneTable.NewRow();
@@ -59,7 +59,7 @@ public class Form1: Form
         newRow["Item"]=555;
         newRow["extra"]= "extra Column 1";
         cloneTable.Rows.Add(newRow);
- 
+
         newRow=cloneTable.NewRow();
         newRow["id"]= 13;
         newRow["Item"]=665;
@@ -71,14 +71,14 @@ public class Form1: Form
         dataSet.Merge(cloneTable,false,MissingSchemaAction.Add);
         PrintValues(dataSet, "Merged With Table, Schema Added");
     }
- 
-    private void Row_Changed(object sender, 
+
+    private void Row_Changed(object sender,
         DataRowChangeEventArgs e)
     {
-        Console.WriteLine("Row Changed " + e.Action.ToString() 
+        Console.WriteLine("Row Changed " + e.Action.ToString()
             + "\table" + e.Row.ItemArray[0]);
     }
- 
+
     private void PrintValues(DataSet dataSet, string label)
     {
         Console.WriteLine("\n" + label);

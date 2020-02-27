@@ -172,8 +172,8 @@ namespace TcpService
             // shown here.
             ServiceHost sh = new ServiceHost(typeof(Calculator), baseAddresses);
 
-            // Add an endpoint to the service. Insert the thumbprint of an X.509 
-            // certificate found on your computer. 
+            // Add an endpoint to the service. Insert the thumbprint of an X.509
+            // certificate found on your computer.
             Type c = typeof(ICalculator);
             //sh.AddServiceEndpoint(c, b, "Aloha");
             sh.Credentials.ServiceCertificate.SetCertificate(
@@ -217,8 +217,8 @@ namespace TcpService
             // shown here.
             ServiceHost sh = new ServiceHost(typeof(Calculator), baseAddresses);
 
-            // Add an endpoint to the service. The code to define the service 
-            // type (ICalculator) is not shown here. The code also requires 
+            // Add an endpoint to the service. The code to define the service
+            // type (ICalculator) is not shown here. The code also requires
             // you to insert the thumbprint of an X.509 certificate on your
             // computer. The SetCertificate method specifies where the certificate
             // is stored, and how to find it, as well as the value to find.
@@ -256,10 +256,10 @@ namespace TcpService
 
             // Set a certificate as the credential for the service.
             sh.Credentials.ServiceCertificate.SetCertificate(
-                StoreLocation.LocalMachine, 
-                StoreName.My, 
-                X509FindType.FindBySubjectName, 
-                "client.com"); 
+                StoreLocation.LocalMachine,
+                StoreName.My,
+                X509FindType.FindBySubjectName,
+                "client.com");
             sh.Open();
             //</snippet23>
         }

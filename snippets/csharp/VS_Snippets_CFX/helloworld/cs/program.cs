@@ -25,7 +25,7 @@ namespace Microsoft.Samples.HelloWorld
             return new Sequence()
             {
                 Variables = { message },
-                Activities = 
+                Activities =
                 {
                     new AppendString()
                     {

@@ -11,13 +11,13 @@ public class Example
             if (y == null)
             {
                 // If x is null and y is null, they're
-                // equal. 
+                // equal.
                 return 0;
             }
             else
             {
                 // If x is null and y is not null, y
-                // is greater. 
+                // is greater.
                 return -1;
             }
         }
@@ -32,7 +32,7 @@ public class Example
             }
             else
             {
-                // ...and y is not null, compare the 
+                // ...and y is not null, compare the
                 // lengths of the two strings.
                 //
                 int retval = x.Length.CompareTo(y.Length);

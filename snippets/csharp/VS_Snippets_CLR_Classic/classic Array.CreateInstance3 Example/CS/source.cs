@@ -1,9 +1,9 @@
 ﻿// <Snippet1>
  using System;
  public class SamplesArray  {
- 
+
     public static void Main()  {
- 
+
        // Creates and initializes a multidimensional Array of type String.
        int[] myLengthsArray = new int[4] { 2, 3, 4, 5 };
        Array my4DArray=Array.CreateInstance( typeof(String), myLengthsArray );
@@ -14,7 +14,7 @@
                    int[] myIndicesArray = new int[4] { i, j, k, l };
                    my4DArray.SetValue( Convert.ToString(i) + j + k + l, myIndicesArray );
                 }
- 
+
        // Displays the values of the Array.
        Console.WriteLine( "The four-dimensional Array contains the following values:" );
        PrintValues( my4DArray );
@@ -38,7 +38,7 @@
  }
  /*
  This code produces the following output.
- 
+
  The four-dimensional Array contains the following values:
      0000    0001    0002    0003    0004
      0010    0011    0012    0013    0014

@@ -11,7 +11,7 @@ public class Form1: Form
     protected DataGrid dataGrid1;
 
     // <Snippet1>
-    public void CreateOdbcParameter() 
+    public void CreateOdbcParameter()
     {
         OdbcParameter parameter = new OdbcParameter("Description",OdbcType.VarChar,
             88,"Description");

@@ -46,7 +46,7 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
                 //GetReaderFromNextChunk will wait for chunks to be queued
                 //then set this.innerReader to the received message's reader
                 //it will throw TimeoutException if the next chunk is not received within specified timeout
-                GetReaderFromNextChunk(receiveTimeout);               
+                GetReaderFromNextChunk(receiveTimeout);
                 if (!isLastChunk)
                 {
                     readCount = innerReader.ReadContentAsBase64(buffer,
@@ -104,7 +104,7 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
         #region Implementation stuff
         internal void AddMessage(Message message)
         {
-            
+
             if (!this.bufferedChunks.TryEnqueue(this.receiveTimeout, message))
             {
                 //caller should not tell us to buffer another chunk

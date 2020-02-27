@@ -1,6 +1,6 @@
 ﻿// Snippet for System.ServiceModel.Description.PolicyConversionContext
 // Snippet 0
-// Snippet 1 public class MyBindingElement : BindingElement,IPolicyExporter  
+// Snippet 1 public class MyBindingElement : BindingElement,IPolicyExporter
 // Snippet 2 implement
 // System.ServiceModel.Description.IPolicyExportExtension
 // 001 06-27-2006 a-arhu using System.ServiceModel.Channels
@@ -17,14 +17,14 @@ using System.ServiceModel.Channels;
 
 // MetadataImporter is abstract class
 // wsdlImporter is concrete class derived from MetadataImporter
-// 
+//
 //
     class Program
     {
       string name1 = String.Empty;
       string ns1 = String.Empty;
-// <snippet0>    
-        public void ImportPolicy(MetadataImporter importer, 
+// <snippet0>
+        public void ImportPolicy(MetadataImporter importer,
             PolicyConversionContext context)
         {
             Console.WriteLine("The custom policy importer has been called.");
@@ -46,7 +46,7 @@ using System.ServiceModel.Channels;
                     // Attach it to the PolicyConversionContext.BindingElements collection.
                     // For example, if the custom policy had a "speed" attribute value:
                     /*
-                      string speed 
+                      string speed
                         = customAssertion.GetAttribute(SpeedBindingElement.name2, SpeedBindingElement.ns2);
                       SpeedBindingElement e = new SpeedBindingElement(speed);
                       context.BindingElements.Add(e);
@@ -59,7 +59,7 @@ using System.ServiceModel.Channels;
 
                 //write contents in gray.
                 Console.WriteLine(assertion.OuterXml);
-                Console.ForegroundColor = ConsoleColor.Gray; 
+                Console.ForegroundColor = ConsoleColor.Gray;
             }
         }
 // </snippet0>
@@ -70,12 +70,12 @@ using System.ServiceModel.Channels;
           EndpointAddress mexAddress = new EndpointAddress("http://localhost:8080/ServiceMetadata/mex");
 /*
           // Download all metadata. The policy importer runs automatically.
-          ServiceEndpointCollection endpoints = 
+          ServiceEndpointCollection endpoints =
               MetadataResolver.Resolve(
 	         typeof(IStatefulService),
 	          mexAddress);
 
-          MetadataExchangeClient mexClient = 
+          MetadataExchangeClient mexClient =
               new MetadataExchangeClient(mexAddress);
           mexClient.ResolveMetadataReferences = true;
 
@@ -84,8 +84,8 @@ using System.ServiceModel.Channels;
           WsdlImporter importer = new WsdlImporter(metaDocs);
           PolicyConversionContext myPolicyConversionContext = new PolicyConversionContext ();
           ImportPolicy(importer, myPolicyConversionContext);
-*/	  
-      }  
+*/	
+      }
   }
 
 namespace CS2
@@ -99,13 +99,13 @@ namespace CS2
 		 MetadataExporter exporter, PolicyConversionContext context)
 		{
 			XmlDocument xmlDoc = new XmlDocument();
-			XmlElement xmlElement = 
+			XmlElement xmlElement =
 			       xmlDoc.CreateElement("MyPolicyAssertion");
 			context.GetBindingAssertions().Add(xmlElement);
 		}
 
-		// Note: All custom binding elements must return a deep clone 
-		// to enable the run time to support multiple bindings using the 
+		// Note: All custom binding elements must return a deep clone
+		// to enable the run time to support multiple bindings using the
 		// same custom binding.
 		public override BindingElement Clone()
 		{
@@ -122,14 +122,14 @@ namespace CS2
 
 	public class Program {
 		public static void Main(string[] args) {
-			EndpointAddress address = 
+			EndpointAddress address =
 				new EndpointAddress("http://localhost/metadata");
-			CustomBinding customBinding = 
+			CustomBinding customBinding =
 				new CustomBinding(new BasicHttpBinding());
 			customBinding.Elements.Add(new MyBindingElement());
 			ContractDescription contract =
 				ContractDescription.GetContract(typeof(MyContract));
-			ServiceEndpoint endpoint = 
+			ServiceEndpoint endpoint =
 				new ServiceEndpoint(contract, customBinding, address);
 			MetadataExporter exporter = new WsdlExporter();
 			exporter.ExportEndpoint(endpoint);

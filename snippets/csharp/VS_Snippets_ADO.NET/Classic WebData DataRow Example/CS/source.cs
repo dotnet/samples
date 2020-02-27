@@ -15,7 +15,7 @@ public class Form1: Form
         DataTable table;
         table = MakeNamesTable();
 
-        // Once a table has been created, use the 
+        // Once a table has been created, use the
         // NewRow to create a DataRow.
         DataRow row;
         row = table.NewRow();
@@ -24,16 +24,16 @@ public class Form1: Form
         row["fName"] = "John";
         row["lName"] = "Smith";
         table.Rows.Add(row);
-    
+
         foreach(DataColumn column in table.Columns)
             Console.WriteLine(column.ColumnName);
         dataGrid1.DataSource=table;
     }
- 
+
     private DataTable MakeNamesTable()
     {
         // Create a new DataTable titled 'Names.'
-        DataTable namesTable = new DataTable("Names"); 
+        DataTable namesTable = new DataTable("Names");
 
         // Add three column objects to the table.
         DataColumn idColumn = new  DataColumn();

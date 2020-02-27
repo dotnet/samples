@@ -67,11 +67,11 @@ namespace BasicCodeDomApp
         }
 
         //<Snippet2>
-        // Build a library program graph using 
+        // Build a library program graph using
         // System.CodeDom types.
         public static CodeCompileUnit BuildClass1()
         {
-            // Create a new CodeCompileUnit to contain 
+            // Create a new CodeCompileUnit to contain
             // the program graph.
             CodeCompileUnit compileUnit = new CodeCompileUnit();
 

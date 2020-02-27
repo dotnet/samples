@@ -8,7 +8,7 @@ public class A {
       locationTable.Columns.Add("State");
       locationTable.Columns.Add("ZipCode");
 
-      // Add data 
+      // Add data
       locationTable.Rows.Add("Washington", "98052");
       locationTable.Rows.Add("California", "90001");
       locationTable.Rows.Add("Hawaii", "96807");

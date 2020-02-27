@@ -21,10 +21,10 @@ namespace CodeDomSamples
             CodeNamespaceImport import1 = new CodeNamespaceImport("System");
             // Adds the namespace import to the namespace imports collection of the namespace.
             testNamespace.Imports.Add(import1);
-            
+
             // A C# code generator produces the following source code for the preceeding example code:
-            
-            //    namespace TestNamespace {        
+
+            //    namespace TestNamespace {
             //        using System;
             //
             //  }

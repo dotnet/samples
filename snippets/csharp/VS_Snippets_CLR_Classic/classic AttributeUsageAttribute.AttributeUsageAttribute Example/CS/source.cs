@@ -10,7 +10,7 @@ namespace System.Runtime.InteropServices
       public DispIdAttribute(int value) {
         // . . .
       }
-      
+
       public int Value {
          get {
             // . . .

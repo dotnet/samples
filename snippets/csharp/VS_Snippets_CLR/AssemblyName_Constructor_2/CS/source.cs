@@ -9,7 +9,7 @@ public class AssemblyNameDemo
    {
       // Create an AssemblyName, specifying the display name, and then
       // print the properties.
-      AssemblyName myAssemblyName = 
+      AssemblyName myAssemblyName =
          new AssemblyName("Example, Version=1.0.0.2001, Culture=en-US, PublicKeyToken=null");
       Console.WriteLine("Name: {0}", myAssemblyName.Name);
       Console.WriteLine("Version: {0}", myAssemblyName.Version);

@@ -26,7 +26,7 @@ namespace Metadata.Samples
     {
         static void Main(string[] args)
         {
-            ServiceHost host = new ServiceHost(typeof(SimpleService)); 
+            ServiceHost host = new ServiceHost(typeof(SimpleService));
             try
             {
                 // Open the service host to accept incoming calls

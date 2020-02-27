@@ -13,15 +13,15 @@ using System.Net;
 namespace Microsoft.ServiceModel.Samples
 {
     /// <summary>
-    /// This class contains the RequestContext 
-    /// implementation used by 
-    /// HttpCookieSessionExtension. This gives a 
-    /// wrapper to an RequestContext coming from 
-    /// the lower channels. 
+    /// This class contains the RequestContext
+    /// implementation used by
+    /// HttpCookieSessionExtension. This gives a
+    /// wrapper to an RequestContext coming from
+    /// the lower channels.
     /// </summary>
     class HttpCookieSessionRequestContext : RequestContext
     {
-        // A Boolean value to indicate whether this request 
+        // A Boolean value to indicate whether this request
         // is the initial request for the session.
         bool isInitial;
 
@@ -29,8 +29,8 @@ namespace Microsoft.ServiceModel.Samples
         string sessionId;
 
         public HttpCookieSessionRequestContext(
-            RequestContext innerRequestContext, 
-            string sessionId, 
+            RequestContext innerRequestContext,
+            string sessionId,
             bool isInitial)
         {
             this.sessionId = sessionId;
@@ -50,11 +50,11 @@ namespace Microsoft.ServiceModel.Samples
                 message, callback, state);
         }
 
-        public override IAsyncResult BeginReply(Message message, TimeSpan timeout, 
+        public override IAsyncResult BeginReply(Message message, TimeSpan timeout,
             AsyncCallback callback, object state)
         {
             // Add the session metadata.
-            AddSessionData(message);    
+            AddSessionData(message);
 
             return innerRequestContext.BeginReply(
                 message, timeout, callback, state);
@@ -73,7 +73,7 @@ namespace Microsoft.ServiceModel.Samples
 
         public override void Reply(Message message)
         {
-            AddSessionData(message);            
+            AddSessionData(message);
             innerRequestContext.Reply(message);
         }
 
@@ -99,14 +99,14 @@ namespace Microsoft.ServiceModel.Samples
 
         /// <summary>
         /// Adds session id to the out going HTTP response header.
-        /// </summary>        
+        /// </summary>
         void AddSessionData(Message message)
         {
-            // Add the HTTP response header only. 
+            // Add the HTTP response header only.
             // if this is the first request.
             if (isInitial)
             {
-                string sessionCookie = 
+                string sessionCookie =
                     string.Format("{0}", this.sessionId);
 
                 HttpResponseMessageProperty httpResponse;
@@ -118,12 +118,12 @@ namespace Microsoft.ServiceModel.Samples
                 }
                 else
                 {
-                    httpResponse = 
+                    httpResponse =
                         new HttpResponseMessageProperty();
 
                     message.Properties.Add(HttpResponseMessageProperty.Name, httpResponse);
                 }
-                
+
                 httpResponse.Headers[HttpResponseHeader.SetCookie] = sessionCookie;
             }
         }

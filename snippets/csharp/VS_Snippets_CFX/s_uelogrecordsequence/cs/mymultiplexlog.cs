@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO.Log;
 
-// This sample demonstrate how to create a multiplexed log with two streams. 
-// Doing interleaving appends and reading the log records back for both 
+// This sample demonstrate how to create a multiplexed log with two streams.
+// Doing interleaving appends and reading the log records back for both
 // the streams.
 
 namespace MyMultiplexLog
@@ -33,7 +33,7 @@ namespace MyMultiplexLog
 					FileAccess.ReadWrite,
 					FileShare.ReadWrite);
 
-		// Log Extents are shared between the two streams. 
+		// Log Extents are shared between the two streams.
 		// Add two extents to sequence1.
 				sequence1.LogStore.Extents.Add("MyExtent0", containerSize);
 				sequence1.LogStore.Extents.Add("MyExtent1");
@@ -107,7 +107,7 @@ namespace MyMultiplexLog
 				}
 				// </Snippet10>
 
-				Console.WriteLine();             
+				Console.WriteLine();
 				Console.WriteLine("Reading the log records from stream2...");
 				foreach (LogRecord record in sequence2.ReadLogRecords(sequence2.BaseSequenceNumber, LogRecordEnumeratorType.Next))
 				{
@@ -134,7 +134,7 @@ namespace MyMultiplexLog
 			}
 		}
 
-	// Converts the given data to Array of ArraySegment<byte> 
+	// Converts the given data to Array of ArraySegment<byte>
 		public static IList<ArraySegment<byte>> CreateData(string str)
 		{
 			Encoding enc = Encoding.Unicode;

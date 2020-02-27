@@ -8,7 +8,7 @@ using System.ServiceModel;
 
 namespace Microsoft.ServiceModel.Samples
 {
-    public class InterceptingBindingElement 
+    public class InterceptingBindingElement
                  : BindingElement
                  , IPolicyExportExtension
     {
@@ -19,7 +19,7 @@ namespace Microsoft.ServiceModel.Samples
             this.interceptor = interceptor;
         }
 
-        protected InterceptingBindingElement(InterceptingBindingElement other) 
+        protected InterceptingBindingElement(InterceptingBindingElement other)
             : base(other)
         {
             this.interceptor = other.Interceptor;

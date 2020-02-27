@@ -8,16 +8,16 @@ public class Sample
 {
 
 // <Snippet1>
- public void ShowOracleException() 
+ public void ShowOracleException()
  {
     OracleConnection myConnection =
        new OracleConnection("Data Source=Oracle8i;Integrated Security=yes");
 
-    try 
+    try
     {
        myConnection.Open();
     }
-    catch (OracleException e) 
+    catch (OracleException e)
     {
       string errorMessage = "Code: " + e.Code + "\n" +
                             "Message: " + e.Message;

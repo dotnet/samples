@@ -8,14 +8,14 @@ public class Form1: Form
     protected DataSet DataSet1;
 
     // <Snippet1>
-    private void GetChildRowsFromDataRelation(DataTable table ) 
+    private void GetChildRowsFromDataRelation(DataTable table )
     {
-        DataRow[] arrRows;  
+        DataRow[] arrRows;
         foreach(DataRelation relation in table.ChildRelations)
         {
             foreach(DataRow row in table.Rows)
             {
-                arrRows = row.GetChildRows(relation, 
+                arrRows = row.GetChildRows(relation,
                     DataRowVersion.Proposed);
                 // Print values of rows.
                 for(int i = 0; i < arrRows.Length; i++)

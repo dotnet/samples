@@ -12,7 +12,7 @@ namespace AdapterUpdateCS
         }
         // <Snippet1>
         public DataTable CreateCmdsAndUpdate(string connectionString,
-            string queryString) 
+            string queryString)
         {
             using (OleDbConnection connection = new OleDbConnection(connectionString))
             {
@@ -33,6 +33,6 @@ namespace AdapterUpdateCS
             }
         }
 
-        // </Snippet1>    
+        // </Snippet1>
     }
 }

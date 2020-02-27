@@ -3,12 +3,12 @@
 using System;
 using System.Threading;
 
-class Sample 
+class Sample
 {
-    public static void Main() 
+    public static void Main()
     {
 // Declare the first few notes of the song, "Mary Had A Little Lamb".
-    Note[] Mary = 
+    Note[] Mary =
         {
         new Note(Tone.B, Duration.QUARTER),
         new Note(Tone.A, Duration.QUARTER),
@@ -40,7 +40,7 @@ class Sample
         }
     }
 
-// Define the frequencies of notes in an octave, as well as 
+// Define the frequencies of notes in an octave, as well as
 // silence (rest).
     protected enum Tone
     {
@@ -57,7 +57,7 @@ class Sample
     F      = 349,
     Fsharp = 370,
     G      = 392,
-    Gsharp = 415, 
+    Gsharp = 415,
     }
 
 // Define the duration of a note in units of milliseconds.
@@ -70,7 +70,7 @@ class Sample
     SIXTEENTH = EIGHTH/2,
     }
 
-// Define a note as a frequency (tone) and the amount of 
+// Define a note as a frequency (tone) and the amount of
 // time (duration) the note plays.
     protected struct Note
     {
@@ -92,7 +92,7 @@ class Sample
 /*
 This example produces the following results:
 
-This example plays the first few notes of "Mary Had A Little Lamb" 
+This example plays the first few notes of "Mary Had A Little Lamb"
 through the console speaker.
 */
 //</snippet1>

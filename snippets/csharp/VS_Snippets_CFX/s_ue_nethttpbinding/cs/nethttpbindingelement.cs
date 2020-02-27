@@ -15,19 +15,19 @@ namespace Microsoft.Samples.Channels {
     using System.ServiceModel.Channels;
     using System.ServiceModel.Configuration;
     using System.Globalization;
-    
-    
+
+
     public class NetHttpBindingElement : StandardBindingElement {
-        
-        public NetHttpBindingElement(string configurationName) : 
+
+        public NetHttpBindingElement(string configurationName) :
                 base(configurationName) {
         }
 
         public NetHttpBindingElement()
-            : 
+            :
                 this(null) {
         }
-        
+
         protected override Type BindingElementType {
             get {
                 return typeof(NetHttpBinding);
@@ -133,7 +133,7 @@ namespace Microsoft.Samples.Channels {
                 base[NetHttpConfigurationStrings.ReaderQuotas] = value;
             }
         }
-        
+
         protected override ConfigurationPropertyCollection Properties {
             get {
                 ConfigurationPropertyCollection properties = base.Properties;
@@ -150,7 +150,7 @@ namespace Microsoft.Samples.Channels {
                 return properties;
             }
         }
-        
+
         protected override void InitializeFrom(Binding binding) {
             base.InitializeFrom(binding);
             NetHttpBinding netHttpBinding = ((NetHttpBinding)(binding));
@@ -165,7 +165,7 @@ namespace Microsoft.Samples.Channels {
             this.UseDefaultWebProxy = netHttpBinding.UseDefaultWebProxy;
             this.ReaderQuotas = netHttpBinding.ReaderQuotas;
         }
-        
+
         protected override void OnApplyConfiguration(Binding binding) {
             if ((binding == null)) {
                 throw new System.ArgumentNullException("binding");

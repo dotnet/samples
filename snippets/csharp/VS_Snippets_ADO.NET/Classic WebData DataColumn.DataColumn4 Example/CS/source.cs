@@ -9,15 +9,15 @@ public class Form1: Form
     // <Snippet1>
     private void CreateComputedColumn(DataTable table)
     {
-        System.Type myDataType = 
+        System.Type myDataType =
             System.Type.GetType("System.Decimal");
 
-        // The expression multiplies the "Price" column value 
+        // The expression multiplies the "Price" column value
         // by the "Quantity" to create the "Total" column.
         string expression = "Price * Quantity";
 
         // Create the column, setting the type to Attribute.
-        DataColumn column = new DataColumn("Total", myDataType, 
+        DataColumn column = new DataColumn("Total", myDataType,
             expression, MappingType.Attribute);
 
         // Set various properties.

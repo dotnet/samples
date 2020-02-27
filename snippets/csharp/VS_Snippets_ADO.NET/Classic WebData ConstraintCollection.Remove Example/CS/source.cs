@@ -2,11 +2,11 @@
 using System.Data;
 using System.Windows.Forms;
 
-public class Form1 : Form 
+public class Form1 : Form
 {
 
     // <Snippet1>
-    private void RemoveConstraint(DataTable table, 
+    private void RemoveConstraint(DataTable table,
         Constraint constraint)
     {
         if(table.Constraints.Contains(constraint.ConstraintName))

@@ -8,15 +8,15 @@ namespace Microsoft.ServiceModel.Samples
     using System.ServiceModel.Channels;
     using System.Net;
 
-    class HttpCookieRequestSessionChannel : 
+    class HttpCookieRequestSessionChannel :
         LayeredChannel<IRequestChannel>
         , IRequestSessionChannel
     {
         bool exchangeTerminateMessage;
-        HttpCookieOutputSession session;         
+        HttpCookieOutputSession session;
 
-        public HttpCookieRequestSessionChannel(HttpCookieSessionChannelFactory parent, 
-            IRequestChannel innerChannel) 
+        public HttpCookieRequestSessionChannel(HttpCookieSessionChannelFactory parent,
+            IRequestChannel innerChannel)
             : base(parent, innerChannel)
         {
             this.exchangeTerminateMessage = parent.ExchangeTerminateMessage;
@@ -101,11 +101,11 @@ namespace Microsoft.ServiceModel.Samples
             if (exchangeTerminateMessage)
             {
                 Message terminateSessionResponse = InnerChannel.Request(
-                    CreateTerminateSessionRequest(), 
+                    CreateTerminateSessionRequest(),
                     timeoutHelper.RemainingTime());
                 ValidateTerminateSessionResponse(terminateSessionResponse);
             }
-            base.Close(timeoutHelper.RemainingTime()); 
+            base.Close(timeoutHelper.RemainingTime());
         }
 
         IAsyncResult BeginExchangeTerminateMessage(

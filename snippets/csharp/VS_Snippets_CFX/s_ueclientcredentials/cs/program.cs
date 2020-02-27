@@ -1,33 +1,33 @@
 ﻿// Snippet Class:  for ClientCredentials
-// snippet digits: 0-4 used 
+// snippet digits: 0-4 used
 // References:
 //   System.ServiceModel
-// 
-// History: 
+//
+// History:
 //   06-21-2006 a-arhu created
-// 
+//
 /*
     //Example
     //The following code shows how you can use this property to configure the X.509 certificate.
 
 // snippet3
     // see source.cs below
-    // Configure proxy with 
+    // Configure proxy with
     // certificate.
     proxy.ClientCredentials.ClientCertificate.SetCertificate(
-  		StoreLocation.CurrentUser, 
-  		StoreName.TrustedPeople, 
-  		X509FindType.FindBySubjectName, 
+  		StoreLocation.CurrentUser,
+  		StoreName.TrustedPeople,
+  		X509FindType.FindBySubjectName,
   		"test1");
- 
+
 // snippet4
 Example
 The following code shows how to configure a credential.
-   // Configure proxy with 
+   // Configure proxy with
    // (username,password).
    proxy.ClientCredentials.UserName.UserName = "test1";
    proxy.ClientCredentials.UserName.Password = "1tset";
- 
+
 
 Example
 The following code shows how to use the object returned by this property to configure the impersonation level.
@@ -114,7 +114,7 @@ namespace Microsoft.Security.Samples
         {
  //<snippet2>
             // Create a WSHttpBinding and set its security properties. The
-            // security mode is Message, and the client is authenticated with 
+            // security mode is Message, and the client is authenticated with
             // a certificate.
             EndpointAddress ea = new EndpointAddress("http://contoso.com/");
             WSHttpBinding b = new WSHttpBinding();
@@ -128,20 +128,20 @@ namespace Microsoft.Security.Samples
 
             // Set the client credential value to a valid certificate.
             calcClient.ClientCredentials.ClientCertificate.SetCertificate(
-                StoreLocation.CurrentUser, 
-                StoreName.TrustedPeople, 
-                X509FindType.FindBySubjectName, 
+                StoreLocation.CurrentUser,
+                StoreName.TrustedPeople,
+                X509FindType.FindBySubjectName,
                 "client.com");
 // </snippet3>
 
 // <snippet4>
-           // Configure the proxy with 
+           // Configure the proxy with
            // (username,password).
            calcClient.ClientCredentials.UserName.UserName = "username";
            calcClient.ClientCredentials.UserName.Password = "changethispassword";
 // </snippet4>
 
-            // Use the object returned by the property 
+            // Use the object returned by the property
             // to configure the impersonation level.
 
 // <snippet5>
@@ -149,7 +149,7 @@ namespace Microsoft.Security.Samples
            CalculatorClient client = new CalculatorClient();
           try
             {
-                client.ClientCredentials.Windows.AllowedImpersonationLevel 
+                client.ClientCredentials.Windows.AllowedImpersonationLevel
                     = TokenImpersonationLevel.Impersonation;
             }
             catch (TimeoutException timeProblem)

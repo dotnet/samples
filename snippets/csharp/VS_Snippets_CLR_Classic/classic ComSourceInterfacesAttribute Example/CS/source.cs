@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 
 [ComSourceInterfacesAttribute("ButtonEventsLib.ButtonEvents, ButtonEventsLib")]
-public class Baz 
+public class Baz
 {
    //Insert code here.
 }

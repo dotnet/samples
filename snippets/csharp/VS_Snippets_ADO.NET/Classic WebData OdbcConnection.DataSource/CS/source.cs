@@ -11,7 +11,7 @@ public class Form1: Form
   protected DataGrid dataGrid1;
 
 // <Snippet1>
- public void CreateOdbcConnection() 
+ public void CreateOdbcConnection()
  {
      string connectionString = "Driver={SQL Native Client};Server=(local);Trusted_Connection=Yes;Database=AdventureWorks;";
 
@@ -21,7 +21,7 @@ public class Form1: Form
          Console.WriteLine("ServerVersion: " + connection.ServerVersion
              + "\nDatabase: " + connection.Database);
 
-         // The connection is automatically closed at 
+         // The connection is automatically closed at
          // the end of the Using block.
      }
  }

@@ -9,7 +9,7 @@ public class Form1: Form
     protected DataColumnMapping mapping;
 
     // <Snippet1>
-    public void ChangedMyMind() 
+    public void ChangedMyMind()
     {
         // ...
         // create mappings and mapping
@@ -18,7 +18,7 @@ public class Form1: Form
         {
             mappings.Remove((Object) mapping);
         }
-        else 
+        else
         {
             mappings.Add((Object) mapping);
             Console.WriteLine("Index of new mapping: " +

@@ -1,14 +1,14 @@
 ﻿// <Snippet1>
  using System;
  public class SamplesArray  {
- 
+
     public static void Main()  {
- 
+
        // Creates and initializes a one-dimensional Array of type Int32.
        Array my1DArray=Array.CreateInstance( typeof(Int32), 5 );
        for ( int i = my1DArray.GetLowerBound(0); i <= my1DArray.GetUpperBound(0); i++ )
           my1DArray.SetValue( i+1, i );
- 
+
        // Displays the values of the Array.
        Console.WriteLine( "The one-dimensional Array contains the following values:" );
        PrintValues( my1DArray );
@@ -32,7 +32,7 @@
  }
  /*
  This code produces the following output.
- 
+
  The one-dimensional Array contains the following values:
      1    2    3    4    5
  */

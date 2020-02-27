@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 public class Sample
 {
     // <Snippet1>
-    public void AddSqlParameter(SqlCommand command) 
+    public void AddSqlParameter(SqlCommand command)
     {
         SqlParameter param = new SqlParameter(
             "@Description", SqlDbType.NVarChar, 16);

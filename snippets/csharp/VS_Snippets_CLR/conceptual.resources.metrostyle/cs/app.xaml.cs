@@ -14,7 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 namespace ResourceCS1
-{ 
+{
     sealed partial class App : Application
     {
         public App()

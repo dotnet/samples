@@ -25,7 +25,7 @@ namespace FreeformActivityDesignerSnippets
         {
             base.OnLayoutPosition(e);
 
-            // Draw a connector between the first and second activities contained in 
+            // Draw a connector between the first and second activities contained in
             // the sequence activity used by this designer
             if (this.IsRootDesigner)
             {

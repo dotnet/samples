@@ -1,9 +1,9 @@
 ﻿// <Snippet1>
 using System;
 
-class Example 
+class Example
 {
-   public static void Main() 
+   public static void Main()
    {
       ConsoleKeyInfo cki;
       // Prevent example from ending if CTL+C is pressed.
@@ -24,7 +24,7 @@ class Example
 // This example displays output similar to the following:
 //       Press any combination of CTL, ALT, and SHIFT, and a console key.
 //       Press the Escape (Esc) key to quit:
-//       
+//
 //       You pressed CTL+A (character '☺')
 //       You pressed C (character 'c')
 //       You pressed CTL+C (character '♥')

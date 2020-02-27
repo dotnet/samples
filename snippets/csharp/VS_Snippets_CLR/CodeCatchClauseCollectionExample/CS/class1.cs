@@ -9,7 +9,7 @@ namespace CodeCatchClauseCollectionExample
 		public Class1()
 		{
 		}
-        
+
         // CodeCatchClauseCollection
         public void CodeCatchClauseCollectionExample()
         {
@@ -37,7 +37,7 @@ namespace CodeCatchClauseCollectionExample
             //</Snippet4>
 
             //<Snippet5>
-            // Tests for the presence of a CodeCatchClause in the 
+            // Tests for the presence of a CodeCatchClause in the
             // collection, and retrieves its index if it is found.
             CodeCatchClause testClause = new CodeCatchClause("e");
             int itemIndex = -1;

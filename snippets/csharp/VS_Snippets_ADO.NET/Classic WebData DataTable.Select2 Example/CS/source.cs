@@ -2,13 +2,13 @@
 using System;
 using System.Data;
 
-public class A {  
+public class A {
 
-   public static void Main() {      
+   public static void Main() {
       DataTable table = new DataTable("Orders");
       table.Columns.Add("OrderID", typeof(Int32));
       table.Columns.Add("OrderQuantity", typeof(Int32));
-      table.Columns.Add("CompanyName", typeof(string));      
+      table.Columns.Add("CompanyName", typeof(string));
       table.Columns.Add("Date", typeof(DateTime));
 
       DataRow newRow = table.NewRow();
@@ -19,7 +19,7 @@ public class A {
 
       // Add the row to the rows collection.
       table.Rows.Add(newRow);
-      
+
       DataRow newRow2 = table.NewRow();
       newRow2["OrderID"] = 2;
       newRow2["OrderQuantity"] = 2;

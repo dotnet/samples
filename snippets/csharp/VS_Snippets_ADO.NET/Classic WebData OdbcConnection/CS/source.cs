@@ -18,7 +18,7 @@ namespace Classic_WebData_OdbcConnectionCS
 		// <Snippet1>
 		static private void InsertRow(string connectionString)
 		{
-			string queryString = 
+			string queryString =
                 "INSERT INTO Customers (CustomerID, CompanyName) Values('NWIND', 'Northwind Traders')";
 			OdbcCommand command = new OdbcCommand(queryString);
 
@@ -28,7 +28,7 @@ namespace Classic_WebData_OdbcConnectionCS
 				connection.Open();
 				command.ExecuteNonQuery();
 
-                // The connection is automatically closed at 
+                // The connection is automatically closed at
                 // the end of the Using block.
 			}
 		}

@@ -10,7 +10,7 @@ using System.ServiceModel;
 
 namespace Microsoft.ServiceModel.Samples
 {
-    // Define a service contract. 
+    // Define a service contract.
     [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]
     public interface IQueueCalculator
     {
@@ -67,7 +67,7 @@ namespace Microsoft.ServiceModel.Samples
                 MsmqTransportBindingElement transportBindingElement = new MsmqTransportBindingElement();
                 // </Snippet1>
                 CustomBinding binding = new CustomBinding(encodingBindingElement, transportBindingElement);
-                
+
                 serviceHost.AddServiceEndpoint(
                     typeof(IQueueCalculator),
                     binding,

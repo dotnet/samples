@@ -10,7 +10,7 @@ namespace CodeAttributeDeclarationCollectionExample
 		public Class1()
 		{
 		}
-        
+
         // CodeAttributeDeclarationCollection
         public void CodeAttributeDeclarationCollectionExample()
         {
@@ -26,12 +26,12 @@ namespace CodeAttributeDeclarationCollectionExample
             //</Snippet3>
 
             //<Snippet4>
-            // Adds an array of CodeAttributeDeclaration objects 
+            // Adds an array of CodeAttributeDeclaration objects
             // to the collection.
             CodeAttributeDeclaration[] declarations = { new CodeAttributeDeclaration(), new CodeAttributeDeclaration() };
             collection.AddRange( declarations );
 
-            // Adds a collection of CodeAttributeDeclaration objects 
+            // Adds a collection of CodeAttributeDeclaration objects
             // to the collection.
             CodeAttributeDeclarationCollection declarationsCollection = new CodeAttributeDeclarationCollection();
             declarationsCollection.Add( new CodeAttributeDeclaration("DescriptionAttribute", new CodeAttributeArgument(new CodePrimitiveExpression("Test Description"))) );
@@ -40,7 +40,7 @@ namespace CodeAttributeDeclarationCollectionExample
             //</Snippet4>
 
             //<Snippet5>
-            // Tests for the presence of a CodeAttributeDeclaration in 
+            // Tests for the presence of a CodeAttributeDeclaration in
             // the collection, and retrieves its index if it is found.
             CodeAttributeDeclaration testdeclaration = new CodeAttributeDeclaration("DescriptionAttribute", new CodeAttributeArgument(new CodePrimitiveExpression("Test Description")) );
             int itemIndex = -1;
@@ -66,7 +66,7 @@ namespace CodeAttributeDeclarationCollectionExample
             //</Snippet8>
 
             //<Snippet9>
-            // Removes the specified CodeAttributeDeclaration from 
+            // Removes the specified CodeAttributeDeclaration from
             // the collection.
             CodeAttributeDeclaration declaration = new CodeAttributeDeclaration("DescriptionAttribute", new CodeAttributeArgument(new CodePrimitiveExpression("Test Description")) );
             collection.Remove( declaration );
@@ -77,6 +77,6 @@ namespace CodeAttributeDeclarationCollectionExample
             collection.RemoveAt(0);
             //</Snippet10>
             //</Snippet1>
-        }        
+        }
 	}
 }

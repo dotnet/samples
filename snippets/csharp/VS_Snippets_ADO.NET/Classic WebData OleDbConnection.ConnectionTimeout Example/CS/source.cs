@@ -9,7 +9,7 @@ class Class1
     }
 
     // <Snippet1>
-    // The connectionString argument contains the Connect Timeout 
+    // The connectionString argument contains the Connect Timeout
     // keywords, as follows: "... ;Connect Timeout=30;"
     public void InsertRow(string connectionString, string insertSQL)
     {

@@ -27,28 +27,28 @@ namespace CodeDomSamples
             property1.GetStatements.Add( new CodeMethodReturnStatement( new CodeFieldReferenceExpression(new CodeThisReferenceExpression(), "integerField") ) );
             // Declares a property set statement to set the value to the integer field.
             // The CodePropertySetValueReferenceExpression represents the value argument passed to the property set statement.
-            property1.SetStatements.Add( new CodeAssignStatement( new CodeFieldReferenceExpression(new CodeThisReferenceExpression(), "integerField"), 
+            property1.SetStatements.Add( new CodeAssignStatement( new CodeFieldReferenceExpression(new CodeThisReferenceExpression(), "integerField"),
                                                 new CodePropertySetValueReferenceExpression() ) );
             type1.Members.Add( property1 );
 
             // A C# code generator produces the following source code for the preceeding example code:
 
-            //    public class Type1 
+            //    public class Type1
             //    {
             //
             //        private int integerField;
             //
-            //        public Type1() 
+            //        public Type1()
             //        {
             //        }
-            //                            
-            //        private int integerProperty 
+            //
+            //        private int integerProperty
             //        {
-            //            get 
+            //            get
             //            {
             //                return this.integerField;
             //            }
-            //            set 
+            //            set
             //            {
             //                this.integerField = value;
             //            }

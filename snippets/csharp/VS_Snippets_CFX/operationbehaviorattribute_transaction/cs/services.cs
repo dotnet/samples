@@ -12,7 +12,7 @@ namespace Microsoft.WCF.Documentation
     string TxWork(string message);
   }
 
-  // Note: To use the TransactionIsolationLevel property, you 
+  // Note: To use the TransactionIsolationLevel property, you
   // must add a reference to the System.Transactions.dll assembly.
   /* The following service implementation:
    *   -- Processes messages on one thread at a time
@@ -40,7 +40,7 @@ namespace Microsoft.WCF.Documentation
     /*
      * The following operation-level behaviors are specified:
      *   -- Always executes under a transaction scope.
-     *   -- The transaction scope is completed when the operation terminates 
+     *   -- The transaction scope is completed when the operation terminates
      *       without an unhandled exception.
      */
     [OperationBehavior(

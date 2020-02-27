@@ -8,7 +8,7 @@ namespace CodeStatementCollectionExample
         public Class1()
         {
         }
-        
+
         // CodeStatementCollection
         public void CodeStatementCollectionSample()
         {
@@ -25,8 +25,8 @@ namespace CodeStatementCollectionExample
 
             //<Snippet4>
             // Adds an array of CodeStatement objects to the collection.
-            CodeStatement[] statements = { 
-                            new CodeCommentStatement("Test comment statement"), 
+            CodeStatement[] statements = {
+                            new CodeCommentStatement("Test comment statement"),
                             new CodeCommentStatement("Test comment statement")};
             collection.AddRange( statements );
 
@@ -41,7 +41,7 @@ namespace CodeStatementCollectionExample
             //</Snippet4>
 
             //<Snippet5>
-            // Tests for the presence of a CodeStatement in the 
+            // Tests for the presence of a CodeStatement in the
             // collection, and retrieves its index if it is found.
             int itemIndex = -1;
             if( collection.Contains( testStatement ) )

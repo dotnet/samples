@@ -61,7 +61,7 @@ namespace Microsoft.ServiceModel.Samples
 
             // Create an XmlWriter over the stream
             XmlWriter xw = XmlWriter.Create(s);
-            
+
             // Write the SamlSecurityToken into the stream
             ser.WriteToken(xw, samlToken);
 
@@ -71,12 +71,12 @@ namespace Microsoft.ServiceModel.Samples
             // Load the serialized token into a DOM
             XmlDocument dom = new XmlDocument();
             dom.Load(s);
-            
+
             // Create a KeyIdentifierClause for the SamlSecurityToken
             SamlAssertionKeyIdentifierClause samlKeyIdentifierClause = samlToken.CreateKeyIdentifierClause<SamlAssertionKeyIdentifierClause>();
 
-            // Return a GenericXmlToken from the XML for the SamlSecurityToken, the proof token, the valid from 
-            // and valid until times from the assertion and the key identifier clause created above            
+            // Return a GenericXmlToken from the XML for the SamlSecurityToken, the proof token, the valid from
+            // and valid until times from the assertion and the key identifier clause created above
             return new GenericXmlSecurityToken(dom.DocumentElement, proofToken, assertion.Conditions.NotBefore, assertion.Conditions.NotOnOrAfter, samlKeyIdentifierClause, samlKeyIdentifierClause, null);
         }
         // </snippet1>

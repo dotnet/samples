@@ -31,17 +31,17 @@ namespace CodeDomSamples
             // Declares an empty type constructor.
             CodeConstructor constructor1 = new CodeConstructor();
             constructor1.Attributes = MemberAttributes.Public;
-            type1.Members.Add( constructor1 );    
+            type1.Members.Add( constructor1 );
 
             // A C# code generator produces the following source code for the preceeding example code:
 
-            //    public class EventTest 
+            //    public class EventTest
             //    {
-            //        
-            //        public EventTest() 
+            //
+            //        public EventTest()
             //        {
             //        }
-            //        
+            //
             //        private event System.EventHandler TestEvent;
             //    }
 

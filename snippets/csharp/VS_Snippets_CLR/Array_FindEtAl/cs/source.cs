@@ -13,7 +13,7 @@ public class DinoDiscoverySet
         };
 
         DinoDiscoverySet GoMesozoic = new DinoDiscoverySet(dinosaurs);
-        
+
         GoMesozoic.DiscoverAll();
         GoMesozoic.DiscoverByEnding("saurus");
     }

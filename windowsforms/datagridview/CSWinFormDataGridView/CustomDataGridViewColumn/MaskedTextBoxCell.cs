@@ -2,7 +2,7 @@
 * Module Name:  MaskedTextBoxCell.cs
 * Project:      CSWinFormDataGridView
 * Copyright (c) Microsoft Corporation.
-* 
+*
 * This sample demonstrates how to create a custom DataGridView column.
 \**********************************************************************************/
 
@@ -25,8 +25,8 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
         private Type validatingType;
 
         /// <summary>
-        /// Initializes a new instance of this class.  Fortunately, there's 
-        /// not much to do here except make sure that our base class is also 
+        /// Initializes a new instance of this class.  Fortunately, there's
+        /// not much to do here except make sure that our base class is also
         /// initialized properly.
         /// </summary>
         public MaskedTextBoxCell()
@@ -43,8 +43,8 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
         /// Whenever the user is to begin editing a cell of this type, the editing
         /// control must be created, which in this column type's case is a subclass
         /// of the MaskedTextBox control.
-        /// 
-        /// This routine sets up all the properties and values on this control 
+        ///
+        /// This routine sets up all the properties and values on this control
         /// before the editing begins.
         /// </summary>
         /// <param name="rowIndex"></param>

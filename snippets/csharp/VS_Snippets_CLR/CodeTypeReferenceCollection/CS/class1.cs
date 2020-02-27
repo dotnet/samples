@@ -8,7 +8,7 @@ namespace CodeTypeReferenceCollectionExample
 		public Class1()
 		{
 		}
-        
+
         // CodeTypeReferenceCollection
         public void CodeTypeReferenceCollectionExample()
         {
@@ -17,7 +17,7 @@ namespace CodeTypeReferenceCollectionExample
             // Creates an empty CodeTypeReferenceCollection.
             CodeTypeReferenceCollection collection = new CodeTypeReferenceCollection();
             //</Snippet2>
-            
+
             //<Snippet3>
             // Adds a CodeTypeReference to the collection.
             collection.Add( new CodeTypeReference(typeof(bool)) );
@@ -36,7 +36,7 @@ namespace CodeTypeReferenceCollectionExample
             //</Snippet4>
 
             //<Snippet5>
-            // Tests for the presence of a CodeTypeReference in the 
+            // Tests for the presence of a CodeTypeReference in the
             // collection, and retrieves its index if it is found.
             CodeTypeReference testReference = new CodeTypeReference(typeof(bool));
             int itemIndex = -1;
@@ -45,7 +45,7 @@ namespace CodeTypeReferenceCollectionExample
             //</Snippet5>
 
             //<Snippet6>
-            // Copies the contents of the collection, beginning at index 0, 
+            // Copies the contents of the collection, beginning at index 0,
             // to the specified CodeTypeReference array.
             // 'references' is a CodeTypeReference array.
             collection.CopyTo( references, 0 );
@@ -72,6 +72,6 @@ namespace CodeTypeReferenceCollectionExample
             collection.RemoveAt(0);
             //</Snippet10>
             //</Snippet1>
-        }    
+        }
 	}
 }

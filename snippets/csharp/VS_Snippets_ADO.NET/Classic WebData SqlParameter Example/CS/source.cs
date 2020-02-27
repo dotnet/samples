@@ -12,7 +12,7 @@ public class Form1: Form
   protected SqlDataAdapter categoriesAdapter;
 
 // <Snippet1>
-public void AddSqlParameters() 
+public void AddSqlParameters()
 {
 // ...
 // create categoriesDataSet and categoriesAdapter

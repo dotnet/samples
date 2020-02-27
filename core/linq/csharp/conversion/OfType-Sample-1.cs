@@ -9,7 +9,7 @@ namespace Conversion
         // Output:
         // Numbers stored as doubles:
         // 1
-        // 7 
+        // 7
         public static void Example()
         {
             object[] numbers = { null, 1.0, "two", 3, "four", 5, "six", 7.0 };

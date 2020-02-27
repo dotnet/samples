@@ -1,7 +1,7 @@
 ﻿// <Snippet1>
 using System;
 using System.Reflection;
- 
+
 // Make a field.
 public class Myfield
 {
@@ -11,18 +11,18 @@ public class Myfield
         get{return field;}
     }
 }
-  
+
 public class Myfieldinfo
 {
     public static int Main()
     {
         Console.WriteLine ("\nReflection.FieldInfo");
         Myfield Myfield = new Myfield();
-  
+
         // Get the Type and FieldInfo.
         Type MyType = typeof(Myfield);
         FieldInfo Myfieldinfo = MyType.GetField("field", BindingFlags.NonPublic|BindingFlags.Instance);
-  
+
         // Get and display the MemberType.
         Console.Write ("\n{0}.", MyType.FullName);
         Console.Write ("{0} - ", Myfieldinfo.Name);

@@ -51,7 +51,7 @@ class SingleCachingHttpFetcher : IHttpFetcher
 // <snippet3>
 // With ConcurrencyMode.Reentrant, WCF makes sure that only one
 // thread runs in your code at a time. However, when you call out on a
-// channel, the operation can get called again on another thread. Therefore 
+// channel, the operation can get called again on another thread. Therefore
 // you must confirm that state is consistent both before channel calls and
 // before you return.
 [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Reentrant)]
@@ -74,7 +74,7 @@ class ReentrantCachingHttpFetcher : IHttpFetcher
         return this.cachedWebPage;
     }
 
-    // <-- Must guarantee that the cache is valid, because 
+    // <-- Must guarantee that the cache is valid, because
     // the operation can be called again before we return.
     string webPage = slow.GetWebPage(address);
     // <-- Can assume cache is valid.
@@ -92,7 +92,7 @@ class ReentrantCachingHttpFetcher : IHttpFetcher
 // </snippet3>
 
 // <snippet4>
-// With ConcurrencyMode.Multiple, threads can call an operation at any time.  
+// With ConcurrencyMode.Multiple, threads can call an operation at any time.
 // It is your responsibility to guard your state with locks. If
 // you always guarantee you leave state consistent when you leave
 // the lock, you can assume it is valid when you enter the lock.
@@ -117,7 +117,7 @@ class MultipleCachingHttpFetcher : IHttpFetcher
       if (this.cachedAddress == address)
       {
           return this.cachedWebPage;
-          // <-- Must guarantee that cache is valid because 
+          // <-- Must guarantee that cache is valid because
           // the operation returns and releases the lock.
       }
       // <-- Must guarantee that cache is valid here because
@@ -130,7 +130,7 @@ class MultipleCachingHttpFetcher : IHttpFetcher
     {
       // <-- Can assume cache is valid.
 
-      // <-- Cache is no longer valid because the operation 
+      // <-- Cache is no longer valid because the operation
       // changes one of the values.
       this.cachedAddress = address;
       this.cachedWebPage = webPage;

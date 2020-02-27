@@ -10,7 +10,7 @@ using System.ServiceModel.Activities;
 using System.Xml.Linq;
 
 namespace Microsoft.Samples.AccessingOperationContext.Service
-{    
+{
     class Program
     {
         const string addr = "http://localhost:8080/Service";
@@ -59,7 +59,7 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
                         Request = echoRequest,
                         Content = new SendParametersContent()
                         {
-                            Parameters = { { "result", new InArgument<string>(echoString) } } 
+                            Parameters = { { "result", new InArgument<string>(echoString) } }
                         }
                     }
                 }

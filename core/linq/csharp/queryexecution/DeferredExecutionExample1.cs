@@ -35,7 +35,7 @@ namespace QueryExecution
 
             foreach (var item in simpleQuery)
             {
-                Console.WriteLine("v = {0}, i = {1}", item, i); // now i is incremented          
+                Console.WriteLine("v = {0}, i = {1}", item, i); // now i is incremented
             }
         }
 
@@ -67,7 +67,7 @@ namespace QueryExecution
 
             foreach (var item in simpleQuery)
             {
-                Console.WriteLine("v = {0}, i = {1}", item, i); // now i is incremented          
+                Console.WriteLine("v = {0}, i = {1}", item, i); // now i is incremented
             }
         }
     }

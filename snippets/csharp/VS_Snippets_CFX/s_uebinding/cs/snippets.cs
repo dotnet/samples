@@ -45,7 +45,7 @@ namespace UE.ServiceModel.Samples
             binding.Name = "binding1";
             binding.Namespace = "http:\\My.ServiceModel.Samples";
             BindingElementCollection elements = binding.CreateBindingElements();
-            // </Snippet5> 
+            // </Snippet5>
 
             Uri baseAddress = new Uri("http://localhost:8000/servicemodelsamples/service");
             Uri address = new Uri("http://localhost:8000/servicemodelsamples/service/calc");

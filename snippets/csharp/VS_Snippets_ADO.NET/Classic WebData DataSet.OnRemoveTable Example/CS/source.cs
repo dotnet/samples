@@ -22,7 +22,7 @@ public class Sample
         protected override void OnRemoveTable(DataTable table)
         {
             Console.WriteLine(
-                "The '{0}' DataTable has been removed from the DataSet", 
+                "The '{0}' DataTable has been removed from the DataSet",
                 table.TableName);
         }
     }

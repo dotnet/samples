@@ -4,9 +4,9 @@ using System.Collections;
 public class SamplesArrayList
 {
 
-    public static void Main()  
+    public static void Main()
     {
- 
+
         // Creates and initializes a new ArrayList with three elements of the same value.
         ArrayList myAL = new ArrayList();
         myAL.Add( "the" );
@@ -52,9 +52,9 @@ public class SamplesArrayList
         Console.WriteLine();
     }
 }
-/* 
+/*
 This code produces output similar to the following:
- 
+
 The ArrayList contains the following values:
    [0]:    the
    [1]:    quick

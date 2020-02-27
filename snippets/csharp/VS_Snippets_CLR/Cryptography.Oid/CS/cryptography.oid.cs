@@ -18,7 +18,7 @@ public class OidSample
 		Oid o2 = new Oid(Name1);
 
 		// Create a new Oid object using the specified Value and Friendly Name properties.
-		// Note that the two are not compared to determine if the Value is associated 
+		// Note that the two are not compared to determine if the Value is associated
 		//  with the Friendly Name.
 		Oid o3 = new Oid(Value2, InvalidName);
 

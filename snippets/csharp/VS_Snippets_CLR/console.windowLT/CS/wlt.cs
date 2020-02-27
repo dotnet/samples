@@ -5,7 +5,7 @@ using System;
 using System.Text;
 using System.IO;
 //
-class Sample 
+class Sample
 {
     public static int saveBufferWidth;
     public static int saveBufferHeight;
@@ -13,7 +13,7 @@ class Sample
     public static int saveWindowWidth;
     public static bool saveCursorVisible;
 //
-    public static void Main() 
+    public static void Main()
     {
     string m1 = "1) Press the cursor keys to move the console window.\n" +
                 "2) Press any key to begin. When you're finished...\n" +
@@ -27,7 +27,7 @@ class Sample
     ConsoleKeyInfo cki;
     int y;
 //
-    try 
+    try
     {
     saveBufferWidth  = Console.BufferWidth;
     saveBufferHeight = Console.BufferHeight;
@@ -70,37 +70,37 @@ class Sample
     do
         {
         cki = Console.ReadKey(true);
-        switch (cki.Key) 
+        switch (cki.Key)
             {
             case ConsoleKey.LeftArrow:
-                if (Console.WindowLeft > 0) 
+                if (Console.WindowLeft > 0)
                     Console.SetWindowPosition(
                             Console.WindowLeft-1, Console.WindowTop);
                 break;
             case ConsoleKey.UpArrow:
-                if (Console.WindowTop > 0) 
+                if (Console.WindowTop > 0)
                     Console.SetWindowPosition(
                             Console.WindowLeft, Console.WindowTop-1);
                 break;
             case ConsoleKey.RightArrow:
-                if (Console.WindowLeft < (Console.BufferWidth-Console.WindowWidth)) 
+                if (Console.WindowLeft < (Console.BufferWidth-Console.WindowWidth))
                     Console.SetWindowPosition(
                             Console.WindowLeft+1, Console.WindowTop);
                 break;
             case ConsoleKey.DownArrow:
-                if (Console.WindowTop < (Console.BufferHeight-Console.WindowHeight)) 
+                if (Console.WindowTop < (Console.BufferHeight-Console.WindowHeight))
                     Console.SetWindowPosition(
                             Console.WindowLeft, Console.WindowTop+1);
                 break;
             }
-        } 
+        }
     while (cki.Key != ConsoleKey.Escape);  // end do-while
     } // end try
-    catch (IOException e) 
+    catch (IOException e)
         {
         Console.WriteLine(e.Message);
         }
-    finally 
+    finally
         {
         Console.Clear();
         Console.SetWindowSize(1, 1);

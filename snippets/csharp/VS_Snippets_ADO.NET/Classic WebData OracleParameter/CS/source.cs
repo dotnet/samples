@@ -11,7 +11,7 @@ public class Form1: Form
   protected OracleDataAdapter adapter;
 
 // <Snippet1>
-public void AddOracleParameters() 
+public void AddOracleParameters()
  {
  // ...
  // create dataSet and adapter

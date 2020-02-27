@@ -58,7 +58,7 @@ namespace ReceiveActivitySnippets
             ActivityBind activityBind1 = new ActivityBind();
             WorkflowParameterBinding workflowParameterBinding1 = new WorkflowParameterBinding();
             TypedOperationInfo typedOperationInfo1 = new TypedOperationInfo();
-            
+
             receiveQuoteFromShipper1.Activities.Add(shipper1ShippingQuote);
             contextToken1.Name = "Shipper1Context";
             contextToken1.OwnerActivityName = "GetShippingQuotes";
@@ -142,11 +142,11 @@ namespace ReceiveActivitySnippets
                     authorized = true;
                 }
             }
-            e.IsValid = authorized;  
+            e.IsValid = authorized;
         }
 
         //</snippet7>
-       
+
         void Container11()
         {
             //ReceiveActivity.ReceiveActivity()
@@ -169,7 +169,7 @@ namespace ReceiveActivitySnippets
             Dictionary<XmlQualifiedName, String> context = (Dictionary<XmlQualifiedName, String>)ReceiveActivity.GetContext(receiveActivity1, receiveActivity1.ContextToken);
             //</snippet13>
         }
-        
+
         //14 was a discontinued method
 
         void Container15()

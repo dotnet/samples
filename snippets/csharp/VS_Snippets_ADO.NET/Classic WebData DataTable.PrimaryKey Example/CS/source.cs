@@ -23,7 +23,7 @@ public class Form1 : Form
             Console.WriteLine($"{columns[i].ColumnName} {columns[i].DataType}");
         }
     }
- 
+
     private void SetPrimaryKeys()
     {
         // Create a new DataTable and set two DataColumn objects as primary keys.
@@ -41,7 +41,7 @@ public class Form1 : Form
 
         // Add the column to the array.
         keys[0] = column;
- 
+
         // Create column 2 and add it to the array.
         column = new DataColumn();
         column.DataType = Type.GetType("System.String");

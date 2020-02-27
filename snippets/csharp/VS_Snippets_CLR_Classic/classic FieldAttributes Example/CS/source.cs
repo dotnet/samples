@@ -22,7 +22,7 @@ public class Myfieldattributes
     {
         Console.WriteLine ("\nReflection.FieldAttributes");
         Demo d = new Demo();
- 
+
         // Get a Type object for Demo, and a FieldInfo for each of
         // the three fields. Use the FieldInfo to display field
         // name, value for the Demo object in d, and attributes.
@@ -42,10 +42,10 @@ public class Myfieldattributes
     }
 
     static void DisplayField(Object obj, FieldInfo f)
-    { 
+    {
         // Display the field name, value, and attributes.
         //
-        Console.WriteLine("{0} = \"{1}\"; attributes: {2}", 
+        Console.WriteLine("{0} = \"{1}\"; attributes: {2}",
             f.Name, f.GetValue(obj), f.Attributes);
     }
 }

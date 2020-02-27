@@ -5,7 +5,7 @@ using System.Data.OleDb;
 public class Sample
 {
     // <Snippet1>
-    private void UpdateDataTable(DataTable table, 
+    private void UpdateDataTable(DataTable table,
         OleDbDataAdapter myDataAdapter)
     {
         DataTable xDataTable = table.GetChanges();
@@ -16,7 +16,7 @@ public class Sample
             // Insert code to resolve errors.
         }
 
-        // After fixing errors, update the database with the DataAdapter 
+        // After fixing errors, update the database with the DataAdapter
         myDataAdapter.Update(xDataTable);
     }
     // </Snippet1>

@@ -7,9 +7,9 @@ using System.ServiceModel.Description;
 using System.Configuration;
 using System.ServiceModel;
 using System.Security.Principal;
-using System.IdentityModel.Claims; 
-using System.IdentityModel.Policy; 
-using System.IdentityModel.Tokens; 
+using System.IdentityModel.Claims;
+using System.IdentityModel.Policy;
+using System.IdentityModel.Tokens;
 using System.IdentityModel.Selectors;
 using System.Threading;
 
@@ -61,8 +61,8 @@ namespace Microsoft.ServiceModel.Samples
 			DisplayIdentityInformation();
 			using (ServiceSecurityContext.Current.WindowsIdentity.Impersonate())
 			{
-				// Make a system call in the caller's context and ACLs 
-				// on the system resource are enforced in the caller's context. 
+				// Make a system call in the caller's context and ACLs
+				// on the system resource are enforced in the caller's context.
 				Console.WriteLine("Impersonating the caller imperatively");
 				DisplayIdentityInformation();
 			}

@@ -1,8 +1,8 @@
 ﻿// <Snippet1>
  using System;
- using System.Globalization; 
- 
-public class MainClass { 
+ using System.Globalization;
+
+public class MainClass {
     public static void Main(string[] args)  {
         DateTime dt = DateTime.Now;
         String[] format = {
@@ -26,7 +26,7 @@ public class MainClass {
             date = dt.ToString(format[i], DateTimeFormatInfo.InvariantInfo);
             Console.WriteLine(String.Concat(format[i], " :" , date));
         }
-  
+
    /** Output.
     *
     * d :08/17/2000

@@ -11,7 +11,7 @@ public class Form1: Form
     protected DataGrid dataGrid1;
 
     // <Snippet1>
-    public void CreateParamCollection(OleDbCommand command) 
+    public void CreateParamCollection(OleDbCommand command)
     {
         OleDbParameterCollection paramCollection = command.Parameters;
         paramCollection.Add("@CategoryName", OleDbType.Char);

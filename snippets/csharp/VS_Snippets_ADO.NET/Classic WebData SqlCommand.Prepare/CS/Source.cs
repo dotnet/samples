@@ -25,7 +25,7 @@ namespace SqlPrepareCS
                     "INSERT INTO Region (RegionID, RegionDescription) " +
                     "VALUES (@id, @desc)";
                 SqlParameter idParam = new SqlParameter("@id", SqlDbType.Int, 0);
-                SqlParameter descParam = 
+                SqlParameter descParam =
                     new SqlParameter("@desc", SqlDbType.Text, 100);
                 idParam.Value = 20;
                 descParam.Value = "First Region";

@@ -1,11 +1,11 @@
 ﻿//<snippet1>
-// This example demonstrates the Console.BufferHeight and 
+// This example demonstrates the Console.BufferHeight and
 //                               Console.BufferWidth properties.
 using System;
 
-class Sample 
+class Sample
 {
-    public static void Main() 
+    public static void Main()
     {
     Console.WriteLine("The current buffer height is {0} rows.",
                       Console.BufferHeight);

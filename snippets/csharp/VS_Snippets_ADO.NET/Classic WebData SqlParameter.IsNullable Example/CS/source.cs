@@ -8,7 +8,7 @@ class Program
     {
     }
     // <Snippet1>
-    private static void AddSqlParameter(SqlCommand command, 
+    private static void AddSqlParameter(SqlCommand command,
         string paramValue)
     {
         SqlParameter parameter = new SqlParameter(

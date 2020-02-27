@@ -11,29 +11,29 @@ namespace MathHost
     {
         static void Main()
         {
-            // Assume that the current directory is the application folder, 
+            // Assume that the current directory is the application folder,
             // and that it contains the pipeline folder structure.
             String addInRoot = Environment.CurrentDirectory + "\\Pipeline";
-            
+
             // Update the cache files of the pipeline segments and add-ins.
             string[] warnings = AddInStore.Update(addInRoot);
             foreach (string warning in warnings)
             {
                 Console.WriteLine(warning);
             }
-            
+
             // Search for add-ins of type ICalculator (the host view of the add-in).
-            Collection<AddInToken> tokens = 
+            Collection<AddInToken> tokens =
                 AddInStore.FindAddIns(typeof(ICalculator), addInRoot);
-            
+
             // Ask the user which add-in they would like to use.
             AddInToken calcToken = ChooseCalculator(tokens);
 
-            // Activate the selected AddInToken in a new application domain 
+            // Activate the selected AddInToken in a new application domain
             // with the Internet trust level.
-            ICalculator calc = 
+            ICalculator calc =
                 calcToken.Activate<ICalculator>(AddInSecurityLevel.Internet);
-            
+
             // Run the add-in.
             RunCalculator(calc);
         }
@@ -46,7 +46,7 @@ namespace MathHost
                 return null;
             }
             Console.WriteLine("Available Calculators: ");
-            // Show the token properties for each token in the AddInToken collection 
+            // Show the token properties for each token in the AddInToken collection
             // (tokens), preceded by the add-in number in [] brackets.
             int tokNumber = 1;
             foreach (AddInToken tok in tokens)
@@ -77,7 +77,7 @@ namespace MathHost
 
         private static void RunCalculator(ICalculator calc)
         {
-            
+
             if (calc == null)
             {
                 //No calculators were found; read a line and exit.
@@ -116,7 +116,7 @@ namespace MathHost
                 {
                     Console.WriteLine("Invalid command: {0}. Commands must be formated: [number] [operation] [number]", line);
                 }
-                
+
                 line = Console.ReadLine();
             }
         }

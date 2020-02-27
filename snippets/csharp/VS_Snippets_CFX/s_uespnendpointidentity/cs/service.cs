@@ -16,7 +16,7 @@
     using System.Security.Principal;
     using System.ServiceModel;
     using System.ServiceModel.Channels;
-    using System.ServiceModel.Security; 
+    using System.ServiceModel.Security;
     using System.ServiceModel.Security.Tokens;
 
     public class IdentitySamples

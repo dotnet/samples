@@ -11,7 +11,7 @@ public class Form1: Form
     private void ClearColumnsCollection(DataTable table)
     {
         DataColumnCollection columns;
-        // Get the DataColumnCollection from a 
+        // Get the DataColumnCollection from a
         // DataTable in a DataSet.
         columns = table.Columns;
         columns.Clear();

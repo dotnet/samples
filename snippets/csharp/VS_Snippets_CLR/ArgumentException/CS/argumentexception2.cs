@@ -1,9 +1,9 @@
 ﻿// <Snippet3>
 using System;
 
-public class Example 
+public class Example
 {
-    static void Main() 
+    static void Main()
     {
         // Define some integers for a division operation.
         int[] values = { 10, 7 };
@@ -18,11 +18,11 @@ public class Example
         }
     }
 
-    static int DivideByTwo(int num) 
+    static int DivideByTwo(int num)
     {
         // If num is an odd number, throw an ArgumentException.
         if ((num & 1) == 1)
-            throw new ArgumentException(String.Format("{0} is not an even number", num), 
+            throw new ArgumentException(String.Format("{0} is not an even number", num),
                                       "num");
 
         // num is even, return half of its value.
@@ -31,7 +31,7 @@ public class Example
 }
 // This example displays the following output:
 //     10 divided by 2 is 5
-//     
+//
 //     ArgumentException: 7 is not an even number
 //     Parameter name: num
 //</snippet3>

@@ -15,12 +15,12 @@ public class Example
 {
     static void Main()
     {
-        //<snippet2> 
-        // Create an instance of the StringBuilder type using 
+        //<snippet2>
+        // Create an instance of the StringBuilder type using
         // Activator.CreateInstance.
         Object o = Activator.CreateInstance(typeof(StringBuilder));
 
-        // Append a string into the StringBuilder object and display the 
+        // Append a string into the StringBuilder object and display the
         // StringBuilder.
         StringBuilder sb = (StringBuilder) o;
         sb.Append("Hello, there.");
@@ -28,10 +28,10 @@ public class Example
         //</snippet2>
 
         //<snippet3>
-        // Create an instance of the SomeType class that is defined in this 
+        // Create an instance of the SomeType class that is defined in this
         // assembly.
-        System.Runtime.Remoting.ObjectHandle oh = 
-            Activator.CreateInstanceFrom(Assembly.GetEntryAssembly().CodeBase, 
+        System.Runtime.Remoting.ObjectHandle oh =
+            Activator.CreateInstanceFrom(Assembly.GetEntryAssembly().CodeBase,
                                          typeof(SomeType).FullName);
 
         // Call an instance method defined by the SomeType type using this object.
@@ -43,7 +43,7 @@ public class Example
 }
 
 /* This code produces the following output:
- 
+
 Hello, there.
 100 / 5 = 20
  */

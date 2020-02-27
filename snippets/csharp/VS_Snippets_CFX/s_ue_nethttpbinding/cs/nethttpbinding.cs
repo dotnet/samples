@@ -39,7 +39,7 @@ namespace Microsoft.Samples.Channels
                 throw new ArgumentOutOfRangeException("securityMode");
             }
 
-            this.securityMode = securityMode;   
+            this.securityMode = securityMode;
             this.httpTransport = new HttpTransportBindingElement();
             this.httpsTransport = new HttpsTransportBindingElement();
             this.binaryEncoding = new BinaryMessageEncodingBindingElement();

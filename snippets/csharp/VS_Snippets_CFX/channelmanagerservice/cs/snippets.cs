@@ -36,7 +36,7 @@ namespace ChannelManagerServiceSnippets
             workflowRuntime.AddService(new ChannelManagerService(localServiceHost.ClientEndpoints));
 
             localServiceHost.Open();
-            
+
             //</snippet1>
         }
         void Container2()

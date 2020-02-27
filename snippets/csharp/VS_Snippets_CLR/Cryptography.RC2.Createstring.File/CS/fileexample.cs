@@ -11,9 +11,9 @@ class RC2Sample
     {
         try
         {
-            // Create a new RC2 object to generate a key 
-            // and initialization vector (IV).  Specify one 
-            // of the recognized simple names for this 
+            // Create a new RC2 object to generate a key
+            // and initialization vector (IV).  Specify one
+            // of the recognized simple names for this
             // algorithm.
             RC2 RC2alg = RC2.Create("RC2");
 
@@ -26,7 +26,7 @@ class RC2Sample
 
             // Decrypt the text from a file using the file name, key, and IV.
             string Final = DecryptTextFromFile(FileName, RC2alg.Key, RC2alg.IV);
-            
+
             // Display the decrypted string to the console.
             Console.WriteLine(Final);
         }
@@ -46,19 +46,19 @@ class RC2Sample
             // Create a new RC2 object.
             RC2 RC2alg = RC2.Create();
 
-            // Create a CryptoStream using the FileStream 
+            // Create a CryptoStream using the FileStream
             // and the passed key and initialization vector (IV).
-            CryptoStream cStream = new CryptoStream(fStream, 
-                RC2alg.CreateEncryptor(Key,IV), 
-                CryptoStreamMode.Write); 
+            CryptoStream cStream = new CryptoStream(fStream,
+                RC2alg.CreateEncryptor(Key,IV),
+                CryptoStreamMode.Write);
 
             // Create a StreamWriter using the CryptoStream.
             StreamWriter sWriter = new StreamWriter(cStream);
 
-            // Write the data to the stream 
+            // Write the data to the stream
             // to encrypt it.
             sWriter.WriteLine(Data);
-  
+
             // Close the streams and
             // close the file.
             sWriter.Close();
@@ -79,32 +79,32 @@ class RC2Sample
     {
         try
         {
-            // Create or open the specified file. 
+            // Create or open the specified file.
             FileStream fStream = File.Open(FileName, FileMode.OpenOrCreate);
 
             // Create a new RC2 object.
             RC2 RC2alg = RC2.Create();
-  
-            // Create a CryptoStream using the FileStream 
+
+            // Create a CryptoStream using the FileStream
             // and the passed key and initialization vector (IV).
-            CryptoStream cStream = new CryptoStream(fStream, 
-                RC2alg.CreateDecryptor(Key,IV), 
-                CryptoStreamMode.Read); 
+            CryptoStream cStream = new CryptoStream(fStream,
+                RC2alg.CreateDecryptor(Key,IV),
+                CryptoStreamMode.Read);
 
             // Create a StreamReader using the CryptoStream.
             StreamReader sReader = new StreamReader(cStream);
 
-            // Read the data from the stream 
+            // Read the data from the stream
             // to decrypt it.
             string val = sReader.ReadLine();
-    
+
             // Close the streams and
             // close the file.
             sReader.Close();
             cStream.Close();
             fStream.Close();
 
-            // Return the string. 
+            // Return the string.
             return val;
         }
         catch(CryptographicException e)

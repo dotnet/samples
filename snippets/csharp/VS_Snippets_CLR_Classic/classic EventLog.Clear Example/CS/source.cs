@@ -2,7 +2,7 @@
 using System;
 using System.Diagnostics;
 using System.Threading;
-              
+
 class MySample{
 
     public static void Main(){
@@ -11,8 +11,8 @@ class MySample{
         EventLog myLog = new EventLog();
         myLog.Log = "myNewLog";
 
-        myLog.Clear();                                                                    
-    }       
+        myLog.Clear();
+    }
 }
-   
+
 // </Snippet1>

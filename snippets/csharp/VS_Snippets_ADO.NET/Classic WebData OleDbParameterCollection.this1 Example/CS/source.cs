@@ -12,7 +12,7 @@ public class Form1: Form
     protected OleDbParameterCollection parameters;
 
     // <Snippet1>
-    public void SearchParameters() 
+    public void SearchParameters()
     {
         // ...
         // create OleDbParameterCollection parameters

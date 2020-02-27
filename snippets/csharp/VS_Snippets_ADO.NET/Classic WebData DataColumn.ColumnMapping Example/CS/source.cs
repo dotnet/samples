@@ -10,7 +10,7 @@ public class Form1: Form
     private void AddColumn(DataTable table)
     {
         // Create a new column and set its properties.
-        DataColumn column = new DataColumn("column", 
+        DataColumn column = new DataColumn("column",
             typeof(int), "", MappingType.Attribute);
         column.DataType = Type.GetType("System.String");
         column.ColumnMapping = MappingType.Element;

@@ -11,7 +11,7 @@ public class Form1: Form
   protected DataGrid dataGrid1;
 
 // <Snippet1>
- public void CreateOracleCommand() 
+ public void CreateOracleCommand()
  {
     OracleCommand command = new OracleCommand();
     command.CommandText = "SELECT * FROM Emp ORDER BY EmpNo";

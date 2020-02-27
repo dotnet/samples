@@ -19,7 +19,7 @@ namespace Microsoft.WCF.Documentation
       // Create a transaction to flow
       TransactionOptions transactionOptions = new TransactionOptions();
       transactionOptions.IsolationLevel = IsolationLevel.ReadCommitted;
-      using (TransactionScope tx 
+      using (TransactionScope tx
         = new TransactionScope(TransactionScopeOption.RequiresNew, transactionOptions))
       {
         try
@@ -50,8 +50,8 @@ namespace Microsoft.WCF.Documentation
             Console.WriteLine("A transaction problem has occurred: {0}", txException.Message);
           wcfClient.Abort();
         }
-        // Note: Catch sub classes of CommunicationException, such as 
-        // UnknownFaultException or FaultException<DetailType>, prior 
+        // Note: Catch sub classes of CommunicationException, such as
+        // UnknownFaultException or FaultException<DetailType>, prior
         // to catching CommunicationException.
         catch (FaultException unknown)
         {

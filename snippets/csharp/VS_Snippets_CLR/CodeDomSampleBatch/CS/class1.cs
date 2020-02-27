@@ -15,13 +15,13 @@ namespace CodeDomSampleBatch
 
             //<Snippet1>
             // Creates a code expression for a CodeExpressionStatement to contain.
-            CodeExpression invokeExpression = new CodeMethodInvokeExpression( 
-                new CodeTypeReferenceExpression("Console"), 
+            CodeExpression invokeExpression = new CodeMethodInvokeExpression(
+                new CodeTypeReferenceExpression("Console"),
                 "Write", new CodePrimitiveExpression("Example string") );
 
             // Creates a statement using a code expression.
             CodeExpressionStatement expressionStatement;
-            expressionStatement = new CodeExpressionStatement( invokeExpression );                        
+            expressionStatement = new CodeExpressionStatement( invokeExpression );
 
             // A C# code generator produces the following source code for the preceeding example code:
 
@@ -36,19 +36,19 @@ namespace CodeDomSampleBatch
             //<Snippet9>
             // Creates a CodeSnippetExpression that represents a literal string that
             // can be used as an expression in a CodeDOM graph.
-            CodeSnippetExpression literalExpression = 
+            CodeSnippetExpression literalExpression =
                 new CodeSnippetExpression("Literal expression");
             //</Snippet9>
 
             //<Snippet10>
             // Creates a statement using a literal string.
-            CodeSnippetStatement literalStatement = 
-                new CodeSnippetStatement("Console.Write(\"Test literal statement output\")");            
+            CodeSnippetStatement literalStatement =
+                new CodeSnippetStatement("Console.Write(\"Test literal statement output\")");
             //</Snippet10>
 
             //<Snippet11>
             // Creates a type member using a literal string.
-            CodeSnippetTypeMember literalMember = 
+            CodeSnippetTypeMember literalMember =
                 new CodeSnippetTypeMember("public static void TestMethod() {}");
             //</Snippet11>
 
@@ -60,9 +60,9 @@ namespace CodeDomSampleBatch
             //<Snippet8>
             // Creates a compile unit using a literal sring;
             string literalCode;
-            literalCode = "using System; namespace TestLiteralCode " + 
+            literalCode = "using System; namespace TestLiteralCode " +
                 "{ public class TestClass { public TestClass() {} } }";
-            CodeSnippetCompileUnit csu = new CodeSnippetCompileUnit( literalCode );            
+            CodeSnippetCompileUnit csu = new CodeSnippetCompileUnit( literalCode );
             //</Snippet8>
             return csu;
         }
@@ -73,7 +73,7 @@ namespace CodeDomSampleBatch
             //<Snippet3>
             //<Snippet4>
             // Creates an empty CodeNamespaceImportCollection.
-            CodeNamespaceImportCollection collection = 
+            CodeNamespaceImportCollection collection =
                 new CodeNamespaceImportCollection();            			
             //</Snippet4>
 
@@ -84,16 +84,16 @@ namespace CodeDomSampleBatch
 
             //<Snippet6>
             // Adds an array of CodeNamespaceImport objects to the collection.
-            CodeNamespaceImport[] Imports = { 
+            CodeNamespaceImport[] Imports = {
                     new CodeNamespaceImport("System"),
                     new CodeNamespaceImport("System.Drawing") };
             collection.AddRange( Imports );
             //</Snippet6>
-            
+
             //<Snippet7>
             // Retrieves the count of the items in the collection.
             int collectionCount = collection.Count;
-            //</Snippet7>            
+            //</Snippet7>
             //</Snippet3>
         }
 	}

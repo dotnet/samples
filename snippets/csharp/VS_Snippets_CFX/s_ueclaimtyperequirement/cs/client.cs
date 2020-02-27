@@ -76,7 +76,7 @@ namespace Microsoft.ServiceModel.Samples
             Console.WriteLine();
             Console.WriteLine("Press <ENTER> to terminate client.");
             Console.ReadLine();
-            
+
             ((IChannel)channel).Close();
         }
     }

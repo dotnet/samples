@@ -2,43 +2,43 @@
  using System;
  using System.Globalization;
  public class SamplesDateTimeFormatInfo  {
- 
+
     public static void Main()  {
- 
+
        // Creates a new DateTimeFormatinfo.
        DateTimeFormatInfo myDtfi = new DateTimeFormatInfo();
- 
+
        // Gets and prints all the patterns.
        String[] myPatternsArray = myDtfi.GetAllDateTimePatterns();
        Console.WriteLine( "ALL the patterns:" );
        PrintIndexAndValues( myPatternsArray );
- 
+
        // Gets and prints the pattern(s) associated with some of the format characters.
        myPatternsArray = myDtfi.GetAllDateTimePatterns('d');
        Console.WriteLine( "The patterns for 'd':" );
        PrintIndexAndValues( myPatternsArray );
- 
+
        myPatternsArray = myDtfi.GetAllDateTimePatterns('D');
        Console.WriteLine( "The patterns for 'D':" );
        PrintIndexAndValues( myPatternsArray );
- 
+
        myPatternsArray = myDtfi.GetAllDateTimePatterns('f');
        Console.WriteLine( "The patterns for 'f':" );
        PrintIndexAndValues( myPatternsArray );
- 
+
        myPatternsArray = myDtfi.GetAllDateTimePatterns('F');
        Console.WriteLine( "The patterns for 'F':" );
        PrintIndexAndValues( myPatternsArray );
- 
+
        myPatternsArray = myDtfi.GetAllDateTimePatterns('r');
        Console.WriteLine( "The patterns for 'r':" );
        PrintIndexAndValues( myPatternsArray );
- 
+
        myPatternsArray = myDtfi.GetAllDateTimePatterns('R');
        Console.WriteLine( "The patterns for 'R':" );
        PrintIndexAndValues( myPatternsArray );
     }
- 
+
     public static void PrintIndexAndValues( String[] myArray )  {
        int i = 0;
        foreach ( String s in myArray )
@@ -48,7 +48,7 @@
  }
 
 
-/* 
+/*
 This code produces the following output.
 
 ALL the patterns:

@@ -47,8 +47,8 @@ namespace Microsoft.WCF.Documentation
           else
             Console.WriteLine("A transaction problem has occurred: {0}", txException.Message);
         }
-        // Note: Catch sub classes of CommunicationException, such as 
-        // UnknownFaultException or FaultException<DetailType>, prior 
+        // Note: Catch sub classes of CommunicationException, such as
+        // UnknownFaultException or FaultException<DetailType>, prior
         // to catching CommunicationException.
         catch (FaultException unknown)
         {

@@ -18,12 +18,12 @@ namespace CodeDomSamples
 
             // A C# code generator produces the following source code for the preceeding example code:
 
-            //    public class Type1 
+            //    public class Type1
             //    {
             //
-            //        static Type1() 
+            //        static Type1()
             //        {
-            //        }       
+            //        }
             //    }
             //</Snippet2>
         }

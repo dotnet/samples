@@ -29,21 +29,21 @@ namespace Snippets
             WSHttpBinding b = new WSHttpBinding();
             b.Name = "HttpOrderedReliableSessionBinding";
 
-            // Get a reference to the OptionalreliableSession object of the 
+            // Get a reference to the OptionalreliableSession object of the
             // binding and set its properties to new values.
             OptionalReliableSession myReliableSession = b.ReliableSession;
             myReliableSession.Enabled = true; // The default is false.
-            myReliableSession.Ordered = false; // The default is true. 
-            myReliableSession.InactivityTimeout = 
+            myReliableSession.Ordered = false; // The default is true.
+            myReliableSession.InactivityTimeout =
                 new TimeSpan(0, 15, 0); // The default is 10 minutes.
-            //</snippet1> 
+            //</snippet1>
             // Create a URI for the service's base address.
             Uri baseAddress = new Uri("http://localhost:8008/Calculator");
 
             // Create a service host.
             ServiceHost sh = new ServiceHost(typeof(Calculator), baseAddress);
 
-            // Optional: Print out the binding information. 
+            // Optional: Print out the binding information.
             PrintBindingInfo(b);
             // Create a URI for an endpoint, then add a service endpoint using the
             // binding with the latered OptionalReliableSession settings.

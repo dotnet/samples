@@ -74,7 +74,7 @@ namespace AtomFeedFormatterSnippets
             List<SyndicationItem> items = new List<SyndicationItem>();
             items.Add(item);
             feed.Items = items;
-            
+
             XmlWriter atomWriter = XmlWriter.Create("Atom.xml");
             // <Snippet5>
             Atom10FeedFormatter<MySyndicationFeed> atomFormatter = new Atom10FeedFormatter<MySyndicationFeed>(feed);

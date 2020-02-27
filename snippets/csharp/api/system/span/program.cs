@@ -22,7 +22,7 @@ class Program
         // Create a span over an array.
         var array = new byte[100];
         var arraySpan = new Span<byte>(array);
-        
+
         byte data = 0;
         for (int ctr = 0; ctr < arraySpan.Length; ctr++)
             arraySpan[ctr] = data++;
@@ -38,7 +38,7 @@ class Program
 
     private static void CreateSpanFromNativeMemory()
     {
-        // <Snippet2> 
+        // <Snippet2>
         // Create a span from native memory.
         var native = Marshal.AllocHGlobal(100);
         Span<byte> nativeSpan;
@@ -87,7 +87,7 @@ public class Program2
         // Create a span over an array.
         var array = new byte[100];
         var arraySpan = new Span<byte>(array);
-        
+
         InitializeSpan(arraySpan);
         Console.WriteLine($"The sum is {ComputeSum(arraySpan):N0}");
 
@@ -101,7 +101,7 @@ public class Program2
 
         InitializeSpan(nativeSpan);
         Console.WriteLine($"The sum is {ComputeSum(nativeSpan):N0}");
-        
+
         Marshal.FreeHGlobal(native);
 
         // Create a span on the stack.

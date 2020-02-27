@@ -29,16 +29,16 @@ namespace CS
 		}
 	}
 	
-	public class DerivedHost : ServiceHost 
-	{ 
+	public class DerivedHost : ServiceHost
+	{
 
-		public DerivedHost( Type t, params Uri[] baseAddresses ) : 
-						base( t, baseAddresses ) {} 
+		public DerivedHost( Type t, params Uri[] baseAddresses ) :
+						base( t, baseAddresses ) {}
 
-		protected override void OnOpening() 
-		{ 
-			// add code here 
-		} 
+		protected override void OnOpening()
+		{
+			// add code here
+		}
 
 		// <Snippet1>
 		static void Main()
@@ -46,15 +46,15 @@ namespace CS
 			ServiceHostFactory factory = new ServiceHostFactory();
 		}
 		// </Snippet1>
-	} 
+	}
 
 	// <Snippet0>
-	public class DerivedFactory : ServiceHostFactory 
-	{ 
+	public class DerivedFactory : ServiceHostFactory
+	{
 
-		protected override ServiceHost CreateServiceHost( Type t, Uri[] baseAddresses ) 
-		{ 
-			return new DerivedHost( t, baseAddresses ); 
+		protected override ServiceHost CreateServiceHost( Type t, Uri[] baseAddresses )
+		{
+			return new DerivedHost( t, baseAddresses );
 		}
 
 		//Then in the CreateServiceHost method, we can do all of the
@@ -77,5 +77,5 @@ namespace CS
 	//To use this factory instead of the default factory,
 	//provide the type name in the @ServiceHost directive as follows:
 
-	//<% @ServiceHost Factory="DerivedFactory" Service="MyService" %> 
+	//<% @ServiceHost Factory="DerivedFactory" Service="MyService" %>
 }

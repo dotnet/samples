@@ -11,7 +11,7 @@ class Program
     // <Snippet1>
     public void InsertRow(string connectionString, string insertSQL)
     {
-        using (OdbcConnection connection = 
+        using (OdbcConnection connection =
                    new OdbcConnection(connectionString))
         {
             // The insertSQL string contains a SQL statement that

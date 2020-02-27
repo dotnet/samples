@@ -18,7 +18,7 @@ class RSACSPSample
             byte[] originalData = ByteConverter.GetBytes(dataString);
             byte[] signedData;
 
-            // Create a new instance of the RSACryptoServiceProvider class 
+            // Create a new instance of the RSACryptoServiceProvider class
             // and automatically create a new key-pair.
             RSACryptoServiceProvider RSAalg = new RSACryptoServiceProvider();
 
@@ -31,7 +31,7 @@ class RSACSPSample
             // Hash and sign the data.
             signedData = HashAndSignBytes(originalData, Key);
 
-            // Verify the data and display the result to the 
+            // Verify the data and display the result to the
             // console.
             if(VerifySignedHash(originalData, signedData, Key))
             {
@@ -50,9 +50,9 @@ class RSACSPSample
     public static byte[] HashAndSignBytes(byte[] DataToSign, RSAParameters Key)
     {
         try
-        {   
-            // Create a new instance of RSACryptoServiceProvider using the 
-            // key from RSAParameters.  
+        {
+            // Create a new instance of RSACryptoServiceProvider using the
+            // key from RSAParameters.
             RSACryptoServiceProvider RSAalg = new RSACryptoServiceProvider();
 
             RSAalg.ImportParameters(Key);
@@ -73,7 +73,7 @@ class RSACSPSample
     {
         try
         {
-            // Create a new instance of RSACryptoServiceProvider using the 
+            // Create a new instance of RSACryptoServiceProvider using the
             // key from RSAParameters.
             RSACryptoServiceProvider RSAalg = new RSACryptoServiceProvider();
 
@@ -81,7 +81,7 @@ class RSACSPSample
 
             // Verify the data using the signature.  Pass a new instance of SHA1CryptoServiceProvider
             // to specify the use of SHA1 for hashing.
-            return RSAalg.VerifyData(DataToVerify, new SHA1CryptoServiceProvider(), SignedData); 
+            return RSAalg.VerifyData(DataToVerify, new SHA1CryptoServiceProvider(), SignedData);
         }
         catch(CryptographicException e)
         {

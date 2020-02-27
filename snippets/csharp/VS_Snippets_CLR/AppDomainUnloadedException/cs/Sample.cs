@@ -16,7 +16,7 @@ public class Example
         t.Start(" from an ordinary thread");
         t.Join();
 
-        // 3. Execute ThreadProc on the main thread, with 
+        // 3. Execute ThreadProc on the main thread, with
         //    exception handling.
         try
         {
@@ -55,14 +55,14 @@ public class Example
 }
 
 // TestClass derives from MarshalByRefObject, so it can be marshaled
-// across application domain boundaries. 
+// across application domain boundaries.
 //
 public class TestClass : MarshalByRefObject
 {
     public void UnloadCurrentDomain(object state)
     {
         Console.WriteLine("\nUnloading the current AppDomain{0}.", state);
- 
+
         // Unload the current application domain. This causes
         // an AppDomainUnloadedException to be thrown.
         //

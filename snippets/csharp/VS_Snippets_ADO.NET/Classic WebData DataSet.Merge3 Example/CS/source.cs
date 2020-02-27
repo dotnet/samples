@@ -20,9 +20,9 @@ public class Form1: Form
         dataSet.Tables.Add(table);
 
         // Add columns
-        DataColumn c1 = new DataColumn("id", 
+        DataColumn c1 = new DataColumn("id",
             Type.GetType("System.Int32"),"");
-        DataColumn c2 = new DataColumn("Item", 
+        DataColumn c2 = new DataColumn("Item",
             Type.GetType("System.Int32"),"");
         table.Columns.Add(c1);
         table.Columns.Add(c2);
@@ -35,7 +35,7 @@ public class Form1: Form
         table.PrimaryKey=keyCol;
 
         // Add a RowChanged event handler for the table.
-        table.RowChanged += new 
+        table.RowChanged += new
             DataRowChangeEventHandler(Row_Changed);
 
         // Add ten rows.
@@ -70,14 +70,14 @@ public class Form1: Form
         dataSet.Merge(t2);
         PrintValues(dataSet, "Merged With table.");
     }
- 
-    private void Row_Changed(object sender, 
+
+    private void Row_Changed(object sender,
         DataRowChangeEventArgs e)
     {
-        Console.WriteLine("Row Changed " + e.Action.ToString() 
+        Console.WriteLine("Row Changed " + e.Action.ToString()
             + "\table" + e.Row.ItemArray[0]);
     }
- 
+
     private void PrintValues(DataSet dataSet, string label)
     {
         Console.WriteLine("\n" + label);

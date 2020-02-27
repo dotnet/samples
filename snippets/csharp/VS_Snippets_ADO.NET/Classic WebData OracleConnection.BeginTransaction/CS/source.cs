@@ -25,10 +25,10 @@ class Class1
 
             try
             {
-                command.CommandText = 
+                command.CommandText =
                     "INSERT INTO Dept (DeptNo, Dname, Loc) values (50, 'TECHNOLOGY', 'DENVER')";
                 command.ExecuteNonQuery();
-                command.CommandText = 
+                command.CommandText =
                     "INSERT INTO Dept (DeptNo, Dname, Loc) values (60, 'ENGINEERING', 'KANSAS CITY')";
                 command.ExecuteNonQuery();
                 transaction.Commit();

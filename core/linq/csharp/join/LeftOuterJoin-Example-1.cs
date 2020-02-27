@@ -9,7 +9,7 @@ namespace Join
         // A left outer join is like a cross join, except that all the left hand side elements get included at least once,
         // even if they don't match any right hand side elements. Note how Vegetables shows up in the output even though
         // it has no matching products.
-        // Output: 
+        // Output:
         // Chai: Beverages
         // Chang: Beverages
         // Guarana Fantastica: Beverages
@@ -85,7 +85,7 @@ namespace Join
         // A left outer join is like a cross join, except that all the left hand side elements get included at least once,
         // even if they don't match any right hand side elements. Note how Vegetables shows up in the output even though
         // it has no matching products.
-        // Output: 
+        // Output:
         // Chai: Beverages
         // Chang: Beverages
         // Guarana Fantastica: Beverages

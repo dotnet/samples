@@ -9,5 +9,5 @@ public class Form1: Form
 // <Snippet1>
 FileStream s2 = new FileStream(name, FileMode.Open, FileAccess.Read, FileShare.Read);
 // </Snippet1>
- } 
+ }
 }

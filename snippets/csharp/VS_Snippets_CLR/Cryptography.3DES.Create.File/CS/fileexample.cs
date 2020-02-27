@@ -47,7 +47,7 @@ class TripleDESSample
                 using (TripleDES tripleDESalg = TripleDES.Create())
                 {
 
-                    // Create a CryptoStream using the FileStream 
+                    // Create a CryptoStream using the FileStream
                     // and the passed key and initialization vector (IV).
                     using (CryptoStream cStream = new CryptoStream(fStream,
                         tripleDESalg.CreateEncryptor(Key, IV),
@@ -58,7 +58,7 @@ class TripleDESSample
                         using (StreamWriter sWriter = new StreamWriter(cStream))
                         {
 
-                            // Write the data to the stream 
+                            // Write the data to the stream
                             // to encrypt it.
                             sWriter.WriteLine(Data);
                         }
@@ -81,7 +81,7 @@ class TripleDESSample
         try
         {
             string retVal = "";
-            // Create or open the specified file. 
+            // Create or open the specified file.
             using (FileStream fStream = File.Open(FileName, FileMode.OpenOrCreate))
             {
 
@@ -89,7 +89,7 @@ class TripleDESSample
                 using (TripleDES tripleDESalg = TripleDES.Create())
                 {
 
-                    // Create a CryptoStream using the FileStream 
+                    // Create a CryptoStream using the FileStream
                     // and the passed key and initialization vector (IV).
                     using (CryptoStream cStream = new CryptoStream(fStream,
                         tripleDESalg.CreateDecryptor(Key, IV),
@@ -100,14 +100,14 @@ class TripleDESSample
                         using (StreamReader sReader = new StreamReader(cStream))
                         {
 
-                            // Read the data from the stream 
+                            // Read the data from the stream
                             // to decrypt it.
                             retVal = sReader.ReadLine();
                         }
                     }
                 }
             }
-            // Return the string. 
+            // Return the string.
             return retVal;
         }
         catch (CryptographicException e)

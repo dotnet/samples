@@ -135,7 +135,7 @@ namespace DataContractSerializerExample
             set { Country_value = value; }
         }
 
-        // Note that this field is not serialized. Instead, it is 
+        // Note that this field is not serialized. Instead, it is
         // populated after serialization.
         private string Currency_value;
         public string Currency
@@ -144,7 +144,7 @@ namespace DataContractSerializerExample
             set { Currency_value = value; }
         }
 
-        // Use this method to look up the country/region and set 
+        // Use this method to look up the country/region and set
         // the Currency field after deserialization.
         [OnDeserialized]
         private void GetLocalRate(StreamingContext sc)
@@ -153,7 +153,7 @@ namespace DataContractSerializerExample
                 this.Currency = "Yen";
         }
 
-        // Implement the IExensibleDataObject interface to 
+        // Implement the IExensibleDataObject interface to
         // retain future version information.
         private ExtensionDataObject extensionData_Value;
 
@@ -313,13 +313,13 @@ namespace DataContractSerializerExample
             // Use the writer to start a document.
             writer.WriteStartDocument(true);
 
-            // Use the serializer to write the start of the 
+            // Use the serializer to write the start of the
             // object data. Use it again to write the object
-            // data. 
+            // data.
             ser.WriteStartObject(writer, p);
             ser.WriteObjectContent(writer, p);
 
-            // Use the serializer to write the end of the 
+            // Use the serializer to write the end of the
             // object data. Then use the writer to write the end
             // of the document.
             ser.WriteEndObject(writer);
@@ -342,15 +342,15 @@ namespace DataContractSerializerExample
             XmlDictionaryReader reader =
                 XmlDictionaryReader.CreateTextReader(fs, new XmlDictionaryReaderQuotas());
 
-            // Create the NetDataContractSerializer, specifying the type, 
+            // Create the NetDataContractSerializer, specifying the type,
             // root, and namespace to use. The root value corresponds
             // to the DataContract.Name value, and the namespace value
             // corresponds to the DataContract.Namespace value.
             NetDataContractSerializer ser =
                 new NetDataContractSerializer();
 
-            // Test whether the serializer is on the start of the 
-            // object data. If so, read the data and write it 
+            // Test whether the serializer is on the start of the
+            // object data. If so, read the data and write it
             // to the console.
             while (reader.Read())
             {
@@ -403,7 +403,7 @@ namespace DataContractSerializerExample
             ser.WriteObjectContent(writer, p);
             ser.WriteEndObject(writer);
 
-            // Use the writer to write the end element 
+            // Use the writer to write the end element
             // and end of the document.
             writer.WriteEndElement();
             writer.WriteEndDocument();
@@ -478,7 +478,7 @@ namespace DataContractSerializerExample
             StreamingContext sc = new StreamingContext
                 (StreamingContextStates.CrossAppDomain);
 
-            // Create an instance of a class that implements the 
+            // Create an instance of a class that implements the
             // ISurrogateSelector interface. The implementation code
             // is not shown here.
             MySelector mySurrogateSelector = new MySelector();
@@ -503,7 +503,7 @@ namespace DataContractSerializerExample
             StreamingContext sc = new StreamingContext
                 (StreamingContextStates.CrossAppDomain);
 
-            // Create an instance of a class that implements the 
+            // Create an instance of a class that implements the
             // ISurrogateSelector interface. The implementation code
             // is not shown here.
             MySelector mySurrogateSelector = new MySelector();
@@ -517,7 +517,7 @@ namespace DataContractSerializerExample
                 true,
                 FormatterAssemblyStyle.Simple,
                 mySurrogateSelector);
-            // Other code not shown.            
+            // Other code not shown.
         }
         //</snippet13>
 
@@ -534,7 +534,7 @@ namespace DataContractSerializerExample
             XmlDictionaryString name_value = d.Add("Customer");
             XmlDictionaryString ns_value = d.Add("http://www.contoso.com");
 
-            // Create an instance of a class that implements the 
+            // Create an instance of a class that implements the
             // ISurrogateSelector interface. The implementation code
             // is not shown here.
             MySelector mySurrogateSelector = new MySelector();

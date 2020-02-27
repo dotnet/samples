@@ -12,7 +12,7 @@ public class Form1: Form
     protected OracleParameterCollection parameters;
 
     // <Snippet1>
-    public void SearchOracleParams() 
+    public void SearchOracleParams()
     {
         // ...
         // create OracleParameterCollection parameters

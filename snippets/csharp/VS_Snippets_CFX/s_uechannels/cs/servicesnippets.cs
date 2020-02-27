@@ -201,7 +201,7 @@ namespace UE.Samples.Channel
             BasicHttpBinding binding = new BasicHttpBinding();
             //CustomBinding binding = new CustomBinding();
             //binding.Elements.Add(new HttpTransportBindingElement());
-       
+
             BindingParameterCollection paramCollection = new BindingParameterCollection();
             IChannelListener<IReplyChannel> listener = binding.BuildChannelListener<IReplyChannel>
                 (new Uri("http://localhost:8000/ChannelApp"), paramCollection);

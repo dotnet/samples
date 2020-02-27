@@ -12,16 +12,16 @@ namespace Microsoft.ServiceModel.Samples
 
     using System.Threading;
 
-    // ItemDequeuedCallback is called as an item is dequeued from the InputQueue.  The 
+    // ItemDequeuedCallback is called as an item is dequeued from the InputQueue.  The
     // InputQueue lock is not held during the callback.  However, the user code is
     // not notified of the item being available until the callback returns.  If you
-    // are not sure if the callback blocks for a long time, then first call 
+    // are not sure if the callback blocks for a long time, then first call
     // IOThreadScheduler.ScheduleCallback to get to a "safe" thread.
     delegate void ItemDequeuedCallback();
 
     /// <summary>
-    /// Handles asynchronous interactions between producers and consumers. 
-    /// Producers can dispatch available data to the input queue, 
+    /// Handles asynchronous interactions between producers and consumers.
+    /// Producers can dispatch available data to the input queue,
     /// where it is dispatched to a waiting consumer or stored until a
     /// consumer becomes available. Consumers can synchronously or asynchronously
     /// request data from the queue, which is returned when data becomes
@@ -72,7 +72,7 @@ namespace Microsoft.ServiceModel.Samples
             get
             {
                 lock (ThisLock)
-                {                    
+                {
                     return itemQueue.ItemCount;
                 }
             }
@@ -1061,7 +1061,7 @@ namespace Microsoft.ServiceModel.Samples
                 }
                 pendingCount--;
             }
-            
+
             public bool HasAvailableItem
             {
                 get { return totalCount > pendingCount; }

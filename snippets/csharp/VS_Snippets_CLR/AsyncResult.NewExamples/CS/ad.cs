@@ -14,7 +14,7 @@ public class SampleSynchronized : ContextBoundObject {
     public int Square(int i)  {
 
         Console.Write("The hash of the thread executing ");
-        Console.WriteLine("SampleSynchronized.Square is: {0}", 
+        Console.WriteLine("SampleSynchronized.Square is: {0}",
                              Thread.CurrentThread.GetHashCode());
         return i*i;
     }
@@ -77,8 +77,8 @@ public class AsyncResultSample {
 
         Console.WriteLine("Making a single asynchronous call on the context-bound object:");
 
-        IAsyncResult ar1 = sampleDelegate.BeginInvoke( param, 
-                              new AsyncCallback(AsyncResultSample.MyCallback), 
+        IAsyncResult ar1 = sampleDelegate.BeginInvoke( param,
+                              new AsyncCallback(AsyncResultSample.MyCallback),
                               param);
 
         Console.WriteLine("Waiting for the asynchronous call to complete...");
@@ -89,7 +89,7 @@ public class AsyncResultSample {
 
         Console.WriteLine("");
         Console.WriteLine("Waiting for the AsyncCallback to complete...");
-        // Note that normally, a callback and a wait handle would not 
+        // Note that normally, a callback and a wait handle would not
         // both be used on the same asynchronous call. Callbacks are
         // useful in cases where the original thread does not need to
         // be synchronized with the result of the call, and in that

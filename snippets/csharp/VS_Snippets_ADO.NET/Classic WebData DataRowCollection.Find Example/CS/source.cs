@@ -9,10 +9,10 @@ public class Form1: Form
     protected DataGrid dataGrid1;
 
     // <Snippet1>
-    private void FindInPrimaryKeyColumn(DataTable table, 
+    private void FindInPrimaryKeyColumn(DataTable table,
         long pkValue)
     {
-        // Find the number pkValue in the primary key 
+        // Find the number pkValue in the primary key
         // column of the table.
         DataRow foundRow = table.Rows.Find(pkValue);
 

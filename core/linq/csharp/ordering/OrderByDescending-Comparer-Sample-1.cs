@@ -15,14 +15,14 @@ namespace Ordering
         //  AbAcUsr
         public static void MethodSyntaxExample()
         {
-            string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" }; 
-  
+            string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+
             var sortedWords = words.OrderByDescending(a => a, new CaseInsensitiveComparer()); //See CaseInsensitiveComparer.cs
-            
-            foreach (var w in sortedWords) 
-            { 
-                Console.WriteLine(w); 
-            } 
-        }      
+
+            foreach (var w in sortedWords)
+            {
+                Console.WriteLine(w);
+            }
+        }
     }
 }

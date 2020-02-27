@@ -1,9 +1,9 @@
 ﻿// <Snippet1>
  using System;
  public class SamplesArray  {
- 
+
     public static void Main()  {
- 
+
        // Creates and initializes a multidimensional Array of type String.
        int[] myLengthsArray = new int[2] { 3, 5 };
        int[] myBoundsArray = new int[2] { 2, 3 };
@@ -13,12 +13,12 @@
              int[] myIndicesArray = new int[2] { i, j };
              myArray.SetValue( Convert.ToString(i) + j, myIndicesArray );
           }
- 
+
        // Displays the lower bounds and the upper bounds of each dimension.
        Console.WriteLine( "Bounds:\tLower\tUpper" );
        for ( int i = 0; i < myArray.Rank; i++ )
           Console.WriteLine( "{0}:\t{1}\t{2}", i, myArray.GetLowerBound(i), myArray.GetUpperBound(i) );
- 
+
        // Displays the values of the Array.
        Console.WriteLine( "The Array contains the following values:" );
        PrintValues( myArray );
@@ -40,9 +40,9 @@
        Console.WriteLine();
     }
  }
- /* 
+ /*
  This code produces the following output.
- 
+
  Bounds:    Lower    Upper
  0:    2    4
  1:    3    7

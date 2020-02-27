@@ -11,7 +11,7 @@ public class Form1: Form
     private void GetAllErrs(DataRow row)
     {
         // Declare an array variable for DataColumn objects.
-        DataColumn[] colArr; 
+        DataColumn[] colArr;
         // If the Row has errors, check use GetColumnsInError.
         if(row.HasErrors)
         {

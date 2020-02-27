@@ -11,7 +11,7 @@ public class Form1: Form
   protected DataGrid dataGrid1;
 
 // <Snippet1>
-public void CreateCommand() 
+public void CreateCommand()
  {
     SqlCommand command = new SqlCommand();
     command.CommandText = "SELECT * FROM Categories ORDER BY CategoryID";

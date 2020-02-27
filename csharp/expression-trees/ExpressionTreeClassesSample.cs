@@ -7,7 +7,7 @@ namespace ExpressionTreeSamples
     public class ExpressionTreeClassesSampleOne : Sample
     {
         public override string Name { get; } = "Expression Tree Classes, Sample 1";
-        
+
         public override void Run()
         {
             Expression<Func<int, int>> addFive = (num) => num + 5;

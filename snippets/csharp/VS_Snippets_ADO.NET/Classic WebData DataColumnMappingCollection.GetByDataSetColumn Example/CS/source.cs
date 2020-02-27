@@ -9,7 +9,7 @@ public class Form1: Form
     protected DataColumnMapping mapping;
 
     // <Snippet1>
-    public void FindDataColumnMapping() 
+    public void FindDataColumnMapping()
     {
         // ...
         // create mappings and mapping

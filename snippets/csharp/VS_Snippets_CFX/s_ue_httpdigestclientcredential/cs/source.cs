@@ -23,7 +23,7 @@ namespace Example
             EndpointAddress ea = new EndpointAddress("http://localhost/Calculator");
             WSHttpBinding b = new WSHttpBinding(SecurityMode.Transport);
             b.Security.Transport.ClientCredentialType = HttpClientCredentialType.Digest;
-            
+
             // Create a client. The code is not shown here. See the WCF samples
             // for an example of the CalculatorClient code.
 
@@ -36,7 +36,7 @@ namespace Example
 
             Console.ReadLine();
             // Change the AllowedImpersonationLevel.
-            digestCred.AllowedImpersonationLevel = 
+            digestCred.AllowedImpersonationLevel =
                 System.Security.Principal.TokenImpersonationLevel.Impersonation;
 
             Console.WriteLine("Changed AllowedImpersonationLevel: {0}",

@@ -12,8 +12,8 @@ namespace Microsoft.Samples.ChannelCache.EchoWorkflowService
 
     class Program
     {
-        static WorkflowService service;        
-        
+        static WorkflowService service;
+
         private static void CreateService()
         {
             // <Snippet1>
@@ -27,7 +27,7 @@ namespace Microsoft.Samples.ChannelCache.EchoWorkflowService
                 CanCreateInstance = true,
                 Content = new ReceiveParametersContent
                 {
-                    Parameters = 
+                    Parameters =
                     {
                         {"message", new OutArgument<string>(message)}
                     }
@@ -47,10 +47,10 @@ namespace Microsoft.Samples.ChannelCache.EchoWorkflowService
                         {
                             Value = new InArgument<string>(env =>("Hello, " + message.Get(env))),
                             To = new OutArgument<string>(echo)
-                        },                        
+                        },
                         new SendReply
-                        {                           
-                            Request = receiveString,                            
+                        {
+                            Request = receiveString,
                             Content = new SendParametersContent
                             {
                                 Parameters =
@@ -83,7 +83,7 @@ namespace Microsoft.Samples.ChannelCache.EchoWorkflowService
             WorkflowServiceHost host = new WorkflowServiceHost(service, address);
 
             // A host level channel cache is not necessary for this example as our server workflow
-            // does not have a Send activity. However, the following can be used to add a host level 
+            // does not have a Send activity. However, the following can be used to add a host level
             // channel cache that the Send activities in the service workflow could use.
 
             //Func<object> hostLevelChannelCacheProvider = () =>

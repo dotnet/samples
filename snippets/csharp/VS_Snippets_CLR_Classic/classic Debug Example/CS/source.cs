@@ -14,7 +14,7 @@ class Test
        Debug.Indent();
        Debug.WriteLine("Entering Main");
        Console.WriteLine("Hello World.");
-       Debug.WriteLine("Exiting Main"); 
+       Debug.WriteLine("Exiting Main");
        Debug.Unindent();
     }
 }

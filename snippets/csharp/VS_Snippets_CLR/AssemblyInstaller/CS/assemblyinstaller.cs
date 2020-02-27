@@ -26,7 +26,7 @@ class AssemblyInstaller_Example
          string[] commandLineOptions = new string[ 1 ] {"/LogFile=example.log"};
 
          // Create an object of the 'AssemblyInstaller' class.
-         AssemblyInstaller myAssemblyInstaller = new 
+         AssemblyInstaller myAssemblyInstaller = new
                      AssemblyInstaller( "MyAssembly.exe" , commandLineOptions );
 
          myAssemblyInstaller.UseNewContext = true;

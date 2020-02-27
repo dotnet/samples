@@ -6,7 +6,7 @@ namespace Grouping
 {
     public class GroupByNested1
     {
-        //This sample uses group by to partition a list of each customer's orders, 
+        //This sample uses group by to partition a list of each customer's orders,
         // first by year, and then by month.
         public static void QuerySyntaxExample()
         {
@@ -46,7 +46,7 @@ namespace Grouping
                         foreach (var o in mg.Orders)
                         {
                             Console.WriteLine($"OrderDate={o.OrderDate}, Total={o.Total}");
-                        }                        
+                        }
                     }
                 }
             }

@@ -13,5 +13,5 @@ public class Form1: Form
  HashAlgorithm sha = new SHA1CryptoServiceProvider();
  byte[] result = sha.ComputeHash(dataArray);
 // </Snippet1>
- } 
+ }
 }

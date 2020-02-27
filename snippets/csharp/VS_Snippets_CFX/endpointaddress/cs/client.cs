@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
- 
+
 public class Client
 {
   public static void Main()
@@ -19,7 +19,7 @@ public class Client
               Console.WriteLine("Press ENTER to exit:");
               Console.ReadLine();
 
-              // Done with service. 
+              // Done with service.
               proxy.Close();
               Console.WriteLine("Done!");
           }

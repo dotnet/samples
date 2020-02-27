@@ -2,28 +2,28 @@
 using System;
 using System.Reflection;
 
-interface IValue 
+interface IValue
 {
    int GetValue() ;
 };
- 
-class A : IValue 
+
+class A : IValue
 {
-   public virtual int GetValue() 
-   { 
-      return 0; 
+   public virtual int GetValue()
+   {
+      return 0;
    }
 };
- 
-class B : A 
+
+class B : A
 {
-   public new int GetValue() 
-   { 
-      return 0; 
+   public new int GetValue()
+   {
+      return 0;
    }
 };
- 
-class C : A 
+
+class C : A
 { };
 
 class D : A
@@ -56,14 +56,14 @@ public class Example
       MemberInfo[] members = t.GetMembers();
       Console.WriteLine("{0} Members: ", t.Name);
       foreach (var member in members)
-         Console.WriteLine("   {0}, Declaring type: {1}", 
-                           member.Name, member.DeclaringType.Name); 
+         Console.WriteLine("   {0}, Declaring type: {1}",
+                           member.Name, member.DeclaringType.Name);
    }
 }
 // The example displays the following output:
 //       IValue Members:
 //          GetValue, Declaring type: IValue
-//       
+//
 //       A Members:
 //          GetValue, Declaring type: A
 //          ToString, Declaring type: Object
@@ -71,7 +71,7 @@ public class Example
 //          GetHashCode, Declaring type: Object
 //          GetType, Declaring type: Object
 //          .ctor, Declaring type: A
-//       
+//
 //       B Members:
 //          GetValue, Declaring type: B
 //          GetValue, Declaring type: A
@@ -80,7 +80,7 @@ public class Example
 //          GetHashCode, Declaring type: Object
 //          GetType, Declaring type: Object
 //          .ctor, Declaring type: B
-//       
+//
 //       C Members:
 //          GetValue, Declaring type: A
 //          ToString, Declaring type: Object
@@ -88,7 +88,7 @@ public class Example
 //          GetHashCode, Declaring type: Object
 //          GetType, Declaring type: Object
 //          .ctor, Declaring type: C
-//       
+//
 //       D Members:
 //          GetValue, Declaring type: D
 //          ToString, Declaring type: Object

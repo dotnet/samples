@@ -30,25 +30,25 @@ namespace WebData_Examples
 
             // create Customer table
             DataTable customersTable = new DataTable("Customers");
-            customersTable.Columns.Add("customerId", 
+            customersTable.Columns.Add("customerId",
                 typeof(int) ).AutoIncrement = true;
-            customersTable.Columns.Add("name",       
+            customersTable.Columns.Add("name",
                 typeof(string));
-            customersTable.PrimaryKey = new DataColumn[] 
+            customersTable.PrimaryKey = new DataColumn[]
                 { customersTable.Columns["customerId"] };
 
             // create Orders table
             DataTable ordersTable = new DataTable("Orders");
-            ordersTable.Columns.Add("orderId",    
+            ordersTable.Columns.Add("orderId",
                 typeof(int) ).AutoIncrement = true;
-            ordersTable.Columns.Add("customerId", 
+            ordersTable.Columns.Add("customerId",
                 typeof(int) );
-            ordersTable.Columns.Add("amount",     
+            ordersTable.Columns.Add("amount",
                 typeof(double));
-            ordersTable.PrimaryKey = new DataColumn[] 
+            ordersTable.PrimaryKey = new DataColumn[]
                 { ordersTable.Columns["orderId"] };
 
-            dataSet.Tables.AddRange(new DataTable[] 
+            dataSet.Tables.AddRange(new DataTable[]
                 {customersTable, ordersTable });
 
             // remove all tables
@@ -64,7 +64,7 @@ namespace WebData_Examples
                 }
             }
 
-            Console.WriteLine("dataSet has {0} tables",     
+            Console.WriteLine("dataSet has {0} tables",
                 dataSet.Tables.Count);
         }
         // </Snippet1>

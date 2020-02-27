@@ -10,7 +10,7 @@ using System.Security.Permissions;
 [assembly: SecurityPermission(
    SecurityAction.RequestMinimum, Execution = true)]
 namespace Microsoft.ServiceModel.Samples
-{ 
+{
     [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
     public interface ICalculator
     {
@@ -33,9 +33,9 @@ namespace Microsoft.ServiceModel.Samples
         {
             using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService)))
             {
-                serviceHost.Credentials.ClientCertificate.Authentication.CertificateValidationMode = 
+                serviceHost.Credentials.ClientCertificate.Authentication.CertificateValidationMode =
                     X509CertificateValidationMode.Custom;
-                serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValidator = 
+                serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValidator =
                     new MyX509CertificateValidator("CN=Contoso.com");
 
                 serviceHost.Open();

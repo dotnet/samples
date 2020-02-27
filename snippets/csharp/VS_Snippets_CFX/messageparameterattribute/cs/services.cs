@@ -16,34 +16,34 @@ namespace Microsoft.WCF.Documentation
   /*
    The preceding use of MessageParameterAttribute generates the following XSD:
 
-<?xml version="1.0" encoding="utf-8" ?> 
-  <xs:schema 
-    elementFormDefault="qualified" 
-    targetNamespace="http://microsoft.wcf.documentation" 
-    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+<?xml version="1.0" encoding="utf-8" ?>
+  <xs:schema
+    elementFormDefault="qualified"
+    targetNamespace="http://microsoft.wcf.documentation"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:tns="http://microsoft.wcf.documentation">
     <xs:element name="SampleMethod">
       <xs:complexType>
         <xs:sequence>
-          <xs:element minOccurs="0" name="Input" nillable="true" type="xs:string" /> 
+          <xs:element minOccurs="0" name="Input" nillable="true" type="xs:string" />
         </xs:sequence>
       </xs:complexType>
     </xs:element>
     <xs:element name="SampleMethodResponse">
       <xs:complexType>
         <xs:sequence>
-          <xs:element minOccurs="0" name="Output" nillable="true" type="xs:string" /> 
+          <xs:element minOccurs="0" name="Output" nillable="true" type="xs:string" />
         </xs:sequence>
       </xs:complexType>
     </xs:element>
   </xs:schema>
-   
+
    And the message sent is edited for clarity:
   <s:Body>
     <SampleMethod xmlns="http://microsoft.wcf.documentation">
       <Input>hello!</Input>
     </SampleMethod>
-  </s:Body>   
+  </s:Body>
    */
   // </snippet1>
 

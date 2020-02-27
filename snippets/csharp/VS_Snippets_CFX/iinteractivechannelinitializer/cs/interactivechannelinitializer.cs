@@ -13,17 +13,17 @@ namespace Microsoft.WCF.Documentation
   {
     #region IInteractiveChannelInitializer Members
     /*
-      To implement IInteractiveChannelInitializer, perform the following steps 
+      To implement IInteractiveChannelInitializer, perform the following steps
       in IInteractiveChannelInitializer.BeginDisplayInitializationUI:
 
-      1. Prompt the user and obtain an appropriate System.Net.NetworkCredential. 
-      2. Add a custom channel parameter object to the collection returned by the 
-          IChannel.GetProperty method on the IClientChannel object with a type 
-          parameter of System.ServiceModel.Channels.ChannelParameterCollection. 
-          This channel parameter object is used by the custom 
-          System.ServiceModel.ClientCredentialsSecurityTokenManager to establish 
+      1. Prompt the user and obtain an appropriate System.Net.NetworkCredential.
+      2. Add a custom channel parameter object to the collection returned by the
+          IChannel.GetProperty method on the IClientChannel object with a type
+          parameter of System.ServiceModel.Channels.ChannelParameterCollection.
+          This channel parameter object is used by the custom
+          System.ServiceModel.ClientCredentialsSecurityTokenManager to establish
          the security tokens for the channel.
-      3. Return. 
+      3. Return.
 
     */
     public IAsyncResult BeginDisplayInitializationUI(System.ServiceModel.IClientChannel channel, AsyncCallback callback, object state)

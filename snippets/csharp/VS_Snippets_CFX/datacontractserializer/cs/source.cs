@@ -133,7 +133,7 @@ namespace DataContractSerializerExample
             set { Country_value = value; }
         }
 
-        // Note that this field is not serialized. Instead, it is 
+        // Note that this field is not serialized. Instead, it is
         // populated after serialization.
         private string Currency_value;
         public string Currency
@@ -142,7 +142,7 @@ namespace DataContractSerializerExample
             set { Currency_value = value; }
         }
 
-        // Use this method to look up the country and set 
+        // Use this method to look up the country and set
         // the Currency field after deserialization.
         [OnDeserialized]
         private void GetLocalRate(StreamingContext sc)
@@ -151,7 +151,7 @@ namespace DataContractSerializerExample
                 this.Currency = "Yen";
         }
 
-        // Implement IExensibleDataObject interface to 
+        // Implement IExensibleDataObject interface to
         // retain future version information.
         private ExtensionDataObject extensionData_Value;
 
@@ -312,16 +312,16 @@ namespace DataContractSerializerExample
             // Use the writer to start a document.
             writer.WriteStartDocument(true);
 
-            // Use the serializer to write the start of the 
+            // Use the serializer to write the start of the
             // object data. Use it again to write the object
-            // data. 
+            // data.
             ser.WriteStartObject(writer, p);
             ser.WriteObjectContent(writer, p);
 
             // Use the writer to add an XML element to the document.
             writer.WriteElementString("Citizen", "true");
 
-            // Use the serializer to write the end of the 
+            // Use the serializer to write the end of the
             // object data. Then use the writer to write the end
             // of the document.
             ser.WriteEndObject(writer);
@@ -344,7 +344,7 @@ namespace DataContractSerializerExample
             XmlDictionaryReader reader =
                 XmlDictionaryReader.CreateTextReader(fs, new XmlDictionaryReaderQuotas());
 
-            // Create the DataContractSerializer specifying the type, 
+            // Create the DataContractSerializer specifying the type,
             // root and namespace to use. The root value corresponds
             // to the DataContract.Name value, and the namespace value
             // corresponds to the DataContract.Namespace value.
@@ -352,8 +352,8 @@ namespace DataContractSerializerExample
                 new DataContractSerializer(typeof(Person),
                 "Customer", @"http://www.contoso.com");
 
-            // Test if the serializer is on the start of the 
-            // object data. If so, read the data and write it 
+            // Test if the serializer is on the start of the
+            // object data. If so, read the data and write it
             // to the console.
             while (reader.Read())
             {
@@ -445,7 +445,7 @@ namespace DataContractSerializerExample
         public static void Constructor3()
         {
             // Create an instance of the DataContractSerializer
-            // specifying the type, and name and 
+            // specifying the type, and name and
             // namespace as strings.
             DataContractSerializer ser =
                 new DataContractSerializer(
@@ -461,7 +461,7 @@ namespace DataContractSerializerExample
         public static void Constructor4()
         {
             // Create an instance of the DataContractSerializer
-            // specifying the type, and name and 
+            // specifying the type, and name and
             // namespace as XmlDictionaryString objects.
 
             // Create an XmlDictionary and add values to it.
@@ -533,7 +533,7 @@ namespace DataContractSerializerExample
             knownTypeList.Add(typeof(PurchaseOrder));
             knownTypeList.Add(typeof(PurchaseOrderV3));
 
-            // Create an instance of a class that 
+            // Create an instance of a class that
             // implements the IDataContractSurrogate interface.
             // The implementation code is not shown here.
             DCSurrogate mySurrogate = new DCSurrogate();
@@ -559,7 +559,7 @@ namespace DataContractSerializerExample
             knownTypeList.Add(typeof(PurchaseOrder));
             knownTypeList.Add(typeof(PurchaseOrderV3));
 
-            // Create an instance of a class that 
+            // Create an instance of a class that
             // implements the IDataContractSurrogate interface.
             // The implementation code is not shown here.
             DCSurrogate mySurrogate = new DCSurrogate();
@@ -593,7 +593,7 @@ namespace DataContractSerializerExample
             XmlDictionaryString name_value = d.Add("Customer");
             XmlDictionaryString ns_value = d.Add("http://www.contoso.com");
 
-            // Create an instance of a class that 
+            // Create an instance of a class that
             // implements the IDataContractSurrogate interface.
             // The implementation code is not shown here.
             DCSurrogate mySurrogate = new DCSurrogate();

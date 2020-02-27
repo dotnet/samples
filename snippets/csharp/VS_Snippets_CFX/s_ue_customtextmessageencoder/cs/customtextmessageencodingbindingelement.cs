@@ -30,7 +30,7 @@ namespace Microsoft.ServiceModel.Samples
             MessageVersion msgVersion)
         {
             if (encoding == null)
-            	throw new ArgumentNullException(nameof(encoding));    
+            	throw new ArgumentNullException(nameof(encoding));
 
             if (mediaType == null)
             	throw new ArgumentNullException(nameof(mediaType));
@@ -106,9 +106,9 @@ namespace Microsoft.ServiceModel.Samples
             }
         }
 
-        // This encoder does not enforces any quotas for the unsecure messages. The 
+        // This encoder does not enforces any quotas for the unsecure messages. The
         // quotas are enforced for the secure portions of messages when this encoder
-        // is used in a binding that is configured with security. 
+        // is used in a binding that is configured with security.
         public XmlDictionaryReaderQuotas ReaderQuotas
         {
             get

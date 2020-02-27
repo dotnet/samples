@@ -14,7 +14,7 @@ class Program
         // Create a DataSet with two tables
         DataSet dataSet = new DataSet();
 
-        // Assign the event-handler function for the 
+        // Assign the event-handler function for the
         // CollectionChangeEvent.
         dataSet.Tables.CollectionChanging +=
             new System.ComponentModel.CollectionChangeEventHandler(

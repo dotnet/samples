@@ -11,7 +11,7 @@ public class Form1: Form
   protected DataGrid dataGrid1;
 
 // <Snippet1>
-public void CreateOracleDbParameter() 
+public void CreateOracleDbParameter()
  {
     OracleParameter parameter = new OracleParameter();
     parameter.ParameterName = "pDName";

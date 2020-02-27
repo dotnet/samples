@@ -2,8 +2,8 @@
 // System.Reflection.AssemblyName.CultureInfo
 // System.Reflection.AssemblyName.HashAlgorithm
 // System.Reflection.AssemblyName.FullName
-  
-/* 
+
+/*
    The following example demonstrates the 'CodeBase', 'CultureInfo'
    'HashAlgorithm' and 'FullName' properties of the 'AssemblyName' class. Creates
    a dynamic assembly named 'MyAssembly' with a module named 'MyModule' and
@@ -14,7 +14,7 @@
    the assemblies currently loaded are found and the dynamic assembly that we
    have created is searched for, which is displayed to the console. The dynamic
    assembly is also saved to a file named 'MyAssembly.exe'.
-   
+
    Note : Run 'MyAssembly.exe' which this example has created for a simple
           'Hello World!" display.
 */
@@ -76,7 +76,7 @@ public class AssemblyName_CodeBase
       // Get all the assemblies currently loaded in the application domain.
       Assembly[] myAssemblies = Thread.GetDomain().GetAssemblies();
 
-      // Get the dynamic assembly named 'MyAssembly'. 
+      // Get the dynamic assembly named 'MyAssembly'.
       Assembly myAssembly = null;
       for(int i = 0; i < myAssemblies.Length; i++)
       {

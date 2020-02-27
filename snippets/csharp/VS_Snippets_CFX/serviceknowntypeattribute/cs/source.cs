@@ -22,15 +22,15 @@ namespace Microsoft.ServiceModel.Samples
 
     //<snippet1>
     // Define a service contract and apply the ServiceKnownTypeAttribute
-    // to specify types to include when generating client code. 
+    // to specify types to include when generating client code.
     // The types must have the DataContractAttribute and DataMemberAttribute
-    // applied to be serialized and deserialized. The attribute specifies the 
+    // applied to be serialized and deserialized. The attribute specifies the
     // name of a method (GetKnownTypes) in a class (Helper) defined below.
     [ServiceKnownType("GetKnownTypes", typeof(Helper))]
     [ServiceContract()]
     public interface ICatalog
     {
-        // Any object type can be inserted into a Hashtable. The 
+        // Any object type can be inserted into a Hashtable. The
         // ServiceKnownTypeAttribute allows you to include those types
         // with the client code.
         [OperationContract]
@@ -70,15 +70,15 @@ namespace Microsoft.ServiceModel.Samples
     //</snippet1>
 
     //<snippet2>
-    // Apply the ServiceKnownTypeAttribute to the 
-    // interface specifying the type to include. Apply 
+    // Apply the ServiceKnownTypeAttribute to the
+    // interface specifying the type to include. Apply
     // the attribute more than once if needed.
     [ServiceKnownType(typeof(Widget))]
     [ServiceKnownType(typeof(Machine))]
     [ServiceContract()]
     public interface ICatalog2
     {
-        // Any object type can be inserted into a Hashtable. The 
+        // Any object type can be inserted into a Hashtable. The
         // ServiceKnownTypeAttribute allows you to include those types
         // with the client code.
         [OperationContract]

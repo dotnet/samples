@@ -16,7 +16,7 @@ public class Form1: Form
         DataSet OriginalDataSet = new DataSet("dataSet");
         OriginalDataSet.Namespace= "NetFrameWork";
         DataTable table = new DataTable("table");
-        DataColumn idColumn = new DataColumn("id", 
+        DataColumn idColumn = new DataColumn("id",
             Type.GetType("System.Int32"));
         idColumn.AutoIncrement= true;
 
@@ -35,7 +35,7 @@ public class Form1: Form
         }
         OriginalDataSet.AcceptChanges();
 
-        // Print out values of each table in the DataSet 
+        // Print out values of each table in the DataSet
         // using the function defined below.
         PrintValues(OriginalDataSet, "Original DataSet");
 
@@ -54,11 +54,11 @@ public class Form1: Form
         // Read the XML document into the DataSet.
         newDataSet.ReadXml(xmlFilename);
 
-        // Print out values of each table in the DataSet 
+        // Print out values of each table in the DataSet
         // using the function defined below.
         PrintValues(newDataSet,"New DataSet");
     }
- 
+
     private void PrintValues(DataSet dataSet, string label)
     {
         Console.WriteLine("\n" + label);

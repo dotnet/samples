@@ -17,7 +17,7 @@ namespace SqlCommandCS
         // <Snippet1>
         private static void ReadOrderData(string connectionString)
         {
-            string queryString = 
+            string queryString =
                 "SELECT OrderID, CustomerID FROM dbo.Orders;";
             using (SqlConnection connection = new SqlConnection(
                        connectionString))

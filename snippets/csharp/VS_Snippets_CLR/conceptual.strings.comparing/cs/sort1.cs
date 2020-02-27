@@ -3,9 +3,9 @@ using System;
 using System.Globalization;
 using System.Threading;
 
-public class ArraySort 
+public class ArraySort
 {
-   public static void Main(String[] args) 
+   public static void Main(String[] args)
    {
       // Create and initialize a new array to store the strings.
       string[] stringArray = { "Apple", "Æble", "Zebra"};
@@ -21,7 +21,7 @@ public class ArraySort
 
       // Display the values of the array.
       Console.WriteLine("After sorting for the culture \"en-US\":");
-      PrintIndexAndValues(stringArray); 
+      PrintIndexAndValues(stringArray);
 
       // Set the CurrentCulture to "da-DK".
       Thread.CurrentThread.CurrentCulture = new CultureInfo("da-DK");
@@ -30,14 +30,14 @@ public class ArraySort
 
       // Display the values of the array.
       Console.WriteLine("After sorting for the culture \"da-DK\":");
-      PrintIndexAndValues(stringArray); 
+      PrintIndexAndValues(stringArray);
    }
-   public static void PrintIndexAndValues(string[] myArray)  
+   public static void PrintIndexAndValues(string[] myArray)
    {
-      for (int i = myArray.GetLowerBound(0); i <= 
+      for (int i = myArray.GetLowerBound(0); i <=
             myArray.GetUpperBound(0); i++ )
          Console.WriteLine("[{0}]: {1}", i, myArray[i]);
-      Console.WriteLine();      
+      Console.WriteLine();
    }
 }
 // The example displays the following output:
@@ -45,12 +45,12 @@ public class ArraySort
 //       [0]: Apple
 //       [1]: Æble
 //       [2]: Zebra
-//       
+//
 //       After sorting for the "en-US" culture:
 //       [0]: Æble
 //       [1]: Apple
 //       [2]: Zebra
-//       
+//
 //       After sorting for the culture "da-DK":
 //       [0]: Apple
 //       [1]: Zebra

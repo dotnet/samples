@@ -36,9 +36,9 @@ public class MyConstructorBuilder
       {
          if(myAttributes1[index] is MyAttribute)
          {
-            Console.WriteLine("The value of myString is : " 
+            Console.WriteLine("The value of myString is : "
                                        + ((MyAttribute)myAttributes1[index]).myString);
-            Console.WriteLine("The value of myInteger is : " 
+            Console.WriteLine("The value of myInteger is : "
                                        + ((MyAttribute)myAttributes1[index]).myInteger);
          }
       }

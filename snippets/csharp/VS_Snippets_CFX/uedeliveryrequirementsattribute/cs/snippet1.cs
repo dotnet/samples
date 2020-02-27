@@ -6,7 +6,7 @@ using System.ServiceModel;
 interface ICalculatorService
 {
   [OperationBehavior()]
-  int Add(int a, int b);  
+  int Add(int a, int b);
 
   [OperationContract]
   int Subtract(int a, int b);
@@ -21,15 +21,15 @@ class CalculatorService: ICalculatorService
   public int Add(int a, int b)
   {
     Console.WriteLine("Add called.");
-    return a + b; 
+    return a + b;
   }
-  
+
   public int Subtract(int a, int b)
   {
     Console.WriteLine("Subtract called.");
     return a - b;
   }
-  
+
   public int Multiply(int a, int b)
   {
     return a * b;

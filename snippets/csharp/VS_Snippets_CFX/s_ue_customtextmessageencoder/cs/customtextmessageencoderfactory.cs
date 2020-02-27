@@ -23,12 +23,12 @@ namespace Microsoft.ServiceModel.Samples
             this.charSet = charSet;
             this.encoder = new CustomTextMessageEncoder(this);
         }
-    
+
         // <Snippet9>
         public override MessageEncoder Encoder
         {
-            get 
-            { 
+            get
+            {
                 return this.encoder;
             }
         }
@@ -37,8 +37,8 @@ namespace Microsoft.ServiceModel.Samples
         // <Snippet10>
         public override MessageVersion MessageVersion
         {
-            get 
-            { 
+            get
+            {
                 return this.version;
             }
         }

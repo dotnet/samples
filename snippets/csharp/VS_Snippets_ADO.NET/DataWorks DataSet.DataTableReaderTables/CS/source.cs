@@ -33,13 +33,13 @@ class Program
         // allowing access to all the DataSet's data.
         // Even though the dataset contains three DataTables,
         // this code will only display the contents of two of them,
-        // because the code has limited the results to the 
+        // because the code has limited the results to the
         // DataTables stored in the tables array. Because this
-        // parameter is declared using the ParamArray keyword, 
-        // you could also include a list of DataTable instances 
-        // individually, as opposed to supplying an array of 
+        // parameter is declared using the ParamArray keyword,
+        // you could also include a list of DataTable instances
+        // individually, as opposed to supplying an array of
         // DataTables, as in this example:
-        using (DataTableReader reader = 
+        using (DataTableReader reader =
            dataSet.CreateDataReader(productTable, emptyTable))
         {
             do

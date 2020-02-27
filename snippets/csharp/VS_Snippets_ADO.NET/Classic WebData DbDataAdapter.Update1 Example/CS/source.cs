@@ -12,7 +12,7 @@ namespace AdapterUpdateCS
         }
         // <Snippet1>
         public DataSet CreateCmdsAndUpdate(string connectionString,
-            string queryString) 
+            string queryString)
         {
             using (OleDbConnection connection = new OleDbConnection(connectionString))
             {
@@ -35,6 +35,6 @@ namespace AdapterUpdateCS
                 return customers;
             }
         }
-        // </Snippet1>    
+        // </Snippet1>
     }
 }

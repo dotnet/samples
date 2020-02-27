@@ -18,7 +18,7 @@ public class Form1: Form
         // Presuming a DataGrid is displaying more than one table, get its DataSet.
         DataSet thisDataSet = (DataSet)DataGrid1.DataSource;
         DataTableCollection tablesCol = thisDataSet.Tables;
-        if (tablesCol.Contains(name) && tablesCol.CanRemove(tablesCol[name])) 
+        if (tablesCol.Contains(name) && tablesCol.CanRemove(tablesCol[name]))
             tablesCol.Remove(name);
     }
     // </Snippet1>

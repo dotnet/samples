@@ -33,11 +33,11 @@ namespace UniqueConstraintUniqueConstraint2CS
             dataRow["Name"] = "John";
             dataTable.Rows.Add(dataRow);
 
-            // Display the constraint name. 
+            // Display the constraint name.
             Console.WriteLine(
                 dataTable.Constraints[0].ConstraintName);
 
-            // Try to add an identical row, 
+            // Try to add an identical row,
             // which throws an exception.
             try
             {

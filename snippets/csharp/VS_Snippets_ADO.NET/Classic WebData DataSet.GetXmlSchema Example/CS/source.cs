@@ -11,7 +11,7 @@ public class Sample
     // <Snippet1>
     private static void DemonstrateGetXml()
     {
-        // Create a DataSet with one table containing 
+        // Create a DataSet with one table containing
         // two columns and 10 rows.
         DataSet dataSet = new DataSet("dataSet");
         DataTable table = dataSet.Tables.Add("Items");

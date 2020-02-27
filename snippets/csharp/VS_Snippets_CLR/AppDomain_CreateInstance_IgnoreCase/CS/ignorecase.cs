@@ -8,7 +8,7 @@ class Test {
       InstantiateINT32(false);     // Failed!
       InstantiateINT32(true);      // OK!
    }
-   
+
    static void InstantiateINT32(bool ignoreCase) {
       try {
          AppDomain currentDomain = AppDomain.CurrentDomain;

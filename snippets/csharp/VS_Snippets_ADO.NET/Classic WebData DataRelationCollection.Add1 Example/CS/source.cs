@@ -8,7 +8,7 @@ public class Form1: Form
     protected DataSet DataSet1;
 
     // <Snippet1>
-    private void AddRelation() 
+    private void AddRelation()
     {
         DataTable table = new DataTable();
         DataColumn column1 = table.Columns.Add("Column1");

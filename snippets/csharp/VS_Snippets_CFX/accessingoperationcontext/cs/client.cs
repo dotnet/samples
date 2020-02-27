@@ -39,7 +39,7 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
                 OperationName = "Echo",
                 Content = new SendParametersContent()
                 {
-                    Parameters = { { "echoString", new InArgument<string>("Hello, World") } } 
+                    Parameters = { { "echoString", new InArgument<string>("Hello, World") } }
                 }
             };
 
@@ -47,12 +47,12 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
             {
                 Variables = { echoString },
                 Activities =
-                {                    
+                {
                     new CorrelationScope
                     {
                         Body = new Sequence
                         {
-                            Activities = 
+                            Activities =
                             {
                                 echoRequest,
                                 new ReceiveReply
@@ -65,8 +65,8 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
                                 }
                             }
                         }
-                    },                    
-                    new WriteLine { Text = new InArgument<string>( (e) => "Received Text: " + echoString.Get(e) ) },                    
+                    },
+                    new WriteLine { Text = new InArgument<string>( (e) => "Received Text: " + echoString.Get(e) ) },
                 }
             };
         }

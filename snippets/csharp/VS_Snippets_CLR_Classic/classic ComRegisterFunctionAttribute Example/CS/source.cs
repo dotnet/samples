@@ -9,7 +9,7 @@ public class MyClassThatNeedsToRegister
    {
       //Insert code here.
    }
-   
+
    [ComUnregisterFunctionAttribute]
    public static void UnregisterFunction(Type t)
    {

@@ -30,7 +30,7 @@ public class DataProtectionSample
             // Encrypt the data using DataProtectionScope.CurrentUser. The result can be decrypted
             // only by the same current user.
             return ProtectedData.Protect( data, s_aditionalEntropy, DataProtectionScope.CurrentUser );
-        } 
+        }
         catch (CryptographicException e)
         {
             Console.WriteLine("Data was not encrypted. An error occurred.");
@@ -45,7 +45,7 @@ public class DataProtectionSample
         {
             //Decrypt the data using DataProtectionScope.CurrentUser.
             return ProtectedData.Unprotect( data, s_aditionalEntropy, DataProtectionScope.CurrentUser );
-        } 
+        }
         catch (CryptographicException e)
         {
             Console.WriteLine("Data was not decrypted. An error occurred.");
@@ -54,9 +54,9 @@ public class DataProtectionSample
         }
     }
 
-    public static void PrintValues( Byte[] myArr )  
+    public static void PrintValues( Byte[] myArr )
     {
-        foreach ( Byte i in myArr )  
+        foreach ( Byte i in myArr )
         {
             Console.Write( "\t{0}", i );
         }

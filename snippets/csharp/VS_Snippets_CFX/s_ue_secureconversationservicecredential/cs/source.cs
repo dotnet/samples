@@ -14,7 +14,7 @@ namespace Example
     /// <summary>
     /// Before running:
     /// Use setup.bat to create a new test certificate "service.com".
-    /// 
+    ///
     /// Shows how to implement a SecurityStateEncoder to take full control of protecting
     /// the cookie security context token so that it does not depend on DPAPI.
     /// Code originally from:
@@ -56,16 +56,16 @@ namespace Example
         static void Configure(ServiceHost serviceHost)
         {
             /*
-             * There are certain settings that cannot be configured via app.config.  
+             * There are certain settings that cannot be configured via app.config.
              * The security state encoder is one of them.
-             * Plug in a SecurityStateEncoder that uses the configured certificate 
+             * Plug in a SecurityStateEncoder that uses the configured certificate
              * to protect the security context token state.
-             * 
-             * Note: You don't need a security state encoder for cookie mode.  This was added to the 
+             *
+             * Note: You don't need a security state encoder for cookie mode.  This was added to the
              * sample to illustrate how you would plug in a custom security state encoder should
              * your scenario require one.
              * */
-            serviceHost.Credentials.SecureConversationAuthentication.SecurityStateEncoder = 
+            serviceHost.Credentials.SecureConversationAuthentication.SecurityStateEncoder =
                     new CertificateSecurityStateEncoder(serviceHost.Credentials.ServiceCertificate.Certificate);
          // </snippet1>
            Collection<Type> myClaimTypes = new Collection<Type>();
@@ -125,7 +125,7 @@ namespace Example
             // need not be created each time to improve performance.
             CookieContainer cookieContainer = serializer.Deserialize(rsaCryptoServiceProvider, aesAlg, data);
 
-            // Decrypt the cookie and return it to WCF so that WCF can use the cookie to 
+            // Decrypt the cookie and return it to WCF so that WCF can use the cookie to
             // perform its own cryptographic operations.
             return cookieContainer.DecryptCookie();
         }
@@ -190,7 +190,7 @@ namespace Example
         /// <returns>Byte array that represents the Cookie Container</returns>
         public byte[] Serialize(CookieContainer cookieContainer)
         {
-            // First turn the encryptedSymmetricKey.Length into a byte array 
+            // First turn the encryptedSymmetricKey.Length into a byte array
             byte[] keyLength = DataBitsConverter.ToBytes(cookieContainer.EncryptedSymmetricKey.Length);
             // Allocate the total buffer required.
             int bufferSize = keyLength.Length + cookieContainer.EncryptedSymmetricKey.Length + cookieContainer.IV.Length + cookieContainer.EncryptedCookie.Length;
@@ -239,7 +239,7 @@ namespace Example
             this.protectionRsaKey = rsaKey;
             this.encryptedSymmetricKey = protectionRsaKey.Encrypt(aesAlg.Key, true);
 
-            // Create the enryptor and decryptor that will perform the actual 
+            // Create the enryptor and decryptor that will perform the actual
             // cryptographic operations.
             CreateCryptoTransformers();
         }

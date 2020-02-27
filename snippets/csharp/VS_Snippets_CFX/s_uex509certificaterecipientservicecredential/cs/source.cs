@@ -95,7 +95,7 @@ namespace Samples
 		    X509FindType.FindByThumbprint,
 		    "af1f50b20cd413ed9cd00c315bbb6dc1c08da5e6");
 	    sh.Open();
-	    
+	
             //</snippet2>
         }
     }

@@ -10,12 +10,12 @@ using System.Web.UI.WebControls.Expressions;
 public partial class List : System.Web.UI.Page {
     protected MetaTable table;
 
-    // Perform page elements initialization. 
+    // Perform page elements initialization.
     protected void Page_Init(object sender, EventArgs e) {
-        
+
         // Get the metadata of the current table.
         table = DynamicDataRouteHandler.GetRequestMetaTable(Context);
-        
+
         GridView1.SetMetaTable(table, table.GetColumnValuesFromRoute(Context));
         GridDataSource.EntityTypeName = table.EntityType.AssemblyQualifiedName;
 
@@ -28,10 +28,10 @@ public partial class List : System.Web.UI.Page {
     // Perform intialization to be done during page load phase.
     protected void Page_Load(object sender, EventArgs e) {
         Title = table.DisplayName;
-        
+
         // Set the page title.
         Title = "Display " + table.DisplayName;
-       
+
         // Disable various options if the table is readonly
         if (table.IsReadOnly) {
             GridView1.Columns[0].Visible = false;
@@ -48,7 +48,7 @@ public partial class List : System.Web.UI.Page {
         if (label.Text == "OrderQty")
             label.Text = "Custom Enumeration " + label.Text;
 
-        // Get the current filter control from the ones contained by 
+        // Get the current filter control from the ones contained by
         // the QueryableFilterRepeater control.
         DynamicFilter dynamicFilter = (DynamicFilter)label.FindControl("DynamicFilter");
 
@@ -60,10 +60,10 @@ public partial class List : System.Web.UI.Page {
     }
 
     // Initialize the insert action link. Also assure that the client scripts
-    // are loaded to enable the script manager to handle partial page rendering. 
-    // Notice: You must assure that the base.OnPreRenderComplete(e) call is 
-    // performed to allow for the appropriate scripts to be loaded in the page and 
-    // to avoid that "Sys undefined runtime error" is issued  
+    // are loaded to enable the script manager to handle partial page rendering.
+    // Notice: You must assure that the base.OnPreRenderComplete(e) call is
+    // performed to allow for the appropriate scripts to be loaded in the page and
+    // to avoid that "Sys undefined runtime error" is issued
     // for the <asp:ScriptManager> control.
     protected override void OnPreRenderComplete(EventArgs e) {
         RouteValueDictionary routeValues = new RouteValueDictionary(GridView1.GetDefaultValues());

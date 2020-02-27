@@ -20,12 +20,12 @@ public class Form1: Form
        new ForeignKeyConstraint("fkConstraint", parentCol, childCol);
 
     // Test against existing members using the Equals method.
-    foreach(ForeignKeyConstraint testConstraint in 
+    foreach(ForeignKeyConstraint testConstraint in
         dataSet.Tables["Orders"].Constraints)
     {
        if(fkeyConstraint.Equals(testConstraint)){
           Console.WriteLine("Identical ForeignKeyConstraint!");
-           // Insert code to delete the duplicate object, 
+           // Insert code to delete the duplicate object,
            // or stop the procedure.
        }
     }

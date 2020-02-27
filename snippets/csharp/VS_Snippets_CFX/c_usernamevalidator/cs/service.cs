@@ -72,15 +72,15 @@ namespace Microsoft.ServiceModel.Samples
 
         public class MyServiceAuthorizationManager : ServiceAuthorizationManager
         {
- 
+
            protected override bool CheckAccessCore(OperationContext operationContext)
-            {                
+            {
                 // Extract the action URI from the OperationContext. Match this against the claims
                 // in the AuthorizationContext.
                 string action = operationContext.RequestContext.RequestMessage.Headers.Action;
                 Console.WriteLine("action: {0}", action);
 
-                // 
+                //
                 // Iterate through the various claimsets in the AuthorizationContext.
                 foreach(ClaimSet cs in operationContext.ServiceSecurityContext.AuthorizationContext.ClaimSets)
                 {
@@ -99,9 +99,9 @@ namespace Microsoft.ServiceModel.Samples
                         }
                     }
                 }
-                
+
                 // If we get here, return false, denying access.
-                return false;                 
+                return false;
             }
         }
 
@@ -114,7 +114,7 @@ namespace Microsoft.ServiceModel.Samples
                 id =  Guid.NewGuid().ToString();
             }
 
-            // 
+            //
             public bool Evaluate(EvaluationContext evaluationContext, ref object state)
             {
                 bool bRet = false;
@@ -152,7 +152,7 @@ namespace Microsoft.ServiceModel.Samples
                                 Console.WriteLine("Claim added {0}", s);
                             }
 
-                    // Add claims to the evaluation context.    
+                    // Add claims to the evaluation context.
                     evaluationContext.AddClaimSet(this, new DefaultClaimSet(this.Issuer,claims));
 
                     // Record that the claims have been added.
@@ -169,8 +169,8 @@ namespace Microsoft.ServiceModel.Samples
 
                 return bRet;
             }
-            // 
-            // 
+            //
+            //
             public ClaimSet Issuer
             {
                 get { return ClaimSet.System; }
@@ -181,12 +181,12 @@ namespace Microsoft.ServiceModel.Samples
                 get { return id; }
             }
 
-            // This method returns a collection of action strings that indicate the 
+            // This method returns a collection of action strings that indicate the
             // operations that the specified username is allowed to call.
             private IEnumerable<string> GetAllowedOpList(string username)
             {
                 IList<string> ret = new List<string>();
-            
+
                 if (username == "test1")
                 {
                     ret.Add ( "http://Microsoft.ServiceModel.Samples/ICalculator/Add");
@@ -211,7 +211,7 @@ namespace Microsoft.ServiceModel.Samples
                     bClaimsAdded = false;
                 }
 
-                public bool ClaimsAdded { get { return bClaimsAdded; } 
+                public bool ClaimsAdded { get { return bClaimsAdded; }
                                           set {  bClaimsAdded = value; } }
             }
         }
@@ -220,9 +220,9 @@ namespace Microsoft.ServiceModel.Samples
         public class MyCustomUserNameValidator : UserNamePasswordValidator
         {
             // <snippet2>
-            // This method validates users. It allows two users, test1 and test2 
+            // This method validates users. It allows two users, test1 and test2
             // with passwords 1tset and 2tset respectively.
-            // This code is for illustration purposes only and 
+            // This code is for illustration purposes only and
             // MUST NOT be used in a production environment because it is NOT secure.	
             public override void Validate(string userName, string password)
             {
@@ -238,13 +238,13 @@ namespace Microsoft.ServiceModel.Samples
             }
             // </snippet2>
         }
-        // </snippet1> 
+        // </snippet1>
         // Host the service within this EXE console application.
         public static void Main()
         {
             // Get base address from appsettings in configuration.
             Uri baseAddress = new Uri(ConfigurationManager.AppSettings["baseAddress"]);
-            
+
             // Create a ServiceHost for the CalculatorService type and provide the base address.
             using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress))
             {

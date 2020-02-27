@@ -35,7 +35,7 @@ class MyInstallClass
          myString = "MyAssembly_Uninstall.exe";
 
          // Create an object of the 'AssemblyInstaller' class.
-         AssemblyInstaller myAssemblyInstaller = new 
+         AssemblyInstaller myAssemblyInstaller = new
                   AssemblyInstaller( myString , myStringArray );
 // </Snippet1>
 

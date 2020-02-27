@@ -11,18 +11,18 @@ public class Form1: Form
   protected DataGrid dataGrid1;
 
 // <Snippet1>
- public void ShowOleDbException() 
+ public void ShowOleDbException()
  {
     string mySelectQuery = "SELECT column1 FROM table1";
     OleDbConnection myConnection =
        new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;DataSource=");
     OleDbCommand myCommand = new OleDbCommand(mySelectQuery,myConnection);
 
-    try 
+    try
     {
        myCommand.Connection.Open();
     }
-    catch (OleDbException e) 
+    catch (OleDbException e)
     {
       string errorMessages = "";
 

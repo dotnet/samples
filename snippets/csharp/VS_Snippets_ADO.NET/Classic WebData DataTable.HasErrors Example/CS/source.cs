@@ -10,16 +10,16 @@ public class Form1: Form
     protected DataGrid dataGrid1;
 
     // <Snippet1>
-    private void CheckForErrors(DataSet dataSet) 
+    private void CheckForErrors(DataSet dataSet)
     {
         // Invoke GetChanges on the DataSet to create a reduced set.
         DataSet thisDataSet = dataSet.GetChanges();
 
         // Check each table's HasErrors property.
-        foreach(DataTable table in thisDataSet.Tables) 
+        foreach(DataTable table in thisDataSet.Tables)
         {
             // If HasErrors is true, reconcile errors.
-            if(table.HasErrors) 
+            if(table.HasErrors)
             {
                 // Insert code to reconcile errors.
             }

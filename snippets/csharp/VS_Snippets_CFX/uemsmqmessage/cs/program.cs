@@ -17,7 +17,7 @@ namespace UEMsmqMessage
             // <Snippet2>
             MsmqMessage<string> message2 = new MsmqMessage<string>(message.Body);
             // </Snippet2>
-            
+
             // <Snippet3>
             message.AcknowledgeType = AcknowledgeTypes.PositiveArrival;
             // </Snippet3>

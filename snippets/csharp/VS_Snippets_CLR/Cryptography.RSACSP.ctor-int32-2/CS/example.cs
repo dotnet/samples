@@ -26,17 +26,17 @@ class RSACSPSample
             //Display the key-legth to the console.
             Console.WriteLine("A new key pair of legth {0} was created", RSAalg.KeySize);
 
-            //Pass the data to ENCRYPT, the public key information 
+            //Pass the data to ENCRYPT, the public key information
             //(using RSACryptoServiceProvider.ExportParameters(false),
             //and a boolean flag specifying no OAEP padding.
             encryptedData = RSAEncrypt(dataToEncrypt,RSAalg.ExportParameters(false), false);
 
-            //Pass the data to DECRYPT, the private key information 
+            //Pass the data to DECRYPT, the private key information
             //(using RSACryptoServiceProvider.ExportParameters(true),
             //and a boolean flag specifying no OAEP padding.
             decryptedData = RSADecrypt(encryptedData,RSAalg.ExportParameters(true), false);
 
-            //Display the decrypted plaintext to the console. 
+            //Display the decrypted plaintext to the console.
             Console.WriteLine("Decrypted plaintext: {0}", ByteConverter.GetString(decryptedData));
         }
         catch(ArgumentNullException)
@@ -58,12 +58,12 @@ class RSACSPSample
             //toinclude the public key information.
             RSAalg.ImportParameters(RSAKeyInfo);
 
-            //Encrypt the passed byte array and specify OAEP padding.  
+            //Encrypt the passed byte array and specify OAEP padding.
             //OAEP padding is only available on Microsoft Windows XP or
-            //later.  
+            //later.
             return RSAalg.Encrypt(DataToEncrypt, DoOAEPPadding);
         }
-            //Catch and display a CryptographicException  
+            //Catch and display a CryptographicException
             //to the console.
         catch(CryptographicException e)
         {
@@ -84,12 +84,12 @@ class RSACSPSample
             //to include the private key information.
             RSAalg.ImportParameters(RSAKeyInfo);
 
-            //Decrypt the passed byte array and specify OAEP padding.  
+            //Decrypt the passed byte array and specify OAEP padding.
             //OAEP padding is only available on Microsoft Windows XP or
-            //later.  
+            //later.
             return RSAalg.Decrypt(DataToDecrypt, DoOAEPPadding);
         }
-            //Catch and display a CryptographicException  
+            //Catch and display a CryptographicException
             //to the console.
         catch(CryptographicException e)
         {

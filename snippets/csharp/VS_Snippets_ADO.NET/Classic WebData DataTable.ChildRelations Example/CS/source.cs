@@ -59,7 +59,7 @@ public class Form1: Form
         {
             // add customer record
             dataSet.Tables["Customers"].Rows.Add(
-                new object[] { customerId, 
+                new object[] { customerId,
                 string.Format("customer{0}", customerId) });
 		
             // add 5 order records for each customer

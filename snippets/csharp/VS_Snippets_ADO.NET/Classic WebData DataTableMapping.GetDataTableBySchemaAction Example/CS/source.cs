@@ -13,7 +13,7 @@ public class Form1: Form
     protected DataTableMapping mapping;
 
     // <Snippet1>
-    public void CreateDataTable() 
+    public void CreateDataTable()
     {
         // ...
         // create dataSet and mapping

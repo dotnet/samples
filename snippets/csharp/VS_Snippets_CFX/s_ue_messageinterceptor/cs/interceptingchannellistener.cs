@@ -8,7 +8,7 @@ using System.Security.Permissions;
 
 namespace Microsoft.ServiceModel.Samples
 {
-    class InterceptingChannelListener<TChannel> 
+    class InterceptingChannelListener<TChannel>
         : ChannelListenerBase<TChannel>
         where TChannel : class, IChannel
     {
@@ -148,7 +148,7 @@ namespace Microsoft.ServiceModel.Samples
             }
             else if (typeof(TChannel) == typeof(IDuplexSessionChannel))
             {
-                return (TChannel)(object)new InterceptingDuplexSessionChannel(this, Interceptor, 
+                return (TChannel)(object)new InterceptingDuplexSessionChannel(this, Interceptor,
                     (IDuplexSessionChannel)innerChannel);
             }
 
@@ -286,7 +286,7 @@ namespace Microsoft.ServiceModel.Samples
 
                 Message m = requestContext.RequestMessage;
                 Message originalMessage = m;
-                
+
                 this.OnReceive(ref m);
                 if (m != null || originalMessage == null)
                 {
@@ -297,7 +297,7 @@ namespace Microsoft.ServiceModel.Samples
                     requestContext.Abort();
                     requestContext = null;
                 }
-                
+
                 return requestContext != null;
             }
 

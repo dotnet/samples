@@ -13,12 +13,12 @@ public class Sample
     private void CreateRelation()
     {
         // Code to get the DataSet not shown here.
-        // Get the DataColumn objects from two DataTable 
+        // Get the DataColumn objects from two DataTable
         // objects in a DataSet.
-        DataColumn[] parentCols = new DataColumn[] 
+        DataColumn[] parentCols = new DataColumn[]
             {DataSet1.Tables["Customers"].Columns["CustID"],
             DataSet1.Tables["Customers"].Columns["OrdID"]};
-        DataColumn[] childCols= new DataColumn[] 
+        DataColumn[] childCols= new DataColumn[]
             {DataSet1.Tables["Orders"].Columns["CustID"],
             DataSet1.Tables["Orders"].Columns["OrdID"]};
 

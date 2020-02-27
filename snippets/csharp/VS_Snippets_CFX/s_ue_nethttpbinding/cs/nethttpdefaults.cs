@@ -16,10 +16,10 @@ namespace Microsoft.Samples.Channels {
     using System.ServiceModel.Configuration;
     using System.Globalization;
     using System.Xml;
-    
+
     // TODO: Please initialize default values to these fields
     internal class NetHttpDefaults {
-        
+
         internal const Boolean DefaultBypassProxyOnLocal = true;
 
         internal const HostNameComparisonMode DefaultHostNameComparisonMode = HostNameComparisonMode.StrongWildcard;

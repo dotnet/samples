@@ -23,30 +23,30 @@ class Module1
 
         ads.DisallowBindingRedirects = false;
         ads.DisallowCodeDownload = true;
-        ads.ConfigurationFile = 
+        ads.ConfigurationFile =
             AppDomain.CurrentDomain.SetupInformation.ConfigurationFile;
 
         // Create the second AppDomain.
         AppDomain ad2 = AppDomain.CreateDomain("AD #2", null, ads);
 
-        // Create an instance of MarshalbyRefType in the second AppDomain. 
+        // Create an instance of MarshalbyRefType in the second AppDomain.
         // A proxy to the object is returned.
-        MarshalByRefType mbrt = 
+        MarshalByRefType mbrt =
             (MarshalByRefType) ad2.CreateInstanceAndUnwrap(
-                exeAssembly, 
+                exeAssembly,
                 typeof(MarshalByRefType).FullName
             );
 
-        // Call a method on the object via the proxy, passing the 
+        // Call a method on the object via the proxy, passing the
         // default AppDomain's friendly name in as a parameter.
         mbrt.SomeMethod(callingDomainName);
 
-        // Unload the second AppDomain. This deletes its object and 
+        // Unload the second AppDomain. This deletes its object and
         // invalidates the proxy object.
         AppDomain.Unload(ad2);
         try
         {
-            // Call the method again. Note that this time it fails 
+            // Call the method again. Note that this time it fails
             // because the second AppDomain was unloaded.
             mbrt.SomeMethod(callingDomainName);
             Console.WriteLine("Sucessful call.");
@@ -60,8 +60,8 @@ class Module1
 //</snippet2>
 
 //<snippet3>
-// Because this class is derived from MarshalByRefObject, a proxy 
-// to a MarshalByRefType object can be returned across an AppDomain 
+// Because this class is derived from MarshalByRefObject, a proxy
+// to a MarshalByRefType object can be returned across an AppDomain
 // boundary.
 public class MarshalByRefType : MarshalByRefObject
 {
@@ -70,25 +70,25 @@ public class MarshalByRefType : MarshalByRefObject
     {
         // Get this AppDomain's settings and display some of them.
         AppDomainSetup ads = AppDomain.CurrentDomain.SetupInformation;
-        Console.WriteLine("AppName={0}, AppBase={1}, ConfigFile={2}", 
-            ads.ApplicationName, 
-            ads.ApplicationBase, 
+        Console.WriteLine("AppName={0}, AppBase={1}, ConfigFile={2}",
+            ads.ApplicationName,
+            ads.ApplicationBase,
             ads.ConfigurationFile
         );
 
-        // Display the name of the calling AppDomain and the name 
+        // Display the name of the calling AppDomain and the name
         // of the second domain.
-        // NOTE: The application's thread has transitioned between 
+        // NOTE: The application's thread has transitioned between
         // AppDomains.
-        Console.WriteLine("Calling from '{0}' to '{1}'.", 
-            callingDomainName, 
+        Console.WriteLine("Calling from '{0}' to '{1}'.",
+            callingDomainName,
             Thread.GetDomain().FriendlyName
         );
     }
 }
 //</snippet3>
 
-/* This code produces output similar to the following: 
+/* This code produces output similar to the following:
 
 AppDomainX.exe
 AppDomainX, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null

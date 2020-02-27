@@ -10,9 +10,9 @@ class DESSample
     {
         try
         {
-            // Create a new DES object to generate a key 
-            // and initialization vector (IV).  Specify one 
-            // of the recognized simple names for this 
+            // Create a new DES object to generate a key
+            // and initialization vector (IV).  Specify one
+            // of the recognized simple names for this
             // algorithm.
             DES DESalg = DES.Create("DES");
 
@@ -24,7 +24,7 @@ class DESSample
 
             // Decrypt the buffer back to a string.
             string Final = DecryptTextFromMemory(Data, DESalg.Key, DESalg.IV);
-            
+
             // Display the decrypted string to the console.
             Console.WriteLine(Final);
         }
@@ -44,10 +44,10 @@ class DESSample
             // Create a new DES object.
             DES DESalg = DES.Create();
 
-            // Create a CryptoStream using the MemoryStream 
+            // Create a CryptoStream using the MemoryStream
             // and the passed key and initialization vector (IV).
-            CryptoStream cStream = new CryptoStream(mStream, 
-                DESalg.CreateEncryptor(Key, IV), 
+            CryptoStream cStream = new CryptoStream(mStream,
+                DESalg.CreateEncryptor(Key, IV),
                 CryptoStreamMode.Write);
 
             // Convert the passed string to a byte array.
@@ -56,9 +56,9 @@ class DESSample
             // Write the byte array to the crypto stream and flush it.
             cStream.Write(toEncrypt, 0, toEncrypt.Length);
             cStream.FlushFinalBlock();
-        
-            // Get an array of bytes from the 
-            // MemoryStream that holds the 
+
+            // Get an array of bytes from the
+            // MemoryStream that holds the
             // encrypted data.
             byte[] ret = mStream.ToArray();
 
@@ -80,17 +80,17 @@ class DESSample
     {
         try
         {
-            // Create a new MemoryStream using the passed 
+            // Create a new MemoryStream using the passed
             // array of encrypted data.
             MemoryStream msDecrypt = new MemoryStream(Data);
 
             // Create a new DES object.
             DES DESalg = DES.Create();
 
-            // Create a CryptoStream using the MemoryStream 
+            // Create a CryptoStream using the MemoryStream
             // and the passed key and initialization vector (IV).
-            CryptoStream csDecrypt = new CryptoStream(msDecrypt, 
-                DESalg.CreateDecryptor(Key, IV), 
+            CryptoStream csDecrypt = new CryptoStream(msDecrypt,
+                DESalg.CreateDecryptor(Key, IV),
                 CryptoStreamMode.Read);
 
             // Create buffer to hold the decrypted data.

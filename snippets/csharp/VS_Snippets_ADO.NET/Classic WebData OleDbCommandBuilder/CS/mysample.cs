@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.OleDb;
 using System.Data.Common;
 
-public class Form1 
+public class Form1
 {
     static void Main()
     {

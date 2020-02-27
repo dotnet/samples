@@ -13,7 +13,7 @@ public class Form1: Form
   public OracleConnection connection;
 // <Snippet1>
 public void CreateOracleParamColl() {
-    OracleCommand command = new OracleCommand( 
+    OracleCommand command = new OracleCommand(
         "SELECT Ename, DeptNo FROM Emp WHERE EmpNo = :pEmpNo", connection);
     OracleParameterCollection paramCollection = command.Parameters;
     object parameter = new OracleParameter("pEmpNo", OracleType.Number);

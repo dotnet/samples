@@ -8,7 +8,7 @@ public class Form1: Form
     protected DataColumnMappingCollection columnMappings;
 
     // <Snippet1>
-    public void FindDataColumnMapping() 
+    public void FindDataColumnMapping()
     {
         // ...
         // create columnMappings
@@ -19,9 +19,9 @@ public class Form1: Form
         }
         else
         {
-            Console.WriteLine("Name {0}", 
+            Console.WriteLine("Name {0}",
                 columnMappings["Description"].ToString());
-            Console.WriteLine("Index: {0}", 
+            Console.WriteLine("Index: {0}",
                 columnMappings.IndexOf("Description").ToString());
         }
     }

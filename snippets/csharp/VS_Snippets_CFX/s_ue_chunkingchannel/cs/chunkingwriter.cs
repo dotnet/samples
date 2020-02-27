@@ -184,7 +184,7 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
         public override void WriteEndElement()
         {
             if (this.currentElementName.Name == this.startState.ParamName && this.currentElementName.Namespace == this.startState.ParamNs)
-            
+
             {
                 this.currentElementName = new XmlQualifiedName(this.startState.OperationName, this.startState.OperationNs);
             }

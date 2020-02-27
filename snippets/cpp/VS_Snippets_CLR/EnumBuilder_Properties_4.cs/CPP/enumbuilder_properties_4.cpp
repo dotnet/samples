@@ -45,11 +45,11 @@ public:
          Console::WriteLine( "Enum GUID is :{0}", myEnumBuilder->GUID );
          myAssemblyBuilder->Save( "EmittedAssembly.dll" );
       }
-      catch ( NotSupportedException^ ex ) 
+      catch ( NotSupportedException^ ex )
       {
          Console::WriteLine( "The following is the exception is raised: {0}", ex->Message );
       }
-      catch ( Exception^ e ) 
+      catch ( Exception^ e )
       {
          Console::WriteLine( "The following is the exception raised: {0}", e->Message );
       }

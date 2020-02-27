@@ -7,7 +7,7 @@ public class Form1: Form
     protected DataSet DataSet1;
 
     // <Snippet1>
-    private void RemoveConstraint(ConstraintCollection constraints, 
+    private void RemoveConstraint(ConstraintCollection constraints,
         Constraint constraint)
     {
         if(constraints.Contains(constraint.ConstraintName))

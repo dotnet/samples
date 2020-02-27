@@ -22,7 +22,7 @@ namespace Service
                 "CalculatorServiceObject");
 
             serviceHost.Open();
-            
+
             IChannelListener icl = serviceHost.ChannelDispatchers[0].Listener;
             ChannelDispatcher dispatcher = new ChannelDispatcher(icl);
             // </Snippet1>
@@ -238,7 +238,7 @@ namespace Service
 
             serviceHost.AddServiceEndpoint(
                 typeof(ICalculator),
-                new WSHttpBinding(), 
+                new WSHttpBinding(),
                 "CalculatorServiceObject");
 
             serviceHost.Open();
@@ -303,7 +303,7 @@ namespace Service
 
             IChannelListener icl = serviceHost.ChannelDispatchers[0].Listener;
             ChannelDispatcher dispatcher = new ChannelDispatcher(icl);
-            dispatcher.TransactionIsolationLevel = System.Transactions.IsolationLevel.ReadCommitted;            
+            dispatcher.TransactionIsolationLevel = System.Transactions.IsolationLevel.ReadCommitted;
             // </Snippet16>
         }
 

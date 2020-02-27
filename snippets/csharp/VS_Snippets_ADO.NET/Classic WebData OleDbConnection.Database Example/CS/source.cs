@@ -44,7 +44,7 @@ class Class1
             connection.Open();
             Console.WriteLine("ServerVersion: {0} \nDatabase: {1}",
                 connection.ServerVersion, connection.Database);
-            
+
             connection.ChangeDatabase("Northwind");
             Console.WriteLine("ServerVersion: {0} \nDatabase: {1}",
                connection.ServerVersion, connection.Database);

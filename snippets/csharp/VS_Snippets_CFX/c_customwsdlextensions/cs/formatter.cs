@@ -22,9 +22,9 @@ namespace Microsoft.WCF.Documentation
 		public static CodeCommentStatementCollection FormatComments(string text)
 		{
       /*
-       * Note that in Visual C# the XML comment format absorbs a 
+       * Note that in Visual C# the XML comment format absorbs a
        * documentation element with a line break in the middle. This sample
-       * could take an XmlElement and create code comments in which 
+       * could take an XmlElement and create code comments in which
        * the element never had a line break in it.
       */
 
@@ -62,8 +62,8 @@ namespace Microsoft.WCF.Documentation
 			return lines;
 		}
 
-		#endregion  
-  
+		#endregion
+
     public static XmlElement CreateReturnsElement(XmlDocument owner, string p)
     {
       XmlElement returnsElement = owner.CreateElement("returns");

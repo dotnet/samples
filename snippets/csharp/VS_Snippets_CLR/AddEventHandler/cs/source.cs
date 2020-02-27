@@ -17,15 +17,15 @@ public class Example
         EventInfo eInfo = t.GetEvent("Elapsed");
 
         // In order to create a method to handle the Elapsed event,
-        // it is necessary to know the signature of the delegate 
+        // it is necessary to know the signature of the delegate
         // used to raise the event. Reflection.Emit can then be
         // used to construct a dynamic class with a static method
         // that has the correct signature.
- 
+
         // Get the event handler type of the Elapsed event. This is
         // a delegate type, so it has an Invoke method that has
         // the same signature as the delegate. The following code
-        // creates an array of Type objects that represent the 
+        // creates an array of Type objects that represent the
         // parameter types of the Invoke method.
         //
         Type handlerType = eInfo.EventHandlerType;
@@ -38,11 +38,11 @@ public class Example
         }
 
         // Use Reflection.Emit to create a dynamic assembly that
-        // will be run but not saved. An assembly must have at 
+        // will be run but not saved. An assembly must have at
         // least one module, which in this case contains a single
-        // type. The only purpose of this type is to contain the 
-        // event handler method. (You can use also dynamic methods, 
-        // which are simpler because there is no need to create an 
+        // type. The only purpose of this type is to contain the
+        // event handler method. (You can use also dynamic methods,
+        // which are simpler because there is no need to create an
         // assembly, module, or type.)
         //
         AssemblyName aName = new AssemblyName();
@@ -56,13 +56,13 @@ public class Example
         // no reason to create an instance of the dynamic type.
         //
         // The parameter types and return type of the method are
-        // the same as those of the delegate's Invoke method, 
+        // the same as those of the delegate's Invoke method,
         // captured earlier.
-        MethodBuilder handler = tb.DefineMethod("DynamicHandler", 
-            MethodAttributes.Public | MethodAttributes.Static, 
+        MethodBuilder handler = tb.DefineMethod("DynamicHandler",
+            MethodAttributes.Public | MethodAttributes.Static,
             invokeMethod.ReturnType, parmTypes);
 
-        // Generate code to handle the event. In this case, the 
+        // Generate code to handle the event. In this case, the
         // handler simply prints a text string to the console.
         //
         ILGenerator il = handler.GetILGenerator();
@@ -76,13 +76,13 @@ public class Example
         Type finished = tb.CreateType();
         MethodInfo eventHandler = finished.GetMethod("DynamicHandler");
 
-        // Use the MethodInfo to create a delegate of the correct 
-        // type, and call the AddEventHandler method to hook up 
+        // Use the MethodInfo to create a delegate of the correct
+        // type, and call the AddEventHandler method to hook up
         // the event.
         Delegate d = Delegate.CreateDelegate(handlerType, eventHandler);
         eInfo.AddEventHandler(timer, d);
 
-        // Late-bound calls to the Interval and Enabled property 
+        // Late-bound calls to the Interval and Enabled property
         // are required to enable the timer with a one-second
         // interval.
         t.InvokeMember("Interval", BindingFlags.SetProperty, null, timer, new Object[] { 1000 });

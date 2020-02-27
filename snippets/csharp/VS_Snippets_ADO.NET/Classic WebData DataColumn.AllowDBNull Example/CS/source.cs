@@ -10,7 +10,7 @@ public class Form1: Form
     private void AddNullAllowedColumn()
     {
         DataColumn column;
-        column = new DataColumn("classID", 
+        column = new DataColumn("classID",
             System.Type.GetType("System.Int32"));
         column.AllowDBNull = true;
 

@@ -16,14 +16,14 @@ namespace Microsoft.ServiceModel.Samples
         private CustomTextMessageEncoderFactory factory;
         private XmlWriterSettings writerSettings;
         private string contentType;
-        
+
         public CustomTextMessageEncoder(CustomTextMessageEncoderFactory factory)
         {
             this.factory = factory;
-            
+
             this.writerSettings = new XmlWriterSettings();
             this.writerSettings.Encoding = Encoding.GetEncoding(factory.CharSet);
-            this.contentType = string.Format("{0}; charset={1}", 
+            this.contentType = string.Format("{0}; charset={1}",
                 this.factory.MediaType, this.writerSettings.Encoding.HeaderName);
         }
 
@@ -40,7 +40,7 @@ namespace Microsoft.ServiceModel.Samples
         // <Snippet2>
         public override string MediaType
         {
-            get 
+            get
             {
                 return factory.MediaType;
             }
@@ -50,7 +50,7 @@ namespace Microsoft.ServiceModel.Samples
         // <Snippet3>
         public override MessageVersion MessageVersion
         {
-            get 
+            get
             {
                 return this.factory.MessageVersion;
             }
@@ -58,31 +58,31 @@ namespace Microsoft.ServiceModel.Samples
         // </Snippet3>
 
         // <Snippet8>
-        public override bool IsContentTypeSupported(string contentType) 
-        { 
-            if (base.IsContentTypeSupported(contentType)) 
-            { 
-                return true; 
-            } 
-            if (contentType.Length == this.MediaType.Length) 
-            { 
-                return contentType.Equals(this.MediaType, StringComparison.OrdinalIgnoreCase); 
-            } 
-            else 
-            { 
-                if (contentType.StartsWith(this.MediaType, StringComparison.OrdinalIgnoreCase) 
-                    && (contentType[this.MediaType.Length] == ';')) 
-                { 
-                    return true; 
-                } 
-            } 
-            return false; 
+        public override bool IsContentTypeSupported(string contentType)
+        {
+            if (base.IsContentTypeSupported(contentType))
+            {
+                return true;
+            }
+            if (contentType.Length == this.MediaType.Length)
+            {
+                return contentType.Equals(this.MediaType, StringComparison.OrdinalIgnoreCase);
+            }
+            else
+            {
+                if (contentType.StartsWith(this.MediaType, StringComparison.OrdinalIgnoreCase)
+                    && (contentType[this.MediaType.Length] == ';'))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
         // </Snippet8>
 
         // <Snippet4>
         public override Message ReadMessage(ArraySegment<byte> buffer, BufferManager bufferManager, string contentType)
-        {   
+        {
             byte[] msgContents = new byte[buffer.Count];
             Array.Copy(buffer.Array, buffer.Offset, msgContents, 0, msgContents.Length);
             bufferManager.ReturnBuffer(buffer.Array);
@@ -107,7 +107,7 @@ namespace Microsoft.ServiceModel.Samples
             XmlWriter writer = XmlWriter.Create(stream, this.writerSettings);
             message.WriteMessage(writer);
             writer.Close();
-            
+
             byte[] messageBytes = stream.GetBuffer();
             int messageLength = (int)stream.Position;
             stream.Close();

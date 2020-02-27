@@ -1,14 +1,14 @@
 ﻿//<snippet1>
 // This example demonstrates the Console.SetWindowSize method,
-//                           the Console.WindowWidth property, 
+//                           the Console.WindowWidth property,
 //                       and the Console.WindowHeight property.
 using System;
 
-class Sample 
+class Sample
 {
-    public static void Main() 
+    public static void Main()
     {
-    int origWidth, width;  
+    int origWidth, width;
     int origHeight, height;
     string m1 = "The current window width is {0}, and the " +
                 "current window height is {1}.";
@@ -23,7 +23,7 @@ class Sample
     Console.WriteLine(m1, Console.WindowWidth,
                           Console.WindowHeight);
     Console.WriteLine(m4);
-    Console.ReadKey(true); 
+    Console.ReadKey(true);
 //
 // Step 2: Cut the window to 1/4 its original size.
 //
@@ -33,7 +33,7 @@ class Sample
     Console.WriteLine(m2, Console.WindowWidth,
                           Console.WindowHeight);
     Console.WriteLine(m4);
-    Console.ReadKey(true); 
+    Console.ReadKey(true);
 //
 // Step 3: Restore the window to its original size.
 //

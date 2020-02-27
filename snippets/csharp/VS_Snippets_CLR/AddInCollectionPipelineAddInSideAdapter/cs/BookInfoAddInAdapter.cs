@@ -1,7 +1,7 @@
 ﻿// <Snippet6>
 using System;
 
-namespace LibraryContractsAddInAdapters 
+namespace LibraryContractsAddInAdapters
 {
     public class BookInfoAddInAdapter
     {
@@ -12,7 +12,7 @@ namespace LibraryContractsAddInAdapters
             {
                 return ((BookInfoViewToContractAddInAdapter)(contract)).GetSourceView();
             }
-            else 
+            else
             {
                 return new BookInfoContractToViewAddInAdapter(contract);
             }
@@ -25,7 +25,7 @@ namespace LibraryContractsAddInAdapters
             {
                 return ((BookInfoContractToViewAddInAdapter)(view)).GetSourceContract();
             }
-            else 
+            else
             {
                 return new BookInfoViewToContractAddInAdapter(view);
             }

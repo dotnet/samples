@@ -8,14 +8,14 @@ class MyClass
    {
       //Insert code here.
    }
-   
+
    [ComVisible(false)]
-   public int MyMethod(string param) 
+   public int MyMethod(string param)
    {
       return 0;
    }
 
-   public bool MyOtherMethod() 
+   public bool MyOtherMethod()
    {
       return true;
    }

@@ -18,7 +18,7 @@ public class Form1: Form
         DataColumn column = table.Columns.Add("ProductID",
             typeof(int)	);
         column.AutoIncrement = true;
-        column = table.Columns.Add("ProductName", 
+        column = table.Columns.Add("ProductName",
             typeof(string));
 
         // populate DataTable.

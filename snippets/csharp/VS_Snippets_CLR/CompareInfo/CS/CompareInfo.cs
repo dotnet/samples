@@ -10,14 +10,14 @@ public sealed class App
     {
         String[] sign = new String[] { "<", "=", ">" };
 
-        // The code below demonstrates how strings compare 
+        // The code below demonstrates how strings compare
         // differently for different cultures.
         String s1 = "Coté", s2 = "coté", s3 = "côte";
 
         // Set sort order of strings for French in France.
         CompareInfo ci = new CultureInfo("fr-FR").CompareInfo;
         Console.WriteLine("The LCID for {0} is {1}.", ci.Name, ci.LCID);
-      
+
         // Display the result using fr-FR Compare of Coté = coté.  	
         Console.WriteLine("fr-FR Compare: {0} {2} {1}",
             s1, s2, sign[ci.Compare(s1, s2, CompareOptions.IgnoreCase) + 1]);
@@ -30,14 +30,14 @@ public sealed class App
         ci = new CultureInfo("ja-JP").CompareInfo;
         Console.WriteLine("The LCID for {0} is {1}.", ci.Name, ci.LCID);
 
-        // Display the result using ja-JP Compare of coté < côte. 
+        // Display the result using ja-JP Compare of coté < côte.
         Console.WriteLine("ja-JP Compare: {0} {2} {1}",
             s2, s3, sign[ci.Compare(s2, s3) + 1]);
     }
 }
 
 // This code produces the following output.
-// 
+//
 // The LCID for fr-FR is 1036.
 // fr-FR Compare: Coté = coté
 // fr-FR Compare: coté > côte

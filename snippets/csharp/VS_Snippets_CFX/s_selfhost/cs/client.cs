@@ -55,8 +55,8 @@ namespace Microsoft.ServiceModel.Samples
               Console.WriteLine(commProblem.Message);
               Console.ReadLine();
               wcfClient.Abort();
-            } 
-          
+            }
+
           Console.WriteLine();
           Console.WriteLine("Press <ENTER> to terminate client.");
           Console.ReadLine();

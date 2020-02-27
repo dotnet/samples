@@ -9,9 +9,9 @@ public class Example
 
    // <Snippet5>
    [MethodImpl(MethodImplOptions.NoOptimization)]
-   public bool TestCondition(int i) 
+   public bool TestCondition(int i)
    {
-      // Calls to methods that perform bit tests.    
+      // Calls to methods that perform bit tests.
       return Test1(i) && Test2(i) && Test3(i);
    }
    // </Snippet5>

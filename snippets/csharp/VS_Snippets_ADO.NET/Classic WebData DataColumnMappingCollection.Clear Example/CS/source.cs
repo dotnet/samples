@@ -8,7 +8,7 @@ public class Form1: Form
     protected DataColumnMappingCollection mappings;
 
     // <Snippet1>
-    public bool PushIntoArray() 
+    public bool PushIntoArray()
     {
         // ...
         // create mappings

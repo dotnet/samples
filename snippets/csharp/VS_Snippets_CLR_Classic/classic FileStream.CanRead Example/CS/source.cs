@@ -1,8 +1,8 @@
 ﻿// <Snippet1>
 using System;
 using System.IO;
- 
-class TestRW 
+
+class TestRW
 {
     public static void Main(String[] args)
     {

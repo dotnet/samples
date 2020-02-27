@@ -11,7 +11,7 @@ public class Form1: Form
     protected OleDbDataAdapter adapter;
 
     // <Snippet1>
-    public void GetRecords() 
+    public void GetRecords()
     {
         // ...
         // create dataSet and adapter

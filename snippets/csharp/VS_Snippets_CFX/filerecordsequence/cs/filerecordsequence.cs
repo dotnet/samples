@@ -29,17 +29,17 @@ namespace MyFileRecordSequence
             previous = sequence.Append(CreateData("Hello World!"), SequenceNumber.Invalid, SequenceNumber.Invalid, RecordAppendOptions.ForceFlush);
             previous = sequence.Append(CreateData("This is my first Logging App"), SequenceNumber.Invalid, SequenceNumber.Invalid, RecordAppendOptions.ForceFlush);
             previous = sequence.Append(CreateData("Using FileRecordSequence..."), SequenceNumber.Invalid, SequenceNumber.Invalid, RecordAppendOptions.ForceFlush);
-            
+
             Console.WriteLine("Done...");
         }
 	 //</snippet1>
-	 
+	
 	//<snippet2>
-        // Read the records added to the log. 
+        // Read the records added to the log.
         public void ReadRecords()
         {
             Encoding enc = Encoding.Unicode;
-            
+
             Console.WriteLine();
             Console.WriteLine("Reading Log Records...");
 			
@@ -62,7 +62,7 @@ namespace MyFileRecordSequence
         }
 	//</snippet2>
 	
-        // Dispose the record sequence and delete the log file. 
+        // Dispose the record sequence and delete the log file.
         public void Cleanup()
         {
             // Dispose the sequence
@@ -82,7 +82,7 @@ namespace MyFileRecordSequence
             }
         }
 
-        // Converts the given data to Array of ArraSegment<byte> 
+        // Converts the given data to Array of ArraSegment<byte>
         public static IList<ArraySegment<byte>> CreateData(string str)
         {
             Encoding enc = Encoding.Unicode;

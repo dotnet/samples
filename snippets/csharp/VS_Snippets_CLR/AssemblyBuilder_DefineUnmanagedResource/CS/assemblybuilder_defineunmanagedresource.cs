@@ -26,7 +26,7 @@ public class MyAssemblyResource
 
       // Defines a standalone managed resource for this assembly.
       IResourceWriter myResourceWriter = myAssembly.DefineResource("myResourceFile",
-         "A sample Resource File", "MyAssemblyResource.resources", 
+         "A sample Resource File", "MyAssemblyResource.resources",
          ResourceAttributes.Private);
 
       myResourceWriter.AddResource("AddResource Test", "Testing for the added resource");
@@ -40,12 +40,12 @@ public class MyAssemblyResource
    private static AssemblyBuilder CreateAssembly(string name)
    {
       AssemblyName aName = new AssemblyName(name);
-      AssemblyBuilder myAssembly = 
+      AssemblyBuilder myAssembly =
          AppDomain.CurrentDomain.DefineDynamicAssembly(aName,
             AssemblyBuilderAccess.Save);
 
       // Define a dynamic module.
-      ModuleBuilder myModule = 
+      ModuleBuilder myModule =
          myAssembly.DefineDynamicModule(aName.Name, aName.Name + ".dll");
 
       // Define a public class named "EmitClass" in the assembly.

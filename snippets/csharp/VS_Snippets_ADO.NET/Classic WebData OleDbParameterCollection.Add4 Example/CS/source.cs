@@ -11,7 +11,7 @@ public class Form1: Form
     protected DataGrid dataGrid1;
 
     // <Snippet1>
-    public void CreateParameters(OleDbConnection connection) 
+    public void CreateParameters(OleDbConnection connection)
     {
         OleDbCommand command = new OleDbCommand(
             "SELECT * FROM Customers WHERE CustomerID = ?", connection);

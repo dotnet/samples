@@ -68,7 +68,7 @@ namespace Microsoft.ServiceModel.Samples
 
             {
                 // <Snippet4>
-                ClientCredentials clientCreds = 
+                ClientCredentials clientCreds =
                     new ClientCredentials();
                 Console.WriteLine(
                     clientCreds.ServiceCertificate.Authentication);
@@ -83,12 +83,12 @@ namespace Microsoft.ServiceModel.Samples
                 wcfClient.ChannelFactory.Endpoint.Behaviors.Remove(typeof(ClientCredentials));
                 wcfClient.ChannelFactory.Endpoint.Behaviors.Add(new MyUserNameClientCredentials());
                 /*
-                Setting the CertificateValidationMode to PeerOrChainTrust means that if the certificate 
+                Setting the CertificateValidationMode to PeerOrChainTrust means that if the certificate
                 is in the Trusted People store, then it will be trusted without performing a
-                validation of the certificate's issuer chain. This setting is used here for convenience so that the 
+                validation of the certificate's issuer chain. This setting is used here for convenience so that the
                 sample can be run without having to have certificates issued by a certificate authority (CA).
-                This setting is less secure than the default, ChainTrust. The security implications of this 
-                setting should be carefully considered before using PeerOrChainTrust in production code. 
+                This setting is less secure than the default, ChainTrust. The security implications of this
+                setting should be carefully considered before using PeerOrChainTrust in production code.
                 */
                 wcfClient.ClientCredentials.ServiceCertificate.Authentication.CertificateValidationMode =
                     X509CertificateValidationMode.PeerOrChainTrust;

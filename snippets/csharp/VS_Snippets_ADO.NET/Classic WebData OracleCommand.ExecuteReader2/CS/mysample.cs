@@ -16,9 +16,9 @@ class Class1
             OracleCommand command = new OracleCommand(queryString, connection);
             connection.Open();
 
-            // Implicitly closes the connection because 
+            // Implicitly closes the connection because
             // CommandBehavior.CloseConnection is specified.
-            OracleDataReader reader = 
+            OracleDataReader reader =
                 command.ExecuteReader(CommandBehavior.CloseConnection);
             while (reader.Read())
             {

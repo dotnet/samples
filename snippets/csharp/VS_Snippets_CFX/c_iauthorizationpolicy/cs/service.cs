@@ -75,7 +75,7 @@ namespace Microsoft.ServiceModel.Samples
         {
             // <snippet4>
             protected override bool CheckAccessCore(OperationContext operationContext)
-            {                
+            {
                 // Extract the action URI from the OperationContext. Match this against the claims
                 // in the AuthorizationContext.
                 string action = operationContext.RequestContext.RequestMessage.Headers.Action;
@@ -103,7 +103,7 @@ namespace Microsoft.ServiceModel.Samples
                 // </snippet5>
 
                 // If this point is reached, return false to deny access.
-                return false;                 
+                return false;
             }
             // </snippet4>
         }
@@ -123,7 +123,7 @@ namespace Microsoft.ServiceModel.Samples
                 bool bRet = false;
                 CustomAuthState customstate = null;
 
-                // If state is null, then this method has not been called before, so 
+                // If state is null, then this method has not been called before, so
                 // set up a custom state.
                 if (state == null)
                 {
@@ -184,12 +184,12 @@ namespace Microsoft.ServiceModel.Samples
                 get { return id; }
             }
 
-            // This method returns a collection of action strings that indicate the 
+            // This method returns a collection of action strings that indicate the
             // operations that the specified username is allowed to call.
             private IEnumerable<string> GetAllowedOpList(string username)
             {
                 IList<string> ret = new List<string>();
-            
+
                 if (username == "test1")
                 {
                     ret.Add ( "http://Microsoft.ServiceModel.Samples/ICalculator/Add");
@@ -214,7 +214,7 @@ namespace Microsoft.ServiceModel.Samples
                     bClaimsAdded = false;
                 }
 
-                public bool ClaimsAdded { get { return bClaimsAdded; } 
+                public bool ClaimsAdded { get { return bClaimsAdded; }
                                           set {  bClaimsAdded = value; } }
             }
         }
@@ -222,9 +222,9 @@ namespace Microsoft.ServiceModel.Samples
         // </snippet1>
         public class MyCustomUserNameValidator : UserNamePasswordValidator
         {
-            // This method validates users. It allows two users, test1 and test2 
+            // This method validates users. It allows two users, test1 and test2
             // with passwords 1tset and 2tset respectively.
-            // This code is for illustration purposes only and 
+            // This code is for illustration purposes only and
             // MUST NOT be used in a production environment because it is NOT secure.	
             public override void Validate(string userName, string password)
             {
@@ -239,13 +239,13 @@ namespace Microsoft.ServiceModel.Samples
                 }
             }
         }
- 
+
         // Host the service within this EXE console application.
         public static void Main()
         {
             // Get base address from appsettings in configuration.
             Uri baseAddress = new Uri(ConfigurationManager.AppSettings["baseAddress"]);
-            
+
             // Create a ServiceHost for the CalculatorService type and provide the base address.
             using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress))
             {

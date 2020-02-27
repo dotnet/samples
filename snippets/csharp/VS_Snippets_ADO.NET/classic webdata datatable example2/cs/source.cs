@@ -141,7 +141,7 @@ class Program {
             else if (col.DataType.Equals(typeof(Decimal)))
                Console.Write("{0,-14:C}", row[col]);
             else
-               Console.Write("{0,-14}", row[col]);           
+               Console.Write("{0,-14}", row[col]);
          }
          Console.WriteLine();
       }

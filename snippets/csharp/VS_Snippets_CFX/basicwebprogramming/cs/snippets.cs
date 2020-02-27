@@ -100,7 +100,7 @@ namespace BasicWebProgramming
             try
             {
                 host.Open();
-            
+
                 // The endpoint name passed to the constructor must match an endpoint element
                 // in the application configuration file
                 WebChannelFactory<IService> cf = new WebChannelFactory<IService>("MyEndpoint");

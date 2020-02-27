@@ -4,7 +4,7 @@ using System;
 using System.Reflection;
 using System.Reflection.Emit;
 
-class Test 
+class Test
 {
     // For this code example, the following information needs to be
     // available to both Main and the HandleTypeResolve event
@@ -12,13 +12,13 @@ class Test
     private static AssemblyBuilder ab;
     private static string moduleName;
 
-    public static void Main() 
+    public static void Main()
     {
         AppDomain currDom = AppDomain.CurrentDomain;
 
-        // Create a dynamic assembly with one module, to be saved to 
+        // Create a dynamic assembly with one module, to be saved to
         // disk (AssemblyBuilderAccess.Save).
-        // 
+        //
         AssemblyName aName = new AssemblyName();
         aName.Name = "Transient";
         moduleName = aName.Name + ".dll";
@@ -31,7 +31,7 @@ class Test
         TypeBuilder tb = mb.DefineType("Example");
         tb.CreateType();
 
-        // First, try to load the type without saving the dynamic 
+        // First, try to load the type without saving the dynamic
         // assembly and without hooking up the TypeResolve event. The
         // type cannot be loaded.
         try
@@ -45,11 +45,11 @@ class Test
         }
 
         // Hook up the TypeResolve event.
-        //      
-        currDom.TypeResolve += 
+        //
+        currDom.TypeResolve +=
             new ResolveEventHandler(HandleTypeResolve);
 
-        // Now try to load the type again. The TypeResolve event is 
+        // Now try to load the type again. The TypeResolve event is
         // raised, the dynamic assembly is saved, and the dummy type is
         // loaded successfully. Display it to the console, and create
         // an instance.
@@ -58,7 +58,7 @@ class Test
         Object o = Activator.CreateInstance(t);
     }
 
-    static Assembly HandleTypeResolve(object sender, ResolveEventArgs args) 
+    static Assembly HandleTypeResolve(object sender, ResolveEventArgs args)
     {
         Console.WriteLine("TypeResolve event handler.");
 
@@ -66,7 +66,7 @@ class Test
         // display name. Return the loaded assembly.
         //
         ab.Save(moduleName);
-        return Assembly.Load(ab.FullName); 
+        return Assembly.Load(ab.FullName);
     }
 }
 

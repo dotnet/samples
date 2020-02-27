@@ -12,18 +12,18 @@ public class Form1: Form
     // <Snippet1>
     private void DemonstrateEnforceConstraints()
     {
-        // Create a DataSet with one table, one column and 
+        // Create a DataSet with one table, one column and
         // a UniqueConstraint.
         DataSet dataSet= new DataSet("dataSet");
         DataTable table = new DataTable("table");
         DataColumn column = new DataColumn("col1");
 
-        // A UniqueConstraint is added when the Unique 
+        // A UniqueConstraint is added when the Unique
         // property is true.
         column.Unique=true;
         table.Columns.Add(column);
         dataSet.Tables.Add(table);
-        Console.WriteLine("constraints.count: " + 
+        Console.WriteLine("constraints.count: " +
             table.Constraints.Count);
 
         // add five rows.
@@ -35,7 +35,7 @@ public class Form1: Form
             table.Rows.Add(row);
         }
         table.AcceptChanges();
-    
+
         dataSet.EnforceConstraints=false;
         // Change the values of all rows to 1.
         foreach(DataRow thisRow in table.Rows)
@@ -50,7 +50,7 @@ public class Form1: Form
         catch(System.Data.ConstraintException e)
         {
             // Process exception and return.
-            Console.WriteLine("Exception of type {0} occurred.", 
+            Console.WriteLine("Exception of type {0} occurred.",
                 e.GetType());
         }
     }

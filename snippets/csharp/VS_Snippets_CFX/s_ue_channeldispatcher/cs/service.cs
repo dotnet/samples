@@ -61,7 +61,7 @@ namespace Service
             smb.HttpGetEnabled = true;
             serviceHost.Description.Behaviors.Add(smb);
 
-            serviceHost.Open();        
+            serviceHost.Open();
 
             IChannelListener icl = serviceHost.ChannelDispatchers[0].Listener;
             ChannelDispatcher dispatcher = new ChannelDispatcher(icl);

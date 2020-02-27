@@ -10,7 +10,7 @@ namespace Microsoft.ServiceModel.Samples
     using System.Configuration;
 
     // Implements the configuration for HttpCookieSessionBindingElement.
-    public sealed class HttpCookieSessionElement 
+    public sealed class HttpCookieSessionElement
         : BindingElementExtensionElement
     {
         bool exchangeTerminateMessage;
@@ -41,28 +41,28 @@ namespace Microsoft.ServiceModel.Samples
         public override void ApplyConfiguration(BindingElement bindingElement)
         {
             base.ApplyConfiguration(bindingElement);
-            
-            HttpCookieSessionBindingElement typedBindingElement = 
+
+            HttpCookieSessionBindingElement typedBindingElement =
                 (HttpCookieSessionBindingElement)bindingElement;
-            
-            this.sessionTimeout = typedBindingElement.SessionTimeout; 
-            
-            this.exchangeTerminateMessage = 
+
+            this.sessionTimeout = typedBindingElement.SessionTimeout;
+
+            this.exchangeTerminateMessage =
                 typedBindingElement.ExchangeTerminateMessage;
-        }        
+        }
 
         protected override BindingElement CreateBindingElement()
         {
-            HttpCookieSessionBindingElement bindingElement = 
+            HttpCookieSessionBindingElement bindingElement =
                 new HttpCookieSessionBindingElement();
-            
+
             bindingElement.ExchangeTerminateMessage = exchangeTerminateMessage;
             bindingElement.SessionTimeout = sessionTimeout;
             ApplyConfiguration(bindingElement);
-            
+
             return bindingElement;
         }
-        
+
         protected override ConfigurationPropertyCollection Properties
         {
             get
@@ -70,7 +70,7 @@ namespace Microsoft.ServiceModel.Samples
                 if (properties == null)
                 {
                     properties = new ConfigurationPropertyCollection();
-                    
+
                     properties.Add(
                         new ConfigurationProperty(
                             HttpCookieConfigurationStrings.SessionTimeoutProperty,

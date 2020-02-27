@@ -40,10 +40,10 @@ namespace AppDomainSnippets
 			domain.SetShadowCopyFiles();
 			
 			// This will be copied.
-			// You must supply a valid fully qualified assembly name here. 
+			// You must supply a valid fully qualified assembly name here.
 			domain.Load("Assembly1 text name, Version, Culture, PublicKeyToken");
 			// This will not be copied.
-			// You must supply a valid fully qualified assembly name here. 
+			// You must supply a valid fully qualified assembly name here.
 			domain.Load("Assembly2 text name, Version, Culture, PublicKeyToken");
 			
 			// When the shadow copy path is cleared, the CLR will make shadow copies

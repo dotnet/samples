@@ -15,7 +15,7 @@ namespace SystemDateTimeReference
         private static void ParseStandardFormats()
         {
             // <Snippet1>
-            System.Threading.Thread.CurrentThread.CurrentCulture = 
+            System.Threading.Thread.CurrentThread.CurrentCulture =
                 System.Globalization.CultureInfo.CreateSpecificCulture("en-GB");
 
             var date1 = new DateTime(2013, 6, 1, 12, 32, 30);
@@ -73,7 +73,7 @@ namespace SystemDateTimeReference
         {
             // <Snippet3>
             var iso8601String = "20080501T08:30:52Z";
-            DateTime dateISO8602 = DateTime.ParseExact(iso8601String, "yyyyMMddTHH:mm:ssZ", 
+            DateTime dateISO8602 = DateTime.ParseExact(iso8601String, "yyyyMMddTHH:mm:ssZ",
                 System.Globalization.CultureInfo.InvariantCulture);
             Console.WriteLine($"{iso8601String} --> {dateISO8602:g}");
             // </Snippet3>

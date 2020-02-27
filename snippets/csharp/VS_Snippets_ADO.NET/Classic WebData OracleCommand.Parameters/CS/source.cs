@@ -16,7 +16,7 @@ public class Form1: Form
     {
 
         OracleCommand command = new OracleCommand(queryString, connection);
-        command.CommandText = 
+        command.CommandText =
             "SELECT * FROM Emp WHERE Job = :pJob AND Sal = :pSal";
 
         for (int j = 0; j < myParamArray.Length; j++)
@@ -24,14 +24,14 @@ public class Form1: Form
 
         string message = "";
 
-        for (int i = 0; i < command.Parameters.Count; i++) 
+        for (int i = 0; i < command.Parameters.Count; i++)
             message += command.Parameters[i].ToString() + "\n";
 
         Console.WriteLine(message);
 
-        using (OracleDataReader row = command.ExecuteReader()) 
+        using (OracleDataReader row = command.ExecuteReader())
         {
-            while(row.Read()) 
+            while(row.Read())
             {
                 Console.WriteLine(row.GetValue(0));
             }

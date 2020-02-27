@@ -10,21 +10,21 @@ namespace Microsoft.ServiceModel.Samples
     using System.Configuration;
 
     /// <summary>
-    /// Binding element section HttpCookieSessionBinding. 
-    /// Implements the configuration for 
+    /// Binding element section HttpCookieSessionBinding.
+    /// Implements the configuration for
     /// HttpCookieSessionBinding.
     /// </summary>
     public sealed class HttpCookieSessionBindingConfigurationElement
         : StandardBindingElement
-    {       
+    {
         public HttpCookieSessionBindingConfigurationElement()
             : base()
-        {            
+        {
         }
 
         public HttpCookieSessionBindingConfigurationElement(string configurationName)
             :base(configurationName)
-        {            
+        {
         }
 
         protected override Type BindingElementType
@@ -67,15 +67,15 @@ namespace Microsoft.ServiceModel.Samples
                 base.Properties.Add(
                         new ConfigurationProperty(
                             HttpCookieConfigurationStrings.SessionTimeoutProperty,
-                            typeof(TimeSpan), 
+                            typeof(TimeSpan),
                             HttpCookieSessionDefaults.SessionTimeout.ToString()));
 
                 base.Properties.Add(
                         new ConfigurationProperty(
-                            HttpCookieConfigurationStrings.ExchangeTerminateMessageProperty, 
+                            HttpCookieConfigurationStrings.ExchangeTerminateMessageProperty,
                             typeof(bool),
                             HttpCookieSessionDefaults.ExchangeTerminateMessage.ToString().ToLower()));
-                
+
                 return base.Properties;
             }
         }
@@ -83,11 +83,11 @@ namespace Microsoft.ServiceModel.Samples
         protected override void InitializeFrom(Binding binding)
         {
             base.InitializeFrom(binding);
-            
+
             HttpCookieSessionBinding sessionBinding = (HttpCookieSessionBinding)binding;
 
             this.SessionTimeout = sessionBinding.SessionTimeout;
-            this.ExchangeTerminateMessage = 
+            this.ExchangeTerminateMessage =
                 sessionBinding.ExchangeTerminateMessage;
         }
 

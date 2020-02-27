@@ -1,6 +1,6 @@
 ﻿// The following example builds a CodeDom source graph for a simple
-// class that represents document properties.  The source for the 
-// graph is generated, saved to a file, compiled into an executable, 
+// class that represents document properties.  The source for the
+// graph is generated, saved to a file, compiled into an executable,
 // and run.
 
 using System;
@@ -60,47 +60,47 @@ namespace CompilerParametersSamples
 
             // <Snippet4>
             // Initialize a local DocumentProperty instance, named myDoc.
-            // Use the DocumentProperty constructor to set the author, 
+            // Use the DocumentProperty constructor to set the author,
             // title, and date.  Set the publish date to DateTime.Now.
 
-            CodePrimitiveExpression docTitlePrimitive = new 
+            CodePrimitiveExpression docTitlePrimitive = new
 CodePrimitiveExpression("Cubicle Survival Strategies");
-            CodePrimitiveExpression docAuthorPrimitive = new 
+            CodePrimitiveExpression docAuthorPrimitive = new
 CodePrimitiveExpression("John Smith");
 
             // Store the value of DateTime.Now in a local variable, to re-use
             // the same value later.
-            CodeTypeReferenceExpression docDateClass = new 
+            CodeTypeReferenceExpression docDateClass = new
 CodeTypeReferenceExpression("DateTime");
-            CodePropertyReferenceExpression docDateNow = new 
+            CodePropertyReferenceExpression docDateNow = new
 CodePropertyReferenceExpression(docDateClass, "Now");
-            CodeVariableDeclarationStatement publishNow = new 
+            CodeVariableDeclarationStatement publishNow = new
 CodeVariableDeclarationStatement(typeof(DateTime), "publishNow", docDateNow);
             mainMethod.Statements.Add(publishNow);
 
-            CodeVariableReferenceExpression publishNowRef = new 
+            CodeVariableReferenceExpression publishNowRef = new
 CodeVariableReferenceExpression("publishNow");
 
-            CodeExpression[] ctorParams = { docTitlePrimitive, 
+            CodeExpression[] ctorParams = { docTitlePrimitive,
 docAuthorPrimitive, publishNowRef };
-            CodeObjectCreateExpression initDocConstruct = new 
+            CodeObjectCreateExpression initDocConstruct = new
 CodeObjectCreateExpression("DocumentProperties", ctorParams);
-            CodeVariableDeclarationStatement myDocDeclare = new 
-CodeVariableDeclarationStatement("DocumentProperties", "myDoc", 
+            CodeVariableDeclarationStatement myDocDeclare = new
+CodeVariableDeclarationStatement("DocumentProperties", "myDoc",
 initDocConstruct);
             mainMethod.Statements.Add(myDocDeclare);
             // </Snippet4>
 
             // Create a variable reference for the myDoc instance.
-            CodeVariableReferenceExpression myDocInstance = new 
+            CodeVariableReferenceExpression myDocInstance = new
 CodeVariableReferenceExpression("myDoc");
 
             // Create a type reference for the System.Console class.
-            CodeTypeReferenceExpression csSystemConsoleType = new 
+            CodeTypeReferenceExpression csSystemConsoleType = new
 CodeTypeReferenceExpression("System.Console");
 
             // Build Console.WriteLine statement.
-            CodeMethodInvokeExpression consoleWriteLine0 = new 
+            CodeMethodInvokeExpression consoleWriteLine0 = new
 CodeMethodInvokeExpression(
                 csSystemConsoleType, "WriteLine",
                 new CodePrimitiveExpression("** Document properties test **"));
@@ -109,7 +109,7 @@ CodeMethodInvokeExpression(
             mainMethod.Statements.Add(consoleWriteLine0);
 
             // Build Console.WriteLine("First document:").
-            CodeMethodInvokeExpression consoleWriteLine1 = new 
+            CodeMethodInvokeExpression consoleWriteLine1 = new
 CodeMethodInvokeExpression(
                 csSystemConsoleType, "WriteLine",
                 new CodePrimitiveExpression("First document:"));
@@ -118,19 +118,19 @@ CodeMethodInvokeExpression(
             mainMethod.Statements.Add(consoleWriteLine1);
 
             // Add a statement to display the myDoc instance properties.
-            CodeMethodInvokeExpression myDocToString = new 
+            CodeMethodInvokeExpression myDocToString = new
 CodeMethodInvokeExpression(myDocInstance, "ToString");
-            CodeMethodInvokeExpression consoleWriteLine2 = new 
+            CodeMethodInvokeExpression consoleWriteLine2 = new
 CodeMethodInvokeExpression(
                 csSystemConsoleType, "WriteLine", myDocToString);
             mainMethod.Statements.Add(consoleWriteLine2);
 
             // Add a statement to display the myDoc instance hashcode property.
-            CodeMethodInvokeExpression myDocHashCode = new 
+            CodeMethodInvokeExpression myDocHashCode = new
 CodeMethodInvokeExpression(myDocInstance, "GetHashCode");
-            CodeExpression[] writeHashCodeParams = { new 
+            CodeExpression[] writeHashCodeParams = { new
 CodePrimitiveExpression("  Hash code: {0}"), myDocHashCode };
-            CodeMethodInvokeExpression consoleWriteLine3 = new 
+            CodeMethodInvokeExpression consoleWriteLine3 = new
 CodeMethodInvokeExpression(
                 csSystemConsoleType, "WriteLine",
                 writeHashCodeParams);
@@ -138,17 +138,17 @@ CodeMethodInvokeExpression(
 
             // Add statements to create another instance.
             mainMethod.Statements.Add(new CodeCommentStatement("Create another instance."));
-            CodeVariableDeclarationStatement myNewDocDeclare = new 
-CodeVariableDeclarationStatement("DocumentProperties", "myNewDoc", 
+            CodeVariableDeclarationStatement myNewDocDeclare = new
+CodeVariableDeclarationStatement("DocumentProperties", "myNewDoc",
 initDocConstruct);
             mainMethod.Statements.Add(myNewDocDeclare);
 
             // Create a variable reference for the myNewDoc instance.
-            CodeVariableReferenceExpression myNewDocInstance = new 
+            CodeVariableReferenceExpression myNewDocInstance = new
 CodeVariableReferenceExpression("myNewDoc");
 
             // Build Console.WriteLine("Second document:").
-            CodeMethodInvokeExpression consoleWriteLine5 = new 
+            CodeMethodInvokeExpression consoleWriteLine5 = new
 CodeMethodInvokeExpression(
                 csSystemConsoleType, "WriteLine",
                 new CodePrimitiveExpression("Second document:"));
@@ -157,19 +157,19 @@ CodeMethodInvokeExpression(
             mainMethod.Statements.Add(consoleWriteLine5);
 
             // Add a statement to display the myNewDoc instance properties.
-            CodeMethodInvokeExpression myNewDocToString = new 
+            CodeMethodInvokeExpression myNewDocToString = new
 CodeMethodInvokeExpression(myNewDocInstance, "ToString");
-            CodeMethodInvokeExpression consoleWriteLine6 = new 
+            CodeMethodInvokeExpression consoleWriteLine6 = new
 CodeMethodInvokeExpression(
                 csSystemConsoleType, "WriteLine", myNewDocToString);
             mainMethod.Statements.Add(consoleWriteLine6);
 
             // Add a statement to display the myNewDoc instance hashcode property.
-            CodeMethodInvokeExpression myNewDocHashCode = new 
+            CodeMethodInvokeExpression myNewDocHashCode = new
 CodeMethodInvokeExpression(myNewDocInstance, "GetHashCode");
-            CodeExpression[] writeNewHashCodeParams = { new 
+            CodeExpression[] writeNewHashCodeParams = { new
 CodePrimitiveExpression("  Hash code: {0}"), myNewDocHashCode };
-            CodeMethodInvokeExpression consoleWriteLine7 = new 
+            CodeMethodInvokeExpression consoleWriteLine7 = new
 CodeMethodInvokeExpression(
                 csSystemConsoleType, "WriteLine",
                 writeNewHashCodeParams);
@@ -179,17 +179,17 @@ CodeMethodInvokeExpression(
             // Build a compound statement to compare the two instances.
             mainMethod.Statements.Add(new CodeCommentStatement("Compare the two instances."));
 
-            CodeMethodInvokeExpression myDocEquals = new 
+            CodeMethodInvokeExpression myDocEquals = new
 CodeMethodInvokeExpression(myDocInstance, "Equals", myNewDocInstance);
             CodePrimitiveExpression equalLine = new CodePrimitiveExpression(
                 "Second document is equal to the first.");
             CodePrimitiveExpression notEqualLine = new CodePrimitiveExpression
 ("Second document is not equal to the first.");
-            CodeMethodInvokeExpression equalWriteLine = new 
+            CodeMethodInvokeExpression equalWriteLine = new
 CodeMethodInvokeExpression(
                 csSystemConsoleType, "WriteLine",
                 equalLine);
-            CodeMethodInvokeExpression notEqualWriteLine = new 
+            CodeMethodInvokeExpression notEqualWriteLine = new
 CodeMethodInvokeExpression(
                 csSystemConsoleType, "WriteLine",
                 notEqualLine);
@@ -207,7 +207,7 @@ myDocEquals, equalStatements, notEqualStatements);
             mainMethod.Statements.Add(new CodeCommentStatement(
                 "Change the author of the original instance."));
 
-            CodePropertyReferenceExpression myDocAuthor = new 
+            CodePropertyReferenceExpression myDocAuthor = new
 CodePropertyReferenceExpression(myDocInstance, "Author");
             CodePrimitiveExpression newDocAuthor = new CodePrimitiveExpression
 ("Jane Doe");
@@ -217,7 +217,7 @@ myDocAuthor, newDocAuthor);
             // </Snippet6>
 
             // Add a statement to display the modified instance.
-            CodeMethodInvokeExpression consoleWriteLine8 = new 
+            CodeMethodInvokeExpression consoleWriteLine8 = new
 CodeMethodInvokeExpression(
                 csSystemConsoleType, "WriteLine",
                 new CodePrimitiveExpression("Modified original document:"));
@@ -232,7 +232,7 @@ CodeMethodInvokeExpression(
             mainMethod.Statements.Add(docCompare);
 
             // Add a statement to prompt the user to hit a key.
-            CodeMethodInvokeExpression consoleWriteLine9 = new 
+            CodeMethodInvokeExpression consoleWriteLine9 = new
 CodeMethodInvokeExpression(
                 // Build another call to System.WriteLine.
                 csSystemConsoleType, "WriteLine",
@@ -242,20 +242,20 @@ CodeMethodInvokeExpression(
             mainMethod.Statements.Add(consoleWriteLine9);
 
             // Build a call to System.ReadLine.
-            CodeMethodInvokeExpression consoleReadLine = new 
+            CodeMethodInvokeExpression consoleReadLine = new
 CodeMethodInvokeExpression(
                 csSystemConsoleType, "ReadLine");
             mainMethod.Statements.Add(consoleReadLine);
 
             // Define a few common expressions for the class methods.
-            CodePropertyReferenceExpression thisTitle = new 
+            CodePropertyReferenceExpression thisTitle = new
 CodePropertyReferenceExpression(new CodeThisReferenceExpression(), "docTitle");
-            CodePropertyReferenceExpression thisAuthor = new 
+            CodePropertyReferenceExpression thisAuthor = new
 CodePropertyReferenceExpression(new CodeThisReferenceExpression(), "docAuthor"
 );
-            CodePropertyReferenceExpression thisDate = new 
+            CodePropertyReferenceExpression thisDate = new
 CodePropertyReferenceExpression(new CodeThisReferenceExpression(), "docDate");
-            CodeTypeReferenceExpression stringType = new 
+            CodeTypeReferenceExpression stringType = new
 CodeTypeReferenceExpression(typeof(String));
             CodePrimitiveExpression trueConst = new CodePrimitiveExpression(
 true);
@@ -275,34 +275,34 @@ typeof(object), "obj"));
             baseEquals.Statements.Add(new CodeCommentStatement(
                 "Override System.Object.Equals method."));
 
-            CodeVariableReferenceExpression objVar = new 
+            CodeVariableReferenceExpression objVar = new
 CodeVariableReferenceExpression("obj");
             CodeCastExpression objCast = new CodeCastExpression("DocumentProperties", objVar);
 
-            CodePropertyReferenceExpression objTitle = new 
+            CodePropertyReferenceExpression objTitle = new
 CodePropertyReferenceExpression(objCast, "Title");
-            CodePropertyReferenceExpression objAuthor = new 
+            CodePropertyReferenceExpression objAuthor = new
 CodePropertyReferenceExpression(objCast, "Author");
-            CodePropertyReferenceExpression objDate = new 
+            CodePropertyReferenceExpression objDate = new
 CodePropertyReferenceExpression(objCast, "PublishDate");
 
-            CodeMethodInvokeExpression objTitleEquals = new 
+            CodeMethodInvokeExpression objTitleEquals = new
 CodeMethodInvokeExpression(objTitle, "Equals", thisTitle);
-            CodeMethodInvokeExpression objAuthorEquals = new 
+            CodeMethodInvokeExpression objAuthorEquals = new
 CodeMethodInvokeExpression(objAuthor, "Equals", thisAuthor);
-            CodeMethodInvokeExpression objDateEquals = new 
+            CodeMethodInvokeExpression objDateEquals = new
 CodeMethodInvokeExpression(objDate, "Equals", thisDate);
 
-            CodeBinaryOperatorExpression andEquals1 = new 
+            CodeBinaryOperatorExpression andEquals1 = new
 CodeBinaryOperatorExpression(objTitleEquals, CodeBinaryOperatorType.BooleanAnd
 , objAuthorEquals);
-            CodeBinaryOperatorExpression andEquals2 = new 
-CodeBinaryOperatorExpression(andEquals1, CodeBinaryOperatorType.BooleanAnd, 
+            CodeBinaryOperatorExpression andEquals2 = new
+CodeBinaryOperatorExpression(andEquals1, CodeBinaryOperatorType.BooleanAnd,
 objDateEquals);
 
-            CodeStatement[] returnTrueStatements = { new 
+            CodeStatement[] returnTrueStatements = { new
 CodeMethodReturnStatement(trueConst) };
-            CodeStatement[] returnFalseStatements = { new 
+            CodeStatement[] returnFalseStatements = { new
 CodeMethodReturnStatement(falseConst) };
             CodeConditionStatement objEquals = new CodeConditionStatement(
 andEquals2, returnTrueStatements, returnFalseStatements);
@@ -320,18 +320,18 @@ Override;
 
             baseHash.Statements.Add(new CodeCommentStatement("Override System.Object.GetHashCode method."));
 
-            CodeMethodInvokeExpression hashTitle = new 
+            CodeMethodInvokeExpression hashTitle = new
 CodeMethodInvokeExpression(thisTitle, "GetHashCode");
-            CodeMethodInvokeExpression hashAuthor = new 
+            CodeMethodInvokeExpression hashAuthor = new
 CodeMethodInvokeExpression(thisAuthor, "GetHashCode");
-            CodeMethodInvokeExpression hashDate = new 
+            CodeMethodInvokeExpression hashDate = new
 CodeMethodInvokeExpression(thisDate, "GetHashCode");
 
-            CodeBinaryOperatorExpression orHash1 = new 
-CodeBinaryOperatorExpression(hashTitle, CodeBinaryOperatorType.BitwiseOr, 
+            CodeBinaryOperatorExpression orHash1 = new
+CodeBinaryOperatorExpression(hashTitle, CodeBinaryOperatorType.BitwiseOr,
 hashAuthor);
-            CodeBinaryOperatorExpression andHash = new 
-CodeBinaryOperatorExpression(orHash1, CodeBinaryOperatorType.BitwiseAnd, 
+            CodeBinaryOperatorExpression andHash = new
+CodeBinaryOperatorExpression(orHash1, CodeBinaryOperatorType.BitwiseAnd,
 hashDate);
             baseHash.Statements.Add(new CodeMethodReturnStatement(andHash));
             baseClass.Members.Add(baseHash);
@@ -339,21 +339,21 @@ hashDate);
             // ------Build the DocumentProperty.ToString method------
 
             CodeMemberMethod docToString = new CodeMemberMethod();
-            docToString.Attributes = MemberAttributes.Public | 
+            docToString.Attributes = MemberAttributes.Public |
 MemberAttributes.Override;
             docToString.ReturnType = new CodeTypeReference(typeof(string));
             docToString.Name = "ToString";
 
             docToString.Statements.Add(new CodeCommentStatement("Override System.Object.ToString method."));
 
-            CodeMethodInvokeExpression baseToString = new 
+            CodeMethodInvokeExpression baseToString = new
 CodeMethodInvokeExpression(new CodeBaseReferenceExpression(), "ToString");
             CodePrimitiveExpression formatString = new CodePrimitiveExpression
 ("{0} ({1} by {2}, {3})");
-            CodeExpression[] formatParams = { formatString, baseToString, 
+            CodeExpression[] formatParams = { formatString, baseToString,
 thisTitle, thisAuthor, thisDate };
 
-            CodeMethodInvokeExpression stringFormat = new 
+            CodeMethodInvokeExpression stringFormat = new
 CodeMethodInvokeExpression(stringType, "Format", formatParams);
 
             docToString.Statements.Add(new CodeMethodReturnStatement(stringFormat));
@@ -363,7 +363,7 @@ CodeMethodInvokeExpression(stringType, "Format", formatParams);
         }
         //</Snippet2>
 
-        public static void DocumentPropertyGraphExpand(ref CodeCompileUnit 
+        public static void DocumentPropertyGraphExpand(ref CodeCompileUnit
 docPropUnit)
         {
             // Expand on the DocumentProperties class,
@@ -396,25 +396,25 @@ docPropUnit)
             docPropCtor.Parameters.Add(new CodeParameterDeclarationExpression(
 "DateTime", "publishDate"));
 
-            CodeFieldReferenceExpression myTitle = new 
+            CodeFieldReferenceExpression myTitle = new
 CodeFieldReferenceExpression(new CodeThisReferenceExpression(), "docTitle");
-            CodeVariableReferenceExpression inTitle = new 
+            CodeVariableReferenceExpression inTitle = new
 CodeVariableReferenceExpression("title");
             CodeAssignStatement myDocTitleAssign = new CodeAssignStatement(
 myTitle, inTitle);
             docPropCtor.Statements.Add(myDocTitleAssign);
 
-            CodeFieldReferenceExpression myAuthor = new 
+            CodeFieldReferenceExpression myAuthor = new
 CodeFieldReferenceExpression(new CodeThisReferenceExpression(), "docAuthor");
-            CodeVariableReferenceExpression inAuthor = new 
+            CodeVariableReferenceExpression inAuthor = new
 CodeVariableReferenceExpression("author");
             CodeAssignStatement myDocAuthorAssign = new CodeAssignStatement(
 myAuthor, inAuthor);
             docPropCtor.Statements.Add(myDocAuthorAssign);
 
-            CodeFieldReferenceExpression myDate = new 
+            CodeFieldReferenceExpression myDate = new
 CodeFieldReferenceExpression(new CodeThisReferenceExpression(), "docDate");
-            CodeVariableReferenceExpression inDate = new 
+            CodeVariableReferenceExpression inDate = new
 CodeVariableReferenceExpression("publishDate");
             CodeAssignStatement myDocDateAssign = new CodeAssignStatement(
 myDate, inDate);
@@ -430,10 +430,10 @@ myDate, inDate);
             docTitleProp.Name = "Title";
             docTitleProp.Type = new CodeTypeReference("String");
             docTitleProp.Attributes = MemberAttributes.Public;
-            docTitleProp.GetStatements.Add(new CodeMethodReturnStatement(new 
+            docTitleProp.GetStatements.Add(new CodeMethodReturnStatement(new
 CodeFieldReferenceExpression(new CodeThisReferenceExpression(), "docTitle")));
-            docTitleProp.SetStatements.Add(new CodeAssignStatement(new 
-CodeFieldReferenceExpression(new CodeThisReferenceExpression(), "docTitle"), 
+            docTitleProp.SetStatements.Add(new CodeAssignStatement(new
+CodeFieldReferenceExpression(new CodeThisReferenceExpression(), "docTitle"),
 new CodePropertySetValueReferenceExpression()));
 
             baseClass.Members.Add(docTitleProp);
@@ -444,10 +444,10 @@ new CodePropertySetValueReferenceExpression()));
             docAuthorProp.Name = "Author";
             docAuthorProp.Type = new CodeTypeReference("String");
             docAuthorProp.Attributes = MemberAttributes.Public;
-            docAuthorProp.GetStatements.Add(new CodeMethodReturnStatement(new 
+            docAuthorProp.GetStatements.Add(new CodeMethodReturnStatement(new
 CodeFieldReferenceExpression(new CodeThisReferenceExpression(), "docAuthor")));
-            docAuthorProp.SetStatements.Add(new CodeAssignStatement(new 
-CodeFieldReferenceExpression(new CodeThisReferenceExpression(), "docAuthor"), 
+            docAuthorProp.SetStatements.Add(new CodeAssignStatement(new
+CodeFieldReferenceExpression(new CodeThisReferenceExpression(), "docAuthor"),
 new CodePropertySetValueReferenceExpression()));
 
             baseClass.Members.Add(docAuthorProp);
@@ -458,10 +458,10 @@ new CodePropertySetValueReferenceExpression()));
             docDateProp.Name = "PublishDate";
             docDateProp.Type = new CodeTypeReference("DateTime");
             docDateProp.Attributes = MemberAttributes.Public;
-            docDateProp.GetStatements.Add(new CodeMethodReturnStatement(new 
+            docDateProp.GetStatements.Add(new CodeMethodReturnStatement(new
 CodeFieldReferenceExpression(new CodeThisReferenceExpression(), "docDate")));
-            docDateProp.SetStatements.Add(new CodeAssignStatement(new 
-CodeFieldReferenceExpression(new CodeThisReferenceExpression(), "docDate"), 
+            docDateProp.SetStatements.Add(new CodeAssignStatement(new
+CodeFieldReferenceExpression(new CodeThisReferenceExpression(), "docDate"),
 new CodePropertySetValueReferenceExpression()));
 
             baseClass.Members.Add(docDateProp);
@@ -488,10 +488,10 @@ new CodePropertySetValueReferenceExpression()));
                 }
 
                 // Create a TextWriter to a StreamWriter to an output file.
-                IndentedTextWriter outWriter = new IndentedTextWriter(new 
+                IndentedTextWriter outWriter = new IndentedTextWriter(new
 StreamWriter(sourceFile, false), "    ");
                 // Generate source code using the code generator.
-                provider.GenerateCodeFromCompileUnit(compileUnit, outWriter, 
+                provider.GenerateCodeFromCompileUnit(compileUnit, outWriter,
 null);
                 // Close the output file.
                 outWriter.Close();
@@ -508,7 +508,7 @@ null);
 
             CompilerParameters cp = new CompilerParameters();
 
-            // Generate an executable instead of 
+            // Generate an executable instead of
             // a class library.
             cp.GenerateExecutable = true;
 
@@ -524,7 +524,7 @@ null);
             // Add an assembly reference.
             cp.ReferencedAssemblies.Add("System.dll");
 
-            // Set the warning level at which 
+            // Set the warning level at which
             // the compiler should abort compilation
             // if a warning of this level occurs.
             cp.WarningLevel = 3;
@@ -534,13 +534,13 @@ null);
 
             if (provider.Supports(GeneratorSupport.EntryPointMethod))
             {
-                // Specify the class that contains 
+                // Specify the class that contains
                 // the main method of the executable.
                 cp.MainClass = "DocumentSamples.DocumentProperties";
             }
 
             // Invoke compilation.
-            CompilerResults cr = provider.CompileAssemblyFromFile(cp, 
+            CompilerResults cr = provider.CompileAssemblyFromFile(cp,
 sourceFile);
 
             if (cr.Errors.Count > 0)

@@ -21,7 +21,7 @@ namespace Snippets
         {
             // protected
             // NamedPipeTransportBindingElement bElementClone =
-            //  new NamedPipeTransportBindingElement(bElement); 
+            //  new NamedPipeTransportBindingElement(bElement);
 
             // <Snippet3>
             // <Snippet2>
@@ -38,7 +38,7 @@ namespace Snippets
             // </Snippet3>
 
             // <Snippet4>
-            string scheme = 
+            string scheme =
                 bElement.Scheme;
             // </Snippet4>
 

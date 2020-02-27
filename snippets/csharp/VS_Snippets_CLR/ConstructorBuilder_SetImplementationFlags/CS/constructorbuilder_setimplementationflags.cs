@@ -2,7 +2,7 @@
 
 /* The following program demonstrates the 'SetImplementationFlags'
    method of ConstructorBuilder class. It creates an assembly in the
-   current domain with a dynamic module in the assembly. Constructor 
+   current domain with a dynamic module in the assembly. Constructor
    builder is used in conjunction with the 'TypeBuilder' class to create
    constructor at run time. It then sets the method implementation flags
    for the constructor and displays the same.
@@ -38,7 +38,7 @@ internal class MyConstructorBuilder
             myModuleBuilder.DefineUninitializedData("myField", 2, FieldAttributes.Public);
          // Create a type in the module.
          TypeBuilder myTypeBuilder = myModuleBuilder.DefineType("TempClass",TypeAttributes.Public);
-         FieldBuilder myGreetingField = myTypeBuilder.DefineField("Greeting", 
+         FieldBuilder myGreetingField = myTypeBuilder.DefineField("Greeting",
             typeof(String), FieldAttributes.Public);
          Type[] myConstructorArgs = { typeof(String) };
          // Define a constructor of the dynamic class.

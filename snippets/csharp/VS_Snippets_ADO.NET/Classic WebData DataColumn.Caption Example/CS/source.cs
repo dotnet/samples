@@ -14,17 +14,17 @@ private void CreateDataTable()
    table = new DataTable("Customers");
 
    //CustomerID column
-   column = table.Columns.Add("CustomerID", 
+   column = table.Columns.Add("CustomerID",
        System.Type.GetType("System.Int32"));
    column.Unique = true;
 	
    //CustomerName column
-   column = table.Columns.Add("CustomerName", 
+   column = table.Columns.Add("CustomerName",
        System.Type.GetType("System.String"));
    column.Caption = "Name";
 
    //CreditLimit
-   column = table.Columns.Add("CreditLimit", 
+   column = table.Columns.Add("CreditLimit",
        System.Type.GetType("System.Double"));
    column.DefaultValue = 0;
    column.Caption = "Limit";

@@ -33,11 +33,11 @@ public class Client
       wcfClient.Abort();
     }
     // Catch unrecognized faults. This handler receives exceptions thrown by WCF
-    // services when ServiceDebugBehavior.IncludeExceptionDetailInFaults 
+    // services when ServiceDebugBehavior.IncludeExceptionDetailInFaults
     // is set to true.
     catch (FaultException faultEx)
     {
-      Console.WriteLine("An unknown exception was received. " 
+      Console.WriteLine("An unknown exception was received. "
         + faultEx.Message
         + faultEx.StackTrace
       );

@@ -10,7 +10,7 @@ public class Form1: Form
     protected DataGrid dataGrid1;
 
     // <Snippet1>
-    public void CreateDataTableMapping() 
+    public void CreateDataTableMapping()
     {
         DataTableMapping mapping = new DataTableMapping();
         mapping.SourceTable = "Categories";

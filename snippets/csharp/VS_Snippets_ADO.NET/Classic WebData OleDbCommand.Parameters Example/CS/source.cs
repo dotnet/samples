@@ -12,10 +12,10 @@ public class Form1: Form
 
     // <Snippet1>
     public void CreateMyOleDbCommand(OleDbConnection connection,
-        string queryString, OleDbParameter[] parameters) 
+        string queryString, OleDbParameter[] parameters)
     {
         OleDbCommand command = new OleDbCommand(queryString, connection);
-        command.CommandText = 
+        command.CommandText =
             "SELECT CustomerID, CompanyName FROM Customers WHERE Country = ? AND City = ?";
         command.Parameters.Add(parameters);
 
@@ -25,7 +25,7 @@ public class Form1: Form
         }
 
         string message = "";
-        for (int i = 0; i < command.Parameters.Count; i++) 
+        for (int i = 0; i < command.Parameters.Count; i++)
         {
             message += command.Parameters[i].ToString() + "\n";
         }
