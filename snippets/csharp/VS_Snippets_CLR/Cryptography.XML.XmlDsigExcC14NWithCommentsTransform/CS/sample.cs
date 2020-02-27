@@ -1,7 +1,7 @@
 ﻿//<SNIPPET1>
 //
 // This example signs an XML file using an
-// envelope signature. It then verifies the 
+// envelope signature. It then verifies the
 // signed XML.
 //
 using System;
@@ -25,7 +25,7 @@ public class SignVerifyEnvelope
             CreateSomeXml("Example.xml");
             Console.WriteLine("New XML file created.");
 
-            // Sign the XML that was just created and save it in a 
+            // Sign the XML that was just created and save it in a
             // new file.
             //SignXmlFile("Example.xml", "SignedExample.xml", Key);
             Console.WriteLine("XML file signed.");
@@ -34,7 +34,7 @@ public class SignVerifyEnvelope
             Console.WriteLine("Verifying signature...");
             bool result = VerifyXmlFile("SignedExample.xml");
 
-            // Display the results of the signature verification to 
+            // Display the results of the signature verification to
             // the console.
             if (result)
             {
@@ -66,7 +66,7 @@ public class SignVerifyEnvelope
         // Create a SignedXml object.
         SignedXml signedXml = new SignedXml(doc);
 
-        // Add the key to the SignedXml document. 
+        // Add the key to the SignedXml document.
         signedXml.SigningKey = Key;
 
         // Specify a canonicalization method.
@@ -122,7 +122,7 @@ public class SignVerifyEnvelope
         // Format using white spaces.
         xmlDocument.PreserveWhitespace = true;
 
-        // Load the passed XML file into the document. 
+        // Load the passed XML file into the document.
         xmlDocument.Load(Name);
 
         // Create a new SignedXml object and pass it

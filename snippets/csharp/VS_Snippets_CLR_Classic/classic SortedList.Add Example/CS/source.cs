@@ -2,16 +2,16 @@
  using System;
  using System.Collections;
  public class SamplesSortedList  {
- 
+
     public static void Main()  {
- 
+
        // Creates and initializes a new SortedList.
        SortedList mySL = new SortedList();
        mySL.Add( "one", "The" );
        mySL.Add( "two", "quick" );
        mySL.Add( "three", "brown" );
        mySL.Add( "four", "fox" );
- 
+
        // Displays the SortedList.
        Console.WriteLine( "The SortedList contains the following:" );
        PrintKeysAndValues( mySL );
@@ -25,9 +25,9 @@
        Console.WriteLine();
     }
  }
- /* 
+ /*
  This code produces the following output.
- 
+
  The SortedList contains the following:
      -KEY-    -VALUE-
      four:    fox

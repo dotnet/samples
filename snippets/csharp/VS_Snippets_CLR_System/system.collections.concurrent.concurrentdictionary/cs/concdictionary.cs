@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Threading.Tasks;
-//<snippet1> 
+//<snippet1>
 
 class CD_Ctor
 {
@@ -18,7 +18,7 @@ class CD_Ctor
 
             // The higher the concurrencyLevel, the higher the theoretical number of operations
             // that could be performed concurrently on the ConcurrentDictionary.  However, global
-            // operations like resizing the dictionary take longer as the concurrencyLevel rises. 
+            // operations like resizing the dictionary take longer as the concurrencyLevel rises.
             // For the purposes of this example, we'll compromise at numCores * 2.
             int numProcs = Environment.ProcessorCount;
             int concurrencyLevel = numProcs * 2;
@@ -69,7 +69,7 @@ class CD_TryXYZ
                 numFailures++;
             }
 
-            // Try to change the value for key 1 from "eine" to "one" 
+            // Try to change the value for key 1 from "eine" to "one"
             //    -- this shouldn't work, because the current value isn't "eine"
             if (cd.TryUpdate(1, "one", "eine"))
             {
@@ -114,7 +114,7 @@ class CD_GetOrAddOrUpdate
         // Bombard the ConcurrentDictionary with 10000 competing AddOrUpdates
         Parallel.For(0, 10000, i =>
         {
-            // Initial call will set cd[1] = 1.  
+            // Initial call will set cd[1] = 1.
             // Ensuing calls will set cd[1] = cd[1] + 1
             cd.AddOrUpdate(1, 1, (key, oldValue) => oldValue + 1);
         });

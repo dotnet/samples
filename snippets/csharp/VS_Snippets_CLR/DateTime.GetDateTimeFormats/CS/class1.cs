@@ -31,10 +31,10 @@ class Class1
       // <Snippet2>
 		DateTime july28 = new DateTime(2009, 7, 28, 5, 23, 15, 16);
 		
-		IFormatProvider culture = 
+		IFormatProvider culture =
 			new System.Globalization.CultureInfo("fr-FR", true);
 		// Get the short date formats using the "fr-FR" culture.
-		string [] frenchJuly28Formats = 
+		string [] frenchJuly28Formats =
 					july28.GetDateTimeFormats(culture);
 
 		// Display july28 in various formats using "fr-FR" culture.
@@ -50,7 +50,7 @@ class Class1
 		DateTime july28 = new DateTime(2009, 7, 28, 5, 23, 15);
 		
 		// Get the long date formats using the current culture.
-		string [] longJuly28Formats = 
+		string [] longJuly28Formats =
 					july28.GetDateTimeFormats('D');
 
 		// Display july28 in all long date formats.
@@ -70,10 +70,10 @@ class Class1
       // <Snippet4>
 		DateTime july28 = new DateTime(2009, 7, 28, 5, 23, 15);
 		
-		IFormatProvider culture = 
+		IFormatProvider culture =
 			new System.Globalization.CultureInfo("fr-FR", true);
 		// Get the short date formats using the "fr-FR" culture.
-		string [] frenchJuly28Formats = 
+		string [] frenchJuly28Formats =
 					july28.GetDateTimeFormats('d', culture);
 
 		// Display july28 in short date formats using "fr-FR" culture.

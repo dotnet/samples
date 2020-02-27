@@ -8,7 +8,7 @@ static class Func
     static void Main(string[] args)
     {
         // <Snippet5>
-        // Declare a Func variable and assign a lambda expression to the  
+        // Declare a Func variable and assign a lambda expression to the
         // variable. The method takes a string and converts it to uppercase.
         Func<string, string> selector = str => str.ToUpper();
 
@@ -23,7 +23,7 @@ static class Func
 
         /*
         This code example produces the following output:
-                  
+
         ORANGE
         APPLE
         ARTICLE

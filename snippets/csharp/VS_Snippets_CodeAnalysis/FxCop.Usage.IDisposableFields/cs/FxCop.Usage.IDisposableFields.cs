@@ -1,5 +1,5 @@
 ﻿//<Snippet1>
-using System;  
+using System;
 
 namespace UsageLibrary
 {
@@ -9,9 +9,9 @@ namespace UsageLibrary
       TypeA aFieldOfADisposableType = new TypeA();
       private bool disposed = false;
 
-      protected virtual void Dispose(bool disposing) 
+      protected virtual void Dispose(bool disposing)
       {
-         if (!disposed) 
+         if (!disposed)
          {
             // Dispose of resources held by this instance.
 

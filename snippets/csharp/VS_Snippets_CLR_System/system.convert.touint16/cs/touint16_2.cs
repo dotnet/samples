@@ -5,7 +5,7 @@ public class Example
 {
    public static void Main()
    {
-      string[] hexStrings = { "8000", "0FFF", "f000", "00A30", "D", "-13", 
+      string[] hexStrings = { "8000", "0FFF", "f000", "00A30", "D", "-13",
                               "9AC61", "GAD" };
       foreach (string hexString in hexStrings)
       {
@@ -14,7 +14,7 @@ public class Example
             Console.WriteLine("Converted '{0}' to {1:N0}.", hexString, number);
          }
          catch (FormatException) {
-            Console.WriteLine("'{0}' is not in the correct format for a hexadecimal number.", 
+            Console.WriteLine("'{0}' is not in the correct format for a hexadecimal number.",
                               hexString);
          }
          catch (OverflowException) {
@@ -23,7 +23,7 @@ public class Example
          catch (ArgumentException) {
             Console.WriteLine("'{0}' is invalid in base 16.", hexString);
          }
-      }                                            
+      }
    }
 }
 // The example displays the following output:

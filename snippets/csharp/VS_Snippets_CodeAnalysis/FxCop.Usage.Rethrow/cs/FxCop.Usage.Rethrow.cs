@@ -19,7 +19,7 @@ namespace UsageLibrary
          }
          catch(ArithmeticException e)
          {
-            Console.WriteLine("Explicitly specified:{0}{1}", 
+            Console.WriteLine("Explicitly specified:{0}{1}",
                Environment.NewLine, e.StackTrace);
          }
 
@@ -29,7 +29,7 @@ namespace UsageLibrary
          }
          catch(ArithmeticException e)
          {
-            Console.WriteLine("{0}Implicitly specified:{0}{1}", 
+            Console.WriteLine("{0}Implicitly specified:{0}{1}",
                Environment.NewLine, e.StackTrace);
          }
       }
@@ -59,7 +59,7 @@ namespace UsageLibrary
             throw;
          }
       }
-      
+
       void ThrowException()
       {
          throw new ArithmeticException("illegal expression");

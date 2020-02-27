@@ -5,13 +5,13 @@ using System;
 class BytesToUInt64Demo
 {
     const string formatter = "{0,5}{1,27}{2,24}";
- 
+
     // Convert eight byte array elements to a ulong and display it.
     public static void BAToUInt64( byte[ ] bytes, int index )
     {
         ulong value = BitConverter.ToUInt64( bytes, index );
 
-        Console.WriteLine( formatter, index, 
+        Console.WriteLine( formatter, index,
             BitConverter.ToString( bytes, index, 8 ), value );
     }
 
@@ -26,7 +26,7 @@ class BytesToUInt64Demo
 
         for( iter = 0; iter < bytes.Length - rowSize; iter += rowSize )
         {
-            Console.Write( 
+            Console.Write(
                 BitConverter.ToString( bytes, iter, rowSize ) );
             Console.WriteLine( "-" );
         }
@@ -38,25 +38,25 @@ class BytesToUInt64Demo
     public static void Main( )
     {
         byte[ ] byteArray = {
-            255, 255, 255,   0,   0,   0,   0,   0,   0,   0, 
-              0,   1,   0,   0,   0, 100, 167, 179, 182, 224, 
-             13,   0, 202, 154,  59,   0,   0,   0,   0, 170, 
-            170, 170, 170, 170, 170,   0,   0, 232, 137,   4, 
-             35, 199, 138, 255, 255, 255, 255, 255, 255, 255, 
+            255, 255, 255,   0,   0,   0,   0,   0,   0,   0,
+              0,   1,   0,   0,   0, 100, 167, 179, 182, 224,
+             13,   0, 202, 154,  59,   0,   0,   0,   0, 170,
+            170, 170, 170, 170, 170,   0,   0, 232, 137,   4,
+             35, 199, 138, 255, 255, 255, 255, 255, 255, 255,
             255, 127 };
 
-        Console.WriteLine( 
+        Console.WriteLine(
             "This example of the BitConverter.ToUInt64( byte[ ], " +
             "int ) \nmethod generates the following output. It " +
             "converts elements \nof a byte array to ulong values.\n" );
 
         WriteMultiLineByteArray( byteArray );
 
-        Console.WriteLine( formatter, "index", "array elements", 
+        Console.WriteLine( formatter, "index", "array elements",
             "ulong" );
-        Console.WriteLine( formatter, "-----", "--------------", 
+        Console.WriteLine( formatter, "-----", "--------------",
             "------" );
-          
+
         // Convert byte array elements to ulong values.
         BAToUInt64( byteArray, 3 );
         BAToUInt64( byteArray, 0 );

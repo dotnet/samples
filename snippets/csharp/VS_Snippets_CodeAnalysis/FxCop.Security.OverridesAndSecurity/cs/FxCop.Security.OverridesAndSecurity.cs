@@ -6,7 +6,7 @@ using System;
 namespace SecurityRulesLibrary
 {
    public interface ITestOverrides
-   {  
+   {
       [EnvironmentPermissionAttribute(SecurityAction.LinkDemand, Unrestricted=true)]
       Object GetFormat(Type formatType);
    }
@@ -56,9 +56,9 @@ namespace SecurityRulesLibrary
 
    public class DoublyDerivedClass : DerivedClass
    {
-      // The OverridesAndSecurity version of this method does not have security. 
-      // Base class DerivedClass's version does. 
-      // The DoublyDerivedClass version does not violate the rule, but the 
+      // The OverridesAndSecurity version of this method does not have security.
+      // Base class DerivedClass's version does.
+      // The DoublyDerivedClass version does not violate the rule, but the
       // DerivedClass version does violate the rule.
       public override void DoSomethingElse()
       {

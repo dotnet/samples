@@ -6,7 +6,7 @@ using System.Runtime.Serialization;
 
 namespace Microsoft.Samples.ContentBasedCorrelation.SharedTypes
 {
-    
+
     public class PurchaseOrder
     {
         private int id;
@@ -40,7 +40,7 @@ namespace Microsoft.Samples.ContentBasedCorrelation.SharedTypes
         {
             get { return customerid; }
             set { customerid = value; }
-        }              
+        }
     }
 
     [DataContract(Name="Customer", Namespace = Constants.DefaultNamespace)]

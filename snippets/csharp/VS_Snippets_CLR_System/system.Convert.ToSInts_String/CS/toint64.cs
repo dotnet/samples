@@ -1,5 +1,5 @@
 ﻿//<Snippet1>
-// Example of the Convert.ToInt64( string ) and 
+// Example of the Convert.ToInt64( string ) and
 // Convert.ToInt64( string, IFormatProvider ) methods.
 using System;
 using System.Globalization;
@@ -12,11 +12,11 @@ class ToInt64ProviderDemo
     static string GetExceptionType( Exception ex )
     {
         string exceptionType = ex.GetType( ).ToString( );
-        return exceptionType.Substring( 
+        return exceptionType.Substring(
             exceptionType.LastIndexOf( '.' ) + 1 );
     }
 
-    static void ConvertToInt64( string numericStr, 
+    static void ConvertToInt64( string numericStr,
         IFormatProvider provider )
     {
         object defaultValue;
@@ -42,7 +42,7 @@ class ToInt64ProviderDemo
             providerValue = GetExceptionType( ex );
         }
 
-        Console.WriteLine( format, numericStr, 
+        Console.WriteLine( format, numericStr,
             defaultValue, providerValue );
     }
 
@@ -69,9 +69,9 @@ class ToInt64ProviderDemo
             "\ngenerates the following output. It converts " +
             "several strings to \nlong values, using " +
             "default formatting or a NumberFormatInfo object.\n" );
-        Console.WriteLine( format, "String to convert", 
+        Console.WriteLine( format, "String to convert",
             "Default/exception", "Provider/exception" );
-        Console.WriteLine( format, "-----------------", 
+        Console.WriteLine( format, "-----------------",
             "-----------------", "------------------" );
 
         // Convert strings, with and without an IFormatProvider.
@@ -107,5 +107,5 @@ neg 123456789         FormatException     -123456789
 (123456789)           FormatException     FormatException
 9223372036854775808   OverflowException   OverflowException
 -9223372036854775809  OverflowException   FormatException
-*/ 
+*/
 //</Snippet1>

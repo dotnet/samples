@@ -9,12 +9,12 @@ class MyGCCollectClass
    {
       // Put some objects in memory.
       MyGCCollectClass.MakeSomeGarbage();
-      Console.WriteLine("Memory used before collection:       {0:N0}", 
+      Console.WriteLine("Memory used before collection:       {0:N0}",
                         GC.GetTotalMemory(false));
-      
+
       // Collect all generations of memory.
       GC.Collect();
-      Console.WriteLine("Memory used after full collection:   {0:N0}", 
+      Console.WriteLine("Memory used after full collection:   {0:N0}",
                         GC.GetTotalMemory(true));
    }
 

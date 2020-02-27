@@ -7,9 +7,9 @@ public class Anonymous
    public static void Main()
    {
       OutputTarget output = new OutputTarget();
-      Func<bool> methodCall = () => output.SendToFile(); 
+      Func<bool> methodCall = () => output.SendToFile();
       if (methodCall())
-         Console.WriteLine("Success!"); 
+         Console.WriteLine("Success!");
       else
          Console.WriteLine("File write operation failed.");
    }
@@ -26,7 +26,7 @@ public class OutputTarget
          sw.WriteLine("Hello, World!");
          sw.Close();
          return true;
-      }  
+      }
       catch
       {
          return false;

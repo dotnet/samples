@@ -28,12 +28,12 @@ namespace ConBuilderEquivalentToCS
             Console.WriteLine("builder3 = " + builder3.ConnectionString);
 
             // builder1 and builder2 contain the same
-            // keys and values, in different order, and the 
+            // keys and values, in different order, and the
             // keys are not consistently cased. They are equivalent.
             Console.WriteLine("builder1.EquivalentTo(builder2) = " +
                 builder1.EquivalentTo(builder2).ToString());
 
-            // builder2 and builder3 contain the same key/value pairs in the 
+            // builder2 and builder3 contain the same key/value pairs in the
             // the same order, but the value casing is different, so they're
             // not equivalent.
             Console.WriteLine("builder2.EquivalentTo(builder3) = " +

@@ -7,10 +7,10 @@ public class Example
    public static void Main()
    {
       char[] chars = { '\u0061', '\u0308' };
-   
+
       string combining = new String(chars);
       Console.WriteLine(combining);
-      
+
       combining = combining.Normalize();
       Console.WriteLine(combining);
    }

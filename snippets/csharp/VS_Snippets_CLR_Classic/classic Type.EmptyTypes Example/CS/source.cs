@@ -8,7 +8,7 @@ public class Sample
     public void Method(Type type) {
         ConstructorInfo cInfo;
 // <Snippet1>
-cInfo = type.GetConstructor (BindingFlags.ExactBinding, null, 
+cInfo = type.GetConstructor (BindingFlags.ExactBinding, null,
          Type.EmptyTypes, null);
 // </Snippet1>
     }

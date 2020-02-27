@@ -23,16 +23,16 @@ class Program
                 commandRowCount.ExecuteScalar());
             Console.WriteLine("Starting row count = {0}", countStart);
 
-            // Create a table with some rows. 
+            // Create a table with some rows.
             DataTable newProducts = MakeTable();
-            
-            // Create the SqlBulkCopy object. 
-            // Note that the column positions in the source DataTable 
-            // match the column positions in the destination table so 
-            // there is no need to map columns. 
+
+            // Create the SqlBulkCopy object.
+            // Note that the column positions in the source DataTable
+            // match the column positions in the destination table so
+            // there is no need to map columns.
             using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connection))
             {
-                bulkCopy.DestinationTableName = 
+                bulkCopy.DestinationTableName =
                     "dbo.BulkCopyDemoMatchingColumns";
 
                 try
@@ -46,7 +46,7 @@ class Program
                 }
             }
 
-            // Perform a final count on the destination 
+            // Perform a final count on the destination
             // table to see how many rows were added.
             long countEnd = System.Convert.ToInt32(
                 commandRowCount.ExecuteScalar());
@@ -58,11 +58,11 @@ class Program
     }
 
     private static DataTable MakeTable()
-        // Create a new DataTable named NewProducts. 
+        // Create a new DataTable named NewProducts.
     {
         DataTable newProducts = new DataTable("NewProducts");
 
-        // Add three column objects to the table. 
+        // Add three column objects to the table.
         DataColumn productID = new DataColumn();
         productID.DataType = System.Type.GetType("System.Int32");
         productID.ColumnName = "ProductID";
@@ -84,7 +84,7 @@ class Program
         keys[0] = productID;
         newProducts.PrimaryKey = keys;
 
-        // Add some new rows to the collection. 
+        // Add some new rows to the collection.
         DataRow row = newProducts.NewRow();
         row["Name"] = "CC-101-WH";
         row["ProductNumber"] = "Cyclocomputer - White";
@@ -101,12 +101,12 @@ class Program
         newProducts.Rows.Add(row);
         newProducts.AcceptChanges();
 
-        // Return the new DataTable. 
+        // Return the new DataTable.
         return newProducts;
     }
     private static string GetConnectionString()
-        // To avoid storing the connection string in your code, 
-        // you can retrieve it from a configuration file. 
+        // To avoid storing the connection string in your code,
+        // you can retrieve it from a configuration file.
     {
         return "Data Source=(local); " +
             " Integrated Security=true;" +

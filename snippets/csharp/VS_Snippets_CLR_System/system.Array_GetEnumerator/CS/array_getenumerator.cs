@@ -4,9 +4,9 @@
 using System;
 
 public class SamplesArray  {
- 
+
    public static void Main()  {
- 
+
       // Creates and initializes a new Array.
       String[] myArr = new String[10];
       myArr[0] = "The";
@@ -18,7 +18,7 @@ public class SamplesArray  {
       myArr[6] = "the";
       myArr[7] = "lazy";
       myArr[8] = "dog";
- 
+
       // Displays the values of the Array.
       int i = 0;
       System.Collections.IEnumerator myEnumerator = myArr.GetEnumerator();
@@ -29,7 +29,7 @@ public class SamplesArray  {
 }
 
 
-/* 
+/*
 This code produces the following output.
 
 The Array contains the following values:

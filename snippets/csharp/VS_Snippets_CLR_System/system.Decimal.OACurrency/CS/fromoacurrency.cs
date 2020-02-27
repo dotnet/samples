@@ -1,5 +1,5 @@
 ﻿//<Snippet2>
-// Example of the decimal.FromOACurrency method. 
+// Example of the decimal.FromOACurrency method.
 using System;
 
 class DecimalFromOACurrencyDemo

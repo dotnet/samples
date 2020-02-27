@@ -8,13 +8,13 @@ public class Example
       int value = 12345678;
       byte[] bytes = BitConverter.GetBytes(value);
       Console.WriteLine(BitConverter.ToString(bytes));
-      
+
       if (BitConverter.IsLittleEndian)
-         Array.Reverse(bytes); 
+         Array.Reverse(bytes);
 
       Console.WriteLine(BitConverter.ToString(bytes));
       // Call method to send byte stream across machine boundaries.
-      
+
       // Receive byte stream from beyond machine boundaries.
       Console.WriteLine(BitConverter.ToString(bytes));
       if (BitConverter.IsLittleEndian)

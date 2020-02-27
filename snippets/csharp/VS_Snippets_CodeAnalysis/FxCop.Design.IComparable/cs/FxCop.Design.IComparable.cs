@@ -7,7 +7,7 @@ namespace DesignLibrary
     // Valid ratings are between A and C.
     // A is the highest rating; it is greater than any other valid rating.
     // C is the lowest rating; it is less than any other valid rating.
- 
+
     public class RatingInformation : IComparable, IComparable<RatingInformation>
     {
         public string Rating
@@ -15,7 +15,7 @@ namespace DesignLibrary
             get;
             private set;
         }
- 
+
         public RatingInformation(string rating)
         {
             if (rating == null)
@@ -29,7 +29,7 @@ namespace DesignLibrary
             }
             this.Rating = v;
         }
- 
+
         public int CompareTo(object obj)
         {
             if (obj == null)
@@ -43,18 +43,18 @@ namespace DesignLibrary
             }
             return this.CompareTo(other);
         }
- 
+
         public int CompareTo(RatingInformation other)
         {
             if (object.ReferenceEquals(other, null))
             {
                 return 1;
             }
-            // Ratings compare opposite to normal string order, 
+            // Ratings compare opposite to normal string order,
             // so reverse the value returned by String.CompareTo.
             return -string.Compare(this.Rating, other.Rating, StringComparison.OrdinalIgnoreCase);
         }
- 
+
         public static int Compare(RatingInformation left, RatingInformation right)
         {
             if (object.ReferenceEquals(left, right))
@@ -67,7 +67,7 @@ namespace DesignLibrary
             }
             return left.CompareTo(right);
         }
- 
+
         // Omitting Equals violates rule: OverrideMethodsOnComparableTypes.
         public override bool Equals(object obj)
         {
@@ -78,15 +78,15 @@ namespace DesignLibrary
             }
             return this.CompareTo(other) == 0;
         }
- 
+
         // Omitting getHashCode violates rule: OverrideGetHashCodeOnOverridingEquals.
         public override int GetHashCode()
         {
             char[] c = this.Rating.ToCharArray();
             return (int)c[0];
         }
- 
-        // Omitting any of the following operator overloads 
+
+        // Omitting any of the following operator overloads
         // violates rule: OverrideMethodsOnComparableTypes.
         public static bool operator ==(RatingInformation left, RatingInformation right)
         {

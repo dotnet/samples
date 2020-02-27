@@ -9,9 +9,9 @@ class Program
     {
         try
         {
-            string connectString = "Server=(local);Initial Catalog=AdventureWorks;" + 
+            string connectString = "Server=(local);Initial Catalog=AdventureWorks;" +
                 "Integrated Security=true";
-            SqlConnectionStringBuilder builder = 
+            SqlConnectionStringBuilder builder =
                 new SqlConnectionStringBuilder(connectString);
             Console.WriteLine("Original: " + builder.ConnectionString);
             Console.WriteLine("ApplicationName={0}",

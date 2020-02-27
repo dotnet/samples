@@ -14,7 +14,7 @@ public class Example
       Type stateInfoType = assem.GetType("StringLib");
       // Get Display method.
       MethodInfo mi = stateInfoType.GetMethod("ToProperCase");
-      // Call the Display method. 
+      // Call the Display method.
       string properTitle = (string) mi.Invoke(null, new object[] { title } );
       Console.WriteLine(properTitle);
    }

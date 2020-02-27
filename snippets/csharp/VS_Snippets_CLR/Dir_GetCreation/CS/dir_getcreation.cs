@@ -2,34 +2,34 @@
 using System;
 using System.IO;
 
-class Test 
+class Test
 {
-    public static void Main() 
+    public static void Main()
     {
-        try 
+        try
         {
             // Get the creation time of a well-known directory.
             DateTime dt = Directory.GetCreationTime(Environment.CurrentDirectory);
 
             // Give feedback to the user.
-            if (DateTime.Now.Subtract(dt).TotalDays > 364) 
+            if (DateTime.Now.Subtract(dt).TotalDays > 364)
             {
                 Console.WriteLine("This directory is over a year old.");
-            } 
-            else if (DateTime.Now.Subtract(dt).TotalDays > 30) 
+            }
+            else if (DateTime.Now.Subtract(dt).TotalDays > 30)
             {
                 Console.WriteLine("This directory is over a month old.");
-            } 
-            else if (DateTime.Now.Subtract(dt).TotalDays <= 1) 
+            }
+            else if (DateTime.Now.Subtract(dt).TotalDays <= 1)
             {
                 Console.WriteLine("This directory is less than a day old.");
-            } 
-            else 
+            }
+            else
             {
                 Console.WriteLine("This directory was created on {0}", dt);
             }
-        } 
-        catch (Exception e) 
+        }
+        catch (Exception e)
         {
             Console.WriteLine("The process failed: {0}", e.ToString());
         }

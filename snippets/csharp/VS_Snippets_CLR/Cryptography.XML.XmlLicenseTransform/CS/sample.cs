@@ -21,7 +21,7 @@ namespace XMLDSIGExample
             // Format using white spaces.
             xmlDocument.PreserveWhitespace = true;
 
-            // Load the passed XML file into the document. 
+            // Load the passed XML file into the document.
             xmlDocument.Load(fileName);
             nsManager.AddNamespace("dsig", SignedXml.XmlDsigNamespaceUrl);
 

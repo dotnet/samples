@@ -31,17 +31,17 @@
          this.grid = new System.Windows.Forms.DataGridView();
          ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
          this.SuspendLayout();
-         // 
+         //
          // grid
-         // 
+         //
          this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
          this.grid.Location = new System.Drawing.Point(36, 24);
          this.grid.Name = "grid";
          this.grid.Size = new System.Drawing.Size(465, 210);
          this.grid.TabIndex = 0;
-         // 
+         //
          // Form1
-         // 
+         //
          this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          this.ClientSize = new System.Drawing.Size(575, 280);

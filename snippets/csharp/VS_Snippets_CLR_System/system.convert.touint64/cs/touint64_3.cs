@@ -9,24 +9,24 @@ public class Example
                               "F000000000000000", "00A3000000000000",
                               "D", "-13", "9AC61", "GAD",
                               "FFFFFFFFFFFFFFFFF" };
-      
+
       foreach (string hexString in hexStrings)
       {
          Console.Write("{0,-18}  -->  ", hexString);
          try {
             ulong number = Convert.ToUInt64(hexString, 16);
             Console.WriteLine("{0,26:N0}", number);
-         }   
+         }
          catch (FormatException) {
             Console.WriteLine("{0,26}", "Bad Format");
-         }   
+         }
          catch (OverflowException) {
             Console.WriteLine("{0,26}", "Numeric Overflow");
-         }   
+         }
          catch (ArgumentException) {
             Console.WriteLine("{0,26}", "Invalid in Base 16");
          }
-      }                                            
+      }
    }
 }
 // The example displays the following output:

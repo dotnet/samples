@@ -24,7 +24,7 @@ class Program
         itemsTable.PrimaryKey = new DataColumn[] { idColumn };
 
         // Add RowChanged event handler for the table.
-        itemsTable.RowChanged += 
+        itemsTable.RowChanged +=
             new System.Data.DataRowChangeEventHandler(Row_Changed);
 
         // Add ten rows.
@@ -44,11 +44,11 @@ class Program
         // Create a second DataTable identical to the first.
         DataTable itemsClone = itemsTable.Clone();
 
-        // Add column to the second column, so that the 
+        // Add column to the second column, so that the
         // schemas no longer match.
         itemsClone.Columns.Add("newColumn", typeof(System.String));
 
-        // Add three rows. Note that the id column can't be the 
+        // Add three rows. Note that the id column can't be the
         // same as existing rows in the original table.
         row = itemsClone.NewRow();
         row["id"] = 14;
@@ -74,10 +74,10 @@ class Program
         PrintValues(itemsTable, "Merged With itemsTable, schema added");
     }
 
-    private static void Row_Changed(object sender, 
+    private static void Row_Changed(object sender,
         DataRowChangeEventArgs e)
     {
-        Console.WriteLine("Row changed {0}\t{1}", 
+        Console.WriteLine("Row changed {0}\t{1}",
             e.Action, e.Row.ItemArray[0]);
     }
 

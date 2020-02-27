@@ -1,6 +1,6 @@
 ﻿//<Snippet1>
 using System;
- 
+
 namespace SimpleSandboxing
 {
     public class Worker : MarshalByRefObject
@@ -37,15 +37,15 @@ namespace SimpleSandboxing
             System.Security.Policy.Evidence hostEvidence = new System.Security.Policy.Evidence();
             hostEvidence.AddHostEvidence(new System.Security.Policy.Zone(
                                                          System.Security.SecurityZone.Internet));
-            System.Security.PermissionSet pset = 
+            System.Security.PermissionSet pset =
                                 System.Security.SecurityManager.GetStandardSandbox(hostEvidence);
 
             // Identify the folder to use for the sandbox.
             AppDomainSetup ads = new AppDomainSetup();
             ads.ApplicationBase = System.IO.Directory.GetCurrentDirectory();
- 
+
             // Create the sandboxed application domain.
-            return AppDomain.CreateDomain("Sandbox", hostEvidence, ads, pset, null); 
+            return AppDomain.CreateDomain("Sandbox", hostEvidence, ads, pset, null);
         }
     }
 }

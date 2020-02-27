@@ -18,7 +18,7 @@ public class GenericFunc
 
       // This code example produces the following output:
       //
-      //    DAKOTA      
+      //    DAKOTA
       // </Snippet2>
    }
 }

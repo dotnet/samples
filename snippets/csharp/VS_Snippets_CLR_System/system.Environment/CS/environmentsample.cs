@@ -15,17 +15,17 @@ public class EnvironmentSample {
 		
 		//<Snippet6>
 		
-		Console.WriteLine("Initial WS:"+Environment.WorkingSet);	  
+		Console.WriteLine("Initial WS:"+Environment.WorkingSet);	
 		int[] i1,i2,i3;
 		i1 = new int[10000];
-		Console.WriteLine("WS 1:"+Environment.WorkingSet);	  
+		Console.WriteLine("WS 1:"+Environment.WorkingSet);	
 		i2 = new int[10000];
-		Console.WriteLine("WS 2:"+Environment.WorkingSet);	  
+		Console.WriteLine("WS 2:"+Environment.WorkingSet);	
 		i3 = new int[10000];
-		Console.WriteLine("WS 3:"+Environment.WorkingSet);	  
+		Console.WriteLine("WS 3:"+Environment.WorkingSet);	
 			
 		//</Snippet6>											 			
-	}   
+	}
 	
 	//<Snippet3>		
 	static void OuterMethod() {

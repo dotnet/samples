@@ -15,7 +15,7 @@ public class Example
       int utf32 = 0x10107;       // AEGEAN NUMBER ONE
       string surrogate = Char.ConvertFromUtf32(utf32);
       foreach (var ch in surrogate)
-         Console.WriteLine("U+{0:X4}: {1}    ", Convert.ToUInt16(ch), 
+         Console.WriteLine("U+{0:X4}: {1}    ", Convert.ToUInt16(ch),
                                                 Char.GetNumericValue(ch));
 
       // The example displays the following output:
@@ -23,21 +23,21 @@ public class Example
       //       U+DD07: -1
       //  </Snippet2>
    }
-   
+
    private static void Overload2()
    {
       // <Snippet3>
-      // Define a UTF32 value for each character in the 
+      // Define a UTF32 value for each character in the
       // Aegean numbering system.
       for (int utf32 = 0x10107; utf32 <= 0x10133; utf32++) {
          string surrogate = Char.ConvertFromUtf32(utf32);
-         for (int ctr = 0; ctr < surrogate.Length; ctr++) 
-            Console.Write("U+{0:X4} at position {1}: {2}     ", 
-                              Convert.ToUInt16(surrogate[ctr]), ctr,  
+         for (int ctr = 0; ctr < surrogate.Length; ctr++)
+            Console.Write("U+{0:X4} at position {1}: {2}     ",
+                              Convert.ToUInt16(surrogate[ctr]), ctr,
                               Char.GetNumericValue(surrogate, ctr));
 
          Console.WriteLine();
-      }    
+      }
       // The example displays the following output:
       //       U+D800 at position 0: 1     U+DD07 at position 1: -1
       //       U+D800 at position 0: 2     U+DD08 at position 1: -1

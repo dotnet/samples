@@ -9,12 +9,12 @@ class Program
 {
     static void Main()
     {
-        OracleConnectionStringBuilder builder = 
+        OracleConnectionStringBuilder builder =
             new OracleConnectionStringBuilder(
             "Server=OracleDemo;Integrated Security=True");
 
-        // Display the connection string, which should now 
-        // contains the "Data Source" key, as opposed to the 
+        // Display the connection string, which should now
+        // contains the "Data Source" key, as opposed to the
         // supplied "Server".
         Console.WriteLine(builder.ConnectionString);
 

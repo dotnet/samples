@@ -13,12 +13,12 @@ public class Example
       Byte[] bytes2 = BitConverter.GetBytes(Int64.MaxValue / 2);
       Console.WriteLine("{0}--> 0x{1:X4} ({1:N0})", FormatBytes(bytes2),
                                       BitConverter.ToInt32(bytes2, 4));
-      
+
       // Round-trip an integer value.
       int original = (int) Math.Pow(16, 3);
       Byte[] bytes3 = BitConverter.GetBytes(original);
       int restored = BitConverter.ToInt32(bytes3, 0);
-      Console.WriteLine("0x{0:X4} ({0:N0}) --> {1} --> 0x{2:X4} ({2:N0})", original, 
+      Console.WriteLine("0x{0:X4} ({0:N0}) --> {1} --> 0x{2:X4} ({2:N0})", original,
                         FormatBytes(bytes3), restored);
    }
 

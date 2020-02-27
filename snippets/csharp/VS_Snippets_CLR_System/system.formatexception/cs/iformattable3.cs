@@ -10,7 +10,7 @@ public class Example
    }
 }
 // The example displays the following output:
-//    Unhandled Exception: System.FormatException: 
+//    Unhandled Exception: System.FormatException:
 //       Format String can be only "D", "d", "N", "n", "P", "p", "B", "b", "X" or "x".
 //       at System.Guid.ParseExact(String input, String format)
 //       at Example.Main()

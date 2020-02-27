@@ -1,12 +1,12 @@
 ﻿//<Snippet1>
-// Example of the Convert.ToString( DateTime ) and 
+// Example of the Convert.ToString( DateTime ) and
 // Convert.ToString( DateTime, IFormatProvider ) methods.
 using System;
 using System.Globalization;
 
 class DateTimeIFormatProviderDemo
 {
-    static void DisplayDateNCultureName( DateTime testDate, 
+    static void DisplayDateNCultureName( DateTime testDate,
         string cultureName )
     {
         // Create the CultureInfo object for the specified culture,
@@ -15,7 +15,7 @@ class DateTimeIFormatProviderDemo
         string      dateString = Convert.ToString( testDate, culture );
 
         // Bracket the culture name, and display the name and date.
-        Console.WriteLine("   {0,-12}{1}", 
+        Console.WriteLine("   {0,-12}{1}",
             String.Concat( "[", cultureName, "]" ), dateString );
     }
 
@@ -32,20 +32,20 @@ class DateTimeIFormatProviderDemo
             "and formats a DateTime value with each.\n" );
 
         // Format the date without an IFormatProvider.
-        Console.WriteLine( "   {0,-12}{1}", 
+        Console.WriteLine( "   {0,-12}{1}",
             null, "No IFormatProvider" );
-        Console.WriteLine( "   {0,-12}{1}", 
+        Console.WriteLine( "   {0,-12}{1}",
             null, "------------------" );
-        Console.WriteLine( "   {0,-12}{1}\n", 
-            String.Concat( "[", CultureInfo.CurrentCulture.Name, "]" ), 
+        Console.WriteLine( "   {0,-12}{1}\n",
+            String.Concat( "[", CultureInfo.CurrentCulture.Name, "]" ),
             Convert.ToString( tDate ) );
 
         // Format the date with IFormatProvider for several cultures.
-        Console.WriteLine( "   {0,-12}{1}", 
+        Console.WriteLine( "   {0,-12}{1}",
             "Culture", "With IFormatProvider" );
-        Console.WriteLine( "   {0,-12}{1}", 
+        Console.WriteLine( "   {0,-12}{1}",
             "-------", "--------------------" );
-        
+
         DisplayDateNCultureName( tDate, "" );
         DisplayDateNCultureName( tDate, "en-US" );
         DisplayDateNCultureName( tDate, "es-AR" );
@@ -80,5 +80,5 @@ for several cultures and formats a DateTime value with each.
    [nl-NL]     15-4-2003 20:30:40
    [ru-RU]     15.04.2003 20:30:40
    [ur-PK]     15/04/2003 8:30:40 PM
-*/ 
+*/
 //</Snippet1>

@@ -18,15 +18,15 @@ namespace UUCodeC
          string inputFileName = args[2];
          string outputFileName = args[3];
          Coder coder = new Coder(inputFileName, outputFileName);
-         
+
          switch (args[0]) {
-            case "-d": 
+            case "-d":
                if (args[1] == "-s") {
                   coder.DecodeWithString();
-               } 
+               }
                else if (args[1] == "-c") {
                   coder.DecodeWithCharArray();
-               } 
+               }
                else {
                   System.Console.WriteLine("Second arg must be -s or -c");
                   return;
@@ -35,16 +35,16 @@ namespace UUCodeC
             case "-e":
                if (args[1] == "-s") {
                   coder.EncodeWithString();
-               } 
+               }
                else if (args[1] == "-c") {
                   coder.EncodeWithCharArray();
-               } 
+               }
                else {
                   System.Console.WriteLine("Second arg must be -s or -c");
                   return;
                }
                break;
-            default: 
+            default:
                System.Console.WriteLine("First arg must be -d or -e");
                break;
          }
@@ -57,7 +57,7 @@ namespace UUCodeC
 
       //<Snippet1>
       public void EncodeWithString() {
-         System.IO.FileStream inFile;    
+         System.IO.FileStream inFile;
          byte[]             binaryData;
 
          try {
@@ -78,8 +78,8 @@ namespace UUCodeC
          // Convert the binary input into Base64 UUEncoded output.
          string base64String;
          try {
-             base64String = 
-               System.Convert.ToBase64String(binaryData, 
+             base64String =
+               System.Convert.ToBase64String(binaryData,
                                       0,
                                       binaryData.Length);
          }
@@ -89,11 +89,11 @@ namespace UUCodeC
          }
 
          // Write the UUEncoded version to the output file.
-         System.IO.StreamWriter outFile; 
+         System.IO.StreamWriter outFile;
          try {
             outFile = new System.IO.StreamWriter(outputFileName,
                                  false,
-                                 System.Text.Encoding.ASCII);          
+                                 System.Text.Encoding.ASCII);
             outFile.Write(base64String);
             outFile.Close();
          }
@@ -106,7 +106,7 @@ namespace UUCodeC
 
       //<Snippet2>
       public void EncodeWithCharArray() {
-         System.IO.FileStream inFile;    
+         System.IO.FileStream inFile;
          byte[]             binaryData;
 
          try {
@@ -126,18 +126,18 @@ namespace UUCodeC
 
          // Convert the binary input into Base64 UUEncoded output.
          // Each 3 byte sequence in the source data becomes a 4 byte
-         // sequence in the character array. 
+         // sequence in the character array.
          long arrayLength = (long) ((4.0d/3.0d) * binaryData.Length);
-         
+
          // If array length is not divisible by 4, go up to the next
          // multiple of 4.
          if (arrayLength % 4 != 0) {
             arrayLength += 4 - arrayLength % 4;
          }
-         
+
          char[] base64CharArray = new char[arrayLength];
          try {
-            System.Convert.ToBase64CharArray(binaryData, 
+            System.Convert.ToBase64CharArray(binaryData,
                                      0,
                                      binaryData.Length,
                                      base64CharArray,
@@ -153,11 +153,11 @@ namespace UUCodeC
          }
 
          // Write the UUEncoded version to the output file.
-         System.IO.StreamWriter outFile; 
+         System.IO.StreamWriter outFile;
          try {
             outFile = new System.IO.StreamWriter(outputFileName,
                                     false,
-                                    System.Text.Encoding.ASCII);          
+                                    System.Text.Encoding.ASCII);
             outFile.Write(base64CharArray);
             outFile.Close();
          }
@@ -170,7 +170,7 @@ namespace UUCodeC
 
       //<Snippet3>
       public void DecodeWithCharArray() {
-         System.IO.StreamReader inFile;    
+         System.IO.StreamReader inFile;
          char[] base64CharArray;
 
          try {
@@ -189,7 +189,7 @@ namespace UUCodeC
          // Convert the Base64 UUEncoded input into binary output.
          byte[] binaryData;
          try {
-            binaryData = 
+            binaryData =
                System.Convert.FromBase64CharArray(base64CharArray,
                                           0,
                                           base64CharArray.Length);
@@ -222,7 +222,7 @@ namespace UUCodeC
 
       //<Snippet4>
       public void DecodeWithString() {
-         System.IO.StreamReader inFile;    
+         System.IO.StreamReader inFile;
          string base64String;
 
          try {
@@ -242,7 +242,7 @@ namespace UUCodeC
          // Convert the Base64 UUEncoded input into binary output.
          byte[] binaryData;
          try {
-            binaryData = 
+            binaryData =
                System.Convert.FromBase64String(base64String);
          }
          catch (System.ArgumentNullException) {

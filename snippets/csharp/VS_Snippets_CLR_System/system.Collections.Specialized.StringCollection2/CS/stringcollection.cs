@@ -80,7 +80,7 @@ public class SamplesStringCollection  {
       Console.WriteLine();
    }
 
-   // Uses the enumerator. 
+   // Uses the enumerator.
    // NOTE: The foreach statement is the preferred way of enumerating the contents of a collection.
    public static void PrintValues2( StringCollection myCol )  {
       StringEnumerator myEnumerator = myCol.GetEnumerator();

@@ -13,11 +13,11 @@ public class Example
          int number = rnd.Next(1001);
          numbers[ctr] = number;
          total += number;
-      }   
+      }
       numbers[3] = total;
       object[] values = new object[numbers.Length];
       numbers.CopyTo(values, 0);
-      Console.WriteLine("{0} + {1} + {2} = {3}", values);   
+      Console.WriteLine("{0} + {1} + {2} = {3}", values);
    }
 }
 // The example displays output like the following:

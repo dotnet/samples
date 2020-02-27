@@ -3,7 +3,7 @@ using System;
 using System.IO;
 using System.Xml;
 
-public class Sample 
+public class Sample
 {
   public static void Main()
   {
@@ -19,7 +19,7 @@ public class Sample
                    "<price>19.95</price>" +
                    "</book>");
 
-       //Load the XmlNodeReader 
+       //Load the XmlNodeReader
        reader = new XmlNodeReader(doc);
 
        reader.MoveToContent(); //Move to the book node.
@@ -27,9 +27,9 @@ public class Sample
        reader.Skip();   //Skip the title element.
 
        Console.WriteLine(reader.ReadOuterXml());  //Read the price element.
-     } 
+     }
 
-     finally 
+     finally
      {
         if (reader != null)
           reader.Close();

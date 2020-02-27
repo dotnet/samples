@@ -5,25 +5,25 @@ using System.Reflection.Emit;
 
 class Example
 {
-    static void Main() 
+    static void Main()
     {
         string name = "InMemory";
 
-        AssemblyBuilder asmBldr = 
-           AppDomain.CurrentDomain.DefineDynamicAssembly(new AssemblyName(name), 
+        AssemblyBuilder asmBldr =
+           AppDomain.CurrentDomain.DefineDynamicAssembly(new AssemblyName(name),
               AssemblyBuilderAccess.Run);
-        ModuleBuilder modBldr = asmBldr.DefineDynamicModule(name); 
+        ModuleBuilder modBldr = asmBldr.DefineDynamicModule(name);
 
         TypeBuilder tb = modBldr.DefineType("DemoVararg");
 
-        // Create a vararg method with no return value and one 
+        // Create a vararg method with no return value and one
         // string argument. (The string argument type is the only
         // element of an array of Type objects.)
         //
         MethodBuilder mb1 = tb.DefineMethod("VarargMethod",
             MethodAttributes.Public | MethodAttributes.Static,
             CallingConventions.VarArgs,
-            null, 
+            null,
             new Type[] { typeof(string) });
 
         ILGenerator il1 = mb1.GetILGenerator();
@@ -42,9 +42,9 @@ class Example
         // locAi, which will hold the ArgIterator.
         il1.Emit(OpCodes.Ldloca_S, locAi);
 
-        // Load the address of the argument list, and call the 
+        // Load the address of the argument list, and call the
         // ArgIterator constructor that takes an array of runtime
-        // argument handles. 
+        // argument handles.
         il1.Emit(OpCodes.Arglist);
         il1.Emit(OpCodes.Call, typeof(ArgIterator).GetConstructor(new Type[] { typeof(RuntimeArgumentHandle) }));
 
@@ -52,7 +52,7 @@ class Example
         // count is tested.
         il1.Emit(OpCodes.Br_S, labelCheckCondition);
 
-        // At the top of the loop, call GetNextArg to get the next 
+        // At the top of the loop, call GetNextArg to get the next
         // argument from the ArgIterator. Convert the typed reference
         // to an object reference and write the object to the console.
         il1.MarkLabel(labelNext);
@@ -75,7 +75,7 @@ class Example
 
         il1.Emit(OpCodes.Ret);
 
-        // Create a method that contains a call to the vararg 
+        // Create a method that contains a call to the vararg
         // method.
         MethodBuilder mb2 = tb.DefineMethod("CallVarargMethod",
             MethodAttributes.Public | MethodAttributes.Static,
@@ -89,7 +89,7 @@ class Example
         il2.Emit(OpCodes.Ldstr, "world ");
         il2.Emit(OpCodes.Ldc_I4, 2006);
 
-        // Call the vararg method, specifying the types of the 
+        // Call the vararg method, specifying the types of the
         // arguments in the list.
         il2.EmitCall(OpCodes.Call, mb1, new Type[] { typeof(string), typeof(int) });
 

@@ -15,7 +15,7 @@ namespace SecurityLibrary
          someCommand.Connection = someConnection;
 
          someCommand.CommandText = "SELECT AccountNumber FROM Users " +
-            "WHERE Username='" + name + 
+            "WHERE Username='" + name +
             "' AND Password='" + password + "'";
 
          someConnection.Open();
@@ -35,7 +35,7 @@ namespace SecurityLibrary
             "@username", SqlDbType.NChar).Value = name;
          someCommand.Parameters.Add(
             "@password", SqlDbType.NChar).Value = password;
-         someCommand.CommandText = "SELECT AccountNumber FROM Users " + 
+         someCommand.CommandText = "SELECT AccountNumber FROM Users " +
             "WHERE Username=@username AND Password=@password";
 
          someConnection.Open();
@@ -51,7 +51,7 @@ namespace SecurityLibrary
       {
          SqlQueries queries = new SqlQueries();
          queries.UnsafeQuery(args[0], "' OR 1=1 --", "anything");
-         // Resultant query (which is always true): 
+         // Resultant query (which is always true):
          // SELECT AccountNumber FROM Users WHERE Username='' OR 1=1
 
          queries.SaferQuery(args[0], "' OR 1 = 1 --", "anything");

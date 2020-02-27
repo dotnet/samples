@@ -4,7 +4,7 @@ using System;
 public class TestClass
 {}
 
-public class Example 
+public class Example
 {
    public static void Main()
    {
@@ -34,17 +34,17 @@ public class Example
 //     Exception information: System.ArgumentException: Object must be of type String.
 //        at System.String.CompareTo(Object value)
 //        at Example.Main()
-//     
+//
 //     Comparing 'some text' with 'TestClass': -1
-//     
+//
 //     Bad argument: 123 (type Int32)
 //     Exception information: System.ArgumentException: Object must be of type String.
 //        at System.String.CompareTo(Object value)
 //        at Example.Main()
-//     
+//
 //     Comparing 'some text' with '123': 1
-//     
+//
 //     Comparing 'some text' with 'some text': 0
-//     
+//
 //     Comparing 'some text' with 'Some Text': -1
 //</Snippet1>

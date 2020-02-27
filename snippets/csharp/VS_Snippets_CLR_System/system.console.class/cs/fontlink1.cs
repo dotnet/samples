@@ -9,11 +9,11 @@ public class Example
       string valueName = "Lucida Console";
       string newFont = "simsun.ttc,SimSun";
       string[] fonts = null;
-      RegistryValueKind kind = 0; 
+      RegistryValueKind kind = 0;
       bool toAdd;
-      
-      RegistryKey key = Registry.LocalMachine.OpenSubKey( 
-                 @"Software\Microsoft\Windows NT\CurrentVersion\FontLink\SystemLink", 
+
+      RegistryKey key = Registry.LocalMachine.OpenSubKey(
+                 @"Software\Microsoft\Windows NT\CurrentVersion\FontLink\SystemLink",
                  true);
       if (key == null) {
          Console.WriteLine("Font linking is not enabled.");
@@ -21,7 +21,7 @@ public class Example
       else {
          // Determine if the font is a base font.
          string[] names = key.GetValueNames();
-         if (Array.Exists(names, s => s.Equals(valueName, 
+         if (Array.Exists(names, s => s.Equals(valueName,
                                       StringComparison.OrdinalIgnoreCase))) {
             // Get the value's type.
             kind = key.GetValueKind(valueName);
@@ -30,7 +30,7 @@ public class Example
             switch (kind) {
                case RegistryValueKind.String:
                   fonts = new string[] { (string) key.GetValue(valueName) };
-                  break;   
+                  break;
                case RegistryValueKind.MultiString:
                   fonts = (string[]) key.GetValue(valueName);
                   break;
@@ -38,9 +38,9 @@ public class Example
                   // Do nothing.
                   fonts = new string[] { };
                   break;
-            } 
+            }
             // Determine whether SimSun is a linked font.
-            if (Array.FindIndex(fonts, s =>s.IndexOf("SimSun", 
+            if (Array.FindIndex(fonts, s =>s.IndexOf("SimSun",
                                        StringComparison.OrdinalIgnoreCase) >=0) >= 0) {
                Console.WriteLine("Font is already linked.");
                toAdd = false;
@@ -56,7 +56,7 @@ public class Example
             fonts = new string[] { };
          }
 
-         if (toAdd) {  
+         if (toAdd) {
             Array.Resize(ref fonts, fonts.Length + 1);
             fonts[fonts.GetUpperBound(0)] = newFont;
             // Change REG_SZ to REG_MULTI_SZ.
@@ -65,9 +65,9 @@ public class Example
 
             key.SetValue(valueName, fonts, RegistryValueKind.MultiString);
             Console.WriteLine("SimSun added to the list of linked fonts.");
-         }                     
+         }
       }
-      
+
       if (key != null) key.Close();
    }
 }

@@ -9,7 +9,7 @@ class DataTableReaderPrintCol
     // <Snippet1>
     private static void GetAllValues(DataTableReader reader)
     {
-        // Given a DataTableReader, retrieve the value of 
+        // Given a DataTableReader, retrieve the value of
         // each column, and display the name, value, and type.
         // Make sure you have called reader.Read at least once before
         // calling this procedure.
@@ -26,7 +26,7 @@ class DataTableReaderPrintCol
             {
                 value = reader.GetValue(i);
             }
-            Console.WriteLine("{0}: {1} ({2})", reader.GetName(i), 
+            Console.WriteLine("{0}: {1} ({2})", reader.GetName(i),
                 value, reader.GetFieldType(i).Name);
         }
     }

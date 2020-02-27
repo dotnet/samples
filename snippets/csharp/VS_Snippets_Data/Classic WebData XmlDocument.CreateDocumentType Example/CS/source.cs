@@ -10,13 +10,13 @@ public class Sample
     //Create the XmlDocument.
     XmlDocument doc = new XmlDocument();
 
-    //Create a document type node and  
+    //Create a document type node and
     //add it to the document.
     XmlDocumentType doctype;
     doctype = doc.CreateDocumentType("book", null, null, "<!ELEMENT book ANY>");
     doc.AppendChild(doctype);
 
-    //Create the root element and 
+    //Create the root element and
     //add it to the document.
     doc.AppendChild(doc.CreateElement("book"));
 

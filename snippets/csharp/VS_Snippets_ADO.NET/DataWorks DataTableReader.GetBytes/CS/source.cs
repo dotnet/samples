@@ -16,15 +16,15 @@ class Class1
 
     static private void TestGetBytes()
     {
-        // Set up the data adapter, using information from 
+        // Set up the data adapter, using information from
         // the AdventureWorks sample database.
-        SqlDataAdapter photoAdapter = SetupDataAdapter( 
+        SqlDataAdapter photoAdapter = SetupDataAdapter(
             "SELECT ThumbnailPhotoFileName, ThumbNailPhoto " +
             "FROM Production.ProductPhoto");
         // Fill the DataTable.
         DataTable photoDataTable = new DataTable();
         photoAdapter.Fill(photoDataTable);
-         
+
         using (DataTableReader reader = new DataTableReader(photoDataTable))
         {
             while (reader.Read())
@@ -49,9 +49,9 @@ class Class1
                         // read the bytes from the DataTableReader.
                         Byte[] buffer = new Byte[len];
                         reader.GetBytes(1, 0, buffer, 0, (int)len);
-                        // Create a new Bitmap object, passing the array 
+                        // Create a new Bitmap object, passing the array
                         // of bytes to the constructor of a MemoryStream.
-                        using (Bitmap productImage = new 
+                        using (Bitmap productImage = new
                                    Bitmap(new MemoryStream(buffer)))
                         {
                             String fileName = "C:\\" + productName;
@@ -74,9 +74,9 @@ class Class1
     static private SqlDataAdapter SetupDataAdapter(String sqlString)
     {
         // Assuming all the default settings, create a SqlDataAdapter
-        // working with the AdventureWorks sample database that's 
+        // working with the AdventureWorks sample database that's
         // available with SQL Server.
-        String connectionString = 
+        String connectionString =
             "Data Source=(local);Initial Catalog=AdventureWorks;" +
             "Integrated Security=true";
         return new SqlDataAdapter(sqlString, connectionString);

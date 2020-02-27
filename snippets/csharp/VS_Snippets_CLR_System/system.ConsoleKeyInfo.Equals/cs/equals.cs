@@ -4,9 +4,9 @@
 using System;
 using System.Text;
 
-class Sample 
+class Sample
 {
-    public static void Main() 
+    public static void Main()
     {
     string k1 = "\nEnter a key ......... ";
     string k2 = "\nEnter another key ... ";
@@ -14,21 +14,21 @@ class Sample
     string key2 = "";
     string areKeysEqual = "The {0} and {1} keys are {2}equal.";
     string equalValue = "";
-    string prompt = "Press the escape key (ESC) to quit, " + 
+    string prompt = "Press the escape key (ESC) to quit, " +
                     "or any other key to continue.";
     ConsoleKeyInfo cki1;
     ConsoleKeyInfo cki2;
 
 //
 // The Console.TreatControlCAsInput property prevents this example from
-// ending if you press CTL+C, however all other operating system keys and 
-// shortcuts, such as ALT+TAB or the Windows Logo key, are still in effect. 
+// ending if you press CTL+C, however all other operating system keys and
+// shortcuts, such as ALT+TAB or the Windows Logo key, are still in effect.
 //
     Console.TreatControlCAsInput = true;
 
-// Request that the user enter two key presses. A key press and any 
+// Request that the user enter two key presses. A key press and any
 // combination shift, CTRL, and ALT modifier keys is permitted.
-    do 
+    do
     {
         Console.Write(k1);
         cki1 = Console.ReadKey(false);
@@ -50,8 +50,8 @@ class Sample
 // Note: This example requires the Escape (Esc) key.
     }
 
-// The KeyCombination() method creates a string that specifies what 
-// key and what combination of shift, CTRL, and ALT modifier keys 
+// The KeyCombination() method creates a string that specifies what
+// key and what combination of shift, CTRL, and ALT modifier keys
 // were pressed simultaneously.
 
     protected static string KeyCombination(ConsoleKeyInfo sourceCki)

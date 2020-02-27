@@ -24,11 +24,11 @@ public class Example
    private static void ConvertDateTime()
    {
       // <Snippet1>
-      DateTime[] dates = { new DateTime(2009, 7, 14), 
-                           new DateTime(1, 1, 1, 18, 32, 0), 
+      DateTime[] dates = { new DateTime(2009, 7, 14),
+                           new DateTime(1, 1, 1, 18, 32, 0),
                            new DateTime(2009, 2, 12, 7, 16, 0) };
       string result;
-      
+
       foreach (DateTime dateValue in dates)
       {
          result = Convert.ToString(dateValue);
@@ -42,20 +42,20 @@ public class Example
       //    Converted the DateTime value 2/12/2009 07:16:00 AM to a String value 2/12/2009 07:16:00 AM.
       // </Snippet1>
    }
-   
+
    private static void ConvertInt16()
    {
       // <Snippet2>
       short[] numbers = { Int16.MinValue, -138, 0, 19, Int16.MaxValue };
       string result;
-      
+
       foreach (short number in numbers)
       {
          result = Convert.ToString(number);
          Console.WriteLine("Converted the {0} value {1} to the {2} value {3}.",
                               number.GetType().Name, number,
                               result.GetType().Name, result);
-      }     
+      }
       // The example displays the following output:
       //    Converted the Int16 value -32768 to the String value -32768.
       //    Converted the Int16 value -138 to the String value -138.
@@ -71,7 +71,7 @@ public class Example
       object[] values = { false, 12.63m, new DateTime(2009, 6, 1, 6, 32, 15), 16.09e-12,
                           'Z', 15.15322, SByte.MinValue, Int32.MaxValue };
       string result;
-      
+
       foreach (object value in values)
       {
          result = Convert.ToString(value);
@@ -87,16 +87,16 @@ public class Example
       //    Converted the Char value Z to the String value Z.
       //    Converted the Double value 15.15322 to the String value 15.15322.
       //    Converted the SByte value -128 to the String value -128.
-      //    Converted the Int32 value 2147483647 to the String value 2147483647.      
+      //    Converted the Int32 value 2147483647 to the String value 2147483647.
       // </Snippet3>
-   }   
+   }
 
    private static void ConvertSByte()
    {
       // <Snippet4>
       sbyte[] numbers = { SByte.MinValue, -12, 0, 16, SByte.MaxValue };
       string result;
-      
+
       foreach (sbyte number in numbers)
       {
          result = Convert.ToString(number);
@@ -112,21 +112,21 @@ public class Example
       //    Converted the SByte value 127 to the String value 127.
       // </Snippet4>
    }
-   
+
    private static void ConvertSingle()
    {
       // <Snippet5>
       float[] numbers = { Single.MinValue, -1011.351f, -17.45f, -3e-16f,
                           0f, 4.56e-12f, 16.0001f, 10345.1221f, Single.MaxValue };
       string result;
-      
+
       foreach (float number in numbers)
       {
          result = Convert.ToString(number);
          Console.WriteLine("Converted the {0} value {1} to the {2} value {3}.",
                               number.GetType().Name, number,
                               result.GetType().Name, result);
-      }                            
+      }
       // The example displays the following output:
       //    Converted the Single value -3.402823E+38 to the String value -3.402823E+38.
       //    Converted the Single value -1011.351 to the String value -1011.351.
@@ -139,13 +139,13 @@ public class Example
       //    Converted the Single value 3.402823E+38 to the String value 3.402823E+38.
       // </Snippet5>
    }
-   
+
    private static void ConvertUInt16()
    {
       // <Snippet6>
       ushort[] numbers = { UInt16.MinValue, 103, 1045, UInt16.MaxValue };
       string result;
-      
+
       foreach (ushort number in numbers)
       {
          result = Convert.ToString(number);
@@ -160,13 +160,13 @@ public class Example
       //    Converted the UInt16 value 65535 to the String value 65535.
       // </Snippet6>
    }
-   
+
    private static void ConvertUInt32()
    {
       // <Snippet7>
       uint[] numbers = { UInt32.MinValue, 103, 1045, 119543, UInt32.MaxValue };
       string result;
-      
+
       foreach (uint number in numbers)
       {
          result = Convert.ToString(number);
@@ -182,13 +182,13 @@ public class Example
       //    Converted the UInt32 value 4294967295 to the String value 4294967295.
       // </Snippet7>
    }
-   
+
    private static void ConvertUInt64()
    {
       // <Snippet8>
       ulong[] numbers = { UInt64.MinValue, 1031, 189045, UInt64.MaxValue };
       string result;
-      
+
       foreach (ulong number in numbers)
       {
          result = Convert.ToString(number);

@@ -1,5 +1,5 @@
 ﻿//<Snippet3>
-// Example of the decimal.GetTypeCode method. 
+// Example of the decimal.GetTypeCode method.
 using System;
 
 class DecimalGetTypeCodeDemo

@@ -6,7 +6,7 @@ public class Example
     {
 //<Snippet1>
         Array myArray = new int[] { 1, 2, 4 };
-        lock(myArray.SyncRoot) 
+        lock(myArray.SyncRoot)
         {
             foreach (Object item in myArray)
                 Console.WriteLine(item);

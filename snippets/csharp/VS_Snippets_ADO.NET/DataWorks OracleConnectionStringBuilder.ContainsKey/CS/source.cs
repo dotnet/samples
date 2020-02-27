@@ -16,9 +16,9 @@ class Program
         // Keys you have provided return true.
         Console.WriteLine(builder.ContainsKey("Integrated Security"));
 
-        // Comparison is case insensitive, and synonyms for the 
+        // Comparison is case insensitive, and synonyms for the
         // keywords are translated to well-known names.
-        // The following returns true because "PWD" is a 
+        // The following returns true because "PWD" is a
         // synonym for "Password", a valid key.
         Console.WriteLine(builder.ContainsKey("PWD"));
 
@@ -35,7 +35,7 @@ class Program
     private static string GetConnectionString()
     {
         // To avoid storing the connection string in your code,
-        // you can retrieve it from a configuration file. 
+        // you can retrieve it from a configuration file.
         return "Server=OracleDemo;Integrated Security=True";
     }
 }

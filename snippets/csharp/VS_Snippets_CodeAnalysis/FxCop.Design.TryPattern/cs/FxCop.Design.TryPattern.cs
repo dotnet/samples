@@ -13,7 +13,7 @@ namespace Samples
             _X = axisX;
             _Y = axisY;
         }
-        
+
         public int X
         {
             get { return _X; }

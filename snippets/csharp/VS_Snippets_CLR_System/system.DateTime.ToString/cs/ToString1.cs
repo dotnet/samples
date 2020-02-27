@@ -9,7 +9,7 @@ public class DateToStringExample
    {
       CultureInfo currentCulture = Thread.CurrentThread.CurrentCulture;
       DateTime exampleDate = new DateTime(2008, 5, 1, 18, 32, 6);
-      
+
       // Display the date using the current (en-US) culture.
       Console.WriteLine(exampleDate.ToString());
 
@@ -20,7 +20,7 @@ public class DateToStringExample
       // Change the current culture to ja-JP and display the date.
       Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("ja-JP");
       Console.WriteLine(exampleDate.ToString());
-      
+
       // Restore the original culture
       Thread.CurrentThread.CurrentCulture = currentCulture;
    }

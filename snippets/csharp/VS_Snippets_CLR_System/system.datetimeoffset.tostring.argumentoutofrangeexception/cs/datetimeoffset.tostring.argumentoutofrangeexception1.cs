@@ -7,7 +7,7 @@ public class Example
    public static void Main()
    {
       CultureInfo jaJP = new CultureInfo("ja-JP");
-      jaJP.DateTimeFormat.Calendar = new JapaneseCalendar(); 
+      jaJP.DateTimeFormat.Calendar = new JapaneseCalendar();
       DateTimeOffset date1 = new DateTimeOffset(new DateTime(1867, 1, 1),
                                                 TimeSpan.Zero);
 
@@ -15,10 +15,10 @@ public class Example
          Console.WriteLine(date1.ToString(jaJP));
       }
       catch (ArgumentOutOfRangeException) {
-         Console.WriteLine("{0:d} is earlier than {1:d} or later than {2:d}", 
-                           date1, 
-                           jaJP.DateTimeFormat.Calendar.MinSupportedDateTime,  
-                           jaJP.DateTimeFormat.Calendar.MaxSupportedDateTime); 
+         Console.WriteLine("{0:d} is earlier than {1:d} or later than {2:d}",
+                           date1,
+                           jaJP.DateTimeFormat.Calendar.MinSupportedDateTime,
+                           jaJP.DateTimeFormat.Calendar.MaxSupportedDateTime);
       }
    }
 }

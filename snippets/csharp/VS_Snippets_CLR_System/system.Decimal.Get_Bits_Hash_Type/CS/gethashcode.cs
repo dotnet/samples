@@ -1,5 +1,5 @@
 ﻿//<Snippet1>
-// Example of the decimal.GetHashCode method. 
+// Example of the decimal.GetHashCode method.
 using System;
 
 class DecimalGetHashCodeDemo
@@ -9,7 +9,7 @@ class DecimalGetHashCodeDemo
     {
         int hashCode = Argument.GetHashCode( );
 
-        Console.WriteLine( "{0,31}{1,14}  0x{1:X8}", 
+        Console.WriteLine( "{0,31}{1,14}  0x{1:X8}",
             Argument, hashCode );
     }
 

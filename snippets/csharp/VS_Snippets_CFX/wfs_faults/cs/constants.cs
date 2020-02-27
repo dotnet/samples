@@ -14,6 +14,6 @@ namespace Microsoft.Samples.Faults.FaultService
         public const string ServiceAddress = "http://localhost:8080/Service";
         public static readonly Binding Binding = new BasicHttpBinding();
         public static readonly XName POContractName = XName.Get("IPurchaseOrder", "http://Microsoft.ServiceModel.Samples");
-        public const string SubmitPOName = "SubmitPO";        
+        public const string SubmitPOName = "SubmitPO";
     }
 }

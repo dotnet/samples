@@ -1,9 +1,9 @@
 ﻿using System;
 
-public class Class1 
+public class Class1
 {
-   private static DateTimeOffset dto; 
- 
+   private static DateTimeOffset dto;
+
    public Class1()
    {
       dto = DateTimeOffset.Now;
@@ -18,9 +18,9 @@ public class Class1
    {
       int retVal;
       DateTime now = DateTime.Now;
-      retVal = Comparison(now, 
+      retVal = Comparison(now,
          new DateTimeOffset(now.Year, now.Month, now.Day, now.Hour, now.Minute, now.Second, new TimeSpan(-4, 0, 0)));
-      Class1 thisInst = new Class1();         
+      Class1 thisInst = new Class1();
       Console.WriteLine(retVal);
       Console.WriteLine(thisInst.Equality(DateTimeOffset.Now));
       Console.WriteLine(thisInst.Equality2(dto));
@@ -35,18 +35,18 @@ public class Class1
       // </Snippet1>
    }
 
-   private bool Equality(DateTimeOffset other) 
+   private bool Equality(DateTimeOffset other)
    {
       // <Snippet2>
       return this.UtcDateTime == other.UtcDateTime;
       // </Snippet2>
    }
-   
+
    private bool Equality2(object obj)
    {
       // <Snippet3>
       return this.UtcDateTime == ((DateTimeOffset) obj).UtcDateTime;
-      // </Snippet3>   
+      // </Snippet3>
    }
 
    private bool Equality3()
@@ -55,7 +55,7 @@ public class Class1
       DateTimeOffset second = DateTimeOffset.Now;
       // <Snippet4>
       return first.UtcDateTime == second.UtcDateTime;
-      // </Snippet4>   
+      // </Snippet4>
    }
 
    private bool GreaterThan()
@@ -64,18 +64,18 @@ public class Class1
       DateTimeOffset left = DateTimeOffset.Now;
       // <Snippet5>
       return left.UtcDateTime > right.UtcDateTime;
-      // </Snippet5>   
+      // </Snippet5>
       // <Snippet6>
       return left.UtcDateTime >= right.UtcDateTime;
-      // </Snippet6>   
+      // </Snippet6>
       // <Snippet7>
       return left.UtcDateTime != right.UtcDateTime;
-      // </Snippet7>   
+      // </Snippet7>
       // <Snippet8>
       return left.UtcDateTime < right.UtcDateTime;
-      // </Snippet8>   
+      // </Snippet8>
       // <Snippet9>
       return left.UtcDateTime <= right.UtcDateTime;
-      // </Snippet9>   
+      // </Snippet9>
    }
 }

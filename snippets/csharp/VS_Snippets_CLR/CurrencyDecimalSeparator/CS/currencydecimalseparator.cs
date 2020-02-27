@@ -22,11 +22,11 @@ class NumberFormatInfoSample {
 }
 
 
-/* 
+/*
 This code produces the following output.
 
 $123,456,789.00
 $123,456,789 00
 */
-   
+
 // </snippet1>

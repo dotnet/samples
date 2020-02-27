@@ -4,10 +4,10 @@ using System.Resources;
 
 public class WriteResources {
    public static void Main(string[] args) {
-      
+
       // Creates a resource writer.
       IResourceWriter writer = new ResourceWriter("myResources.resources");
-    
+
       // Adds resources to the resource writer.
       writer.AddResource("String 1", "First String");
 

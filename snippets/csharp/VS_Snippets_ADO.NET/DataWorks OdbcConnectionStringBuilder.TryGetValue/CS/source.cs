@@ -7,7 +7,7 @@ class Program
 {
     static void Main()
     {
-        OdbcConnectionStringBuilder builder = 
+        OdbcConnectionStringBuilder builder =
             new OdbcConnectionStringBuilder();
         builder.ConnectionString = GetConnectionString();
 
@@ -30,8 +30,8 @@ class Program
     private static string GetConnectionString()
     {
         // To avoid storing the connection string in your code,
-        // you can retrieve it from a configuration file using the 
-        // System.Configuration.ConfigurationSettings.AppSettings property. 
+        // you can retrieve it from a configuration file using the
+        // System.Configuration.ConfigurationSettings.AppSettings property.
         return "Driver={SQL Server};Server=(local);" +
             "Database=AdventureWorks;Trusted_Connection=yes;";
     }
@@ -44,7 +44,7 @@ class Program
         // it does not handle passing in a null (Nothing in Visual Basic)
         // key. This example traps for that particular error, but
         // throws any other unknown exceptions back out to the
-        // caller. 
+        // caller.
         try
         {
             if (builder.TryGetValue(key, out value))

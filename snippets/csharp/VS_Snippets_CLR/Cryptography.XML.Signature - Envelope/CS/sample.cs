@@ -1,7 +1,7 @@
 ﻿//<SNIPPET1>
 //
 // This example signs an XML file using an
-// envelope signature. It then verifies the 
+// envelope signature. It then verifies the
 // signed XML.
 //
 using System;
@@ -21,7 +21,7 @@ public class SignVerifyEnvelope
        try
        {
 
-           // Sign an XML file and save the signature to a 
+           // Sign an XML file and save the signature to a
            // new file.
            SignXmlFile("Test.xml", "SignedExample.xml", Key);
            Console.WriteLine("XML file signed.");
@@ -31,7 +31,7 @@ public class SignVerifyEnvelope
 
            bool result = VerifyXmlFile("SignedExample.xml");
 
-           // Display the results of the signature verification to 
+           // Display the results of the signature verification to
            // the console.
            if (result)
            {
@@ -48,7 +48,7 @@ public class SignVerifyEnvelope
        }
        finally
        {
-           // Clear resources associated with the 
+           // Clear resources associated with the
            // RSACryptoServiceProvider.
            Key.Clear();
        }
@@ -57,7 +57,7 @@ public class SignVerifyEnvelope
     // Sign an XML file and save the signature in a new file.
     public static void SignXmlFile(string FileName, string SignedFileName, RSA Key)
     {
-        // Check the arguments.  
+        // Check the arguments.
         if (FileName == null)
             throw new ArgumentNullException("FileName");
         if (SignedFileName == null)
@@ -77,13 +77,13 @@ public class SignVerifyEnvelope
         // Create a SignedXml object.
         SignedXml signedXml = new SignedXml(doc);
 
-        // Add the key to the SignedXml document. 
+        // Add the key to the SignedXml document.
         signedXml.SigningKey = Key;
 
         // Get the signature object from the SignedXml object.
         Signature XMLSignature = signedXml.Signature;
 
-        // Create a reference to be signed.  Pass "" 
+        // Create a reference to be signed.  Pass ""
         // to specify that all of the current XML
         // document should be signed.
         Reference reference = new Reference("");
@@ -126,7 +126,7 @@ public class SignVerifyEnvelope
     // Verify the signature of an XML file and return the result.
     public static Boolean VerifyXmlFile(String Name)
     {
-        // Check the arguments.  
+        // Check the arguments.
         if (Name == null)
             throw new ArgumentNullException("Name");
 
@@ -136,7 +136,7 @@ public class SignVerifyEnvelope
         // Format using white spaces.
         xmlDocument.PreserveWhitespace = true;
 
-        // Load the passed XML file into the document. 
+        // Load the passed XML file into the document.
         xmlDocument.Load(Name);
 
         // Create a new SignedXml object and pass it

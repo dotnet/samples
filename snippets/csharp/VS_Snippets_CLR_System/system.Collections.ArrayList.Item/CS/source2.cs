@@ -20,10 +20,10 @@ public class ScrambleList : ArrayList
             Console.Write("{0}, ", value);
         }
         Console.WriteLine("<end>\n\nScrambled:\n");
-        
+
         // Scramble the order of the items in the list.
         integerList.Scramble();
-        
+
         foreach (int value in integerList)
         {
             Console.Write("{0}, ", value);

@@ -33,12 +33,12 @@ namespace ConBuilderConnectionStringCS
             builder.ConnectionString =
                 "Data Source=(local);Initial Catalog=AdventureWorks;"
                 + "Integrated Security=SSPI";
-            // The DbConnectionStringBuilder class has parsed the contents, 
+            // The DbConnectionStringBuilder class has parsed the contents,
             // so you can work with any individual key/value pair.
             builder["Data Source"] = ".";
             Console.WriteLine(builder.ConnectionString);
             Console.WriteLine();
-            // Because the DbConnectionStringBuilder class doesn't 
+            // Because the DbConnectionStringBuilder class doesn't
             // validate its key/value pairs, you can use this class
             // to store any semicolon-delimited list. The following
             // snippet places an arbitrary string into the ConnectionString

@@ -6,11 +6,11 @@ using System.Xml;
 public class Sample
 {
   public static void Main(){
-  
+
     XmlDocument doc = new XmlDocument();
     doc.LoadXml("<book genre='novel' ISBN='1-861001-57-5'>" +
                 "<title>Pride And Prejudice</title>" +
-                "</book>");      
+                "</book>");
 
     //Create an attribute collection.
     XmlAttributeCollection attrColl = doc.DocumentElement.Attributes;
@@ -25,7 +25,7 @@ public class Sample
     Console.WriteLine("Display all the attributes in the array..");
     foreach (XmlAttribute attr in array){
       Console.WriteLine("{0} = {1}",attr.Name,attr.Value);
-    } 
+    }
   }
 }
 // </Snippet1>

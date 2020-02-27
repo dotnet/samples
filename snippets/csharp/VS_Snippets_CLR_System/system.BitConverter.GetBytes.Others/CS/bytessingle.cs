@@ -5,23 +5,23 @@ using System;
 class GetBytesSingleDemo
 {
     const string formatter = "{0,16:E7}{1,20}";
- 
+
     // Convert a float argument to a byte array and display it.
     public static void GetBytesSingle( float argument )
     {
         byte[ ] byteArray = BitConverter.GetBytes( argument );
-        Console.WriteLine( formatter, argument, 
+        Console.WriteLine( formatter, argument,
             BitConverter.ToString( byteArray ) );
     }
-       
+
     public static void Main( )
     {
-        Console.WriteLine( 
+        Console.WriteLine(
             "This example of the BitConverter.GetBytes( float ) " +
             "\nmethod generates the following output.\n" );
         Console.WriteLine( formatter, "float", "byte array" );
         Console.WriteLine( formatter, "-----", "----------" );
-          
+
         // Convert float values and display the results.
         GetBytesSingle( 0.0F );
         GetBytesSingle( 1.0F );

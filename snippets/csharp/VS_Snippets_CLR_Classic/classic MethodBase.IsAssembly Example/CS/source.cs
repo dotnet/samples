@@ -11,16 +11,16 @@ public class Example
 
     public static void Main()
     {
-        Console.WriteLine("\n{0,-30}{1,-18}{2}", "", "IsAssembly", "IsFamilyOrAssembly"); 
-        Console.WriteLine("{0,-21}{1,-18}{2,-18}{3}\n", 
+        Console.WriteLine("\n{0,-30}{1,-18}{2}", "", "IsAssembly", "IsFamilyOrAssembly");
+        Console.WriteLine("{0,-21}{1,-18}{2,-18}{3}\n",
             "", "IsPublic", "IsFamily", "IsFamilyAndAssembly");
-   
+
         foreach (MethodBase m in typeof(Example).GetMethods(
             BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public))
         {
             if (m.Name.Substring(0, 1) == "m")
             {
-                Console.WriteLine("{0,-21}{1,-9}{2,-9}{3,-9}{4,-9}{5,-9}", 
+                Console.WriteLine("{0,-21}{1,-9}{2,-9}{3,-9}{4,-9}{5,-9}",
                     m.Name,
                     m.IsPublic,
                     m.IsAssembly,

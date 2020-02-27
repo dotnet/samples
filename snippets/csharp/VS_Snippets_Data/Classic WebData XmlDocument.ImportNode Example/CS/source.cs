@@ -21,8 +21,8 @@ public class Sample
 
     //Import the last book node from doc2 into the original document.
     XmlNode newBook = doc.ImportNode(doc2.DocumentElement.LastChild, true);
-    doc.DocumentElement.AppendChild(newBook); 
-    
+    doc.DocumentElement.AppendChild(newBook);
+
     Console.WriteLine("Display the modified XML...");
     doc.Save(Console.Out);
   }

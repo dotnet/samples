@@ -30,7 +30,7 @@ namespace DesignLibrary
    {
       public ClassThatHandlesEvent(ClassThatRaisesEvent eventRaiser)
       {
-         eventRaiser.SomeEvent += 
+         eventRaiser.SomeEvent +=
             new EventHandler<CustomEventArgs>(HandleEvent);
       }
 
@@ -45,7 +45,7 @@ namespace DesignLibrary
       static void Main()
       {
          ClassThatRaisesEvent eventRaiser = new ClassThatRaisesEvent();
-         ClassThatHandlesEvent eventHandler = 
+         ClassThatHandlesEvent eventHandler =
             new ClassThatHandlesEvent(eventRaiser);
 
          eventRaiser.SimulateEvent();

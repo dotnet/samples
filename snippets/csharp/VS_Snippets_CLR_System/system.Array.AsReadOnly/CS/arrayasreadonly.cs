@@ -5,19 +5,19 @@ using System;
 using System.Collections.Generic;
 
 public class SamplesArray  {
- 
+
    public static void Main()  {
- 
+
       // Create and initialize a new string array.
       String[] myArr = { "The", "quick", "brown", "fox" };
- 
+
       // Display the values of the array.
       Console.WriteLine( "The string array initially contains the following values:" );
       PrintIndexAndValues( myArr );
 
       // Create a read-only IList wrapper around the array.
       IList<String> myList = Array.AsReadOnly( myArr );
-      
+
       // Display the values of the read-only IList.
       Console.WriteLine( "The read-only IList contains the following values:" );
       PrintIndexAndValues( myList );
@@ -42,7 +42,7 @@ public class SamplesArray  {
       Console.WriteLine( "After changing the third element, the read-only IList contains the following values:" );
       PrintIndexAndValues( myList );
    }
- 
+
    public static void PrintIndexAndValues( String[] myArr )  {
       for ( int i = 0; i < myArr.Length; i++ )  {
          Console.WriteLine( "   [{0}] : {1}", i, myArr[i] );
@@ -59,7 +59,7 @@ public class SamplesArray  {
 }
 
 
-/* 
+/*
 This code produces the following output.
 
 The string array initially contains the following values:

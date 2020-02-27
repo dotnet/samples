@@ -5,9 +5,9 @@ using System;
 using System.Collections;
 
 public class SamplesArrayList  {
- 
+
    public static void Main()  {
- 
+
       // Creates and initializes a new ArrayList.
       ArrayList myAL = new ArrayList();
       myAL.Add( "The" );
@@ -19,11 +19,11 @@ public class SamplesArrayList  {
       myAL.Add( "the" );
       myAL.Add( "lazy" );
       myAL.Add( "dog" );
- 
+
       // Displays the values of the ArrayList.
       Console.WriteLine( "The ArrayList contains the following values:" );
       PrintIndexAndValues( myAL );
- 
+
       // Copies the elements of the ArrayList to a string array.
       String[] myArr = (String[]) myAL.ToArray( typeof( string ) );
 
@@ -31,7 +31,7 @@ public class SamplesArrayList  {
       Console.WriteLine( "The string array contains the following values:" );
       PrintIndexAndValues( myArr );
    }
- 
+
    public static void PrintIndexAndValues( ArrayList myList )  {
       int i = 0;
       foreach ( Object o in myList )
@@ -47,7 +47,7 @@ public class SamplesArrayList  {
 }
 
 
-/* 
+/*
 This code produces the following output.
 
 The ArrayList contains the following values:

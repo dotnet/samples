@@ -9,69 +9,69 @@ public struct HexString : IConvertible
 {
    private SignBit signBit;
    private string hexString;
-   
+
    public SignBit Sign
    {
       set { signBit = value; }
-      get { return signBit; } 
+      get { return signBit; }
    }
-   
+
    public string Value
    {
       set {
          if (value.Trim().Length > 8)
             throw new ArgumentException("The string representation of a 32-bit integer cannot have more than 8 characters.");
          else if (! Regex.IsMatch(value, "([0-9,A-F]){1,8}", RegexOptions.IgnoreCase))
-            throw new ArgumentException("The hexadecimal representation of a 32-bit integer contains invalid characters.");             
+            throw new ArgumentException("The hexadecimal representation of a 32-bit integer contains invalid characters.");
          else
             hexString = value;
       }
       get { return hexString; }
    }
-   
+
    // IConvertible implementations.
    public TypeCode GetTypeCode()
    {
       return TypeCode.Object;
    }
-   
+
    public bool ToBoolean(IFormatProvider provider)
    {
       return signBit != SignBit.Zero;
-   } 
-   
+   }
+
    public byte ToByte(IFormatProvider provider)
    {
       if (signBit == SignBit.Negative)
-         throw new OverflowException(String.Format("{0} is out of range of the Byte type.", Convert.ToInt32(hexString, 16))); 
+         throw new OverflowException(String.Format("{0} is out of range of the Byte type.", Convert.ToInt32(hexString, 16)));
       else
          try {
             return Byte.Parse(hexString, NumberStyles.HexNumber);
          }
          catch (OverflowException e) {
             throw new OverflowException(String.Format("{0} is out of range of the Byte type.", Convert.ToUInt32(hexString, 16)), e);
-         }   
+         }
    }
-   
+
    public char ToChar(IFormatProvider provider)
    {
-      if (signBit == SignBit.Negative) 
+      if (signBit == SignBit.Negative)
          throw new OverflowException(String.Format("{0} is out of range of the Char type.", Convert.ToInt32(hexString, 16)));
-      
+
       try {
          ushort codePoint = UInt16.Parse(this.hexString, NumberStyles.HexNumber);
          return Convert.ToChar(codePoint);
       }
       catch (OverflowException e) {
          throw new OverflowException(String.Format("{0} is out of range of the Char type.", Convert.ToUInt32(hexString, 16)), e);
-      }      
-   } 
-   
+      }
+   }
+
    public DateTime ToDateTime(IFormatProvider provider)
    {
       throw new InvalidCastException("Hexadecimal to DateTime conversion is not supported.");
    }
-   
+
    public decimal ToDecimal(IFormatProvider provider)
    {
       if (signBit == SignBit.Negative)
@@ -85,15 +85,15 @@ public struct HexString : IConvertible
          return Convert.ToDecimal(hexValue);
       }
    }
-   
+
    public double ToDouble(IFormatProvider provider)
    {
       if (signBit == SignBit.Negative)
          return Convert.ToDouble(Int32.Parse(hexString, NumberStyles.HexNumber));
       else
          return Convert.ToDouble(UInt32.Parse(hexString, NumberStyles.HexNumber));
-   }   
-   
+   }
+
    public short ToInt16(IFormatProvider provider)
    {
       if (signBit == SignBit.Negative)
@@ -111,7 +111,7 @@ public struct HexString : IConvertible
             throw new OverflowException(String.Format("{0} is out of range of the Int16 type.", Convert.ToUInt32(hexString, 16)), e);
          }
    }
-   
+
    public int ToInt32(IFormatProvider provider)
    {
       if (signBit == SignBit.Negative)
@@ -122,25 +122,25 @@ public struct HexString : IConvertible
          }
          catch (OverflowException e) {
             throw new OverflowException(String.Format("{0} is out of range of the Int32 type.", Convert.ToUInt32(hexString, 16)), e);
-         }   
+         }
    }
-   
-   public long ToInt64(IFormatProvider provider) 
+
+   public long ToInt64(IFormatProvider provider)
    {
       if (signBit == SignBit.Negative)
          return Convert.ToInt64(Int32.Parse(hexString, NumberStyles.HexNumber));
       else
          return Int64.Parse(hexString, NumberStyles.HexNumber);
    }
-   
-   public sbyte ToSByte(IFormatProvider provider) 
+
+   public sbyte ToSByte(IFormatProvider provider)
    {
       if (signBit == SignBit.Negative)
          try {
             return Convert.ToSByte(Int32.Parse(hexString, NumberStyles.HexNumber));
          }
          catch (OverflowException e) {
-            throw new OverflowException(String.Format("{0} is outside the range of the SByte type.", 
+            throw new OverflowException(String.Format("{0} is outside the range of the SByte type.",
                                                       Int32.Parse(hexString, NumberStyles.HexNumber), e));
          }
       else
@@ -148,9 +148,9 @@ public struct HexString : IConvertible
             return Convert.ToSByte(UInt32.Parse(hexString, NumberStyles.HexNumber));
          }
          catch (OverflowException e) {
-            throw new OverflowException(String.Format("{0} is outside the range of the SByte type.", 
+            throw new OverflowException(String.Format("{0} is outside the range of the SByte type.",
                                                     UInt32.Parse(hexString, NumberStyles.HexNumber)), e);
-         }   
+         }
    }
 
    public float ToSingle(IFormatProvider provider)
@@ -165,12 +165,12 @@ public struct HexString : IConvertible
    {
       return "0x" + this.hexString;
    }
-   
+
    public object ToType(Type conversionType, IFormatProvider provider)
    {
       switch (Type.GetTypeCode(conversionType))
       {
-         case TypeCode.Boolean: 
+         case TypeCode.Boolean:
             return this.ToBoolean(null);
          case TypeCode.Byte:
             return this.ToByte(null);
@@ -204,13 +204,13 @@ public struct HexString : IConvertible
          case TypeCode.UInt32:
             return this.ToUInt32(null);
          case TypeCode.UInt64:
-            return this.ToUInt64(null);   
+            return this.ToUInt64(null);
          default:
-            throw new InvalidCastException(String.Format("Conversion to {0} is not supported.", conversionType.Name));   
+            throw new InvalidCastException(String.Format("Conversion to {0} is not supported.", conversionType.Name));
       }
    }
-   
-   public ushort ToUInt16(IFormatProvider provider) 
+
+   public ushort ToUInt16(IFormatProvider provider)
    {
       if (signBit == SignBit.Negative)
          throw new OverflowException(String.Format("{0} is outside the range of the UInt16 type.",
@@ -218,25 +218,25 @@ public struct HexString : IConvertible
       else
          try {
             return Convert.ToUInt16(UInt32.Parse(hexString, NumberStyles.HexNumber));
-         }   
+         }
          catch (OverflowException e) {
             throw new OverflowException(String.Format("{0} is out of range of the UInt16 type.", Convert.ToUInt32(hexString, 16)), e);
-         }            
+         }
    }
 
    public uint ToUInt32(IFormatProvider provider)
    {
       if (signBit == SignBit.Negative)
-         throw new OverflowException(String.Format("{0} is outside the range of the UInt32 type.", 
+         throw new OverflowException(String.Format("{0} is outside the range of the UInt32 type.",
                                                    Int32.Parse(hexString, NumberStyles.HexNumber)));
       else
          return Convert.ToUInt32(hexString, 16);
    }
-   
-   public ulong ToUInt64(IFormatProvider provider) 
+
+   public ulong ToUInt64(IFormatProvider provider)
    {
       if (signBit == SignBit.Negative)
-         throw new OverflowException(String.Format("{0} is outside the range of the UInt64 type.", 
+         throw new OverflowException(String.Format("{0} is outside the range of the UInt64 type.",
                                                    Int32.Parse(hexString, NumberStyles.HexNumber)));
       else
          return Convert.ToUInt64(hexString, 16);
@@ -251,20 +251,20 @@ public class Example
    {
       uint positiveValue = 320000000;
       int negativeValue = -1;
-      
+
       HexString positiveString = new HexString();
       positiveString.Sign = (SignBit) Math.Sign(positiveValue);
       positiveString.Value = positiveValue.ToString("X4");
-      
+
       HexString negativeString = new HexString();
       negativeString.Sign = (SignBit) Math.Sign(negativeValue);
       negativeString.Value = negativeValue.ToString("X4");
-      
+
       try {
          Console.WriteLine("0x{0} converts to {1}.", positiveString.Value, Convert.ToUInt32(positiveString));
       }
       catch (OverflowException) {
-         Console.WriteLine("{0} is outside the range of the UInt32 type.", 
+         Console.WriteLine("{0} is outside the range of the UInt32 type.",
                            Int32.Parse(positiveString.Value, NumberStyles.HexNumber));
       }
 
@@ -274,7 +274,7 @@ public class Example
       catch (OverflowException) {
          Console.WriteLine("{0} is outside the range of the UInt32 type.",
                            Int32.Parse(negativeString.Value, NumberStyles.HexNumber));
-      }   
+      }
    }
 }
 // The example dosplays the following output:

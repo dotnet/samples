@@ -52,7 +52,7 @@ public class SamplesHybridDictionary  {
       Console.WriteLine();
    }
 
-   // Uses the enumerator. 
+   // Uses the enumerator.
    // NOTE: The foreach statement is the preferred way of enumerating the contents of a collection.
    public static void PrintKeysAndValues2( IDictionary myCol )  {
       IDictionaryEnumerator myEnumerator = myCol.GetEnumerator();

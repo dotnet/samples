@@ -26,8 +26,8 @@ class Program
         // 2. Create a copy of table1, and modify its data (modifiedTable).
         // 3. Modify data in table1.
         // 4. Make a copy of table1 (table1Copy).
-        // 5. Merge the data from modifiedTable into table1 and table1Copy, 
-        //    showing the difference between setting the preserveChanges 
+        // 5. Merge the data from modifiedTable into table1 and table1Copy,
+        //    showing the difference between setting the preserveChanges
         //    parameter to true and false.
 
         // Create a new DataTable.
@@ -57,12 +57,12 @@ class Program
         table1.AcceptChanges();
         PrintValues(table1, "Original values");
 
-        // Using the same schema as the original table, 
+        // Using the same schema as the original table,
         // modify the data for later merge.
         DataTable modifiedTable = table1.Copy();
         foreach (DataRow rowModified in modifiedTable.Rows)
         {
-            rowModified["item"] = rowModified["item"].ToString() 
+            rowModified["item"] = rowModified["item"].ToString()
                 + " modified";
         }
         modifiedTable.AcceptChanges();

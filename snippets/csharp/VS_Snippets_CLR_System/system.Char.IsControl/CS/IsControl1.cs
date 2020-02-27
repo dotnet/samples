@@ -6,7 +6,7 @@ public class ControlChars
    public static void Main()
    {
       int charsWritten = 0;
-      
+
       for (int ctr = 0x00; ctr <= 0xFFFF; ctr++)
       {
          char ch = Convert.ToChar(ctr);
@@ -16,8 +16,8 @@ public class ControlChars
             charsWritten++;
             if (charsWritten % 6 == 0)
                Console.WriteLine();
-         }     
-      }  
+         }
+      }
    }
 }
 // The example displays the following output to the console:

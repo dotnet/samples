@@ -6,14 +6,14 @@ public class Anonymous
    {
       // <Snippet3>
       Func<string, string> convert = delegate(string s)
-         { return s.ToUpper();}; 
-         
+         { return s.ToUpper();};
+
       string name = "Dakota";
-      Console.WriteLine(convert(name));   
+      Console.WriteLine(convert(name));
 
      // This code example produces the following output:
      //
-     //    DAKOTA      
+     //    DAKOTA
      // </Snippet3>
    }
 }

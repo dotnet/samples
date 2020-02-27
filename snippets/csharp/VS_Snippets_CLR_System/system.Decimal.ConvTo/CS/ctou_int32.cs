@@ -1,5 +1,5 @@
 ﻿//<Snippet2>
-// Example of the explicit conversions from decimal to int and 
+// Example of the explicit conversions from decimal to int and
 // decimal to uint.
 using System;
 
@@ -11,7 +11,7 @@ class DecimalToU_Int32Demo
     public static string GetExceptionType( Exception ex )
     {
         string exceptionType = ex.GetType( ).ToString( );
-        return exceptionType.Substring( 
+        return exceptionType.Substring(
             exceptionType.LastIndexOf( '.' ) + 1 );
     }
 
@@ -41,20 +41,20 @@ class DecimalToU_Int32Demo
             UInt32Value = GetExceptionType( ex );
         }
 
-        Console.WriteLine( formatter, argument, 
+        Console.WriteLine( formatter, argument,
             Int32Value, UInt32Value );
     }
 
     public static void Main( )
     {
-        Console.WriteLine( 
+        Console.WriteLine(
             "This example of the explicit conversions from decimal " +
             "to int \nand decimal to uint generates the following " +
             "output. It displays \nseveral converted decimal " +
             "values.\n" );
-        Console.WriteLine( formatter, "decimal argument", 
+        Console.WriteLine( formatter, "decimal argument",
             "int/exception", "uint/exception" );
-        Console.WriteLine( formatter, "----------------", 
+        Console.WriteLine( formatter, "----------------",
             "-------------", "--------------" );
 
         // Convert decimal values and display the results.

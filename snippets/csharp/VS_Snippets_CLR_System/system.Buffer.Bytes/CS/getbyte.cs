@@ -25,16 +25,16 @@ class GetByteDemo
         byte value = Buffer.GetByte( arr, index );
 
         // Display the array name, index, and byte to be viewed.
-        Console.WriteLine( formatter, name, index, value, 
+        Console.WriteLine( formatter, name, index, value,
             String.Format( "0x{0:X2}", value ) );
     }
 
     public static void Main( )
     {
         // These are the arrays to be viewed with GetByte.
-        long[ ] longs = 
+        long[ ] longs =
             { 333333333333333333, 666666666666666666, 999999999999999999 };
-        int[ ]  ints  = 
+        int[ ]  ints  =
             { 111111111, 222222222, 333333333, 444444444, 555555555 };
 
         Console.WriteLine( "This example of the " +
@@ -49,7 +49,7 @@ class GetByteDemo
         Console.WriteLine( );
 
         Console.WriteLine( formatter, "Array", "index", "value", "" );
-        Console.WriteLine( formatter, "-----", "-----", "-----", 
+        Console.WriteLine( formatter, "-----", "-----", "-----",
             "----" );
 
         // Display the Length and ByteLength for each array.

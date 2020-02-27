@@ -38,7 +38,7 @@ class PerfCounterCatGetCountMod
                 pcc = new PerformanceCounterCategory(categoryName);
             }
 
-            // Get the counters for this instance or a single instance 
+            // Get the counters for this instance or a single instance
             // of the selected category.
             if (instanceName.Length>0)
             {
@@ -51,9 +51,9 @@ class PerfCounterCatGetCountMod
         }
         catch(Exception ex)
         {
-            Console.WriteLine("Unable to get counter information for " + 
-                (instanceName.Length>0? "instance \"{2}\" in ": "single-instance ") + 
-                "category \"{0}\" on " + (machineName.Length>0? "computer \"{1}\":": "this computer:"), 
+            Console.WriteLine("Unable to get counter information for " +
+                (instanceName.Length>0? "instance \"{2}\" in ": "single-instance ") +
+                "category \"{0}\" on " + (machineName.Length>0? "computer \"{1}\":": "this computer:"),
                 categoryName, machineName, instanceName);
             Console.WriteLine(ex.Message);
             return;
@@ -62,9 +62,9 @@ class PerfCounterCatGetCountMod
         // Display the counter names if GetCounters was successful.
         if (counters!=null)
         {
-            Console.WriteLine("These counters exist in " + 
-                (instanceName.Length>0? "instance \"{1}\" of": "single instance") + 
-                " category {0} on " + (machineName.Length>0? "computer \"{2}\":": "this computer:"), 
+            Console.WriteLine("These counters exist in " +
+                (instanceName.Length>0? "instance \"{1}\" of": "single instance") +
+                " category {0} on " + (machineName.Length>0? "computer \"{2}\":": "this computer:"),
                 categoryName, instanceName, machineName);
 
             // Display a numbered list of the counter names.

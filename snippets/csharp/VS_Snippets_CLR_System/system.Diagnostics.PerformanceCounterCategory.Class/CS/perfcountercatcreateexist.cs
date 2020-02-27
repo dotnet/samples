@@ -78,7 +78,7 @@ class PerfCounterCatCreateExistMod
         }
         else
         {
-            // Handle the exception that is thrown if the computer 
+            // Handle the exception that is thrown if the computer
             // cannot be found.
             try
             {
@@ -137,14 +137,14 @@ class PerfCounterCatCreateExistMod
 
             // Tell the user whether the counter exists.
             Console.WriteLine("Counter \"{0}\" "+(objectExists? "exists": "does not exist")+
-                " in category \"{1}\" on "+(machineName.Length>0? "computer \"{2}\".": "this computer."), 
+                " in category \"{1}\" on "+(machineName.Length>0? "computer \"{2}\".": "this computer."),
                 counterName, categoryName, machineName);
             //</Snippet20>
 
             // If the counter does not exist, consider creating it.
             if (!objectExists)
 
-                // If this is a remote computer, 
+                // If this is a remote computer,
                 // exit because the category cannot be created.
             {
                 if (machineName.Length>0)
@@ -196,7 +196,7 @@ class PerfCounterCatCreateExistMod
 
             // Tell the user whether the instance exists.
             Console.WriteLine("Instance \"{0}\" "+(objectExists? "exists": "does not exist")+
-                " in category \"{1}\" on " + (machineName.Length>0? "computer \"{2}\".": "this computer."), 
+                " in category \"{1}\" on " + (machineName.Length>0? "computer \"{2}\".": "this computer."),
                 instanceName, categoryName, machineName);
             //<Snippet25>
         }

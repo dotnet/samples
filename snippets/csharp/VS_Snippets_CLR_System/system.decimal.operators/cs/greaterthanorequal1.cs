@@ -7,12 +7,12 @@ public class Example
    {
       Decimal number1 = 16354.0699m;
       Decimal number2 = 16354.0695m;
-      Console.WriteLine("{0} >= {1}: {2}", number1, 
+      Console.WriteLine("{0} >= {1}: {2}", number1,
                         number2, number1 >= number2);
 
       number1 = Decimal.Round(number1, 2);
       number2 = Decimal.Round(number2, 2);
-      Console.WriteLine("{0} >= {1}: {2}", number1, 
+      Console.WriteLine("{0} >= {1}: {2}", number1,
                         number2, number1 >= number2);
    }
 }

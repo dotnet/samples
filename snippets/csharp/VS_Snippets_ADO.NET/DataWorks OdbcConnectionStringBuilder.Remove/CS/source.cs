@@ -21,8 +21,8 @@ class Program
         // Try to remove a nonexistent item.
         TryRemove(builder, "User ID");
 
-        // Try to remove an existing item, 
-        // demonstrating that the search is not 
+        // Try to remove an existing item,
+        // demonstrating that the search is not
         // case sensitive.
         TryRemove(builder, "DATABASE");
 
@@ -30,7 +30,7 @@ class Program
         Console.ReadLine();
     }
 
-    static void TryRemove(OdbcConnectionStringBuilder builder, 
+    static void TryRemove(OdbcConnectionStringBuilder builder,
         string itemToRemove)
     {
 

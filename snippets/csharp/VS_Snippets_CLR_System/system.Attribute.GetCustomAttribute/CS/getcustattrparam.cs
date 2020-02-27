@@ -3,9 +3,9 @@
 using System;
 using System.Reflection;
 
-namespace NDP_UE_CS 
+namespace NDP_UE_CS
 {
-//<Snippet2> 
+//<Snippet2>
     // Define a custom parameter attribute that takes a single message argument.
     [AttributeUsage( AttributeTargets.Parameter )]
     public class ArgumentUsageAttribute : Attribute
@@ -28,7 +28,7 @@ namespace NDP_UE_CS
     }
 //</Snippet2>
 
-    public class BaseClass 
+    public class BaseClass
     {
         // Assign an ArgumentUsage attribute to the strArray parameter.
         // Assign a ParamArray attribute to strList using the params keyword.
@@ -50,44 +50,44 @@ namespace NDP_UE_CS
         { }
     }
 
-    class CustomParamDemo 
+    class CustomParamDemo
     {
-        static void Main( ) 
+        static void Main( )
         {
-            Console.WriteLine( 
+            Console.WriteLine(
                 "This example of Attribute.GetCustomAttribute( Param" +
                 "eterInfo, Type )\ngenerates the following output." );
 
-            // Get the class type, and then get the MethodInfo object 
+            // Get the class type, and then get the MethodInfo object
             // for TestMethod to access its metadata.
             Type clsType = typeof( DerivedClass );
             MethodInfo mInfo = clsType.GetMethod("TestMethod");
 
             // Iterate through the ParameterInfo array for the method parameters.
             ParameterInfo[] pInfoArray = mInfo.GetParameters();
-            if (pInfoArray != null) 
+            if (pInfoArray != null)
             {
                 foreach( ParameterInfo paramInfo in pInfoArray )
                 {
                     // See if the ParamArray attribute is defined.
-                    bool isDef = Attribute.IsDefined( 
+                    bool isDef = Attribute.IsDefined(
                         paramInfo, typeof(ParamArrayAttribute));
 
                     if( isDef )
-                        Console.WriteLine( 
+                        Console.WriteLine(
                             "\nThe ParamArray attribute is defined " +
                             "for \nparameter {0} of method {1}.",
                             paramInfo.Name, mInfo.Name);
 
-                    // See if ParamUsageAttribute is defined.  
+                    // See if ParamUsageAttribute is defined.
                     // If so, display a message.
                     ArgumentUsageAttribute usageAttr = (ArgumentUsageAttribute)
-                        Attribute.GetCustomAttribute( 
+                        Attribute.GetCustomAttribute(
                             paramInfo, typeof(ArgumentUsageAttribute) );
 
                     if( usageAttr != null )
                     {
-                        Console.WriteLine( 
+                        Console.WriteLine(
                             "\nThe ArgumentUsage attribute is defined " +
                             "for \nparameter {0} of method {1}.",
                             paramInfo.Name, mInfo.Name );
@@ -99,7 +99,7 @@ namespace NDP_UE_CS
                 }
             }
             else
-                Console.WriteLine( 
+                Console.WriteLine(
                     "The parameters information could not " +
                     "be retrieved for method {0}.", mInfo.Name);
         }

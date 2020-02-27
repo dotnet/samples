@@ -63,26 +63,26 @@ namespace Microsoft.Samples.WorkflowServicesSamples.EchoWorkflowClient
                            Value = new InArgument<Expense>( (e) => new Meal { Amount = 50, Location = "Redmond", Vendor = "KFC" }),
                            To = new OutArgument<Expense>(mealExpense)
                         },
-                        new WriteLine 
+                        new WriteLine
                         {
                             Text = new InArgument<string>("Hello")
                         },
                         approveExpense,
                         new ReceiveReply
                         {
-                            Request = approveExpense,                            
+                            Request = approveExpense,
                             Content = ReceiveContent.Create(new OutArgument<bool>(result))
                         },
 
                         new If
                         {
                            Condition = new InArgument<bool> (result),
-                           Then =                         
+                           Then =
                                 new WriteLine
                                 {
                                     Text = new InArgument<string>("Expense Approved")
                                 },
-                           Else =                         
+                           Else =
                                 new WriteLine
                                 {
                                     Text = new InArgument<string>("Expense Cannot be Approved")
@@ -97,7 +97,7 @@ namespace Microsoft.Samples.WorkflowServicesSamples.EchoWorkflowClient
         {
             Variable<PurchaseOrder> po = new Variable<PurchaseOrder>
             {
-                Name = "po"                
+                Name = "po"
             };
             Variable<bool> result = new Variable<bool>
             {
@@ -123,26 +123,26 @@ namespace Microsoft.Samples.WorkflowServicesSamples.EchoWorkflowClient
                            Value = new InArgument<PurchaseOrder>( (e) => new PurchaseOrder { RequestedAmount = 500, Description = "New PC" }),
                            To = new OutArgument<PurchaseOrder>(po)
                         },
-                        new WriteLine 
+                        new WriteLine
                         {
                             Text = new InArgument<string>("Hello")
                         },
                         approveExpense,
                         new ReceiveReply
                         {
-                            Request = approveExpense,                            
+                            Request = approveExpense,
                             Content = ReceiveContent.Create(new OutArgument<bool>(result))
                         },
 
                         new If
                         {
                            Condition = new InArgument<bool> (result),
-                           Then =                         
+                           Then =
                                 new WriteLine
                                 {
                                     Text = new InArgument<string>("Purchase order Approved")
                                 },
-                           Else =                         
+                           Else =
                                 new WriteLine
                                 {
                                     Text = new InArgument<string>("Purchase order Cannot be Approved")
@@ -181,26 +181,26 @@ namespace Microsoft.Samples.WorkflowServicesSamples.EchoWorkflowClient
                            Value = new InArgument<VendorRequest>( (e) => new VendorRequest { Name = "Vendor1", requestingDepartment = "HR" }),
                            To = new OutArgument<VendorRequest>(vendor)
                         },
-                        new WriteLine 
+                        new WriteLine
                         {
                             Text = new InArgument<string>("Hello")
                         },
                         approvedVendor,
                         new ReceiveReply
                         {
-                            Request = approvedVendor,                            
+                            Request = approvedVendor,
                             Content = ReceiveContent.Create(new OutArgument<VendorResponse>(result))
                         },
 
                         new If
                         {
                            Condition = new InArgument<bool> (env => result.Get(env).isPreApproved),
-                           Then =                         
+                           Then =
                                 new WriteLine
                                 {
                                     Text = new InArgument<string>("Vendor Approved")
                                 },
-                           Else =                         
+                           Else =
                                 new WriteLine
                                 {
                                     Text = new InArgument<string>("Vendor is not Approved")

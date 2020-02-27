@@ -8,13 +8,13 @@ public class LambdaExpression
    {
       // <Snippet4>
       Func<string, string> convert = s => s.ToUpper();
-         
+
       string name = "Dakota";
-      Console.WriteLine(convert(name));   
+      Console.WriteLine(convert(name));
 
       // This code example produces the following output:
       //
-      //    DAKOTA      
+      //    DAKOTA
       // </Snippet4>
    }
 }

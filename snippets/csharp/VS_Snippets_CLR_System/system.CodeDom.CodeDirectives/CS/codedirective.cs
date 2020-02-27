@@ -55,7 +55,7 @@ namespace System.CodeDom
             s.Close();
 
             CompilerParameters opt = new CompilerParameters(new string[]{
-                                      "System.dll", 
+                                      "System.dll",
                                       "System.Xml.dll",
                                       "System.Windows.Forms.dll",
                                       "System.Data.dll",

@@ -61,7 +61,7 @@ class Program
         view.Sort = "Category";
         PrintTableOrView(view, "Current Values in View");
 
-        DataTable newTable = view.ToTable("UniqueData", true, 
+        DataTable newTable = view.ToTable("UniqueData", true,
             "Category", "QuantityInStock");
         PrintTableOrView(newTable, "Table created from sorted DataView");
         Console.WriteLine("New table name: " + newTable.TableName);

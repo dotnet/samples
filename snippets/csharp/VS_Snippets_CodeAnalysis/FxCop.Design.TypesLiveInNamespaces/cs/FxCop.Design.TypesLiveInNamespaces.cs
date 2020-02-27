@@ -19,5 +19,5 @@ namespace GoodSpace
          return "Test lives in a namespace!";
       }
    }
-}   
+}
 //</Snippet1>

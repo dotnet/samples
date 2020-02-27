@@ -6,7 +6,7 @@ namespace GCGetGenerationWeakExample
     public class MyGCCollectClass
     {
         private const long maxGarbage = 1000;
-      
+
         static void Main()
         {
             // Create a strong reference to an object.
@@ -14,7 +14,7 @@ namespace GCGetGenerationWeakExample
 
             // Put some objects in memory.
             myGCCol.MakeSomeGarbage();
-            
+
             // Get the generation of managed memory where myGCCol is stored.
             Console.WriteLine("The object is in generation: {0}", GC.GetGeneration(myGCCol));
 						
@@ -30,7 +30,7 @@ namespace GCGetGenerationWeakExample
             WeakReference wkref = new WeakReference(myGCCol);
             // Remove the strong reference to myGCCol.
             myGCCol = null;
-            
+
             // Get the generation of managed memory where wkref is stored.
             Console.WriteLine("The WeakReference to the object is in generation: {0}", GC.GetGeneration(wkref));
 			

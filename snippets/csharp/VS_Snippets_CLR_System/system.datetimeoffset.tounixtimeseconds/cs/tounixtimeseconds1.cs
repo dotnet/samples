@@ -39,12 +39,12 @@ public class DateTimeOffset2
    private const long UnixEpochMilliseconds = UnixEpochTicks / TimeSpan.TicksPerMillisecond; // 62,135,596,800,000
 
    private DateTimeOffset dto;
-   
+
    public DateTimeOffset2(DateTimeOffset dto)
    {
       this.dto = dto;
    }
-   
+
    public long ToUnixTimeSeconds() {
             // Truncate sub-second precision before offsetting by the Unix Epoch to avoid
             // the last digit being off by one for dates that result in negative Unix times.

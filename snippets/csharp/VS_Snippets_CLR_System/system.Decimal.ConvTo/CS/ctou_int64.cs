@@ -1,5 +1,5 @@
 ﻿//<Snippet1>
-// Example of the explicit conversions from decimal to long and 
+// Example of the explicit conversions from decimal to long and
 // decimal to ulong.
 using System;
 
@@ -11,7 +11,7 @@ class DecimalToU_Int64Demo
     public static string GetExceptionType( Exception ex )
     {
         string exceptionType = ex.GetType( ).ToString( );
-        return exceptionType.Substring( 
+        return exceptionType.Substring(
             exceptionType.LastIndexOf( '.' ) + 1 );
     }
 
@@ -41,20 +41,20 @@ class DecimalToU_Int64Demo
             UInt64Value = GetExceptionType( ex );
         }
 
-        Console.WriteLine( formatter, argument, 
+        Console.WriteLine( formatter, argument,
             Int64Value, UInt64Value );
     }
 
     public static void Main( )
     {
-        Console.WriteLine( 
+        Console.WriteLine(
             "This example of the explicit conversions from decimal " +
             "to long \nand decimal to ulong generates the following " +
             "output. It displays \nseveral converted decimal " +
             "values.\n" );
-        Console.WriteLine( formatter, "decimal argument", 
+        Console.WriteLine( formatter, "decimal argument",
             "long/exception", "ulong/exception" );
-        Console.WriteLine( formatter, "----------------", 
+        Console.WriteLine( formatter, "----------------",
             "--------------", "---------------" );
 
         // Convert decimal values and display the results.

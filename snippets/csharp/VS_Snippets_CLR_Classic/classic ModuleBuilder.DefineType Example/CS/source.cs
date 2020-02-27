@@ -8,7 +8,7 @@ public class Sample
  {
 // <Snippet1>
  AssemblyName asmname = new AssemblyName();
- asmname.Name = "assemfilename.exe";        
+ asmname.Name = "assemfilename.exe";
  AssemblyBuilder asmbuild = System.Threading.Thread.GetDomain().
              DefineDynamicAssembly(asmname, AssemblyBuilderAccess.RunAndSave);
  ModuleBuilder modbuild = asmbuild.DefineDynamicModule( "modulename",

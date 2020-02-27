@@ -37,7 +37,7 @@ class DirectoryFileCount
             // method defined below.
             ListDirectoriesAndFiles(infos, searchString);
 
-            // Display the results to the console. 
+            // Display the results to the console.
             Console.WriteLine("Directories: {0}", directories);
             Console.WriteLine("Files: {0}", files);
         }

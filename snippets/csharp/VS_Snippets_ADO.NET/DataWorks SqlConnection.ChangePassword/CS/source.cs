@@ -29,11 +29,11 @@ class Program
         {
             for (int i = 0; i <= 1; i++)
             {
-                // Run this loop at most two times. If the first attempt fails, 
+                // Run this loop at most two times. If the first attempt fails,
                 // the code checks the Number property of the SqlException object.
-                // If that contains the special values 18487 or 18488, the code 
-                // attempts to set the user's password to a new value. 
-                // Assuming this succeeds, the second pass through 
+                // If that contains the special values 18487 or 18488, the code
+                // attempts to set the user's password to a new value.
+                // Assuming this succeeds, the second pass through
                 // successfully opens the connection.
                 // If not, the exception handler catches the exception.
                 try
@@ -48,9 +48,9 @@ class Program
                 {
                     if (i == 0 && ((ex.Number == 18487) || (ex.Number == 18488)))
                     {
-                        // You must reset the password. 
+                        // You must reset the password.
                         connectionString =
-                            ModifyConnectionString(connectionString, 
+                            ModifyConnectionString(connectionString,
                             GetNewPassword());
                     }
                     else
@@ -72,7 +72,7 @@ class Program
     {
 
         // Use the SqlConnectionStringBuilder class to modify the
-        // password portion of the connection string. 
+        // password portion of the connection string.
         SqlConnectionStringBuilder builder =
             new SqlConnectionStringBuilder(connectionString);
         builder.Password = NewPassword;
@@ -95,7 +95,7 @@ class Program
         // application, you might want to retrieve this setting
         // from a config file, or from some other source.
 
-        // In a production application, you would want to 
+        // In a production application, you would want to
         // display a modal form that could gather user and password
         // information.
         SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder(

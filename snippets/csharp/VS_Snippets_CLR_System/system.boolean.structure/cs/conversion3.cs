@@ -6,22 +6,22 @@ public class Example
    public static void Main()
    {
       bool flag = true;
-      
-      byte byteValue;   
+
+      byte byteValue;
       byteValue = Convert.ToByte(flag);
-      Console.WriteLine("{0} -> {1}", flag, byteValue);         
-      
+      Console.WriteLine("{0} -> {1}", flag, byteValue);
+
       sbyte sbyteValue;
       sbyteValue = Convert.ToSByte(flag);
-      Console.WriteLine("{0} -> {1}", flag, sbyteValue);         
+      Console.WriteLine("{0} -> {1}", flag, sbyteValue);
 
       double dblValue;
       dblValue = Convert.ToDouble(flag);
-      Console.WriteLine("{0} -> {1}", flag, dblValue);         
+      Console.WriteLine("{0} -> {1}", flag, dblValue);
 
       int intValue;
       intValue = Convert.ToInt32(flag);
-      Console.WriteLine("{0} -> {1}", flag, intValue);         
+      Console.WriteLine("{0} -> {1}", flag, intValue);
    }
 }
 // The example displays the following output:

@@ -9,7 +9,7 @@ public class ControlChar
       for (int ctr = 0; ctr < sentence.Length; ctr++)
       {
          if (Char.IsControl(sentence, ctr))
-           Console.WriteLine("Control character \\U{0} found in position {1}.", 
+           Console.WriteLine("Control character \\U{0} found in position {1}.",
              Convert.ToInt32(sentence[ctr]).ToString("X4"), ctr);
       }
    }

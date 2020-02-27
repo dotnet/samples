@@ -7,7 +7,7 @@ using System.Windows.Forms;
 public class Form1: Form
 {
  protected TextBox textBox1;
- 
+
  public void Method()
  {
 // <Snippet1>

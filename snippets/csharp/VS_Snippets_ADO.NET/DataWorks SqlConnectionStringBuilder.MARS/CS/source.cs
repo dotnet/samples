@@ -14,7 +14,7 @@ class Program
 
         // The connection does not allow multiple active result sets
         // by default, so this line of code explicitly
-        // enables this feature. Note that this feature is 
+        // enables this feature. Note that this feature is
         // only available when programming against SQL Server 2005
         // or later.
         builder.MultipleActiveResultSets = true;

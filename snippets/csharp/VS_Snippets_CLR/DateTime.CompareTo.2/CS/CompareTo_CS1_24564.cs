@@ -14,27 +14,27 @@ public class DateTimeComparison
    {
       DateTime thisDate = DateTime.Today;
 
-      // Define two DateTime objects for today's date 
+      // Define two DateTime objects for today's date
       // next year and last year		
       DateTime thisDateNextYear, thisDateLastYear;
 
       // Call AddYears instance method to add/substract 1 year
       thisDateNextYear = thisDate.AddYears(1);
-      thisDateLastYear = thisDate.AddYears(-1);   
+      thisDateLastYear = thisDate.AddYears(-1);
 
       // Compare dates
       //
       DateComparisonResult comparison;
       // Compare today to last year
       comparison = (DateComparisonResult) thisDate.CompareTo(thisDateLastYear);
-      Console.WriteLine("CompareTo method returns {0}: {1:d} is {2} than {3:d}", 
-                        (int) comparison, thisDate, comparison.ToString().ToLower(), 
+      Console.WriteLine("CompareTo method returns {0}: {1:d} is {2} than {3:d}",
+                        (int) comparison, thisDate, comparison.ToString().ToLower(),
                         thisDateLastYear);
-      
+
       // Compare today to next year
       comparison = (DateComparisonResult) thisDate.CompareTo(thisDateNextYear);
-      Console.WriteLine("CompareTo method returns {0}: {1:d} is {2} than {3:d}", 
-                        (int) comparison, thisDate, comparison.ToString().ToLower(), 
+      Console.WriteLine("CompareTo method returns {0}: {1:d} is {2} than {3:d}",
+                        (int) comparison, thisDate, comparison.ToString().ToLower(),
                         thisDateNextYear);
    }
 }

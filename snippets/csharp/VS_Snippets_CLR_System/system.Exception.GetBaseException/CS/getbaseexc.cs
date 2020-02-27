@@ -13,26 +13,26 @@ namespace NDP_UE_CS
     }
     class ThirdLevelException : Exception
     {
-        public ThirdLevelException( string message, Exception inner ) 
+        public ThirdLevelException( string message, Exception inner )
             : base( message, inner )
         { }
     }
 
     class NestedExceptions
     {
-        public static void Main() 
+        public static void Main()
         {
-            Console.WriteLine( 
+            Console.WriteLine(
                 "This example of Exception.GetBaseException " +
                 "generates the following output." );
-            Console.WriteLine( 
+            Console.WriteLine(
                 "\nThe program forces a division by 0, then " +
                 "throws the exception \ntwice more, " +
                 "using a different derived exception each time.\n" );
 
             try
             {
-                // This function calls another that forces a 
+                // This function calls another that forces a
                 // division by 0.
                 Rethrow( );
             }
@@ -40,11 +40,11 @@ namespace NDP_UE_CS
             {
                 Exception current;
 
-                Console.WriteLine( 
+                Console.WriteLine(
                     "Unwind the nested exceptions " +
                     "using the InnerException property:\n" );
 
-                // This code unwinds the nested exceptions using the 
+                // This code unwinds the nested exceptions using the
                 // InnerException property.
                 current = ex;
                 while( current != null )
@@ -55,15 +55,15 @@ namespace NDP_UE_CS
                 }
 
                 // Display the innermost exception.
-                Console.WriteLine( 
+                Console.WriteLine(
                     "Display the base exception " +
                     "using the GetBaseException method:\n" );
-                Console.WriteLine( 
+                Console.WriteLine(
                     ex.GetBaseException( ).ToString( ) );
             }
         }
 
-        // This function catches the exception from the called 
+        // This function catches the exception from the called
         // function DivideBy0( ) and throws another in response.
         static void Rethrow()
         {
@@ -73,13 +73,13 @@ namespace NDP_UE_CS
             }
             catch( Exception ex )
             {
-                throw new ThirdLevelException( 
+                throw new ThirdLevelException(
                     "Caught the second exception and " +
                     "threw a third in response.", ex );
             }
         }
 
-        // This function forces a division by 0 and throws a second 
+        // This function forces a division by 0 and throws a second
         // exception.
         static void DivideBy0( )
         {
@@ -90,7 +90,7 @@ namespace NDP_UE_CS
             }
             catch( Exception ex )
             {
-                throw new SecondLevelException( 
+                throw new SecondLevelException(
                     "Forced a division by 0 and threw " +
                     "a second exception.", ex );
             }

@@ -38,7 +38,7 @@ namespace Microsoft.Samples.BuiltInConfiguration
             //   Set interval to check for runnable instances to 2 seconds.
             //   Instance Store does not keep instances after it is completed.
             //   Select exponential back-off algorithm when retrying to load a locked instance.
-            //   Instance state information is compressed using the GZip compressing algorithm. 
+            //   Instance state information is compressed using the GZip compressing algorithm.
             SqlWorkflowInstanceStoreBehavior instanceStoreBehavior = new SqlWorkflowInstanceStoreBehavior(connectionString);
             instanceStoreBehavior.HostLockRenewalPeriod = new TimeSpan(0, 0, 5);
             instanceStoreBehavior.RunnableInstancesDetectionPeriod = new TimeSpan(0, 0, 2);

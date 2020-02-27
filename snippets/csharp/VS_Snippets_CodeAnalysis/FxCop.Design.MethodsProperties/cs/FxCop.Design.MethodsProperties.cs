@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Collections;
 namespace DesignLibrary
 {
-   // Illustrates the behavior of rule: 
+   // Illustrates the behavior of rule:
    //  UsePropertiesWhereAppropriate.
 
    public class Appointment
@@ -22,7 +22,7 @@ namespace DesignLibrary
       }
 
       // This method will violate the rule, but should not be a property.
-      // This method has an observable side effect. 
+      // This method has an observable side effect.
       // Calling the method twice in succession creates different results.
       public static long GetNextAvailableID()
       {
@@ -31,7 +31,7 @@ namespace DesignLibrary
       }
 
       // This method will violate the rule, but should not be a property.
-      // This method performs a time-consuming operation. 
+      // This method performs a time-consuming operation.
       // This method returns an array.
 
       public Appointment[] GetCustomerHistory()
@@ -53,7 +53,7 @@ namespace DesignLibrary
       {
          return DateTimeFormatInfo.CurrentInfo.GetDayName(when.DayOfWeek);
       }
-         
+
       // These methods will violate the rule, and should be properties.
       // They each set or return a piece of the current object's state.
 
@@ -80,7 +80,7 @@ namespace DesignLibrary
       {
          return customerID;
       }
-      
+
       public void SetScheduleTime (DateTime when)
       {
          this.when = when;

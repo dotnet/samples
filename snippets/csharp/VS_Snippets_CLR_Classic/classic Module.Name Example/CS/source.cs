@@ -1,7 +1,7 @@
 ﻿// <Snippet1>
 using System.Reflection;
 using System;
- 
+
  public class Simple
  {
     public static void Main ()

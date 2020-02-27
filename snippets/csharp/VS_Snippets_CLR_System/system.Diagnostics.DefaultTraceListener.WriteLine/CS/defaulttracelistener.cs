@@ -63,7 +63,7 @@ class DefaultTraceListenerMod
         else
         {
             // <Snippet6>
-            // Request the required argument if it was not entered 
+            // Request the required argument if it was not entered
             // on the command-line.
             const string ENTER_PARAM = "Enter the number of " +
                       "possibilities as a command-line argument.";
@@ -81,7 +81,7 @@ class DefaultTraceListenerMod
         {
 
             // <Snippet4>
-            // Compute the next binomial coefficient.  
+            // Compute the next binomial coefficient.
             // If an exception is thrown, quit.
             decimal result = CalcBinomial(possibilities, iter);
             if (result==0) {return;}
@@ -103,7 +103,7 @@ class DefaultTraceListenerMod
         decimal result = 1;
         try
         {
-            // Calculate a binomial coefficient, and minimize the chance 
+            // Calculate a binomial coefficient, and minimize the chance
             // of overflow.
             decimal iter;
             for(iter=1; iter<=possibilities-outcomes; iter++)

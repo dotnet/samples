@@ -12,14 +12,14 @@ namespace Microsoft.Samples.FlowChartWithFaultHandling
 
     // Show how to create a FlowChart that handles faults using a TryCatch activity.
     // To demonstrate this scenario, a Flowchart workflow to handle promotions is created
-    // in CreateFlowchartWithFaults method. The following Promotion Codes are used: 
+    // in CreateFlowchartWithFaults method. The following Promotion Codes are used:
     //      Single: Single
     //      MNK:    Married (No Kids)
     //      MWK:    Married (With Kids)
     class Program
     {
         static void Main(string[] args)
-        {   
+        {
             // no fault expected
             Console.WriteLine("Invoke with Promo Code {0}, number of kids {1}", "Single", 0);
             WorkflowInvoker.Invoke(CreateFlowchartWithFaults("Single", 0));
@@ -53,25 +53,25 @@ namespace Microsoft.Samples.FlowChartWithFaultHandling
 
             FlowStep discountNotApplied = new FlowStep
             {
-                Action = new WriteLine 
-                { 
-                    DisplayName = "WriteLine: Discount not applied", 
-                    Text = "Discount not applied" 
+                Action = new WriteLine
+                {
+                    DisplayName = "WriteLine: Discount not applied",
+                    Text = "Discount not applied"
                 },
                 Next = null
             };
 
             FlowStep discountApplied = new FlowStep
             {
-                Action = new WriteLine 
+                Action = new WriteLine
                 {
                     DisplayName = "WriteLine: Discount applied",
-                    Text = "Discount applied " 
+                    Text = "Discount applied "
                 },
                 Next = null
             };
-//<Snippet3>            
-            FlowDecision flowDecision = new FlowDecision 
+//<Snippet3>
+            FlowDecision flowDecision = new FlowDecision
             {
                 Condition = ExpressionServices.Convert<bool>((ctx) => discount.Get(ctx) > 0),
                 True = discountApplied,
@@ -114,7 +114,7 @@ namespace Microsoft.Samples.FlowChartWithFaultHandling
                         To = new OutArgument<double>(discount),
                         Value = new InArgument<double>((ctx) => (15 + (1 - 1 / numberOfKids.Get(ctx)) * 10))
                     },
-                    Catches = 
+                    Catches =
                     {
                          new Catch<System.DivideByZeroException>
                          {
@@ -128,14 +128,14 @@ namespace Microsoft.Samples.FlowChartWithFaultHandling
                                          DisplayName = "Divide by Zero Exception Workflow",
                                          Activities =
                                          {
-                                            new WriteLine() 
-                                            { 
+                                            new WriteLine()
+                                            {
                                                 DisplayName = "WriteLine: DivideByZeroException",
-                                                Text = "DivideByZeroException: Promo code is MWK - but number of kids = 0" 
+                                                Text = "DivideByZeroException: Promo code is MWK - but number of kids = 0"
                                             },
                                             new Assign<double>
                                             {
-                                                DisplayName = "Exception - discount = 0", 
+                                                DisplayName = "Exception - discount = 0",
                                                 To = discount,
                                                 Value = new InArgument<double>(0)
                                             }
@@ -178,15 +178,15 @@ namespace Microsoft.Samples.FlowChartWithFaultHandling
                 DisplayName = "Promotional Discount Calculation",
                 Variables = {discount, promo, numberOfKids},
                 StartNode = promoCodeSwitch,
-                Nodes = 
-                { 
-                    promoCodeSwitch, 
-                    singleStep, 
-                    mnkStep, 
-                    mwkStep, 
-                    discountDefault, 
-                    flowDecision, 
-                    discountApplied, 
+                Nodes =
+                {
+                    promoCodeSwitch,
+                    singleStep,
+                    mnkStep,
+                    mwkStep,
+                    discountDefault,
+                    flowDecision,
+                    discountApplied,
                     discountNotApplied
                 }
             };

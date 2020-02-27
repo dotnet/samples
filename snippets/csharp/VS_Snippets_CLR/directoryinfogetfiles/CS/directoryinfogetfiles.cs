@@ -2,9 +2,9 @@
 using System;
 using System.IO;
 
-public class GetFilesTest 
+public class GetFilesTest
 {
-    public static void Main() 
+    public static void Main()
     {
         // Make a reference to a directory.
         DirectoryInfo di = new DirectoryInfo("c:\\");

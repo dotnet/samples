@@ -40,10 +40,10 @@ namespace Example
                 serializerBehavior = new XmlSerializerOperationBehavior(myOperationDescription);
                 myOperationDescription.Behaviors.Add(serializerBehavior);
             }
-            
+
             // Change style of the serialize attribute.
             serializerBehavior.XmlSerializerFormatAttribute.Style = OperationFormatStyle.Document;
-                        
+
             sh.Open();
             Console.WriteLine("Listening");
             Console.ReadLine();

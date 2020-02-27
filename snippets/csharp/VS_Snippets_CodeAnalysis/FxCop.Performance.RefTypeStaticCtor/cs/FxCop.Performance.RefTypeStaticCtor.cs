@@ -13,7 +13,7 @@ namespace PerformanceLibrary
       static StaticConstructor()
       {
          someInteger = 3;
-         ResourceManager stringManager = 
+         ResourceManager stringManager =
             new ResourceManager("strings", Assembly.GetExecutingAssembly());
          resourceString = stringManager.GetString("string");
       }
@@ -26,7 +26,7 @@ namespace PerformanceLibrary
 
       static string InitializeResourceString()
       {
-         ResourceManager stringManager = 
+         ResourceManager stringManager =
             new ResourceManager("strings", Assembly.GetExecutingAssembly());
          return stringManager.GetString("string");
       }

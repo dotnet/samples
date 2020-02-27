@@ -1,11 +1,11 @@
 ﻿// <Snippet1>
 using System;
 using System.Xml;
- 
+
 public class Sample {
 
   public static void Main() {
-      
+
         // Create a new document containing information about a book
         XmlDocument doc = new XmlDocument();
         doc.LoadXml("<book>" +
@@ -26,7 +26,7 @@ public class Sample {
         // Display the modified XML document
         Console.WriteLine(doc.OuterXml);
 
-        //Output: 
+        //Output:
         // <book><title>Oberon's Legacy</title><price>5.95</price><g:ISBN xmlns:g="https://global.ISBN/list">1-861001-57-5</g:ISBN></book>
    }
  }

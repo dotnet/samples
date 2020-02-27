@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-// Sample implementation of IProducerConsumerCollection(T) 
+// Sample implementation of IProducerConsumerCollection(T)
 // -- in this case, a thread-safe stack.
 public class SafeStack<T> : IProducerConsumerCollection<T>
 {
@@ -98,7 +98,7 @@ public class SafeStack<T> : IProducerConsumerCollection<T>
         return ((IEnumerable<T>)this).GetEnumerator();
     }
 
-    // 
+    //
     // Support for ICollection
     //
     public bool IsSynchronized

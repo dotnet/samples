@@ -105,7 +105,7 @@ class BoxSameVolume : EqualityComparer<Box>
     }
 }
 /* This example produces the following output:
- * 
+ *
       Boxes equality by dimensions:
       Added red, Count = 1, HashCode = 46104728
       Added green, Count = 2, HashCode = 12289376
@@ -117,6 +117,6 @@ class BoxSameVolume : EqualityComparer<Box>
       Added orange, Count = 2, HashCode = 33476626
       A box equal to purple is already in the collection.
       A box equal to brown is already in the collection.
- * 
+ *
 */
 // </Snippet1>

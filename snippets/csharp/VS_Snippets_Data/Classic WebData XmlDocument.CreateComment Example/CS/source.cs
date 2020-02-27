@@ -20,7 +20,7 @@ public class Sample
     XmlElement root = doc.DocumentElement;
     doc.InsertBefore(newComment, root);
 
-    Console.WriteLine("Display the modified XML...");        
+    Console.WriteLine("Display the modified XML...");
     doc.Save(Console.Out);
   }
 }

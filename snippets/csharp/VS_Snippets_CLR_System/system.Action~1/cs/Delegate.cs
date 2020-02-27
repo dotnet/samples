@@ -8,19 +8,19 @@ public class TestCustomDelegate
 {
    public static void Main()
    {
-      DisplayMessage messageTarget; 
-      
+      DisplayMessage messageTarget;
+
       if (Environment.GetCommandLineArgs().Length > 1)
          messageTarget = ShowWindowsMessage;
       else
          messageTarget = Console.WriteLine;
-      
-      messageTarget("Hello, World!");   
-   }      
-      
+
+      messageTarget("Hello, World!");
+   }
+
    private static void ShowWindowsMessage(string message)
    {
-      MessageBox.Show(message);      
+      MessageBox.Show(message);
    }
 }
 // </Snippet1>

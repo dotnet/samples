@@ -18,7 +18,7 @@ class DecimalToSgl_DblDemo
         // Convert the argument to a double value.
         DoubleValue = decimal.ToDouble( argument );
 
-        Console.WriteLine( formatter, argument, 
+        Console.WriteLine( formatter, argument,
             SingleValue, DoubleValue );
     }
 
@@ -29,9 +29,9 @@ class DecimalToSgl_DblDemo
             "  decimal.ToDouble( decimal ) \nmethods " +
             "generates the following output. It \ndisplays " +
             "several converted decimal values.\n" );
-        Console.WriteLine( formatter, "decimal argument", 
+        Console.WriteLine( formatter, "decimal argument",
             "float", "double" );
-        Console.WriteLine( formatter, "----------------", 
+        Console.WriteLine( formatter, "----------------",
             "-----", "------" );
 
         // Convert decimal values and display the results.

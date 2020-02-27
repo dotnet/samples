@@ -7,9 +7,9 @@ namespace TestSecRulesLibrary
    public class TestArrayReadOnlyRule
    {
       [STAThread]
-      public static void Main() 
+      public static void Main()
       {
-         MyClassWithReadOnlyArrayField dataHolder = 
+         MyClassWithReadOnlyArrayField dataHolder =
             new MyClassWithReadOnlyArrayField();
 
          // Get references to the library's readonly arrays.
@@ -20,7 +20,7 @@ namespace TestSecRulesLibrary
          Console.WriteLine(
             "Before tampering: {0}", dataHolder.ToString());
 
-         // Overwrite the contents of the "readonly" array. 
+         // Overwrite the contents of the "readonly" array.
          theGrades[1]= 555;
          thePrivateGrades[1]= 555;
          theSecureGrades[1]= 555;
@@ -49,10 +49,10 @@ namespace SecurityRulesLibrary
             return (int[])securePrivateGrades.Clone();
       }
 
-      public override string ToString() 
+      public override string ToString()
       {
-         return String.Format("Grades: {0}, {1}, {2} Private Grades: {3}, {4}, {5}  Secure Grades, {6}, {7}, {8}", 
+         return String.Format("Grades: {0}, {1}, {2} Private Grades: {3}, {4}, {5}  Secure Grades, {6}, {7}, {8}",
             grades[0], grades[1], grades[2], privateGrades[0], privateGrades[1], privateGrades[2], securePrivateGrades[0], securePrivateGrades[1], securePrivateGrades[2]);
-      }     
+      }
    }
 }

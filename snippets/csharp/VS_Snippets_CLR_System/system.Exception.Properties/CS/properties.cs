@@ -5,15 +5,15 @@ using System;
 
 namespace NDP_UE_CS
 {
-    // Derive an exception; the constructor sets the HelpLink and 
+    // Derive an exception; the constructor sets the HelpLink and
     // Source properties.
     class LogTableOverflowException : Exception
     {
         const string overflowMessage = "The log table has overflowed.";
 
-        public LogTableOverflowException( 
+        public LogTableOverflowException(
             string auxMessage, Exception inner ) :
-                base( String.Format( "{0} - {1}", 
+                base( String.Format( "{0} - {1}",
                     overflowMessage, auxMessage ), inner )
         {
             this.HelpLink = "http://msdn.microsoft.com";
@@ -32,7 +32,7 @@ namespace NDP_UE_CS
         protected string[ ] logArea;
         protected int       elemInUse;
 
-        // The AddRecord method throws a derived exception if 
+        // The AddRecord method throws a derived exception if
         // the array bounds exception is caught.
         public    int       AddRecord( string newRecord )
         {
@@ -43,21 +43,21 @@ namespace NDP_UE_CS
             }
             catch( Exception e )
             {
-                throw new LogTableOverflowException( 
-                    String.Format( "Record \"{0}\" was not logged.", 
+                throw new LogTableOverflowException(
+                    String.Format( "Record \"{0}\" was not logged.",
                         newRecord ), e );
             }
         }
     }
 
-    class OverflowDemo 
+    class OverflowDemo
     {
         // Create a log table and force an overflow.
-        public static void Main() 
+        public static void Main()
         {
             LogTable log = new LogTable( 4 );
 
-            Console.WriteLine( 
+            Console.WriteLine(
                 "This example of \n   Exception.Message, \n" +
                 "   Exception.HelpLink, \n   Exception.Source, \n" +
                 "   Exception.StackTrace, and \n   Exception." +
@@ -67,20 +67,20 @@ namespace NDP_UE_CS
             {
                 for( int count = 1; ; count++ )
                 {
-                    log.AddRecord( 
-                        String.Format( 
+                    log.AddRecord(
+                        String.Format(
                             "Log record number {0}", count ) );
                 }
             }
             catch( Exception ex )
             {
                 Console.WriteLine( "\nMessage ---\n{0}", ex.Message );
-                Console.WriteLine( 
+                Console.WriteLine(
                     "\nHelpLink ---\n{0}", ex.HelpLink );
                 Console.WriteLine( "\nSource ---\n{0}", ex.Source );
-                Console.WriteLine( 
+                Console.WriteLine(
                     "\nStackTrace ---\n{0}", ex.StackTrace );
-                Console.WriteLine( 
+                Console.WriteLine(
                     "\nTargetSite ---\n{0}", ex.TargetSite );
             }
         }

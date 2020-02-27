@@ -1,8 +1,8 @@
 ﻿// <Snippet1>
 using System;
 using System.IO;
- 
-public class SWBuff 
+
+public class SWBuff
 {
     public static void Main(String[] args)
     {

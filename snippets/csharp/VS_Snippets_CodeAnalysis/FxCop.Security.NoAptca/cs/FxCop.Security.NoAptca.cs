@@ -5,8 +5,8 @@ using System.Security.Permissions;
 using System.Reflection;
 
 // This code is compiled into a strong-named
-// assembly that requires full trust and does 
-// not allow partially trusted callers. 
+// assembly that requires full trust and does
+// not allow partially trusted callers.
 
 namespace AptcaTestLibrary
 {

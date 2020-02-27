@@ -89,7 +89,7 @@ public class Box : IEquatable<Box>
 }
 
 /* This example produces the following output:
- * 
+ *
     Found box 4 x 8 x 8 by dimension.
     Found box 8 x 8 x 4 by volume.
  */

@@ -36,11 +36,11 @@ namespace ReRegisterForFinalizeExample
             if(hasFinalized == false)
             {
                 Console.WriteLine("First finalization");
-            
+
                 // Put this object back into a root by creating
                 // a reference to it.
                 MyFinalizeObject.currentInstance = this;
-            
+
                 // Indicate that this instance has finalized once.
                 hasFinalized = true;
 

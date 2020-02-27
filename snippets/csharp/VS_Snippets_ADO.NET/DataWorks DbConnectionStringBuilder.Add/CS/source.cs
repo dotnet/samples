@@ -22,7 +22,7 @@ namespace ConBuilderAddCS
                 // Overwrite the existing "User ID" value.
                 builder.Add("User ID", "NewUserName");
 
-                // The following code would trigger 
+                // The following code would trigger
                 // an ArgumentNullException:
                 // builder.Add(null, "Some Value");
 

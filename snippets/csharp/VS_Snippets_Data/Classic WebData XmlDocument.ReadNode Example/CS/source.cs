@@ -23,8 +23,8 @@ public class Sample
     XmlNode cd = doc.ReadNode(reader);
 
     //Insert the new node into the document.
-    doc.DocumentElement.AppendChild(cd); 
-    
+    doc.DocumentElement.AppendChild(cd);
+
     Console.WriteLine("Display the modified XML...");
     doc.Save(Console.Out);
   }

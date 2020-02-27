@@ -6,19 +6,19 @@ class Example
     public static void Main( )
     {
         // Define an array of decimal values.
-        decimal[] values = { 0.0000000000000000000000000001M, 
+        decimal[] values = { 0.0000000000000000000000000001M,
                              0.0000000000123456789123456789M,
                              123M, new decimal(123000000, 0, 0, false, 6),
-                             123456789.123456789M, 
-                             123456789123456789123456789M, 
+                             123456789.123456789M,
+                             123456789123456789123456789M,
                              decimal.MinValue, decimal.MaxValue };
         // Convert each value to a double.
         foreach (var value in values) {
             double dblValue = (double) value;
             Console.WriteLine("{0} ({1}) --> {2} ({3})", value,
-                              value.GetType().Name, dblValue, 
+                              value.GetType().Name, dblValue,
                               dblValue.GetType().Name);
-       } 
+       }
     }
 }
 // The example displays the following output:

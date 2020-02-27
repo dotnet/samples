@@ -13,21 +13,21 @@ namespace NDP_UE_CS
         { }
     }
 
-    class NewExceptionDemo 
+    class NewExceptionDemo
     {
-        public static void Main() 
+        public static void Main()
         {
-            Console.WriteLine( 
+            Console.WriteLine(
                 "This example of the Exception( ) constructor " +
                 "generates the following output." );
-            Console.WriteLine( 
+            Console.WriteLine(
                 "\nHere, an exception is thrown using the \n" +
                 "parameterless constructor of the base class.\n" );
 
             CalcHalf( 12 );
             CalcHalf( 15 );
 
-            Console.WriteLine( 
+            Console.WriteLine(
                 "\nHere, an exception is thrown using the \n" +
                 "parameterless constructor of a derived class.\n" );
 
@@ -59,7 +59,7 @@ namespace NDP_UE_CS
             try
             {
                 int halfInput = Half( input );
-                Console.WriteLine( 
+                Console.WriteLine(
                     "Half of {0} is {1}.", input, halfInput );
             }
             catch( Exception ex )
@@ -74,7 +74,7 @@ namespace NDP_UE_CS
             try
             {
                 int halfInput = Half2( input );
-                Console.WriteLine( 
+                Console.WriteLine(
                     "Half of {0} is {1}.", input, halfInput );
             }
             catch( Exception ex )

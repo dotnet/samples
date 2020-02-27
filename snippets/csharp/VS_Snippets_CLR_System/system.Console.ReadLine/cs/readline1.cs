@@ -7,7 +7,7 @@ public class Example
    {
       if (! Console.IsInputRedirected) {
          Console.WriteLine("This example requires that input be redirected from a file.");
-         return; 
+         return;
       }
 
       Console.WriteLine("About to call Console.ReadLine in a loop.");

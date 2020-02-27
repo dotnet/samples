@@ -12,7 +12,7 @@ public class Sample
     XmlNodeReader reader = null;
 
     try
-    {           
+    {
         //Create an XmlNodeReader to read the XmlDocument.
         XmlDocument doc = new XmlDocument();
         doc.Load(filename);
@@ -46,8 +46,8 @@ public class Sample
              case XmlNodeType.EndElement:
                Console.Write("</{0}>", reader.Name);
                break;
-           }       
-          }           
+           }
+          }
         }
 
      finally

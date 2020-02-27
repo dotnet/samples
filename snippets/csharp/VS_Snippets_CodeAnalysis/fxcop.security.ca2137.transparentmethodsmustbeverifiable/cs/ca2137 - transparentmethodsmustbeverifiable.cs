@@ -8,7 +8,7 @@ namespace TransparencyWarningsDemo
     public class UnverifiableMethodClass
     {
         // CA2137 violation - transparent method with unverifiable code.  This method should become critical or
-        // safe critical 
+        // safe critical
     //    public unsafe byte[] UnverifiableMethod(int length)
     //    {
     //        byte[] bytes = new byte[length];

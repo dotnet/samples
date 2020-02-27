@@ -20,7 +20,7 @@ namespace GlobalizationLibrary
 
       public DuplicateAccelerators()
       {
-         ResourceManager resources = 
+         ResourceManager resources =
             new ResourceManager(typeof(DuplicateAccelerators));
 
          checkBox1 = new CheckBox();

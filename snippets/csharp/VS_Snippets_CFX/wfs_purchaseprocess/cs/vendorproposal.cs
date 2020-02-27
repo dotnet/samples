@@ -14,8 +14,8 @@ namespace Microsoft.Samples.WF.PurchaseProcess
         public DateTime Date { get; set; }
         public double Value { get; set; }
 
-        public VendorProposal() 
-        { 
+        public VendorProposal()
+        {
         }
 
         public VendorProposal(Vendor vendor)

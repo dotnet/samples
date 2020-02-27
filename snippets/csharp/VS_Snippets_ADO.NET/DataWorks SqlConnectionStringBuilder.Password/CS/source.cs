@@ -9,10 +9,10 @@ class Program
     {
         try
         {
-            string connectString = 
+            string connectString =
                 "Server=(local);Database=AdventureWorks;UID=ab;Pwd= a!Pass@@";
             Console.WriteLine("Original: " + connectString);
-            SqlConnectionStringBuilder builder = 
+            SqlConnectionStringBuilder builder =
                 new SqlConnectionStringBuilder(connectString);
             Console.WriteLine("Modified: " + builder.ConnectionString);
             foreach (string key in builder.Keys)

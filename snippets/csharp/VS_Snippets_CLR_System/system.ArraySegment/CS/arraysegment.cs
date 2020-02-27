@@ -4,12 +4,12 @@
 using System;
 
 public class SamplesArray  {
- 
+
    public static void Main()  {
- 
+
       // Create and initialize a new string array.
       String[] myArr = { "The", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog" };
- 
+
       // Display the initial contents of the array.
       Console.WriteLine( "The original array initially contains:" );
       PrintIndexAndValues( myArr );
@@ -36,7 +36,7 @@ public class SamplesArray  {
       Console.WriteLine( "After the first array segment is modified, the second array segment now contains:" );
       PrintIndexAndValues( myArrSegMid );
    }
- 
+
    public static void PrintIndexAndValues( ArraySegment<String> arrSeg )  {
       for ( int i = arrSeg.Offset; i < (arrSeg.Offset + arrSeg.Count); i++ )  {
          Console.WriteLine( "   [{0}] : {1}", i, arrSeg.Array[i] );
@@ -53,7 +53,7 @@ public class SamplesArray  {
 }
 
 
-/* 
+/*
 This code produces the following output.
 
 The original array initially contains:

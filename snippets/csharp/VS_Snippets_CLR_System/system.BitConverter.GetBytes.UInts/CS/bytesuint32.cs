@@ -5,23 +5,23 @@ using System;
 class GetBytesUInt32Demo
 {
     const string formatter = "{0,16}{1,20}";
- 
+
     // Convert a uint argument to a byte array and display it.
     public static void GetBytesUInt32( uint argument )
     {
         byte[ ] byteArray = BitConverter.GetBytes( argument );
-        Console.WriteLine( formatter, argument, 
+        Console.WriteLine( formatter, argument,
             BitConverter.ToString( byteArray ) );
     }
-       
+
     public static void Main( )
     {
-        Console.WriteLine( 
+        Console.WriteLine(
             "This example of the BitConverter.GetBytes( uint ) " +
             "\nmethod generates the following output.\n" );
         Console.WriteLine( formatter, "uint", "byte array" );
         Console.WriteLine( formatter, "----", "----------" );
-          
+
         // Convert uint values and display the results.
         GetBytesUInt32( 15 );
         GetBytesUInt32( 1023 );

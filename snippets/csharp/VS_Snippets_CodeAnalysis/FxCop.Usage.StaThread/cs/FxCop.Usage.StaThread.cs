@@ -1,5 +1,5 @@
 ﻿//<Snippet1>
-using System; 
+using System;
 using  System.Windows.Forms;
 
 namespace UsageLibrary
@@ -10,7 +10,7 @@ namespace UsageLibrary
         {
             this.Text = "Hello World!";
         }
-        
+
         // Satisfies rule: MarkWindowsFormsEntryPointsWithStaThread.
         [STAThread]
         public static void Main()

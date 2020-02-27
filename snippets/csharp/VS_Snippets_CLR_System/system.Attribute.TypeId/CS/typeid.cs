@@ -3,7 +3,7 @@
 using System;
 using System.Reflection;
 
-namespace NDP_UE_CS 
+namespace NDP_UE_CS
 {
     // Define a custom parameter attribute that takes a single message argument.
     [AttributeUsage( AttributeTargets.Parameter )]
@@ -40,7 +40,7 @@ namespace NDP_UE_CS
         }
     }
 
-    public class TestClass 
+    public class TestClass
     {
         // Assign an ArgumentUsage attribute to each parameter.
         // Assign a ParamArray attribute to strList using the params keyword.
@@ -52,38 +52,38 @@ namespace NDP_UE_CS
         { }
     }
 
-    class AttributeTypeIdDemo 
+    class AttributeTypeIdDemo
     {
-        static void ShowAttributeTypeIds( ) 
+        static void ShowAttributeTypeIds( )
         {
-            // Get the class type, and then get the MethodInfo object 
+            // Get the class type, and then get the MethodInfo object
             // for TestMethod to access its metadata.
             Type clsType = typeof( TestClass );
             MethodInfo mInfo = clsType.GetMethod("TestMethod");
 
             // There will be two elements in pInfoArray, one for each parameter.
             ParameterInfo[] pInfoArray = mInfo.GetParameters();
-            if (pInfoArray != null) 
+            if (pInfoArray != null)
             {
                 // Create an instance of the param array attribute on strList.
                 ParamArrayAttribute listArrayAttr = (ParamArrayAttribute)
-                    Attribute.GetCustomAttribute( pInfoArray[1], 
+                    Attribute.GetCustomAttribute( pInfoArray[1],
                         typeof(ParamArrayAttribute) );
 
                 // Create an instance of the argument usage attribute on strArray.
                 ArgumentUsageAttribute arrayUsageAttr1 = (ArgumentUsageAttribute)
-                    Attribute.GetCustomAttribute( pInfoArray[0], 
+                    Attribute.GetCustomAttribute( pInfoArray[0],
                         typeof(ArgumentUsageAttribute) );
 
-                // Create another instance of the argument usage attribute 
+                // Create another instance of the argument usage attribute
                 // on strArray.
                 ArgumentUsageAttribute arrayUsageAttr2 = (ArgumentUsageAttribute)
-                    Attribute.GetCustomAttribute( pInfoArray[0], 
+                    Attribute.GetCustomAttribute( pInfoArray[0],
                         typeof(ArgumentUsageAttribute) );
 
                 // Create an instance of the argument usage attribute on strList.
                 ArgumentUsageAttribute listUsageAttr = (ArgumentUsageAttribute)
-                    Attribute.GetCustomAttribute( pInfoArray[1], 
+                    Attribute.GetCustomAttribute( pInfoArray[1],
                         typeof(ArgumentUsageAttribute) );
 
                 // Display the attributes and corresponding TypeId values.
@@ -101,12 +101,12 @@ namespace NDP_UE_CS
                     "not be retrieved for method {0}.", mInfo.Name );
         }
 
-        static void Main( ) 
+        static void Main( )
         {
-            Console.WriteLine( 
+            Console.WriteLine(
                 "This example of the Attribute.TypeId property\n" +
                 "generates the following output." );
-            Console.WriteLine( 
+            Console.WriteLine(
                 "\nCreate instances from a derived Attribute " +
                 "class that implements TypeId, \nand then " +
                 "display the attributes and corresponding TypeId values:" );

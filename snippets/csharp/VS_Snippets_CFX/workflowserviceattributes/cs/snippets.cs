@@ -35,7 +35,7 @@ namespace WorkflowServiceAttributesSnippets
 	    //<snippet3>
             WorkflowServiceAttributes attributes = new WorkflowServiceAttributes();
             attributes.IgnoreExtensionDataObject = true;
-            
+
             //</snippet3>
         }
         void Container4()

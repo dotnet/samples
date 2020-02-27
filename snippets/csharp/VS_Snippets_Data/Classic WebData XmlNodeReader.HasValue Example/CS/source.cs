@@ -6,11 +6,11 @@ using System.Xml;
 public class Sample {
 
   public static void Main() {
-  
+
     XmlNodeReader reader = null;
 
     try {
-               
+
         // Create and load an XmlDocument.
         XmlDocument doc = new XmlDocument();
         doc.LoadXml("<?xml version='1.0' ?>" +
@@ -28,7 +28,7 @@ public class Sample {
              Console.WriteLine("({0})  {1}={2}", reader.NodeType, reader.Name, reader.Value);
            else
              Console.WriteLine("({0}) {1}", reader.NodeType, reader.Name);
-         }           
+         }
      }
 
      finally {

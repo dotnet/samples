@@ -1,5 +1,5 @@
-﻿// 
-// 
+﻿//
+//
 using System;
 using System.Xml;
 using System.ServiceModel;
@@ -123,7 +123,7 @@ namespace WSHttpBindingSample
 	    // </Snippet15>
 
 	    // <Snippet16>
-	    BindingElementCollection bindingElements = 
+	    BindingElementCollection bindingElements =
 			    binding1.CreateBindingElements();
 	    // </Snippet16>
 

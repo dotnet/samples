@@ -7,9 +7,9 @@ public class MyBaseClass {
 public class MyDerivedClass: MyBaseClass {
 }
 
-public class Test 
+public class Test
 {
-   public static void Main() 
+   public static void Main()
    {
       MyBaseClass myBase = new MyBaseClass();
       MyDerivedClass myDerived = new MyDerivedClass();
@@ -26,5 +26,5 @@ public class Test
 //    mybase: Type is MyBaseClass
 //    myDerived: Type is MyDerivedClass
 //    object o = myDerived: Type is MyDerivedClass
-//    MyBaseClass b = myDerived: Type is MyDerivedClass 
+//    MyBaseClass b = myDerived: Type is MyDerivedClass
 // </Snippet1>

@@ -20,7 +20,7 @@ namespace SystemByte_Examples
 			
          sbe.MinMaxFields(numberToSet);
          sbe.ParseByte();
-         
+
          sbe.Compare(compareByte);
       }
    }
@@ -40,7 +40,7 @@ namespace SystemByte_Examples
       //  the value is set.  If not, an error message is displayed.
 
       // MemberByte is assumed to exist as a class member.
-      
+
       //<Snippet1>
       public void MinMaxFields(int numberToSet)
       {
@@ -69,7 +69,7 @@ namespace SystemByte_Examples
          // <Snippet2>
          string stringToConvert = " 162";
          byte byteValue;
-         
+
          try
          {
             byteValue = Byte.Parse(stringToConvert);
@@ -91,7 +91,7 @@ namespace SystemByte_Examples
       public void Compare(Byte myByte)
       {
          int myCompareResult;
-  
+
          myCompareResult = MemberByte.CompareTo(myByte);
 
          if(myCompareResult > 0)

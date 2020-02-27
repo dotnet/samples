@@ -15,11 +15,11 @@ public class Sample
     //Create an attribute.
     XmlAttribute attr = doc.CreateAttribute("publisher");
     attr.Value = "WorldWide Publishing";
-          
-    //Add the new node to the document. 
+
+    //Add the new node to the document.
     doc.DocumentElement.SetAttributeNode(attr);
-        
-    Console.WriteLine("Display the modified XML...");        
+
+    Console.WriteLine("Display the modified XML...");
     doc.Save(Console.Out);
   }
 }

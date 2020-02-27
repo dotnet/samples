@@ -10,8 +10,8 @@ public class Example
       int[] values = GetArray(50, 0, 1000);
       int lBound = 300;
       int uBound = 600;
-      int[] matchedItems = Array.FindAll(values, x =>  
-                                       x >= lBound && x <= uBound);  
+      int[] matchedItems = Array.FindAll(values, x =>
+                                       x >= lBound && x <= uBound);
       for (int ctr = 0; ctr < matchedItems.Length; ctr++) {
          Console.Write("{0}  ", matchedItems[ctr]);
          if ((ctr + 1) % 12 == 0)

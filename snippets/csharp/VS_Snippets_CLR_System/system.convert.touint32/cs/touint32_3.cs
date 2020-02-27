@@ -5,9 +5,9 @@ public class Example
 {
    public static void Main()
    {
-      string[] hexStrings = { "80000000", "0FFFFFFF", "F0000000", "00A3000", "D", 
+      string[] hexStrings = { "80000000", "0FFFFFFF", "F0000000", "00A3000", "D",
                               "-13", "9AC61", "GAD", "FFFFFFFFFF" };
-      
+
       foreach (string hexString in hexStrings)
       {
          Console.Write("{0,-12}  -->  ", hexString);
@@ -17,15 +17,15 @@ public class Example
          }
          catch (FormatException) {
             Console.WriteLine("{0,18}", "Bad Format");
-         }   
+         }
          catch (OverflowException)
          {
             Console.WriteLine("{0,18}", "Numeric Overflow");
-         }   
+         }
          catch (ArgumentException) {
             Console.WriteLine("{0,18}", "Invalid in Base 16");
          }
-      }                                            
+      }
    }
 }
 // The example displays the following output:

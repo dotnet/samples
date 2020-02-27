@@ -14,7 +14,7 @@ public class Example
       Pets familyPets = Pets.Dog | Pets.Cat;
       Console.WriteLine("Pets: {0:G} ({0:D})", familyPets);
       // The example displays the following output:
-      //       Pets: Dog, Cat (3)      
+      //       Pets: Dog, Cat (3)
       // </Snippet14>
 
       ShowHasFlag();
@@ -29,10 +29,10 @@ public class Example
       if (familyPets.HasFlag(Pets.Dog))
          Console.WriteLine("The family has a dog.");
       // The example displays the following output:
-      //       The family has a dog.      
+      //       The family has a dog.
       // </Snippet15>
    }
-   
+
    private static void ShowIfSet()
    {
       // <Snippet16>
@@ -40,7 +40,7 @@ public class Example
       if ((familyPets & Pets.Dog) == Pets.Dog)
          Console.WriteLine("The family has a dog.");
       // The example displays the following output:
-      //       The family has a dog.      
+      //       The family has a dog.
       // </Snippet16>
    }
 
@@ -51,9 +51,9 @@ public class Example
       if (familyPets == Pets.None)
          Console.WriteLine("The family has no pets.");
       else
-         Console.WriteLine("The family has pets.");   
+         Console.WriteLine("The family has pets.");
       // The example displays the following output:
-      //       The family has pets.      
+      //       The family has pets.
       // </Snippet17>
    }
 }

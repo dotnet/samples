@@ -9,25 +9,25 @@ namespace ReliabilityLibrary
    class WeakIdentities
    {
       void LockOnWeakId1()
-      { 
+      {
          lock(typeof(WeakIdentities)) {}
       }
 
-      void LockOnWeakId2() 
+      void LockOnWeakId2()
       {
          MemoryStream stream = new MemoryStream();
-         lock(stream) {} 
+         lock(stream) {}
       }
 
-      void LockOnWeakId3() 
-      { 
-         lock("string") {} 
+      void LockOnWeakId3()
+      {
+         lock("string") {}
       }
 
-      void LockOnWeakId4() 
-      { 
+      void LockOnWeakId4()
+      {
          MemberInfo member = this.GetType().GetMember("LockOnWeakId1")[0];
-         lock(member) {} 
+         lock(member) {}
       }
       void LockOnWeakId5()
       {

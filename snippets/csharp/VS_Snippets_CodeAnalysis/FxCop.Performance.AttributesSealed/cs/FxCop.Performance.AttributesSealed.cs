@@ -1,7 +1,7 @@
 ﻿//<Snippet1>
 using System;
 
-namespace PerformanceLibrary 
+namespace PerformanceLibrary
 {
     // Satisfies rule: AvoidUnsealedAttributes.
 
@@ -9,14 +9,14 @@ namespace PerformanceLibrary
     public sealed class DeveloperAttribute: Attribute
     {
         private string nameValue;
-        public DeveloperAttribute(string name) 
-        { 
-            nameValue = name; 
+        public DeveloperAttribute(string name)
+        {
+            nameValue = name;
         }
-        
+
         public string Name
         {
-            get 
+            get
             {
                 return nameValue;
             }

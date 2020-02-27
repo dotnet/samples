@@ -19,12 +19,12 @@ namespace TestSecurityLibrary
          {
             SomeSecuredMethods.MethodProtectedByDemand();
             Console.WriteLine(
-               "Caller's Deny has no effect on Demand " + 
+               "Caller's Deny has no effect on Demand " +
                "with the asserted permission.");
 
             SomeSecuredMethods.MethodProtectedByLinkDemand();
             Console.WriteLine(
-               "Caller's Deny has no effect on LinkDemand " + 
+               "Caller's Deny has no effect on LinkDemand " +
                "with the asserted permission.");
          }
          catch (SecurityException e)
@@ -49,7 +49,7 @@ namespace TestSecurityLibrary
                "Caller's Deny protected the library.{0}",e);
          }
       }
-         
+
       public static void Main()
       {
          EnvironmentPermission envPermission = new EnvironmentPermission(
@@ -60,7 +60,7 @@ namespace TestSecurityLibrary
          //Test Deny and Assert interaction for LinkDemands and Demands.
          TestAssertAndDeny();
 
-         //Test Deny's effects on code in different stack frame. 
+         //Test Deny's effects on code in different stack frame.
          TestDenyAndLinkDemand();
 
          //Test Deny's effect on code in same frame as deny.
@@ -82,7 +82,7 @@ namespace SecurityRulesLibrary
 {
    public  class SomeSecuredMethods
    {
-    
+
       // Demand immediate caller has suitable permission
       // before revealing sensitive data.
       [EnvironmentPermissionAttribute(SecurityAction.LinkDemand,

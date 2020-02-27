@@ -8,7 +8,7 @@ class Program
     static void Main()
     {
         DbConnectionStringBuilder builder = new DbConnectionStringBuilder();
-        builder.ConnectionString = 
+        builder.ConnectionString =
             "Provider=sqloledb;Data Source=192.168.168.1,1433;" +
             "Network Library=DBMSSOCN;Initial Catalog=pubs;" +
             "Integrated Security=SSPI;";
@@ -29,10 +29,10 @@ class Program
         object value = null;
 
         // Although TryGetValue handles missing keys,
-        // it doesn't handle passing in a null 
+        // it doesn't handle passing in a null
         // key. This example traps for that particular error, but
         // bubbles any other unknown exceptions back out to the
-        // caller. 
+        // caller.
         try
         {
             if (builder.TryGetValue(key, out value))

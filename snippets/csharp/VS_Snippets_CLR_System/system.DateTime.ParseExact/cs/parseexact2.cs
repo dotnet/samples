@@ -6,88 +6,88 @@ public class Example
 {
    public static void Main()
    {
-      CultureInfo enUS = new CultureInfo("en-US"); 
+      CultureInfo enUS = new CultureInfo("en-US");
       string dateString;
       DateTime dateValue;
-      
+
       // Parse date with no style flags.
       dateString = " 5/01/2009 8:30 AM";
       try {
          dateValue = DateTime.ParseExact(dateString, "g", enUS, DateTimeStyles.None);
-         Console.WriteLine("Converted '{0}' to {1} ({2}).", dateString, dateValue, 
+         Console.WriteLine("Converted '{0}' to {1} ({2}).", dateString, dateValue,
                            dateValue.Kind);
-      }                           
+      }
       catch (FormatException) {
          Console.WriteLine("'{0}' is not in an acceptable format.", dateString);
       }
       // Allow a leading space in the date string.
       try {
          dateValue = DateTime.ParseExact(dateString, "g", enUS, DateTimeStyles.AllowLeadingWhite);
-         Console.WriteLine("Converted '{0}' to {1} ({2}).", dateString, dateValue, 
+         Console.WriteLine("Converted '{0}' to {1} ({2}).", dateString, dateValue,
                            dateValue.Kind);
-      }                           
+      }
       catch (FormatException) {
          Console.WriteLine("'{0}' is not in an acceptable format.", dateString);
       }
-      
+
       // Use custom formats with M and MM.
       dateString = "5/01/2009 09:00";
       try {
          dateValue = DateTime.ParseExact(dateString, "M/dd/yyyy hh:mm", enUS, DateTimeStyles.None);
-         Console.WriteLine("Converted '{0}' to {1} ({2}).", dateString, dateValue, 
+         Console.WriteLine("Converted '{0}' to {1} ({2}).", dateString, dateValue,
                            dateValue.Kind);
-      }                           
+      }
       catch (FormatException) {
          Console.WriteLine("'{0}' is not in an acceptable format.", dateString);
       }
       // Allow a leading space in the date string.
       try {
          dateValue = DateTime.ParseExact(dateString, "MM/dd/yyyy hh:mm", enUS, DateTimeStyles.None);
-         Console.WriteLine("Converted '{0}' to {1} ({2}).", dateString, dateValue, 
+         Console.WriteLine("Converted '{0}' to {1} ({2}).", dateString, dateValue,
                            dateValue.Kind);
-      }                           
+      }
       catch (FormatException) {
          Console.WriteLine("'{0}' is not in an acceptable format.", dateString);
       }
 
       // Parse a string with time zone information.
-      dateString = "05/01/2009 01:30:42 PM -05:00"; 
+      dateString = "05/01/2009 01:30:42 PM -05:00";
       try {
          dateValue = DateTime.ParseExact(dateString, "MM/dd/yyyy hh:mm:ss tt zzz", enUS, DateTimeStyles.None);
-         Console.WriteLine("Converted '{0}' to {1} ({2}).", dateString, dateValue, 
+         Console.WriteLine("Converted '{0}' to {1} ({2}).", dateString, dateValue,
                            dateValue.Kind);
-      }                           
+      }
       catch (FormatException) {
          Console.WriteLine("'{0}' is not in an acceptable format.", dateString);
       }
       // Allow a leading space in the date string.
       try {
-         dateValue = DateTime.ParseExact(dateString, "MM/dd/yyyy hh:mm:ss tt zzz", enUS, 
+         dateValue = DateTime.ParseExact(dateString, "MM/dd/yyyy hh:mm:ss tt zzz", enUS,
                                      DateTimeStyles.AdjustToUniversal);
-         Console.WriteLine("Converted '{0}' to {1} ({2}).", dateString, dateValue, 
+         Console.WriteLine("Converted '{0}' to {1} ({2}).", dateString, dateValue,
                            dateValue.Kind);
-      }                           
+      }
       catch (FormatException) {
          Console.WriteLine("'{0}' is not in an acceptable format.", dateString);
       }
-           
+
       // Parse a string representing UTC.
       dateString = "2008-06-11T16:11:20.0904778Z";
       try {
-         dateValue = DateTime.ParseExact(dateString, "o", CultureInfo.InvariantCulture, 
+         dateValue = DateTime.ParseExact(dateString, "o", CultureInfo.InvariantCulture,
                                      DateTimeStyles.None);
-         Console.WriteLine("Converted '{0}' to {1} ({2}).", dateString, dateValue, 
+         Console.WriteLine("Converted '{0}' to {1} ({2}).", dateString, dateValue,
                            dateValue.Kind);
-      }                           
+      }
       catch (FormatException) {
          Console.WriteLine("'{0}' is not in an acceptable format.", dateString);
       }
       try {
-         dateValue = DateTime.ParseExact(dateString, "o", CultureInfo.InvariantCulture, 
+         dateValue = DateTime.ParseExact(dateString, "o", CultureInfo.InvariantCulture,
                                      DateTimeStyles.RoundtripKind);
-         Console.WriteLine("Converted '{0}' to {1} ({2}).", dateString, dateValue, 
+         Console.WriteLine("Converted '{0}' to {1} ({2}).", dateString, dateValue,
                            dateValue.Kind);
-      }                           
+      }
       catch (FormatException) {
          Console.WriteLine("'{0}' is not in an acceptable format.", dateString);
       }

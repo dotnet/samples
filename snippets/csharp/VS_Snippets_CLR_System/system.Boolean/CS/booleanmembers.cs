@@ -22,7 +22,7 @@ public class BooleanMembers {
         val = bool.Parse(input);
         Console.WriteLine("'{0}' parsed as {1}", input, val);
         // The example displays the following output:
-        //       'True' parsed as True        
+        //       'True' parsed as True
         // </Snippet2>
     }
 }

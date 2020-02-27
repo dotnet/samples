@@ -1,5 +1,5 @@
 ﻿//<Snippet2>
-// Example of the decimal multiplication, division, and modulus 
+// Example of the decimal multiplication, division, and modulus
 // operators.
 using System;
 
@@ -7,7 +7,7 @@ class DecimalMulDivRemOpsDemo
 {
     const string dataFmt = "   {0,-18}{1,31}";
 
-    // Display decimal parameters and their product, quotient, and 
+    // Display decimal parameters and their product, quotient, and
     // remainder.
     public static void ShowDecimalProQuoRem( decimal Left, decimal Right )
     {
@@ -21,7 +21,7 @@ class DecimalMulDivRemOpsDemo
 
     public static void Main( )
     {
-        Console.WriteLine( 
+        Console.WriteLine(
             "This example of the decimal multiplication, division, " +
             "and modulus \noperators generates the following " +
             "output. It displays the product, \nquotient, and " +
@@ -30,11 +30,11 @@ class DecimalMulDivRemOpsDemo
         // Create pairs of decimal objects.
         ShowDecimalProQuoRem( 1000M, 7M );
         ShowDecimalProQuoRem( -1000M, 7M );
-        ShowDecimalProQuoRem( 
+        ShowDecimalProQuoRem(
             new decimal( 1230000000, 0, 0, false, 7 ), 0.0012300M );
-        ShowDecimalProQuoRem( 12345678900000000M, 
+        ShowDecimalProQuoRem( 12345678900000000M,
             0.0000000012345678M );
-        ShowDecimalProQuoRem( 123456789.0123456789M, 
+        ShowDecimalProQuoRem( 123456789.0123456789M,
             123456789.1123456789M );
     }
 }

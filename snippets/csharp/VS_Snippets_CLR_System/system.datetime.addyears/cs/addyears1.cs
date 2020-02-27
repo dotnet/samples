@@ -7,22 +7,22 @@ public class Example
    {
       DateTime baseDate = new DateTime(2000, 2, 29);
       Console.WriteLine("    Base Date:        {0:d}\n", baseDate);
-      
+
       // Show dates of previous fifteen years.
       for (int ctr = -1; ctr >= -15; ctr--)
-         Console.WriteLine("{0,2} year(s) ago:        {1:d}", 
+         Console.WriteLine("{0,2} year(s) ago:        {1:d}",
                            Math.Abs(ctr), baseDate.AddYears(ctr));
       Console.WriteLine();
 
       // Show dates of next fifteen years.
       for (int ctr = 1; ctr <= 15; ctr++)
-         Console.WriteLine("{0,2} year(s) from now:   {1:d}", 
+         Console.WriteLine("{0,2} year(s) from now:   {1:d}",
                            ctr, baseDate.AddYears(ctr));
    }
 }
 // The example displays the following output:
 //           Base Date:        2/29/2000
-//       
+//
 //        1 year(s) ago:        2/28/1999
 //        2 year(s) ago:        2/28/1998
 //        3 year(s) ago:        2/28/1997
@@ -38,7 +38,7 @@ public class Example
 //       13 year(s) ago:        2/28/1987
 //       14 year(s) ago:        2/28/1986
 //       15 year(s) ago:        2/28/1985
-//       
+//
 //        1 year(s) from now:   2/28/2001
 //        2 year(s) from now:   2/28/2002
 //        3 year(s) from now:   2/28/2003

@@ -23,7 +23,7 @@ public class Form1: Form
             case Option.First:
                result = 1.0;
                break;
-         
+
             // Insert additional cases.
             default:
                Trace.Fail("Unknown Option " + option);

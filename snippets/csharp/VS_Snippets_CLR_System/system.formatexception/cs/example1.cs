@@ -3,7 +3,7 @@ using System;
 
 public class Example
 {
-   public enum TemperatureScale 
+   public enum TemperatureScale
    { Celsius, Fahrenheit, Kelvin }
 
    public static void Main()
@@ -18,9 +18,9 @@ public class Example
       Decimal temp = 20.6m;
       TemperatureScale scale = TemperatureScale.Celsius;
       String result;
-      
+
       result = String.Format("At {0:t} on {1:D}, the temperature is {2:F1} {3:G}",
-                             dat, temp, scale);    
+                             dat, temp, scale);
       return result;
    }
 }

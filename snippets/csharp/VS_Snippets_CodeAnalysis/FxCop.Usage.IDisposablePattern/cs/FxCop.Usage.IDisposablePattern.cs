@@ -1,14 +1,14 @@
 ﻿//<Snippet1>
-using System;  
+using System;
 
 namespace UsageLibrary
 {
     public class  TypeA :IDisposable
     {
-     
-        protected virtual void Dispose(bool disposing) 
+
+        protected virtual void Dispose(bool disposing)
         {
-            if (disposing) 
+            if (disposing)
             {
                 // Dispose managed resources
             }

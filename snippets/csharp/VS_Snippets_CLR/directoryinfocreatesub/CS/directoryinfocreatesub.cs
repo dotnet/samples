@@ -2,9 +2,9 @@
 using System;
 using System.IO;
 
-public class CreateSubTest 
+public class CreateSubTest
 {
-    public static void Main() 
+    public static void Main()
     {
         // Create a reference to a directory.
         DirectoryInfo di = new DirectoryInfo("TempDir");

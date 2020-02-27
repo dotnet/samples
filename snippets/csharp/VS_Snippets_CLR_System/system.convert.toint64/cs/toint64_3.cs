@@ -16,9 +16,9 @@ public class Example
       // NumberFormatInfo object for the invariant culture.
       NumberFormatInfo[] providers = { customProvider,
                                        NumberFormatInfo.InvariantInfo };
-      
+
       // Define an array of strings to parse.
-      string[] numericStrings = { "123456789", "+123456789", "pos 123456789", 
+      string[] numericStrings = { "123456789", "+123456789", "pos 123456789",
                                   "-123456789", "neg 123456789", "123456789.",
                                   "123,456,789", "(123456789)",
                                   "9223372036854775808", "-9223372036854775809" };
@@ -35,7 +35,7 @@ public class Example
             }
             catch (FormatException) {
                Console.WriteLine("{0,22}", "Unrecognized Format");
-            }   
+            }
             catch (OverflowException) {
                Console.WriteLine("{0,22}", "Overflow");
             }
@@ -56,7 +56,7 @@ public class Example
 //          (123456789)            -->     Unrecognized Format
 //          9223372036854775808    -->                Overflow
 //          -9223372036854775809   -->     Unrecognized Format
-//       
+//
 //       Invariant Culture:
 //          123456789              -->               123456789
 //          +123456789             -->               123456789

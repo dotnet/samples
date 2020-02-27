@@ -15,7 +15,7 @@ public class ConsoleKeyExample
          StringBuilder output = new StringBuilder(
                        String.Format("You pressed {0}", input.Key.ToString()));
          bool modifiers = false;
-         
+
          if ((input.Modifiers & ConsoleModifiers.Alt) == ConsoleModifiers.Alt) {
             output.Append(", together with " + ConsoleModifiers.Alt.ToString());
             modifiers = true;
@@ -24,7 +24,7 @@ public class ConsoleKeyExample
          {
             if (modifiers) {
                output.Append(" and ");
-            }   
+            }
             else {
                output.Append(", together with ");
                modifiers = true;
@@ -35,14 +35,14 @@ public class ConsoleKeyExample
          {
             if (modifiers) {
                output.Append(" and ");
-            }   
+            }
             else {
                output.Append(", together with ");
                modifiers = true;
             }
             output.Append(ConsoleModifiers.Shift.ToString());
          }
-         output.Append(".");                  
+         output.Append(".");
          Console.WriteLine(output.ToString());
          Console.WriteLine();
       } while (input.Key != ConsoleKey.Escape);
@@ -52,20 +52,20 @@ public class ConsoleKeyExample
 //       Press a key, along with Alt, Ctrl, or Shift.
 //       Press Esc to exit.
 //       You pressed D.
-//       
+//
 //       Press a key, along with Alt, Ctrl, or Shift.
 //       Press Esc to exit.
 //       You pressed X, along with Shift.
-//       
+//
 //       Press a key, along with Alt, Ctrl, or Shift.
 //       Press Esc to exit.
 //       You pressed L, along with Control and Shift.
-//       
+//
 //       Press a key, along with Alt, Ctrl, or Shift.
 //       Press Esc to exit.
 //       You pressed P, along with Alt and Control and Shift.
-//       
+//
 //       Press a key, along with Alt, Ctrl, or Shift.
 //       Press Esc to exit.
-//       You pressed Escape. 
+//       You pressed Escape.
 // </Snippet1>

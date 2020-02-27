@@ -11,9 +11,9 @@ public class Example
          one2 += .1;
 
       Console.WriteLine("{0:R} = {1:R}: {2}", one1, one2, one1.Equals(one2));
-      Console.WriteLine("{0:R} is approximately equal to {1:R}: {2}", 
-                        one1, one2, 
-                        IsApproximatelyEqual(one1, one2, .000000001));   
+      Console.WriteLine("{0:R} is approximately equal to {1:R}: {2}",
+                        one1, one2,
+                        IsApproximatelyEqual(one1, one2, .000000001));
    }
 
    static bool IsApproximatelyEqual(double value1, double value2, double epsilon)
@@ -30,11 +30,11 @@ public class Example
 
       // Handle zero to avoid division by zero
       double divisor = Math.Max(value1, value2);
-      if (divisor.Equals(0)) 
+      if (divisor.Equals(0))
          divisor = Math.Min(value1, value2);
-      
-      return Math.Abs((value1 - value2) / divisor) <= epsilon;           
-   } 
+
+      return Math.Abs((value1 - value2) / divisor) <= epsilon;
+   }
 }
 // The example displays the following output:
 //       1 = 0.99999999999999989: False

@@ -31,7 +31,7 @@ namespace GeneratPathExample
 
             // Get the meta data for the member to be used in the query.
             MemberInfo[] mi4 = t2.GetMember("Items");
-            
+
             GenerateXPath(t2, mi4);
 
             Console.ReadLine();
@@ -53,8 +53,8 @@ namespace GeneratPathExample
             // Display the namespaces and prefixes used in the data contract.
             foreach (string s in xname)
                 Console.WriteLine("{0}  = {1}", s, xname.LookupNamespace(s));
-           
-            Console.WriteLine();       
+
+            Console.WriteLine();
         }
     }
 

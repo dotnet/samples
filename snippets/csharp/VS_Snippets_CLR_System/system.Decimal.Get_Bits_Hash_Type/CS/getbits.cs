@@ -11,19 +11,19 @@ class Example
                            123456789M, 0.123456789M, 0.000000000123456789M,
                            0.000000000000000000123456789M, 4294967295M,
                            18446744073709551615M, Decimal.MaxValue,
-                           Decimal.MinValue, -7.9228162514264337593543950335M }; 
-      
-      Console.WriteLine("{0,31}  {1,10:X8}{2,10:X8}{3,10:X8}{4,10:X8}", 
-                        "Argument", "Bits[3]", "Bits[2]", "Bits[1]", 
+                           Decimal.MinValue, -7.9228162514264337593543950335M };
+
+      Console.WriteLine("{0,31}  {1,10:X8}{2,10:X8}{3,10:X8}{4,10:X8}",
+                        "Argument", "Bits[3]", "Bits[2]", "Bits[1]",
                         "Bits[0]" );
-      Console.WriteLine( "{0,31}  {1,10:X8}{2,10:X8}{3,10:X8}{4,10:X8}", 
-                         "--------", "-------", "-------", "-------", 
+      Console.WriteLine( "{0,31}  {1,10:X8}{2,10:X8}{3,10:X8}{4,10:X8}",
+                         "--------", "-------", "-------", "-------",
                          "-------" );
 
       // Iterate each element and display its binary representation
       foreach (var value in values) {
         int[] bits = decimal.GetBits(value);
-        Console.WriteLine("{0,31}  {1,10:X8}{2,10:X8}{3,10:X8}{4,10:X8}", 
+        Console.WriteLine("{0,31}  {1,10:X8}{2,10:X8}{3,10:X8}{4,10:X8}",
                           value, bits[3], bits[2], bits[1], bits[0]);
       }
    }

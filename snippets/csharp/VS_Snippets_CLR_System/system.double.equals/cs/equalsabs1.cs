@@ -9,7 +9,7 @@ public class Example
       double value2 = 0;
       for (int ctr = 0; ctr < 10; ctr++)
          value2 += .1;
-         
+
       Console.WriteLine("{0:R} = {1:R}: {2}", value1, value2,
                         HasMinimalDifference(value1, value2, 1));
    }
@@ -18,13 +18,13 @@ public class Example
    {
       long lValue1 = BitConverter.DoubleToInt64Bits(value1);
       long lValue2 = BitConverter.DoubleToInt64Bits(value2);
-      
+
       // If the signs are different, return false except for +0 and -0.
       if ((lValue1 >> 63) != (lValue2 >> 63))
       {
          if (value1 == value2)
             return true;
-          
+
          return false;
       }
 

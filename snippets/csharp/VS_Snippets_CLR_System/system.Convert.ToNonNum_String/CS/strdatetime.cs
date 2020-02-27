@@ -6,22 +6,22 @@ using System.Globalization;
 class StringToDateTimeDemo
 {
     const string lineFmt = "{0,-18}{1,-12}{2}";
-    
+
     // Get the exception type name; remove the namespace prefix.
     public static string GetExceptionType( Exception ex )
     {
         string exceptionType = ex.GetType( ).ToString( );
-        return exceptionType.Substring( 
+        return exceptionType.Substring(
             exceptionType.LastIndexOf( '.' ) + 1 );
     }
 
     public static void StringToDateTime( string cultureName )
     {
-        string[ ] dateStrings = {         "01/02/03", 
-            "2001/02/03",  "01/2002/03",  "01/02/2003", 
+        string[ ] dateStrings = {         "01/02/03",
+            "2001/02/03",  "01/2002/03",  "01/02/2003",
             "21/02/03",    "01/22/03",    "01/02/23" };
         CultureInfo culture = new CultureInfo( cultureName );
-            
+
         Console.WriteLine( );
 
         // Convert each string in the dateStrings array.
@@ -37,7 +37,7 @@ class StringToDateTimeDemo
                 // Convert the string to a DateTime object.
                 dateTimeValue = Convert.ToDateTime( dateStr, culture );
 
-                // Display the DateTime object in a fixed format 
+                // Display the DateTime object in a fixed format
                 // if Convert succeeded.
                 Console.WriteLine( "{0:yyyy-MMM-dd}", dateTimeValue );
             }
@@ -48,7 +48,7 @@ class StringToDateTimeDemo
             }
         }
     }
-    
+
     public static void Main( )
     {
         Console.WriteLine( "This example of " +
@@ -57,9 +57,9 @@ class StringToDateTimeDemo
             "converted \nto DateTime objects using formatting " +
             "information from different \ncultures, and then the " +
             "strings are displayed in a \nculture-invariant form.\n" );
-        Console.WriteLine( lineFmt, "Date String", "Culture", 
+        Console.WriteLine( lineFmt, "Date String", "Culture",
             "DateTime or Exception" );
-        Console.WriteLine( lineFmt, "-----------", "-------", 
+        Console.WriteLine( lineFmt, "-----------", "-------",
             "---------------------" );
 
         StringToDateTime( "en-US" );

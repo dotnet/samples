@@ -23,7 +23,7 @@ class Program
             Console.WriteLine(e.Message);
         }
 
-        // Create a new TripleDES key. 
+        // Create a new TripleDES key.
         TripleDESCryptoServiceProvider tDESkey = new TripleDESCryptoServiceProvider();
 
         try
@@ -58,7 +58,7 @@ class Program
 
     public static void Encrypt(XmlDocument Doc, string ElementToEncrypt, SymmetricAlgorithm Alg, string KeyName)
     {
-        // Check the arguments.  
+        // Check the arguments.
         if (Doc == null)
             throw new ArgumentNullException("Doc");
         if (ElementToEncrypt == null)
@@ -80,8 +80,8 @@ class Program
         }
 
         //////////////////////////////////////////////////
-        // Create a new instance of the EncryptedXml class 
-        // and use it to encrypt the XmlElement with the 
+        // Create a new instance of the EncryptedXml class
+        // and use it to encrypt the XmlElement with the
         // symmetric key.
         //////////////////////////////////////////////////
 
@@ -103,7 +103,7 @@ class Program
 
     public static void Decrypt(XmlDocument Doc, SymmetricAlgorithm Alg, string KeyName)
     {
-        // Check the arguments.  
+        // Check the arguments.
         if (Doc == null)
             throw new ArgumentNullException("Doc");
         if (Alg == null)

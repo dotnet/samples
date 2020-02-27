@@ -7,7 +7,7 @@ class Program
 {
     static void Main()
     {
-        OdbcConnectionStringBuilder builder = 
+        OdbcConnectionStringBuilder builder =
             new OdbcConnectionStringBuilder();
         builder.Driver = "Microsoft Access Driver (*.mdb)";
 
@@ -24,7 +24,7 @@ class Program
         // default values.
         builder.Clear();
 
-        // Pass the OdbcConnectionStringBuilder an existing 
+        // Pass the OdbcConnectionStringBuilder an existing
         // connection string, and you can retrieve and
         // modify any of the elements.
         builder.ConnectionString =
@@ -32,7 +32,7 @@ class Program
             "hostname=SampleServerName;port=SamplePortNum;" +
             "protocol=TCPIP;uid=Admin;pwd=pass!word1";
 
-        Console.WriteLine("protocol = " 
+        Console.WriteLine("protocol = "
             + builder["protocol"].ToString());
         Console.WriteLine();
 
@@ -40,7 +40,7 @@ class Program
         builder["uid"] = "NewUser";
         builder["pwd"] = "Pass@word2";
 
-        // Call the Remove method to remove items from 
+        // Call the Remove method to remove items from
         // the collection of key/value pairs.
         builder.Remove("port");
 
@@ -50,7 +50,7 @@ class Program
         Console.WriteLine(builder.ConnectionString);
         Console.WriteLine();
 
-        // Setting the indexer adds the associated value, if 
+        // Setting the indexer adds the associated value, if
         // necessary.
         builder["NewKey"] = "newValue";
         Console.WriteLine(builder.ConnectionString);

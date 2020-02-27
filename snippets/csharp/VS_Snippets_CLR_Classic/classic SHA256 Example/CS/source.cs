@@ -26,7 +26,7 @@ public class HashDirectory
                 // Compute and print the hash values for each file in directory.
                 foreach (FileInfo fInfo in files)
                 {
-                    try { 
+                    try {
                         // Create a fileStream for the file.
                         FileStream fileStream = fInfo.Open(FileMode.Open);
                         // Be sure it's positioned to the beginning of the stream.

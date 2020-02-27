@@ -15,12 +15,12 @@ public class Sample {
 
     XmlNode root = doc.FirstChild;
 
-    //Create a deep clone.  The cloned node 
+    //Create a deep clone.  The cloned node
     //includes the child nodes.
     XmlNode deep = root.CloneNode(true);
     Console.WriteLine(deep.OuterXml);
 
-    //Create a shallow clone.  The cloned node does not 
+    //Create a shallow clone.  The cloned node does not
     //include the child nodes, but does include its attribute.
     XmlNode shallow = root.CloneNode(false);
     Console.WriteLine(shallow.OuterXml);

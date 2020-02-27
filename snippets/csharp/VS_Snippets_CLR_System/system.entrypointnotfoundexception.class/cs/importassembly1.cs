@@ -13,7 +13,7 @@ public class Example
    }
 }
 // The example displays the following output:
-//    Unhandled Exception: System.EntryPointNotFoundException: Unable to find an entry point 
+//    Unhandled Exception: System.EntryPointNotFoundException: Unable to find an entry point
 //    named 'GoodMorning' in DLL 'StringUtilities.dll'.
 //       at Example.GoodMorning(String& name)
 //       at Example.Main()

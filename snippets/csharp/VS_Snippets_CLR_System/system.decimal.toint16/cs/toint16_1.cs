@@ -6,19 +6,19 @@ class Example
    public static void Main( )
    {
       decimal[] values = { 123m, new Decimal(123000, 0, 0, false, 3),
-                           123.999m, 65535.999m, 65536m,             
-                           32767.999m, 32768m, -0.999m,              
+                           123.999m, 65535.999m, 65536m,
+                           32767.999m, 32768m, -0.999m,
                            -1m,  -32768.999m, -32769m };
 
       foreach (var value in values) {
          try {
             short number = Decimal.ToInt16(value);
-            Console.WriteLine("{0} --> {1}", value, number);       
+            Console.WriteLine("{0} --> {1}", value, number);
          }
          catch (OverflowException e)
          {
              Console.WriteLine("{0}: {1}", e.GetType().Name, value);
-         }   
+         }
       }
    }
 }

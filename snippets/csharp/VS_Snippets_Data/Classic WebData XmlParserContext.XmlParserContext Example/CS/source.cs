@@ -26,10 +26,10 @@ public class Sample
             //Create the XmlParserContext.
             XmlParserContext context = new XmlParserContext(null, nsmgr, null, XmlSpace.None);
 
-            //Implement the reader. 
+            //Implement the reader.
             reader = new XmlTextReader(xmlFrag, XmlNodeType.Element, context);
 
-            //Parse the XML fragment.  If they exist, display the   
+            //Parse the XML fragment.  If they exist, display the
             //prefix and namespace URI of each element.
             while (reader.Read())
             {

@@ -16,8 +16,8 @@ public class Sample
     //Create a new node and add it to the document.
     XmlNode elem = doc.CreateNode(XmlNodeType.Element, "price", null);
     elem.InnerText = "19.95";
-    doc.DocumentElement.AppendChild(elem); 
-    
+    doc.DocumentElement.AppendChild(elem);
+
     Console.WriteLine("Display the modified XML...");
     doc.Save(Console.Out);
   }

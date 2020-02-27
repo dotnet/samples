@@ -11,7 +11,7 @@ public class TestDelegate
       OutputTarget output = new OutputTarget();
       WriteMethod methodCall = output.SendToFile;
       if (methodCall())
-         Console.WriteLine("Success!"); 
+         Console.WriteLine("Success!");
       else
          Console.WriteLine("File write operation failed.");
    }
@@ -28,7 +28,7 @@ public class OutputTarget
          sw.WriteLine("Hello, World!");
          sw.Close();
          return true;
-      }  
+      }
       catch
       {
          return false;

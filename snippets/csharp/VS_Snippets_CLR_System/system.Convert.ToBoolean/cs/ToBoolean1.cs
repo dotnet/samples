@@ -5,19 +5,19 @@ public class BooleanConversion
 {
    public static void Main()
    {
-      String[] values = { null, String.Empty, "true", "TrueString", 
+      String[] values = { null, String.Empty, "true", "TrueString",
                           "False", "    false    ", "-1", "0" };
       foreach (var value in values) {
          try
          {
-            Console.WriteLine("Converted '{0}' to {1}.", value,  
+            Console.WriteLine("Converted '{0}' to {1}.", value,
                               Convert.ToBoolean(value));
          }
          catch (FormatException)
          {
             Console.WriteLine("Unable to convert '{0}' to a Boolean.", value);
          }
-      }   
+      }
    }
 }
 // The example displays the following output:

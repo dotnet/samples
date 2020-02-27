@@ -5,23 +5,23 @@ using System;
 class BytesToCharDemo
 {
     const string formatter = "{0,5}{1,17}{2,8}";
- 
+
     // Convert two byte array elements to a char and display it.
     public static void BAToChar( byte[] bytes, int index )
     {
         char value = BitConverter.ToChar( bytes, index );
 
-        Console.WriteLine( formatter, index, 
+        Console.WriteLine( formatter, index,
             BitConverter.ToString( bytes, index, 2 ), value );
     }
-       
+
     public static void Main( )
     {
         byte[] byteArray = {
-             32,   0,   0,  42,   0,  65,   0, 125,   0, 
+             32,   0,   0,  42,   0,  65,   0, 125,   0,
             197,   0, 168,   3,  41,   4, 172,  32 };
 
-        Console.WriteLine( 
+        Console.WriteLine(
             "This example of the BitConverter.ToChar( byte[ ], " +
             "int ) \nmethod generates the following output. It " +
             "converts \nelements of a byte array to char values.\n" );
@@ -31,7 +31,7 @@ class BytesToCharDemo
         Console.WriteLine( );
         Console.WriteLine( formatter, "index", "array elements", "char" );
         Console.WriteLine( formatter, "-----", "--------------", "----" );
-          
+
         // Convert byte array elements to char values.
         BAToChar( byteArray, 0 );
         BAToChar( byteArray, 1 );

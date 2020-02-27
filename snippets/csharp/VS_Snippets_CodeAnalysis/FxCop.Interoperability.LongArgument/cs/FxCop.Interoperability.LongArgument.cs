@@ -8,7 +8,7 @@ namespace InteroperabilityLibrary
    [ComVisible(true)]
    public class SomeClass
    {
-      public void LongArgument(long argument) {} 
+      public void LongArgument(long argument) {}
    }
 }
 //</Snippet1>

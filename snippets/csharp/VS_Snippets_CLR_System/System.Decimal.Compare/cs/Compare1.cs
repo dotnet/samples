@@ -10,18 +10,18 @@ public class Example
    {
       decimal value1 = Decimal.MaxValue;
       decimal value2 = value1 - .01m;
-      Console.WriteLine("{0} {2} {1}", value1, value2, 
-                        (Relationship) Decimal.Compare(value1, value2));   
-   
+      Console.WriteLine("{0} {2} {1}", value1, value2,
+                        (Relationship) Decimal.Compare(value1, value2));
+
       value2 = value1 / 12m - .1m;
       value1 = value1 / 12m;
-      Console.WriteLine("{0} {2} {1}", value1, value2, 
-                        (Relationship) Decimal.Compare(value1, value2));   
-   
+      Console.WriteLine("{0} {2} {1}", value1, value2,
+                        (Relationship) Decimal.Compare(value1, value2));
+
       value1 = value1 - .2m;
       value2 = value2 + .1m;
-      Console.WriteLine("{0} {2} {1}", value1, value2, 
-                        (Relationship) Decimal.Compare(value1, value2));   
+      Console.WriteLine("{0} {2} {1}", value1, value2,
+                        (Relationship) Decimal.Compare(value1, value2));
    }
 }
 // The example displays the following output:

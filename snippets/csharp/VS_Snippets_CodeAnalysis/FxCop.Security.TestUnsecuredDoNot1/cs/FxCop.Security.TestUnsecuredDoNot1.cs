@@ -17,18 +17,18 @@ namespace TestUnsecuredMembers
       static void Main(string[] args)
       {
          string value = null;
-         try 
+         try
          {
             value = DoNotIndirectlyExposeMethodsWithLinkDemands.DomainInformation();
          }
-         catch (SecurityException e) 
+         catch (SecurityException e)
          {
             Console.WriteLine(
                "Call to unsecured member was stopped by code access security! {0}",
                e.Message);
             throw;
          }
-         if (value != null) 
+         if (value != null)
          {
             Console.WriteLine("Value from unsecured member: {0}", value);
          }
@@ -49,14 +49,14 @@ namespace SecurityRulesLibrary
       // Library method with link demand.
       // This method holds its immediate callers responsible for securing the information.
       // Because a caller must have unrestricted permission, the method asserts read permission
-      // in case some caller in the stack does not have this permission. 
+      // in case some caller in the stack does not have this permission.
 
       [EnvironmentPermissionAttribute(SecurityAction.LinkDemand, Unrestricted=true)]
       public static string EnvironmentSetting(string environmentVariable)
       {
          EnvironmentPermission envPermission = new EnvironmentPermission( EnvironmentPermissionAccess.Read,environmentVariable);
          envPermission.Assert();
-  
+
          return Environment.GetEnvironmentVariable(environmentVariable);
       }
    }

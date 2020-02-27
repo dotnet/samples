@@ -18,7 +18,7 @@ public class Sample
     // Remove all attributes from the root element.
     if (root.HasAttributes)
       root.RemoveAllAttributes();
-    
+
     Console.WriteLine("Display the modified XML...");
     Console.WriteLine(doc.InnerXml);
   }

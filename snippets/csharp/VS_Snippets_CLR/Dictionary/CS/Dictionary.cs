@@ -1,6 +1,6 @@
-﻿//Types:System.Collections.DictionaryEntry 
-//Types:System.Collections.IDictionary 
-//Types:System.Collections.IDictionaryEnumerator 
+﻿//Types:System.Collections.DictionaryEntry
+//Types:System.Collections.IDictionary
+//Types:System.Collections.IDictionaryEnumerator
 //<snippet1>
 using System;
 using System.Collections;
@@ -45,10 +45,10 @@ public class SimpleDictionary : IDictionary
             // If the key is found, slide all the items up.
             Array.Copy(items, index + 1, items, index, ItemsInUse - index - 1);
             ItemsInUse--;
-        } 
+        }
         else
         {
-            // If the key is not in the dictionary, just return. 
+            // If the key is not in the dictionary, just return.
         }
     }
     //</snippet7>
@@ -56,7 +56,7 @@ public class SimpleDictionary : IDictionary
     public void Clear() { ItemsInUse = 0; }
     //</snippet8>
     //<snippet9>	
-    public void Add(object key, object value) 
+    public void Add(object key, object value)
     {
         // Add the new key/value pair even if this key already exists in the dictionary.
         if (ItemsInUse == items.Length)
@@ -77,7 +77,7 @@ public class SimpleDictionary : IDictionary
         }
     }
     //</snippet10>
-    //<snippet11>  
+    //<snippet11>
     public ICollection Values
     {
         get
@@ -94,14 +94,14 @@ public class SimpleDictionary : IDictionary
     public object this[object key]
     {
         get
-        {   
+        {
             // If this key is in the dictionary, return its value.
             Int32 index;
             if (TryGetIndexOfKey(key, out index))
             {
                 // The key was found; return its value.
                 return items[index].Value;
-            } 
+            }
             else
             {
                 // The key was not found; return null.
@@ -111,13 +111,13 @@ public class SimpleDictionary : IDictionary
 
         set
         {
-            // If this key is in the dictionary, change its value. 
+            // If this key is in the dictionary, change its value.
             Int32 index;
             if (TryGetIndexOfKey(key, out index))
             {
                 // The key was found; change its value.
                 items[index].Value = value;
-            } 
+            }
             else
             {
                 // This key is not in the dictionary; add this key/value pair.
@@ -133,7 +133,7 @@ public class SimpleDictionary : IDictionary
             // If the key is found, return true (the index is also returned).
             if (items[index].Key.Equals(key)) return true;
         }
-      
+
         // Key not found, return false (index should be ignored by the caller).
         return false;
     }
@@ -203,7 +203,7 @@ public class SimpleDictionary : IDictionary
     #endregion
 
     #region IEnumerable Members
-    IEnumerator IEnumerable.GetEnumerator() 
+    IEnumerator IEnumerable.GetEnumerator()
     {
         // Construct and return an enumerator.
         return ((IDictionary)this).GetEnumerator();

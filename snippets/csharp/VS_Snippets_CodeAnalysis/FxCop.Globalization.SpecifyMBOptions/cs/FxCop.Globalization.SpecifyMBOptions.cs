@@ -60,7 +60,7 @@ namespace GlobalizationLibrary
         private static bool IsRightToLeft(IWin32Window owner)
         {
             Control control = owner as Control;
-            
+
             if (control != null)
             {
                 return control.RightToLeft == RightToLeft.Yes;

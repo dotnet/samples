@@ -9,14 +9,14 @@ public class Example
    {
       // Initialize flag variables.
       bool isRedirected = false;
-      bool isBoth = false; 
+      bool isBoth = false;
       String fileName = "";
       StreamWriter sw = null;
-      
+
       // Get any command line arguments.
       String[] args = Environment.GetCommandLineArgs();
       // Handle any arguments.
-      if (args.Length > 1) { 
+      if (args.Length > 1) {
          for (int ctr = 1; ctr < args.Length; ctr++) {
             String arg = args[ctr];
             if (arg.StartsWith("/") || arg.StartsWith("-")) {
@@ -35,26 +35,26 @@ public class Example
                      isBoth = true;
                      break;
                   default:
-                     ShowSyntax(String.Format("The {0} switch is not supported", 
+                     ShowSyntax(String.Format("The {0} switch is not supported",
                                               args[ctr]));
                      return;
                }
-            }   
+            }
          }
       }
 
       // If isBoth is True, isRedirected must be True.
-      if (isBoth &&  ! isRedirected) { 
+      if (isBoth &&  ! isRedirected) {
          ShowSyntax("The /f switch must be used if /b is used.");
          return;
       }
 
       // Handle output.
       if (isRedirected) {
-         sw = new StreamWriter(fileName); 
+         sw = new StreamWriter(fileName);
          if (!isBoth)
-            Console.SetOut(sw); 
-      }     
+            Console.SetOut(sw);
+      }
       String msg = String.Format("Application began at {0}", DateTime.Now);
       Console.WriteLine(msg);
       if (isBoth) sw.WriteLine(msg);
@@ -64,7 +64,7 @@ public class Example
       if (isBoth) sw.WriteLine(msg);
       if (isRedirected) sw.Close();
    }
-   
+
    private static void ShowSyntax(String errMsg)
    {
       Console.WriteLine(errMsg);
@@ -78,12 +78,12 @@ public class Evaluation
    public void SomeMethod()
    {
       bool booleanValue = false;
-      
+
       // <Snippet11>
       if (booleanValue) {
       // </Snippet11>
       }
-      
+
       // <Snippet12>
       if (booleanValue) {
       // </Snippet12>

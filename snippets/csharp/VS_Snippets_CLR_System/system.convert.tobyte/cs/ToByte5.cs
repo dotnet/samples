@@ -5,17 +5,17 @@ public class Example
 {
    public static void Main()
    {
-      String[] values = { null, "", "0xC9", "C9", "101", "16.3", 
+      String[] values = { null, "", "0xC9", "C9", "101", "16.3",
                           "$12", "$12.01", "-4", "1,032", "255",
                           "   16  " };
       foreach (var value in values) {
          try {
             byte number = Convert.ToByte(value);
-            Console.WriteLine("'{0}' --> {1}", 
+            Console.WriteLine("'{0}' --> {1}",
                               value == null ? "<null>" : value, number);
          }
          catch (FormatException) {
-            Console.WriteLine("Bad Format: '{0}'", 
+            Console.WriteLine("Bad Format: '{0}'",
                               value == null ? "<null>" : value);
          }
          catch (OverflowException) {

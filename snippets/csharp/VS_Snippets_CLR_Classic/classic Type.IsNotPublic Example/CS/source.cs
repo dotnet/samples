@@ -4,9 +4,9 @@ using System.IO;
 using System.Reflection;
 
 class Example
-{ 
+{
     public static void Main()
-    { 
+    {
         // Get the Type and MemberInfo.
         Type t = Type.GetType("System.IO.File");
         MemberInfo[] members = t.GetMembers();
@@ -23,7 +23,7 @@ class Example
 // </Snippet1>
 
 // <Snippet2>
-public class A 
+public class A
 {
     public class B { }
     private class C { }

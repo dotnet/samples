@@ -82,7 +82,7 @@ public class SamplesSortedList
         Console.WriteLine("        -KEY-   -VALUE-");
         for (int i = 0; i < myList.Count; i++)
         {
-            Console.WriteLine("        {0,-6}: {1}", 
+            Console.WriteLine("        {0,-6}: {1}",
                 myList.GetKey(i), myList.GetByIndex(i));
         }
         Console.WriteLine();
@@ -90,7 +90,7 @@ public class SamplesSortedList
 }
 
 
-/* 
+/*
 This code produces the following output.  Results vary depending on the system's culture settings.
 
 mySL1 (default):

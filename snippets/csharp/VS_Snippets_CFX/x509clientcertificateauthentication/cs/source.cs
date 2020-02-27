@@ -22,11 +22,11 @@ namespace Example
             // Create a service host.
             Uri httpUri = new Uri("http://localhost/Calculator");
             ServiceHost sh = new ServiceHost(typeof(Calculator), httpUri);
-            
+
             // Get a reference to the authentication object.
             X509ClientCertificateAuthentication myAuthProperties =
                 sh.Credentials.ClientCertificate.Authentication;
-            
+
             // Configure peer trust.
             myAuthProperties.CertificateValidationMode =
                 X509CertificateValidationMode.PeerTrust;
@@ -37,8 +37,8 @@ namespace Example
             myAuthProperties.CertificateValidationMode =
                 X509CertificateValidationMode.Custom;
 
-            // Specify a custom certificate validator (not shown here) that inherits 
-            // from the X509CertificateValidator class. 
+            // Specify a custom certificate validator (not shown here) that inherits
+            // from the X509CertificateValidator class.
             // creds.ClientCertificate.Authentication.CustomCertificateValidator =
             //    new MyCertificateValidator();
             //</snippet1>
@@ -54,11 +54,11 @@ namespace Example
             // Get a reference to the authentication object.
             X509ClientCertificateAuthentication myAuthProperties =
                 sh.Credentials.ClientCertificate.Authentication;
-                        
+
             // Configure custom certificate validation.
             myAuthProperties.CertificateValidationMode =
                 X509CertificateValidationMode.Custom;
-            // Specify a custom certificate validator (not shown here) that inherits 
+            // Specify a custom certificate validator (not shown here) that inherits
             // from the X509CertificateValidator class.
             // creds.ClientCertificate.Authentication.CustomCertificateValidator =
             //    new MyCertificateValidator();
@@ -73,8 +73,8 @@ namespace Example
             ServiceHost sh = new ServiceHost(typeof(Calculator), httpUri);
             // Create a binding that uses a certificate.
             WSHttpBinding b = new WSHttpBinding(SecurityMode.Message);
-            b.Security.Message.ClientCredentialType = 
-                MessageCredentialType.Certificate; 
+            b.Security.Message.ClientCredentialType =
+                MessageCredentialType.Certificate;
 
             // Get a reference to the authentication object.
             X509ClientCertificateAuthentication myAuthProperties =
@@ -85,7 +85,7 @@ namespace Example
         }
 
         private void Snippet4()
-        {   
+        {
             //<snippet4>
             // Create a service host.
             Uri httpUri = new Uri("http://localhost/Calculator");
@@ -113,14 +113,14 @@ namespace Example
             // Create a binding that uses a certificate.
             WSHttpBinding b = new WSHttpBinding(SecurityMode.Message);
             b.Security.Message.ClientCredentialType =
-                MessageCredentialType.Certificate; 
-            
+                MessageCredentialType.Certificate;
+
             // Get a reference to the authentication object.
             X509ClientCertificateAuthentication myAuthProperties =
                 sh.Credentials.ClientCertificate.Authentication;
-            
+
             // Configure ChainTrust with no revocation check.
-            myAuthProperties.CertificateValidationMode = 
+            myAuthProperties.CertificateValidationMode =
                 X509CertificateValidationMode.ChainTrust;
             myAuthProperties.RevocationMode = X509RevocationMode.NoCheck;
             //</snippet5>
@@ -136,7 +136,7 @@ namespace Example
             // Create a binding that uses a certificate.
             WSHttpBinding b = new WSHttpBinding(SecurityMode.Message);
             b.Security.Message.ClientCredentialType =
-                MessageCredentialType.Certificate; 
+                MessageCredentialType.Certificate;
 
             // Get a reference to the authentication object.
             X509ClientCertificateAuthentication myAuthProperties =

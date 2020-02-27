@@ -55,7 +55,7 @@ namespace System.CodeDom
             s.Close();
 
             CompilerParameters opt = new CompilerParameters(new string[]{
-                                      "System.dll", 
+                                      "System.dll",
                                       "System.Xml.dll",
                                       "System.Windows.Forms.dll",
                                       "System.Data.dll",
@@ -106,8 +106,8 @@ namespace System.CodeDom
             class1.Name = "MyDictionary";
             class1.BaseTypes.Add(new CodeTypeReference("Dictionary",
                                       new CodeTypeReference[] {
-                                          new CodeTypeReference("TKey"),    
-                                          new CodeTypeReference("TValue"),    
+                                          new CodeTypeReference("TKey"),
+                                          new CodeTypeReference("TValue"),
                                      }));
             //<Snippet2>
             //<Snippet10>
@@ -174,8 +174,8 @@ namespace System.CodeDom
                 "MyDictionary",
                 new CodeTypeReference[] {
                     new CodeTypeReference(typeof(int)),
-                    new CodeTypeReference("List", 
-                       new CodeTypeReference[] 
+                    new CodeTypeReference("List",
+                       new CodeTypeReference[]
                             {new CodeTypeReference("System.String") })});
 
             methodMain.Statements.Add(

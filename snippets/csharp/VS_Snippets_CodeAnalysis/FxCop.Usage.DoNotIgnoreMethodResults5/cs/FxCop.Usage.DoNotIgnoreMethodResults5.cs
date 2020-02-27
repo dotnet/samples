@@ -11,7 +11,7 @@ namespace Samples
 
         public static Book CreateBook()
         {
-            // Violates this rule            
+            // Violates this rule
             new Book();
             return new Book();
         }

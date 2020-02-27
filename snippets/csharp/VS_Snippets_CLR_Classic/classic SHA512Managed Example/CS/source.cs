@@ -10,10 +10,10 @@ public class Sample
  protected void Method()
  {
 // <Snippet1>
-byte[] data = new byte[DATA_SIZE]; 
+byte[] data = new byte[DATA_SIZE];
 byte[] result;
- 
-SHA512 shaM = new SHA512Managed(); 
+
+SHA512 shaM = new SHA512Managed();
 result = shaM.ComputeHash(data);
 // </Snippet1>
  }

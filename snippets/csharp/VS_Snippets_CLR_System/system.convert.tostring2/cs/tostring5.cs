@@ -9,22 +9,22 @@ public class Temperature
    {
       this.m_Temp = temperature;
    }
-   
+
    public decimal Celsius
    {
-      get { return this.m_Temp; }   
+      get { return this.m_Temp; }
    }
-   
+
    public decimal Kelvin
    {
-      get { return this.m_Temp + 273.15m; }    
+      get { return this.m_Temp + 273.15m; }
    }
-   
+
    public decimal Fahrenheit
    {
       get { return Math.Round((decimal) (this.m_Temp * 9 / 5 + 32), 2); }
    }
-   
+
    public override string ToString()
    {
       return m_Temp.ToString("N2") + " °C";
@@ -38,7 +38,7 @@ public class Example
       Temperature cold = new Temperature(-40);
       Temperature freezing = new Temperature(0);
       Temperature boiling = new Temperature(100);
-      
+
       Console.WriteLine(Convert.ToString(cold, null));
       Console.WriteLine(Convert.ToString(freezing, null));
       Console.WriteLine(Convert.ToString(boiling, null));

@@ -31,7 +31,7 @@ class Class1
             // is able to survive row deletion.
             bool isRowDeleted = false;
             while (enumerator.MoveNext())
-            { 
+            {
                 DbDataRecord dataRecord = (DbDataRecord)enumerator.Current;
 
                 // While the enumerator is active, delete a row.

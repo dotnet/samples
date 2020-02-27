@@ -7,37 +7,37 @@ public class Example
    {
       ConsoleKeyInfo key;
       bool moved = false;
-            
+
       Console.BufferWidth += 4;
       Console.Clear();
-      
+
       ShowConsoleStatistics();
-      do 
+      do
       {
          key = Console.ReadKey(true);
          if (key.Key == ConsoleKey.LeftArrow)
          {
             int pos = Console.WindowLeft - 1;
             if (pos >= 0 && pos + Console.WindowWidth <= Console.BufferWidth)
-            { 
+            {
                Console.WindowLeft = pos;
                moved = true;
-            }       
-         } 
+            }
+         }
          else if (key.Key == ConsoleKey.RightArrow)
          {
             int pos = Console.WindowLeft + 1;
             if (pos + Console.WindowWidth <= Console.BufferWidth)
-            { 
+            {
                Console.WindowLeft = pos;
                moved = true;
             }
          }
          if (moved)
-         { 
-            ShowConsoleStatistics(); 
+         {
+            ShowConsoleStatistics();
             moved = false;
-         }   
+         }
          Console.WriteLine();
       } while (true);
    }

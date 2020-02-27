@@ -46,72 +46,72 @@ namespace WF_Snippets
             // <snippet188>
             this.StartState = new System.Workflow.Activities.StateActivity();
             // </snippet188>
-            // 
+            //
             // setCompletedState
             //
-            // <snippet189> 
+            // <snippet189>
             this.setCompletedState.Name = "setCompletedState";
             this.setCompletedState.TargetStateName = "CompletedState";
             // </snippet189>
-            // 
+            //
             // code2
-            // 
+            //
             this.code2.Name = "code2";
             this.code2.ExecuteCode += new System.EventHandler(this.Code2Handler);
-            // 
+            //
             // state1Delay
             //
-            // <snippet190> 
+            // <snippet190>
             this.state1Delay.Name = "state1Delay";
             this.state1Delay.TimeoutDuration = System.TimeSpan.Parse("00:00:02");
             // </snippet190>
-            // 
+            //
             // setState1
-            // 
+            //
             this.setState1.Name = "setState1";
             this.setState1.TargetStateName = "state1";
-            // 
+            //
             // code1
-            // 
+            //
             this.code1.Name = "code1";
             this.code1.ExecuteCode += new System.EventHandler(this.Code1Handler);
-            // 
+            //
             // startStateDelay
-            // 
+            //
             this.startStateDelay.Name = "startStateDelay";
             this.startStateDelay.TimeoutDuration = System.TimeSpan.Parse("00:00:05");
-            // 
+            //
             // eventDriven2
-            // 
+            //
             this.eventDriven2.Activities.Add(this.state1Delay);
             this.eventDriven2.Activities.Add(this.code2);
             this.eventDriven2.Activities.Add(this.setCompletedState);
             this.eventDriven2.Name = "eventDriven2";
-            // 
+            //
             // eventDriven1
-            // 
+            //
             this.eventDriven1.Activities.Add(this.startStateDelay);
             this.eventDriven1.Activities.Add(this.code1);
             this.eventDriven1.Activities.Add(this.setState1);
             this.eventDriven1.Name = "eventDriven1";
-            // 
+            //
             // CompletedState
-            // 
+            //
             this.CompletedState.Name = "CompletedState";
             // </snippet184>
-            // 
+            //
             // state1
-            // 
+            //
             this.state1.Activities.Add(this.eventDriven2);
             this.state1.Name = "state1";
-            // 
+            //
             // StartState
-            // 
+            //
             this.StartState.Activities.Add(this.eventDriven1);
             this.StartState.Name = "StartState";
-            // 
+            //
             // StateMachineWorkflow
-            // 
+            //
             // <snippet191>
             this.Activities.Add(this.StartState);
             this.Activities.Add(this.state1);
@@ -176,9 +176,9 @@ namespace WF_Snippets
             this.rejecteIfElseBranch = new System.Workflow.Activities.IfElseBranchActivity();
             this.approve = new System.Workflow.Activities.CodeActivity();
             this.reject = new System.Workflow.Activities.CodeActivity();
-            // 
+            //
             // ifElseActivity
-            // 
+            //
             this.ifElseActivity.Activities.Add(this.approveIfElseBranch);
             this.ifElseActivity.Activities.Add(this.rejecteIfElseBranch);
             this.ifElseActivity.Name = "ifElseActivity";
@@ -468,69 +468,69 @@ namespace WF_Snippets
             this.POStatusListen = new System.Workflow.Activities.ListenActivity();
             this.CreatePO = new System.Workflow.Activities.CallExternalMethodActivity();
             // </snippet214>
-            // 
+            //
             // Timeout
-            // 
+            //
             this.Timeout.Name = "Timeout";
             this.Timeout.ExecuteCode += new System.EventHandler(this.OnTimeout);
-            // 
+            //
             // Delay
-            // 
+            //
             // <snippet215>
             this.Delay.Name = "Delay";
             this.Delay.TimeoutDuration = System.TimeSpan.Parse("00:00:05");
             // </snippet215>
-            // 
+            //
             // RejectPO
-            // 
+            //
             this.RejectPO.EventName = "OrderRejected";
             this.RejectPO.InterfaceType = typeof(IOrderService);
             this.RejectPO.Name = "RejectPO";
             this.RejectPO.Invoked += new System.EventHandler<System.Workflow.Activities.ExternalDataEventArgs>(this.OnRejectPO);
-            // 
+            //
             // ApprovePO
-            // 
+            //
             // <snippet216>
             this.ApprovePO.EventName = "OrderApproved";
             this.ApprovePO.InterfaceType = typeof(IOrderService);
             this.ApprovePO.Name = "ApprovePO";
             this.ApprovePO.Invoked += new System.EventHandler<System.Workflow.Activities.ExternalDataEventArgs>(this.OnApprovePO);
-            // </snippet216> 
-            // 
+            // </snippet216>
+            //
             // OnTimeoutEventDriven
-            // 
+            //
             this.OnTimeoutEventDriven.Activities.Add(this.Delay);
             this.OnTimeoutEventDriven.Activities.Add(this.Timeout);
             this.OnTimeoutEventDriven.Name = "OnTimeoutEventDriven";
-            // 
+            //
             // OnOrderRejectedEventDriven
-            // 
+            //
             this.OnOrderRejectedEventDriven.Activities.Add(this.RejectPO);
             this.OnOrderRejectedEventDriven.Name = "OnOrderRejectedEventDriven";
-            // 
+            //
             // OnOrderApprovedEventDriven
-            // 
+            //
             this.OnOrderApprovedEventDriven.Activities.Add(this.ApprovePO);
             this.OnOrderApprovedEventDriven.Name = "OnOrderApprovedEventDriven";
-            // 
+            //
             // POStatusListen
-            // 
+            //
             this.POStatusListen.Activities.Add(this.OnOrderApprovedEventDriven);
             this.POStatusListen.Activities.Add(this.OnOrderRejectedEventDriven);
             this.POStatusListen.Activities.Add(this.OnTimeoutEventDriven);
             this.POStatusListen.Name = "POStatusListen";
-            // 
+            //
             // CreatePO
-            // 
+            //
             // <snippet217>
             this.CreatePO.InterfaceType = typeof(IOrderService);
             this.CreatePO.MethodName = "CreateOrder";
             this.CreatePO.Name = "CreatePO";
             this.CreatePO.MethodInvoking += new System.EventHandler(this.OnBeforeCreateOrder);
             // </snippet217>
-            // 
+            //
             // PurchaseOrderWorkflow
-            // 
+            //
             this.Activities.Add(this.CreatePO);
             this.Activities.Add(this.POStatusListen);
             this.Name = "PurchaseOrderWorkflow";
@@ -604,7 +604,7 @@ namespace WF_Snippets
             System.Workflow.ComponentModel.WorkflowParameterBinding workflowparameterbinding1 = new System.Workflow.ComponentModel.WorkflowParameterBinding();
             System.Workflow.ComponentModel.ActivityBind activitybind2 = new System.Workflow.ComponentModel.ActivityBind();
             System.Workflow.ComponentModel.WorkflowParameterBinding workflowparameterbinding2 = new System.Workflow.ComponentModel.WorkflowParameterBinding();
-            
+
             // <snippet220>
             this.invokeWebService1.MethodName = "CreateOrder";
             this.invokeWebService1.Name = "invokeWebService1";

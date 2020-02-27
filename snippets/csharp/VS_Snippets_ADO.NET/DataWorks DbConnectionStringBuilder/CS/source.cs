@@ -21,18 +21,18 @@ namespace ConBuilderCS
             // Set up row-level locking.
             builder.Add("Jet OLEDB:Database Locking Mode", 1);
 
-            // The DbConnectionStringBuilder class 
-            // is database agnostic, so it's possible to 
-            // build any type of connection string using 
+            // The DbConnectionStringBuilder class
+            // is database agnostic, so it's possible to
+            // build any type of connection string using
             // this class.
 
-            // The ConnectionString property may have been 
+            // The ConnectionString property may have been
             // formatted by the DbConnectionStringBuilder class.
             OleDbConnection oledbConnect = new
                 OleDbConnection(builder.ConnectionString);
             Console.WriteLine(oledbConnect.ConnectionString);
 
-            // Use the same DbConnectionStringBuilder to create 
+            // Use the same DbConnectionStringBuilder to create
             // a SqlConnection object.
             builder.Clear();
             builder.Add("integrated security", true);
@@ -43,7 +43,7 @@ namespace ConBuilderCS
                 SqlConnection(builder.ConnectionString);
             Console.WriteLine(sqlConnect.ConnectionString);
 
-            // Pass the DbConnectionStringBuilder an existing 
+            // Pass the DbConnectionStringBuilder an existing
             // connection string, and you can retrieve and
             // modify any of the elements.
             builder.ConnectionString = "server=(local);user id=*******;" +
@@ -55,7 +55,7 @@ namespace ConBuilderCS
             // throw an exception.
             builder.Remove("BadItem");
 
-            // Setting the indexer adds the value if 
+            // Setting the indexer adds the value if
             // necessary.
             builder["Integrated Security"] = true;
             builder.Remove("password");

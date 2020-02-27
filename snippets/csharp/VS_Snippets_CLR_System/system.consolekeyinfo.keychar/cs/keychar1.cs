@@ -9,7 +9,7 @@ public class Example
       Console.BufferWidth = 80;
       Console.WindowWidth = Console.BufferWidth;
       Console.TreatControlCAsInput = true;
-      
+
       string inputString = String.Empty;
       ConsoleKeyInfo keyInfo;
 
@@ -17,10 +17,10 @@ public class Example
       do {
          keyInfo = Console.ReadKey(true);
          // Ignore if Alt or Ctrl is pressed.
-         if ((keyInfo.Modifiers & ConsoleModifiers.Alt) == ConsoleModifiers.Alt) 
+         if ((keyInfo.Modifiers & ConsoleModifiers.Alt) == ConsoleModifiers.Alt)
             continue;
          if ((keyInfo.Modifiers & ConsoleModifiers.Control) == ConsoleModifiers.Control)
-            continue; 
+            continue;
          // Ignore if KeyChar value is \u0000.
          if (keyInfo.KeyChar == '\u0000') continue;
          // Ignore tab key.
@@ -28,7 +28,7 @@ public class Example
          // Handle backspace.
          if (keyInfo.Key == ConsoleKey.Backspace) {
             // Are there any characters to erase?
-            if (inputString.Length >= 1) { 
+            if (inputString.Length >= 1) {
                // Determine where we are in the console buffer.
                int cursorCol = Console.CursorLeft - 1;
                int oldLength = inputString.Length;
@@ -48,7 +48,7 @@ public class Example
          Console.Write(keyInfo.KeyChar);
          inputString += keyInfo.KeyChar;
       } while (keyInfo.Key != ConsoleKey.Enter);
-      Console.WriteLine("\n\nYou entered:\n    {0}", 
+      Console.WriteLine("\n\nYou entered:\n    {0}",
                         String.IsNullOrEmpty(inputString) ? "<nothing>" : inputString);
    }
 }

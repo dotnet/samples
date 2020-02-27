@@ -1,10 +1,10 @@
 ﻿//<Snippet3>
-// Example for the Attribute.GetCustomAttribute( ParameterInfo, Type, Boolean ) 
+// Example for the Attribute.GetCustomAttribute( ParameterInfo, Type, Boolean )
 // method.
 using System;
 using System.Reflection;
 
-namespace NDP_UE_CS 
+namespace NDP_UE_CS
 {
     // Define a custom parameter attribute that takes a single message argument.
     [AttributeUsage( AttributeTargets.Parameter )]
@@ -27,7 +27,7 @@ namespace NDP_UE_CS
         }
     }
 
-    public class BaseClass 
+    public class BaseClass
     {
         // Assign an ArgumentUsage attribute to the strArray parameter.
         // Assign a ParamArray attribute to strList using the params keyword.
@@ -49,22 +49,22 @@ namespace NDP_UE_CS
         { }
     }
 
-    class CustomParamDemo 
+    class CustomParamDemo
     {
-        static void Main( ) 
+        static void Main( )
         {
-            Console.WriteLine( 
+            Console.WriteLine(
                 "This example of Attribute.GetCustomAttribute( Parameter" +
                 "Info, Type, Boolean )\ngenerates the following output." );
 
-            // Get the class type, and then get the MethodInfo object 
+            // Get the class type, and then get the MethodInfo object
             // for TestMethod to access its metadata.
             Type clsType = typeof(DerivedClass);
             MethodInfo mInfo = clsType.GetMethod("TestMethod");
 
             // Iterate through the ParameterInfo array for the method parameters.
             ParameterInfo[] pInfoArray = mInfo.GetParameters();
-            if (pInfoArray != null) 
+            if (pInfoArray != null)
             {
                 DisplayParameterAttributes( mInfo, pInfoArray, false );
                 DisplayParameterAttributes( mInfo, pInfoArray, true );
@@ -77,16 +77,16 @@ namespace NDP_UE_CS
         static void DisplayParameterAttributes( MethodInfo mInfo,
             ParameterInfo[] pInfoArray, bool includeInherited )
         {
-            Console.WriteLine( 
+            Console.WriteLine(
                 "\nParameter attribute information for method \"" +
-                "{0}\"\nincludes inheritance from base class: {1}.", 
+                "{0}\"\nincludes inheritance from base class: {1}.",
                 mInfo.Name, includeInherited ? "Yes" : "No" );
 
             // Display the attribute information for the parameters.
             foreach( ParameterInfo paramInfo in pInfoArray )
             {
                 // See if the ParamArray attribute is defined.
-                bool isDef = Attribute.IsDefined( paramInfo, 
+                bool isDef = Attribute.IsDefined( paramInfo,
                     typeof(ParamArrayAttribute));
 
                 if( isDef )
@@ -95,16 +95,16 @@ namespace NDP_UE_CS
                         "for \n    parameter {0} of method {1}.",
                         paramInfo.Name, mInfo.Name);
 
-                // See if ParamUsageAttribute is defined.  
+                // See if ParamUsageAttribute is defined.
                 // If so, display a message.
                 ArgumentUsageAttribute usageAttr = (ArgumentUsageAttribute)
-                    Attribute.GetCustomAttribute( paramInfo, 
+                    Attribute.GetCustomAttribute( paramInfo,
                         typeof(ArgumentUsageAttribute),
                         includeInherited );
 
                 if( usageAttr != null )
                 {
-                    Console.WriteLine( 
+                    Console.WriteLine(
                         "\n    The ArgumentUsage attribute is def" +
                         "ined for \n    parameter {0} of method {1}.",
                         paramInfo.Name, mInfo.Name );

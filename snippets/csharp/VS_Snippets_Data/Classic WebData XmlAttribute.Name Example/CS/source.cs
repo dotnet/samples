@@ -6,11 +6,11 @@ using System.Xml;
 public class Sample
 {
   public static void Main(){
-  
+
     XmlDocument doc = new XmlDocument();
     doc.LoadXml("<book xmlns:bk='urn:samples' bk:genre='novel'>" +
                 "<title>Pride And Prejudice</title>" +
-                "</book>");      
+                "</book>");
 
     //Create an attribute collection.
     XmlAttributeCollection attrColl = doc.DocumentElement.Attributes;

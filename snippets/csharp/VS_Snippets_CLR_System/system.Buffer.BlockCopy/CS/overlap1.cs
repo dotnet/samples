@@ -18,7 +18,7 @@ public class Example
       foreach (int value in arr)
          Console.Write("{0}  ", value);
       // The example displays the following output:
-      //       2  4  6  2  4  6  8  16  18  20      
+      //       2  4  6  2  4  6  8  16  18  20
       // </Snippet3>
    }
 
@@ -31,7 +31,7 @@ public class Example
       foreach (int value in arr)
          Console.Write("{0}  ", value);
       // The example displays the following output:
-      //       8  10  12  14  10  12  14  16  18  20      
+      //       8  10  12  14  10  12  14  16  18  20
       // </Snippet4>
    }
 }

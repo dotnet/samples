@@ -7,7 +7,7 @@ class Program
 {
     static void Main()
     {
-        SqlConnectionStringBuilder builder = 
+        SqlConnectionStringBuilder builder =
             new SqlConnectionStringBuilder();
         builder["Data Source"] = "(local)";
         builder["Integrated Security"] = true;

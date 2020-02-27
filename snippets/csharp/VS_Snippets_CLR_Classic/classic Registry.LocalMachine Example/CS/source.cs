@@ -35,5 +35,5 @@ class Reg {
                 break;
         }
     }
-} 
+}
 // </Snippet1>

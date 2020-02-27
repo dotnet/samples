@@ -15,7 +15,7 @@ class DecimalCtorLDemo
         // Display the constructor and its value.
         Console.WriteLine( "{0,-35}{1,22}", ctor, decimalNum );
     }
-    
+
     public static void Main( )
     {
         Console.WriteLine( "This example of the decimal( long ) " +
@@ -29,7 +29,7 @@ class DecimalCtorLDemo
         CreateDecimal( 0L, "0L" );
         CreateDecimal( 999999999999999999, "999999999999999999" );
         CreateDecimal( 0x2000000000000000, "0x2000000000000000" );
-        CreateDecimal( unchecked( (long)0xE000000000000000 ), 
+        CreateDecimal( unchecked( (long)0xE000000000000000 ),
             "(long)0xE000000000000000" );
     }
 }

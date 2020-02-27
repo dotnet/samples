@@ -5,31 +5,31 @@ using System.Runtime.InteropServices;
 
 // A simple class that exposes two static Win32 functions.
 // One is a delegate type and the other is an enumerated type.
-public class MyWin32 
+public class MyWin32
 {
-    // Declare the SetConsoleCtrlHandler function 
-    // as external and receiving a delegate.   
-    [DllImport("Kernel32")] 
-    public static extern Boolean SetConsoleCtrlHandler(HandlerRoutine Handler, 
+    // Declare the SetConsoleCtrlHandler function
+    // as external and receiving a delegate.
+    [DllImport("Kernel32")]
+    public static extern Boolean SetConsoleCtrlHandler(HandlerRoutine Handler,
         Boolean Add);
 
-    // A delegate type to be used as the handler routine 
+    // A delegate type to be used as the handler routine
     // for SetConsoleCtrlHandler.
     public delegate Boolean HandlerRoutine(CtrlTypes CtrlType);
 
-    // An enumerated type for the control messages 
+    // An enumerated type for the control messages
     // sent to the handler routine.
-    public enum CtrlTypes 
+    public enum CtrlTypes
     {
         CTRL_C_EVENT = 0,
         CTRL_BREAK_EVENT,
-        CTRL_CLOSE_EVENT,   
+        CTRL_CLOSE_EVENT,
         CTRL_LOGOFF_EVENT = 5,
         CTRL_SHUTDOWN_EVENT
     }
 }
 
-public class MyApp 
+public class MyApp
 {
     // A private static handler function in the MyApp class.
     static Boolean Handler(MyWin32.CtrlTypes CtrlType)
@@ -45,7 +45,7 @@ public class MyApp
             case MyWin32.CtrlTypes.CTRL_BREAK_EVENT:
                 message = "A CTRL_BREAK_EVENT was raised by the user.";
                 break;
-            case MyWin32.CtrlTypes.CTRL_CLOSE_EVENT:   
+            case MyWin32.CtrlTypes.CTRL_CLOSE_EVENT:
                 message = "A CTRL_CLOSE_EVENT was raised by the user.";
                 break;
             case MyWin32.CtrlTypes.CTRL_LOGOFF_EVENT:
@@ -63,7 +63,7 @@ public class MyApp
     }
 
     public static void Main()
-    {         
+    {
 
         // Use interop to set a console control handler.
         MyWin32.HandlerRoutine hr = new MyWin32.HandlerRoutine(Handler);
@@ -75,7 +75,7 @@ public class MyApp
         // The object hr is not referred to again.
         // The garbage collector can detect that the object has no
         // more managed references and might clean it up here while
-        // the unmanaged SetConsoleCtrlHandler method is still using it.      
+        // the unmanaged SetConsoleCtrlHandler method is still using it.
 		
         // Force a garbage collection to demonstrate how the hr
         // object will be handled.
@@ -89,10 +89,10 @@ public class MyApp
         // has finished its work.
         Console.WriteLine("Finished!");
 
-        // Call GC.KeepAlive(hr) at this point to maintain a reference to hr. 
-        // This will prevent the garbage collector from collecting the 
+        // Call GC.KeepAlive(hr) at this point to maintain a reference to hr.
+        // This will prevent the garbage collector from collecting the
         // object during the execution of the SetConsoleCtrlHandler method.
-        GC.KeepAlive(hr);   
+        GC.KeepAlive(hr);
         Console.Read();
     }
 }

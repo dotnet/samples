@@ -11,7 +11,7 @@ public class Example
       for (int ctr = 0; ctr <= 10; ctr++) {
          Console.WriteLine("{0:N1} / {1:N1} = {2:N4}", dividend, divisor,
                            Decimal.Divide(dividend, divisor));
-         dividend += .1m; 
+         dividend += .1m;
       }
    }
 }

@@ -10,7 +10,7 @@ namespace DesignLibrary
       {
          // Add any type-specific logic, and supply the default message.
       }
-   }  
+   }
 
    [Serializable()]
    public class GoodException : Exception
@@ -20,20 +20,20 @@ namespace DesignLibrary
          // Add any type-specific logic, and supply the default message.
       }
 
-      public GoodException(string message): base(message) 
+      public GoodException(string message): base(message)
       {
          // Add any type-specific logic.
       }
-      public GoodException(string message, Exception innerException): 
+      public GoodException(string message, Exception innerException):
          base (message, innerException)
       {
          // Add any type-specific logic for inner exceptions.
       }
-      protected GoodException(SerializationInfo info, 
+      protected GoodException(SerializationInfo info,
          StreamingContext context) : base(info, context)
       {
          // Implement type-specific serialization constructor logic.
       }
-   }  
+   }
 }
 //</Snippet1>

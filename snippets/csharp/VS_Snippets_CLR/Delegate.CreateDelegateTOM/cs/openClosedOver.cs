@@ -20,15 +20,15 @@ public class C
     private int id;
     public C(int id) { this.id = id; }
 
-    public void M1(string s) 
-    { 
+    public void M1(string s)
+    {
         Console.WriteLine("Instance method M1 on C:  id = {0}, s = {1}",
             this.id, s);
     }
-  
+
     public static void M2(string s)
-    { 
-        Console.WriteLine("Static method M2 on C:  s = {0}", s); 
+    {
+        Console.WriteLine("Static method M2 on C:  s = {0}", s);
     }
 }
 
@@ -40,7 +40,7 @@ public class Example
 
         // Get a MethodInfo for each method.
         //
-        MethodInfo mi1 = typeof(C).GetMethod("M1", 
+        MethodInfo mi1 = typeof(C).GetMethod("M1",
             BindingFlags.Public | BindingFlags.Instance);
         MethodInfo mi2 = typeof(C).GetMethod("M2",
             BindingFlags.Public | BindingFlags.Static);
@@ -54,27 +54,27 @@ public class Example
         // method must have the same list of argument types; use
         // delegate type D2 with instance method M1.
         //
-        Delegate test = 
+        Delegate test =
             Delegate.CreateDelegate(typeof(D2), c1, mi1, false);
 
-        // Because false was specified for throwOnBindFailure 
+        // Because false was specified for throwOnBindFailure
         // in the call to CreateDelegate, the variable 'test'
-        // contains null if the method fails to bind (for 
-        // example, if mi1 happened to represent a method of  
+        // contains null if the method fails to bind (for
+        // example, if mi1 happened to represent a method of
         // some class other than C).
         //
         if (test != null)
         {
             d2 = (D2) test;
 
-            // The same instance of C is used every time the 
+            // The same instance of C is used every time the
             // delegate is invoked.
             d2("Hello, World!");
             d2("Hi, Mom!");
         }
 
         Console.WriteLine("\nAn open instance method.");
-        // In this case, the delegate has one more 
+        // In this case, the delegate has one more
         // argument than the instance method; this argument comes
         // at the beginning, and represents the hidden instance
         // argument of the instance method. Use delegate type D1
@@ -82,32 +82,32 @@ public class Example
         //
         d1 = (D1) Delegate.CreateDelegate(typeof(D1), null, mi1);
 
-        // An instance of C must be passed in each time the 
+        // An instance of C must be passed in each time the
         // delegate is invoked.
         //
         d1(c1, "Hello, World!");
         d1(new C(5280), "Hi, Mom!");
 
         Console.WriteLine("\nAn open static method.");
-        // In this case, the delegate and the method must 
+        // In this case, the delegate and the method must
         // have the same list of argument types; use delegate type
         // D2 with static method M2.
         //
         d2 = (D2) Delegate.CreateDelegate(typeof(D2), null, mi2);
 
         // No instances of C are involved, because this is a static
-        // method. 
+        // method.
         //
         d2("Hello, World!");
         d2("Hi, Mom!");
 
         Console.WriteLine("\nA static method closed over the first argument (String).");
         // The delegate must omit the first argument of the method.
-        // A string is passed as the firstArgument parameter, and 
-        // the delegate is bound to this string. Use delegate type 
-        // D3 with static method M2. 
+        // A string is passed as the firstArgument parameter, and
+        // the delegate is bound to this string. Use delegate type
+        // D3 with static method M2.
         //
-        d3 = (D3) Delegate.CreateDelegate(typeof(D3), 
+        d3 = (D3) Delegate.CreateDelegate(typeof(D3),
             "Hello, World!", mi2);
 
         // Each time the delegate is invoked, the same string is

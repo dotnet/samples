@@ -11,7 +11,7 @@ public class Example
       foreach (var word in FindWords(sentence))
          Console.WriteLine("   '{0}'", word);
    }
-   
+
    static String[] FindWords(String s)
    {
       int start = 0, end = 0;
@@ -22,7 +22,7 @@ public class Example
          end = s.IndexOfAny(delimiters, start);
          if (end >= 0) {
             if (end - start > 0)
-               words.Add(s.Substring(start, end - start)); 
+               words.Add(s.Substring(start, end - start));
 
             start = end++;
          }
@@ -30,8 +30,8 @@ public class Example
             if (start < s.Length - 1)
                words.Add(s.Substring(start));
          }
-      }    
-      return words.ToArray();                         
+      }
+      return words.ToArray();
    }
 }
 // The example displays the following output:

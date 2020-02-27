@@ -21,15 +21,15 @@ namespace App
 {
    // <Snippet9>
    using System;
-   
+
    public class Example
    {
       public static void Main()
       {
          String value = "The archaeologist";
          String substring = "archæ";
-         int position = StringLibrary.SubstringStartsAt(value, substring); 
-         if (position >= 0) 
+         int position = StringLibrary.SubstringStartsAt(value, substring);
+         if (position >= 0)
             Console.WriteLine("'{0}' found in '{1}' starting at position {2}",
                            substring, value, position);
          else
@@ -37,6 +37,6 @@ namespace App
       }
    }
    // The example displays the following output:
-   //       'archæ' found in 'The archaeologist' starting at position 4   
+   //       'archæ' found in 'The archaeologist' starting at position 4
    // </Snippet9>
 }

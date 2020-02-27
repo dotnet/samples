@@ -55,7 +55,7 @@ class Example
             else
             {
                 Console.WriteLine($"Unexpected consecutive ranges.");
-            }   
+            }
         }
     }
 }

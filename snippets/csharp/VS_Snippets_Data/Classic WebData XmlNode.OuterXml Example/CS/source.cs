@@ -17,7 +17,7 @@ public class Sample {
     // OuterXml includes the markup of current node.
     Console.WriteLine("Display the OuterXml property...");
     Console.WriteLine(root.OuterXml);
-            
+
     // InnerXml does not include the markup of the current node.
     // As a result, the attributes are not displayed.
     Console.WriteLine();

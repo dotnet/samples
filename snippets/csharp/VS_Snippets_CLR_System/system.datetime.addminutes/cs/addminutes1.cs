@@ -6,13 +6,13 @@ public class Example
    public static void Main()
    {
       DateTime dateValue = new DateTime(2013, 9, 15, 12, 0, 0);
-      
-      double[] minutes = { .01667, .08333, .16667, .25, .33333, 
-                           .5, .66667, 1, 2, 15, 30, 17, 45, 
+
+      double[] minutes = { .01667, .08333, .16667, .25, .33333,
+                           .5, .66667, 1, 2, 15, 30, 17, 45,
                            60, 180, 60 * 24 };
-      
+
       foreach (double minute in minutes)
-         Console.WriteLine("{0} + {1} minute(s) = {2}", dateValue, minute, 
+         Console.WriteLine("{0} + {1} minute(s) = {2}", dateValue, minute,
                            dateValue.AddMinutes(minute));
    }
 }

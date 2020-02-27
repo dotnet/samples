@@ -18,7 +18,7 @@ class SetOutSample
             Console.WriteLine("Hello World");
             sw.Close();
 // </Snippet1>
-        } 
+        }
         catch (Exception ex)
         {
 			Console.WriteLine(ex.Message);

@@ -8,7 +8,7 @@ class DecimalCtorDoDemo
     public static string GetExceptionType( Exception ex )
     {
         string exceptionType = ex.GetType( ).ToString( );
-        return exceptionType.Substring( 
+        return exceptionType.Substring(
             exceptionType.LastIndexOf( '.' )+1 );
     }
 
@@ -16,7 +16,7 @@ class DecimalCtorDoDemo
     public static void CreateDecimal( double value, string valToStr )
     {
         // Format and display the constructor.
-        Console.Write( "{0,-34}", 
+        Console.Write( "{0,-34}",
             String.Format( "decimal( {0} )", valToStr ) );
 
         try
@@ -33,28 +33,28 @@ class DecimalCtorDoDemo
             Console.WriteLine( "{0,31}", GetExceptionType( ex ) );
         }
     }
-    
+
     public static void Main( )
     {
         Console.WriteLine( "This example of the decimal( double ) " +
             "constructor \ngenerates the following output.\n" );
-        Console.WriteLine( "{0,-34}{1,31}", "Constructor", 
+        Console.WriteLine( "{0,-34}{1,31}", "Constructor",
             "Value or Exception" );
-        Console.WriteLine( "{0,-34}{1,31}", "-----------", 
+        Console.WriteLine( "{0,-34}{1,31}", "-----------",
             "------------------" );
 
         // Construct decimal objects from double values.
         CreateDecimal( 1.23456789E+5, "1.23456789E+5" );
         CreateDecimal( 1.234567890123E+15, "1.234567890123E+15" );
-        CreateDecimal( 1.2345678901234567E+25, 
+        CreateDecimal( 1.2345678901234567E+25,
             "1.2345678901234567E+25" );
-        CreateDecimal( 1.2345678901234567E+35, 
+        CreateDecimal( 1.2345678901234567E+35,
             "1.2345678901234567E+35" );
         CreateDecimal( 1.23456789E-5, "1.23456789E-5" );
         CreateDecimal( 1.234567890123E-15, "1.234567890123E-15" );
-        CreateDecimal( 1.2345678901234567E-25, 
+        CreateDecimal( 1.2345678901234567E-25,
             "1.2345678901234567E-25" );
-        CreateDecimal( 1.2345678901234567E-35, 
+        CreateDecimal( 1.2345678901234567E-35,
             "1.2345678901234567E-35" );
         CreateDecimal( 1.0 / 7.0, "1.0 / 7.0" );
     }

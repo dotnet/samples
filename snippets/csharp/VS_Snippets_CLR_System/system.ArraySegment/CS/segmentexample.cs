@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 public class Example
 {
    private const int segmentSize = 10;
-   
+
    public static async Task Main()
    {
       List<Task> tasks = new List<Task>();

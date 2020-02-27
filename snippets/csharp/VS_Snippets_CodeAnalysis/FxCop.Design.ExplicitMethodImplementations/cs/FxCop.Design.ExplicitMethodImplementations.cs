@@ -18,7 +18,7 @@ namespace DesignLibrary
 
    public class FixedBase: ITest
    {
-      void ITest.SomeMethod() 
+      void ITest.SomeMethod()
       {
          SomeMethod();
       }

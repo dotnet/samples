@@ -20,7 +20,7 @@ public class Form1: Form
         }
         // <Snippet1>
         catch (Exception) {
-            Trace.Fail("Invalid value: " + value.ToString(), 
+            Trace.Fail("Invalid value: " + value.ToString(),
                "Resetting value to newValue.");
             value = newValue;
         }
@@ -30,9 +30,9 @@ public class Form1: Form
             case Option.First:
                result = 1.0;
                break;
-         
+
             // Insert additional cases.
-         
+
             default:
                Trace.Fail("Unsupported option " + option, "Result set to 1.0");
                result = 1.0;
@@ -42,7 +42,7 @@ public class Form1: Form
     }
 
     [STAThread]
-    static void Main() 
+    static void Main()
     {
         Form1 myForm = new Form1();
         myForm.Method(Option.Second, "not an integer string");

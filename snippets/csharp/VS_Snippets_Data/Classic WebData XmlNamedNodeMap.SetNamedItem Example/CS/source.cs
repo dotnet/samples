@@ -10,8 +10,8 @@ public class Sample
      XmlDocument doc = new XmlDocument();
      doc.LoadXml("<book genre='novel' publicationdate='1997'> " +
                  "  <title>Pride And Prejudice</title>" +
-                 "</book>");      
- 
+                 "</book>");
+
      XmlAttributeCollection attrColl = doc.DocumentElement.Attributes;
 
      // Add a new attribute to the collection.

@@ -27,7 +27,7 @@ namespace ConvertSnippet
 			try {
 				// Returns '2'
 				char chrNumber = System.Convert.ToChar(strNumber[0]);
-			} 
+			}
 			catch (System.ArgumentNullException) {
 				System.Console.WriteLine("String is null");
 			}
@@ -49,7 +49,7 @@ namespace ConvertSnippet
 			catch (System.FormatException) {
 				System.Console.WriteLine("String does not consist of an " +
 								"optional sign followed by a series of digits.");
-			} 
+			}
 			catch (System.OverflowException) {
 				System.Console.WriteLine(
 				"Overflow in string to int conversion.");

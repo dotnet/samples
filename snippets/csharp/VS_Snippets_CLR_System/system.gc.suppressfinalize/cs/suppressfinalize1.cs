@@ -10,20 +10,20 @@ public class ConsoleMonitor : IDisposable
    const int STD_ERROR_HANDLE = -12;
 
    [DllImport("kernel32.dll", SetLastError = true)]
-   static extern IntPtr GetStdHandle(int nStdHandle); 
+   static extern IntPtr GetStdHandle(int nStdHandle);
 
    [DllImport("kernel32.dll", SetLastError = true)]
    static extern bool WriteConsole(IntPtr hConsoleOutput, string lpBuffer,
           uint nNumberOfCharsToWrite, out uint lpNumberOfCharsWritten,
-          IntPtr lpReserved);   
+          IntPtr lpReserved);
 
    [DllImport("kernel32.dll", SetLastError = true)]
-   static extern bool CloseHandle(IntPtr handle); 
-                    
+   static extern bool CloseHandle(IntPtr handle);
+
    private bool disposed = false;
    private IntPtr handle;
    private Component component;
-   
+
    public ConsoleMonitor()
    {
       handle = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -31,7 +31,7 @@ public class ConsoleMonitor : IDisposable
          throw new InvalidOperationException("A console handle is not available.");
 
       component = new Component();
-      
+
       string output = "The ConsoleMonitor class constructor.\n";
       uint written = 0;
       WriteConsole(handle, output, (uint) output.Length, out written, IntPtr.Zero);
@@ -45,7 +45,7 @@ public class ConsoleMonitor : IDisposable
          uint written = 0;
          WriteConsole(handle, output, (uint) output.Length, out written, IntPtr.Zero);
       }
-      else {     
+      else {
          Console.Error.WriteLine("Object finalization.");
       }
       // Call Dispose with disposing = false.
@@ -66,7 +66,7 @@ public class ConsoleMonitor : IDisposable
       WriteConsole(handle, output, (uint) output.Length, out written, IntPtr.Zero);
 
       Dispose(true);
-      GC.SuppressFinalize(this); 
+      GC.SuppressFinalize(this);
    }
 
    private void Dispose(bool disposing)
@@ -86,11 +86,11 @@ public class ConsoleMonitor : IDisposable
          // Free unmanaged resources.
          output = "Disposing of unmanaged resources.";
          WriteConsole(handle, output, (uint) output.Length, out written, IntPtr.Zero);
-         
+
          if (handle != IntPtr.Zero) {
             if (! CloseHandle(handle))
-               Console.Error.WriteLine("Handle cannot be closed."); 
-         }      
+               Console.Error.WriteLine("Handle cannot be closed.");
+         }
       }
       disposed = true;
    }
@@ -113,7 +113,7 @@ public class Example
 //       The ConsoleMonitor finalizer.
 //       The Dispose(False) method.
 //       Disposing of unmanaged resources.
-//       
+//
 // If the monitor.Dispose method is called, the example displays the following output:
 //       ConsoleMonitor instance....
 //       The ConsoleMonitor class constructor.

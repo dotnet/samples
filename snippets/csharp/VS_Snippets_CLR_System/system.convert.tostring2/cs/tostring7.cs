@@ -12,7 +12,7 @@ public class Example
       provider.NegativeSign = "minus ";
 
       int[] values = { -20, 0, 100 };
-      
+
       Console.WriteLine("{0,-8} --> {1,10} {2,10}\n", "Value",
                          CultureInfo.CurrentCulture.Name,
                          "Custom");

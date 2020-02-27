@@ -15,11 +15,11 @@ namespace Microsoft.Samples.Compensation.CancellationSample
         static void Main()
         {
             // Executing with cancellation where the order of process is changed. This scenario is intended to
-            // demonstrate how cancellation works when the cause of the cancellation is an exception in the body of a compensable activity. 
+            // demonstrate how cancellation works when the cause of the cancellation is an exception in the body of a compensable activity.
             Console.WriteLine("************ Scenario 1 - Execution with Cancellation changing order ************");
             new WorkflowInvoker(ExceptionCausingCustomCancellation()).Invoke();
 
-            // Executing with cancellation where the first branch timeout before the rest of the other branch 
+            // Executing with cancellation where the first branch timeout before the rest of the other branch
             // completes. This scenario is intended to demonstrate how cancellation works if the activity is cancelled from an external source.
             Console.WriteLine("************ Scenario 2 - Execution with Cancellation with Delay ************");
             new WorkflowInvoker(CancellingActivityInvokesCustomCancellation()).Invoke();
@@ -49,7 +49,7 @@ namespace Microsoft.Samples.Compensation.CancellationSample
             {
                 Try = new Sequence
                 {
-                    Activities = 
+                    Activities =
                     {
                         new WriteLine { Text = "Try: Body" },
                         // Root CompensableActivity
@@ -64,7 +64,7 @@ namespace Microsoft.Samples.Compensation.CancellationSample
 
                             Body = new Sequence
                             {
-                                Activities = 
+                                Activities =
                                 {
                                     new WriteLine { Text = "  CompensableActivity1: Body" },
 
@@ -105,7 +105,7 @@ namespace Microsoft.Samples.Compensation.CancellationSample
                                         CompensationHandler = new WriteLine { Text = "    CompensableActivity1.C: CompensationHandler" },
                                         CancellationHandler = new Sequence
                                         {
-                                            Activities = 
+                                            Activities =
                                             {
                                                 new WriteLine { Text = "    CompensableActivity1.C: CancellationHandler" },
                                             }
@@ -143,9 +143,9 @@ namespace Microsoft.Samples.Compensation.CancellationSample
                     {
                         Action = new ActivityAction<ApplicationException>
                         {
-                            Handler = new Sequence 
+                            Handler = new Sequence
                             {
-                                Activities = 
+                                Activities =
                                 {
                                     new WriteLine { Text = "Try: Catch, got exception thrown by CompensableActivity1.C" },
                                 }

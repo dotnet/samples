@@ -12,14 +12,14 @@ class Example
 
       var redBox = new Box(4, 3, 4);
       AddBox(boxes, redBox, "red");
-      
+
       var blueBox = new Box(4, 3, 4);
       AddBox(boxes, blueBox, "blue");
-      
+
       var greenBox = new Box(3, 4, 3);
       AddBox(boxes, greenBox, "green");
       Console.WriteLine();
-      
+
       Console.WriteLine("The dictionary contains {0} Box objects.",
                         boxes.Count);
    }

@@ -28,7 +28,7 @@ using System.Windows.Forms;
     {
        throw new ArgumentException("The parameter was invalid");
     }
- 
+
     public static void Main()
     {
        // Add the event handler.
@@ -38,7 +38,7 @@ using System.Windows.Forms;
        Application.Run(new ErrorForm());
     }
  }
- 
+
  // Create a class to handle the exception event.
  internal class CustomExceptionHandler
  {
@@ -48,10 +48,10 @@ using System.Windows.Forms;
        DialogResult result = ShowThreadExceptionDialog(t.Exception);
 
        // Exit the program when the user clicks Abort.
-       if (result == DialogResult.Abort) 
+       if (result == DialogResult.Abort)
           Application.Exit();
     }
- 
+
     // Create and display the error message.
     private static DialogResult ShowThreadExceptionDialog(Exception e)
     {
@@ -59,9 +59,9 @@ using System.Windows.Forms;
             "with the following information:\n\n";
        errorMsg += String.Format("Exception Type: {0}\n\n", e.GetType().Name);
        errorMsg += "\n\nStack Trace:\n" + e.StackTrace;
-       return MessageBox.Show(errorMsg, "Application Error", 
+       return MessageBox.Show(errorMsg, "Application Error",
             MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Stop);
     }
  }
- 
+
 // </Snippet1>

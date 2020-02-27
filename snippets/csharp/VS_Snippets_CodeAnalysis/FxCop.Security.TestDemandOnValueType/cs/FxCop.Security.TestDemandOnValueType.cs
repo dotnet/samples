@@ -7,7 +7,7 @@ using SecurityRulesLibrary;
 
 // Run this test code with partial trust.
 [assembly: System.Security.Permissions.PermissionSetAttribute(
-   System.Security.Permissions.SecurityAction.RequestRefuse, 
+   System.Security.Permissions.SecurityAction.RequestRefuse,
    Name="FullTrust")]
 
 namespace TestSecurityExamples
@@ -17,7 +17,7 @@ namespace TestSecurityExamples
       static SecuredTypeStructure mystruct;
 
       [STAThread]
-      public static void Main() 
+      public static void Main()
       {
          try
          {
@@ -29,9 +29,9 @@ namespace TestSecurityExamples
                "Structure custom constructor: {0}", e.Message);
          }
 
-         // The call to the default constructor 
+         // The call to the default constructor
          // does not throw an exception.
-         try 
+         try
          {
             mystruct = StructureManager.AddStepValue(
                new SecuredTypeStructure());
@@ -42,13 +42,13 @@ namespace TestSecurityExamples
                "Structure default constructor: {0}", e.Message);
          }
 
-         try 
+         try
          {
             StructureManager.AddStepValue(mystruct);
-         } 
+         }
 
          catch (Exception e)
-         {  
+         {
             Console.WriteLine(
                "StructureManager add step: {0}", e.Message);
          }
@@ -62,17 +62,17 @@ namespace SecurityRulesLibrary
    // Violates rule: ReviewDeclarativeSecurityOnValueTypes.
    [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Demand, Name="FullTrust")]
 
-   public struct SecuredTypeStructure 
+   public struct SecuredTypeStructure
    {
       internal double xValue;
       internal double yValue;
-      
-      public SecuredTypeStructure(double x, double y) 
+
+      public SecuredTypeStructure(double x, double y)
       {
          xValue = x;
          yValue = y;
          Console.WriteLine("Creating an instance of SecuredTypeStructure.");
-      }     
+      }
       public override string ToString()
       {
          return String.Format ("SecuredTypeStructure {0} {1}", xValue, yValue);
@@ -81,7 +81,7 @@ namespace SecurityRulesLibrary
 
    public class StructureManager
    {
-      // This method asserts trust, incorrectly assuming that the caller must have 
+      // This method asserts trust, incorrectly assuming that the caller must have
       // permission because they passed in instance of the value type.
       [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Assert, Name="FullTrust")]
 

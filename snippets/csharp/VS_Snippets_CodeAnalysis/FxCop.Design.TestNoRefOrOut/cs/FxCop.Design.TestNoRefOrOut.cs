@@ -7,7 +7,7 @@ namespace DesignLibrary
    {
       static void UseTheComplicatedClass()
       {
-         // Using the version with the ref and out parameters. 
+         // Using the version with the ref and out parameters.
          // You do not have to initialize an out parameter.
 
          string[] reply = new string[5];
@@ -15,7 +15,7 @@ namespace DesignLibrary
          // You must initialize a ref parameter.
          Actions[] action = {Actions.Unknown,Actions.Unknown,
                              Actions.Unknown,Actions.Unknown,
-                             Actions.Unknown,Actions.Unknown}; 
+                             Actions.Unknown,Actions.Unknown};
          bool[] disposition= new bool[5];
          int i = 0;
 
@@ -24,7 +24,7 @@ namespace DesignLibrary
             // The call to the library.
             disposition[i] = BadRefAndOut.ReplyInformation(
                t, out reply[i], ref action[i]);
-            Console.WriteLine("Reply: {0} Action: {1}  return? {2} ", 
+            Console.WriteLine("Reply: {0} Action: {1}  return? {2} ",
                reply[i], action[i], disposition[i]);
             i++;
          }
@@ -66,7 +66,7 @@ namespace DesignLibrary
 
    public enum TypeOfFeedback
    {
-      Complaint, 
+      Complaint,
       Praise,
       Suggestion,
       Incomprehensible
@@ -76,11 +76,11 @@ namespace DesignLibrary
    {
       // Violates rule: DoNotPassTypesByReference.
 
-      public static bool ReplyInformation (TypeOfFeedback input, 
+      public static bool ReplyInformation (TypeOfFeedback input,
          out string reply, ref Actions action)
       {
          bool returnReply = false;
-         string replyText = "Your feedback has been forwarded " + 
+         string replyText = "Your feedback has been forwarded " +
                             "to the product manager.";
 
          reply = String.Empty;
@@ -115,7 +115,7 @@ namespace DesignLibrary
       string reply;
       Actions action;
       bool returnReply;
-      
+
       // Constructors.
       public ReplyData()
       {
@@ -137,7 +137,7 @@ namespace DesignLibrary
 
       public override string ToString()
       {
-         return String.Format("Reply: {0} Action: {1} return? {2}", 
+         return String.Format("Reply: {0} Action: {1} return? {2}",
             reply, action.ToString(), returnReply.ToString());
       }
    }
@@ -147,7 +147,7 @@ namespace DesignLibrary
       public static ReplyData ReplyInformation (TypeOfFeedback input)
       {
          ReplyData answer;
-         string replyText = "Your feedback has been forwarded " + 
+         string replyText = "Your feedback has been forwarded " +
             "to the product manager.";
 
          switch (input)

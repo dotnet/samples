@@ -1,12 +1,12 @@
 ﻿//<snippet1>
 using System;
 using System.Collections.Generic;
-// Simple business object. A PartId is used to identify the type of part 
-// but the part name can change. 
+// Simple business object. A PartId is used to identify the type of part
+// but the part name can change.
 public class Part : IEquatable<Part>
     {
         public string PartName { get; set; }
-       
+
         public int PartId { get; set; }
 
         public override string ToString()
@@ -93,7 +93,7 @@ public class Example
         }
 
             /*
-  
+
              ID: 1234   Name: crank arm
              ID: 1334   Name: chain ring
              ID: 1434   Name: regular seat

@@ -21,7 +21,7 @@ public class RedirectStdErr
       Console.Error.WriteLine("Application started at {0}.", appStart);
       Console.Error.WriteLine();
       //
-      // Application code along with error output 
+      // Application code along with error output
       //
       // Close redirected error stream.
       Console.Error.Close();

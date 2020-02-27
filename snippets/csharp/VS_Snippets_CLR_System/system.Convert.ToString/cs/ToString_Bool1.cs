@@ -4,10 +4,10 @@ public class Class1
 {
    public static void Main()
    {
-      // <Snippet1> 
+      // <Snippet1>
       bool falseFlag = false;
       bool trueFlag = true;
-      
+
       Console.WriteLine(Convert.ToString(falseFlag));
       Console.WriteLine(Convert.ToString(falseFlag).Equals(Boolean.FalseString));
       Console.WriteLine(Convert.ToString(trueFlag));

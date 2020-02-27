@@ -5,29 +5,29 @@
 using System;
 using System.Collections;
 
-public class ReverseComparer : IComparer  
+public class ReverseComparer : IComparer
 {
    // Call CaseInsensitiveComparer.Compare with the parameters reversed.
-   public int Compare(Object x, Object y)  
+   public int Compare(Object x, Object y)
    {
        return (new CaseInsensitiveComparer()).Compare(y, x );
    }
 }
 
-public class Example 
+public class Example
 {
-   public static void Main()  
+   public static void Main()
    {
-      // Create and initialize a new array. 
-      String[] words = { "The", "QUICK", "BROWN", "FOX", "jumps", 
+      // Create and initialize a new array.
+      String[] words = { "The", "QUICK", "BROWN", "FOX", "jumps",
                          "over", "the", "lazy", "dog" };
       // Instantiate the reverse comparer.
       IComparer revComparer = new ReverseComparer();
- 
+
       // Display the values of the array.
       Console.WriteLine( "The original order of elements in the array:" );
       DisplayValues(words);
- 
+
       // Sort a section of the array using the default comparer.
       Array.Sort(words, 1, 3);
       Console.WriteLine( "After sorting elements 1-3 by using the default comparer:");
@@ -48,8 +48,8 @@ public class Example
       Console.WriteLine( "After sorting the entire array using the reverse case-insensitive comparer:");
       DisplayValues(words);
    }
- 
-   public static void DisplayValues(String[] arr)  
+
+   public static void DisplayValues(String[] arr)
    {
       for ( int i = arr.GetLowerBound(0); i <= arr.GetUpperBound(0);
             i++ )  {
@@ -69,7 +69,7 @@ public class Example
 //       [6] : the
 //       [7] : lazy
 //       [8] : dog
-//    
+//
 //    After sorting elements 1-3 by using the default comparer:
 //       [0] : The
 //       [1] : BROWN
@@ -80,7 +80,7 @@ public class Example
 //       [6] : the
 //       [7] : lazy
 //       [8] : dog
-//    
+//
 //    After sorting elements 1-3 by using the reverse case-insensitive comparer:
 //       [0] : The
 //       [1] : QUICK
@@ -91,7 +91,7 @@ public class Example
 //       [6] : the
 //       [7] : lazy
 //       [8] : dog
-//    
+//
 //    After sorting the entire array by using the default comparer:
 //       [0] : BROWN
 //       [1] : dog
@@ -102,7 +102,7 @@ public class Example
 //       [6] : QUICK
 //       [7] : the
 //       [8] : The
-//    
+//
 //    After sorting the entire array using the reverse case-insensitive comparer:
 //       [0] : the
 //       [1] : The
@@ -112,5 +112,5 @@ public class Example
 //       [5] : jumps
 //       [6] : FOX
 //       [7] : dog
-//       [8] : BROWN    
+//       [8] : BROWN
 // </Snippet1>

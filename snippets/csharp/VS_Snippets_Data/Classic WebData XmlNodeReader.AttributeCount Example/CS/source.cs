@@ -3,7 +3,7 @@ using System;
 using System.IO;
 using System.Xml;
 
-public class Sample 
+public class Sample
 {
   public static void Main()
   {
@@ -14,11 +14,11 @@ public class Sample
        //Create and load the XML document.
        XmlDocument doc = new XmlDocument();
        doc.LoadXml("<book genre='novel' ISBN='1-861003-78' publicationdate='1987'> " +
-                   "</book>"); 
+                   "</book>");
 
-       //Load the XmlNodeReader 
+       //Load the XmlNodeReader
        reader = new XmlNodeReader(doc);
-  
+
        //Read the attributes on the root element.
        reader.MoveToContent();
        if (reader.HasAttributes){
@@ -29,9 +29,9 @@ public class Sample
          //Return the reader to the book element.
          reader.MoveToElement();
        }
-     } 
+     }
 
-     finally 
+     finally
      {
         if (reader != null)
           reader.Close();

@@ -6,7 +6,7 @@ namespace UsageLibrary
     public class BadlyConstructedType
     {
         protected  string initialized = "No";
-        
+
         public BadlyConstructedType()
         {
             Console.WriteLine("Calling base ctor.");
@@ -19,7 +19,7 @@ namespace UsageLibrary
             Console.WriteLine ("Base DoSomething");
         }
     }
-    
+
     public class DerivedType : BadlyConstructedType
     {
         public DerivedType ()
@@ -32,7 +32,7 @@ namespace UsageLibrary
             Console.WriteLine("Derived DoSomething is called - initialized ? {0}", initialized);
         }
     }
- 
+
     public class TestBadlyConstructedType
     {
         public static void Main()

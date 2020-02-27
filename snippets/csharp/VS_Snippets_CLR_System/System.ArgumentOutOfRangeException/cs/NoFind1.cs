@@ -5,12 +5,12 @@ public class Example
 {
    public static void Main()
    {
-      String[] phrases = { "ocean blue", "concerned citizen", 
+      String[] phrases = { "ocean blue", "concerned citizen",
                            "runOnPhrase" };
       foreach (var phrase in phrases)
          Console.WriteLine("Second word is {0}", GetSecondWord(phrase));
    }
-  
+
    static String GetSecondWord(String s)
    {
       int pos = s.IndexOf(" ");
@@ -20,7 +20,7 @@ public class Example
 // The example displays the following output:
 //    Second word is blue
 //    Second word is citizen
-//    
+//
 //    Unhandled Exception: System.ArgumentOutOfRangeException: StartIndex cannot be less than zero.
 //    Parameter name: startIndex
 //       at System.String.Substring(Int32 startIndex, Int32 length)

@@ -20,12 +20,12 @@ namespace SecurityRulesLibrary
             return (int[])securePrivateGrades.Clone();
       }
 
-      public override string ToString() 
+      public override string ToString()
       {
-         return String.Format("Grades: {0}, {1}, {2} Private Grades: {3}, {4}, {5}  Secure Grades, {6}, {7}, {8}", 
+         return String.Format("Grades: {0}, {1}, {2} Private Grades: {3}, {4}, {5}  Secure Grades, {6}, {7}, {8}",
             grades[0], grades[1], grades[2], privateGrades[0], privateGrades[1], privateGrades[2], securePrivateGrades[0], securePrivateGrades[1], securePrivateGrades[2]);
-      }     
+      }
    }
 }
-   
+
 //</Snippet1>

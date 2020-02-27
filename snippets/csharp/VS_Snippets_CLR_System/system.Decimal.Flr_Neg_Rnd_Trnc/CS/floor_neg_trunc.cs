@@ -1,6 +1,6 @@
 ﻿//<Snippet1>
-// Example of the decimal.Negate, decimal.Floor, and decimal.Truncate 
-// methods. 
+// Example of the decimal.Negate, decimal.Floor, and decimal.Truncate
+// methods.
 using System;
 
 class DecimalFloorNegTruncDemo
@@ -12,11 +12,11 @@ class DecimalFloorNegTruncDemo
     {
         Console.WriteLine( );
         Console.WriteLine( dataFmt, "decimal Argument", Argument );
-        Console.WriteLine( dataFmt, "decimal.Negate( Argument )", 
+        Console.WriteLine( dataFmt, "decimal.Negate( Argument )",
             decimal.Negate( Argument ) );
-        Console.WriteLine( dataFmt, "decimal.Floor( Argument )", 
+        Console.WriteLine( dataFmt, "decimal.Floor( Argument )",
             decimal.Floor( Argument ) );
-        Console.WriteLine( dataFmt, "decimal.Truncate( Argument )", 
+        Console.WriteLine( dataFmt, "decimal.Truncate( Argument )",
             decimal.Truncate( Argument ) );
     }
 
@@ -32,7 +32,7 @@ class DecimalFloorNegTruncDemo
         ShowDecimalFloorNegTrunc( 0M );
         ShowDecimalFloorNegTrunc( 123.456M );
         ShowDecimalFloorNegTrunc( -123.456M );
-        ShowDecimalFloorNegTrunc( 
+        ShowDecimalFloorNegTrunc(
             new decimal( 1230000000, 0, 0, true, 7 ) );
         ShowDecimalFloorNegTrunc( -9999999999.9999999999M );
     }
@@ -69,5 +69,5 @@ decimal Argument                  -9999999999.9999999999
 decimal.Negate( Argument )         9999999999.9999999999
 decimal.Floor( Argument )                   -10000000000
 decimal.Truncate( Argument )                 -9999999999
-*/ 
+*/
 //</Snippet1>

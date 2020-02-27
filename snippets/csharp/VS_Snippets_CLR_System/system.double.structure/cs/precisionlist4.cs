@@ -12,18 +12,18 @@ public class Example
          sw.Write(values[ctr].ToString());
          if (ctr != values.Length - 1)
             sw.Write("|");
-      }      
+      }
       sw.Close();
-      
+
       Double[] restoredValues = new Double[values.Length];
       StreamReader sr = new StreamReader(@".\Doubles.dat");
       string temp = sr.ReadToEnd();
       string[] tempStrings = temp.Split('|');
       for (int ctr = 0; ctr < tempStrings.Length; ctr++)
-         restoredValues[ctr] = Double.Parse(tempStrings[ctr]);   
+         restoredValues[ctr] = Double.Parse(tempStrings[ctr]);
 
       for (int ctr = 0; ctr < values.Length; ctr++)
-         Console.WriteLine("{0} {2} {1}", values[ctr], 
+         Console.WriteLine("{0} {2} {1}", values[ctr],
                            restoredValues[ctr],
                            values[ctr].Equals(restoredValues[ctr]) ? "=" : "<>");
    }

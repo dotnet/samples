@@ -25,7 +25,7 @@ namespace GlobalLibrary
             // Satisfies rule: SetLocaleForDataTypes.
             goodTable.Locale = CultureInfo.InvariantCulture;
             DataColumn keyColumn = goodTable.Columns.Add("ID", typeof(Int32));
-            
+
             keyColumn.AllowDBNull = false;
             keyColumn.Unique = true;
             goodTable.Columns.Add("LastName", typeof(String));

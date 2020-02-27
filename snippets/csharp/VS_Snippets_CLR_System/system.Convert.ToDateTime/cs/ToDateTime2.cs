@@ -8,18 +8,18 @@ public class ConversionToDateTime
    public static void Main()
    {
       string dateString = null;
-      
+
       // Convert a null string.
       ConvertToDateTime(dateString);
-      
+
       // Convert an empty string.
       dateString = String.Empty;
       ConvertToDateTime(dateString);
-      
+
       // Convert a non-date string.
       dateString = "not a date";
       ConvertToDateTime(dateString);
-      
+
       // Try to convert various date strings.
       dateString = "05/01/1996";
       ConvertToDateTime(dateString);
@@ -44,8 +44,8 @@ public class ConversionToDateTime
       DateTime convertedDate;
       try {
          convertedDate = Convert.ToDateTime(value);
-         Console.WriteLine("'{0}' converts to {1} {2} time.", 
-                           value, convertedDate, 
+         Console.WriteLine("'{0}' converts to {1} {2} time.",
+                           value, convertedDate,
                            convertedDate.Kind.ToString());
       }
       catch (FormatException) {

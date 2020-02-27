@@ -25,7 +25,7 @@ class Program
         }
 
         // Create a new RSA key.  This key will encrypt a symmetric key,
-        // which will then be imbedded in the XML document.  
+        // which will then be imbedded in the XML document.
         RSA rsaKey = new RSACryptoServiceProvider();
 
         try
@@ -65,7 +65,7 @@ class Program
 
     public static void Encrypt(XmlDocument Doc, string ElementToEncrypt, string EncryptionElementID, RSA Alg, string KeyName)
     {
-        // Check the arguments.  
+        // Check the arguments.
         if (Doc == null)
             throw new ArgumentNullException("Doc");
         if (ElementToEncrypt == null)
@@ -91,8 +91,8 @@ class Program
         }
 
         //////////////////////////////////////////////////
-        // Create a new instance of the EncryptedXml class 
-        // and use it to encrypt the XmlElement with the 
+        // Create a new instance of the EncryptedXml class
+        // and use it to encrypt the XmlElement with the
         // a new random symmetric key.
         //////////////////////////////////////////////////
 
@@ -113,7 +113,7 @@ class Program
         edElement.Type = EncryptedXml.XmlEncElementUrl;
         edElement.Id = EncryptionElementID;
 
-        // Create an EncryptionMethod element so that the 
+        // Create an EncryptionMethod element so that the
         // receiver knows which algorithm to use for decryption.
 
         edElement.EncryptionMethod = new EncryptionMethod(EncryptedXml.XmlEncAES256Url);
@@ -139,30 +139,30 @@ class Program
         // Specify a name for the key.
         kin.Value = KeyName;
 
-        // Add the KeyInfoName element to the 
+        // Add the KeyInfoName element to the
         // EncryptedKey object.
         ek.KeyInfo.AddClause(kin);
 
         // Create a new DataReference element
         // for the KeyInfo element.  This optional
-        // element specifies which EncryptedData 
+        // element specifies which EncryptedData
         // uses this key.  An XML document can have
         // multiple EncryptedData elements that use
         // different keys.
         DataReference dRef = new DataReference();
 
-        // Specify the EncryptedData URI. 
+        // Specify the EncryptedData URI.
         dRef.Uri = "#" + EncryptionElementID;
 
         // Add the DataReference to the EncryptedKey.
         ek.AddReference(dRef);
 
-        // Add the encrypted key to the 
+        // Add the encrypted key to the
         // EncryptedData object.
 
         edElement.KeyInfo.AddClause(new KeyInfoEncryptedKey(ek));
 
-        // Add the encrypted element data to the 
+        // Add the encrypted element data to the
         // EncryptedData object.
         edElement.CipherData.CipherValue = encryptedElement;
 
@@ -176,7 +176,7 @@ class Program
 
     public static void Decrypt(XmlDocument Doc, RSA Alg, string KeyName)
     {
-        // Check the arguments.  
+        // Check the arguments.
         if (Doc == null)
             throw new ArgumentNullException("Doc");
         if (Alg == null)
@@ -200,7 +200,7 @@ class Program
 // To run this sample, place the following XML
 // in a file called test.xml.  Put test.xml
 // in the same directory as your compiled program.
-// 
+//
 //  <root>
 //     <creditcard xmlns="myNamespace" Id="tag1">
 //         <number>19834209</number>

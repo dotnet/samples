@@ -25,7 +25,7 @@ class Program
         xmlStream.Position = 0;
 
         DataTable newTable = new DataTable();
-        System.IO.StreamReader reader = 
+        System.IO.StreamReader reader =
             new System.IO.StreamReader(xmlStream);
         newTable.ReadXmlSchema(reader);
 
@@ -63,7 +63,7 @@ class Program
         Console.WriteLine(label);
         foreach (DataColumn column in table.Columns)
         {
-            Console.WriteLine("\t{0}: {1}", 
+            Console.WriteLine("\t{0}: {1}",
                 column.ColumnName, column.DataType.Name);
         }
         Console.WriteLine();

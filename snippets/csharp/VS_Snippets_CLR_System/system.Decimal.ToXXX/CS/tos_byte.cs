@@ -10,7 +10,7 @@ class DecimalToS_ByteDemo
     public static string GetExceptionType( Exception ex )
     {
         string exceptionType = ex.GetType( ).ToString( );
-        return exceptionType.Substring( 
+        return exceptionType.Substring(
             exceptionType.LastIndexOf( '.' ) + 1 );
     }
 
@@ -40,7 +40,7 @@ class DecimalToS_ByteDemo
             ByteValue = GetExceptionType( ex );
         }
 
-        Console.WriteLine( formatter, argument, 
+        Console.WriteLine( formatter, argument,
             SByteValue, ByteValue );
     }
 
@@ -51,9 +51,9 @@ class DecimalToS_ByteDemo
             "  decimal.ToByte( decimal ) \nmethods " +
             "generates the following output. It \ndisplays " +
             "several converted decimal values.\n" );
-        Console.WriteLine( formatter, "decimal argument", 
+        Console.WriteLine( formatter, "decimal argument",
             "sbyte/exception", "byte/exception" );
-        Console.WriteLine( formatter, "----------------", 
+        Console.WriteLine( formatter, "----------------",
             "---------------", "--------------" );
 
         // Convert decimal values and display the results.

@@ -7,7 +7,7 @@ class Program
 {
     static void Main()
     {
-        SqlConnectionStringBuilder builder = 
+        SqlConnectionStringBuilder builder =
             new SqlConnectionStringBuilder(GetConnectionString());
 
         // Loop through each of the values, displaying the contents.
@@ -21,7 +21,7 @@ class Program
     private static string GetConnectionString()
     {
         // To avoid storing the connection string in your code,
-        // you can retrieve it from a configuration file. 
+        // you can retrieve it from a configuration file.
         return "Data Source=(local);Integrated Security=SSPI;" +
             "Initial Catalog=AdventureWorks; Asynchronous Processing=true";
     }

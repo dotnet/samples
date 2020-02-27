@@ -1,5 +1,5 @@
 ﻿//<Snippet1>
-using System;  
+using System;
 using System.Runtime.InteropServices;
 
 namespace UsageLibrary
@@ -8,26 +8,26 @@ namespace UsageLibrary
     {
         private bool disposed = false;
         private IntPtr unmanagedResource;
-        
+
         [DllImport("native.dll")]
         private static extern IntPtr AllocateUnmanagedResource();
-        
+
         [DllImport("native.dll")]
         private static extern void FreeUnmanagedResource(IntPtr p);
-        
+
         DisposeMissingFinalize()
         {
             unmanagedResource = AllocateUnmanagedResource();
         }
-        
-        protected virtual void Dispose(bool disposing) 
+
+        protected virtual void Dispose(bool disposing)
         {
-            if (!disposed) 
+            if (!disposed)
             {
                 // Dispose of resources held by this instance.
                 FreeUnmanagedResource(unmanagedResource);
                 disposed = true;
-   
+
                 // Suppress finalization of this disposed instance.
                 if (disposing)
                 {

@@ -56,7 +56,7 @@ public virtual void ManipulateFileStream(FileStream stream)
 {
     int Byte;
     while ((Byte = stream.ReadByte()) != -1)
-    {        // Do something.    
+    {        // Do something.
     }
 }
 //</Snippet2>

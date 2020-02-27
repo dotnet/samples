@@ -18,17 +18,17 @@ using System.Security.Permissions;
      }
 
      // This protected constructor is used for deserialization.
-     protected SecondLevelException( SerializationInfo info, 
+     protected SecondLevelException( SerializationInfo info,
          StreamingContext context ) :
              base( info, context )
      { }
 
      // GetObjectData performs a custom serialization.
      [SecurityPermissionAttribute(SecurityAction.Demand,SerializationFormatter=true)]
-     public override void GetObjectData( SerializationInfo info, 
-         StreamingContext context ) 
+     public override void GetObjectData( SerializationInfo info,
+         StreamingContext context )
      {
-         // Change the case of two properties, and then use the 
+         // Change the case of two properties, and then use the
          // method of the base class.
          HelpLink = HelpLink.ToLower( );
          Source = Source.ToUpperInvariant();
@@ -37,11 +37,11 @@ using System.Security.Permissions;
      }
  }
 
- class SerializationDemo 
+ class SerializationDemo
  {
-     public static void Main() 
+     public static void Main()
      {
-         Console.WriteLine( 
+         Console.WriteLine(
              "This example of the Exception constructor " +
              "and Exception.GetObjectData\nwith Serialization" +
              "Info and StreamingContext parameters " +
@@ -49,7 +49,7 @@ using System.Security.Permissions;
 
          try
          {
-             // This code forces a division by 0 and catches the 
+             // This code forces a division by 0 and catches the
              // resulting exception.
              try
              {
@@ -60,53 +60,53 @@ using System.Security.Permissions;
              {
                  // Create a new exception to throw again.
                  SecondLevelException newExcept =
-                     new SecondLevelException( 
+                     new SecondLevelException(
                          "Forced a division by 0 and threw " +
                          "another exception.", ex );
 
-                 Console.WriteLine( 
+                 Console.WriteLine(
                      "Forced a division by 0, caught the " +
                      "resulting exception, \n" +
                      "and created a derived exception:\n" );
-                 Console.WriteLine( "HelpLink: {0}", 
+                 Console.WriteLine( "HelpLink: {0}",
                      newExcept.HelpLink );
-                 Console.WriteLine( "Source:   {0}", 
+                 Console.WriteLine( "Source:   {0}",
                      newExcept.Source );
 
                  // This FileStream is used for the serialization.
-                 FileStream stream = 
-                     new FileStream( "NewException.dat", 
+                 FileStream stream =
+                     new FileStream( "NewException.dat",
                          FileMode.Create );
 
                  try
                  {
                      // Serialize the derived exception.
-                     SoapFormatter formatter = 
+                     SoapFormatter formatter =
                          new SoapFormatter( null,
-                             new StreamingContext( 
+                             new StreamingContext(
                                  StreamingContextStates.File ) );
                      formatter.Serialize( stream, newExcept );
 
-                     // Rewind the stream and deserialize the 
+                     // Rewind the stream and deserialize the
                      // exception.
                      stream.Position = 0;
-                     SecondLevelException deserExcept = 
+                     SecondLevelException deserExcept =
                          (SecondLevelException)
                              formatter.Deserialize( stream );
 
-                     Console.WriteLine( 
+                     Console.WriteLine(
                          "\nSerialized the exception, and then " +
                          "deserialized the resulting stream " +
                          "into a \nnew exception. " +
                          "The deserialization changed the case " +
                          "of certain properties:\n" );
-                     
+
                      // Throw the deserialized exception again.
                      throw deserExcept;
                  }
                  catch( SerializationException se )
                  {
-                     Console.WriteLine( "Failed to serialize: {0}", 
+                     Console.WriteLine( "Failed to serialize: {0}",
                          se.ToString( ) );
                  }
                  finally

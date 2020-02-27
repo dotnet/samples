@@ -67,7 +67,7 @@ class Class1
         // Create two columns, ID and Name.
         DataColumn idColumn = table.Columns.Add("ID", typeof(int));
         table.Columns.Add("Name", typeof(string ));
-      
+
         // Set the ID column as the primary key column.
         table.PrimaryKey = new DataColumn[] { idColumn };
         return table;

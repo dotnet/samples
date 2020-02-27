@@ -32,7 +32,7 @@ public class Sample
        foreach (String prefix in nsmgr)
        {
         Console.WriteLine("Prefix={0}, Namespace={1}", prefix,nsmgr.LookupNamespace(prefix));
-       } 
+       }
     }
     while (nsmgr.PopScope());
   }

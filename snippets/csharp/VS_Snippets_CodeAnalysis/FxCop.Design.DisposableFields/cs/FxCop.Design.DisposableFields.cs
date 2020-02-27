@@ -1,7 +1,7 @@
 ﻿//<Snippet1>
 using System;
 using System.IO;
-  
+
 namespace DesignLibrary
 {
    // This class violates the rule.

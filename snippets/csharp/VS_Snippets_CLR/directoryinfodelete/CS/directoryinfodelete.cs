@@ -2,9 +2,9 @@
 using System;
 using System.IO;
 
-public class DeleteTest 
+public class DeleteTest
 {
-    public static void Main() 
+    public static void Main()
     {
 
         // Make a reference to a directory.

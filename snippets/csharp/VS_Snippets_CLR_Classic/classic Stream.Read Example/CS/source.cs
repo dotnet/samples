@@ -25,7 +25,7 @@ public class Block
             numBytesToRead -= n;
         } while (numBytesToRead > 0);
         s.Close();
-       
+
         Console.WriteLine("number of bytes read: {0:d}", numBytesRead);
     }
 }

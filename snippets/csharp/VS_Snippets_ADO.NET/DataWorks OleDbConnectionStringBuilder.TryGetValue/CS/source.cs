@@ -12,7 +12,7 @@ class Program
         builder.ConnectionString = GetConnectionString();
 
         // Call TryGetValue method for multiple
-        // key names. 
+        // key names.
         DisplayValue(builder, "Data Source");
         DisplayValue(builder, "Extended Properties");
         // How about implicitly added key/value pairs?
@@ -34,7 +34,7 @@ class Program
         // it does not handle passing in a null (Nothing in Visual Basic)
         // key. This example traps for that particular error, but
         // throws any other unknown exceptions back out to the
-        // caller. 
+        // caller.
         try
         {
             if (builder.TryGetValue(key, out value))
@@ -55,8 +55,8 @@ class Program
     static private string GetConnectionString()
     {
         // To avoid storing the connection string in your code,
-        // you can retrieve it from a configuration file using the 
-        // System.Configuration.ConfigurationSettings.AppSettings property. 
+        // you can retrieve it from a configuration file using the
+        // System.Configuration.ConfigurationSettings.AppSettings property.
         return "Provider=Microsoft.Jet.OLEDB.4.0;" +
             "Data Source=C:\\ExcelDemo.xls;" +
             "Extended Properties=\"Excel 8.0;HDR=Yes;IMEX=1\"";

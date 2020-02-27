@@ -2,7 +2,7 @@
 using System.Diagnostics;
 
 // <Snippet1>
-public class Sample 
+public class Sample
 {
 
  void Main(string[] args) {
@@ -11,11 +11,11 @@ public class Sample
     TextWriterTraceListener myWriter = new TextWriterTraceListener();
     myWriter.Writer = System.Console.Out;
     Trace.Listeners.Add(myWriter);
- 
+
     // Write the output to the console screen.
     myWriter.Write("Write to console screen. ");
     myWriter.WriteLine("Again, write to the Console screen.");
- 
+
     // Flush and close the output.
     myWriter.Flush();
     myWriter.Close();

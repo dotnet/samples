@@ -10,17 +10,17 @@ public class ConversionToDateTime
       // Try converting an integer.
       int number = 16352;
       ConvertToDateTime(number);
-      
+
       // Convert a null.
       object obj = null;
       ConvertToDateTime(obj);
-      
+
       // Convert a non-date string.
       string nonDateString = "monthly";
       ConvertToDateTime(nonDateString);
-      
+
       // Try to convert various date strings.
-      string dateString; 
+      string dateString;
       dateString = "05/01/1996";
       ConvertToDateTime(dateString);
       dateString = "Tue Apr 28, 2009";
@@ -40,9 +40,9 @@ public class ConversionToDateTime
       }
       catch (FormatException) {
          Console.WriteLine("'{0}' is not in the proper format.", value);
-      }   
+      }
       catch (InvalidCastException) {
-         Console.WriteLine("Conversion of the {0} '{1}' is not supported", 
+         Console.WriteLine("Conversion of the {0} '{1}' is not supported",
                            value.GetType().Name, value);
       }
    }

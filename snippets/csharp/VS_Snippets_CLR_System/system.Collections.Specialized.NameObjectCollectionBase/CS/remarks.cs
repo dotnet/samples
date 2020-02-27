@@ -19,7 +19,7 @@ public class DerivedCollection : NameObjectCollectionBase
    // Gets a key-and-value pair (DictionaryEntry) using an index.
    public DictionaryEntry this[ int index ]  {
       get  {
-          return ( new DictionaryEntry( 
+          return ( new DictionaryEntry(
               this.BaseGetKey(index), this.BaseGet(index) ) );
       }
    }

@@ -31,14 +31,14 @@ class Program
             SqlDataReader reader =
                 commandSourceData.ExecuteReader();
 
-            // Set up the bulk copy object. 
+            // Set up the bulk copy object.
             using (SqlBulkCopy bulkCopy =
                        new SqlBulkCopy(connectionString))
             {
                 bulkCopy.DestinationTableName =
                     "dbo.BulkCopyDemoDifferentColumns";
 
-                // The column order in the source doesn't match the order 
+                // The column order in the source doesn't match the order
                 // in the destination, so ColumnMappings must be defined.
                 bulkCopy.ColumnMappings.Add(0, "ProdID");
                 bulkCopy.ColumnMappings.Add(1, "ProdName");
@@ -62,7 +62,7 @@ class Program
                 }
             }
 
-            // Perform a final count on the destination 
+            // Perform a final count on the destination
             // table to see how many rows were added.
             long countEnd = System.Convert.ToInt32(
                 commandRowCount.ExecuteScalar());
@@ -74,8 +74,8 @@ class Program
     }
 
     private static string GetConnectionString()
-        // To avoid storing the sourceConnection string in your code, 
-        // you can retrieve it from a configuration file. 
+        // To avoid storing the sourceConnection string in your code,
+        // you can retrieve it from a configuration file.
     {
         return "Data Source=(local); " +
             " Integrated Security=true;" +

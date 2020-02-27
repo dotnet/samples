@@ -49,15 +49,15 @@ class PerfCounterCatStatInstExistsMod
         catch(Exception ex)
         {
             Console.WriteLine("Unable to check for the existence of " +
-                "instance \"{0}\" in category \"{1}\" on " + 
-                (machineName.Length>0? "computer \"{2}\":": "this computer:") + "\n" + 
+                "instance \"{0}\" in category \"{1}\" on " +
+                (machineName.Length>0? "computer \"{2}\":": "this computer:") + "\n" +
                 ex.Message, instanceName, categoryName, machineName);
             return;
         }
 
         // Tell the user whether the instance exists.
-        Console.WriteLine("Instance \"{0}\" " + (objectExists? "exists": "does not exist") + 
-            " in category \"{1}\" on " + (machineName.Length>0? "computer \"{2}\".": "this computer."), 
+        Console.WriteLine("Instance \"{0}\" " + (objectExists? "exists": "does not exist") +
+            " in category \"{1}\" on " + (machineName.Length>0? "computer \"{2}\".": "this computer."),
             instanceName, categoryName, machineName);
     }
     //</Snippet10>

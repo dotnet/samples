@@ -34,7 +34,7 @@ namespace Microsoft.Samples.NestedTransactionScope
             application.Run();
             syncEvent.WaitOne();
 
-            //Scenario Two: The transaction will timeout but since the two second timeout of the inner TransactionScope no longer applies 
+            //Scenario Two: The transaction will timeout but since the two second timeout of the inner TransactionScope no longer applies
             //the transaction will timeout at five seconds when the outer TransactionScope timeout is exceded.
             Console.WriteLine("\n\nScenario Three - Inner timeout less than outer timeout, outer timeout exceeded");
             application = new WorkflowApplication(ScenarioThree());
@@ -72,12 +72,12 @@ namespace Microsoft.Samples.NestedTransactionScope
                     {
                         Body = new Sequence
                         {
-                            Activities = 
+                            Activities =
                             {
                                 new WriteLine { Text = "    Begin TransactionScope" },
 
                                 new PrintTransactionId(),
-                                
+
                                 new TransactionScopeTest(),
 
                                 new WriteLine { Text = "    End TransactionScope" },
@@ -103,12 +103,12 @@ namespace Microsoft.Samples.NestedTransactionScope
                     {
                         Body = new Sequence
                         {
-                            Activities = 
+                            Activities =
                             {
                                 new WriteLine { Text = "    Begin TransactionScope" },
 
                                 new PrintTransactionId(),
-                                
+
                                 new TransactionScope
                                 {
                                     Body = new Delay { Duration = TimeSpan.FromSeconds(5) },
@@ -138,12 +138,12 @@ namespace Microsoft.Samples.NestedTransactionScope
                     {
                         Body = new Sequence
                         {
-                            Activities = 
+                            Activities =
                             {
                                 new WriteLine { Text = "    Begin TransactionScope" },
 
                                 new PrintTransactionId(),
-                                
+
                                 new TransactionScope
                                 {
                                     Body = new WriteLine { Text = "    Inner TransactionScope" },
@@ -175,12 +175,12 @@ namespace Microsoft.Samples.NestedTransactionScope
                     {
                         Body = new Sequence
                         {
-                            Activities = 
+                            Activities =
                             {
                                 new WriteLine { Text = "    Begin TransactionScope" },
 
                                 new PrintTransactionId(),
-                                
+
                                 new TransactionScope
                                 {
                                     Body = new WriteLine { Text = "Inner TransactionScope" },

@@ -1,5 +1,5 @@
 ﻿//<Snippet3>
-// Example of the Convert.ToString( numeric types ) and 
+// Example of the Convert.ToString( numeric types ) and
 // Convert.ToString( numeric types, IFormatProvider ) methods.
 using System;
 using System.Globalization;
@@ -53,31 +53,31 @@ class ConvertNumericProviderDemo
         Console.WriteLine( formatter, "-------", "---------------" );
 
         // Convert the values with and without a format provider.
-        Console.WriteLine( formatter, Convert.ToString( ByteA ), 
+        Console.WriteLine( formatter, Convert.ToString( ByteA ),
             Convert.ToString( ByteA, provider ) );
-        Console.WriteLine( formatter, Convert.ToString( SByteA ), 
+        Console.WriteLine( formatter, Convert.ToString( SByteA ),
             Convert.ToString( SByteA, provider ) );
-        Console.WriteLine( formatter, Convert.ToString( UInt16A ), 
+        Console.WriteLine( formatter, Convert.ToString( UInt16A ),
             Convert.ToString( UInt16A, provider ) );
-        Console.WriteLine( formatter, Convert.ToString( Int16A ), 
+        Console.WriteLine( formatter, Convert.ToString( Int16A ),
             Convert.ToString( Int16A, provider ) );
 
-        Console.WriteLine( formatter, Convert.ToString( UInt32A ), 
+        Console.WriteLine( formatter, Convert.ToString( UInt32A ),
             Convert.ToString( UInt32A, provider ) );
-        Console.WriteLine( formatter, Convert.ToString( Int32A ), 
+        Console.WriteLine( formatter, Convert.ToString( Int32A ),
             Convert.ToString( Int32A, provider ) );
-        Console.WriteLine( formatter, Convert.ToString( UInt64A ), 
+        Console.WriteLine( formatter, Convert.ToString( UInt64A ),
             Convert.ToString( UInt64A, provider ) );
-        Console.WriteLine( formatter, Convert.ToString( Int64A ), 
+        Console.WriteLine( formatter, Convert.ToString( Int64A ),
             Convert.ToString( Int64A, provider ) );
 
-        Console.WriteLine( formatter, Convert.ToString( SingleA ), 
+        Console.WriteLine( formatter, Convert.ToString( SingleA ),
             Convert.ToString( SingleA, provider ) );
-        Console.WriteLine( formatter, Convert.ToString( DoubleA ), 
+        Console.WriteLine( formatter, Convert.ToString( DoubleA ),
             Convert.ToString( DoubleA, provider ) );
-        Console.WriteLine( formatter, Convert.ToString( DecimA ), 
+        Console.WriteLine( formatter, Convert.ToString( DecimA ),
             Convert.ToString( DecimA, provider ) );
-        Console.WriteLine( formatter, Convert.ToString( ObjDouble ), 
+        Console.WriteLine( formatter, Convert.ToString( ObjDouble ),
             Convert.ToString( ObjDouble, provider ) );
     }
 }
@@ -105,5 +105,5 @@ only the negative sign and decimal separator affect the conversions.
             61680.3855   61680 point 3855
   4042322160.252645135   4042322160 point 252645135
            -98765.4321   minus 98765 point 4321
-*/ 
+*/
 //</Snippet3>

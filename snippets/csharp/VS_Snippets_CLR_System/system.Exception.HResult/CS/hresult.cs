@@ -9,25 +9,25 @@ namespace NDP_UE_CS
     {
         const int SecondLevelHResult = unchecked( (int)0x81234567 );
 
-        // Set HResult for this exception, and include it in 
+        // Set HResult for this exception, and include it in
         // the exception message.
         public SecondLevelException( string message, Exception inner ) :
-            base( string.Format( "(HRESULT:0x{1:X8}) {0}", 
+            base( string.Format( "(HRESULT:0x{1:X8}) {0}",
                 message, SecondLevelHResult ), inner )
         {
             HResult = SecondLevelHResult;
         }
     }
 
-    class HResultDemo 
+    class HResultDemo
     {
-        public static void Main() 
+        public static void Main()
         {
-            Console.WriteLine( 
+            Console.WriteLine(
                 "This example of Exception.HResult " +
                 "generates the following output.\n" );
 
-            // This function forces a division by 0 and throws 
+            // This function forces a division by 0 and throws
             // a second exception.
             try
             {
@@ -38,7 +38,7 @@ namespace NDP_UE_CS
                 }
                 catch( Exception ex )
                 {
-                    throw new SecondLevelException( 
+                    throw new SecondLevelException(
                         "Forced a division by 0 and threw " +
                         "a second exception.", ex );
                 }

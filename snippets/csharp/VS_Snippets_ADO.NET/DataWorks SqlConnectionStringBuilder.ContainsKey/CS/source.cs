@@ -32,7 +32,7 @@ class Program
     private static string GetConnectionString()
     {
         // To avoid storing the connection string in your code,
-        // you can retrieve it from a configuration file. 
+        // you can retrieve it from a configuration file.
         return "Server=(local);Integrated Security=SSPI;" +
             "Initial Catalog=AdventureWorks";
     }

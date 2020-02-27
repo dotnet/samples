@@ -14,9 +14,9 @@ public class Sample
     //Display all the book titles.
     XmlNodeList elemList = doc.GetElementsByTagName("title");
     for (int i=0; i < elemList.Count; i++)
-    {   
+    {
       Console.WriteLine(elemList[i].InnerXml);
-    }  
+    }
   }
 }
    // </Snippet1>

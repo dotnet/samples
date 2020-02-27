@@ -35,7 +35,7 @@ namespace Microsoft.Samples.Faults.FaultService
         private string solution;
 
         [DataMember]
-        public string Problem 
+        public string Problem
         {
             get { return problem; }
             set { problem = value; }

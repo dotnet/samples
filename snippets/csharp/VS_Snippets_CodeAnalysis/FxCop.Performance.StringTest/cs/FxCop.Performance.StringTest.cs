@@ -6,7 +6,7 @@ namespace PerformanceLibrary
    public class StringTester
    {
       string s1 = "test";
-        
+
       public void EqualsTest()
       {
          // Violates rule: TestForEmptyStringsUsingStringLength.
@@ -25,7 +25,7 @@ namespace PerformanceLibrary
             Console.WriteLine("s1.Length == 0.");
          }
       }
-        
+
       // Use for .NET Framework 2.0.
       public void NullOrEmptyTest()
       {

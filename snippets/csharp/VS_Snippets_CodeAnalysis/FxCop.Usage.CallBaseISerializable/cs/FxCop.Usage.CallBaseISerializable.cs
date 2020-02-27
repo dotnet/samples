@@ -21,7 +21,7 @@ namespace UsageLibrary
          baseValue = info.GetInt32("baseValue");
       }
 
-      [SecurityPermissionAttribute(SecurityAction.Demand, 
+      [SecurityPermissionAttribute(SecurityAction.Demand,
           SerializationFormatter = true)]
       public virtual void GetObjectData(
          SerializationInfo info, StreamingContext context)
@@ -41,13 +41,13 @@ namespace UsageLibrary
       }
 
       protected DerivedType(
-         SerializationInfo info, StreamingContext context) : 
+         SerializationInfo info, StreamingContext context) :
          base(info, context)
       {
          derivedValue = info.GetInt32("derivedValue");
       }
 
-      [SecurityPermissionAttribute(SecurityAction.Demand, 
+      [SecurityPermissionAttribute(SecurityAction.Demand,
           SerializationFormatter = true)]
       public override void GetObjectData(
          SerializationInfo info, StreamingContext context)

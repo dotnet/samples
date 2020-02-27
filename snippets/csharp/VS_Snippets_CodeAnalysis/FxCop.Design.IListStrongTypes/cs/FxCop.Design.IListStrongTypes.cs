@@ -6,7 +6,7 @@ namespace DesignLibrary
    public class YourType
    {
       // Implementation for your strong type goes here.
-      
+
       public YourType() {}
    }
 
@@ -15,11 +15,11 @@ namespace DesignLibrary
       // Provide the strongly typed members for IList.
       public YourType this[int index]
       {
-         get 
+         get
          {
             return (YourType) ((IList)this)[index];
          }
-         set 
+         set
          {
             ((IList)this)[index] =  value;
          }
@@ -30,22 +30,22 @@ namespace DesignLibrary
          return ((IList)this).Add ((object) value);
       }
 
-      public bool Contains(YourType value) 
+      public bool Contains(YourType value)
       {
          return ((IList)this).Contains((object) value);
       }
 
-      public void Insert(int index, YourType value) 
+      public void Insert(int index, YourType value)
       {
          ((IList)this).Insert(index, (object) value);
       }
 
-      public void Remove(YourType value) 
+      public void Remove(YourType value)
       {
          ((IList)this).Remove((object) value);
       }
 
-      public int IndexOf(YourType value) 
+      public int IndexOf(YourType value)
       {
          return ((IList)this).IndexOf((object) value);
       }

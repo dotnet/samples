@@ -129,11 +129,11 @@ public class ByFileExtension : IComparer<string>
 
     public int Compare(string x, string y)
     {
-        // Parse the extension from the file name. 
+        // Parse the extension from the file name.
         xExt = x.Substring(x.LastIndexOf(".") + 1);
         yExt = y.Substring(y.LastIndexOf(".") + 1);
 
-        // Compare the file extensions. 
+        // Compare the file extensions.
         int vExt = caseiComp.Compare(xExt, yExt);
         if (vExt != 0)
         {
@@ -141,8 +141,8 @@ public class ByFileExtension : IComparer<string>
         }
         else
         {
-            // The extension is the same, 
-            // so compare the filenames. 
+            // The extension is the same,
+            // so compare the filenames.
             return caseiComp.Compare(x, y);
         }
     }

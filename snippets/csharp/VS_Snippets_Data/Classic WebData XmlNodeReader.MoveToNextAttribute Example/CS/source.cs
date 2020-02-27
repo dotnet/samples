@@ -3,7 +3,7 @@ using System;
 using System.IO;
 using System.Xml;
 
-public class Sample 
+public class Sample
 {
   public static void Main()
   {
@@ -16,11 +16,11 @@ public class Sample
        doc.LoadXml("<book genre='novel' ISBN='1-861003-78'> " +
                    "<title>Pride And Prejudice</title>" +
                    "<price>19.95</price>" +
-                   "</book>"); 
+                   "</book>");
 
-       //Load the XmlNodeReader 
+       //Load the XmlNodeReader
        reader = new XmlNodeReader(doc);
-  
+
        //Read the attributes on the book element.
        reader.MoveToContent();
        while (reader.MoveToNextAttribute())
@@ -34,9 +34,9 @@ public class Sample
        //Read the title and price elements.
        Console.WriteLine(reader.ReadElementString());
        Console.WriteLine(reader.ReadElementString());
-     } 
+     }
 
-     finally 
+     finally
      {
         if (reader != null)
           reader.Close();

@@ -184,7 +184,7 @@ public class SimpleOD : IOrderedDictionary
 public class ODEnum : IDictionaryEnumerator
 {
     public ArrayList itemlist;
-    
+
     // Enumerators are positioned before the first element
     // until the first MoveNext() call.
     int position = -1;

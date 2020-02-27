@@ -7,12 +7,12 @@ public class Example
    public static void Main()
    {
       CompareInfo ci = CultureInfo.CurrentCulture.CompareInfo;
-      
+
       int position = 0;
 
       string s1 = "ani\u00ADmal";
       string s2 = "animal";
-      
+
       // Find the index of the soft hyphen.
       position = ci.IndexOf(s1, "n");
       Console.WriteLine("'n' at position {0}", position);
@@ -21,9 +21,9 @@ public class Example
 
       position = ci.IndexOf(s2, "n");
       Console.WriteLine("'n' at position {0}", position);
-      if (position >= 0)   
+      if (position >= 0)
          Console.WriteLine(ci.IndexOf(s2, "\u00AD", position, s2.Length - position));
-      
+
       // Find the index of the soft hyphen followed by "n".
       position = ci.IndexOf(s1, "n");
       Console.WriteLine("'n' at position {0}", position);
@@ -32,9 +32,9 @@ public class Example
 
       position = ci.IndexOf(s2, "n");
       Console.WriteLine("'n' at position {0}", position);
-      if (position >= 0)   
+      if (position >= 0)
          Console.WriteLine(ci.IndexOf(s2, "\u00ADn", position, s2.Length - position));
-      
+
       // Find the index of the soft hyphen followed by "m".
       position = ci.IndexOf(s1, "n");
       Console.WriteLine("'n' at position {0}", position);
@@ -43,7 +43,7 @@ public class Example
 
       position = ci.IndexOf(s2, "n");
       Console.WriteLine("'n' at position {0}", position);
-      if (position >= 0)   
+      if (position >= 0)
          Console.WriteLine(ci.IndexOf(s2, "\u00ADm", position, s2.Length - position));
    }
 }

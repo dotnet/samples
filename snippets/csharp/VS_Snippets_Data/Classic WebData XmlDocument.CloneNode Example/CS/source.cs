@@ -13,12 +13,12 @@ public class Sample
                 "<title>Pride And Prejudice</title>" +
                 "</book>");
 
-    //Create a deep clone.  The cloned node 
+    //Create a deep clone.  The cloned node
     //includes the child node.
     XmlDocument deep = (XmlDocument) doc.CloneNode(true);
     Console.WriteLine(deep.ChildNodes.Count);
 
-    //Create a shallow clone.  The cloned node does not 
+    //Create a shallow clone.  The cloned node does not
     //include the child node.
     XmlDocument shallow = (XmlDocument) doc.CloneNode(false);
     Console.WriteLine(shallow.Name + shallow.OuterXml);

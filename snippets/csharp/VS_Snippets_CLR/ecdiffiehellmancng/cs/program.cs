@@ -47,7 +47,7 @@ class Alice
     }
     //</Snippet2>
 }
-public class Bob 
+public class Bob
 {
     public byte[] bobPublicKey;
     private byte[] bobKey;

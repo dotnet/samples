@@ -7,22 +7,22 @@ class Example
     {
         // Define an array of Int64 values.
         long[] values = { 0, 0xFFFFFF, -0xFFFFFF, 1000000000, -1000000000,
-                          0x100000000, -0x100000000, 0xAAAAAAAAAAAA, 
-                          -0xAAAAAAAAAAAA, 1000000000000000000, 
-                          -1000000000000000000, long.MinValue, 
+                          0x100000000, -0x100000000, 0xAAAAAAAAAAAA,
+                          -0xAAAAAAAAAAAA, 1000000000000000000,
+                          -1000000000000000000, long.MinValue,
                           long.MaxValue };
-        
+
         Console.WriteLine( "{0,22}{1,10} {2,30}", "Int64", "Endian", "Byte Array");
         Console.WriteLine( "{0,22}{1,10} {2,30}", "----", "------", "----------" );
-        
+
         foreach (var value in values) {
             // Convert each Int64 value to a byte array.
             byte[] byteArray = BitConverter.GetBytes(value);
             // Display the result.
-            Console.WriteLine("{0,22}{1,10}{2,30}", value, 
-                              BitConverter.IsLittleEndian ? "Little" : "Big", 
+            Console.WriteLine("{0,22}{1,10}{2,30}", value,
+                              BitConverter.IsLittleEndian ? "Little" : "Big",
                               BitConverter.ToString(byteArray));
-        }  
+        }
     }
 }
 // The example displays output like the following:

@@ -13,7 +13,7 @@ namespace DesignLibrary
 
    public enum TypeOfFeedback
    {
-      Complaint, 
+      Complaint,
       Praise,
       Suggestion,
       Incomprehensible
@@ -23,11 +23,11 @@ namespace DesignLibrary
    {
       // Violates rule: DoNotPassTypesByReference.
 
-      public static bool ReplyInformation (TypeOfFeedback input, 
+      public static bool ReplyInformation (TypeOfFeedback input,
          out string reply, ref Actions action)
       {
          bool returnReply = false;
-         string replyText = "Your feedback has been forwarded " + 
+         string replyText = "Your feedback has been forwarded " +
                             "to the product manager.";
 
          reply = String.Empty;
@@ -62,7 +62,7 @@ namespace DesignLibrary
       string reply;
       Actions action;
       bool returnReply;
-      
+
       // Constructors.
       public ReplyData()
       {
@@ -84,7 +84,7 @@ namespace DesignLibrary
 
       public override string ToString()
       {
-         return String.Format("Reply: {0} Action: {1} return? {2}", 
+         return String.Format("Reply: {0} Action: {1} return? {2}",
             reply, action.ToString(), returnReply.ToString());
       }
    }
@@ -94,7 +94,7 @@ namespace DesignLibrary
       public static ReplyData ReplyInformation (TypeOfFeedback input)
       {
          ReplyData answer;
-         string replyText = "Your feedback has been forwarded " + 
+         string replyText = "Your feedback has been forwarded " +
             "to the product manager.";
 
          switch (input)

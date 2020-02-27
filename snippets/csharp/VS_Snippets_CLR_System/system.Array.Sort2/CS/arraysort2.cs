@@ -7,7 +7,7 @@ using System;
 using System.Collections;
 
 public class SamplesArray  {
- 
+
    public class myReverserClass : IComparer  {
 
       // Calls CaseInsensitiveComparer.Compare with the parameters reversed.
@@ -17,16 +17,16 @@ public class SamplesArray  {
    }
 
    public static void Main()  {
- 
+
       // Creates and initializes a new Array and a new custom comparer.
       String[] myKeys = { "red", "GREEN", "YELLOW", "BLUE", "purple", "black", "orange" };
       String[] myValues = { "strawberries", "PEARS", "LIMES", "BERRIES", "grapes", "olives", "cantaloupe" };
       IComparer myComparer = new myReverserClass();
- 
+
       // Displays the values of the Array.
       Console.WriteLine( "The Array initially contains the following values:" );
       PrintKeysAndValues( myKeys, myValues );
- 
+
       // Sorts a section of the Array using the default comparer.
       Array.Sort( myKeys, myValues, 1, 3 );
       Console.WriteLine( "After sorting a section of the Array using the default comparer:" );
@@ -47,7 +47,7 @@ public class SamplesArray  {
       Console.WriteLine( "After sorting the entire Array using the reverse case-insensitive comparer:" );
       PrintKeysAndValues( myKeys, myValues );
    }
- 
+
    public static void PrintKeysAndValues( String[] myKeys, String[] myValues )  {
       for ( int i = 0; i < myKeys.Length; i++ )  {
          Console.WriteLine( "   {0,-10}: {1}", myKeys[i], myValues[i] );
@@ -57,7 +57,7 @@ public class SamplesArray  {
 }
 
 
-/* 
+/*
 This code produces the following output.
 
 The Array initially contains the following values:

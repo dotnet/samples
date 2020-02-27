@@ -38,7 +38,7 @@ class Class1
             // First, verify that the FileName column isn't null.
             if (!reader.IsDBNull(FILENAME_COLUMN))
             {
-                // Get the file name, and create a file with 
+                // Get the file name, and create a file with
                 // the supplied name.
                 fileName = reader.GetString(FILENAME_COLUMN);
                 // Start at the beginning.
@@ -51,7 +51,7 @@ class Class1
                     {
                         // Loop through all the characters in the input field,
                         // incrementing the offset for the next time. If this
-                        // pass through the loop reads characters, write them to 
+                        // pass through the loop reads characters, write them to
                         // the output stream.
                         do
                         {

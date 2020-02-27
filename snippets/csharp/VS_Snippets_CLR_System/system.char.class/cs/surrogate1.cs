@@ -9,9 +9,9 @@ public class Example
       StreamWriter sw = new StreamWriter(@".\chars2.txt");
       int utf32 = 0x1D160;
       string surrogate = Char.ConvertFromUtf32(utf32);
-      sw.WriteLine("U+{0:X6} UTF-32 = {1} ({2}) UTF-16", 
+      sw.WriteLine("U+{0:X6} UTF-32 = {1} ({2}) UTF-16",
                    utf32, surrogate, ShowCodePoints(surrogate));
-      sw.Close();                    
+      sw.Close();
    }
 
    private static string ShowCodePoints(string value)

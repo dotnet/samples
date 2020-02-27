@@ -10,7 +10,7 @@ class Program
         DbConnectionStringBuilder builder = new
             DbConnectionStringBuilder();
         builder.ConnectionString =
-            @"Provider=Microsoft.Jet.OLEDB.4.0;Data 
+            @"Provider=Microsoft.Jet.OLEDB.4.0;Data
                 Source=C:\Demo.mdb;" +
             "Jet OLEDB:System Database=system.mdw;";
 
@@ -20,8 +20,8 @@ class Program
         // Try to remove a nonexistent item.
         TryRemove(builder, "User ID");
 
-        // Try to remove an existing item, 
-        // demonstrating that the search isn't 
+        // Try to remove an existing item,
+        // demonstrating that the search isn't
         // case sensitive.
         TryRemove(builder, "DATA SOURCE");
         Console.ReadLine();

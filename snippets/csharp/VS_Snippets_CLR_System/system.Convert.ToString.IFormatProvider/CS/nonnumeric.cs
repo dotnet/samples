@@ -3,12 +3,12 @@
 using System;
 using System.Globalization;
 
-// An instance of this class can be passed to methods that require 
+// An instance of this class can be passed to methods that require
 // an IFormatProvider.
 public class DummyProvider : IFormatProvider
 {
     // Normally, GetFormat returns an object of the requested type
-    // (usually itself) if it is able; otherwise, it returns Nothing. 
+    // (usually itself) if it is able; otherwise, it returns Nothing.
     public object GetFormat( Type argType )
     {
         // Here, the type of argType is displayed, and GetFormat
@@ -91,5 +91,5 @@ char     $
 TimeSpan 00:18:00
 object   DummyProvider
 
-*/ 
+*/
 //</Snippet2>

@@ -10,7 +10,7 @@ namespace Samples
             get;
         }
 
-        void Read();        
+        void Read();
     }
 }
 //</Snippet1>

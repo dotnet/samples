@@ -51,7 +51,7 @@ namespace DesignLibrary
          integerListC.Add(8);
          integerListC.Add(9);
 
-         List<ICollection<int>> nestedIntegerLists = 
+         List<ICollection<int>> nestedIntegerLists =
             new List<ICollection<int>>();
          nestedIntegerLists.Add(integerListA);
          nestedIntegerLists.Add(integerListB);

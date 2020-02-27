@@ -20,7 +20,7 @@ public class Class1
         writer.Formatting = Formatting.Indented;
         writer.Indentation = 2;
         schema.Write(writer);
-        Console.WriteLine(sw.ToString());  
+        Console.WriteLine(sw.ToString());
       }
     }
     // </Snippet1>

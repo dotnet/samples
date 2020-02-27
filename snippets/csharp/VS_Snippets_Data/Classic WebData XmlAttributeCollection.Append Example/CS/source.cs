@@ -6,11 +6,11 @@ using System.Xml;
 public class Sample
 {
   public static void Main(){
-  
+
     XmlDocument doc = new XmlDocument();
     doc.LoadXml("<book ISBN='1-861001-57-5'>" +
                 "<title>Pride And Prejudice</title>" +
-                "</book>");      
+                "</book>");
 
     //Create a new attribute.
     XmlAttribute newAttr = doc.CreateAttribute("genre");
@@ -22,7 +22,7 @@ public class Sample
     attrColl.Append(newAttr);
 
     Console.WriteLine("Display the modified XML...\r\n");
-    Console.WriteLine(doc.OuterXml);  
+    Console.WriteLine(doc.OuterXml);
   }
 }
    // </Snippet1>

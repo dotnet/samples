@@ -26,14 +26,14 @@ namespace Snippets {
 	// The Temperature class stores the temperature as a Double
 	// and delegates most of the functionality to the Double
 	// implementation.
-	public class Temperature : IComparable, IFormattable 
+	public class Temperature : IComparable, IFormattable
     {
 		// IComparable.CompareTo implementation.
 		public int CompareTo(object obj) {
             if (obj == null) return 1;
-            
+
 			Temperature temp = obj as Temperature;
-            if (obj != null) 
+            if (obj != null)
 				return m_value.CompareTo(temp.m_value);
 			else
      			throw new ArgumentException("object is not a Temperature");	
@@ -136,14 +136,14 @@ namespace Snippets2 {
 
 namespace Snippets3 {
 	//<snippet3>
-	public class Temperature : IComparable 
+	public class Temperature : IComparable
     {
 		// IComparable.CompareTo implementation.
 		public int CompareTo(object obj) {
             if (obj == null) return 1;
-            
+
 			Temperature temp = obj as Temperature;
-            if (obj != null) 
+            if (obj != null)
 				return m_value.CompareTo(temp.m_value);
 			else
      			throw new ArgumentException("object is not a Temperature");	

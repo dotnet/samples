@@ -1,9 +1,9 @@
 ﻿// <Snippet1>
 using System;
 using System.Reflection;
- 
+
 // A class that contains some properties.
-public class MyProperty   
+public class MyProperty
 {
     // Define a simple string property.
     private string caption = "A Default caption";
@@ -14,10 +14,10 @@ public class MyProperty
         }
     }
 
-    // A very limited indexer that gets or sets one of four 
+    // A very limited indexer that gets or sets one of four
     // strings.
     private string[] strings = {"abc", "def", "ghi", "jkl"};
-    public string this[int Index]    
+    public string this[int Index]
     {
         get
         {
@@ -29,7 +29,7 @@ public class MyProperty
         }
     }
 }
- 
+
 class Mypropertyinfo
 {
     public static int Main()
@@ -37,17 +37,17 @@ class Mypropertyinfo
         // Get the type and PropertyInfo.
         Type t = Type.GetType("MyProperty");
         PropertyInfo pi = t.GetProperty("Caption");
- 
+
         // Get the public GetIndexParameters method.
         ParameterInfo[] parms = pi.GetIndexParameters();
         Console.WriteLine("\r\n" + t.FullName + "." + pi.Name
             + " has " + parms.GetLength(0) + " parameters.");
- 
-        // Display a property that has parameters. The default 
+
+        // Display a property that has parameters. The default
         // name of an indexer is "Item".
         pi = t.GetProperty("Item");
         parms = pi.GetIndexParameters();
-        Console.WriteLine(t.FullName + "." + pi.Name + " has " + 
+        Console.WriteLine(t.FullName + "." + pi.Name + " has " +
             parms.GetLength(0) + " parameters.");
         foreach( ParameterInfo p in parms )
         {

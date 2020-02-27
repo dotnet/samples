@@ -36,9 +36,9 @@
        Console.WriteLine();
     }
  }
- /* 
+ /*
  This code produces the following output.
- 
+
  Initially,
     Count    : 5
     Values:    The    quick    brown    fox    jumps
@@ -46,5 +46,5 @@
     Count    : 0
     Values:
 
- */ 
+ */
 // </Snippet1>

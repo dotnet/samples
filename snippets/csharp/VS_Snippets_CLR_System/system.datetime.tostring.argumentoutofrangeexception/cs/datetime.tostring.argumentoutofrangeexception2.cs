@@ -11,22 +11,22 @@ public class Example
       CultureInfo dft;
       CultureInfo arSY = new CultureInfo("ar-SY");
       arSY.DateTimeFormat.Calendar = new HijriCalendar();
-      
+
       // Change current culture to ar-SY.
       dft = Thread.CurrentThread.CurrentCulture;
       Thread.CurrentThread.CurrentCulture = arSY;
-      
-      // Display the date using the current culture's calendar.            
+
+      // Display the date using the current culture's calendar.
       try {
          Console.WriteLine(date1.ToString());
       }
       catch (ArgumentOutOfRangeException) {
-         Console.WriteLine("{0} is earlier than {1} or later than {2}", 
-                           date1.ToString("d", CultureInfo.InvariantCulture), 
-                           arSY.DateTimeFormat.Calendar.MinSupportedDateTime.ToString("d", CultureInfo.InvariantCulture),  
-                           arSY.DateTimeFormat.Calendar.MaxSupportedDateTime.ToString("d", CultureInfo.InvariantCulture)); 
+         Console.WriteLine("{0} is earlier than {1} or later than {2}",
+                           date1.ToString("d", CultureInfo.InvariantCulture),
+                           arSY.DateTimeFormat.Calendar.MinSupportedDateTime.ToString("d", CultureInfo.InvariantCulture),
+                           arSY.DateTimeFormat.Calendar.MaxSupportedDateTime.ToString("d", CultureInfo.InvariantCulture));
       }
-      
+
       // Restore the default culture.
       Thread.CurrentThread.CurrentCulture = dft;
    }

@@ -10,7 +10,7 @@ public class Form1: Form
 // <Snippet1>
  WindowsPrincipal wp = new WindowsPrincipal(WindowsIdentity.GetCurrent());
  String username = wp.Identity.Name;
- 
+
 // </Snippet1>
  }
 }

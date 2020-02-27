@@ -38,7 +38,7 @@ class someClass
     {
         EnsureNotNull(value);
 
-        // Fires incorrectly    
+        // Fires incorrectly
         return value.ToString();
     }
 
@@ -55,7 +55,7 @@ class someClass
         if (value1 == null || value2 == null)
             throw new ArgumentNullException(value1 == null ? "value1" : "value2");
 
-        // Fires incorrectly    
+        // Fires incorrectly
         return value1.ToString() + value2.ToString();
     }
     //</Snippet3>

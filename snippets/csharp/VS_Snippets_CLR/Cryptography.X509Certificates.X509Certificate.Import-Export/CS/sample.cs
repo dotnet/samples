@@ -1,4 +1,4 @@
-﻿//<SNIPPET1> 
+﻿//<SNIPPET1>
 using System;
 using System.Security.Cryptography.X509Certificates;
 
@@ -31,4 +31,4 @@ public class X509
         Console.WriteLine(resultsFalse);
     }
 }
-//</SNIPPET1> 
+//</SNIPPET1>

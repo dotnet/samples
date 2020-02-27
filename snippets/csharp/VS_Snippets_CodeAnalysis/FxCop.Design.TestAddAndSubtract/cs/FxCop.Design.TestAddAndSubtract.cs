@@ -13,7 +13,7 @@ namespace DesignLibrary
           GoodAddableType c = new GoodAddableType(3,3);
           GoodAddableType d = new GoodAddableType(3,3);
           GoodAddableType y = new GoodAddableType(9,9);
-    
+
           Console.WriteLine("Bad type:  {0} {1} are equal? {2}", a,b, a.Equals(b)? "Yes":"No");
           Console.WriteLine("Good type: {0} {1} are equal? {2}", c,d, c.Equals(d)? "Yes":"No");
           Console.WriteLine("Good type: {0} {1} are == ?   {2}", c,d, c==d? "Yes":"No");
@@ -75,20 +75,20 @@ namespace DesignLibrary
          GoodAddableType good = obj as GoodAddableType;
          if (obj == null)
             return false;
-         
+
         return this == good;
       }
-      
-      public override int GetHashCode() 
-      { 
-          return 0; 
+
+      public override int GetHashCode()
+      {
+          return 0;
       }
 
       public static GoodAddableType operator +(GoodAddableType a, GoodAddableType b)
       {
          return new GoodAddableType(a.a + b.a, a.b + b.b);
       }
-     
+
       public static GoodAddableType operator -(GoodAddableType a, GoodAddableType b)
       {
          return new GoodAddableType(a.a - b.a, a.b - b.b);

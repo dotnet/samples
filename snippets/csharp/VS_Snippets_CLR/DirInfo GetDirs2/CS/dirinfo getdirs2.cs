@@ -2,11 +2,11 @@
 using System;
 using System.IO;
 
-class Test 
+class Test
 {
-    public static void Main() 
+    public static void Main()
     {
-        try 
+        try
         {
             DirectoryInfo di = new DirectoryInfo(@"c:\");
 
@@ -14,13 +14,13 @@ class Test
             DirectoryInfo[] dirs = di.GetDirectories("*p*");
             Console.WriteLine("The number of directories containing the letter p is {0}.", dirs.Length);
 
-            foreach (DirectoryInfo diNext in dirs) 
+            foreach (DirectoryInfo diNext in dirs)
             {
-                Console.WriteLine("The number of files in {0} is {1}", diNext, 
+                Console.WriteLine("The number of files in {0} is {1}", diNext,
                     diNext.GetFiles().Length);
             }
-        } 
-        catch (Exception e) 
+        }
+        catch (Exception e)
         {
             Console.WriteLine("The process failed: {0}", e.ToString());
         }

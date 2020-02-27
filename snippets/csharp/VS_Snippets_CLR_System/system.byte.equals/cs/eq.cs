@@ -4,9 +4,9 @@
 
 using System;
 
-class Sample 
+class Sample
 {
-    public static void Main() 
+    public static void Main()
     {
     byte   byteVal1 = 0x7f;
     byte   byteVal2 = 127;

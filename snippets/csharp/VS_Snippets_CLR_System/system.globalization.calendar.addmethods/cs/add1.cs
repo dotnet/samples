@@ -5,7 +5,7 @@ public class Example
 {
    static DateTime date1 = DateTime.SpecifyKind(new DateTime(2009, 6, 1, 7, 42, 0), DateTimeKind.Local);
    static DateTime time, returnTime;
-   
+
    public static void Main()
    {
       Calendar[] calendars = { new ChineseLunisolarCalendar(),
@@ -42,18 +42,18 @@ public class Example
          AddYears(cal);
       }
    }
-   
+
    private static void AddDays(Calendar cal)
    {
       int days = 3;
       Example.time = date1;
-            
+
       // <Snippet1>
       returnTime = DateTime.SpecifyKind(cal.AddDays(time, days), time.Kind);
       // </Snippet1>
       Console.WriteLine(returnTime.Kind == time.Kind);
    }
-   
+
    private static void AddHours(Calendar cal)
    {
       int hours = 3;
@@ -63,7 +63,7 @@ public class Example
       returnTime = DateTime.SpecifyKind(cal.AddHours(time, hours), time.Kind);
       // </Snippet2>
    }
-   
+
    private static void AddMilliseconds(Calendar cal)
    {
       int milliseconds = 100000;
@@ -74,7 +74,7 @@ public class Example
       // </Snippet3>
       Console.WriteLine(returnTime.Kind == time.Kind);
    }
-   
+
    private static void AddMinutes(Calendar cal)
    {
       int minutes = 90;
@@ -85,7 +85,7 @@ public class Example
       // </Snippet4>
       Console.WriteLine(returnTime.Kind == time.Kind);
    }
-   
+
    private static void AddMonths(Calendar cal)
    {
       int months = 11;
@@ -96,7 +96,7 @@ public class Example
       // </Snippet5>
       Console.WriteLine(returnTime.Kind == time.Kind);
    }
-   
+
    private static void AddSeconds(Calendar cal)
    {
       int seconds = 90;
@@ -107,7 +107,7 @@ public class Example
       // </Snippet6>
       Console.WriteLine(returnTime.Kind == time.Kind);
    }
-   
+
    private static void AddWeeks(Calendar cal)
    {
       int weeks = 12;
@@ -118,7 +118,7 @@ public class Example
       // </Snippet7>
       Console.WriteLine(returnTime.Kind == time.Kind);
    }
-   
+
    private static void AddYears(Calendar cal)
    {
       int years = 12;

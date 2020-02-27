@@ -13,7 +13,7 @@ class Example
            Decimal decValue = value;
            Console.WriteLine("{0} ({1}) --> {2} ({3})", value,
                              value.GetType().Name, decValue,
-                             decValue.GetType().Name);         
+                             decValue.GetType().Name);
         }
     }
 }

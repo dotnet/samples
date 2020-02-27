@@ -7,7 +7,7 @@ public class Example
    {
       Decimal number = 1079.8m;
       Console.WriteLine("Original value:    {0:N}", number);
-      Console.WriteLine("Decremented value: {0:N}", Decimal.Subtract(number, 1)); 
+      Console.WriteLine("Decremented value: {0:N}", Decimal.Subtract(number, 1));
    }
 }
 // The example displays the following output:

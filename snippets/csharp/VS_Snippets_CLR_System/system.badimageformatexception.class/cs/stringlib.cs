@@ -5,11 +5,11 @@ public class StringLib
 {
    private string[] exceptionList = { "a", "an", "the", "in", "on", "of" };
    private char[] separators = { ' ' };
-   
+
    public string ToProperCase(string title)
    {
       bool isException = false;	
-      
+
       string[] words = title.Split( separators, StringSplitOptions.RemoveEmptyEntries);
       string[] newWords = new string[words.Length];
 		
@@ -25,16 +25,16 @@ public class StringLib
                break;
             }
          }
-         
+
          if (! isException)
             newWords[ctr] = words[ctr].Substring(0, 1).ToUpper() + words[ctr].Substring(1);
          else
-            newWords[ctr] = words[ctr];	 
+            newWords[ctr] = words[ctr];	
       }	
       return String.Join(" ", newWords); 			
    }
 }
 // Attempting to load the StringLib.dll assembly produces the following output:
-//    Unhandled Exception: System.BadImageFormatException: 
+//    Unhandled Exception: System.BadImageFormatException:
 //                         The format of the file 'StringLib.dll' is invalid.
 // </Snippet2>

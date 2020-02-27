@@ -16,7 +16,7 @@ class Class1
         {
             for (int i = 0; i < reader.FieldCount; i++)
             {
-                Console.WriteLine("{0}: {1}", reader.GetName(i), 
+                Console.WriteLine("{0}: {1}", reader.GetName(i),
                     reader.GetDataTypeName(i));
             }
         }

@@ -186,7 +186,7 @@ public class People : IOrderedDictionary
 public class PeopleEnum : IDictionaryEnumerator
 {
     public ArrayList _people;
-    
+
     // Enumerators are positioned before the first element
     // until the first MoveNext() call.
     int position = -1;
@@ -290,12 +290,12 @@ class App
     }
 }
 /* This code produces output similar to the following:
- * 
+ *
  * Displaying the entries in peopleCollection:
  * John Smith
  * Jim Johnson
  * Sue Rabon
- * 
+ *
  * Displaying the entries in the modified peopleCollection:
  * Fred Anderson
  * John Smith

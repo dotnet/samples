@@ -6,7 +6,7 @@ public class Example
    public static void Main()
    {
       int[] bases = { 2, 8, 10, 16 };
-      string[] values = { "-1", "1", "08", "0F", "11" , "12", "30",                
+      string[] values = { "-1", "1", "08", "0F", "11" , "12", "30",
                           "101", "255", "FF", "10000000", "80" };
       byte number;
       foreach (int numBase in bases)
@@ -17,19 +17,19 @@ public class Example
             try {
                number = Convert.ToByte(value, numBase);
                Console.WriteLine("   Converted '{0}' to {1}.", value, number);
-            }   
+            }
             catch (FormatException) {
-               Console.WriteLine("   '{0}' is not in the correct format for a base {1} byte value.", 
+               Console.WriteLine("   '{0}' is not in the correct format for a base {1} byte value.",
                                  value, numBase);
-            }                     
+            }
             catch (OverflowException) {
                Console.WriteLine("   '{0}' is outside the range of the Byte type.", value);
-            }   
+            }
             catch (ArgumentException) {
                Console.WriteLine("   '{0}' is invalid in base {1}.", value, numBase);
             }
-         }                                 
-      } 
+         }
+      }
    }
 }
 // The example displays the following output:

@@ -15,7 +15,7 @@ namespace CSDataIsolationLevel {
          Console.WriteLine("Begin the DirtyReadFirstThread.....");
 
          using (SqlConnection conn = new SqlConnection(connStrig)) {
-            String cmdText = @"Use DbDataIsolationLevel; 
+            String cmdText = @"Use DbDataIsolationLevel;
 
                     Update dbo.Products set Quantity=Quantity+100 where ProductId=1;
                     WaitFor Delay '00:00:06';";
@@ -42,7 +42,7 @@ namespace CSDataIsolationLevel {
          using (SqlConnection conn = new SqlConnection(connStrig)) {
             String cmdText = @"Use DbDataIsolationLevel;
 
-                    WaitFor Delay '00:00:03'; 
+                    WaitFor Delay '00:00:03';
 
                     Declare @qty int;
                     select @qty=Quantity from dbo.Products where ProductId=1;
@@ -69,7 +69,7 @@ namespace CSDataIsolationLevel {
          Console.WriteLine("Begin the NonrepeatableReadFirstThread.....");
 
          using (SqlConnection conn = new SqlConnection(connStrig)) {
-            String cmdText = @"Use DbDataIsolationLevel; 
+            String cmdText = @"Use DbDataIsolationLevel;
 
                     Select ProductId,ProductName,Quantity,Price
                     from dbo.Products
@@ -110,7 +110,7 @@ namespace CSDataIsolationLevel {
          using (SqlConnection conn = new SqlConnection(connStrig)) {
             String cmdText = @"Use DbDataIsolationLevel;
 
-                    WaitFor Delay '00:00:03'; 
+                    WaitFor Delay '00:00:03';
 
                     Update dbo.Products set Quantity=Quantity+100 where ProductId=1;";
 
@@ -134,7 +134,7 @@ namespace CSDataIsolationLevel {
          Console.WriteLine("Begin the PhantomReadFirstThread.....");
 
          using (SqlConnection conn = new SqlConnection(connStrig)) {
-            String cmdText = @"Use DbDataIsolationLevel; 
+            String cmdText = @"Use DbDataIsolationLevel;
 
                     Select ProductId,ProductName,Quantity,Price
                     from dbo.Products
@@ -174,9 +174,9 @@ namespace CSDataIsolationLevel {
          using (SqlConnection conn = new SqlConnection(connStrig)) {
             String cmdText = @"Use DbDataIsolationLevel;
 
-                    WaitFor Delay '00:00:03'; 
+                    WaitFor Delay '00:00:03';
 
-                    INSERT [dbo].[Products] ([ProductName], [Quantity], [Price]) 
+                    INSERT [dbo].[Products] ([ProductName], [Quantity], [Price])
                     VALUES (N'White Bike', 843, 1349.00)";
 
             conn.Open();
@@ -261,7 +261,7 @@ namespace CSDataIsolationLevel {
             using (SqlConnection conn = new SqlConnection(connStrig)) {
                String cmdText = @"Use DbDataIsolationLevel;
 
-                    WaitFor Delay '00:00:03'; 
+                    WaitFor Delay '00:00:03';
 
                     Declare @price money;
                     select @price=Price from dbo.Products where ProductId=1;
@@ -304,7 +304,7 @@ namespace CSDataIsolationLevel {
 
       public static void DisplayData(String connString) {
          using (SqlConnection conn = new SqlConnection(connString)) {
-            String cmdText = @"Use DbDataIsolationLevel; 
+            String cmdText = @"Use DbDataIsolationLevel;
 
                     Select ProductId,ProductName,Quantity,Price
                     from dbo.Products";

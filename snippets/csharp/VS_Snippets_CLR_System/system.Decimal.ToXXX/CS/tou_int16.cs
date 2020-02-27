@@ -10,7 +10,7 @@ class DecimalToU_Int16Demo
     public static string GetExceptionType( Exception ex )
     {
         string exceptionType = ex.GetType( ).ToString( );
-        return exceptionType.Substring( 
+        return exceptionType.Substring(
             exceptionType.LastIndexOf( '.' ) + 1 );
     }
 
@@ -40,7 +40,7 @@ class DecimalToU_Int16Demo
             UInt16Value = GetExceptionType( ex );
         }
 
-        Console.WriteLine( formatter, argument, 
+        Console.WriteLine( formatter, argument,
             Int16Value, UInt16Value );
     }
 
@@ -51,9 +51,9 @@ class DecimalToU_Int16Demo
             "  decimal.ToUInt16( decimal ) \nmethods " +
             "generates the following output. It \ndisplays " +
             "several converted decimal values.\n" );
-        Console.WriteLine( formatter, "decimal argument", 
+        Console.WriteLine( formatter, "decimal argument",
             "short/exception", "ushort/exception" );
-        Console.WriteLine( formatter, "----------------", 
+        Console.WriteLine( formatter, "----------------",
             "---------------", "----------------" );
 
         // Convert decimal values and display the results.

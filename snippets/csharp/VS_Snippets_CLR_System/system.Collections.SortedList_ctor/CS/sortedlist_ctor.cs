@@ -99,7 +99,7 @@ public class SamplesSortedList
 }
 
 
-/* 
+/*
 This code produces the following output.
 Results vary depending on the system's culture settings.
 

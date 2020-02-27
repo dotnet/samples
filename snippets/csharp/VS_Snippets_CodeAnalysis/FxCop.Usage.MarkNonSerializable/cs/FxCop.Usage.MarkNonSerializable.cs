@@ -34,7 +34,7 @@ namespace UsageLibrary
 
       public InputDevices1()
       {
-         opticalMouse = new Mouse(5, "optical"); 
+         opticalMouse = new Mouse(5, "optical");
       }
    }
 
@@ -47,7 +47,7 @@ namespace UsageLibrary
 
       public InputDevices2()
       {
-         opticalMouse = new Mouse(5, "optical"); 
+         opticalMouse = new Mouse(5, "optical");
       }
    }
 }

@@ -8,9 +8,9 @@ public class Example
       bool raining = false;
       bool busLate = true;
 
-      Console.WriteLine("It is raining: {0}", 
+      Console.WriteLine("It is raining: {0}",
                         raining ? "Yes" : "No");
-      Console.WriteLine("The bus is late: {0}", 
+      Console.WriteLine("The bus is late: {0}",
                         busLate ? "Yes" : "No" );
    }
 }

@@ -26,10 +26,10 @@ using System.Data;
 namespace WF_Snippets
 {
     /****************************
-     * Snippets from Technologies/CustomActivities, Technologies/DesignerHosting, 
+     * Snippets from Technologies/CustomActivities, Technologies/DesignerHosting,
      * Technologies/DynamicUpdate, Technologies/Hosting, Technologies/Roles,
      * Technologies/Tracking
-     */ 
+     */
 
     /*****************************
      * Snippets from CustomActivities/FileWatcher
@@ -159,7 +159,7 @@ namespace WF_Snippets
 
         #endregion
     }
-    public class FileWatcherService 
+    public class FileWatcherService
     {
         public Guid RegisterListener(IComparable queueName, string path, string filter, NotifyFilters notifyFilter, bool includeSubdirectories)
         { return Guid.NewGuid(); }
@@ -188,7 +188,7 @@ namespace WF_Snippets
 
         // <snippet229>
         // <snippet230>
-        // Define the DependencyProperty objects for all of the Properties 
+        // Define the DependencyProperty objects for all of the Properties
         // ...and Events exposed by this activity
         public static DependencyProperty FromProperty = DependencyProperty.Register("From", typeof(string), typeof(SendEmailActivity), new PropertyMetadata("someone@example.com"));
         public static DependencyProperty ToProperty = DependencyProperty.Register("To", typeof(string), typeof(SendEmailActivity), new PropertyMetadata("someone@example.com"));
@@ -207,7 +207,7 @@ namespace WF_Snippets
 
         // </snippet229>
 
-        // Define constant values for the Property categories.  
+        // Define constant values for the Property categories.
         private const string MessagePropertiesCategory = "Email Message";
         private const string SMTPPropertiesCategory = "Email Server";
         private const string EventsCategory = "Handlers";
@@ -429,7 +429,7 @@ namespace WF_Snippets
 
         #region Activity Execution Logic
 
-        ///    During execution the SendEmail activity should create and send the email using SMTP.  
+        ///    During execution the SendEmail activity should create and send the email using SMTP.
 
         // <snippet233>
         protected override ActivityExecutionStatus Execute(ActivityExecutionContext context)
@@ -509,7 +509,7 @@ namespace WF_Snippets
     // <snippet234>
     public class SendEmailValidator : System.Workflow.ComponentModel.Compiler.ActivityValidator
     {
-        // Define private constants for the Validation Errors 
+        // Define private constants for the Validation Errors
         private const int InvalidToAddress = 1;
         private const int InvalidFromAddress = 2;
         private const int InvalidSMTPPort = 3;
@@ -587,7 +587,7 @@ namespace WF_Snippets
     public sealed class WorkflowViewPanel : Panel, IServiceProvider
     {
         WorkflowView workflowView = new WorkflowView();
-        
+
         public bool OnCodeActivityAdded()
         { return true;  }
         public WorkflowView GetWorkflowView()
@@ -872,7 +872,7 @@ namespace WF_Snippets
     {
         static AutoResetEvent waitHandle = new AutoResetEvent(false);
         static ExpenseReportServiceImpl expenseService = new ExpenseReportServiceImpl();
-        
+
         static void OnWorkflowCompleted(object sender, WorkflowCompletedEventArgs e)
         {
         }
@@ -1005,7 +1005,7 @@ namespace WF_Snippets
     {
         string expenseId;
 
-        // Expense report is created in the system 
+        // Expense report is created in the system
         // This method is invoked by the SubmitExpense activity
         public void SubmitExpense(string Id)
         {
@@ -1085,7 +1085,7 @@ namespace WF_Snippets
         // </snippet266>
 
         // <snippet267>
-        // Unlock the workflow instance state.  
+        // Unlock the workflow instance state.
         // Instance state locking is necessary when multiple runtimes share instance persistence store
         protected override void UnlockWorkflowInstanceState(Activity state)
         {
@@ -1144,7 +1144,7 @@ namespace WF_Snippets
             }
         }
 
-        // Deserialize the instance state from the file given the instance id 
+        // Deserialize the instance state from the file given the instance id
         private byte[] DeserializeFromFile(Guid id)
         {
             String filename = id.ToString();
@@ -1596,15 +1596,15 @@ namespace WF_Snippets
             this.CanModifyActivities = true;
             System.Workflow.Activities.Rules.RuleSetReference rulesetreference1 = new System.Workflow.Activities.Rules.RuleSetReference();
             this.simpleDiscountPolicy = new System.Workflow.Activities.PolicyActivity();
-            // 
+            //
             // simpleDiscountPolicy
-            // 
+            //
             this.simpleDiscountPolicy.Name = "simpleDiscountPolicy";
             rulesetreference1.RuleSetName = "DiscountRuleSet";
             this.simpleDiscountPolicy.RuleSetReference = rulesetreference1;
-            // 
+            //
             // SimplePolicyWorkflow
-            // 
+            //
             this.Activities.Add(this.simpleDiscountPolicy);
             this.Name = "SimplePolicyWorkflow";
             this.Completed += new System.EventHandler(this.WorkflowCompleted);

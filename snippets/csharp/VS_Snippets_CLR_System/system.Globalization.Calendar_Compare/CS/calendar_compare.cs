@@ -54,7 +54,7 @@ System.Globalization.GregorianCalendar, Year: 2002
    MonthsInYear: 12
    DaysInYear: 365
    Days in each month:
-       31    28    31    30    31    30    31    31    30    31    30    31   
+       31    28    31    30    31    30    31    31    30    31    30    31
    IsLeapDay:   False
    IsLeapMonth: False
    IsLeapYear:  False
@@ -63,7 +63,7 @@ System.Globalization.HebrewCalendar, Year: 5763
    MonthsInYear: 13
    DaysInYear: 385
    Days in each month:
-       30    30    30    29    30    30    29    30    29    30    29    30    29   
+       30    30    30    29    30    30    29    30    29    30    29    30    29
    IsLeapDay:   False
    IsLeapMonth: False
    IsLeapYear:  True
@@ -72,7 +72,7 @@ System.Globalization.HijriCalendar, Year: 1423
    MonthsInYear: 12
    DaysInYear: 355
    Days in each month:
-       30    29    30    29    30    29    30    29    30    29    30    30   
+       30    29    30    29    30    29    30    29    30    29    30    30
    IsLeapDay:   False
    IsLeapMonth: False
    IsLeapYear:  True
@@ -81,7 +81,7 @@ System.Globalization.JapaneseCalendar, Year: 14
    MonthsInYear: 12
    DaysInYear: 365
    Days in each month:
-       31    28    31    30    31    30    31    31    30    31    30    31   
+       31    28    31    30    31    30    31    31    30    31    30    31
    IsLeapDay:   False
    IsLeapMonth: False
    IsLeapYear:  False
@@ -90,7 +90,7 @@ System.Globalization.JulianCalendar, Year: 2002
    MonthsInYear: 12
    DaysInYear: 365
    Days in each month:
-       31    28    31    30    31    30    31    31    30    31    30    31   
+       31    28    31    30    31    30    31    31    30    31    30    31
    IsLeapDay:   False
    IsLeapMonth: False
    IsLeapYear:  False
@@ -99,7 +99,7 @@ System.Globalization.KoreanCalendar, Year: 4335
    MonthsInYear: 12
    DaysInYear: 365
    Days in each month:
-       31    28    31    30    31    30    31    31    30    31    30    31   
+       31    28    31    30    31    30    31    31    30    31    30    31
    IsLeapDay:   False
    IsLeapMonth: False
    IsLeapYear:  False
@@ -108,7 +108,7 @@ System.Globalization.TaiwanCalendar, Year: 91
    MonthsInYear: 12
    DaysInYear: 365
    Days in each month:
-       31    28    31    30    31    30    31    31    30    31    30    31   
+       31    28    31    30    31    30    31    31    30    31    30    31
    IsLeapDay:   False
    IsLeapMonth: False
    IsLeapYear:  False
@@ -117,7 +117,7 @@ System.Globalization.ThaiBuddhistCalendar, Year: 2545
    MonthsInYear: 12
    DaysInYear: 365
    Days in each month:
-       31    28    31    30    31    30    31    31    30    31    30    31   
+       31    28    31    30    31    30    31    31    30    31    30    31
    IsLeapDay:   False
    IsLeapMonth: False
    IsLeapYear:  False

@@ -7,7 +7,7 @@ public class Example
    {
       Double value = 123456789012.34567;
       Double additional = Double.Epsilon * 1e15;
-      Console.WriteLine("{0} + {1} = {2}", value, additional, 
+      Console.WriteLine("{0} + {1} = {2}", value, additional,
                                            value + additional);
    }
 }

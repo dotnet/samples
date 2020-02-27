@@ -13,7 +13,7 @@ class Program
         {
             string connectString = "Server=OracleDemo;UID=Mary;Pwd=*****";
             Console.WriteLine("Original: " + connectString);
-            OracleConnectionStringBuilder builder = 
+            OracleConnectionStringBuilder builder =
                 new OracleConnectionStringBuilder(connectString);
             Console.WriteLine("Modified: " + builder.ConnectionString);
             foreach (string key in builder.Keys)

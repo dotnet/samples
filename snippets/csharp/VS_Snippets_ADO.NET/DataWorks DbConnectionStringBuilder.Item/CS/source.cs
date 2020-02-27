@@ -11,12 +11,12 @@ class Program
             DbConnectionStringBuilder();
         builder["Data Source"] = "(local)";
 
-        // Note that Item is the indexer, so 
+        // Note that Item is the indexer, so
         // you do not include it in the reference.
         builder["integrated security"] = true;
         builder["Initial Catalog"] = "AdventureWorks";
 
-        // Overwrite the existing value for the Data Source key, 
+        // Overwrite the existing value for the Data Source key,
         // because it already exists within the collection.
         builder["Data Source"] = ".";
 

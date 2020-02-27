@@ -6,7 +6,7 @@ using System.Threading;
 // on a second thread.
 public class ThreadExample {
     // The ThreadProc method is called when the thread starts.
-    // It loops ten times, writing to the console and yielding 
+    // It loops ten times, writing to the console and yielding
     // the rest of its time slice each time, and then ends.
     public static void ThreadProc() {
         for (int i = 0; i < 10; i++) {
@@ -18,14 +18,14 @@ public class ThreadExample {
 
     public static void Main() {
         Console.WriteLine("Main thread: Start a second thread.");
-        // The constructor for the Thread class requires a ThreadStart 
-        // delegate that represents the method to be executed on the 
+        // The constructor for the Thread class requires a ThreadStart
+        // delegate that represents the method to be executed on the
         // thread.  C# simplifies the creation of this delegate.
         Thread t = new Thread(new ThreadStart(ThreadProc));
 
-        // Start ThreadProc.  Note that on a uniprocessor, the new 
-        // thread does not get any processor time until the main thread 
-        // is preempted or yields.  Uncomment the Thread.Sleep that 
+        // Start ThreadProc.  Note that on a uniprocessor, the new
+        // thread does not get any processor time until the main thread
+        // is preempted or yields.  Uncomment the Thread.Sleep that
         // follows t.Start() to see the difference.
         t.Start();
         //Thread.Sleep(0);

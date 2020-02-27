@@ -17,20 +17,20 @@ public class ByteConversion
    }
 
    private static void CallTryParse(string stringToConvert)
-   {  
-      byte byteValue; 
+   {
+      byte byteValue;
       bool success = Byte.TryParse(stringToConvert, out byteValue);
       if (success)
       {
-         Console.WriteLine("Converted '{0}' to {1}", 
+         Console.WriteLine("Converted '{0}' to {1}",
                         stringToConvert, byteValue);
       }
       else
       {
-         Console.WriteLine("Attempted conversion of '{0}' failed.", 
+         Console.WriteLine("Attempted conversion of '{0}' failed.",
                            stringToConvert);
       }
-   }    
+   }
 }
 // The example displays the following output to the console:
 //       Attempted conversion of '' failed.

@@ -10,22 +10,22 @@ public class Temperature : IConvertible
    {
       this.m_Temp = temperature;
    }
-   
+
    public float Celsius
    {
-      get { return this.m_Temp; }   
+      get { return this.m_Temp; }
    }
-   
+
    public float Kelvin
    {
-      get { return this.m_Temp + 273.15f; }    
+      get { return this.m_Temp + 273.15f; }
    }
-   
+
    public float Fahrenheit
    {
       get { return (float) Math.Round(this.m_Temp * 9 / 5 + 32, 2); }
    }
-   
+
    public override string ToString()
    {
       return m_Temp.ToString("N2") + " °C";
@@ -36,44 +36,44 @@ public class Temperature : IConvertible
    {
       return TypeCode.Object;
    }
-   
-   public bool ToBoolean(IFormatProvider provider) 
+
+   public bool ToBoolean(IFormatProvider provider)
    {
       if (m_Temp == 0)
          return false;
       else
          return true;
-   } 
-   
+   }
+
    public byte ToByte(IFormatProvider provider)
    {
       if (m_Temp < Byte.MinValue || m_Temp > Byte.MaxValue)
-         throw new OverflowException(String.Format("{0} is out of range of the Byte type.", 
+         throw new OverflowException(String.Format("{0} is out of range of the Byte type.",
                                                    this.m_Temp));
       else
          return Convert.ToByte(this.m_Temp);
    }
-   
+
    public char ToChar(IFormatProvider provider)
    {
       throw new InvalidCastException("Temperature to Char conversion is not supported.");
-   } 
-   
+   }
+
    public DateTime ToDateTime(IFormatProvider provider)
    {
       throw new InvalidCastException("Temperature to DateTime conversion is not supported.");
    }
-   
+
    public decimal ToDecimal(IFormatProvider provider)
    {
       return Convert.ToDecimal(this.m_Temp);
    }
-   
+
    public double ToDouble(IFormatProvider provider)
    {
       return Convert.ToDouble(this.m_Temp);
-   }   
-   
+   }
+
    public short ToInt16(IFormatProvider provider)
    {
       if (this.m_Temp < Int16.MinValue || this.m_Temp > Int16.MaxValue)
@@ -82,7 +82,7 @@ public class Temperature : IConvertible
       else
          return Convert.ToInt16(this.m_Temp);
    }
-   
+
    public int ToInt32(IFormatProvider provider)
       {
       if (this.m_Temp < Int32.MinValue || this.m_Temp > Int32.MaxValue)
@@ -91,7 +91,7 @@ public class Temperature : IConvertible
       else
          return Convert.ToInt32(this.m_Temp);
    }
-   
+
    public long ToInt64(IFormatProvider provider)
    {
       if (this.m_Temp < Int64.MinValue || this.m_Temp > Int64.MaxValue)
@@ -100,7 +100,7 @@ public class Temperature : IConvertible
       else
          return Convert.ToInt64(this.m_Temp);
    }
-   
+
    public sbyte ToSByte(IFormatProvider provider)
    {
       if (this.m_Temp < SByte.MinValue || this.m_Temp > SByte.MaxValue)
@@ -119,12 +119,12 @@ public class Temperature : IConvertible
    {
       return m_Temp.ToString("N2", provider) + " °C";
    }
-   
+
    public object ToType(Type conversionType, IFormatProvider provider)
    {
       switch (Type.GetTypeCode(conversionType))
       {
-         case TypeCode.Boolean: 
+         case TypeCode.Boolean:
             return this.ToBoolean(null);
          case TypeCode.Byte:
             return this.ToByte(null);
@@ -159,12 +159,12 @@ public class Temperature : IConvertible
          case TypeCode.UInt32:
             return this.ToUInt32(null);
          case TypeCode.UInt64:
-            return this.ToUInt64(null);   
+            return this.ToUInt64(null);
          default:
-            throw new InvalidCastException(String.Format("Conversion to {0} is not supported.", conversionType.Name));   
+            throw new InvalidCastException(String.Format("Conversion to {0} is not supported.", conversionType.Name));
       }
    }
-   
+
    public ushort ToUInt16(IFormatProvider provider)
    {
       if (this.m_Temp < UInt16.MinValue || this.m_Temp > UInt16.MaxValue)
@@ -182,7 +182,7 @@ public class Temperature : IConvertible
       else
          return Convert.ToUInt32(this.m_Temp);
    }
-   
+
    public ulong ToUInt64(IFormatProvider provider)
    {
       if (this.m_Temp < UInt64.MinValue || this.m_Temp > UInt64.MaxValue)
@@ -202,7 +202,7 @@ public class Example
       Temperature cold = new Temperature(-40);
       Temperature freezing = new Temperature(0);
       Temperature boiling = new Temperature(100);
-      
+
       Console.WriteLine(Convert.ToInt32(cold, null));
       Console.WriteLine(Convert.ToInt32(freezing, null));
       Console.WriteLine(Convert.ToDouble(boiling, null));

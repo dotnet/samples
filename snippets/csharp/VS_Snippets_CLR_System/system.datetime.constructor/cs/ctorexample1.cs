@@ -20,7 +20,7 @@ public class Example
          DateTime date1 = new DateTime(2010, 8, 18);
          Console.WriteLine(date1.ToString());
          // The example displays the following output:
-         //      8/18/2010 12:00:00 AM      
+         //      8/18/2010 12:00:00 AM
          // </Snippet1>
       }
 
@@ -57,7 +57,7 @@ public class Example
       void ShowYMDHMSMsKind()
       {
          // <Snippet8>
-         DateTime date1 = new DateTime(2010, 8, 18, 16, 32, 18, 500, 
+         DateTime date1 = new DateTime(2010, 8, 18, 16, 32, 18, 500,
                                        DateTimeKind.Local);
          Console.WriteLine("{0:M/dd/yyyy h:mm:ss.fff tt} {1}", date1, date1.Kind);
          // The example displays the following output, in this case for en-us culture:

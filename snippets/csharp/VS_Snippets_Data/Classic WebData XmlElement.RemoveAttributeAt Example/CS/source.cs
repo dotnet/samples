@@ -17,7 +17,7 @@ public class Sample
 
     // Remove the genre attribute.
     root.RemoveAttributeAt(0);
-    
+
     Console.WriteLine("Display the modified XML...");
     Console.WriteLine(doc.InnerXml);
   }

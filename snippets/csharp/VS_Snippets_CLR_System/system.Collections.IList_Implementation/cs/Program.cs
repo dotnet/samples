@@ -45,7 +45,7 @@ class Program
         Console.WriteLine($"List contains \"three\": {test.Contains("three")}");
         Console.WriteLine($"List contains \"ten\": {test.Contains("ten")}");
     }
-} 
+}
 
 //<snippet02>
 class SimpleList : IList

@@ -1,6 +1,6 @@
 ﻿//<Snippet1>
-// Example of the decimal.Multiply, decimal.Divide, and 
-// decimal.Remainder methods. 
+// Example of the decimal.Multiply, decimal.Divide, and
+// decimal.Remainder methods.
 using System;
 using Microsoft.VisualBasic;
 
@@ -8,18 +8,18 @@ class DecimalMulDivRemDemo
 {
     const string dataFmt = "{0,-35}{1,31}";
 
-    // Display decimal parameters and their product, quotient, and 
+    // Display decimal parameters and their product, quotient, and
     // remainder.
     public static void ShowDecimalProQuoRem( decimal Left, decimal Right )
     {
         Console.WriteLine( );
         Console.WriteLine( dataFmt, "decimal Left", Left );
         Console.WriteLine( dataFmt, "decimal Right", Right );
-        Console.WriteLine( dataFmt, "decimal.Multiply( Left, Right )", 
+        Console.WriteLine( dataFmt, "decimal.Multiply( Left, Right )",
             decimal.Multiply( Left, Right ) );
-        Console.WriteLine( dataFmt, "decimal.Divide( Left, Right )", 
+        Console.WriteLine( dataFmt, "decimal.Divide( Left, Right )",
             decimal.Divide( Left, Right ) );
-        Console.WriteLine( dataFmt, "decimal.Remainder( Left, Right )", 
+        Console.WriteLine( dataFmt, "decimal.Remainder( Left, Right )",
             decimal.Remainder( Left, Right ) );
     }
 
@@ -36,11 +36,11 @@ class DecimalMulDivRemDemo
         // Create pairs of decimal objects.
         ShowDecimalProQuoRem( 1000M, 7M );
         ShowDecimalProQuoRem( -1000M, 7M );
-        ShowDecimalProQuoRem( 
+        ShowDecimalProQuoRem(
             new decimal( 1230000000, 0, 0, false, 7 ), 0.0012300M );
-        ShowDecimalProQuoRem( 12345678900000000M, 
+        ShowDecimalProQuoRem( 12345678900000000M,
             0.0000000012345678M );
-        ShowDecimalProQuoRem( 123456789.0123456789M, 
+        ShowDecimalProQuoRem( 123456789.0123456789M,
             123456789.1123456789M );
     }
 }

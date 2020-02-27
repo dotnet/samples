@@ -32,7 +32,7 @@ class Program
         // it does not handle passing in a null
         // key. This example traps for that particular error, but
         // passes any other unknown exceptions back out to the
-        // caller. 
+        // caller.
         try
         {
             if (builder.TryGetValue(key, out value))
@@ -53,7 +53,7 @@ class Program
     private static string GetConnectionString()
     {
         // To avoid storing the connection string in your code,
-        // you can retrieve it from a configuration file. 
+        // you can retrieve it from a configuration file.
         return "Server=OracleDemo;Integrated Security=True";
     }
 }

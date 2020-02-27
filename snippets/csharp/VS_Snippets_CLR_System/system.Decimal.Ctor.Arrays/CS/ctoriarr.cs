@@ -8,7 +8,7 @@ class DecimalCtorIArrDemo
     public static string GetExceptionType( Exception ex )
     {
         string exceptionType = ex.GetType( ).ToString( );
-        return exceptionType.Substring( 
+        return exceptionType.Substring(
             exceptionType.LastIndexOf( '.' ) + 1 );
     }
 
@@ -16,10 +16,10 @@ class DecimalCtorIArrDemo
     public static void CreateDecimal( int[ ] bits )
     {
         // Format the constructor for display.
-        string ctor = String.Format( 
+        string ctor = String.Format(
             "decimal( {{ 0x{0:X}", bits[ 0 ] );
         string valOrExc;
-        
+
         for( int index = 1; index < bits.Length; index++ )
             ctor += String.Format( ", 0x{0:X}", bits[ index ] );
         ctor += " } )";
@@ -43,7 +43,7 @@ class DecimalCtorIArrDemo
 
         // Display the data on one line if it will fit.
         if( ctorLen > ctor.Length )
-            Console.WriteLine( "{0}{1}", ctor.PadRight( ctorLen ), 
+            Console.WriteLine( "{0}{1}", ctor.PadRight( ctorLen ),
                 valOrExc );
 
         // Otherwise, display the data on two lines.
@@ -53,15 +53,15 @@ class DecimalCtorIArrDemo
             Console.WriteLine( "{0,76}", valOrExc );
         }
     }
-    
+
     public static void Main( )
     {
-        Console.WriteLine( 
+        Console.WriteLine(
             "This example of the decimal( int[ ] ) constructor " +
             "\ngenerates the following output.\n" );
-        Console.WriteLine( "{0,-38}{1,38}", "Constructor", 
+        Console.WriteLine( "{0,-38}{1,38}", "Constructor",
             "Value or Exception" );
-        Console.WriteLine( "{0,-38}{1,38}", "-----------", 
+        Console.WriteLine( "{0,-38}{1,38}", "-----------",
             "------------------" );
 
         // Construct decimal objects from integer arrays.
@@ -73,13 +73,13 @@ class DecimalCtorIArrDemo
         CreateDecimal( new int[ ] { 0, 0, 1000000000, 0 } );
         CreateDecimal( new int[ ] { 0, 0, 0, 1000000000 } );
         CreateDecimal( new int[ ] { -1, -1, -1, 0 } );
-        CreateDecimal( new int[ ] 
+        CreateDecimal( new int[ ]
             { -1, -1, -1, unchecked( (int)0x80000000 ) } );
         CreateDecimal( new int[ ] { -1, 0, 0, 0x100000 } );
         CreateDecimal( new int[ ] { -1, 0, 0, 0x1C0000 } );
         CreateDecimal( new int[ ] { -1, 0, 0, 0x1D0000 } );
         CreateDecimal( new int[ ] { -1, 0, 0, 0x1C0001 } );
-        CreateDecimal( new int[ ] 
+        CreateDecimal( new int[ ]
             { 0xF0000, 0xF0000, 0xF0000, 0xF0000 } );
     }
 }

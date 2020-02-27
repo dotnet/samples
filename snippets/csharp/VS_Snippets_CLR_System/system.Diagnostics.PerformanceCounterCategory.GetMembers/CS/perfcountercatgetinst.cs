@@ -42,8 +42,8 @@ class PerfCounterCatGetInstMod
         catch(Exception ex)
         {
             Console.WriteLine("Unable to get instance information for " +
-                "category \"{0}\" on " + 
-                (machineName.Length>0? "computer \"{1}\":": "this computer:"), 
+                "category \"{0}\" on " +
+                (machineName.Length>0? "computer \"{1}\":": "this computer:"),
                 categoryName, machineName);
             Console.WriteLine(ex.Message);
             return;
@@ -52,15 +52,15 @@ class PerfCounterCatGetInstMod
         //If an empty array is returned, the category has a single instance.
         if (instances.Length==0)
         {
-            Console.WriteLine("Category \"{0}\" on " + 
-                (machineName.Length>0? "computer \"{1}\"": "this computer") + 
+            Console.WriteLine("Category \"{0}\" on " +
+                (machineName.Length>0? "computer \"{1}\"": "this computer") +
                 " is single-instance.", pcc.CategoryName, pcc.MachineName);
         }
         else
         {
             // Otherwise, display the instances.
-            Console.WriteLine("These instances exist in category \"{0}\" on " + 
-                (machineName.Length>0? "computer \"{1}\".": "this computer:"), 
+            Console.WriteLine("These instances exist in category \"{0}\" on " +
+                (machineName.Length>0? "computer \"{1}\".": "this computer:"),
                 pcc.CategoryName, pcc.MachineName);
 
             Array.Sort(instances);

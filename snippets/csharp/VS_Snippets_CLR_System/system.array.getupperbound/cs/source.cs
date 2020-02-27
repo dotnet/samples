@@ -3,7 +3,7 @@ using System;
 
 public class Example
 {
-   public static void Main()  
+   public static void Main()
    {
       // Create a one-dimensional integer array.
       int[] integers = { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 };
@@ -17,15 +17,15 @@ public class Example
                       $"{(ctr < upper ? ", " : Environment.NewLine)}");
 
       Console.WriteLine();
-      
+
       // Create a two-dimensional integer array.
-      int[,] integers2d= { {2, 4}, {3, 9}, {4, 16}, {5, 25}, 
-                           {6, 36}, {7, 49}, {8, 64}, {9, 81} }; 
-      // Get the number of dimensions.                               
-      int rank = integers2d.Rank;  
-      Console.WriteLine($"Number of dimensions: {rank}");      
+      int[,] integers2d= { {2, 4}, {3, 9}, {4, 16}, {5, 25},
+                           {6, 36}, {7, 49}, {8, 64}, {9, 81} };
+      // Get the number of dimensions.
+      int rank = integers2d.Rank;
+      Console.WriteLine($"Number of dimensions: {rank}");
       for (int ctr = 0; ctr < rank; ctr++)
-        Console.WriteLine($"   Dimension {ctr}: " + 
+        Console.WriteLine($"   Dimension {ctr}: " +
                           $"from {integers2d.GetLowerBound(ctr)} to {integers2d.GetUpperBound(ctr)}");
 
       // Iterate the 2-dimensional array and display its values.
@@ -41,7 +41,7 @@ public class Example
 // The example displays the following output:
 //       Elements from index 0 to 9:
 //          2, 4, 6, 8, 10, 12, 14, 16, 18, 20
-//       
+//
 //       Number of dimensions: 2
 //          Dimension 0: from 0 to 7
 //          Dimension 1: from 0 to 1

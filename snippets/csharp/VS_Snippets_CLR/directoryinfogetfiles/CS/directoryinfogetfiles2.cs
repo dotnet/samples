@@ -41,7 +41,7 @@ namespace ConsoleApplication1
         }
     }
 }
-/* 
+/*
 This code produces output similar to the following:
 
 No search pattern returns:

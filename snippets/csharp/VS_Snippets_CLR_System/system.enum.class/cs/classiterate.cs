@@ -13,7 +13,7 @@ public class Example
 
    private static void GetEnumByName()
    {
-      // <Snippet11>     
+      // <Snippet11>
       string[] names = Enum.GetNames(typeof(ArrivalStatus));
       Console.WriteLine("Members of {0}:", typeof(ArrivalStatus).Name);
       Array.Sort(names);
@@ -26,10 +26,10 @@ public class Example
       //          Early (1)
       //          Late (-1)
       //          OnTime (0)
-      //          Unknown (-3)      
-      // </Snippet11>      
+      //          Unknown (-3)
+      // </Snippet11>
    }
-   
+
    private static void GetEnumByValue()
    {
       // <Snippet12>
@@ -37,7 +37,7 @@ public class Example
       Console.WriteLine("Members of {0}:", typeof(ArrivalStatus).Name);
       foreach (ArrivalStatus status in values) {
          Console.WriteLine("   {0} ({0:D})", status);
-      }                                       
+      }
       // The example displays the following output:
       //       Members of ArrivalStatus:
       //          OnTime (0)

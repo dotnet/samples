@@ -14,7 +14,7 @@ class Example
    };
 
    // Define an Enum with FlagsAttribute.
-   [Flags] 
+   [Flags]
    enum MultiHue : short
    {
       None = 0,
@@ -27,18 +27,18 @@ class Example
    static void Main( )
    {
       // Display all possible combinations of values.
-      Console.WriteLine( 
+      Console.WriteLine(
            "All possible combinations of values without FlagsAttribute:");
       for(int val = 0; val <= 16; val++ )
          Console.WriteLine( "{0,3} - {1:G}", val, (SingleHue)val);
 
       // Display all combinations of values, and invalid values.
-      Console.WriteLine( 
+      Console.WriteLine(
            "\nAll possible combinations of values with FlagsAttribute:");
       for( int val = 0; val <= 16; val++ )
          Console.WriteLine( "{0,3} - {1:G}", val, (MultiHue)val);
-   } 
-} 
+   }
+}
 // The example displays the following output:
 //       All possible combinations of values without FlagsAttribute:
 //         0 - None
@@ -58,7 +58,7 @@ class Example
 //        14 - 14
 //        15 - 15
 //        16 - 16
-//       
+//
 //       All possible combinations of values with FlagsAttribute:
 //         0 - None
 //         1 - Black

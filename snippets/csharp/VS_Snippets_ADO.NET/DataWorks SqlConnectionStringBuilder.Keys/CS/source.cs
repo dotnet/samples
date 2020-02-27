@@ -13,7 +13,7 @@ class Program
         builder.IntegratedSecurity = true;
         builder.InitialCatalog = "AdventureWorks";
 
-        // Loop through the collection of keys, displaying 
+        // Loop through the collection of keys, displaying
         // the key and value for each item:
         foreach (string key in builder.Keys)
             Console.WriteLine("{0}={1}", key, builder[key]);

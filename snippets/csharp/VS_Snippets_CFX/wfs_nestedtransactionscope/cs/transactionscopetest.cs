@@ -22,7 +22,7 @@ namespace Microsoft.Samples.NestedTransactionScope
                     {
                         Body = new Sequence
                         {
-                            Activities = 
+                            Activities =
                             {
                                 new WriteLine { Text = "    Begin TransactionScopeTest TransactionScope" },
                                 new PrintTransactionId(),

@@ -16,13 +16,13 @@ namespace Microsoft.Samples.InvokeMethodUsage
         {
             WorkflowInvoker.Invoke(CreateWf());
 
-            // Wait for confirmation to exit             
+            // Wait for confirmation to exit
             Console.WriteLine("Press <return> to continue...");
             Console.ReadLine();
         }
 
-        // Create a workflow that shows different ways of using InvokeMethod.         
-        // All instances of the InvokeMethod activity in this workflow 
+        // Create a workflow that shows different ways of using InvokeMethod.
+        // All instances of the InvokeMethod activity in this workflow
         // are invoking methods from TestClass class (file TestClass.cs)
         static Activity CreateWf()
         {
@@ -58,8 +58,8 @@ namespace Microsoft.Samples.InvokeMethodUsage
                         }
                     },
 
-                    // use InvokeMethod to call an instance method with two parameters (string and int) 
-                    // and a parameter array of type string[].                    
+                    // use InvokeMethod to call an instance method with two parameters (string and int)
+                    // and a parameter array of type string[].
                     new WriteLine(),
                     new WriteLine { Text = "Instance Method Call with Parameter Arrays" },
 //<Snippet1>
@@ -82,7 +82,7 @@ namespace Microsoft.Samples.InvokeMethodUsage
                     // and a result of type int. In this case, the result value is bound to a variable
                     // and used in another activity (is displayed in the console using WriteLine)
                     new WriteLine {},
-                    new WriteLine { Text = "Instance Method Call with Parameters and Return Value" }, 
+                    new WriteLine { Text = "Instance Method Call with Parameters and Return Value" },
 //<Snippet2>
                     new InvokeMethod<int>
                     {
@@ -98,7 +98,7 @@ namespace Microsoft.Samples.InvokeMethodUsage
 //</Snippet2>
                     new WriteLine { Text = new InArgument<string>(ctx => string.Format("....Result: {0}", resultValue.Get(ctx))) },
 
-                    // use InvokeMethod to call a static method with two parameters (string and int). All options 
+                    // use InvokeMethod to call a static method with two parameters (string and int). All options
                     // for calling instance methods are also available for static methods.
                     new WriteLine(),
                     new WriteLine { Text = "Static Method Call with Parameters" },
@@ -113,7 +113,7 @@ namespace Microsoft.Samples.InvokeMethodUsage
                         }
                     },
 
-                    // use InvokeMethod to call an instance method with one generic parameter (int this case, <string>)                    
+                    // use InvokeMethod to call an instance method with one generic parameter (int this case, <string>)
                     new WriteLine(),
                     new WriteLine { Text = "Generic Instance Method Call with Generic Parameters" },
 //<Snippet5>
@@ -124,32 +124,32 @@ namespace Microsoft.Samples.InvokeMethodUsage
                         GenericTypeArguments = { typeof(string) },
                         Parameters =
                         {
-                            new InArgument<string>("Hello world")                            
+                            new InArgument<string>("Hello world")
                         }
                     },
 //</Snippet5>
 
-                    // use InvokeMethod to call a static method with two generic parameters (int this case, <string> and <int>)                  
+                    // use InvokeMethod to call a static method with two generic parameters (int this case, <string> and <int>)
                     new WriteLine(),
                     new WriteLine { Text = "Generic Static Method Call with Two Generic Parameters" },
                     new InvokeMethod
                     {
                         TargetType = typeof(TestClass),
                         MethodName = "GenericStaticMethod",
-                        GenericTypeArguments = 
-                        { 
-                            typeof(string), 
+                        GenericTypeArguments =
+                        {
+                            typeof(string),
                             typeof(int)
                         },
                         Parameters =
                         {
-                            new InArgument<string>("Favorite Number"),                            
-                            new InArgument<int>(42)     
+                            new InArgument<string>("Favorite Number"),
+                            new InArgument<int>(42)
                         }
-                    },                
+                    },
 
                     // use InvokeMethod to call an instance method that has one parameter
-                    // passed by reference (a string param). In this case, the reference parameter is bound 
+                    // passed by reference (a string param). In this case, the reference parameter is bound
                     // to a variable (outParam) and used in another activity (is displayed in the console using WriteLine)
                     new WriteLine(),
                     new WriteLine { Text = "Instance Method Call with Parameters by Reference" },
@@ -179,8 +179,8 @@ namespace Microsoft.Samples.InvokeMethodUsage
                         {
                             new InArgument<string>("Hello async"),
                         }
-                    },  
-//</Snippet3>                 
+                    },
+//</Snippet3>
 
                     // use InvokeMethod to call an instance method in varTestClass
                     // store a value into the TestClass Variable

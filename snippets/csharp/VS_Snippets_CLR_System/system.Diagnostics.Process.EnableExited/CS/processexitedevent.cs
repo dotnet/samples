@@ -32,13 +32,13 @@ class PrintProcessClass
             }
 
             // Wait for Exited event, but not more than 30 seconds.
-            await Task.WhenAny(eventHandled.Task,Task.Delay(30000));            
+            await Task.WhenAny(eventHandled.Task,Task.Delay(30000));
         }
     }
 
     // Handle Exited event and display process information.
     private void myProcess_Exited(object sender, System.EventArgs e)
-    {        
+    {
         Console.WriteLine(
             $"Exit time    : {myProcess.ExitTime}\n" +
             $"Exit code    : {myProcess.ExitCode}\n" +

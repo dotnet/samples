@@ -70,7 +70,7 @@ namespace Microsoft.Samples.WF.PurchaseProcess
 
             if (status == "Closed")
             {
-                // erase nodes for the current rfp                    
+                // erase nodes for the current rfp
                 foreach (XElement xe in current)
                 {
                     xe.Attribute("status").Value = "finished";
@@ -78,7 +78,7 @@ namespace Microsoft.Samples.WF.PurchaseProcess
             }
             else
             {
-                // erase nodes for the current rfp                    
+                // erase nodes for the current rfp
                 foreach (XElement xe in current)
                 {
                     xe.Remove();
@@ -120,7 +120,7 @@ namespace Microsoft.Samples.WF.PurchaseProcess
             }
             ret.Add(invitedVendors);
 
-            // add vendor proposals            
+            // add vendor proposals
             XElement vendorProposals = new XElement("vendorProposals");
             foreach (VendorProposal proposal in rfp.VendorProposals.Values)
             {
@@ -145,7 +145,7 @@ namespace Microsoft.Samples.WF.PurchaseProcess
             return ret;
         }
 
-        //All of the values loaded from the InstanceData property bag are provided to implementations of PublishValues.  
+        //All of the values loaded from the InstanceData property bag are provided to implementations of PublishValues.
         protected override void PublishValues(IDictionary<XName, object> readWriteValues)
         {
             base.PublishValues(readWriteValues);

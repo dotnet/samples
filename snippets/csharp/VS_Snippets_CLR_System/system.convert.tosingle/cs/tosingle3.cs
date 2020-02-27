@@ -8,10 +8,10 @@ public class Example
    {
       string[] values = { "123456789", "12345.6789", "12 345,6789",
                           "123,456.789", "123 456,789", "123,456,789.0123",
-                          "123 456 789,0123", "1.235e12", "1.03221e-05", 
+                          "123 456 789,0123", "1.235e12", "1.03221e-05",
                           Double.MaxValue.ToString() };
       CultureInfo[] cultures = { new CultureInfo("en-US"),
-                                 new CultureInfo("fr-FR") }; 
+                                 new CultureInfo("fr-FR") };
 
       foreach (CultureInfo culture in cultures)
       {
@@ -31,7 +31,7 @@ public class Example
             }
          }
          Console.WriteLine();
-      }                     
+      }
    }
 }
 // The example displays the following output:
@@ -46,7 +46,7 @@ public class Example
 //                  1.235e12  ->  1.235E+12
 //               1.03221e-05  ->  1.03221E-05
 //     1.79769313486232E+308  ->  Overflow
-//    
+//
 //    String -> Single Conversion Using the fr-FR Culture
 //                 123456789  ->  1.234568E+08
 //                12345.6789  ->  FormatException

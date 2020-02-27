@@ -7,7 +7,7 @@ class BitConverterDemo
     public static void Main( )
     {
         const string formatter = "{0,25}{1,30}";
- 
+
         double  aDoubl  = 0.1111111111111111111;
         float   aSingl  = 0.1111111111111111111F;
         long    aLong   = 1111111111111111111;
@@ -16,26 +16,26 @@ class BitConverterDemo
         char    aChar   = '*';
         bool    aBool   = true;
 
-        Console.WriteLine( 
+        Console.WriteLine(
             "This example of methods of the BitConverter class" +
             "\ngenerates the following output.\n" );
         Console.WriteLine( formatter, "argument", "byte array" );
         Console.WriteLine( formatter, "--------", "----------" );
 
         // Convert values to Byte arrays and display them.
-        Console.WriteLine( formatter, aDoubl, 
+        Console.WriteLine( formatter, aDoubl,
             BitConverter.ToString( BitConverter.GetBytes( aDoubl ) ) );
-        Console.WriteLine( formatter, aSingl, 
+        Console.WriteLine( formatter, aSingl,
             BitConverter.ToString( BitConverter.GetBytes( aSingl ) ) );
-        Console.WriteLine( formatter, aLong, 
+        Console.WriteLine( formatter, aLong,
             BitConverter.ToString( BitConverter.GetBytes( aLong ) ) );
-        Console.WriteLine( formatter, anInt, 
+        Console.WriteLine( formatter, anInt,
             BitConverter.ToString( BitConverter.GetBytes( anInt ) ) );
-        Console.WriteLine( formatter, aShort, 
+        Console.WriteLine( formatter, aShort,
             BitConverter.ToString( BitConverter.GetBytes( aShort ) ) );
-        Console.WriteLine( formatter, aChar, 
+        Console.WriteLine( formatter, aChar,
             BitConverter.ToString( BitConverter.GetBytes( aChar ) ) );
-        Console.WriteLine( formatter, aBool, 
+        Console.WriteLine( formatter, aBool,
             BitConverter.ToString( BitConverter.GetBytes( aBool ) ) );
     }
 }

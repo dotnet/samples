@@ -1,5 +1,5 @@
 ﻿//<Snippet3>
-// Example of the Convert.ToSingle( String ) and 
+// Example of the Convert.ToSingle( String ) and
 // Convert.ToSingle( String, IFormatProvider ) methods.
 using System;
 using System.Globalization;
@@ -12,11 +12,11 @@ class ToSingleProviderDemo
     static string GetExceptionType( Exception ex )
     {
         string exceptionType = ex.GetType( ).ToString( );
-        return exceptionType.Substring( 
+        return exceptionType.Substring(
             exceptionType.LastIndexOf( '.' ) + 1 );
     }
 
-    static void ConvertToSingle( string numericStr, 
+    static void ConvertToSingle( string numericStr,
         IFormatProvider provider )
     {
         object defaultValue;
@@ -42,7 +42,7 @@ class ToSingleProviderDemo
             providerValue = GetExceptionType( ex );
         }
 
-        Console.WriteLine( formatter, numericStr, defaultValue, 
+        Console.WriteLine( formatter, numericStr, defaultValue,
             providerValue );
     }
 
@@ -56,18 +56,18 @@ class ToSingleProviderDemo
         provider.NumberGroupSeparator = ".";
         provider.NumberGroupSizes = new int[ ] { 3 };
 
-        Console.WriteLine( 
+        Console.WriteLine(
             "This example of\n  Convert.ToSingle( String ) and \n" +
             "  Convert.ToSingle( String, IFormatProvider ) \n" +
             "generates the following output when run in the " +
-            "[{0}] culture.", 
+            "[{0}] culture.",
             CultureInfo.CurrentCulture.Name );
         Console.WriteLine( "\nSeveral " +
             "strings are converted to float values, using \n" +
             "default formatting and a NumberFormatInfo object.\n");
-        Console.WriteLine( formatter, "String to convert", 
+        Console.WriteLine( formatter, "String to convert",
             "Default/exception", "Provider/exception" );
-        Console.WriteLine( formatter, "-----------------", 
+        Console.WriteLine( formatter, "-----------------",
             "-----------------", "------------------" );
 
         // Convert strings, with and without an IFormatProvider.

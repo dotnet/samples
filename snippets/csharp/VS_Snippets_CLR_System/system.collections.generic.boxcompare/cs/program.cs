@@ -39,17 +39,17 @@ class Program
         foreach (Box bx in Boxes)
         {
             Console.WriteLine("{0}\t{1}\t{2}",
-                bx.Height.ToString(), bx.Length.ToString(), 
+                bx.Height.ToString(), bx.Length.ToString(),
                 bx.Width.ToString());
         }
         // </Snippet2>
 
         Console.WriteLine();
-        Console.WriteLine("H - L - W"); 
+        Console.WriteLine("H - L - W");
         Console.WriteLine("==========");
 
         // <Snippet3>
-        // Get the default comparer that 
+        // Get the default comparer that
         // sorts first by the height.
         Comparer<Box> defComp = Comparer<Box>.Default;
 
@@ -61,7 +61,7 @@ class Program
         foreach (Box bx in Boxes)
         {
             Console.WriteLine("{0}\t{1}\t{2}",
-                bx.Height.ToString(), bx.Length.ToString(), 
+                bx.Height.ToString(), bx.Length.ToString(),
                 bx.Width.ToString());
         }
         // </Snippet3>
@@ -72,7 +72,7 @@ class Program
         // compares first by the length.
         // Returns -1 because the length of BoxA
         // is less than the length of BoxB.
-        BoxLengthFirst LengthFirst = new BoxLengthFirst(); 
+        BoxLengthFirst LengthFirst = new BoxLengthFirst();
 
         Comparer<Box> bc = (Comparer<Box>) LengthFirst;
 
@@ -86,7 +86,7 @@ class Program
 }
 
 // <Snippet5>
-public class BoxLengthFirst : Comparer<Box> 
+public class BoxLengthFirst : Comparer<Box>
 {
     // <Snippet6>
     // Compares by Length, Height, and Width.

@@ -22,7 +22,7 @@ class ProcessDemo
             Console.WriteLine(localByName[i - 1].Id.ToString());
             i -= 1;
         }
-        
+
         i = localByName.Length;
         while (i > 0)
         {
@@ -47,7 +47,7 @@ class ProcessDemo
                 Console.WriteLine("Incorrect entry.");
                 continue;
             }
-            
+
             i -= 1;
         }
     }

@@ -9,29 +9,29 @@ public class Example
       int[] years = { 2012, 2014 };
       DateTimeFormatInfo dtfi = DateTimeFormatInfo.CurrentInfo;
       Console.WriteLine("Days in the Month for the {0} culture " +
-                        "using the {1} calendar\n", 
-                        CultureInfo.CurrentCulture.Name, 
+                        "using the {1} calendar\n",
+                        CultureInfo.CurrentCulture.Name,
                         dtfi.Calendar.GetType().Name.Replace("Calendar", ""));
       Console.WriteLine("{0,-10}{1,-15}{2,4}\n", "Year", "Month", "Days");
-      
+
       foreach (var year in years) {
          for (int ctr = 0; ctr <= dtfi.MonthNames.Length - 1; ctr++) {
-            if (String.IsNullOrEmpty(dtfi.MonthNames[ctr]))  
+            if (String.IsNullOrEmpty(dtfi.MonthNames[ctr]))
                continue;
-            
-            Console.WriteLine("{0,-10}{1,-15}{2,4}", year, 
-                              dtfi.MonthNames[ctr], 
+
+            Console.WriteLine("{0,-10}{1,-15}{2,4}", year,
+                              dtfi.MonthNames[ctr],
                               DateTime.DaysInMonth(year, ctr + 1));
          }
-         Console.WriteLine(); 
+         Console.WriteLine();
       }
    }
 }
 // The example displays the following output:
 //    Days in the Month for the en-US culture using the Gregorian calendar
-//    
+//
 //    Year      Month          Days
-//    
+//
 //    2012      January          31
 //    2012      February         29
 //    2012      March            31
@@ -44,7 +44,7 @@ public class Example
 //    2012      October          31
 //    2012      November         30
 //    2012      December         31
-//    
+//
 //    2014      January          31
 //    2014      February         28
 //    2014      March            31

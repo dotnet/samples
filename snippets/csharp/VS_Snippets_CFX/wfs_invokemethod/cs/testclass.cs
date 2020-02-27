@@ -92,7 +92,7 @@ namespace Microsoft.Samples.InvokeMethodUsage
             this.asyncResult = new TestAsyncResult() { AsyncState = asyncState };
 
             Thread t = new Thread(new ThreadStart(ProcessThread));
-            t.Start();            
+            t.Start();
 
             return this.asyncResult;
         }
@@ -107,7 +107,7 @@ namespace Microsoft.Samples.InvokeMethodUsage
                 Thread.Sleep(500);
             }
             Console.WriteLine();
-            
+
             this.callback(this.asyncResult);
         }
 

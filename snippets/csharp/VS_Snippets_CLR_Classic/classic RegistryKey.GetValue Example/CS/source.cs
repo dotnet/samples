@@ -55,7 +55,7 @@ class RegGetDef
         string def = (string)rk.GetValue("notavalue", "The default to return");
         Console.WriteLine();
         Console.WriteLine(def);
-        
+
         rk.Close();
     }
 }

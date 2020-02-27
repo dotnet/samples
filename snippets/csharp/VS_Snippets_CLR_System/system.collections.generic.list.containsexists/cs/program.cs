@@ -1,8 +1,8 @@
 ﻿//<snippet1>
 using System;
 using System.Collections.Generic;
-// Simple business object. A PartId is used to identify a part 
-// but the part name can change. 
+// Simple business object. A PartId is used to identify a part
+// but the part name can change.
 public class Part : IEquatable<Part>
 {
     public string PartName { get; set; }
@@ -59,15 +59,15 @@ public class Example
             parts.Contains(new Part { PartId = 1734, PartName = "" }));
 
         // Find items where name contains "seat".
-        Console.WriteLine("\nFind: Part where name contains \"seat\": {0}", 
+        Console.WriteLine("\nFind: Part where name contains \"seat\": {0}",
             parts.Find(x => x.PartName.Contains("seat")));
-        
+
         // Check if an item with Id 1444 exists.
-        Console.WriteLine("\nExists: Part with Id=1444: {0}", 
+        Console.WriteLine("\nExists: Part with Id=1444: {0}",
             parts.Exists(x => x.PartId == 1444));
 
         /*This code example produces the following output:
-        
+
         ID: 1234   Name: crank arm
         ID: 1334   Name: chain ring
         ID: 1434   Name: regular seat
@@ -79,8 +79,8 @@ public class Example
 
         Find: Part where name contains "seat": ID: 1434   Name: regular seat
 
-        Exists: Part with Id=1444: True 
+        Exists: Part with Id=1444: True
          */
-    } 
+    }
 }
 //</snippet1>

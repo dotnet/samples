@@ -7,7 +7,7 @@ namespace NDP_UE_CS
     // Derive an exception with a specifiable message.
     class NotEvenException : Exception
     {
-        const string notEvenMessage = 
+        const string notEvenMessage =
             "The argument to a function requiring " +
             "even input is not divisible by 2.";
 
@@ -16,26 +16,26 @@ namespace NDP_UE_CS
         { }
 
         public NotEvenException( string auxMessage ) :
-            base( String.Format( "{0} - {1}", 
+            base( String.Format( "{0} - {1}",
                 auxMessage, notEvenMessage ) )
         { }
     }
 
-    class NewSExceptionDemo 
+    class NewSExceptionDemo
     {
-        public static void Main() 
+        public static void Main()
         {
-            Console.WriteLine( 
+            Console.WriteLine(
                 "This example of the Exception( string )\n" +
                 "constructor generates the following output." );
-            Console.WriteLine( 
+            Console.WriteLine(
                 "\nHere, an exception is thrown using the \n" +
                 "constructor of the base class.\n" );
 
             CalcHalf( 18 );
             CalcHalf( 21 );
 
-            Console.WriteLine( 
+            Console.WriteLine(
                 "\nHere, an exception is thrown using the \n" +
                 "constructor of a derived class.\n" );
 
@@ -47,8 +47,8 @@ namespace NDP_UE_CS
         static int Half( int input )
         {
             if( input % 2 != 0 )
-                throw new Exception( String.Format( 
-                    "The argument {0} is not divisible by 2.", 
+                throw new Exception( String.Format(
+                    "The argument {0} is not divisible by 2.",
                     input ) );
 
             else return input / 2;
@@ -58,7 +58,7 @@ namespace NDP_UE_CS
         static int Half2( int input )
         {
             if( input % 2 != 0 )
-                throw new NotEvenException( 
+                throw new NotEvenException(
                     String.Format( "Invalid argument: {0}", input ) );
 
             else return input / 2;
@@ -70,7 +70,7 @@ namespace NDP_UE_CS
             try
             {
                 int halfInput = Half( input );
-                Console.WriteLine( 
+                Console.WriteLine(
                     "Half of {0} is {1}.", input, halfInput );
             }
             catch( Exception ex )
@@ -85,7 +85,7 @@ namespace NDP_UE_CS
             try
             {
                 int halfInput = Half2( input );
-                Console.WriteLine( 
+                Console.WriteLine(
                     "Half of {0} is {1}.", input, halfInput );
             }
             catch( Exception ex )

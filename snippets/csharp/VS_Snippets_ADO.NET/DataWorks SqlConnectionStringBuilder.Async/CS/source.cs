@@ -8,7 +8,7 @@ class Program
 {
     static void Main()
     {
-        // Create a SqlConnectionStringBuilder instance, 
+        // Create a SqlConnectionStringBuilder instance,
         // and ensure that it is set up for asynchronous processing.
         SqlConnectionStringBuilder builder =
             new SqlConnectionStringBuilder(GetConnectionString());
@@ -33,18 +33,18 @@ class Program
     private static string GetConnectionString()
     {
         // To avoid storing the connection string in your code,
-        // you can retrieve it from a configuration file. 
+        // you can retrieve it from a configuration file.
         return "Data Source=(local);Integrated Security=SSPI;" +
             "Initial Catalog=AdventureWorks";
     }
 
-    private static void RunCommandAsynchronously(string commandText, 
+    private static void RunCommandAsynchronously(string commandText,
         string connectionString)
     {
         // Given command text and connection string, asynchronously execute
         // the specified command against the connection. For this example,
-        // the code displays an indicator as it's working, verifying the 
-        // asynchronous behavior. 
+        // the code displays an indicator as it's working, verifying the
+        // asynchronous behavior.
         using (SqlConnection connection = new SqlConnection(connectionString))
         {
             try
@@ -57,7 +57,7 @@ class Program
                 {
                     Console.WriteLine("Waiting {0}.", count);
                     // Wait for 1/10 second, so the counter
-                    // doesn't consume all available resources 
+                    // doesn't consume all available resources
                     // on the main thread.
                     Thread.Sleep(100);
                     count += 1;
@@ -68,7 +68,7 @@ class Program
             catch (SqlException ex)
             {
                 Console.WriteLine(
-                    "Error {0}: System.Data.SqlClient.SqlConnectionStringBuilder", 
+                    "Error {0}: System.Data.SqlClient.SqlConnectionStringBuilder",
                     ex.Number, ex.Message);
             }
             catch (InvalidOperationException ex)

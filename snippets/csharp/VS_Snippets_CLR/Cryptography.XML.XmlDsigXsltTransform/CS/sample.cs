@@ -1,7 +1,7 @@
-﻿//<SNIPPET1> 
+﻿//<SNIPPET1>
 //
 // This example signs an XML file using an
-// envelope signature. It then verifies the 
+// envelope signature. It then verifies the
 // signed XML.
 //
 using System;
@@ -24,7 +24,7 @@ public class SignVerifyEnvelope
         <xs:template match='/'>
             <xs:apply-templates/>
         </xs:template>
-        <xs:template match='ElementToTransform'> 
+        <xs:template match='ElementToTransform'>
             <transformedElement/>
         </xs:template>
     </xs:transform>";
@@ -35,7 +35,7 @@ public class SignVerifyEnvelope
             CreateSomeXml("Example.xml");
             Console.WriteLine("New XML file created.");
 
-            // Sign the XML that was just created and save it in a 
+            // Sign the XML that was just created and save it in a
             // new file.
             SignXmlFile("Example.xml", "SignedExample.xml", Key, xsl);
             Console.WriteLine("XML file signed.");
@@ -80,7 +80,7 @@ public class SignVerifyEnvelope
         // Create a SignedXml object.
         SignedXml signedXml = new SignedXml(doc);
 
-        // Add the key to the SignedXml document. 
+        // Add the key to the SignedXml document.
         signedXml.SigningKey = Key;
 
         // Create a reference to be signed.
@@ -91,7 +91,7 @@ public class SignVerifyEnvelope
         XmlDsigEnvelopedSignatureTransform env = new XmlDsigEnvelopedSignatureTransform();
         reference.AddTransform(env);
 
-        // Create an XmlDsigXPathTransform object using 
+        // Create an XmlDsigXPathTransform object using
         // the helper method 'CreateXPathTransform' defined
         // later in this sample.
 
@@ -133,7 +133,7 @@ public class SignVerifyEnvelope
         // Format using white spaces.
         xmlDocument.PreserveWhitespace = true;
 
-        // Load the passed XML file into the document. 
+        // Load the passed XML file into the document.
         xmlDocument.Load(Name);
 
         // Create a new SignedXml object and pass it
@@ -190,4 +190,4 @@ public class SignVerifyEnvelope
         xmltw.Close();
     }
 }
-//</SNIPPET1> 
+//</SNIPPET1>

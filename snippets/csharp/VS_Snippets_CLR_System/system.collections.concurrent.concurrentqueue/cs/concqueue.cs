@@ -35,7 +35,7 @@ class CQ_EnqueueDequeuePeek
       int outerSum = 0;
       // An action to consume the ConcurrentQueue.
       Action action = () =>
-      {                
+      {
          int localSum = 0;
          int localValue;
          while (cq.TryDequeue(out localValue)) localSum += localValue;

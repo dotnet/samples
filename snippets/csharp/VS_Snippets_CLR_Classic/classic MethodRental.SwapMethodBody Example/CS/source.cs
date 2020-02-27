@@ -11,7 +11,7 @@ class SwapMethodBodySample
     public static void Main(String [] args)
     {
     // Construct a dynamic assembly
-    Guid g = Guid.NewGuid();    
+    Guid g = Guid.NewGuid();
     AssemblyName asmname = new AssemblyName();
     asmname.Name = "tempfile" + g;
     AssemblyBuilder asmbuild = System.Threading.Thread.GetDomain().
@@ -24,7 +24,7 @@ class SwapMethodBodySample
         MethodBuilder somemethod = tb.DefineMethod
             ("My method Name",
              MethodAttributes.Public | MethodAttributes.Static,
-             typeof(int),                                                     
+             typeof(int),
              new Type[]{} );
     // Define the body of the method to return 0.
         ILGenerator ilg = somemethod.GetILGenerator();
@@ -39,7 +39,7 @@ class SwapMethodBodySample
     } else {
         Console.WriteLine("Original method returned 0");
     }
-                
+
     // Define a new method body that will return a 1 instead.
     Byte[] methodBytes = {
         0x03,
@@ -59,7 +59,7 @@ class SwapMethodBodySample
     };
 
     // Get the token for the method whose body you are replacing.
-    MethodToken somemethodToken = somemethod.GetToken();        
+    MethodToken somemethodToken = somemethod.GetToken();
 
     // Get the pointer to the method body.
         GCHandle hmem = GCHandle.Alloc((Object) methodBytes, GCHandleType.Pinned);
@@ -68,8 +68,8 @@ class SwapMethodBodySample
 
     // Swap the old method body with the new body.
     MethodRental.SwapMethodBody(
-                    tbBaked, 
-                    somemethodToken.Token, 
+                    tbBaked,
+                    somemethodToken.Token,
                     addr,
                     cbSize,
                     MethodRental.JitImmediate);

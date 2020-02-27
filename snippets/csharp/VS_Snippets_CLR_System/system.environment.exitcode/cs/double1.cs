@@ -13,7 +13,7 @@ public class Example
    {
       string[] args = Environment.GetCommandLineArgs();
       if (args.Length == 1) {
-         return ERROR_INVALID_COMMAND_LINE;  
+         return ERROR_INVALID_COMMAND_LINE;
       }
       else {
          BigInteger value = 0;

@@ -10,14 +10,14 @@ public class Example
          // Get binary representation of flag.
          Byte value = BitConverter.GetBytes(flag)[0];
          Console.WriteLine("Original value: {0}", flag);
-         Console.WriteLine("Binary value:   {0} ({1})", value, 
+         Console.WriteLine("Binary value:   {0} ({1})", value,
                            GetBinaryString(value));
          // Restore the flag from its binary representation.
          bool newFlag = BitConverter.ToBoolean( new Byte[] { value }, 0);
          Console.WriteLine("Restored value: {0}\n", flag);
       }
    }
-   
+
    private static string GetBinaryString(Byte value)
    {
       String retVal = Convert.ToString(value, 2);
@@ -28,7 +28,7 @@ public class Example
 //       Original value: True
 //       Binary value:   1 (00000001)
 //       Restored value: True
-//       
+//
 //       Original value: False
 //       Binary value:   0 (00000000)
 //       Restored value: False

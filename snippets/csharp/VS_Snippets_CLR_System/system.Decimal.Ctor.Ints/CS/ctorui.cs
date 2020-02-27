@@ -15,7 +15,7 @@ class DecimalCtorUIDemo
         // Display the constructor and its value.
         Console.WriteLine( "{0,-33}{1,16}", ctor, decimalNum );
     }
-    
+
     public static void Main( )
     {
         Console.WriteLine( "This example of the decimal( uint ) " +

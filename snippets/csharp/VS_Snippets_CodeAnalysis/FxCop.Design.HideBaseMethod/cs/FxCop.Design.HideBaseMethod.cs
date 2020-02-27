@@ -1,6 +1,6 @@
 ﻿//<Snippet1>
 using System;
-  
+
 namespace DesignLibrary
 {
    class BaseType

@@ -24,7 +24,7 @@ using System.Security.Cryptography.Xml;
 				return;
 			}
 
-			// Create a new TripleDES key. 
+			// Create a new TripleDES key.
 			TripleDESCryptoServiceProvider tDESkey = new TripleDESCryptoServiceProvider();
 
 			// Create a new instance of the TrippleDESDocumentEncryption object

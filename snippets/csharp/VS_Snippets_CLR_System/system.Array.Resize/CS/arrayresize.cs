@@ -3,16 +3,16 @@
 // <Snippet1>
 using System;
 
-public class SamplesArray  
+public class SamplesArray
 {
     public static void Main()  {
- 
+
         // Create and initialize a new string array.
-        String[] myArr = {"The", "quick", "brown", "fox", "jumps", 
+        String[] myArr = {"The", "quick", "brown", "fox", "jumps",
             "over", "the", "lazy", "dog"};
- 
+
         // Display the values of the array.
-        Console.WriteLine( 
+        Console.WriteLine(
             "The string array initially contains the following values:");
         PrintIndexAndValues(myArr);
 
@@ -34,7 +34,7 @@ public class SamplesArray
     }
 
     public static void PrintIndexAndValues(String[] myArr)  {
-        for(int i = 0; i < myArr.Length; i++)  
+        for(int i = 0; i < myArr.Length; i++)
         {
             Console.WriteLine("   [{0}] : {1}", i, myArr[i]);
         }
@@ -42,7 +42,7 @@ public class SamplesArray
     }
 }
 
-/* 
+/*
 This code produces the following output.
 
 The string array initially contains the following values:
@@ -56,7 +56,7 @@ The string array initially contains the following values:
    [7] : lazy
    [8] : dog
 
-After resizing to a larger size, 
+After resizing to a larger size,
 the string array contains the following values:
    [0] : The
    [1] : quick
@@ -73,7 +73,7 @@ the string array contains the following values:
    [12] :
    [13] :
 
-After resizing to a smaller size, 
+After resizing to a smaller size,
 the string array contains the following values:
    [0] : The
    [1] : quick

@@ -13,7 +13,7 @@ public class Sample
 
     //Create a document fragment.
     XmlDocumentFragment docFrag = doc.CreateDocumentFragment();
- 
+
     //Set the contents of the document fragment.
     docFrag.InnerXml ="<item>widget</item>";
 

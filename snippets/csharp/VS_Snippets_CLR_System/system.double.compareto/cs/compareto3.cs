@@ -15,6 +15,6 @@ public class Example
 }
 // The example displays the following output:
 //       Comparing 6.185 and 6.185: -1
-//       
+//
 //       Comparing 6.185 and 6.1850000000000005: -1
 // </Snippet2>

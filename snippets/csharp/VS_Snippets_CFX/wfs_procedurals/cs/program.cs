@@ -15,20 +15,20 @@ namespace Microsoft.Samples.ProceduralActivities.GuessingGame
         static void Main(string[] args)
         {
             bool running = true;
-            
+
             // create the workflow application and start its execution
             AutoResetEvent syncEvent = new AutoResetEvent(false);
             WorkflowApplication application = new WorkflowApplication(CreateGuessingGameWF());
             application.Completed = delegate(WorkflowApplicationCompletedEventArgs e) { running = false; syncEvent.Set(); };
             application.Idle = delegate(WorkflowApplicationIdleEventArgs e)
             {
-                syncEvent.Set();                
+                syncEvent.Set();
             };
             application.Run();
 
-            // main loop (manages bookmarks)            
+            // main loop (manages bookmarks)
             while (running)
-            {                
+            {
                 if (!syncEvent.WaitOne(10, false))
                 {
                     if (running)
@@ -41,7 +41,7 @@ namespace Microsoft.Samples.ProceduralActivities.GuessingGame
 
                             // resume the bookmark (passing the data read from the console)
                             application.ResumeBookmark(bookmarkName, Console.ReadLine());
-                            
+
                             syncEvent.WaitOne();
                         }
                     }
@@ -66,8 +66,8 @@ namespace Microsoft.Samples.ProceduralActivities.GuessingGame
         }
 
         // Create a number guessing game workflow program. This workflow
-        // combines several out of the box activities (Sequence, If, 
-        // WriteLine, Assign, While, TryCatch, Switch, Expressions) 
+        // combines several out of the box activities (Sequence, If,
+        // WriteLine, Assign, While, TryCatch, Switch, Expressions)
         // and two custom activities included in this project (ReadLine and PromptIt).
         static Activity CreateGuessingGameWF()
         {
@@ -101,12 +101,12 @@ namespace Microsoft.Samples.ProceduralActivities.GuessingGame
                         new While()
                         {
                             DisplayName = "Main Loop",
-                            Condition = ExpressionServices.Convert<bool>(env => !finished.Get(env)),                        
+                            Condition = ExpressionServices.Convert<bool>(env => !finished.Get(env)),
 
                             // we will ask the user for a number and check if he guessed it (this is what we do inside this sequence)
                             Body = new Sequence()
                             {
-                                Activities = 
+                                Activities =
                                 {
                                     // increase the attempts counter
                                     new Assign<int>()
@@ -118,8 +118,8 @@ namespace Microsoft.Samples.ProceduralActivities.GuessingGame
 
                                     // ask a the user for a number in a TryCatch to handle invalid input
                                     new TryCatch()
-                                    {                                        
-                                        Try = 
+                                    {
+                                        Try =
                                         new Sequence
                                         {
                                             DisplayName = "Try Catch (getting valid user input)",
@@ -138,7 +138,7 @@ namespace Microsoft.Samples.ProceduralActivities.GuessingGame
                                                 {
                                                     DisplayName = "Verify Value from User",
                                                     Expression = ExpressionServices.Convert<int>( env => numberFromUser.Get(env).CompareTo(numberToGuess.Get(env)) ),
-                                                    Cases = 
+                                                    Cases =
                                                     {
                                                         { 0, new Assign<bool>()
                                                             {
@@ -146,7 +146,7 @@ namespace Microsoft.Samples.ProceduralActivities.GuessingGame
                                                                 Value = true
                                                             }
                                                         },
-                                                        {  1, new WriteLine() { Text = "    Try a lower number number..." } }, 
+                                                        {  1, new WriteLine() { Text = "    Try a lower number number..." } },
                                                         { -1, new WriteLine() { Text = "    Try a higher number" } }
                                                     }
                                                 }
@@ -175,11 +175,11 @@ namespace Microsoft.Samples.ProceduralActivities.GuessingGame
                                                 }
                                             }
                                         }
-                                    }                                    
+                                    }
                                 }
                             }
                         },
-                        // final message: if the user guessed the number in less than 7 attempts, we show a congratulation message. 
+                        // final message: if the user guessed the number in less than 7 attempts, we show a congratulation message.
                         // if otherwise he found it in 7 or more attempts we encourage him to get more practice
                         new If()
                         {
@@ -190,6 +190,6 @@ namespace Microsoft.Samples.ProceduralActivities.GuessingGame
                         }
                     }
             };
-        }        
+        }
     }
 }

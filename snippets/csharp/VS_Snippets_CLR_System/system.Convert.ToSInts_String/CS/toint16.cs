@@ -1,5 +1,5 @@
 ﻿//<Snippet3>
-// Example of the Convert.ToInt16( string ) and 
+// Example of the Convert.ToInt16( string ) and
 // Convert.ToInt16( string, IFormatProvider ) methods.
 using System;
 using System.Globalization;
@@ -12,11 +12,11 @@ class ToInt16ProviderDemo
     static string GetExceptionType( Exception ex )
     {
         string exceptionType = ex.GetType( ).ToString( );
-        return exceptionType.Substring( 
+        return exceptionType.Substring(
             exceptionType.LastIndexOf( '.' ) + 1 );
     }
 
-    static void ConvertToInt16( string numericStr, 
+    static void ConvertToInt16( string numericStr,
         IFormatProvider provider )
     {
         object defaultValue;
@@ -42,7 +42,7 @@ class ToInt16ProviderDemo
             providerValue = GetExceptionType( ex );
         }
 
-        Console.WriteLine( format, numericStr, 
+        Console.WriteLine( format, numericStr,
             defaultValue, providerValue );
     }
 
@@ -69,9 +69,9 @@ class ToInt16ProviderDemo
             "\ngenerates the following output. It converts " +
             "several strings to \nshort values, using " +
             "default formatting or a NumberFormatInfo object.\n" );
-        Console.WriteLine( format, "String to convert", 
+        Console.WriteLine( format, "String to convert",
             "Default/exception", "Provider/exception" );
-        Console.WriteLine( format, "-----------------", 
+        Console.WriteLine( format, "-----------------",
             "-----------------", "------------------" );
 
         // Convert strings, with and without an IFormatProvider.
@@ -107,5 +107,5 @@ neg 12345           FormatException     -12345
 (12345)             FormatException     FormatException
 32768               OverflowException   OverflowException
 -32769              OverflowException   FormatException
-*/ 
+*/
 //</Snippet3>

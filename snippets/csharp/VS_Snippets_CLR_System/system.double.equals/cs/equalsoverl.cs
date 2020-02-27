@@ -4,7 +4,7 @@ using System;
 public class Example
 {
    static double value = 112;
-   
+
    public static void Main()
    {
       byte byte1= 112;
@@ -22,7 +22,7 @@ public class Example
       long long1 = 112;
       Console.WriteLine("value = long1: {0,17}", value.Equals(long1));
       TestObjectForEquality(long1);
-      
+
       sbyte sbyte1 = 112;
       Console.WriteLine("value = sbyte1: {0,16}", value.Equals(sbyte1));
       TestObjectForEquality(sbyte1);
@@ -38,7 +38,7 @@ public class Example
       ulong ulong1 = 112;
       Console.WriteLine("value = ulong1: {0,17}", value.Equals(ulong1));
       TestObjectForEquality(ulong1);
-      
+
       decimal dec1 = 112m;
       Console.WriteLine("value = dec1: {0,21}", value.Equals(dec1));
       TestObjectForEquality(dec1);

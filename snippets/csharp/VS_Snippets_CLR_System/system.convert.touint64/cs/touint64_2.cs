@@ -25,10 +25,10 @@ public class Example
          }
          catch (FormatException) {
             Console.WriteLine("{0,20}", "Invalid Format");
-         }   
+         }
          catch (OverflowException) {
             Console.WriteLine("{0,20}", "Numeric Overflow");
-         }               
+         }
       }
    }
 }

@@ -50,7 +50,7 @@ public class SamplesArray  {
 }
 
 
-/* 
+/*
 This code produces the following output.
 
 The original array contains the following values:

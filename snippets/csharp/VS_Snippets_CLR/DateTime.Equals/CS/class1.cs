@@ -7,11 +7,11 @@ namespace Equals
 		static void Main(string[] args)
 		{
 			// <Snippet1>
-			System.DateTime today1 = 
+			System.DateTime today1 =
 					new System.DateTime(System.DateTime.Today.Ticks);
-			System.DateTime today2 = 
+			System.DateTime today2 =
 					new System.DateTime(System.DateTime.Today.Ticks);
-			System.DateTime tomorrow = 
+			System.DateTime tomorrow =
 					new System.DateTime(
 								System.DateTime.Today.AddDays(1).Ticks);
 

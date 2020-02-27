@@ -5,7 +5,7 @@ namespace DesignLibrary
 {
 // Violates rule: MarkAttributesWithAttributeUsage.
 
-   public sealed class BadCodeMaintainerAttribute :Attribute 
+   public sealed class BadCodeMaintainerAttribute :Attribute
    {
       string developer;
 
@@ -15,7 +15,7 @@ namespace DesignLibrary
       }
       public string DeveloperName
       {
-         get 
+         get
          {
             return developer;
          }
@@ -25,7 +25,7 @@ namespace DesignLibrary
 
    // The attribute is valid for type-level targets.
    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Enum | AttributeTargets.Interface | AttributeTargets.Delegate)]
-   public sealed class GoodCodeMaintainerAttribute :Attribute 
+   public sealed class GoodCodeMaintainerAttribute :Attribute
    {
       string developer;
 
@@ -35,7 +35,7 @@ namespace DesignLibrary
       }
       public string DeveloperName
       {
-         get 
+         get
          {
             return developer;
          }

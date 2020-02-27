@@ -23,7 +23,7 @@ public class Class1
       // Display value using some standard format specifiers.
       Console.WriteLine(value.ToString("G"));         // Displays -16325.62
       Console.WriteLine(value.ToString("C"));         // Displays ($16,325.62)
-      Console.WriteLine(value.ToString("F"));         // Displays -16325.62      
+      Console.WriteLine(value.ToString("F"));         // Displays -16325.62
       // </Snippet2>
    }
 
@@ -49,7 +49,7 @@ public class Class1
       // <Snippet4>
       decimal value = 16325.62m;
       string specifier;
-      
+
       // Use standard numeric format specifiers.
       specifier = "G";
       Console.WriteLine("{0}: {1}", specifier, value.ToString(specifier));
@@ -69,7 +69,7 @@ public class Class1
       specifier = "P";
       Console.WriteLine("{0}: {1}", specifier, (value/10000).ToString(specifier));
       // Displays:    P: 163.26 %
-      
+
       // Use custom numeric format specifiers.
       specifier = "0,0.000";
       Console.WriteLine("{0}: {1}", specifier, value.ToString(specifier));
@@ -86,7 +86,7 @@ public class Class1
       decimal value = 16325.62m;
       string specifier;
       CultureInfo culture;
-      
+
       // Use standard numeric format specifiers.
       specifier = "G";
       culture = CultureInfo.CreateSpecificCulture("eu-ES");
@@ -94,7 +94,7 @@ public class Class1
       // Displays:    16325,62
       Console.WriteLine(value.ToString(specifier, CultureInfo.InvariantCulture));
       // Displays:    16325.62
-      
+
       specifier = "C";
       culture = CultureInfo.CreateSpecificCulture("en-US");
       Console.WriteLine(value.ToString(specifier, culture));
@@ -102,14 +102,14 @@ public class Class1
       culture = CultureInfo.CreateSpecificCulture("en-GB");
       Console.WriteLine(value.ToString(specifier, culture));
       // Displays:    £16,325.62
-      
+
       specifier = "E04";
       culture = CultureInfo.CreateSpecificCulture("sv-SE");
       Console.WriteLine(value.ToString(specifier, culture));
-      // Displays: 1,6326E+004   
+      // Displays: 1,6326E+004
        culture = CultureInfo.CreateSpecificCulture("en-NZ");
        Console.WriteLine(value.ToString(specifier, culture));
-      // Displays:    1.6326E+004   
+      // Displays:    1.6326E+004
 
       specifier = "F";
       culture = CultureInfo.CreateSpecificCulture("fr-FR");
@@ -135,5 +135,5 @@ public class Class1
       Console.WriteLine((value/10000).ToString(specifier, culture));
       // Displays:    163.256 %
       // </Snippet5>
-   }   
+   }
 }

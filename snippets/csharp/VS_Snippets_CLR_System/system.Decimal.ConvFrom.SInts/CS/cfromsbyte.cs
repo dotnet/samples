@@ -6,14 +6,14 @@ class Example
     public static void Main()
     {
         // Define an array of 8-bit signed integer values.
-        sbyte[] values = { sbyte.MinValue, sbyte.MaxValue,     
+        sbyte[] values = { sbyte.MinValue, sbyte.MaxValue,
                            0x3F, 123, -100 };
         // Convert each value to a Decimal.
         foreach (var value in values) {
            Decimal decValue = value;
            Console.WriteLine("{0} ({1}) --> {2} ({3})", value,
                              value.GetType().Name, decValue,
-                             decValue.GetType().Name);         
+                             decValue.GetType().Name);
         }
     }
 }

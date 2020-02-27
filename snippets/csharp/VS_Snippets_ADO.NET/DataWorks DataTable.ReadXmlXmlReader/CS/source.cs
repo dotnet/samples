@@ -22,7 +22,7 @@ class Program
         // Rewind the memory stream.
         xmlStream.Position = 0;
 
-        System.Xml.XmlTextReader reader = 
+        System.Xml.XmlTextReader reader =
             new System.Xml.XmlTextReader(xmlStream);
         DataTable newTable = new DataTable();
         newTable.ReadXml(reader);

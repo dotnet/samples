@@ -2,9 +2,9 @@
 using System;
 using System.IO;
 
-public class MoveToTest 
+public class MoveToTest
 {
-    public static void Main() 
+    public static void Main()
     {
 
         // Make a reference to a directory.
@@ -21,13 +21,13 @@ public class MoveToTest
         if (Directory.Exists("NewTempDir") == false)
             di.MoveTo("NewTempDir");
 
-        try 
+        try
         {
             // Attempt to delete the subdirectory. Note that because it has been
             // moved, an exception is thrown.
             dis.Delete(true);
-        } 
-        catch (Exception) 
+        }
+        catch (Exception)
         {
             // Handle this exception in some way, such as with the following code:
             // Console.WriteLine("That directory does not exist.");

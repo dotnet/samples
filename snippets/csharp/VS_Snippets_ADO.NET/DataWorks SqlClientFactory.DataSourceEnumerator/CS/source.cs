@@ -18,9 +18,9 @@ class Program
     private static void ListServers(DbProviderFactory factory)
     {
         // This procedure is provider-agnostic, and can list
-        // instances of any provider's servers. Of course, 
+        // instances of any provider's servers. Of course,
         // not all providers can create a data source enumerator,
-        // so it's best to check the CanCreateDataSourceEnumerator 
+        // so it's best to check the CanCreateDataSourceEnumerator
         // property before attempting to list the data sources.
         if (factory.CanCreateDataSourceEnumerator)
         {

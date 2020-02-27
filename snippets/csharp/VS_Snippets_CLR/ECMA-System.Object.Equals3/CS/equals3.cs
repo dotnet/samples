@@ -1,11 +1,11 @@
 ﻿// <Snippet1>
 using System;
 
-class Rectangle 
+class Rectangle
 {
    private Point a, b;
 
-   public Rectangle(int upLeftX, int upLeftY, int downRightX, int downRightY) 
+   public Rectangle(int upLeftX, int upLeftY, int downRightX, int downRightY)
    {
       this.a = new Point(upLeftX, upLeftY);
       this.b = new Point(downRightX, downRightY);
@@ -14,7 +14,7 @@ class Rectangle
    public override bool Equals(Object obj)
    {
       // Perform an equality check on two rectangles (Point object pairs).
-      if (obj == null || GetType() != obj.GetType()) 
+      if (obj == null || GetType() != obj.GetType())
           return false;
       Rectangle r = (Rectangle)obj;
       return a.Equals(r.a) && b.Equals(r.b);
@@ -28,11 +28,11 @@ class Rectangle
     public override String ToString()
     {
        return String.Format("Rectangle({0}, {1}, {2}, {3})",
-                            a.x, a.y, b.x, b.y); 
+                            a.x, a.y, b.x, b.y);
     }
 }
 
-class Point 
+class Point
 {
   internal int x;
   internal int y;
@@ -57,7 +57,7 @@ class Point
   }
 }
 
-class Example 
+class Example
 {
    public static void Main()
    {

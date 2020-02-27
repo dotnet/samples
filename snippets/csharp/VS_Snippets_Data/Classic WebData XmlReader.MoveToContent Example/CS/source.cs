@@ -12,7 +12,7 @@ public class Form1: Form
  {
 
 // <Snippet1>
-if (reader.MoveToContent() == XmlNodeType.Element && reader.Name == "price") 
+if (reader.MoveToContent() == XmlNodeType.Element && reader.Name == "price")
  {
     _price = reader.ReadString();
  }

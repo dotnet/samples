@@ -16,7 +16,7 @@ namespace Microsoft.Samples.DynamicActivityCreation
     class Program
     {
         static void Main(string[] args)
-        {            
+        {
             List<int> numbers = GetInputFromUser(args);
 
             if (numbers != null)
@@ -45,7 +45,7 @@ namespace Microsoft.Samples.DynamicActivityCreation
 
             Console.WriteLine();
             Console.WriteLine("Press Enter to exit...");
-            Console.ReadLine();   
+            Console.ReadLine();
         }
 
         static List<int> GetInputFromUser(string[] args)
@@ -54,9 +54,9 @@ namespace Microsoft.Samples.DynamicActivityCreation
 
             // If there are arguments in the command line use them
             if (args.Length > 0)
-            {                
+            {
                 try
-                {                    
+                {
                     numbers.Clear();
 
                     foreach (string arg in args)
@@ -88,13 +88,13 @@ namespace Microsoft.Samples.DynamicActivityCreation
             // Define the Input and Output arguments that the DynamicActivity binds to
             var numbers = new InArgument<List<int>>();
             var average = new OutArgument<double>();
-            
+
             var result = new Variable<double>() { Name = "result" };
 
             return new DynamicActivity()
             {
                 DisplayName = "Find average",
-                Properties = 
+                Properties =
                 {
                     // Input argument
                     new DynamicActivityProperty
@@ -120,7 +120,7 @@ namespace Microsoft.Samples.DynamicActivityCreation
 //<Snippet1>
                             new ForEach<int>
                             {
-                                Values =  new ArgumentValue<IEnumerable<int>> { ArgumentName = "Numbers" },                                
+                                Values =  new ArgumentValue<IEnumerable<int>> { ArgumentName = "Numbers" },
                                 Body = new ActivityAction<int>
                                 {
                                     Argument = iterationVariable,

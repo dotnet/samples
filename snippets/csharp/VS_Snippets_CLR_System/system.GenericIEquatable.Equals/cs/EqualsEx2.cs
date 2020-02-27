@@ -100,17 +100,17 @@ public class TestIEquatable
        // Create a Person object for the final candidate.
        Person candidate = new Person("Jones", "199-29-3999");
        if (applicants.Contains(candidate))
-          Console.WriteLine("Found {0} (SSN {1}).", 
+          Console.WriteLine("Found {0} (SSN {1}).",
                              candidate.LastName, candidate.SSN);
       else
          Console.WriteLine("Applicant {0} not found.", candidate.SSN);
 
       // Call the shared inherited Equals(Object, Object) method.
       // It will in turn call the IEquatable(Of T).Equals implementation.
-      Console.WriteLine("{0}({1}) already on file: {2}.",  
-                        applicant2.LastName, 
-                        applicant2.SSN, 
-                        Person.Equals(applicant2, candidate)); 
+      Console.WriteLine("{0}({1}) already on file: {2}.",
+                        applicant2.LastName,
+                        applicant2.SSN,
+                        Person.Equals(applicant2, candidate));
    }
 }
 // The example displays the following output:

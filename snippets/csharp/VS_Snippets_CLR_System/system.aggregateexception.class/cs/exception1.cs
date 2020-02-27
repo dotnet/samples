@@ -22,7 +22,7 @@ class Example
           await task1;
       }
       catch (UnauthorizedAccessException ae)
-      { 
+      {
           Console.WriteLine("Caught unauthorized access exception-await behavior");
       }
       catch (AggregateException ae)
@@ -40,10 +40,10 @@ class Example
           });
       }
 
-      Console.WriteLine("task1 Status: {0}{1}", task1.IsCompleted ? "Completed," : "", 
+      Console.WriteLine("task1 Status: {0}{1}", task1.IsCompleted ? "Completed," : "",
                                                 task1.Status);
    }
- 
+
    static string[] GetAllFiles(string str)
    {
       // Should throw an UnauthorizedAccessException exception.

@@ -12,14 +12,14 @@ public class Example
          Console.WriteLine("All elements end with an integer.");
       else
          Console.WriteLine("Not all elements end with an integer.");
-       
+
       if (Array.TrueForAll(values2, EndsWithANumber))
          Console.WriteLine("All elements end with an integer.");
       else
          Console.WriteLine("Not all elements end with an integer.");
    }
 
-   private static bool EndsWithANumber(String value) 
+   private static bool EndsWithANumber(String value)
    {
       int s;
       return Int32.TryParse(value.Substring(value.Length - 1), out s);

@@ -13,10 +13,10 @@ class Example
 		try {
 			localDateTime = DateTime.Parse(strDateTime);
     		univDateTime = localDateTime.ToUniversalTime();
-    
+
     		Console.WriteLine("{0} local time is {1} universal time.",
    								localDateTime,
-    								univDateTime); 
+    								univDateTime);
 		}
 		catch (FormatException) {
 			Console.WriteLine("Invalid format.");
@@ -29,10 +29,10 @@ class Example
 		try {
 			univDateTime = DateTime.Parse(strDateTime);
     		localDateTime = univDateTime.ToLocalTime();
-    
+
     		Console.WriteLine("{0} universal time is {1} local time.",
     								 univDateTime,
-    								 localDateTime); 
+    								 localDateTime);
 		}
 		catch (FormatException) {
 			Console.WriteLine("Invalid format.");
@@ -40,7 +40,7 @@ class Example
 		}
 	}
 }
-// The example displays output like the following when run on a 
+// The example displays output like the following when run on a
 // computer whose culture is en-US in the Pacific Standard Time zone:
 //     Enter a date and time.
 //     12/10/2015 6:18 AM

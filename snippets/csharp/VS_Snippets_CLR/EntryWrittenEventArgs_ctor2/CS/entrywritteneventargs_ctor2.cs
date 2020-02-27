@@ -1,11 +1,11 @@
 ﻿// System.Diagnostics.EntryWrittenEventArgs.ctor(EventLogEntry)
 // System.Diagnostics.EntryWrittenEventArgs.Entry
 
-/* 
+/*
 The following example demonstrates the 'Entry' property and EntryWrittenEventArgs (EventLogEntry)
 constructor of the  'EntryWrittenEventArgs' class. It creates a custom 'EventLog' and writes an
 entry into it. Then creates an 'EntryWrittenEventArgs' object using the first entry in the custom
-eventlog.This object is used to notify a message 
+eventlog.This object is used to notify a message
  */
 
 // <Snippet1>

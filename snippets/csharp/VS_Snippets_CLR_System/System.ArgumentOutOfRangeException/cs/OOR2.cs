@@ -6,13 +6,13 @@ public class Example
 {
    public static void Main()
    {
-      var list = new List<String>(); 
+      var list = new List<String>();
       list.AddRange( new String[] { "A", "B", "C" } );
       try {
          // Display the elements in the list by index.
-         for (int ctr = 0; ctr <= list.Count; ctr++) 
+         for (int ctr = 0; ctr <= list.Count; ctr++)
             Console.WriteLine("Index {0}: {1}", ctr, list[ctr]);
-      } 
+      }
       catch (ArgumentOutOfRangeException e) {
          Console.WriteLine(e.Message);
       }
@@ -30,12 +30,12 @@ public class Example2
 {
    public static void Test()
    {
-      var list = new List<String>(); 
+      var list = new List<String>();
       list.AddRange( new String[] { "A", "B", "C" } );
       // <Snippet9>
       // Display the elements in the list by index.
-      for (int ctr = 0; ctr < list.Count; ctr++) 
+      for (int ctr = 0; ctr < list.Count; ctr++)
          Console.WriteLine("Index {0}: {1}", ctr, list[ctr]);
-      // </Snippet9> 
+      // </Snippet9>
    }
 }

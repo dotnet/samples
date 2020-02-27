@@ -10,7 +10,7 @@ namespace DesignLibrary
          string s1 = "12345";
          string s2 = "12345";
          string s3 = "12345";
-     
+
          Console.WriteLine("Changing pointer - passed by value:");
          Console.WriteLine(s1);
          ReferenceTypesAndParameters.BadPassTheObject (s1);

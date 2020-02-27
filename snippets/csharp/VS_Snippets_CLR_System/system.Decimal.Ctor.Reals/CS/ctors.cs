@@ -8,7 +8,7 @@ class DecimalCtorSDemo
     public static string GetExceptionType( Exception ex )
     {
         string exceptionType = ex.GetType( ).ToString( );
-        return exceptionType.Substring( 
+        return exceptionType.Substring(
             exceptionType.LastIndexOf( '.' ) + 1 );
     }
 
@@ -16,7 +16,7 @@ class DecimalCtorSDemo
     public static void CreateDecimal( float value, string valToStr )
     {
         // Format and display the constructor.
-        Console.Write( "{0,-27}", 
+        Console.Write( "{0,-27}",
             String.Format( "decimal( {0} )", valToStr ) );
 
         try
@@ -33,15 +33,15 @@ class DecimalCtorSDemo
             Console.WriteLine( "{0,31}", GetExceptionType( ex ) );
         }
     }
-    
+
     public static void Main( )
     {
 
         Console.WriteLine( "This example of the decimal( float ) " +
             "constructor \ngenerates the following output.\n" );
-        Console.WriteLine( "{0,-27}{1,31}", "Constructor", 
+        Console.WriteLine( "{0,-27}{1,31}", "Constructor",
             "Value or Exception" );
-        Console.WriteLine( "{0,-27}{1,31}", "-----------", 
+        Console.WriteLine( "{0,-27}{1,31}", "-----------",
             "------------------" );
 
         // Construct decimal objects from float values.

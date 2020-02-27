@@ -10,7 +10,7 @@ class DecimalFromDoubleDemo
     public static string GetExceptionType( Exception ex )
     {
         string exceptionType = ex.GetType( ).ToString( );
-        return exceptionType.Substring( 
+        return exceptionType.Substring(
             exceptionType.LastIndexOf( '.' ) + 1 );
     }
 
@@ -34,12 +34,12 @@ class DecimalFromDoubleDemo
 
     public static void Main( )
     {
-        Console.WriteLine( 
+        Console.WriteLine(
             "This example of the explicit conversion from double " +
             "to decimal \ngenerates the following output.\n" );
-        Console.WriteLine( formatter, "double argument", 
+        Console.WriteLine( formatter, "double argument",
             "decimal value" );
-        Console.WriteLine( formatter, "---------------", 
+        Console.WriteLine( formatter, "---------------",
             "-------------" );
 
         // Convert double values and display the results.

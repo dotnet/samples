@@ -24,9 +24,9 @@ class Program
 
         Console.WriteLine();
 
-        // Now repeat, using an array that may contain a different 
+        // Now repeat, using an array that may contain a different
         // number of columns than the original data. This should work correctly,
-        // whether the size of the array is larger or smaller than 
+        // whether the size of the array is larger or smaller than
         // the number of columns.
 
         // Attempt to retrieve three columns of data.
@@ -56,9 +56,9 @@ class Program
 
         Console.WriteLine();
 
-        // Now repeat, using an array that may contain a different 
+        // Now repeat, using an array that may contain a different
         // number of columns than the original data. This should work correctly,
-        // whether the size of the array is larger or smaller than 
+        // whether the size of the array is larger or smaller than
         // the number of columns.
 
         // Attempt to retrieve three columns of data.

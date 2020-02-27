@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace OrderablePartitionerDemo
 {
 
-    // Simple partitioner that will extract one (index,item) pair at a time, 
+    // Simple partitioner that will extract one (index,item) pair at a time,
     // in a thread-safe fashion, from the underlying collection.
     class SingleElementOrderablePartitioner<T> : OrderablePartitioner<T>
     {
@@ -42,7 +42,7 @@ namespace OrderablePartitionerDemo
             bool m_downcountEnumerators;
 
             // "downcountEnumerators" will be true for static partitioning, false for
-            // dynamic partitioning.  
+            // dynamic partitioning.
             public InternalEnumerable(IEnumerator<T> reader, bool downcountEnumerators)
             {
                 m_reader = reader;
@@ -95,7 +95,7 @@ namespace OrderablePartitionerDemo
             }
         }
 
-        // Internal class that serves as a shared enumerator for 
+        // Internal class that serves as a shared enumerator for
         // the underlying collection.
         private class InternalEnumerator : IEnumerator<KeyValuePair<long, T>>
         {
@@ -129,7 +129,7 @@ namespace OrderablePartitionerDemo
             }
 
             // This method is the crux of this class.  Under lock, it calls
-            // MoveNext() on the underlying enumerator, grabs Current and index, 
+            // MoveNext() on the underlying enumerator, grabs Current and index,
             // and increments the index.
             bool IEnumerator.MoveNext()
             {

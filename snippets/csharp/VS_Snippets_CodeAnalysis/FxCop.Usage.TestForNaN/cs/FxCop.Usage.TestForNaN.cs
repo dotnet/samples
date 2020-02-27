@@ -6,7 +6,7 @@ namespace UsageLibrary
    class NaNTests
    {
       static double zero;
-      
+
       static void Main()
       {
          Console.WriteLine( 0/zero == double.NaN );

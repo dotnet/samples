@@ -5,7 +5,7 @@ using System;
 using System.Collections;
 
 public class SamplesArrayList  {
- 
+
    public class myReverserClass : IComparer  {
 
       // Calls CaseInsensitiveComparer.Compare with the parameters reversed.
@@ -15,7 +15,7 @@ public class SamplesArrayList  {
    }
 
    public static void Main()  {
- 
+
       // Creates and initializes a new ArrayList.
       ArrayList myAL = new ArrayList();
       myAL.Add( "The" );
@@ -27,11 +27,11 @@ public class SamplesArrayList  {
       myAL.Add( "the" );
       myAL.Add( "lazy" );
       myAL.Add( "dog" );
- 
+
       // Displays the values of the ArrayList.
       Console.WriteLine( "The ArrayList initially contains the following values:" );
       PrintIndexAndValues( myAL );
- 
+
       // Sorts the values of the ArrayList using the default comparer.
       myAL.Sort();
       Console.WriteLine( "After sorting with the default comparer:" );
@@ -43,7 +43,7 @@ public class SamplesArrayList  {
       Console.WriteLine( "After sorting with the reverse case-insensitive comparer:" );
       PrintIndexAndValues( myAL );
    }
- 
+
    public static void PrintIndexAndValues( IEnumerable myList )  {
       int i = 0;
       foreach ( Object obj in myList )
@@ -53,7 +53,7 @@ public class SamplesArrayList  {
 }
 
 
-/* 
+/*
 This code produces the following output.
 The ArrayList initially contains the following values:
         [0]:    The
@@ -86,7 +86,7 @@ After sorting with the reverse case-insensitive comparer:
         [5]:    jumps
         [6]:    fox
         [7]:    dog
-        [8]:    brown 
+        [8]:    brown
 */
 
 // </Snippet1>

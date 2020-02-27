@@ -14,13 +14,13 @@ public class Sample
 
     //Create a CData section.
     XmlCDataSection CData;
-    CData = doc.CreateCDataSection("All Jane Austen novels 25% off starting 3/23!");    
+    CData = doc.CreateCDataSection("All Jane Austen novels 25% off starting 3/23!");
 
     //Add the new node to the document.
     XmlElement root = doc.DocumentElement;
-    root.AppendChild(CData);  
-        
-    Console.WriteLine("Display the modified XML...");        
+    root.AppendChild(CData);
+
+    Console.WriteLine("Display the modified XML...");
     doc.Save(Console.Out);
   }
 }

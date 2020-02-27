@@ -41,7 +41,7 @@ namespace Microsoft.Samples.SQLStoreExtensibility
 
                 Activities =
                 {
-                    new Receive() 
+                    new Receive()
                     {
                         Action = "Start",
                         CanCreateInstance = true,
@@ -53,13 +53,13 @@ namespace Microsoft.Samples.SQLStoreExtensibility
                     {
                         Body = new Sequence()
                         {
-                            Activities = 
+                            Activities =
                             {
                                 new SaveCounter() { Counter = counter },
 
                                 new Persist(),
 
-                                new Delay() 
+                                new Delay()
                                 {
                                     Duration = TimeSpan.FromSeconds(2),
                                 },
@@ -114,7 +114,7 @@ namespace Microsoft.Samples.SQLStoreExtensibility
             // Define SqlWorkflowInstanceStore and assign it to host.
             SqlWorkflowInstanceStoreBehavior store = new SqlWorkflowInstanceStoreBehavior(connectionString);
             List<XName> variantProperties = new List<XName>()
-            {   
+            {
                 xNS.GetName("Count")
             };
             store.Promote("CountStatus", variantProperties, null);
@@ -134,6 +134,6 @@ namespace Microsoft.Samples.SQLStoreExtensibility
             Console.ReadLine();
             host.Close();
         }
-//</Snippet1>        
+//</Snippet1>
     }
 }

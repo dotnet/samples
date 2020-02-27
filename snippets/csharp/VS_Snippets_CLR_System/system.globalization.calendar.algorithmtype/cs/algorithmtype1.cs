@@ -17,11 +17,11 @@ public class Example
       foreach (var cal in calendars) {
          // Instantiate a calendar object.
          ConstructorInfo ctor = cal.GetConstructor( new Type[] {} );
-         Calendar calObj = (Calendar) ctor.Invoke( new Type[] {} ); 
+         Calendar calObj = (Calendar) ctor.Invoke( new Type[] {} );
 
-         Console.WriteLine("{0,-30} {1}", 
+         Console.WriteLine("{0,-30} {1}",
                           cal.ToString().Replace("System.Globalization.", ""),
-                          cal.InvokeMember("AlgorithmType", 
+                          cal.InvokeMember("AlgorithmType",
                                            BindingFlags.Public | BindingFlags.Instance | BindingFlags.GetProperty,
                                            null, calObj, null));
       }
@@ -51,7 +51,7 @@ public class CalendarComparer : IComparer
 }
 // The example displays the following output:
 //       Calendar                       Algorithm Type
-//       
+//
 //       ChineseLunisolarCalendar       LunisolarCalendar
 //       GregorianCalendar              SolarCalendar
 //       HebrewCalendar                 LunisolarCalendar

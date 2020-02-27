@@ -17,9 +17,9 @@ public class Example
       // This property does not affect the conversion.
       // The input string cannot have a decimal separator.
       provider.NumberDecimalSeparator = ".";
-      
+
       // Define an array of numeric strings.
-      string[] numericStrings = { "234", "+234", "pos 234", "234.", "255", 
+      string[] numericStrings = { "234", "+234", "pos 234", "234.", "255",
                                   "256", "-1" };
 
       foreach (string numericString in numericStrings)
@@ -28,13 +28,13 @@ public class Example
          try {
             byte number = Convert.ToByte(numericString, provider);
             Console.WriteLine(number);
-         }   
+         }
          catch (FormatException) {
             Console.WriteLine("Incorrect Format");
-         }                             
+         }
          catch (OverflowException) {
             Console.WriteLine("Overflows a Byte");
-         }   
+         }
       }
    }
 }

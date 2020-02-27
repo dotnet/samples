@@ -7,9 +7,9 @@
 
 /* The following program demonstrates 'CounterCreationData' class,
    CounterCreationData(string, string, PerformanceCounterType)',
-   'CounterCreationData()', 'CounterName', 'CounterHelp' and 
+   'CounterCreationData()', 'CounterName', 'CounterHelp' and
    'CounterType' members of 'System.Diagnostics.CounterCreationData'
-   class. It creates the custom counters with 'CounterCreationData'  
+   class. It creates the custom counters with 'CounterCreationData'
    and binds them to 'PerformanceCounterCategory' object. */
 
 // <Snippet1>

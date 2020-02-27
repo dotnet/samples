@@ -1,18 +1,18 @@
 ﻿// <Snippet1>
 using System;
 using System.Reflection;
- 
+
 class MyMethodInfo
 {
     public static int Main()
     {
         Console.WriteLine("Reflection.MethodInfo");
-  
+
         // Get the Type and MethodInfo.
         Type MyType = Type.GetType("System.Reflection.FieldInfo");
         MethodInfo Mymethodinfo = MyType.GetMethod("GetValue");
         Console.WriteLine(MyType.FullName + "." + Mymethodinfo.Name);
-  
+
         // Get and display the MemberType property.
         MemberTypes Mymembertypes = Mymethodinfo.MemberType;
 
@@ -44,7 +44,7 @@ class MyMethodInfo
         {
             Console.WriteLine("MemberType is of type TypeInfo.");
         }
- 
+
         return 0;
     }
 }

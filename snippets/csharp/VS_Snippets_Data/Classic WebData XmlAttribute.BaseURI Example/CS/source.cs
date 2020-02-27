@@ -10,7 +10,7 @@ public class Sample
     //Create the XmlDocument.
     XmlDocument doc = new XmlDocument();
     doc.Load("http://localhost/baseuri.xml");
-                     
+
     //Display information on the attribute node. The value
     //returned for BaseURI is 'http://localhost/baseuri.xml'.
     XmlAttribute attr = doc.DocumentElement.Attributes[0];

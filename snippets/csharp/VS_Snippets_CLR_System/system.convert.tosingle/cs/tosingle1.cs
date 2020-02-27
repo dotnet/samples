@@ -36,7 +36,7 @@ public class Example
       // <Snippet1>
       bool[] flags = { true, false };
       float result;
-      
+
       foreach (bool flag in flags)
       {
          result = Convert.ToSingle(flag);
@@ -44,7 +44,7 @@ public class Example
       }
       // The example displays the following output:
       //       Converted True to 1.
-      //       Converted False to 0.      
+      //       Converted False to 0.
       // </Snippet1>
    }
 
@@ -53,7 +53,7 @@ public class Example
       // <Snippet2>
       byte[] numbers = { Byte.MinValue, 10, 100, Byte.MaxValue };
       float result;
-      
+
       foreach (byte number in numbers)
       {
          result = Convert.ToSingle(number);
@@ -72,17 +72,17 @@ public class Example
    private static void ConvertDecimal()
    {
       // <Snippet3>
-      decimal[] values = { Decimal.MinValue, -1034.23m, -12m, 0m, 147m, 
+      decimal[] values = { Decimal.MinValue, -1034.23m, -12m, 0m, 147m,
                                   199.55m, 9214.16m, Decimal.MaxValue };
       float result;
-      
+
       foreach (float value in values)
       {
          result = Convert.ToSingle(value);
          Console.WriteLine("Converted the {0} value '{1}' to the {2} value {3}.",
                            value.GetType().Name, value,
                            result.GetType().Name, result);
-      }                                  
+      }
       // The example displays the following output:
       //    Converted the Decimal value '-79228162514264337593543950335' to the Single value -7.922816E+28.
       //    Converted the Decimal value '-1034.23' to the Single value -1034.23.
@@ -94,21 +94,21 @@ public class Example
       //    Converted the Decimal value '79228162514264337593543950335' to the Single value 7.922816E+28.
       // </Snippet3>
    }
-   
+
    private static void ConvertDouble()
    {
       // <Snippet4>
-      double[] values = { Double.MinValue, -1.38e10, -1023.299, -12.98, 
+      double[] values = { Double.MinValue, -1.38e10, -1023.299, -12.98,
                           0, 9.113e-16, 103.919, 17834.191, Double.MaxValue };
       float result;
-      
+
       foreach (double value in values)
       {
          result = Convert.ToSingle(value);
-         Console.WriteLine("Converted the {0} value '{1}' to the {2} value {3}.", 
-                           value.GetType().Name, value, 
+         Console.WriteLine("Converted the {0} value '{1}' to the {2} value {3}.",
+                           value.GetType().Name, value,
                            result.GetType().Name, result);
-      }                                 
+      }
       // The example displays the following output:
       //    Converted the Double value '-1.79769313486232E+308' to the Single value -Infinity.
       //    Converted the Double value '-13800000000' to the Single value -1.38E+10.
@@ -127,14 +127,14 @@ public class Example
       // <Snippet5>
       short[] numbers = { Int16.MinValue, -1032, 0, 192, Int16.MaxValue };
       float result;
-      
+
       foreach (short number in numbers)
       {
          result = Convert.ToSingle(number);
-         Console.WriteLine("Converted the {0} value '{1}' to the {2} value {3}.", 
-                           number.GetType().Name, number, 
+         Console.WriteLine("Converted the {0} value '{1}' to the {2} value {3}.",
+                           number.GetType().Name, number,
                            result.GetType().Name, result);
-      }                     
+      }
       // The example displays the following output:
       //    Converted the Int16 value '-32768' to the Single value -32768.
       //    Converted the Int16 value '-1032' to the Single value -1032.
@@ -143,18 +143,18 @@ public class Example
       //    Converted the Int16 value '32767' to the Single value 32767.
       // </Snippet5>
    }
-   
+
    private static void ConvertInt32()
    {
       // <Snippet6>
       int[] numbers = { Int32.MinValue, -1000, 0, 1000, Int32.MaxValue };
       float result;
-      
+
       foreach (int number in numbers)
       {
          result = Convert.ToSingle(number);
-         Console.WriteLine("Converted the {0} value '{1}' to the {2} value {3}.", 
-                           number.GetType().Name, number, 
+         Console.WriteLine("Converted the {0} value '{1}' to the {2} value {3}.",
+                           number.GetType().Name, number,
                            result.GetType().Name, result);
       }
       // The example displays the following output:
@@ -171,12 +171,12 @@ public class Example
       // <Snippet7>
       long[] numbers = { Int64.MinValue, -903, 0, 172, Int64.MaxValue};
       double result;
-      
+
       foreach (long number in numbers)
       {
          result = Convert.ToDouble(number);
-         Console.WriteLine("Converted the {0} value '{1}' to the {2} value {3}.", 
-                           number.GetType().Name, number, 
+         Console.WriteLine("Converted the {0} value '{1}' to the {2} value {3}.",
+                           number.GetType().Name, number,
                            result.GetType().Name, result);
       }
       // The example displays the following output:
@@ -187,27 +187,27 @@ public class Example
       //    Converted the Int64 value '9223372036854775807' to the Single value 9.223372E+18.
       // </Snippet7>
    }
-   
+
    private static void ConvertObject()
    {
       // <Snippet8>
       object[] values = { true, 'a', 123, 1.764e32, "9.78", "1e-02",
                           1.67e03, "A100", "1,033.67", DateTime.Now,
-                          Decimal.MaxValue };   
+                          Decimal.MaxValue };
       float result;
-      
+
       foreach (object value in values)
       {
          try {
             result = Convert.ToSingle(value);
-            Console.WriteLine("Converted the {0} value '{1}' to the {2} value {3}.", 
-                              value.GetType().Name, value, 
+            Console.WriteLine("Converted the {0} value '{1}' to the {2} value {3}.",
+                              value.GetType().Name, value,
                               result.GetType().Name, result);
          }
          catch (FormatException) {
             Console.WriteLine("The {0} value {1} is not recognized as a valid Single value.",
                               value.GetType().Name, value);
-         }                     
+         }
          catch (OverflowException) {
             Console.WriteLine("The {0} value {1} is outside the range of the Single type.",
                               value.GetType().Name, value);
@@ -215,7 +215,7 @@ public class Example
          catch (InvalidCastException) {
             Console.WriteLine("Conversion of the {0} value {1} to a Single is not supported.",
                               value.GetType().Name, value);
-         }                     
+         }
       }
       // The example displays the following output:
       //    Converted the Boolean value 'True' to the Single value 1.
@@ -230,19 +230,19 @@ public class Example
       //    Conversion of the DateTime value 11/7/2008 08:02:35 AM to a Single is not supported.
       //    Converted the Decimal value '79228162514264337593543950335' to the Single value 7.922816E+28.
       // </Snippet8>
-   }   
-   
+   }
+
    private static void ConvertSByte()
    {
       // <Snippet9>
       sbyte[] numbers = { SByte.MinValue, -23, 0, 17, SByte.MaxValue };
       float result;
-      
+
       foreach (sbyte number in numbers)
       {
          result = Convert.ToSingle(number);
-         Console.WriteLine("Converted the {0} value '{1}' to the {2} value {3}.", 
-                           number.GetType().Name, number, 
+         Console.WriteLine("Converted the {0} value '{1}' to the {2} value {3}.",
+                           number.GetType().Name, number,
                            result.GetType().Name, result);
       }
       // The example displays the following output:
@@ -258,25 +258,25 @@ public class Example
    {
       // <Snippet10>
       string[] values= { "-1,035.77219", "1AFF", "1e-35", "1.63f",
-                         "1,635,592,999,999,999,999,999,999", "-17.455", 
+                         "1,635,592,999,999,999,999,999,999", "-17.455",
                          "190.34001", "1.29e325"};
       float result;
-      
+
       foreach (string value in values)
       {
          try {
             result = Convert.ToSingle(value);
-            Console.WriteLine("Converted the {0} value '{1}' to the {2} value {3}.", 
-                              value.GetType().Name, value, 
+            Console.WriteLine("Converted the {0} value '{1}' to the {2} value {3}.",
+                              value.GetType().Name, value,
                               result.GetType().Name, result);
-         }   
+         }
          catch (FormatException) {
             Console.WriteLine("Unable to convert '{0}' to a Single.", value);
-         }               
+         }
          catch (OverflowException) {
             Console.WriteLine("'{0}' is outside the range of a Single.", value);
          }
-      }       
+      }
       // The example displays the following output:
       //    Converted the String value '-1,035.77219' to the Single value -1035.772.
       //    Unable to convert '1AFF' to a Single.
@@ -294,14 +294,14 @@ public class Example
       // <Snippet11>
       ushort[] numbers = { UInt16.MinValue, 121, 12345, UInt16.MaxValue };
       float result;
-      
+
       foreach (ushort number in numbers)
       {
          result = Convert.ToSingle(number);
-         Console.WriteLine("Converted the {0} value '{1}' to the {2} value {3}.", 
-                           number.GetType().Name, number, 
+         Console.WriteLine("Converted the {0} value '{1}' to the {2} value {3}.",
+                           number.GetType().Name, number,
                            result.GetType().Name, result);
-      }   
+      }
       // The example displays the following output:
       //    Converted the UInt16 value '0' to the Single value 0.
       //    Converted the UInt16 value '121' to the Single value 121.
@@ -309,20 +309,20 @@ public class Example
       //    Converted the UInt16 value '65535' to the Single value 65535.
       // </Snippet11>
    }
-   
+
    private static void ConvertUInt32()
    {
       // <Snippet12>
       uint[] numbers = { UInt32.MinValue, 121, 12345, UInt32.MaxValue };
       float result;
-      
+
       foreach (uint number in numbers)
       {
          result = Convert.ToSingle(number);
-         Console.WriteLine("Converted the {0} value '{1}' to the {2} value {3}.", 
-                           number.GetType().Name, number, 
+         Console.WriteLine("Converted the {0} value '{1}' to the {2} value {3}.",
+                           number.GetType().Name, number,
                            result.GetType().Name, result);
-      }   
+      }
       // The example displays the following output:
       //    Converted the UInt32 value '0' to the Single value 0.
       //    Converted the UInt32 value '121' to the Single value 121.
@@ -336,14 +336,14 @@ public class Example
       // <Snippet13>
       ulong[] numbers = { UInt64.MinValue, 121, 12345, UInt64.MaxValue };
       float result;
-      
+
       foreach (ulong number in numbers)
       {
          result = Convert.ToSingle(number);
-         Console.WriteLine("Converted the {0} value '{1}' to the {2} value {3}.", 
-                           number.GetType().Name, number, 
+         Console.WriteLine("Converted the {0} value '{1}' to the {2} value {3}.",
+                           number.GetType().Name, number,
                            result.GetType().Name, result);
-      }   
+      }
       // The example displays the following output:
       //    Converted the UInt64 value '0' to the Single value 0.
       //    Converted the UInt64 value '121' to the Single value 121.

@@ -5,7 +5,7 @@ using System;
 class Int64BitsToDoubleDemo
 {
     const string formatter = "{0,20}{1,27:E16}";
- 
+
     // Reinterpret the long argument as a double.
     public static void LongBitsToDouble( long argument )
     {
@@ -13,20 +13,20 @@ class Int64BitsToDoubleDemo
         doubleValue = BitConverter.Int64BitsToDouble( argument );
 
         // Display the argument in hexadecimal.
-        Console.WriteLine( formatter, 
+        Console.WriteLine( formatter,
             String.Format( "0x{0:X16}", argument ), doubleValue );
     }
-       
+
     public static void Main( )
     {
         Console.WriteLine(
             "This example of the BitConverter.Int64BitsToDouble( " +
             "long ) \nmethod generates the following output.\n" );
-        Console.WriteLine( formatter, "long argument", 
+        Console.WriteLine( formatter, "long argument",
             "double value" );
-        Console.WriteLine( formatter, "-------------", 
+        Console.WriteLine( formatter, "-------------",
             "------------" );
-          
+
         // Convert long values and display the results.
         LongBitsToDouble( 0 );
         LongBitsToDouble( 0x3FF0000000000000 );

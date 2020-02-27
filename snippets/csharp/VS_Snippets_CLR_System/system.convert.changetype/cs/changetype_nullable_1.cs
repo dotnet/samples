@@ -11,7 +11,7 @@ public class Example
                         dValue1, dValue1.GetType().Name);
 
       float fValue1 = 16.3478f;
-      int? intValue2 = (int) fValue1; 
+      int? intValue2 = (int) fValue1;
       Console.WriteLine("{0} ({1})--> {2} ({3})", fValue1, fValue1.GetType().Name,
                         intValue2, intValue2.GetType().Name);
    }

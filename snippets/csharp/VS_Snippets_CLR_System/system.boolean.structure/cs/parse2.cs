@@ -5,11 +5,11 @@ public class Example
 {
    public static void Main()
    {
-      string[] values = { null, String.Empty, "True", "False", 
-                          "true", "false", "    true    ", 
-                           "TrUe", "fAlSe", "fa lse", "0",  
+      string[] values = { null, String.Empty, "True", "False",
+                          "true", "false", "    true    ",
+                           "TrUe", "fAlSe", "fa lse", "0",
                           "1", "-1", "string" };
-      // Parse strings using the Boolean.Parse method.                    
+      // Parse strings using the Boolean.Parse method.
       foreach (var value in values) {
          try {
             bool flag = Boolean.Parse(value);
@@ -17,20 +17,20 @@ public class Example
          }
          catch (ArgumentException) {
             Console.WriteLine("Cannot parse a null string.");
-         }   
+         }
          catch (FormatException) {
             Console.WriteLine("Cannot parse '{0}'.", value);
-         }         
+         }
       }
       Console.WriteLine();
-      // Parse strings using the Boolean.TryParse method.                    
+      // Parse strings using the Boolean.TryParse method.
       foreach (var value in values) {
          bool flag = false;
          if (Boolean.TryParse(value, out flag))
             Console.WriteLine("'{0}' --> {1}", value, flag);
          else
             Console.WriteLine("Unable to parse '{0}'", value);
-      }                                     
+      }
    }
 }
 // The example displays the following output:
@@ -48,7 +48,7 @@ public class Example
 //       Cannot parse '1'.
 //       Cannot parse '-1'.
 //       Cannot parse 'string'.
-//       
+//
 //       Unable to parse ''
 //       Unable to parse ''
 //       'True' --> True

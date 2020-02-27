@@ -13,16 +13,16 @@ public class Sample
                 "<book genre='novel' ISBN='1-861001-57-5'>" +
                 "<title>Pride And Prejudice</title>" +
                 "<misc/>" +
-                "</book>"); 
+                "</book>");
 
-    //Create an entity reference node. The child count should be 0 
+    //Create an entity reference node. The child count should be 0
     //since the node has not been expanded.
     XmlEntityReference entityref = doc.CreateEntityReference("h");
-    Console.WriteLine(entityref.ChildNodes.Count ); 
+    Console.WriteLine(entityref.ChildNodes.Count );
 
     //After the node has been added to the document, its parent node
     //is set and the entity reference node is expanded.  It now has a child
-    //node containing the entity replacement text. 
+    //node containing the entity replacement text.
     doc.DocumentElement.LastChild.AppendChild(entityref);
     Console.WriteLine(entityref.FirstChild.InnerText);
 

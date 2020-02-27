@@ -121,7 +121,7 @@ public class ShortStringDictionary : DictionaryBase  {
 public class SamplesDictionaryBase  {
 
    public static void Main()  {
- 
+
       // Creates and initializes a new DictionaryBase.
       ShortStringDictionary mySSC = new ShortStringDictionary();
 
@@ -183,7 +183,7 @@ public class SamplesDictionaryBase  {
       Console.WriteLine();
    }
 
-   // Uses the enumerator. 
+   // Uses the enumerator.
    // NOTE: The foreach statement is the preferred way of enumerating the contents of a collection.
    public static void PrintKeysAndValues2( ShortStringDictionary myCol )  {
       DictionaryEntry myDE;
@@ -206,7 +206,7 @@ public class SamplesDictionaryBase  {
 }
 
 
-/* 
+/*
 This code produces the following output.
 
 Contents of the collection (using foreach):

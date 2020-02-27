@@ -18,13 +18,13 @@ public class Example
       // <Snippet9>
       int[] bases = { 2, 8, 10, 16};
       byte[] numbers = { Byte.MinValue, 12, 103, Byte.MaxValue};
-      
+
       foreach (int baseValue in bases)
       {
          Console.WriteLine("Base {0} conversion:", baseValue);
          foreach (byte number in numbers)
          {
-            Console.WriteLine("   {0,-5}  -->  0x{1}", 
+            Console.WriteLine("   {0,-5}  -->  0x{1}",
                               number, Convert.ToString(number, baseValue));
          }
       }
@@ -57,13 +57,13 @@ public class Example
       // <Snippet10>
       int[] bases = { 2, 8, 10, 16};
       short[] numbers = { Int16.MinValue, -13621, -18, 12, 19142, Int16.MaxValue };
-      
+
       foreach (int baseValue in bases)
       {
          Console.WriteLine("Base {0} conversion:", baseValue);
          foreach (short number in numbers)
          {
-            Console.WriteLine("   {0,-8}  -->  0x{1}", 
+            Console.WriteLine("   {0,-8}  -->  0x{1}",
                               number, Convert.ToString(number, baseValue));
          }
       }
@@ -103,15 +103,15 @@ public class Example
    {
       // <Snippet11>
       int[] bases = { 2, 8, 10, 16};
-      int[] numbers = { Int32.MinValue, -19327543, -13621, -18, 12, 
+      int[] numbers = { Int32.MinValue, -19327543, -13621, -18, 12,
                                    19142, Int32.MaxValue };
-      
+
       foreach (int baseValue in bases)
       {
          Console.WriteLine("Base {0} conversion:", baseValue);
          foreach (int number in numbers)
          {
-            Console.WriteLine("   {0,-15}  -->  0x{1}", 
+            Console.WriteLine("   {0,-15}  -->  0x{1}",
                               number, Convert.ToString(number, baseValue));
          }
       }
@@ -147,7 +147,7 @@ public class Example
       //       -18              -->  0xffffffee
       //       12               -->  0xc
       //       19142            -->  0x4ac6
-      //       2147483647       -->  0x7fffffff       
+      //       2147483647       -->  0x7fffffff
       // </Snippet11>
    }
 
@@ -155,7 +155,7 @@ public class Example
    {
       // <Snippet12>
       int[] bases = { 2, 8, 10, 16};
-      long[] numbers = { Int64.MinValue, -193275430, -13621, -18, 12, 
+      long[] numbers = { Int64.MinValue, -193275430, -13621, -18, 12,
                          1914206117, Int64.MaxValue };
 
       foreach (int baseValue in bases)
@@ -163,7 +163,7 @@ public class Example
          Console.WriteLine("Base {0} conversion:", baseValue);
          foreach (long number in numbers)
          {
-            Console.WriteLine("   {0,-23}  -->  0x{1}", 
+            Console.WriteLine("   {0,-23}  -->  0x{1}",
                               number, Convert.ToString(number, baseValue));
          }
       }
@@ -202,4 +202,4 @@ public class Example
       //       9223372036854775807      -->  0x7fffffffffffffff
       // </Snippet12>
    }
-}   
+}

@@ -1,5 +1,5 @@
 ﻿//<Snippet1>
-// Example of the Convert.ToDecimal( String ) and 
+// Example of the Convert.ToDecimal( String ) and
 // Convert.ToDecimal( String, IFormatProvider ) methods.
 using System;
 using System.Globalization;
@@ -12,11 +12,11 @@ class ToDecimalProviderDemo
     static string GetExceptionType( Exception ex )
     {
         string exceptionType = ex.GetType( ).ToString( );
-        return exceptionType.Substring( 
+        return exceptionType.Substring(
             exceptionType.LastIndexOf( '.' ) + 1 );
     }
 
-    static void ConvertToDecimal( string numericStr, 
+    static void ConvertToDecimal( string numericStr,
         IFormatProvider provider )
     {
         object defaultValue;
@@ -42,7 +42,7 @@ class ToDecimalProviderDemo
             providerValue = GetExceptionType( ex );
         }
 
-        Console.WriteLine( formatter, numericStr, defaultValue, 
+        Console.WriteLine( formatter, numericStr, defaultValue,
             providerValue );
     }
 
@@ -56,18 +56,18 @@ class ToDecimalProviderDemo
         provider.NumberGroupSeparator = ".";
         provider.NumberGroupSizes = new int[ ] { 3 };
 
-        Console.WriteLine( 
+        Console.WriteLine(
             "This example of\n  Convert.ToDecimal( String ) and \n" +
             "  Convert.ToDecimal( String, IFormatProvider ) \n" +
             "generates the following output when run in the " +
-            "[{0}] culture.", 
+            "[{0}] culture.",
             CultureInfo.CurrentCulture.Name );
         Console.WriteLine( "\nSeveral " +
             "strings are converted to decimal values, using \n" +
             "default formatting and a NumberFormatInfo object.\n");
-        Console.WriteLine( formatter, "String to convert", 
+        Console.WriteLine( formatter, "String to convert",
             "Default/exception", "Provider/exception" );
-        Console.WriteLine( formatter, "-----------------", 
+        Console.WriteLine( formatter, "-----------------",
             "-----------------", "------------------" );
 
         // Convert strings, with and without an IFormatProvider.

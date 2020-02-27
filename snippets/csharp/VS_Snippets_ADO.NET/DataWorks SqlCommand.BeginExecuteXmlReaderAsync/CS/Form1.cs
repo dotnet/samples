@@ -13,7 +13,7 @@ namespace Microsoft.AdoDotNet.CodeSamples
 {
     public partial class Form1 : Form
     {
-        // Hook up the form's Load event handler and then add 
+        // Hook up the form's Load event handler and then add
         // this code to the form's class:
         // You need these delegates in order to display text from a thread
         // other than the form's thread. See the HandleCallback
@@ -23,7 +23,7 @@ namespace Microsoft.AdoDotNet.CodeSamples
 
         private bool isExecuting;
 
-        // This example maintains the connection object 
+        // This example maintains the connection object
         // externally, so that it is available for closing.
         private SqlConnection connection;
 
@@ -34,8 +34,8 @@ namespace Microsoft.AdoDotNet.CodeSamples
 
         private string GetConnectionString()
         {
-            // To avoid storing the connection string in your code, 
-            // you can retrieve it from a configuration file. 
+            // To avoid storing the connection string in your code,
+            // you can retrieve it from a configuration file.
 
             // If you do not include the Asynchronous Processing=true name/value pair,
             // you wo not be able to execute the command asynchronously.
@@ -69,7 +69,7 @@ namespace Microsoft.AdoDotNet.CodeSamples
             DisplayStatus("Ready");
         }
 
-        private void Form1_FormClosing(object sender, 
+        private void Form1_FormClosing(object sender,
             System.Windows.Forms.FormClosingEventArgs e)
         {
             if (isExecuting)
@@ -84,7 +84,7 @@ namespace Microsoft.AdoDotNet.CodeSamples
         {
             if (isExecuting)
             {
-                MessageBox.Show(this, 
+                MessageBox.Show(this,
                     "Already executing. Please wait until the current query " +
                     "has completed.");
             }
@@ -97,7 +97,7 @@ namespace Microsoft.AdoDotNet.CodeSamples
                     DisplayStatus("Connecting...");
                     connection = new SqlConnection(GetConnectionString());
 
-                    // To emulate a long-running query, wait for 
+                    // To emulate a long-running query, wait for
                     // a few seconds before working with the data.
                     string commandText =
                         "WAITFOR DELAY '00:00:03';" +
@@ -110,8 +110,8 @@ namespace Microsoft.AdoDotNet.CodeSamples
 
                     DisplayStatus("Executing...");
                     isExecuting = true;
-                    // Although it is not required that you pass the 
-                    // SqlCommand object as the second parameter in the 
+                    // Although it is not required that you pass the
+                    // SqlCommand object as the second parameter in the
                     // BeginExecuteXmlReader call, doing so makes it easier
                     // to call EndExecuteXmlReader in the callback procedure.
                     AsyncCallback callback = new AsyncCallback(HandleCallback);
@@ -142,29 +142,29 @@ namespace Microsoft.AdoDotNet.CodeSamples
                 // You may not interact with the form and its contents
                 // from a different thread, and this callback procedure
                 // is all but guaranteed to be running from a different thread
-                // than the form. 
+                // than the form.
 
                 // Instead, you must call the procedure from the form's thread.
                 // One simple way to accomplish this is to call the Invoke
                 // method of the form, which calls the delegate you supply
-                // from the form's thread. 
+                // from the form's thread.
                 DisplayReaderDelegate del = new DisplayReaderDelegate(DisplayProductInfo);
                 this.Invoke(del, reader);
             }
             catch (Exception ex)
             {
-                // Because you are now running code in a separate thread, 
+                // Because you are now running code in a separate thread,
                 // if you do not handle the exception here, none of your other
-                // code catches the exception. Because none of 
+                // code catches the exception. Because none of
                 // your code is on the call stack in this thread, there is nothing
-                // higher up the stack to catch the exception if you do not 
-                // handle it here. You can either log the exception or 
-                // invoke a delegate (as in the non-error case in this 
+                // higher up the stack to catch the exception if you do not
+                // handle it here. You can either log the exception or
+                // invoke a delegate (as in the non-error case in this
                 // example) to display the error on the form. In no case
                 // can you simply display the error without executing a delegate
-                // as in the try block here. 
+                // as in the try block here.
 
-                // You can create the delegate instance as you 
+                // You can create the delegate instance as you
                 // invoke it, like this:
                 this.Invoke(new DisplayInfoDelegate(DisplayStatus),
                 String.Format("Ready(last error: {0}", ex.Message));

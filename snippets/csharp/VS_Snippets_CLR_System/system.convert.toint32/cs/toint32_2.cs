@@ -14,13 +14,13 @@ public class Example
 
       // Add custom and invariant provider to an array of providers.
       NumberFormatInfo[] providers = { customProvider, NumberFormatInfo.InvariantInfo };
-      
+
       // Define an array of strings to convert.
       string[] numericStrings = { "123456789", "+123456789", "pos 123456789",
                                   "-123456789", "neg 123456789", "123456789.",
                                   "123,456,789", "(123456789)", "2147483648",
-                                  "-2147483649" }; 
-      
+                                  "-2147483649" };
+
       // Use each provider to parse all the numeric strings.
       for (int ctr = 0; ctr <= 1; ctr++)
       {
@@ -34,13 +34,13 @@ public class Example
             }
             catch (FormatException) {
                Console.WriteLine("{0,20}", "FormatException");
-            }    
+            }
             catch (OverflowException) {
-               Console.WriteLine("{0,20}", "OverflowException");                 
+               Console.WriteLine("{0,20}", "OverflowException");
             }
          }
          Console.WriteLine();
-      }                  
+      }
    }
 }
 // The example displays the following output:
@@ -55,7 +55,7 @@ public class Example
 //           (123456789)  -->      FormatException
 //            2147483648  -->    OverflowException
 //           -2147483649  -->      FormatException
-//       
+//
 //       Invariant Provider:
 //             123456789  -->            123456789
 //            +123456789  -->            123456789

@@ -17,7 +17,7 @@ public class Sample
 
     // Remove the ISBN attribute.
     root.RemoveAttribute("ISBN", "urn:samples");
-     
+
     Console.WriteLine("Display the modified XML...");
     Console.WriteLine(doc.InnerXml);
   }

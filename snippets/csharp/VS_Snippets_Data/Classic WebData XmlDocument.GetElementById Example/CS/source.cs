@@ -18,7 +18,7 @@ public class Sample
     //Get the first element with an attribute of type ID and value of A222.
     //This displays the node <Person SSN="A222" Name="Tom"/>.
     elem = doc.GetElementById("A222");
-    Console.WriteLine( elem.OuterXml ); 
+    Console.WriteLine( elem.OuterXml );
   }
 }
    // </Snippet1>

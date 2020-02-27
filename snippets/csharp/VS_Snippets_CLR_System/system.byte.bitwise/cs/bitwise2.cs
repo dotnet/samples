@@ -14,20 +14,20 @@ public class Example
    public static void Main()
    {
       ByteString[] values = CreateArray(-15, 123, 245);
-      
+
       byte mask = 0x14;        // Mask all bits but 2 and 4.
-      
+
       foreach (ByteString strValue in values) {
          byte byteValue = Byte.Parse(strValue.Value, NumberStyles.AllowHexSpecifier);
-         Console.WriteLine("{0} ({1}) And {2} ({3}) = {4} ({5})", 
-                           strValue.Sign * byteValue, 
-                           Convert.ToString(byteValue, 2), 
-                           mask, Convert.ToString(mask, 2), 
-                           (strValue.Sign & Math.Sign(mask)) * (byteValue & mask), 
+         Console.WriteLine("{0} ({1}) And {2} ({3}) = {4} ({5})",
+                           strValue.Sign * byteValue,
+                           Convert.ToString(byteValue, 2),
+                           mask, Convert.ToString(mask, 2),
+                           (strValue.Sign & Math.Sign(mask)) * (byteValue & mask),
                            Convert.ToString(byteValue & mask, 2));
       }
    }
-   
+
    private static ByteString[] CreateArray(params int[] values)
    {
       List<ByteString> byteStrings = new List<ByteString>();

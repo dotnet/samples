@@ -2,18 +2,18 @@
 using System;
 using System.IO;
 
-class Test 
+class Test
 {
-    public static void Main() 
+    public static void Main()
     {
-        try 
+        try
         {
             string path = @"c:\MyDir";
-            if (!Directory.Exists(path)) 
+            if (!Directory.Exists(path))
             {
                 Directory.CreateDirectory(path);
-            } 
-            else 
+            }
+            else
             {
                 // Take an action which will affect the write time.
                 Directory.SetLastWriteTime(path, new DateTime(1985,4,3));
@@ -27,9 +27,9 @@ class Test
             Directory.SetLastWriteTime(path, DateTime.Now);
             dt = Directory.GetLastWriteTime(path);
             Console.WriteLine("The last write time for this directory was {0}", dt);
-        } 
+        }
 
-        catch (Exception e) 
+        catch (Exception e)
         {
             Console.WriteLine("The process failed: {0}", e.ToString());
         }

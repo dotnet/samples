@@ -23,7 +23,7 @@ namespace Microsoft.ServiceModel.Samples
         }
         static bool IsEmail(string inputEmail)
         {
-            
+
             string strRegex = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +
                   @"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" +
                   @".)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$";
@@ -46,7 +46,7 @@ namespace Microsoft.ServiceModel.Samples
             string domain = emailAddress[1];
             if (IsRogueDomain(domain))
                 return false;
-            return true;   
+            return true;
         }
         // <snippet1>
         protected override ReadOnlyCollection<IAuthorizationPolicy> ValidateUserNamePasswordCore(string userName, string password)
@@ -71,7 +71,7 @@ namespace Microsoft.ServiceModel.Samples
         ClaimSet issuance;
         DateTime expirationTime;
         IList<IIdentity> identities;
-        
+
         public UnconditionalPolicy(ClaimSet issuer, ClaimSet issuance, DateTime expirationTime, IList<IIdentity> identities)
         {
             if (issuer == null)

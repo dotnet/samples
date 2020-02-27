@@ -8,7 +8,7 @@ using Microsoft.SqlServer.Server;
 
 [Serializable]
 [Microsoft.SqlServer.Server.SqlUserDefinedAggregate(
-   Microsoft.SqlServer.Server.Format.UserDefined, 
+   Microsoft.SqlServer.Server.Format.UserDefined,
    IsInvariantToNulls = true,			
    IsInvariantToDuplicates = false,		
    IsInvariantToOrder = false,			

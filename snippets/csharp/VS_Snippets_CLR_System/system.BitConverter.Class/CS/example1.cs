@@ -6,16 +6,16 @@ public class Example
    public static void Main()
    {
       int value = -16;
-      Byte[] bytes = BitConverter.GetBytes(value); 
-      
+      Byte[] bytes = BitConverter.GetBytes(value);
+
       // Convert bytes back to Int32.
       int intValue = BitConverter.ToInt32(bytes, 0);
-      Console.WriteLine("{0} = {1}: {2}", 
-                        value, intValue, 
+      Console.WriteLine("{0} = {1}: {2}",
+                        value, intValue,
                         value.Equals(intValue) ? "Round-trips" : "Does not round-trip");
       // Convert bytes to UInt32.
       uint uintValue = BitConverter.ToUInt32(bytes, 0);
-      Console.WriteLine("{0} = {1}: {2}", value, uintValue, 
+      Console.WriteLine("{0} = {1}: {2}", value, uintValue,
                         value.Equals(uintValue) ? "Round-trips" : "Does not round-trip");
    }
 }

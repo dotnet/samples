@@ -33,9 +33,9 @@ namespace WF_Snippets
             this.approvedHandleExternalEventActivity = new System.Workflow.Activities.HandleExternalEventActivity();
             this.rejectedHandleExternalEventActivity = new System.Workflow.Activities.HandleExternalEventActivity();
             // </snippet299>
-            // 
+            //
             // createBallotCallExternalMethodActivity
-            // 
+            //
             this.createBallotCallExternalMethodActivity.InterfaceType = typeof(IVotingService);
             this.createBallotCallExternalMethodActivity.MethodName = "CreateBallot";
             this.createBallotCallExternalMethodActivity.Name = "createBallotCallExternalMethodActivity";
@@ -48,25 +48,25 @@ namespace WF_Snippets
             //<snippet301>
             this.createBallotCallExternalMethodActivity.ParameterBindings.Add(workflowparameterbinding1);
             //</snippet301>
-            // 
+            //
             // waitForResponseListenActivity
-            // 
+            //
             this.waitForResponseListenActivity.Activities.Add(this.waitForApprovalEventDrivenActivity);
             this.waitForResponseListenActivity.Activities.Add(this.waitForRejectionEventDrivenActivity);
             this.waitForResponseListenActivity.Name = "waitForResponseListenActivity";
-            // 
+            //
             // waitForApprovalEventDrivenActivity
-            // 
+            //
             this.waitForApprovalEventDrivenActivity.Activities.Add(this.approvedHandleExternalEventActivity);
             this.waitForApprovalEventDrivenActivity.Name = "waitForApprovalEventDrivenActivity";
-            // 
+            //
             // waitForRejectionEventDrivenActivity
-            // 
+            //
             this.waitForRejectionEventDrivenActivity.Activities.Add(this.rejectedHandleExternalEventActivity);
             this.waitForRejectionEventDrivenActivity.Name = "waitForRejectionEventDrivenActivity";
-            // 
+            //
             // approvedHandleExternalEventActivity
-            // 
+            //
             // <snippet302>
             this.approvedHandleExternalEventActivity.EventName = "ApprovedProposal";
             this.approvedHandleExternalEventActivity.InterfaceType = typeof(IVotingService);
@@ -76,9 +76,9 @@ namespace WF_Snippets
             //</snippet303>
             this.approvedHandleExternalEventActivity.Invoked += new System.EventHandler<ExternalDataEventArgs>(this.OnApproved);
             // </snippet302>
-            // 
+            //
             // rejectedHandleExternalEventActivity
-            // 
+            //
             // <snippet304>
             this.rejectedHandleExternalEventActivity.EventName = "RejectedProposal";
             this.rejectedHandleExternalEventActivity.InterfaceType = typeof(IVotingService);
@@ -86,9 +86,9 @@ namespace WF_Snippets
             this.rejectedHandleExternalEventActivity.Roles = null;
             this.rejectedHandleExternalEventActivity.Invoked += new System.EventHandler<ExternalDataEventArgs>(this.OnRejected);
             // </snippet304>
-            // 
+            //
             // VotingServiceWorkflow
-            // 
+            //
             this.Activities.Add(this.createBallotCallExternalMethodActivity);
             this.Activities.Add(this.waitForResponseListenActivity);
             this.Name = "VotingServiceWorkflow";
@@ -124,7 +124,7 @@ namespace WF_Snippets
         // </snippet305>
 
         public class HelperClass {
-            public int SomeProperty;    
+            public int SomeProperty;
         }
 
        // <snippet307>
@@ -137,10 +137,10 @@ namespace WF_Snippets
        // </snippet307>
 
        //Placeholder for the API_REFERENCE snippet I need to write
-       //This one appears in  System.Workflow.Activities.Rules.RuleSet 
-       int Boglot302 = 5; 
+       //This one appears in  System.Workflow.Activities.Rules.RuleSet
+       int Boglot302 = 5;
 
-        //The HelperClass class is declared just above snippet 307     
+        //The HelperClass class is declared just above snippet 307
         // <snippet309>
         [RuleWrite("helper/SomeProperty", RuleAttributeTarget.Parameter)]
         public void DoSomethingElse(HelperClass helper)
@@ -155,12 +155,12 @@ namespace WF_Snippets
             this.CanModifyActivities = true;
         // <snippet311>
             this.DiscontinuedProduct = new System.Workflow.Activities.CodeActivity();
-                       
+
             this.DiscontinuedProduct.Name = "DiscontinuedProduct";
             this.DiscontinuedProduct.ExecuteCode += new System.EventHandler(this.DiscountedProductHandler);
         // </snippet311>
         }
-                
+
         private CodeActivity DiscontinuedProduct;
         private void DiscountedProductHandler(object sender, EventArgs e)
         {

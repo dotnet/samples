@@ -11,12 +11,12 @@ public class DelegateExample
       do
       {
          int characters = title.Length - position;
-         position = finder("the", position, characters, 
+         position = finder("the", position, characters,
                          StringComparison.InvariantCultureIgnoreCase);
          if (position >= 0)
          {
             position++;
-            Console.WriteLine("'The' found at position {0} in {1}.", 
+            Console.WriteLine("'The' found at position {0} in {1}.",
                               position, title);
          }
       } while (position > 0);

@@ -69,7 +69,7 @@ class Program
         return table;
     }
 
-    private static void PrintOutput(System.IO.TextWriter stream, 
+    private static void PrintOutput(System.IO.TextWriter stream,
         string caption)
     {
         Console.WriteLine("==============================");

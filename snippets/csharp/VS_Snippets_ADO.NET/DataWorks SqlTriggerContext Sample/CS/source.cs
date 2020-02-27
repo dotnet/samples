@@ -20,7 +20,7 @@ public static void UsersAudit()
    SqlCommand command;
    SqlTriggerContext triggContext = SqlContext.TriggerContext;
    SqlDataReader reader;
-   
+
    switch (triggContext.TriggerAction)
    {
       case TriggerAction.Insert:
@@ -30,7 +30,7 @@ public static void UsersAudit()
          = new SqlConnection(@"context connection=true"))
       {
          connection.Open();
- 
+
          // Get the inserted row.
          command = new SqlCommand(@"SELECT * FROM INSERTED;",
                                   connection);
@@ -43,15 +43,15 @@ public static void UsersAudit()
          reader.Close();
 
          // Insert the user name and real name into the auditing table.
-         command = new SqlCommand(@"INSERT [dbo].[UserNameAudit] (userName, realName) " 
+         command = new SqlCommand(@"INSERT [dbo].[UserNameAudit] (userName, realName) "
                   + @"VALUES (@userName, @realName);", connection);
 
          command.Parameters.Add(new SqlParameter("@userName", userName));
          command.Parameters.Add(new SqlParameter("@realName", realName));
-               
-         command.ExecuteNonQuery();               
+
+         command.ExecuteNonQuery();
       }
-         
+
       break;
    }
 }

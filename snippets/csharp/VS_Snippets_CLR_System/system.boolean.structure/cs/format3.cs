@@ -11,7 +11,7 @@ public class Example
          bool value = true;
          CultureInfo culture = CultureInfo.CreateSpecificCulture(cultureName);
          BooleanFormatter formatter = new BooleanFormatter(culture);
-         
+
          String result = String.Format(formatter, "Value for '{0}': {1}", culture.Name, value);
          Console.WriteLine(result);
       }
@@ -19,39 +19,39 @@ public class Example
 }
 
 public class BooleanFormatter : ICustomFormatter, IFormatProvider
-{   
+{
    private CultureInfo culture;
-   
+
    public BooleanFormatter() : this(CultureInfo.CurrentCulture)
    { }
-   
+
    public BooleanFormatter(CultureInfo culture)
    {
-      this.culture = culture; 
+      this.culture = culture;
    }
-   
+
    public Object GetFormat(Type formatType)
-   { 
+   {
       if (formatType == typeof(ICustomFormatter))
          return this;
       else
          return null;
    }
-   
+
    public String Format(String fmt, Object arg, IFormatProvider formatProvider)
-   { 
+   {
       // Exit if another format provider is used.
       if (! formatProvider.Equals(this)) return null;
-      
+
       // Exit if the type to be formatted is not a Boolean
       if (! (arg is Boolean)) return null;
-      
+
       bool value = (bool) arg;
       switch (culture.Name) {
          case "en-US":
             return value.ToString();
          case "fr-FR":
-            if (value) 
+            if (value)
                return "vrai";
             else
                return "faux";
@@ -61,7 +61,7 @@ public class BooleanFormatter : ICustomFormatter, IFormatProvider
             else
                return "неверно";
          default:
-            return value.ToString();  
+            return value.ToString();
       }
    }
 }

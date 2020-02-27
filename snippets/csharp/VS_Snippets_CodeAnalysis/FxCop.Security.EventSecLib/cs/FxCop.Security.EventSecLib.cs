@@ -7,7 +7,7 @@ namespace EventSecLibrary
 {
    public class HandleEvents
    {
-      // Due to the access level and signature, a malicious caller could 
+      // Due to the access level and signature, a malicious caller could
       // add this method to system-triggered events where all code in the call
       // stack has the demanded permission.
 

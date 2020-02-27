@@ -47,7 +47,7 @@ namespace cs_inherit
 
     // Mapped and queryable.
     [Table]
-    [InheritanceMapping(Code = "B", Type = typeof(B), 
+    [InheritanceMapping(Code = "B", Type = typeof(B),
     IsDefault = true)]
     [InheritanceMapping(Code = "D", Type = typeof(D))]
     class B: A {  }

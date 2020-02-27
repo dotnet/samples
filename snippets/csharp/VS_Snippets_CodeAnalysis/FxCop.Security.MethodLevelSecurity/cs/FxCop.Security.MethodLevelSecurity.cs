@@ -26,9 +26,9 @@ namespace SecurityRulesLibrary
 
       [EnvironmentPermissionAttribute(SecurityAction.Demand, Read="PersonalInfo")]
       public string PersonalInformation ()
-      { 
+      {
          // Read the variable.
-         return Environment.GetEnvironmentVariable("PersonalInfo"); 
+         return Environment.GetEnvironmentVariable("PersonalInfo");
       }
    }
 }

@@ -180,14 +180,14 @@ namespace Testing
                 //<Snippet28>
                 // Test the filter on the ConsoleTraceListener.
                 ts.Listeners["console"].Filter = new SourceFilter("No match");
-                ts.TraceData(TraceEventType.Information, 5, 
+                ts.TraceData(TraceEventType.Information, 5,
                     "SourceFilter should reject this message for the console trace listener.");
                 ts.Listeners["console"].Filter = new SourceFilter("TraceTest");
-                ts.TraceData(TraceEventType.Information, 6, 
+                ts.TraceData(TraceEventType.Information, 6,
                     "SourceFilter should let this message through on the console trace listener.");
                 //</Snippet28>
                 ts.Listeners["console"].Filter = null;
-                // Use the TraceData method. 
+                // Use the TraceData method.
                 //<Snippet30>
                 ts.TraceData(TraceEventType.Warning, 9, new object());
                 //</Snippet30>
@@ -268,7 +268,7 @@ namespace Testing
             get {
                 foreach (DictionaryEntry de in this.Attributes)
                     if (de.Key.ToString().ToLower() == "firsttracesourceattribute")
-                        firstAttribute = de.Value.ToString() ; 
+                        firstAttribute = de.Value.ToString() ;
                 return firstAttribute;
             }
             set { firstAttribute = value; }
@@ -334,7 +334,7 @@ namespace Testing
         }
         protected override string[] GetSupportedAttributes()
         {
-            // The following string array will allow the use of 
+            // The following string array will allow the use of
             // the name "customListenerAttribute" in the configuration file.
             return new string[] { "customListenerAttribute" };
         }

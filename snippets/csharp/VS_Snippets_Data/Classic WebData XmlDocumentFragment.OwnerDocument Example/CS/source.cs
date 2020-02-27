@@ -18,7 +18,7 @@ public class Sample
     Console.WriteLine(docFrag.OwnerDocument.OuterXml);
 
     // Add nodes to the document fragment. Notice that the
-    // new element is created using the owner document of 
+    // new element is created using the owner document of
     // the document fragment.
     XmlElement elem = doc.CreateElement("item");
     elem.InnerText = "widget";

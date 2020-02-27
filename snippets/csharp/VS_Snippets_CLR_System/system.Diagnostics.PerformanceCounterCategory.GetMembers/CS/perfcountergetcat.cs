@@ -34,13 +34,13 @@ class PerfCounterCatGetCatMod
         }
         catch(Exception ex)
         {
-            Console.WriteLine("Unable to get categories on " + 
+            Console.WriteLine("Unable to get categories on " +
                 (machineName.Length > 0 ? "computer \"{0}\":": "this computer:"), machineName);
             Console.WriteLine(ex.Message);
             return;
         }
 
-        Console.WriteLine("These categories are registered on " + 
+        Console.WriteLine("These categories are registered on " +
             (machineName.Length > 0 ? "computer \"{0}\":": "this computer:"), machineName);
 
         // Create and sort an array of category names.

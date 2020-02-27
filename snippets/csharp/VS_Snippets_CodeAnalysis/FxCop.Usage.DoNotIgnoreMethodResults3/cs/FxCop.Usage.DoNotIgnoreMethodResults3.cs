@@ -11,7 +11,7 @@ namespace Samples
         {
             if (title != null)
             {
-                // Violates this rule                
+                // Violates this rule
                 title.Trim();
             }
 

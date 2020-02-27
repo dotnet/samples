@@ -53,7 +53,7 @@ namespace DesignLibrary
          GoodAddableType good = obj as GoodAddableType;
          if (obj == null)
             return false;
-         
+
         return this == good;
       }
 
@@ -61,7 +61,7 @@ namespace DesignLibrary
       {
          return new GoodAddableType(a.a + b.a, a.b + b.b);
       }
-     
+
       public static GoodAddableType operator -(GoodAddableType a, GoodAddableType b)
       {
          return new GoodAddableType(a.a - b.a, a.b - b.b);

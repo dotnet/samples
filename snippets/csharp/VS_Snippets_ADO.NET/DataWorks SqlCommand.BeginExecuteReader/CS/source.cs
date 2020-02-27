@@ -7,9 +7,9 @@ class Class1
 {
     static void Main()
     {
-        // This is a simple example that demonstrates the usage of the 
+        // This is a simple example that demonstrates the usage of the
         // BeginExecuteReader functionality
-        // The WAITFOR statement simply adds enough time to prove the 
+        // The WAITFOR statement simply adds enough time to prove the
         // asynchronous nature of the command.
         string commandText =
             "WAITFOR DELAY '00:00:03';" +
@@ -27,8 +27,8 @@ class Class1
     {
         // Given command text and connection string, asynchronously execute
         // the specified command against the connection. For this example,
-        // the code displays an indicator as it is working, verifying the 
-        // asynchronous behavior. 
+        // the code displays an indicator as it is working, verifying the
+        // asynchronous behavior.
         using (SqlConnection connection = new SqlConnection(connectionString))
         {
             try
@@ -39,8 +39,8 @@ class Class1
                 IAsyncResult result = command.BeginExecuteReader();
 
                 // Although it is not necessary, the following code
-                // displays a counter in the console window, indicating that 
-                // the main thread is not blocked while awaiting the command 
+                // displays a counter in the console window, indicating that
+                // the main thread is not blocked while awaiting the command
                 // results.
                 int count = 0;
                 while (!result.IsCompleted)
@@ -48,7 +48,7 @@ class Class1
                     count += 1;
                     Console.WriteLine("Waiting ({0})", count);
                     // Wait for 1/10 second, so the counter
-                    // does not consume all available resources 
+                    // does not consume all available resources
                     // on the main thread.
                     System.Threading.Thread.Sleep(100);
                 }
@@ -80,7 +80,7 @@ class Class1
         // Display the data within the reader.
         while (reader.Read())
         {
-            // Display all the columns. 
+            // Display all the columns.
             for (int i = 0; i < reader.FieldCount; i++)
                 Console.Write("{0} ", reader.GetValue(i));
             Console.WriteLine();
@@ -89,8 +89,8 @@ class Class1
 
     private static string GetConnectionString()
     {
-        // To avoid storing the connection string in your code,            
-        // you can retrieve it from a configuration file. 
+        // To avoid storing the connection string in your code,
+        // you can retrieve it from a configuration file.
 
         // If you have not included "Asynchronous Processing=true" in the
         // connection string, the command is not able

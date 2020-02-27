@@ -10,13 +10,13 @@ public class Example
     {
         // Define a dynamic assembly with one module. The module
         // name and the assembly name are the same.
-        AssemblyName asmName = 
+        AssemblyName asmName =
             new AssemblyName("EmittedManifestResourceAssembly");
         AssemblyBuilder asmBuilder =
             AppDomain.CurrentDomain.DefineDynamicAssembly(
                 asmName,
                 AssemblyBuilderAccess.RunAndSave
-            ); 
+            );
         ModuleBuilder modBuilder = asmBuilder.DefineDynamicModule(
             asmName.Name,
             asmName.Name + ".exe"
@@ -28,7 +28,7 @@ public class Example
         // necessary to put any data into the stream right now.
         MemoryStream ms = new MemoryStream(1024);
 
-        // Define a public manifest resource with the name 
+        // Define a public manifest resource with the name
         // "MyBinaryData, and associate it with the memory stream.
         modBuilder.DefineManifestResource(
             "MyBinaryData",
@@ -37,42 +37,42 @@ public class Example
         );
 
         // Create a type with a public static Main method that will
-        // be the entry point for the emitted assembly. 
+        // be the entry point for the emitted assembly.
         //
-        // The purpose of the Main method in this example is to read 
+        // The purpose of the Main method in this example is to read
         // the manifest resource and display it, byte by byte.
         //
         TypeBuilder tb = modBuilder.DefineType("Example");
-        MethodBuilder main = tb.DefineMethod("Main", 
+        MethodBuilder main = tb.DefineMethod("Main",
             MethodAttributes.Public | MethodAttributes.Static
         );
 
         // The Main method uses the Assembly type and the Stream
-        // type. 
+        // type.
         Type asm = typeof(Assembly);
         Type str = typeof(Stream);
 
-        // Get MethodInfo objects for the methods called by 
+        // Get MethodInfo objects for the methods called by
         // Main.
         MethodInfo getEx = asm.GetMethod("GetExecutingAssembly");
-        // Use the overload of GetManifestResourceStream that 
+        // Use the overload of GetManifestResourceStream that
         // takes one argument, a string.
         MethodInfo getMRS = asm.GetMethod(
-            "GetManifestResourceStream", 
+            "GetManifestResourceStream",
             new Type[] {typeof(string)}
         );
         MethodInfo rByte = str.GetMethod("ReadByte");
         // Use the overload of WriteLine that writes an Int32.
         MethodInfo write = typeof(Console).GetMethod(
-            "WriteLine", 
+            "WriteLine",
             new Type[] {typeof(int)}
         );
 
         ILGenerator ilg = main.GetILGenerator();
 
         // Main uses two local variables: the instance of the
-        // stream returned by GetManifestResourceStream, and 
-        // the value returned by ReadByte. The load and store 
+        // stream returned by GetManifestResourceStream, and
+        // the value returned by ReadByte. The load and store
         // instructions refer to these locals by position
         // (0 and 1).
         LocalBuilder s = ilg.DeclareLocal(str);
@@ -107,7 +107,7 @@ public class Example
         ilg.Emit(OpCodes.Ldloc_1);
         ilg.EmitCall(OpCodes.Call, write, null);
 
-        // Load the value one more time; load -1 (minus one)  
+        // Load the value one more time; load -1 (minus one)
         // and compare the two values. If return value from
         // ReadByte was not -1, branch to the label 'loop'.
         ilg.Emit(OpCodes.Ldloc_1);
@@ -129,7 +129,7 @@ public class Example
         ms.Write(new byte[] { 105, 36, 74, 97, 109 }, 0, 5);
         ms.SetLength(5);
 
-        // Set the Main method as the entry point for the 
+        // Set the Main method as the entry point for the
         // assembly, and save the assembly. The manifest resource
         // is read from the memory stream, and appended to the
         // end of the assembly. You can open the assembly with

@@ -17,7 +17,7 @@ public class SamplesCompareInfo  {
 
       // Uses GetCompareInfo to create the CompareInfo that uses the "es-ES" culture with international sort.
       CompareInfo myCompIntl = CompareInfo.GetCompareInfo( "es-ES" );
-      
+
       // Uses GetCompareInfo to create the CompareInfo that uses the "es-ES" culture with traditional sort.
       CompareInfo myCompTrad = CompareInfo.GetCompareInfo( 0x040A );
 

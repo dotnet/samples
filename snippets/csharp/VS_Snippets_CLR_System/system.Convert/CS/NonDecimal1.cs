@@ -11,9 +11,9 @@ public class Example
          String s = Convert.ToString(value, baseValue);
          short value2 = Convert.ToInt16(s, baseValue);
 
-         Console.WriteLine("{0} --> {1} (base {2}) --> {3}", 
+         Console.WriteLine("{0} --> {1} (base {2}) --> {3}",
                            value, s, baseValue, value2);
-      }                     
+      }
    }
 }
 // The example displays the following output:

@@ -59,7 +59,7 @@ public class App
 		}
 
 		// Check for the string.
-		var stringsFound = 
+		var stringsFound =
             from line in fileContents
             where line.Contains("string to search for")
             select line;
@@ -69,12 +69,12 @@ public class App
 
 		// Check the memory after when the iterator is not used, and output it to the console.
 		long memoryAfter = GC.GetTotalMemory(false);
-		Console.WriteLine("Memory Used Without Iterator = \t" + 
+		Console.WriteLine("Memory Used Without Iterator = \t" +
             string.Format(((memoryAfter - memoryBefore) / 1000).ToString(), "n") + "kb");
 	}
 }
 
-// A custom class that implements IEnumerable(T). When you implement IEnumerable(T), 
+// A custom class that implements IEnumerable(T). When you implement IEnumerable(T),
 // you must also implement IEnumerable and IEnumerator(T).
 public class StreamReaderEnumerable : IEnumerable<string>
 {
@@ -101,7 +101,7 @@ public class StreamReaderEnumerable : IEnumerable<string>
     }
 }
 
-// When you implement IEnumerable(T), you must also implement IEnumerator(T), 
+// When you implement IEnumerable(T), you must also implement IEnumerator(T),
 // which will walk through the contents of the file one line at a time.
 // Implementing IEnumerator(T) requires that you implement IEnumerator and IDisposable.
 public class StreamReaderEnumerator : IEnumerator<string>
@@ -113,7 +113,7 @@ public class StreamReaderEnumerator : IEnumerator<string>
     }
 
     private string _current;
-    // Implement the IEnumerator(T).Current publicly, but implement 
+    // Implement the IEnumerator(T).Current publicly, but implement
     // IEnumerator.Current, which is also required, privately.
     public string Current
     {

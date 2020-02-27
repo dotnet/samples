@@ -31,9 +31,9 @@ namespace TestSecurityExamples
             // Distributor must call ToString on the secured object.
             Distributor.DisplayCachedObject();
 
-            // If the following line is uncommented, a security 
-            // exception is thrown at JIT-compilation time because 
-            // of the link demand for full trust that protects 
+            // If the following line is uncommented, a security
+            // exception is thrown at JIT-compilation time because
+            // of the link demand for full trust that protects
             // SecuredTypeWithFields.ToString().
 
             // Console.WriteLine("Secured type {0}",secureType.ToString());

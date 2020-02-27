@@ -1,4 +1,4 @@
-﻿// The following example starts an instance of Notepad. The example 
+﻿// The following example starts an instance of Notepad. The example
 // then retrieves and displays various properties of the associated
 // process.  The example detects when the process exits, and displays
 // the process's exit code.

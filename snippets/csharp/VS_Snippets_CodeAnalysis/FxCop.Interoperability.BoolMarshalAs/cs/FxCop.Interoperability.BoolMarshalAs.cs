@@ -14,8 +14,8 @@ namespace InteroperabilityLibrary
       [return: MarshalAs(UnmanagedType.Bool)]
       internal static extern Boolean MessageBeep(UInt32 uType);
 
-      [DllImport("mscoree.dll", 
-                 CharSet = CharSet.Unicode, 
+      [DllImport("mscoree.dll",
+                 CharSet = CharSet.Unicode,
                  SetLastError = true)]
       [return: MarshalAs(UnmanagedType.U1)]
       internal static extern bool StrongNameSignatureVerificationEx(

@@ -5,13 +5,13 @@ using System.Globalization;
 public class DummyProvider : IFormatProvider
 {
     // Normally, GetFormat returns an object of the requested type
-    // (usually itself) if it is able; otherwise, it returns Nothing. 
+    // (usually itself) if it is able; otherwise, it returns Nothing.
     public object GetFormat(Type argType)
     {
-        // Here, GetFormat displays the name of argType, after removing 
+        // Here, GetFormat displays the name of argType, after removing
         // the namespace information. GetFormat always returns null.
         string argStr = argType.ToString( );
-        if( argStr == "" ) 
+        if( argStr == "" )
             argStr = "Empty";
         argStr = argStr.Substring( argStr.LastIndexOf( '.' ) + 1 );
 
@@ -47,20 +47,20 @@ class ConvertNonNumericProviderDemo
 
         // The format provider is called for the following conversions.
         Console.WriteLine( );
-        Console.WriteLine( format, "ToInt32", Int32A, 
+        Console.WriteLine( format, "ToInt32", Int32A,
             Convert.ToInt32( Int32A, provider ) );
-        Console.WriteLine( format, "ToDouble", DoubleA, 
+        Console.WriteLine( format, "ToDouble", DoubleA,
             Convert.ToDouble( DoubleA, provider ) );
-        Console.WriteLine( format, "ToDateTime", DayTimeA, 
+        Console.WriteLine( format, "ToDateTime", DayTimeA,
             Convert.ToDateTime( DayTimeA, provider ) );
 
         // The format provider is not called for these conversions.
         Console.WriteLine( );
-        Console.WriteLine( format, "ToBoolean", BoolA, 
+        Console.WriteLine( format, "ToBoolean", BoolA,
             Convert.ToBoolean( BoolA, provider ) );
-        Console.WriteLine( format, "ToString", StringA, 
+        Console.WriteLine( format, "ToString", StringA,
             Convert.ToString( StringA, provider ) );
-        Console.WriteLine( format, "ToChar", CharA, 
+        Console.WriteLine( format, "ToChar", CharA,
             Convert.ToChar( CharA, provider ) );
     }
 }
@@ -80,5 +80,5 @@ DateTimeFormatInfo  ToDateTime       2001/9/11 13:45  9/11/2001 1:45:00 PM
 ToBoolean        True             True
 ToString         Qwerty           Qwerty
 ToChar           $                $
-*/ 
+*/
 //</Snippet2>

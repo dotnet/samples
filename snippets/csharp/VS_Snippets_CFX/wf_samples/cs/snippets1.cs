@@ -41,7 +41,7 @@ namespace WF_Snippets
         WorkflowRuntime runtime;
         private void StartWorkflowRuntime()
         {
-            
+
             OrderService orderService;
             //<snippet81>
             // Create a new Workflow Runtime for this application
@@ -88,7 +88,7 @@ namespace WF_Snippets
             //<snippet84>
             instance.Start();
             //</snippet84>
-            
+
             //<snippet85>
             ReadOnlyCollection<WorkflowQueueInfo> subActivities = stateMachineInstance.WorkflowInstance.GetWorkflowQueueData();
             //</snippet85>
@@ -218,7 +218,7 @@ namespace WF_Snippets
         //<snippet98>
         protected override ActivityExecutionStatus Execute(ActivityExecutionContext context)
         {
-            // Create an Outlook Application object. 
+            // Create an Outlook Application object.
             Outlook.Application outlookApp = new Outlook.Application();
 
             Outlook._MailItem oMailItem = (Outlook._MailItem)outlookApp.CreateItem(Outlook.OlItemType.olMailItem);
@@ -226,7 +226,7 @@ namespace WF_Snippets
             oMailItem.Subject = "Auto-Reply";
             oMailItem.Body = "Out of Office";
 
-            //adds it to the outbox  
+            //adds it to the outbox
             if (this.Parent.Parent is ParallelActivity)
             {
                 if ((this.Parent.Parent.Parent.Activities[1] as DummyActivity).TitleProperty != "")
@@ -325,7 +325,7 @@ namespace WF_Snippets
             this.Dock = DockStyle.Fill;
         }
         // </snippet102>
-        public class Loader : WorkflowDesignerLoader 
+        public class Loader : WorkflowDesignerLoader
         {
             public override TextReader GetFileReader(string file)
             {
@@ -488,7 +488,7 @@ namespace WF_Snippets
      * Snippets from SpeechApplication
      */
 
-    class Snippets3 
+    class Snippets3
     {
         private CallExternalMethodActivity sequentialSubMenu_SendSequentialTextToMenu = new CallExternalMethodActivity();
         WorkflowRuntime workflowRuntime = new WorkflowRuntime();
@@ -557,7 +557,7 @@ namespace WF_Snippets
         }
     }
 
-    class TerminationTrackingService : TrackingService 
+    class TerminationTrackingService : TrackingService
     {
         private string source = "TerminationTrackingService";
         public TerminationTrackingService(NameValueCollection parameters)
@@ -566,7 +566,7 @@ namespace WF_Snippets
         private void ValidateEventLogSource(string source)
         {
         }
-       
+
         //<snippet112>
         protected override void Start()
         {
@@ -614,7 +614,7 @@ namespace WF_Snippets
             // We shouldn't hit this point without the host ignoring an earlier exception.
             // However if we're here and the source doesn't exist we can't function.
             // Throwing an exception from here will block instance creation
-            // but that is better than failing silently on termination 
+            // but that is better than failing silently on termination
             // and having the admin think everything is OK because the event log is clear.
             if (!sourceExists)
                 throw new InvalidOperationException(string.Format(System.Globalization.CultureInfo.InvariantCulture, "EventLog Source with the name '{0}' does not exist", source));
@@ -683,7 +683,7 @@ namespace WF_Snippets
             EventLog log = new EventLog();
             log.Source = sourceValue;
 
-            // Write an informational entry to the event log.  
+            // Write an informational entry to the event log.
             TrackingWorkflowTerminatedEventArgs terminatedEventArgs = instanceTrackingRecord.EventArgs as TrackingWorkflowTerminatedEventArgs;
 
             StringBuilder message = new StringBuilder(512);
@@ -883,10 +883,10 @@ namespace WF_Snippets
         public WorkflowDesignerControl()
         {
             InitializeComponent();
-            
+
             WorkflowTheme.CurrentTheme.ReadOnly = false;
             WorkflowTheme.CurrentTheme.AmbientTheme.ShowConfigErrors = false;
-            WorkflowTheme.CurrentTheme.ReadOnly = true;            
+            WorkflowTheme.CurrentTheme.ReadOnly = true;
         }
 
 		// </snippet125>
@@ -898,7 +898,7 @@ namespace WF_Snippets
         private DesignSurface designSurface;
         private WorkflowLoader loader;
         private WorkflowView workflowView;
-        private System.Windows.Forms.Panel panel1 = new Panel();    
+        private System.Windows.Forms.Panel panel1 = new Panel();
 
         void container1()
         {
@@ -1289,7 +1289,7 @@ namespace WF_Snippets
         ToolStripTextBox toolStripTextBoxArtifactQualifiedId = new ToolStripTextBox();
         ToolStripTextBox toolStripTextBoxArtifactKeyName = new ToolStripTextBox();
         ToolStripTextBox toolStripTextBoxArtifactKeyValue = new ToolStripTextBox();
-       
+
         void container3()
         {
             TrackingDataItemValue trackingDataItemValue = new TrackingDataItemValue(string.Empty, string.Empty, string.Empty);

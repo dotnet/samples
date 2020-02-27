@@ -6,7 +6,7 @@ using System;
 public class SamplesArray  {
 
    public static void Main()  {
- 
+
       // Creates and initializes a one-dimensional array.
       String[] myArr1 = new String[5];
 
@@ -39,7 +39,7 @@ public class SamplesArray  {
 }
 
 
-/* 
+/*
 This code produces the following output.
 
 [3]:   three

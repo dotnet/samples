@@ -9,7 +9,7 @@ class Class1
     static void Main()
     {
         // This example is not terribly effective, but it proves a point.
-        // The WAITFOR statement simply adds enough time to prove the 
+        // The WAITFOR statement simply adds enough time to prove the
         // asynchronous nature of the command.
         string commandText =
             "WAITFOR DELAY '00:00:03';" +
@@ -28,8 +28,8 @@ class Class1
     {
         // Given command text and connection string, asynchronously execute
         // the specified command against the connection. For this example,
-        // the code displays an indicator as it is working, verifying the 
-        // asynchronous behavior. 
+        // the code displays an indicator as it is working, verifying the
+        // asynchronous behavior.
         using (SqlConnection connection = new SqlConnection(connectionString))
         {
             SqlCommand command = new SqlCommand(commandText, connection);
@@ -38,15 +38,15 @@ class Class1
             IAsyncResult result = command.BeginExecuteXmlReader();
 
             // Although it is not necessary, the following procedure
-            // displays a counter in the console window, indicating that 
-            // the main thread is not blocked while awaiting the command 
+            // displays a counter in the console window, indicating that
+            // the main thread is not blocked while awaiting the command
             // results.
             int count = 0;
             while (!result.IsCompleted)
             {
                 Console.WriteLine("Waiting ({0})", count++);
                 // Wait for 1/10 second, so the counter
-                // does not consume all available resources 
+                // does not consume all available resources
                 // on the main thread.
                 System.Threading.Thread.Sleep(100);
             }
@@ -72,8 +72,8 @@ class Class1
 
     private static string GetConnectionString()
     {
-        // To avoid storing the connection string in your code,            
-        // you can retrieve it from a configuration file. 
+        // To avoid storing the connection string in your code,
+        // you can retrieve it from a configuration file.
 
         // If you have not included "Asynchronous Processing=true" in the
         // connection string, the command is not able

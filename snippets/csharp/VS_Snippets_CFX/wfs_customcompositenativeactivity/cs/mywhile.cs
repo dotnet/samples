@@ -39,7 +39,7 @@ namespace Microsoft.Samples.Scenarios.Common.Activities
                 metadata.AddValidationError(string.Format("While {0} requires a Condition", this.DisplayName));
                 return;
             }
-        }        
+        }
 
         protected override void Execute(NativeActivityContext context)
         {
@@ -53,7 +53,7 @@ namespace Microsoft.Samples.Scenarios.Common.Activities
         }
 
         void OnEvaluateConditionCompleted(NativeActivityContext context, ActivityInstance instance, bool result)
-        {            
+        {
             if (result)
             {
                 if (this.Body != null)

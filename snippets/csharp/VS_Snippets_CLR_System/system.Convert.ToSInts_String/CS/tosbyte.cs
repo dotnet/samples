@@ -1,5 +1,5 @@
 ﻿//<Snippet4>
-// Example of the Convert.ToSByte( string ) and 
+// Example of the Convert.ToSByte( string ) and
 // Convert.ToSByte( string, IFormatProvider ) methods.
 using System;
 using System.Globalization;
@@ -12,11 +12,11 @@ class ToSByteProviderDemo
     static string GetExceptionType( Exception ex )
     {
         string exceptionType = ex.GetType( ).ToString( );
-        return exceptionType.Substring( 
+        return exceptionType.Substring(
             exceptionType.LastIndexOf( '.' ) + 1 );
     }
 
-    static void ConvertToSByte( string numericStr, 
+    static void ConvertToSByte( string numericStr,
         IFormatProvider provider )
     {
         object defaultValue;
@@ -42,7 +42,7 @@ class ToSByteProviderDemo
             providerValue = GetExceptionType( ex );
         }
 
-        Console.WriteLine( format, numericStr, 
+        Console.WriteLine( format, numericStr,
             defaultValue, providerValue );
     }
 
@@ -67,9 +67,9 @@ class ToSByteProviderDemo
             "\ngenerates the following output. It converts " +
             "several strings to \nSByte values, using " +
             "default formatting or a NumberFormatInfo object.\n" );
-        Console.WriteLine( format, "String to convert", 
+        Console.WriteLine( format, "String to convert",
             "Default/exception", "Provider/exception" );
-        Console.WriteLine( format, "-----------------", 
+        Console.WriteLine( format, "-----------------",
             "-----------------", "------------------" );
 
         // Convert strings, with and without an IFormatProvider.
@@ -103,5 +103,5 @@ neg 123             FormatException     -123
 (123)               FormatException     FormatException
 128                 OverflowException   OverflowException
 -129                OverflowException   FormatException
-*/ 
+*/
 //</Snippet4>

@@ -15,18 +15,18 @@ public class MarshalableExample : MarshalByRefObject, ITest
             typeof(MarshalableExample).Assembly.GetName().Name + ".exe";
 
         AppDomain ad = AppDomain.CreateDomain("MyDomain");
- 
-        System.Runtime.Remoting.ObjectHandle oh = 
+
+        System.Runtime.Remoting.ObjectHandle oh =
             ad.CreateInstanceFrom(assemblyPath, "MarshalableExample");
 
         object obj = oh.Unwrap();
 
         // Three ways to use the newly created object, depending on how
-        // much is known about the type: Late bound, early bound through 
+        // much is known about the type: Late bound, early bound through
         // a mutually known interface, or early binding of a known type.
         //
-        obj.GetType().InvokeMember("Test", 
-            System.Reflection.BindingFlags.InvokeMethod, 
+        obj.GetType().InvokeMember("Test",
+            System.Reflection.BindingFlags.InvokeMethod,
             Type.DefaultBinder, obj, new object[] { "Hello" });
 
         ITest it = (ITest) obj;

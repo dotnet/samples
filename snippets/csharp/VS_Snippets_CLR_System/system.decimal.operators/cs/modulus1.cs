@@ -8,7 +8,7 @@ public class Example
       Decimal number1 = 16.8m;
       Decimal number2 = 4.1m;
       Decimal number3 = number1 % number2;
-      Console.WriteLine("{0:N2} % {1:N2} = {2:N2}", 
+      Console.WriteLine("{0:N2} % {1:N2} = {2:N2}",
                         number1, number2, number3);
    }
 }

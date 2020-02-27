@@ -5,7 +5,7 @@ using System.Reflection;
 public class Example
 {
     // The following attribute indicates to the loader that assemblies
-    // in the global assembly cache should be shared across multiple 
+    // in the global assembly cache should be shared across multiple
     // application domains.
     [LoaderOptimizationAttribute( LoaderOptimization.MultiDomainHost)]
     public static void Main()
@@ -20,7 +20,7 @@ public class Example
 
     // This method has the same signature as the CrossAppDomainDelegate,
     // so that it can be executed easily in the new application domain.
-    // 
+    //
     public static void ShowDomainInfo()
     {
         AppDomain ad = AppDomain.CurrentDomain;

@@ -37,7 +37,7 @@ public class SamplesCollectionBase  {
       myAL.Add( "green" );
       myAL.Add( "orange" );
       myAL.Add( "purple" );
- 
+
       // Create a new ROCollection that contains the elements in myAL.
       ROCollection myCol = new ROCollection( myAL );
 
@@ -58,7 +58,7 @@ public class SamplesCollectionBase  {
       Console.WriteLine( "orange is at index {0}.", myCol.IndexOf( "orange" ) );
       Console.WriteLine();
    }
- 
+
    // Uses the Count property and the Item property.
    public static void PrintIndexAndValues( ROCollection myCol )  {
       for ( int i = 0; i < myCol.Count; i++ )
@@ -74,7 +74,7 @@ public class SamplesCollectionBase  {
       Console.WriteLine();
    }
 
-   // Uses the enumerator. 
+   // Uses the enumerator.
    // NOTE: The foreach statement is the preferred way of enumerating the contents of a collection.
    public static void PrintValues2( ROCollection myCol )  {
       System.Collections.IEnumerator myEnumerator = myCol.GetEnumerator();
@@ -85,7 +85,7 @@ public class SamplesCollectionBase  {
 }
 
 
-/* 
+/*
 This code produces the following output.
 
 Contents of the collection (using foreach):

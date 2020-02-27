@@ -10,8 +10,8 @@ public class Example
 {
    public static void Main()
    {
-      object value; 
-      
+      object value;
+
       // Call IsDefined with underlying integral value of member.
       value = 1;
       Console.WriteLine("{0}: {1}", value, Enum.IsDefined(typeof(PetType), value));
@@ -26,7 +26,7 @@ public class Example
       Console.WriteLine("{0}: {1}", value, Enum.IsDefined(typeof(PetType), value));
       value = PetType.Dog | PetType.Cat;
       Console.WriteLine("{0}: {1}", value, Enum.IsDefined(typeof(PetType), value));
-      // Call IsDefined with uppercase member name.      
+      // Call IsDefined with uppercase member name.
       value = "None";
       Console.WriteLine("{0}: {1}", value, Enum.IsDefined(typeof(PetType), value));
       value = "NONE";

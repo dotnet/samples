@@ -23,7 +23,7 @@ class Program
     private static string GetConnectionString()
     {
         // To avoid storing the connection string in your code,
-        // you can retrieve it from a configuration file. 
+        // you can retrieve it from a configuration file.
         return "Data Source=OracleSample;Integrated Security=true;" +
             "Persist Security Info=True; Max Pool Size=100; Min Pool Size=1";
     }

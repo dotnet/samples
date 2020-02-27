@@ -9,8 +9,8 @@ public class LambdaExpression
       string numericString = "-1,234";
       Func<string, NumberStyles, IFormatProvider, int> parser = (s, sty, p)
                    => int.Parse(s, sty, p);
-      Console.WriteLine(parser(numericString, 
-                        NumberStyles.Integer | NumberStyles.AllowThousands, 
+      Console.WriteLine(parser(numericString,
+                        NumberStyles.Integer | NumberStyles.AllowThousands,
                         CultureInfo.InvariantCulture));
    }
 }

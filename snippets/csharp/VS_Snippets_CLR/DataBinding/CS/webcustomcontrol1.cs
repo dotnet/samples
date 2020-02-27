@@ -21,14 +21,14 @@
 // System.Web.UI.DataBindingHandlerAttribute
 // System.Web.UI.DataBindingHandlerAttribute.IsDefaultAttribute().
 
-/*The following example demonstrates the  members of 'DataBinding' and 
-' 'DataBindingCollection'.A new control 'SimpleWebControl'  is created 
-   and a 'Designer' attribute is attached to it which actually refers to the 
-   DesignTimeClass.The 'OnBindingsCollectionChanged(string)' method  is overridden 
-   to actually capture the DataBindingCollection instance and add the 
-   DataBinding Expression to the property in the ASPX file. When 'Text' property of the 
-   SimpleWebControl is bound to the 'Text' property of 'Button1' at the DesignTime 
-   using the IDE, the 'OnBindingCollectionChanged' method is called and 
+/*The following example demonstrates the  members of 'DataBinding' and
+' 'DataBindingCollection'.A new control 'SimpleWebControl'  is created
+   and a 'Designer' attribute is attached to it which actually refers to the
+   DesignTimeClass.The 'OnBindingsCollectionChanged(string)' method  is overridden
+   to actually capture the DataBindingCollection instance and add the
+   DataBinding Expression to the property in the ASPX file. When 'Text' property of the
+   SimpleWebControl is bound to the 'Text' property of 'Button1' at the DesignTime
+   using the IDE, the 'OnBindingCollectionChanged' method is called and
    the 'Text' property of the 'SimpleWebControl' is updated in .aspx file.
    The actual DataBinding is done at the runtime.The  properties of the 'DataBinding'
    and 'DataBindingCollection' are written into a text file (DataBindingOutput.txt)
@@ -37,10 +37,10 @@
 Note:This program has to be tested at "DesignTime".
 These are the instructions to be followed to successfully test the functionality of the program.
 1) Create a new "C# WebApplication" project.
-2) Add Reference "System.Design.dll" to the project. 
-3) Add the 'DataBinding.aspx' and 'WebCustomControl1.cs' files to the project, 
+2) Add Reference "System.Design.dll" to the project.
+3) Add the 'DataBinding.aspx' and 'WebCustomControl1.cs' files to the project,
   which are provided with this example.
-4) In the 'DataBinding.aspx' file, make the assembly name same as the 
+4) In the 'DataBinding.aspx' file, make the assembly name same as the
    "Project Name", created in step1.
 5)Build the project.
 6)Go to the "DesignTab" of the 'DataBinding.aspx' file.
@@ -48,11 +48,11 @@ These are the instructions to be followed to successfully test the functionality
 8)Go to the DataBindings column.
 9)Select the "Text" property.
 10)Select the "CustomBindingExpression" option.
-11)Associate the Text property to any property of any control which is of the 
+11)Associate the Text property to any property of any control which is of the
    type string.
 12)Observe in "C:\" a file created with the name "DataBindingOutput.txt".
-   This file contains the properties of 'DataBinding' and 'DataBindingCollection' 
-   classes demonstrated. 
+   This file contains the properties of 'DataBinding' and 'DataBindingCollection'
+   classes demonstrated.
   */
 
 using System;

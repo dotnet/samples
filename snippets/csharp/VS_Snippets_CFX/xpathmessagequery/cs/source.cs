@@ -9,7 +9,7 @@ using System.Xml.XPath;
 
 namespace MessageQueryExamples
 {
-    
+
     class Program
     {
         static void Main(string[] args)
@@ -21,7 +21,7 @@ namespace MessageQueryExamples
             Message mess = MessageHelper.CreateMessage();
             MessageBuffer mb = mess.CreateBufferedCopy(int.MaxValue);
 
-            // Evaluate every query in the collection. 
+            // Evaluate every query in the collection.
             foreach (XPathMessageQuery q in queryCollection)
             {
                 // Evaluate the query. Note the result type is an XPathResult.
@@ -56,7 +56,7 @@ namespace MessageQueryExamples
 
             // The alternate code below demonstrates similar funcionality using a MessageQueryTable.
             // The difference is the KeyValuePair that requires a key to index each value.
-            // The code uses the expression as the key, and an arbitrary value for the value.           
+            // The code uses the expression as the key, and an arbitrary value for the value.
 
             //MessageQueryTable<string> mq = MessageHelper.SetupTable();
             //foreach (KeyValuePair<MessageQuery, string> kv in mq)
@@ -174,6 +174,6 @@ namespace MessageQueryExamples
             table.Add(new XPathMessageQuery(xpath11, context), "value110");
             return table;
         }
-    }    
+    }
 }
 //</snippet0>

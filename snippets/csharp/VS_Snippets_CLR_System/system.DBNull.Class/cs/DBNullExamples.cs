@@ -12,9 +12,9 @@ public class DBNullExample
       OleDbDataAdapter adapter = new OleDbDataAdapter();
       DataSet ds = new DataSet();
       string dbFilename = @"c:\Data\contacts.mdb";
-      
+
       // Open database connection
-      conn.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + 
+      conn.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" +
                                dbFilename + ";";
       conn.Open();
       // Define command : retrieve all records in contact table
@@ -28,12 +28,12 @@ public class DBNullExample
       conn.Close();
       // Output labels to console	
       ex.OutputLabels(ds.Tables["Contact"]);
-   }   
+   }
 
    // <Snippet1>
    private void OutputLabels(DataTable dt)
    {
-      string label; 
+      string label;
 
       // Iterate rows of table
       foreach (DataRow row in dt.Rows)
@@ -61,13 +61,13 @@ public class DBNullExample
       }
    }
 
-   private string AddFieldValue(string label, DataRow row, 
-                                string fieldName) 
-   {                                
-      if (! DBNull.Value.Equals(row[fieldName])) 
+   private string AddFieldValue(string label, DataRow row,
+                                string fieldName)
+   {
+      if (! DBNull.Value.Equals(row[fieldName]))
          return (string) row[fieldName] + " ";
       else
          return String.Empty;
    }
-   // </Snippet1>   
+   // </Snippet1>
 }

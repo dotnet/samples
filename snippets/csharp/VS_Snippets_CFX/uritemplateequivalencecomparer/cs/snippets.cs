@@ -23,7 +23,7 @@ namespace UriTemplateEquivalenceComparerSnippets
             // Notice they are structrually equal
             UriTemplateEquivalenceComparer comparer = new UriTemplateEquivalenceComparer();
             bool result = comparer.Equals(temp1, temp2);
-            
+
             if (result)
                 Console.WriteLine("{0} and {1} are structurally equal", temp1, temp2);
             else

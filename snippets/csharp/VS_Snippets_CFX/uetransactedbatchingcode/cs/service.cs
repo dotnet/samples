@@ -11,7 +11,7 @@ using System.ServiceModel.Description;
 
 namespace Microsoft.ServiceModel.Samples
 {
-    // Define a service contract. 
+    // Define a service contract.
     [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]
     public interface IQueueCalculator
     {

@@ -3,24 +3,24 @@ using System;
 using System.Security;
 using System.Security.Permissions;
 
-[assembly:AllowPartiallyTrustedCallers]  
+[assembly:AllowPartiallyTrustedCallers]
 
 namespace SecurityRulesLibrary
 {
    // Violates rule: ReviewDeclarativeSecurityOnValueTypes.
    [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Demand, Name="FullTrust")]
 
-   public struct SecuredTypeStructure 
+   public struct SecuredTypeStructure
    {
       internal double xValue;
       internal double yValue;
-      
-      public SecuredTypeStructure(double x, double y) 
+
+      public SecuredTypeStructure(double x, double y)
       {
          xValue = x;
          yValue = y;
          Console.WriteLine("Creating an instance of SecuredTypeStructure.");
-      }     
+      }
       public override string ToString()
       {
          return String.Format ("SecuredTypeStructure {0} {1}", xValue, yValue);
@@ -29,7 +29,7 @@ namespace SecurityRulesLibrary
 
    public class StructureManager
    {
-      // This method asserts trust, incorrectly assuming that the caller must have 
+      // This method asserts trust, incorrectly assuming that the caller must have
       // permission because they passed in instance of the value type.
       [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Assert, Name="FullTrust")]
 

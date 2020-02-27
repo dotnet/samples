@@ -24,7 +24,7 @@ namespace N1
             // System.String
             //</Snippet2>
 
-            //<Snippet3>            
+            //<Snippet3>
             sampleObject.number = 10;
             sampleObject.Increment = (Action)(() => { sampleObject.number++; });
 
@@ -105,7 +105,7 @@ namespace n2
 namespace n3
 {
     //<Snippet7>
-    // Add "using System.ComponentModel;" line 
+    // Add "using System.ComponentModel;" line
     // to the beginning of the file.
     class Program
     {

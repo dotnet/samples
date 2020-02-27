@@ -6,7 +6,7 @@ namespace SecurityRulesLibrary
    class IntPtrFieldsAndFinalizeRequireGCKeepAlive
    {
       private IntPtr unmanagedResource;
-      
+
       IntPtrFieldsAndFinalizeRequireGCKeepAlive()
       {
          GetUnmanagedResource (unmanagedResource);
@@ -18,7 +18,7 @@ namespace SecurityRulesLibrary
          FreeUnmanagedResource (unmanagedResource);
       }
 
-      // Violates rule:CallGCKeepAliveWhenUsingNativeResources. 
+      // Violates rule:CallGCKeepAliveWhenUsingNativeResources.
       void BadMethod()
       {
          // Call some unmanaged code.

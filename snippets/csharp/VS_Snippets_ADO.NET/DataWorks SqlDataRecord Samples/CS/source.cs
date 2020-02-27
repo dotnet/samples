@@ -23,12 +23,12 @@ public static void CreateNewRecord()
 {
 
    // Variables.
-   SqlDataRecord record;    
-      
-   // Create a new record with the column metadata. The constructor is 
-   // able to accept a variable number of parameters. 
-   record = new SqlDataRecord(new SqlMetaData[] { new SqlMetaData("Column1", SqlDbType.NVarChar, 12), 
-                                                  new SqlMetaData("Column2", SqlDbType.Int), 
+   SqlDataRecord record;
+
+   // Create a new record with the column metadata. The constructor is
+   // able to accept a variable number of parameters.
+   record = new SqlDataRecord(new SqlMetaData[] { new SqlMetaData("Column1", SqlDbType.NVarChar, 12),
+                                                  new SqlMetaData("Column2", SqlDbType.Int),
                                                   new SqlMetaData("Column3", SqlDbType.DateTime) });
 
    // Set the record fields.
@@ -55,8 +55,8 @@ SqlDataRecord record;
 column1Info = new SqlMetaData("Column1", SqlDbType.NVarChar, 12);
 column2Info = new SqlMetaData("Column2", SqlDbType.Int);
 
-// Create a new record with the column metadata.      
-record = new SqlDataRecord(new SqlMetaData[] { column1Info, 
+// Create a new record with the column metadata.
+record = new SqlDataRecord(new SqlMetaData[] { column1Info,
                                                   column2Info });
 //</Snippet2>
 

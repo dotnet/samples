@@ -23,7 +23,7 @@ public class Sample
     // that although the element has not been inserted
     // into the document, it still has an owner document.
     Console.WriteLine(elem.OwnerDocument.OuterXml);
-    
+
     // Add the new element into the document.
     root.AppendChild(elem);
 

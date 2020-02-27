@@ -8,9 +8,9 @@ using System.Security.Permissions;
 
 [assembly: AllowPartiallyTrustedCallersAttribute()]
 namespace SecurityRulesLibrary
-{   
+{
     [Serializable]
-    public class SerializationConstructorsRequireSecurity : ISerializable 
+    public class SerializationConstructorsRequireSecurity : ISerializable
     {
         private  int n1;
         // This is a regular constructor secured by a demand.

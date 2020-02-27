@@ -20,7 +20,7 @@ class Program
 
             // Use the Remove method
             // in order to reset the user ID and password back to their
-            // default (empty string) values. Simply setting the 
+            // default (empty string) values. Simply setting the
             // associated property values to an empty string will not
             // remove them from the connection string; you must
             // call the Remove method.

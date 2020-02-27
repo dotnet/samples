@@ -13,8 +13,8 @@ public class Example
       provider.NegativeSign = "neg ";
 
       // Define an array of strings to convert to UInt16 values.
-      string[] values= { "34567", "+34567", "pos 34567", "34567.", 
-                         "34567.", "65535", "65535", "65535" };         
+      string[] values= { "34567", "+34567", "pos 34567", "34567.",
+                         "34567.", "65535", "65535", "65535" };
 
       foreach (string value in values)
       {
@@ -22,9 +22,9 @@ public class Example
          try {
             Console.WriteLine("{0,17}", Convert.ToUInt16(value, provider));
          }
-         catch (FormatException e) {       
+         catch (FormatException e) {
             Console.WriteLine("{0,17}", e.GetType().Name);
-         }     
+         }
       }
    }
 }

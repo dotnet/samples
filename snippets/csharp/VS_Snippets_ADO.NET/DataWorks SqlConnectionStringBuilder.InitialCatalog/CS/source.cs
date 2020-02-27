@@ -12,7 +12,7 @@ class Program
             string connectString = "Data Source=(local);" +
                 "Integrated Security=true";
 
-            SqlConnectionStringBuilder builder = 
+            SqlConnectionStringBuilder builder =
                 new SqlConnectionStringBuilder(connectString);
             Console.WriteLine("Original: " + builder.ConnectionString);
 
@@ -23,11 +23,11 @@ class Program
             // setting the value in this way results in the same
             // connection string:
             builder["Database"] = "AdventureWorks";
-            Console.WriteLine("builder.InitialCatalog = " 
+            Console.WriteLine("builder.InitialCatalog = "
                 + builder.InitialCatalog);
             Console.WriteLine("Modified: " + builder.ConnectionString);
 
-            using (SqlConnection connection = 
+            using (SqlConnection connection =
                 new SqlConnection(builder.ConnectionString))
             {
                 connection.Open();

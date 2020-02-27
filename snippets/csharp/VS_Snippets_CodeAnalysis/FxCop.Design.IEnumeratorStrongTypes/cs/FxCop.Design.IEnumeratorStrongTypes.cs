@@ -3,7 +3,7 @@ using System;
 using System.Collections;
 namespace DesignLibrary
 {
-   // The ExceptionEnumerator class implements a strongly typed enumerator 
+   // The ExceptionEnumerator class implements a strongly typed enumerator
    // for the ExceptionCollection type.
 
    public class ExceptionEnumerator: IEnumerator
@@ -20,7 +20,7 @@ namespace DesignLibrary
       // Implement the IEnumerator interface member explicitly.
       object IEnumerator.Current
       {
-         get 
+         get
          {
             return myCollectionEnumerator.Current;
          }
@@ -29,7 +29,7 @@ namespace DesignLibrary
       // Implement the strongly typed member.
       public Exception Current
       {
-         get 
+         get
          {
             return (Exception) myCollectionEnumerator.Current;
          }
@@ -48,7 +48,7 @@ namespace DesignLibrary
    }
 
    public class ExceptionCollection : ICollection
-   {   
+   {
       internal ArrayList data;
 
       ExceptionCollection()
@@ -67,11 +67,11 @@ namespace DesignLibrary
       {
          ((ICollection)this).CopyTo(array, index);
       }
-   
+
       // Implement the rest of the ICollection members.
       public int Count
       {
-        get 
+        get
         {
            return data.Count;
         }
@@ -79,17 +79,17 @@ namespace DesignLibrary
 
       public object SyncRoot
       {
-         get 
+         get
         {
-           return this; 
+           return this;
         }
       }
 
       public bool IsSynchronized
       {
-         get 
+         get
          {
-            return false; 
+            return false;
          }
       }
 

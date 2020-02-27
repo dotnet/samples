@@ -12,7 +12,7 @@ namespace ConsoleApplication1
             DirectoryInfo di2 = new DirectoryInfo("tempdir");
             DirectoryInfo di3 = new DirectoryInfo(@"x:\tempdir");
             DirectoryInfo di4 = new DirectoryInfo(@"c:\");
-            
+
             Console.WriteLine("The root path of '{0}' is '{1}'", di1.FullName, di1.Root);
             Console.WriteLine("The root path of '{0}' is '{1}'", di2.FullName, di2.Root);
             Console.WriteLine("The root path of '{0}' is '{1}'", di3.FullName, di3.Root);
@@ -20,7 +20,7 @@ namespace ConsoleApplication1
         }
     }
 }
-/* 
+/*
 This code produces output similar to the following:
 
 The root path of '\\tempshare\tempdir' is '\\tempshare\tempdir'

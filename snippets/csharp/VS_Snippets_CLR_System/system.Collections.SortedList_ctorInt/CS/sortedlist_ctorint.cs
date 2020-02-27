@@ -49,7 +49,7 @@ public class SamplesSortedList
         // which is based on the Turkish culture (tr-TR), where "I" is not
         // the uppercase version of "i".
         CultureInfo myCul = new CultureInfo("tr-TR");
-        SortedList mySL3 = 
+        SortedList mySL3 =
             new SortedList(new CaseInsensitiveComparer(myCul), 3);
 
         Console.WriteLine(
@@ -101,7 +101,7 @@ public class SamplesSortedList
 }
 
 
-/* 
+/*
 This code produces the following output.
 Results vary depending on the system's culture settings.
 

@@ -5,7 +5,7 @@ public class Example
 {
    public static void Main()
    {
-      string[] hexStrings = { "8000000000000000", "0FFFFFFFFFFFFFFF", 
+      string[] hexStrings = { "8000000000000000", "0FFFFFFFFFFFFFFF",
                               "f0000000000001000", "00A30", "D", "-13", "GAD" };
       foreach (string hexString in hexStrings)
       {
@@ -23,7 +23,7 @@ public class Example
          catch (ArgumentException) {
             Console.WriteLine("'{0}' is invalid in base 16.", hexString);
          }
-      }                                            
+      }
    }
 }
 // The example displays the following output:

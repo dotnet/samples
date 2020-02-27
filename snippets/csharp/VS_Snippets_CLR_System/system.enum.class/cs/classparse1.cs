@@ -9,7 +9,7 @@ public class Example
       // <Snippet9>
       string number = "-1";
       string name = "Early";
-      
+
       try {
          ArrivalStatus status1 = (ArrivalStatus) Enum.Parse(typeof(ArrivalStatus), number);
          if (!(Enum.IsDefined(typeof(ArrivalStatus), status1)))
@@ -17,10 +17,10 @@ public class Example
          Console.WriteLine("Converted '{0}' to {1}", number, status1);
       }
       catch (FormatException) {
-         Console.WriteLine("Unable to convert '{0}' to an ArrivalStatus value.", 
+         Console.WriteLine("Unable to convert '{0}' to an ArrivalStatus value.",
                            number);
-      }   
-         
+      }
+
       ArrivalStatus status2;
       if (Enum.TryParse<ArrivalStatus>(name, out status2)) {
          if (!(Enum.IsDefined(typeof(ArrivalStatus), status2)))
@@ -28,12 +28,12 @@ public class Example
          Console.WriteLine("Converted '{0}' to {1}", name, status2);
       }
       else {
-         Console.WriteLine("Unable to convert '{0}' to an ArrivalStatus value.", 
+         Console.WriteLine("Unable to convert '{0}' to an ArrivalStatus value.",
                            number);
       }
       // The example displays the following output:
       //       Converted '-1' to Late
       //       Converted 'Early' to Early
-      // </Snippet9>      
+      // </Snippet9>
    }
 }

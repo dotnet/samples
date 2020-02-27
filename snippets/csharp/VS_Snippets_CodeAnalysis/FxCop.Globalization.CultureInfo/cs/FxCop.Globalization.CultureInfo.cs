@@ -16,7 +16,7 @@ namespace GlobalizationLibrary
 
         public void GoodMethod(String string1, String string2, String string3)
         {
-            if(string.Compare(string1, string2, false, 
+            if(string.Compare(string1, string2, false,
                               CultureInfo.InvariantCulture) == 0)
             {
                 Console.WriteLine(string3.ToLower(CultureInfo.CurrentCulture));

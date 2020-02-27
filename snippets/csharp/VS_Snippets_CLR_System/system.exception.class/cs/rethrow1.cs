@@ -37,7 +37,7 @@ public class Example
       int[] indexes = s.FindOccurrences("a");
       ShowOccurrences(s, "a", indexes);
       Console.WriteLine();
-      
+
       String toFind = null;
       try {
          indexes = s.FindOccurrences(toFind);

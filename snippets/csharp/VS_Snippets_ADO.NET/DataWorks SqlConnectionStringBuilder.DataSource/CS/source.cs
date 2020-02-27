@@ -11,8 +11,8 @@ class Program
             "Network Address=(local);Integrated Security=SSPI;" +
             "Initial Catalog=AdventureWorks");
 
-        // Display the connection string, which should now 
-        // contain the "Data Source" key, as opposed to the 
+        // Display the connection string, which should now
+        // contain the "Data Source" key, as opposed to the
         // supplied "Network Address".
         Console.WriteLine(builder.ConnectionString);
 

@@ -24,17 +24,17 @@ public class Example
         Console.WriteLine("Element {0} is \"{1}\"", 2, stringList[2]);
 
         // Accessing an element outside the current element count
-        // causes an exception. 
-        Console.WriteLine("Number of elements in the list: {0}", 
+        // causes an exception.
+        Console.WriteLine("Number of elements in the list: {0}",
             stringList.Count);
         try
         {
-            Console.WriteLine("Element {0} is \"{1}\"", 
+            Console.WriteLine("Element {0} is \"{1}\"",
                 stringList.Count, stringList[stringList.Count]);
         }
         catch(ArgumentOutOfRangeException aoore)
         {
-            Console.WriteLine("stringList({0}) is out of range.", 
+            Console.WriteLine("stringList({0}) is out of range.",
                 stringList.Count);
         }
 
@@ -45,14 +45,14 @@ public class Example
         }
         catch(ArgumentOutOfRangeException aoore)
         {
-            Console.WriteLine("stringList({0}) is out of range.", 
+            Console.WriteLine("stringList({0}) is out of range.",
                 stringList.Count);
         }
 
         Console.WriteLine();
         for (int i = 0; i < stringList.Count; i++)
         {
-            Console.WriteLine("Element {0} is \"{1}\"", i, 
+            Console.WriteLine("Element {0} is \"{1}\"", i,
                 stringList[i]);
         }
 

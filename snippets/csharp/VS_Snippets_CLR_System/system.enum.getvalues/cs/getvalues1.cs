@@ -2,7 +2,7 @@
 using System;
 
 enum SignMagnitude { Negative = -1, Zero = 0, Positive = 1 };
- 
+
 public class Example
 {
    public static void Main()

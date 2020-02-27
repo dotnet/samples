@@ -10,7 +10,7 @@ using System.ServiceModel.Security;
 using System.ServiceModel.Security.Tokens;
 using System.Security.Permissions;
 
-// Define a service contract for the calculator. 
+// Define a service contract for the calculator.
 [ServiceContract()]
 public interface ICalculator
 {
@@ -83,7 +83,7 @@ public sealed class CustomBindingCreator
 
     public static Binding GetBinding2()
     {
-        
+
         // <Snippet7>
         // The security mode is set to Message.
         WSHttpBinding binding = new WSHttpBinding(SecurityMode.Message);
@@ -147,7 +147,7 @@ public sealed class CustomBindingCreator
 }
 //</snippet3>
 
-// Service class which implements the service contract. 
+// Service class which implements the service contract.
 public class CalculatorService : ICalculator
 {
     public double Add(double n1, double n2)
@@ -167,10 +167,10 @@ public class CalculatorService : ICalculator
         double result = n1 / n2; return result;
     }
 
-    // Host the service within this EXE console application. 
+    // Host the service within this EXE console application.
     public static void Main()
     {
-        // Create a WSHttpBinding and set its property values. 
+        // Create a WSHttpBinding and set its property values.
         //<snippet1>
         WSHttpBinding binding = new WSHttpBinding();
         binding.Name = "binding1";
@@ -179,20 +179,20 @@ public class CalculatorService : ICalculator
         binding.ReliableSession.Enabled = false;
         binding.TransactionFlow = false;
         //</snippet1>
-        //Specify a base address for the service endpoint. 
+        //Specify a base address for the service endpoint.
         Uri baseAddress = new Uri(@"http://localhost:8000/servicemodelsamples/service");
-        // Create a ServiceHost for the CalculatorService type 
-        // and provide it with a base address. 
+        // Create a ServiceHost for the CalculatorService type
+        // and provide it with a base address.
         ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress);
         serviceHost.AddServiceEndpoint(typeof(ICalculator), binding, baseAddress);
-        // Open the ServiceHostBase to create listeners 
-        // and start listening for messages. 
+        // Open the ServiceHostBase to create listeners
+        // and start listening for messages.
         serviceHost.Open();
-        // The service can now be accessed. 
+        // The service can now be accessed.
         Console.WriteLine("The service is ready.");
         Console.WriteLine("Press <ENTER> to terminate service.");
         Console.WriteLine(); Console.ReadLine();
-        // Close the ServiceHost to shutdown the service. 
+        // Close the ServiceHost to shutdown the service.
         serviceHost.Close();
     }
 }

@@ -5,7 +5,7 @@ using System.Reflection;
 using System;
 using AptcaTestLibrary;
 
-// If this test application is run from the local machine, 
+// If this test application is run from the local machine,
 //  it gets full trust by default.
 // Remove full trust.
 [assembly: System.Security.Permissions.PermissionSetAttribute(
@@ -17,9 +17,9 @@ namespace TestSecLibrary
     {
         public InheritFromAFullTrustDecendent()
         {
-            // This constructor maliciously overwrites the protected 
+            // This constructor maliciously overwrites the protected
             // static member in the fully trusted class.
-            // Trusted types will now get the wrong information from 
+            // Trusted types will now get the wrong information from
             // the TrustedLocation property.
             InheritFromAFullTrustDecendent.location = "sunny meadow";
         }
@@ -39,7 +39,7 @@ namespace TestSecLibrary
             Console.WriteLine(iclass.ToString());
 
             // You cannot create a type that inherits from the full trust type
-            // directly, but you can create a type that inherits from 
+            // directly, but you can create a type that inherits from
             // the APTCA type which in turn inherits from the full trust type.
 
             InheritFromAFullTrustDecendent inherit =
@@ -47,7 +47,7 @@ namespace TestSecLibrary
             //Show the inherited protected member has changed.
             Console.WriteLine("From Test: {0}", inherit.ToString());
 
-            // Trusted types now get the wrong information from 
+            // Trusted types now get the wrong information from
             // the TrustedLocation property.
             Console.WriteLine(iclass.ToString());
         }

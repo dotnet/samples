@@ -73,7 +73,7 @@ class Program
         return table;
     }
 
-    private static void PrintOutput(System.IO.TextWriter writer, 
+    private static void PrintOutput(System.IO.TextWriter writer,
         string caption)
     {
         Console.WriteLine("==============================");

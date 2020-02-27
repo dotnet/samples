@@ -6,9 +6,9 @@ public class Example
    public static void Main()
    {
       int[] baseValues = { 2, 8, 16};
-      string[] values = { "FF", "81", "03", "11", "8F", "01", "1C", "111", 
-                          "123", "18A" }; 
-   
+      string[] values = { "FF", "81", "03", "11", "8F", "01", "1C", "111",
+                          "123", "18A" };
+
       // Convert to each supported base.
       foreach (int baseValue in baseValues)
       {
@@ -18,10 +18,10 @@ public class Example
             Console.Write("   '{0,-5}  -->  ", value + "'");
             try {
                Console.WriteLine(Convert.ToSByte(value, baseValue));
-            }   
+            }
             catch (FormatException) {
                Console.WriteLine("Bad Format");
-            }   
+            }
             catch (OverflowException) {
                Console.WriteLine("Out of Range");
             }
@@ -42,7 +42,7 @@ public class Example
 //          '111'   -->  7
 //          '123'   -->  Bad Format
 //          '18A'   -->  Bad Format
-//       
+//
 //       Converting strings in base 8:
 //          'FF'    -->  Bad Format
 //          '81'    -->  Bad Format
@@ -54,7 +54,7 @@ public class Example
 //          '111'   -->  73
 //          '123'   -->  83
 //          '18A'   -->  Bad Format
-//       
+//
 //       Converting strings in base 16:
 //          'FF'    -->  -1
 //          '81'    -->  -127

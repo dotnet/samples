@@ -27,14 +27,14 @@ class Program
 
         // Test the Contains method.
         Box BoxCheck = new Box(8, 12, 10);
-        Console.WriteLine("Contains {0}x{1}x{2} by dimensions: {3}", 
-            BoxCheck.Height.ToString(), BoxCheck.Length.ToString(), 
+        Console.WriteLine("Contains {0}x{1}x{2} by dimensions: {3}",
+            BoxCheck.Height.ToString(), BoxCheck.Length.ToString(),
             BoxCheck.Width.ToString(), bxList.Contains(BoxCheck).ToString());
 
         // Test the Contains method overload with a specified equality comparer.
-        Console.WriteLine("Contains {0}x{1}x{2} by volume: {3}", 
-            BoxCheck.Height.ToString(), BoxCheck.Length.ToString(), 
-            BoxCheck.Width.ToString(), bxList.Contains(BoxCheck, 
+        Console.WriteLine("Contains {0}x{1}x{2} by volume: {3}",
+            BoxCheck.Height.ToString(), BoxCheck.Length.ToString(),
+            BoxCheck.Width.ToString(), bxList.Contains(BoxCheck,
             new BoxSameVol()).ToString());
     }
     // <Snippet2>
@@ -44,7 +44,7 @@ class Program
         foreach (Box bx in bxList)
         {
             Console.WriteLine("{0}\t{1}\t{2}\t{3}",
-                bx.Height.ToString(), bx.Length.ToString(), 
+                bx.Height.ToString(), bx.Length.ToString(),
                 bx.Width.ToString(), bx.GetHashCode().ToString());
         }
 
@@ -56,14 +56,14 @@ class Program
         //{
         //    Box b = (Box)enumerator.Current;
         //    Console.WriteLine("{0}\t{1}\t{2}\t{3}",
-        //    b.Height.ToString(), b.Length.ToString(), 
+        //    b.Height.ToString(), b.Length.ToString(),
         //    b.Width.ToString(), b.GetHashCode().ToString());
         //}
 
         Console.WriteLine();
     }
 
-    // </Snippet2>   
+    // </Snippet2>
 }
 
 public class Box : IEquatable<Box>
@@ -154,7 +154,7 @@ public class BoxCollection : ICollection<Box>
         return found;
     }
 
-    // Determines if an item is in the 
+    // Determines if an item is in the
     // collection by using a specified equality comparer.
     public bool Contains(Box item, EqualityComparer<Box> comp)
     {
@@ -200,7 +200,7 @@ public class BoxCollection : ICollection<Box>
            throw new ArgumentOutOfRangeException("The starting array index cannot be negative.");
         if (Count > array.Length - arrayIndex + 1)
            throw new ArgumentException("The destination array has fewer elements than the collection.");
-           
+
         for (int i = 0; i < innerCol.Count; i++) {
             array[i + arrayIndex] = innerCol[i];
         }
@@ -223,7 +223,7 @@ public class BoxCollection : ICollection<Box>
     {
         bool result = false;
 
-        // Iterate the inner collection to 
+        // Iterate the inner collection to
         // find the box to be removed.
         for (int i = 0; i < innerCol.Count; i++)
         {
@@ -339,7 +339,7 @@ public class BoxSameVol : EqualityComparer<Box>
 }
 
 
-/* 
+/*
 This code example displays the following output:
 ================================================
 
@@ -359,7 +359,7 @@ Height  Length  Width   Hash Code
 12      8       10      55915408
 
 Contains 8x12x10 by dimensions: False
-Contains 8x12x10 by volume: True 
+Contains 8x12x10 by volume: True
  */
 
 // </Snippet1>

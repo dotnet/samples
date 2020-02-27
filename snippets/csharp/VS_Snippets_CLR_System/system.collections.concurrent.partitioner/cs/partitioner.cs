@@ -27,7 +27,7 @@ namespace PartitionerDemo
             bool m_downcountEnumerators;
 
             // "downcountEnumerators" will be true for static partitioning, false for
-            // dynamic partitioning.  
+            // dynamic partitioning.
             public InternalEnumerable(IEnumerator<T> reader, bool downcountEnumerators)
             {
                 m_reader = reader;
@@ -79,7 +79,7 @@ namespace PartitionerDemo
             }
         }
 
-        // Internal class that serves as a shared enumerator for 
+        // Internal class that serves as a shared enumerator for
         // the underlying collection.
         private class InternalEnumerator : IEnumerator<T>
         {
@@ -189,7 +189,7 @@ namespace PartitionerDemo
         static void Main()
         {
             // Our sample collection
-            string[] collection = new string[] {"red", "orange", "yellow", "green", "blue", "indigo", 
+            string[] collection = new string[] {"red", "orange", "yellow", "green", "blue", "indigo",
                 "violet", "black", "white", "grey"};
 
             // Instantiate a partitioner for our collection

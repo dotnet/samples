@@ -28,7 +28,7 @@ namespace DirectoryInfoCS2
             for(int j = 0; j < sourceDirectories.Length; ++j)
                 CopyDirectory(sourceDirectories[j].FullName,target.FullName +"\\" + sourceDirectories[j].Name);
         }
-        
+
         static void Main(string[] args)
         {
             CopyDirectory("D:\\Tools","D:\\NewTools");

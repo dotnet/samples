@@ -6,11 +6,11 @@ using System.Xml;
 public class Sample
 {
   public static void Main(){
-  
+
     XmlDocument doc = new XmlDocument();
     doc.LoadXml("<book genre='novel' ISBN='1-861001-57-5'>" +
                 "<title>Pride And Prejudice</title>" +
-                "</book>");      
+                "</book>");
 
     //Create an attribute collection and remove all attributes
     //from the collection.

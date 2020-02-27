@@ -22,7 +22,7 @@ class Alice
             }
     }
 }
-public class Bob 
+public class Bob
 {
     public byte[] key;
 

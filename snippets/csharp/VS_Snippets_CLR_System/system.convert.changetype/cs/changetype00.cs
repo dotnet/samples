@@ -4,12 +4,12 @@ using System.Globalization;
 
 public class InterceptProvider : IFormatProvider
 {
-   public object GetFormat(Type formatType) 
+   public object GetFormat(Type formatType)
    {
       if (formatType == typeof(NumberFormatInfo)) {
          Console.WriteLine("   Returning a fr-FR numeric format provider.");
          return new System.Globalization.CultureInfo("fr-FR").NumberFormat;
-      }   
+      }
       else if (formatType == typeof(DateTimeFormatInfo)) {
          Console.WriteLine("   Returning an en-US date/time format provider.");
          return new System.Globalization.CultureInfo("en-US").DateTimeFormat;
@@ -27,17 +27,17 @@ public class Example
    {
       object[] values = { 103.5d, new DateTime(2010, 12, 26, 14, 34, 0) };
       IFormatProvider provider = new InterceptProvider();
-      
+
       // Convert value to each of the types represented in TypeCode enum.
       foreach (object value in values)
       {
          // Iterate types in TypeCode enum.
          foreach (TypeCode enumType in ((TypeCode[]) Enum.GetValues(typeof(TypeCode))))
-         {         
+         {
             if (enumType == TypeCode.DBNull || enumType == TypeCode.Empty) continue;
-            
+
             try {
-               Console.WriteLine("{0} ({1}) --> {2} ({3}).", 
+               Console.WriteLine("{0} ({1}) --> {2} ({3}).",
                                  value, value.GetType().Name,
                                  Convert.ChangeType(value, enumType, provider),
                                  enumType.ToString());
@@ -45,7 +45,7 @@ public class Example
             catch (InvalidCastException) {
                Console.WriteLine("Cannot convert a {0} to a {1}",
                                  value.GetType().Name, enumType.ToString());
-            }                     
+            }
             catch (OverflowException) {
                Console.WriteLine("Overflow: {0} is out of the range of a {1}",
                                  value, enumType.ToString());
@@ -73,7 +73,7 @@ public class Example
 //    Cannot convert a Double to a DateTime
 //       Returning a fr-FR numeric format provider.
 //    103.5 (Double) --> 103,5 (String).
-//    
+//
 //    12/26/2010 2:34:00 PM (DateTime) --> 12/26/2010 2:34:00 PM (Object).
 //    Cannot convert a DateTime to a Boolean
 //    Cannot convert a DateTime to a Char

@@ -10,10 +10,10 @@ public class Sample
   {
      DataSet dsNorthwind = new DataSet();
 
-     //Create the connection string           
+     //Create the connection string
      String sConnect;
-     sConnect="Data Source=localhost;Integrated Security=SSPI;Initial Catalog=Northwind";     
-         
+     sConnect="Data Source=localhost;Integrated Security=SSPI;Initial Catalog=Northwind";
+
      //Create a connection object to connect to the northwind db.
      SqlConnection nwconnect = new SqlConnection(sConnect);
 
@@ -27,12 +27,12 @@ public class Sample
      myDataAdapter.Fill(dsNorthwind,"Customers");
 
      //Load the document with the DataSet.
-     XmlDataDocument doc = new XmlDataDocument(dsNorthwind);   
+     XmlDataDocument doc = new XmlDataDocument(dsNorthwind);
 
      //Create an element representing the first customer record.
      DataRow row = doc.DataSet.Tables[0].Rows[0];
      XmlElement elem = doc.GetElementFromRow(row);
-     Console.WriteLine(elem.OuterXml);    
+     Console.WriteLine(elem.OuterXml);
   }
 }
 // </Snippet1>

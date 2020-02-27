@@ -6,11 +6,11 @@ class Program
     // <Snippet1>
     static void Main()
     {
-        // This example examines a number of scenarios involving the 
+        // This example examines a number of scenarios involving the
         // DataTable.Load method.
         Console.WriteLine("Load a DataTable and infer its schema:");
 
-        // The table has no schema. The Load method will infer the 
+        // The table has no schema. The Load method will infer the
         // schema from the IDataReader:
         DataTable table = new DataTable();
 
@@ -27,7 +27,7 @@ class Program
             "Load a DataTable from an incompatible IDataReader:");
 
         // Create a table with a single integer column. Attempt
-        // to load data from a reader with a schema that is 
+        // to load data from a reader with a schema that is
         // incompatible. Note the exception, determined
         // by the particular incompatibility:
         table = GetIntegerTable();
@@ -56,7 +56,7 @@ class Program
         Console.WriteLine(
             "Load a DataTable with an IDataReader that has missing columns:");
 
-        // Note that loading a reader with missing columns causes 
+        // Note that loading a reader with missing columns causes
         // the columns to be filled with null data, if possible:
         table = GetCustomers();
         reader = new DataTableReader(GetIntegerTable());
@@ -107,7 +107,7 @@ class Program
             {
                 original = table.Rows[i]["Name", DataRowVersion.Original];
             }
-            Console.WriteLine("{0}: {1}, {2} ({3})", i, 
+            Console.WriteLine("{0}: {1}, {2} ({3})", i,
                 current, original, rowState);
         }
     }
@@ -204,7 +204,7 @@ class Program
         DataTable table = SetupModifiedRows();
         DataTableReader reader = new DataTableReader(GetChangedCustomers());
         table.RowChanging +=new DataRowChangeEventHandler(HandleRowChanging);
-    
+
         table.Load(reader, optionForLoad);
         Console.WriteLine();
         DisplayRowState(table);
@@ -225,7 +225,7 @@ class Program
 
     private static DataTable SetupModifiedRows()
     {
-        // Fill a DataTable with customer info, and 
+        // Fill a DataTable with customer info, and
         // then modify, delete, and add rows.
 
         DataTable table = GetCustomers();

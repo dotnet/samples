@@ -7,7 +7,7 @@ namespace SecurityRulesLibrary
 {
    public  class SomeSecuredMethods
    {
-    
+
       // Demand immediate caller has suitable permission
       // before revealing sensitive data.
       [EnvironmentPermissionAttribute(SecurityAction.LinkDemand,

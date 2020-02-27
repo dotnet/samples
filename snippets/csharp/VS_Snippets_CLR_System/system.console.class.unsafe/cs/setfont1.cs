@@ -9,21 +9,21 @@ public class Example
 
    [DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
    static extern bool GetCurrentConsoleFontEx(
-          IntPtr consoleOutput, 
+          IntPtr consoleOutput,
           bool maximumWindow,
           ref CONSOLE_FONT_INFO_EX lpConsoleCurrentFontEx);
-          
+
    [DllImport("kernel32.dll", SetLastError = true)]
    static extern bool SetCurrentConsoleFontEx(
-          IntPtr consoleOutput, 
+          IntPtr consoleOutput,
           bool maximumWindow,
           CONSOLE_FONT_INFO_EX consoleCurrentFontEx);
-   
+
    private const int STD_OUTPUT_HANDLE = -11;
    private const int TMPF_TRUETYPE = 4;
    private const int LF_FACESIZE = 32;
    private static IntPtr INVALID_HANDLE_VALUE = new IntPtr(-1);
-   
+
    public static unsafe void Main()
    {
       string fontName = "Lucida Console";
@@ -41,7 +41,7 @@ public class Example
             }
             // Set console font to Lucida Console.
             CONSOLE_FONT_INFO_EX newInfo = new CONSOLE_FONT_INFO_EX();
-            newInfo.cbSize = (uint) Marshal.SizeOf(newInfo);          
+            newInfo.cbSize = (uint) Marshal.SizeOf(newInfo);
             newInfo.FontFamily = TMPF_TRUETYPE;
             IntPtr ptr = new IntPtr(newInfo.FaceName);
             Marshal.Copy(fontName.ToCharArray(), 0, ptr, fontName.Length);
@@ -50,24 +50,24 @@ public class Example
             newInfo.FontWeight = info.FontWeight;
             SetCurrentConsoleFontEx(hnd, false, newInfo);
          }
-      }    
+      }
     }
- 
+
    [StructLayout(LayoutKind.Sequential)]
    internal struct COORD
    {
       internal short X;
       internal short Y;
-      
+
       internal COORD(short x, short y)
       {
          X = x;
          Y = y;
       }
    }
- 
+
    [StructLayout(LayoutKind.Sequential)]
-   internal unsafe struct CONSOLE_FONT_INFO_EX 
+   internal unsafe struct CONSOLE_FONT_INFO_EX
    {
       internal uint cbSize;
       internal uint nFont;
@@ -75,6 +75,6 @@ public class Example
       internal int FontFamily;
       internal int FontWeight;
       internal fixed char FaceName[LF_FACESIZE];
-   } 
+   }
 }
 // </Snippet3>

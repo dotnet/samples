@@ -1,11 +1,11 @@
 ﻿// <Snippet1>
  using System;
  using System.Globalization;
- 
+
  class Example
  {
      public static void Main()  {
- 
+
        // Create a new NumberFormatinfo.
        NumberFormatInfo nfi = new NumberFormatInfo();
 
@@ -13,15 +13,15 @@
        Int64 value = -1234;
 
        // Display the value with default formatting.
-        Console.WriteLine("{0,-20} {1,-10}", "Default:", 
+        Console.WriteLine("{0,-20} {1,-10}", "Default:",
                           value.ToString("N", nfi));
 
        // Display the value with other patterns.
        for (int i = 0; i <= 4; i++)  {
           nfi.NumberNegativePattern = i;
-            Console.WriteLine("{0,-20} {1,-10}", 
-                              String.Format("Pattern {0}:", 
-                                            nfi.NumberNegativePattern), 
+            Console.WriteLine("{0,-20} {1,-10}",
+                              String.Format("Pattern {0}:",
+                                            nfi.NumberNegativePattern),
                               value.ToString("N", nfi));
        }
    }

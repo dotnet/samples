@@ -36,11 +36,11 @@ namespace DesignLibrary
       static void Main()
       {
          // Set the flags.
-         BadTraceOptions badOptions = 
+         BadTraceOptions badOptions =
             BadTraceOptions.LogicalStack | BadTraceOptions.Timestamp;
 
          // Check whether CallStack is set.
-         if((badOptions & BadTraceOptions.CallStack) == 
+         if((badOptions & BadTraceOptions.CallStack) ==
              BadTraceOptions.CallStack)
          {
             // This 'if' statement is always true.

@@ -9,8 +9,8 @@ public class Person
    public Double Weight { get; set; }
    public Char Gender { get; set; }
    public String Remarks { get; set; }
-   
-   public object[] GetDescription() 
+
+   public object[] GetDescription()
    {
       return new object[] { Name, Gender, Height, Weight, BirthDate};
    }
@@ -21,10 +21,10 @@ public class Example
    public static void Main()
    {
       var p1 = new Person() { Name = "John", Gender = 'M',
-                              BirthDate = new DateTime(1992, 5, 10), 
+                              BirthDate = new DateTime(1992, 5, 10),
                               Height = 73.5, Weight = 207 };
       p1.Remarks = "Client since 1/3/2012";
-      Console.Write("{0}: {1}, born {4:d}  Height {2} inches, Weight {3} lbs  ", 
+      Console.Write("{0}: {1}, born {4:d}  Height {2} inches, Weight {3} lbs  ",
                     p1.GetDescription());
       if (String.IsNullOrEmpty(p1.Remarks))
          Console.WriteLine();

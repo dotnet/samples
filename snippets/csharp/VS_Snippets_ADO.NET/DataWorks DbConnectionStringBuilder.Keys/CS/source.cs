@@ -29,7 +29,7 @@ namespace ConBuilderKeysCS
             Console.WriteLine();
             Console.WriteLine("Keys after adding TimeOut:");
 
-            // Because the Keys property is dynamically updated, 
+            // Because the Keys property is dynamically updated,
             // the following loop includes the Timeout key.
             foreach (string key in keys)
                 Console.WriteLine("{0}={1}", key, builder[key]);

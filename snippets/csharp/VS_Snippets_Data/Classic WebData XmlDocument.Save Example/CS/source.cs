@@ -5,7 +5,7 @@ using System.Xml;
 public class Sample {
 
   public static void Main() {
- 
+
     // Create the XmlDocument.
     XmlDocument doc = new XmlDocument();
     doc.LoadXml("<item><name>wrench</name></item>");

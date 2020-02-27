@@ -24,7 +24,7 @@ class Program
         table1.PrimaryKey = new DataColumn[] { column1 };
 
         // Add RowChanged event handler for the table.
-        table1.RowChanged += 
+        table1.RowChanged +=
             new System.Data.DataRowChangeEventHandler(Row_Changed);
 
         // Add some rows.
@@ -44,7 +44,7 @@ class Program
         // Create a second DataTable identical to the first.
         DataTable table2 = table1.Clone();
 
-        // Add three rows. Note that the id column can't be the 
+        // Add three rows. Note that the id column can't be the
         // same as existing rows in the original table.
         row = table2.NewRow();
         row["id"] = 14;
@@ -67,10 +67,10 @@ class Program
         PrintValues(table1, "Merged With table1");
     }
 
-    private static void Row_Changed(object sender, 
+    private static void Row_Changed(object sender,
         DataRowChangeEventArgs e)
     {
-        Console.WriteLine("Row changed {0}\t{1}", 
+        Console.WriteLine("Row changed {0}\t{1}",
             e.Action, e.Row.ItemArray[0]);
     }
 

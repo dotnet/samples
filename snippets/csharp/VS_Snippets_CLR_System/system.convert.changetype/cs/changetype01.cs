@@ -12,7 +12,7 @@ public class ChangeTypeTest {
         string s = "12/12/2009";
         DateTime dt = (DateTime)Convert.ChangeType(s, typeof(DateTime));
 
-        Console.WriteLine("The String {0} when converted to a Date is {1}", s, dt);        
+        Console.WriteLine("The String {0} when converted to a Date is {1}", s, dt);
     }
 }
 // The example displays the following output:

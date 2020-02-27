@@ -18,7 +18,7 @@ class Program
 
             // Use the Remove method
             // in order to reset the user ID and password back to their
-            // default (empty string) values. 
+            // default (empty string) values.
             builder.Remove("User ID");
             builder.Remove("Password");
 

@@ -17,10 +17,10 @@ public class AmazingLib
 
    public void PerformAnOperation()
    {
-      if (!AppContext.TryGetSwitch("Switch.AmazingLib.ThrowOnException", out shouldThrow)) { 
-         // This is the case where the switch value was not set by the application. 
-         // The library can choose to get the value of shouldThrow by other means. 
-         // If no overrides or default values are specified, the value should be 'false'. 
+      if (!AppContext.TryGetSwitch("Switch.AmazingLib.ThrowOnException", out shouldThrow)) {
+         // This is the case where the switch value was not set by the application.
+         // The library can choose to get the value of shouldThrow by other means.
+         // If no overrides or default values are specified, the value should be 'false'.
          // A false value implies the latest behavior.
       }
 

@@ -10,7 +10,7 @@ using System.ServiceModel.Activities;
 using Microsoft.Samples.ContentBasedCorrelation.SharedTypes;
 
 namespace Microsoft.Samples.ContentBasedCorrelation.Service
-{    
+{
     class Program
     {
         static void Main(string[] args)
@@ -54,7 +54,7 @@ namespace Microsoft.Samples.ContentBasedCorrelation.Service
                     {
                         To = new OutArgument<int>( (e) => po.Get(e).Id ),
                         Value = new InArgument<int>( (e) => new Random().Next() )
-                    },                    
+                    },
                     new SendReply
                     {
                         Request = submitPO,
@@ -71,9 +71,9 @@ namespace Microsoft.Samples.ContentBasedCorrelation.Service
                                     { "PoId", new XPathMessageQuery("sm:body()/ser:int", Constants.XPathMessageContext) }
                                 }
                             }
-                        }                        
-                    },                    
-                    new Parallel 
+                        }
+                    },
+                    new Parallel
                     {
                         CompletionCondition = complete,
                         Branches =
@@ -85,12 +85,12 @@ namespace Microsoft.Samples.ContentBasedCorrelation.Service
                                 Body = new Receive
                                 {
                                     ServiceContractName = Constants.POContractName,
-                                    OperationName = Constants.UpdatePOName,                                    
+                                    OperationName = Constants.UpdatePOName,
                                     CorrelatesWith = poidHandle, // identifies that the UpdatePO operation is waiting on the PurchaseOrderId that was used to initialize this handle
                                     CorrelatesOn = new MessageQuerySet // the query that is used on an incoming message to find the requisite PurchaseOrderId specified in the correlation
                                     {
                                         // Id is the name of the incoming parameter within the PurchaseOrder
-                                        { "PoId", new XPathMessageQuery("sm:body()/defns:PurchaseOrder/defns:Id", Constants.XPathMessageContext) } 
+                                        { "PoId", new XPathMessageQuery("sm:body()/defns:PurchaseOrder/defns:Id", Constants.XPathMessageContext) }
                                     },
                                     Content = ReceiveContent.Create(new OutArgument<PurchaseOrder>(po)) // creates a ReceiveMessageContent
                                 }
@@ -98,7 +98,7 @@ namespace Microsoft.Samples.ContentBasedCorrelation.Service
 //</Snippet1>
                             new Sequence
                             {
-                                Activities = 
+                                Activities =
                                 {
                                     new Receive
                                     {
@@ -109,7 +109,7 @@ namespace Microsoft.Samples.ContentBasedCorrelation.Service
                                         CorrelatesOn = new MessageQuerySet // the query that is used on an incoming message to find the requisite PurchaseOrderId specified in the correlation
                                         {
                                             // Id is the name of the incoming parameter within the PurchaseOrder
-                                            { "PoId", new XPathMessageQuery("sm:body()/defns:PurchaseOrder/defns:Id", Constants.XPathMessageContext) } 
+                                            { "PoId", new XPathMessageQuery("sm:body()/defns:PurchaseOrder/defns:Id", Constants.XPathMessageContext) }
                                         },
                                         CorrelationInitializers =
                                         {
@@ -119,9 +119,9 @@ namespace Microsoft.Samples.ContentBasedCorrelation.Service
                                                 CorrelationHandle = custidHandle,
                                                 MessageQuerySet = new MessageQuerySet
                                                 {
-                                                    // CustomerId is the name of the incoming parameter within the PurchaseOrder    
-                                                    { "CustId", new XPathMessageQuery("sm:body()/defns:PurchaseOrder/defns:CustomerId", Constants.XPathMessageContext) } 
-                                                } 
+                                                    // CustomerId is the name of the incoming parameter within the PurchaseOrder
+                                                    { "CustId", new XPathMessageQuery("sm:body()/defns:PurchaseOrder/defns:CustomerId", Constants.XPathMessageContext) }
+                                                }
                                             }
                                         }
                                     },
@@ -135,7 +135,7 @@ namespace Microsoft.Samples.ContentBasedCorrelation.Service
                                         CorrelatesOn = new MessageQuerySet // the query that is used on an incoming message to find the requisite CustomerId specified in the correlation
                                         {
                                             // Id is the name of the incoming parameter within the Customer type
-                                            { "CustId", new XPathMessageQuery("sm:body()/defns:Customer/defns:Id", Constants.XPathMessageContext) } 
+                                            { "CustId", new XPathMessageQuery("sm:body()/defns:Customer/defns:Id", Constants.XPathMessageContext) }
                                         }
                                     },
                                     new Assign<bool>

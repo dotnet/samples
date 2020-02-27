@@ -9,7 +9,7 @@ class Program
 {
     static void Main()
     {
-        OracleConnectionStringBuilder builder = 
+        OracleConnectionStringBuilder builder =
             new OracleConnectionStringBuilder();
         builder["Data Source"] = "localhost";
         builder["integrated security"] = true;

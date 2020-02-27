@@ -13,7 +13,7 @@ namespace Microsoft.Samples.PickUsage
     {
         static string bookmarkName = "UserName";
         static WorkflowApplication application;
-        
+
         public static void Main(string[] args)
         {
             application = new WorkflowApplication(CreateWF());
@@ -53,12 +53,12 @@ namespace Microsoft.Samples.PickUsage
             Sequence body = new Sequence
             {
                 Variables = { name },
-                Activities = 
+                Activities =
                 {
                     new WriteLine { Text = "What is your name? (You have 5 seconds to answer)" },
                     new Pick
                     {
-                       Branches = 
+                       Branches =
                        {
                            new PickBranch
                             {
@@ -67,9 +67,9 @@ namespace Microsoft.Samples.PickUsage
                                    Result = name,
                                    BookmarkName = bookmarkName
                                },
-                               Action = new WriteLine 
-                               { 
-                                   Text = new InArgument<string>(env => "Hello " + name.Get(env)) 
+                               Action = new WriteLine
+                               {
+                                   Text = new InArgument<string>(env => "Hello " + name.Get(env))
                                }
                            },
                            new PickBranch

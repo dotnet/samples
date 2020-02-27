@@ -5,13 +5,13 @@ using System;
 class BytesToDoubleDemo
 {
     const string formatter = "{0,5}{1,27}{2,27:E16}";
- 
+
     // Convert eight byte array elements to a double and display it.
     public static void BAToDouble( byte[ ] bytes, int index )
     {
         double value = BitConverter.ToDouble( bytes, index );
 
-        Console.WriteLine( formatter, index, 
+        Console.WriteLine( formatter, index,
             BitConverter.ToString( bytes, index, 8 ), value );
     }
 
@@ -26,7 +26,7 @@ class BytesToDoubleDemo
 
         for( iter = 0; iter < bytes.Length - rowSize; iter += rowSize )
         {
-            Console.Write( 
+            Console.Write(
                 BitConverter.ToString( bytes, iter, rowSize ) );
             Console.WriteLine( "-" );
         }
@@ -38,32 +38,32 @@ class BytesToDoubleDemo
     public static void Main( )
     {
         byte[ ] byteArray = {
-              0,   0,   0,   0,   0,   0,   0,   0, 240,  63, 
-              0,   0,   0,   0,   0, 224, 111,  64,   0,   0, 
-            224, 255, 255, 255, 239,  65,   0,   0,   0,   0, 
-              0,   0, 112,  63,   0,   0,   0,   0,   0,   0, 
-            240,  61, 223, 136,  30,  28, 254, 116, 170,   1, 
-            250,  89, 140,  66, 202, 192, 243,  63, 251,  89, 
-            140,  66, 202, 192, 243,  63, 252,  89, 140,  66, 
-            202, 192, 243,  63,  82, 211, 187, 188, 232, 126, 
-             61, 126, 255, 255, 255, 255, 255, 255, 239, 255, 
-            255, 255, 255, 255, 255, 239, 127,   1,   0,   0, 
-              0,   0,   0,   0,   0, 248, 255,   0,   0,   0, 
-              0,   0,   0, 240, 255,   0,   0,   0,   0,   0, 
+              0,   0,   0,   0,   0,   0,   0,   0, 240,  63,
+              0,   0,   0,   0,   0, 224, 111,  64,   0,   0,
+            224, 255, 255, 255, 239,  65,   0,   0,   0,   0,
+              0,   0, 112,  63,   0,   0,   0,   0,   0,   0,
+            240,  61, 223, 136,  30,  28, 254, 116, 170,   1,
+            250,  89, 140,  66, 202, 192, 243,  63, 251,  89,
+            140,  66, 202, 192, 243,  63, 252,  89, 140,  66,
+            202, 192, 243,  63,  82, 211, 187, 188, 232, 126,
+             61, 126, 255, 255, 255, 255, 255, 255, 239, 255,
+            255, 255, 255, 255, 255, 239, 127,   1,   0,   0,
+              0,   0,   0,   0,   0, 248, 255,   0,   0,   0,
+              0,   0,   0, 240, 255,   0,   0,   0,   0,   0,
               0, 240, 127 };
 
-        Console.WriteLine( 
+        Console.WriteLine(
             "This example of the BitConverter.ToDouble( byte[ ], " +
             "int ) \nmethod generates the following output. It " +
             "converts elements \nof a byte array to double values.\n" );
 
         WriteMultiLineByteArray( byteArray );
 
-        Console.WriteLine( formatter, "index", "array elements", 
+        Console.WriteLine( formatter, "index", "array elements",
             "double" );
-        Console.WriteLine( formatter, "-----", "--------------", 
+        Console.WriteLine( formatter, "-----", "--------------",
             "------" );
-          
+
         // Convert byte array elements to double values.
         BAToDouble( byteArray, 0 );
         BAToDouble( byteArray, 2 );

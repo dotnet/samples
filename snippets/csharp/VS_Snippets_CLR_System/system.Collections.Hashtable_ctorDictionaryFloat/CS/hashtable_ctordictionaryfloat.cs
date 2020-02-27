@@ -57,7 +57,7 @@ public class SamplesHashtable
 
         // Create a hash table using the specified IEqualityComparer that uses
         // the CaseInsensitiveComparer.DefaultInvariant to determine equality.
-        Hashtable myHT2 = new Hashtable(mySL, .8f, 
+        Hashtable myHT2 = new Hashtable(mySL, .8f,
             new myCultureComparer());
 
         // Create a hash table using an IEqualityComparer that is based on
@@ -74,7 +74,7 @@ public class SamplesHashtable
 }
 
 
-/* 
+/*
 This code produces the following output.
 Results vary depending on the system's culture settings.
 

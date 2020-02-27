@@ -17,7 +17,7 @@ public class Example
       // </Snippet1>
       Console.WriteLine("{0}   {1}", value1, value2);
    }
-   
+
    private static void InstantiateByNarrowingConversion()
    {
       // <Snippet2>
@@ -41,7 +41,7 @@ public class Example
       // The example displays the following output:
       //       128
       //       3
-      // </Snippet2> 
+      // </Snippet2>
    }
 
    private static void Parse()
@@ -58,10 +58,10 @@ public class Example
       catch (FormatException) {
          Console.WriteLine("'{0}' is out of range of a byte.", string1);
       }
-   
+
       string string2 = "F9";
       try {
-         byte byte2 = Byte.Parse(string2, 
+         byte byte2 = Byte.Parse(string2,
                                  System.Globalization.NumberStyles.HexNumber);
          Console.WriteLine(byte2);
       }
@@ -74,6 +74,6 @@ public class Example
       // The example displays the following output:
       //       244
       //       249
-      // </Snippet3>   
+      // </Snippet3>
    }
 }

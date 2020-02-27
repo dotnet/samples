@@ -9,11 +9,11 @@ public class Example
       DateTime date2 = new DateTime(2009, 8, 1, 12, 0, 0);
       int result = DateTime.Compare(date1, date2);
       string relationship;
-      
+
       if (result < 0)
          relationship = "is earlier than";
       else if (result == 0)
-         relationship = "is the same time as";         
+         relationship = "is the same time as";
       else
          relationship = "is later than";
 

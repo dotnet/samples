@@ -15,7 +15,7 @@ class DecimalCtorLDemo
         // Display the constructor and its value.
         Console.WriteLine( "{0,-35}{1,22}", ctor, decimalNum );
     }
-    
+
     public static void Main( )
     {
         Console.WriteLine( "This example of the decimal( ulong ) " +

@@ -6,7 +6,7 @@ public enum Grades { F = 0, D = 1, C = 2, B = 3, A = 4 };
 
 // Define an extension method for the Grades enumeration.
 public static class Extensions
-{        
+{
   public static Grades minPassing = Grades.D;
 
   public static bool Passing(this Grades grade)
@@ -16,7 +16,7 @@ public static class Extensions
 }
 
 class Example
-{       
+{
   static void Main()
   {
       Grades g1 = Grades.D;
@@ -33,9 +33,9 @@ class Example
 // The exmaple displays the following output:
 //       D is a passing grade.
 //       F is not a passing grade.
-//       
+//
 //       Raising the bar!
-//       
+//
 //       D is not a passing grade.
 //       F is not a passing grade.
 //</snippet18>

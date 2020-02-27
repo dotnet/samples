@@ -16,7 +16,7 @@ class Program
         PrintSchema(table, "Original table");
 
         // Write the schema to XML in a memory stream.
-        System.IO.MemoryStream xmlStream = 
+        System.IO.MemoryStream xmlStream =
             new System.IO.MemoryStream();
         table.WriteXmlSchema(xmlStream);
 
@@ -24,7 +24,7 @@ class Program
         xmlStream.Position = 0;
 
         DataTable newTable = new DataTable();
-        System.Xml.XmlTextReader reader = 
+        System.Xml.XmlTextReader reader =
             new System.Xml.XmlTextReader(xmlStream);
         newTable.ReadXmlSchema(reader);
 
@@ -62,7 +62,7 @@ class Program
         Console.WriteLine(label);
         foreach (DataColumn column in table.Columns)
         {
-            Console.WriteLine("\t{0}: {1}", column.ColumnName, 
+            Console.WriteLine("\t{0}: {1}", column.ColumnName,
                 column.DataType.Name);
         }
         Console.WriteLine();

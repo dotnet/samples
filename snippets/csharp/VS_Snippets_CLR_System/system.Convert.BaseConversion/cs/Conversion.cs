@@ -51,7 +51,7 @@ public class Class1
      catch (OverflowException)
      {
         Console.WriteLine("Unable to convert '0x{0}' to an integer.", value);
-     }   
+     }
      // </Snippet1>
    }
 
@@ -66,17 +66,17 @@ public class Class1
       try
       {
          targetNumber = Convert.ToInt32(value, 16);
-         if (!(isNegative) & (targetNumber & 0x80000000) != 0) 
+         if (!(isNegative) & (targetNumber & 0x80000000) != 0)
             throw new OverflowException();
-         else 
+         else
             Console.WriteLine("0x{0} converts to {1}.", value, targetNumber);
       }
       catch (OverflowException)
       {
          Console.WriteLine("Unable to convert '0x{0}' to an integer.", value);
-      } 
+      }
       // Displays the following to the console:
-      //    Unable to convert '0x80000000' to an integer.    
+      //    Unable to convert '0x80000000' to an integer.
       // </Snippet2>
    }
 
@@ -90,11 +90,11 @@ public class Class1
       {
          byte number = Convert.ToByte(value, 16);
          Console.WriteLine("0x{0} converts to {1}.", value, number);
-      }   
+      }
       catch (OverflowException)
       {
          Console.WriteLine("Unable to convert '0x{0}' to a byte.", value);
-      }   
+      }
       // </Snippet3>
    }
 
@@ -111,15 +111,15 @@ public class Class1
          targetNumber = Convert.ToByte(value, 16);
          if (isSigned && ((targetNumber & 0x80) != 0))
             throw new OverflowException();
-         else 
+         else
             Console.WriteLine("0x{0} converts to {1}.", value, targetNumber);
       }
       catch (OverflowException)
       {
          Console.WriteLine("Unable to convert '0x{0}' to an unsigned byte.", value);
-      } 
+      }
       // Displays the following to the console:
-      //    Unable to convert '0x80' to an unsigned byte.     
+      //    Unable to convert '0x80' to an unsigned byte.
       // </Snippet4>
    }
 
@@ -137,10 +137,10 @@ public class Class1
      catch (OverflowException)
      {
         Console.WriteLine("Unable to convert '0x{0}' to a 16-bit integer.", value);
-     }   
+     }
      // </Snippet5>
    }
-   
+
    private static void ConvertHexToShort()
    {
       // <Snippet6>
@@ -154,15 +154,15 @@ public class Class1
          targetNumber = Convert.ToInt16(value, 16);
          if (! isNegative && ((targetNumber & 0x8000) != 0))
             throw new OverflowException();
-         else 
+         else
             Console.WriteLine("0x{0} converts to {1}.", value, targetNumber);
       }
       catch (OverflowException)
       {
          Console.WriteLine("Unable to convert '0x{0}' to a 16-bit integer.", value);
-      } 
+      }
       // Displays the following to the console:
-      //    Unable to convert '0x8000' to a 16-bit integer.     
+      //    Unable to convert '0x8000' to a 16-bit integer.
       // </Snippet6>
    }
 
@@ -176,11 +176,11 @@ public class Class1
       {
          long number = Convert.ToInt64(value, 16);
          Console.WriteLine("0x{0} converts to {1}.", value, number);
-      }   
+      }
       catch (OverflowException)
       {
          Console.WriteLine("Unable to convert '0x{0}' to a long integer.", value);
-      }   
+      }
       // </Snippet7>
    }
 
@@ -197,15 +197,15 @@ public class Class1
          targetNumber = Convert.ToInt64(value, 16);
          if (! isSigned && ((targetNumber & 0x80000000) != 0))
             throw new OverflowException();
-         else 
+         else
             Console.WriteLine("0x{0} converts to {1}.", value, targetNumber);
       }
       catch (OverflowException)
       {
          Console.WriteLine("Unable to convert '0x{0}' to a long integer.", value);
-      } 
+      }
       // Displays the following to the console:
-      //    Unable to convert '0xFFFFFFFFFFFFFFFF' to a long integer.     
+      //    Unable to convert '0xFFFFFFFFFFFFFFFF' to a long integer.
       // </Snippet8>
    }
 
@@ -219,11 +219,11 @@ public class Class1
       {
          sbyte number = Convert.ToSByte(value, 16);
          Console.WriteLine("0x{0} converts to {1}.", value, number);
-      }   
+      }
       catch (OverflowException)
       {
          Console.WriteLine("Unable to convert '0x{0}' to a signed byte.", value);
-      }   
+      }
       // </Snippet9>
    }
 
@@ -240,15 +240,15 @@ public class Class1
          targetNumber = Convert.ToSByte(value, 16);
          if (! isSigned && ((targetNumber & 0x80) != 0))
             throw new OverflowException();
-         else 
+         else
             Console.WriteLine("0x{0} converts to {1}.", value, targetNumber);
       }
       catch (OverflowException)
       {
          Console.WriteLine("Unable to convert '0x{0}' to a signed byte.", value);
-      } 
+      }
       // Displays the following to the console:
-      //    Unable to convert '0xff' to a signed byte.     
+      //    Unable to convert '0xff' to a signed byte.
       // </Snippet10>
    }
 
@@ -262,12 +262,12 @@ public class Class1
       {
          UInt16 number = Convert.ToUInt16(value, 16);
          Console.WriteLine("0x{0} converts to {1}.", value, number);
-      }   
+      }
       catch (OverflowException)
       {
-         Console.WriteLine("Unable to convert '0x{0}' to an unsigned short integer.", 
+         Console.WriteLine("Unable to convert '0x{0}' to an unsigned short integer.",
                            value);
-      }   
+      }
       // </Snippet11>
    }
 
@@ -284,15 +284,15 @@ public class Class1
          targetNumber = Convert.ToUInt16(value, 16);
          if (isSigned && ((targetNumber & 0x8000) != 0))
             throw new OverflowException();
-         else 
+         else
             Console.WriteLine("0x{0} converts to {1}.", value, targetNumber);
       }
       catch (OverflowException)
       {
          Console.WriteLine("Unable to convert '0x{0}' to an unsigned short integer.", value);
-      } 
+      }
       // Displays the following to the console:
-      //    Unable to convert '0x8000' to an unsigned short integer.     
+      //    Unable to convert '0x8000' to an unsigned short integer.
       // </Snippet12>
    }
 
@@ -306,12 +306,12 @@ public class Class1
       {
          UInt32 number = Convert.ToUInt32(value, 16);
          Console.WriteLine("0x{0} converts to {1}.", value, number);
-      }   
+      }
       catch (OverflowException)
       {
-         Console.WriteLine("Unable to convert '0x{0}' to an unsigned integer.", 
+         Console.WriteLine("Unable to convert '0x{0}' to an unsigned integer.",
                            value);
-      }   
+      }
       // </Snippet13>
    }
 
@@ -328,16 +328,16 @@ public class Class1
          targetNumber = Convert.ToUInt32(value, 16);
          if (isSigned && ((targetNumber & 0x80000000) != 0))
             throw new OverflowException();
-         else 
+         else
             Console.WriteLine("0x{0} converts to {1}.", value, targetNumber);
       }
       catch (OverflowException)
       {
-         Console.WriteLine("Unable to convert '0x{0}' to an unsigned integer.", 
+         Console.WriteLine("Unable to convert '0x{0}' to an unsigned integer.",
                            value);
-      } 
+      }
       // Displays the following to the console:
-      //    Unable to convert '0x80000000' to an unsigned integer.     
+      //    Unable to convert '0x80000000' to an unsigned integer.
       // </Snippet14>
    }
 
@@ -351,12 +351,12 @@ public class Class1
       {
          UInt64 number = Convert.ToUInt64(value, 16);
          Console.WriteLine("0x{0} converts to {1}.", value, number);
-      }   
+      }
       catch (OverflowException)
       {
-         Console.WriteLine("Unable to convert '0x{0}' to an unsigned long integer.", 
+         Console.WriteLine("Unable to convert '0x{0}' to an unsigned long integer.",
                            value);
-      }   
+      }
       // </Snippet15>
    }
 
@@ -373,16 +373,16 @@ public class Class1
          targetNumber = Convert.ToUInt64(value, 16);
          if (isSigned && ((targetNumber & 0x8000000000000000) != 0))
             throw new OverflowException();
-         else 
+         else
             Console.WriteLine("0x{0} converts to {1}.", value, targetNumber);
       }
       catch (OverflowException)
       {
-         Console.WriteLine("Unable to convert '0x{0}' to an unsigned long integer.", 
+         Console.WriteLine("Unable to convert '0x{0}' to an unsigned long integer.",
                            value);
-      } 
+      }
       // Displays the following to the console:
-      //    Unable to convert '0x8000000000000000' to an unsigned long integer.     
+      //    Unable to convert '0x8000000000000000' to an unsigned long integer.
       // </Snippet16>
    }
 }

@@ -17,7 +17,7 @@ namespace Microsoft.Samples.WF.PurchaseProcess
         public IList<Vendor> InvitedVendors { get; set; }
         public IDictionary<int, VendorProposal> VendorProposals { get; set; }
         public VendorProposal BestProposal { get; set; }
-        public DateTime CreationDate { get; set; }        
+        public DateTime CreationDate { get; set; }
         public DateTime CompletionDate { get; set; }
         public string Status { get; set; }
 
@@ -63,13 +63,13 @@ namespace Microsoft.Samples.WF.PurchaseProcess
         public string GetInvitedVendorsStatus()
         {
             return GetInvitedVendorsStatus(false);
-        }        
+        }
 
         // returns a string with all the invited vendors. If the status flag is
         // true, it also add the status of each vendor proposal
         public string GetInvitedVendorsStatus(bool addStatus)
         {
-            string ret = string.Empty;                
+            string ret = string.Empty;
             foreach (Vendor vendor in this.InvitedVendors)
             {
                 if (!string.IsNullOrEmpty(ret))

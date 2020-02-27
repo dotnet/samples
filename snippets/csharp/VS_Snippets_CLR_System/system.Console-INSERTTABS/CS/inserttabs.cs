@@ -1,8 +1,8 @@
-// This sample opens a file whose name is passed to it as a parameter. 
-// It reads each line in the file and replaces every occurrence of 4 
+// This sample opens a file whose name is passed to it as a parameter.
+// It reads each line in the file and replaces every occurrence of 4
 // space characters with a tab character.
 //
-// It takes two command-line arguments: the input file name, and 
+// It takes two command-line arguments: the input file name, and
 // the output file name.
 //
 // Usage:
@@ -53,7 +53,7 @@ public class InsertTabs
             return 1;
         }
 
-        // Recover the standard output stream so that a 
+        // Recover the standard output stream so that a
         // completion message can be displayed.
         var standardOutput = new StreamWriter(Console.OpenStandardOutput());
         standardOutput.AutoFlush = true;

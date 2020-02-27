@@ -8,7 +8,7 @@ public class Example
       Decimal number1 = 120.07m;
       Decimal number2 = 163.19m;
       Decimal number3 = number1 + number2;
-      Console.WriteLine("{0} + {1} = {2}", 
+      Console.WriteLine("{0} + {1} = {2}",
                         number1, number2, number3);
    }
 }

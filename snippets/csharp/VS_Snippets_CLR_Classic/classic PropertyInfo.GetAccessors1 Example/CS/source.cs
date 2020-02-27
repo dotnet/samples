@@ -1,7 +1,7 @@
 ﻿// <Snippet1>
 using System;
 using System.Reflection;
- 
+
 // Define a property.
 public class ClassWithProperty
 {
@@ -13,7 +13,7 @@ public class ClassWithProperty
         set { if(_caption != value) _caption = value; }
     }
 }
- 
+
 class Example
 {
     public static void Main()
@@ -24,7 +24,7 @@ class Example
         // Get the type and PropertyInfo.
         Type t = Type.GetType("ClassWithProperty");
         PropertyInfo propInfo = t.GetProperty("Caption");
- 
+
         // Get the public GetAccessors method.
         MethodInfo[] methInfos = propInfo.GetAccessors(true);
         Console.WriteLine("There are {0} accessors.",

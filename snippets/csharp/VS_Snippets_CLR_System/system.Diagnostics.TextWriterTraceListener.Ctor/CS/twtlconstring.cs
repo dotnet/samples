@@ -17,7 +17,7 @@ class TWTLConStringMod
         }
         else
         {
-            // Create a TextWriterTraceListener object that takes a 
+            // Create a TextWriterTraceListener object that takes a
             // file specification.
             TextWriterTraceListener textListener;
             try

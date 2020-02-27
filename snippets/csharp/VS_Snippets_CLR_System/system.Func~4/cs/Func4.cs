@@ -8,8 +8,8 @@ public class GenericFunc
    {
       string numericString = "-1,234";
       Func<string, NumberStyles, IFormatProvider, int> parser = int.Parse;
-      Console.WriteLine(parser(numericString, 
-                        NumberStyles.Integer | NumberStyles.AllowThousands, 
+      Console.WriteLine(parser(numericString,
+                        NumberStyles.Integer | NumberStyles.AllowThousands,
                         CultureInfo.InvariantCulture));
    }
 }

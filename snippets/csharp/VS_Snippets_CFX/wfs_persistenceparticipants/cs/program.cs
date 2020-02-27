@@ -50,7 +50,7 @@ namespace Microsoft.Samples.PersistenceParticipants
                 application = new WorkflowApplication(workflow);
                 application.InstanceStore = instanceStore;
                 SetupApplication(application, applicationUnloaded);
-            
+
                 stepCountExtension = new StepCountExtension();
                 application.Extensions.Add(stepCountExtension);
                 application.Load(id);
@@ -66,10 +66,10 @@ namespace Microsoft.Samples.PersistenceParticipants
         {
             application.PersistableIdle = workflowApplicationIdleEventArgs => PersistableIdleAction.Unload;
             application.Unloaded = workflowApplicationEventArgs => applicationUnloaded.Set();
-            application.OnUnhandledException = workflowApplicationUnhandledExceptionEventArgs => 
-            { 
-                Console.WriteLine(workflowApplicationUnhandledExceptionEventArgs.UnhandledException); 
-                return UnhandledExceptionAction.Terminate; 
+            application.OnUnhandledException = workflowApplicationUnhandledExceptionEventArgs =>
+            {
+                Console.WriteLine(workflowApplicationUnhandledExceptionEventArgs.UnhandledException);
+                return UnhandledExceptionAction.Terminate;
             };
         }
 
@@ -81,13 +81,13 @@ namespace Microsoft.Samples.PersistenceParticipants
             return new Sequence()
             {
                 Variables = { count, stepsCounted },
-                Activities = 
-                { 
+                Activities =
+                {
                     new While((env) => count.Get(env) > 0)
                     {
-                        Body = new Sequence 
+                        Body = new Sequence
                         {
-                            Activities = 
+                            Activities =
                             {
                                 new EchoPrompt {BookmarkName = echoPromptBookmark },
                                 new IncrementStepCount(),

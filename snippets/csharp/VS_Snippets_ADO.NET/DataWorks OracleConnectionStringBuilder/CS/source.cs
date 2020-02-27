@@ -14,12 +14,12 @@ class Program
         OracleConnectionStringBuilder builder =
             new OracleConnectionStringBuilder(GetConnectionString());
 
-        // Note that the input connection string used the 
+        // Note that the input connection string used the
         // Server key, but the new connection string uses
         // the well-known Data Source key instead.
         Console.WriteLine(builder.ConnectionString);
 
-        // Pass the OracleConnectionStringBuilder an existing 
+        // Pass the OracleConnectionStringBuilder an existing
         // connection string, and you can retrieve and
         // modify any of the elements.
         builder.ConnectionString = "server=OracleDemo;user id=maryc;" +
@@ -31,7 +31,7 @@ class Program
         builder.Password = "newPassword";
         builder.PersistSecurityInfo = true;
 
-        // You can refer to connection keys using strings, 
+        // You can refer to connection keys using strings,
         // as well. When you use this technique (the default
         // Item property in Visual Basic, or the indexer in C#),
         // you can specify any synonym for the connection string key
@@ -48,7 +48,7 @@ class Program
     private static string GetConnectionString()
     {
         // To avoid storing the connection string in your code,
-        // you can retrieve it from a configuration file. 
+        // you can retrieve it from a configuration file.
         return "Server=OracleDemo;Integrated Security=true";
     }
 }

@@ -86,34 +86,34 @@ class Example
     }
 }
 /*  This code example produces the following output:
- * 
+ *
  * One dimension (Rank=1):
  * 1 2 3 4 5 6 7 8 9
- * 
+ *
  * Array.Clear(numbers1, 2, 5)
  * 1 2 0 0 0 0 0 8 9
- * 
+ *
  * Two dimensions (Rank=2):
  * 1 2 3
  * 4 5 6
  * 7 8 9
- * 
+ *
  * Array.Clear(numbers2, 2, 5)
  * 1 2 0
  * 0 0 0
  * 0 8 9
- * 
+ *
  * Three dimensions (Rank=3):
  * 1 2
  * 3 4
- * 
+ *
  * 5 6
  * 7 8
- * 
+ *
  * Array.Clear(numbers3, 2, 5)
  * 1 2
  * 0 0
- * 
+ *
  * 0 0
  * 0 8
  */

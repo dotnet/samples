@@ -48,7 +48,7 @@ public class Example
 // The example displays the following output:
 //       DerivedA has Inherited attribute: True
 //       DerivedA.MemberA has Inherited attribute: True
-//       
+//
 //       DerivedB has NotInherited attribute: False
 //       DerivedB.MemberB has NotInherited attribute: False
 // </Snippet2>

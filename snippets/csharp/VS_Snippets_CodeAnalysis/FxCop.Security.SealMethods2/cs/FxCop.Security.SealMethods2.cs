@@ -3,7 +3,7 @@ using System;
 
 namespace SecurityLibrary
 {
-    public class BaseImplementation 
+    public class BaseImplementation
     {
         public virtual bool UserIsValidated()
         {

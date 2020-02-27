@@ -9,15 +9,15 @@ class Example
         // Create a new hash table.
         //
         Hashtable openWith = new Hashtable();
-        
-        // Add some elements to the hash table. There are no 
+
+        // Add some elements to the hash table. There are no
         // duplicate keys, but some of the values are duplicates.
         openWith.Add("txt", "notepad.exe");
         openWith.Add("bmp", "paint.exe");
         openWith.Add("dib", "paint.exe");
         openWith.Add("rtf", "wordpad.exe");
-        
-        // The Add method throws an exception if the new key is 
+
+        // The Add method throws an exception if the new key is
         // already in the hash table.
         try
         {
@@ -28,20 +28,20 @@ class Example
             Console.WriteLine("An element with Key = \"txt\" already exists.");
         }
 
-        // The Item property is the default property, so you 
-        // can omit its name when accessing elements. 
+        // The Item property is the default property, so you
+        // can omit its name when accessing elements.
         Console.WriteLine("For key = \"rtf\", value = {0}.", openWith["rtf"]);
-        
+
         // The default Item property can be used to change the value
         // associated with a key.
         openWith["rtf"] = "winword.exe";
         Console.WriteLine("For key = \"rtf\", value = {0}.", openWith["rtf"]);
-        
+
         // If a key does not exist, setting the default Item property
         // for that key adds a new key/value pair.
         openWith["doc"] = "winword.exe";
 
-        // ContainsKey can be used to test keys before inserting 
+        // ContainsKey can be used to test keys before inserting
         // them.
         if (!openWith.ContainsKey("ht"))
         {
@@ -59,7 +59,7 @@ class Example
 
         // To get the values alone, use the Values property.
         ICollection valueColl = openWith.Values;
-        
+
         // The elements of the ValueCollection are strongly typed
         // with the type that was specified for hash table values.
         Console.WriteLine();
@@ -70,7 +70,7 @@ class Example
 
         // To get the keys alone, use the Keys property.
         ICollection keyColl = openWith.Keys;
-        
+
         // The elements of the KeyCollection are strongly typed
         // with the type that was specified for hash table keys.
         Console.WriteLine();
@@ -82,7 +82,7 @@ class Example
         // Use the Remove method to remove a key/value pair.
         Console.WriteLine("\nRemove(\"doc\")");
         openWith.Remove("doc");
-        
+
         if (!openWith.ContainsKey("doc"))
         {
             Console.WriteLine("Key \"doc\" is not found.");

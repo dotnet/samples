@@ -15,7 +15,7 @@ class DecimalCtorIDemo
         // Display the constructor and its value.
         Console.WriteLine( "{0,-30}{1,16}", ctor, decimalNum );
     }
-    
+
     public static void Main( )
     {
         Console.WriteLine( "This example of the decimal( int ) " +
@@ -29,7 +29,7 @@ class DecimalCtorIDemo
         CreateDecimal( 0, "0" );
         CreateDecimal( 999999999, "999999999" );
         CreateDecimal( 0x40000000, "0x40000000" );
-        CreateDecimal( unchecked( (int)0xC0000000 ), 
+        CreateDecimal( unchecked( (int)0xC0000000 ),
             "(int)0xC0000000" );
     }
 }

@@ -1,6 +1,6 @@
 ﻿// <Snippet1>
-// Use this code inside a project created with the Visual C# > Windows Desktop > Console Application template. 
-// Replace the code in Program.cs with this code. 
+// Use this code inside a project created with the Visual C# > Windows Desktop > Console Application template.
+// Replace the code in Program.cs with this code.
 
 using System;
 
@@ -16,8 +16,8 @@ public class Example
         // Normally, the timer is declared at the class level, so that it stays in scope as long as it
         // is needed. If the timer is declared in a long-running method, KeepAlive must be used to prevent
         // the JIT compiler from allowing aggressive garbage collection to occur before the method ends.
-        // You can experiment with this by commenting out the class-level declaration and uncommenting 
-        // the declaration below; then uncomment the GC.KeepAlive(aTimer) at the end of the method.        
+        // You can experiment with this by commenting out the class-level declaration and uncommenting
+        // the declaration below; then uncomment the GC.KeepAlive(aTimer) at the end of the method.
         //System.Timers.Timer aTimer;
 
         // Create a timer and set a two second interval.
@@ -30,7 +30,7 @@ public class Example
         // Create a timer with a two second interval.
         aTimer = new System.Timers.Timer(2000);
 
-        // Hook up the Elapsed event for the timer. 
+        // Hook up the Elapsed event for the timer.
         aTimer.Elapsed += OnTimedEvent;
 
         // Have the timer fire repeated events (true is the default)
@@ -43,8 +43,8 @@ public class Example
         Console.ReadLine();
 
         // If the timer is declared in a long-running method, use KeepAlive to prevent garbage collection
-        // from occurring before the method ends. 
-        //GC.KeepAlive(aTimer) 
+        // from occurring before the method ends.
+        //GC.KeepAlive(aTimer)
     }
 
     private static void OnTimedEvent(Object source, System.Timers.ElapsedEventArgs e)
@@ -53,12 +53,12 @@ public class Example
     }
 }
 
-// This example displays output like the following: 
-//       Press the Enter key to exit the program at any time... 
-//       The Elapsed event was raised at 5/20/2015 8:48:58 PM 
-//       The Elapsed event was raised at 5/20/2015 8:49:00 PM 
-//       The Elapsed event was raised at 5/20/2015 8:49:02 PM 
-//       The Elapsed event was raised at 5/20/2015 8:49:04 PM 
-//       The Elapsed event was raised at 5/20/2015 8:49:06 PM 
+// This example displays output like the following:
+//       Press the Enter key to exit the program at any time...
+//       The Elapsed event was raised at 5/20/2015 8:48:58 PM
+//       The Elapsed event was raised at 5/20/2015 8:49:00 PM
+//       The Elapsed event was raised at 5/20/2015 8:49:02 PM
+//       The Elapsed event was raised at 5/20/2015 8:49:04 PM
+//       The Elapsed event was raised at 5/20/2015 8:49:06 PM
 
 // </Snippet1>

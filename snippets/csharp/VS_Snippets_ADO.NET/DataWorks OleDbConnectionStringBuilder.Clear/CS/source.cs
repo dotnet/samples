@@ -20,7 +20,7 @@ class Program
         // set up row-level locking.
         builder.Add("Jet OLEDB:Database Locking Mode", 1);
 
-        // Dump the contents of the "filled-in" 
+        // Dump the contents of the "filled-in"
         // OleDbConnectionStringBuilder
         // to the console window.
         DumpBuilderContents(builder);
@@ -29,7 +29,7 @@ class Program
         // default values.
         builder.Clear();
 
-        // Dump the contents of the newly emptied 
+        // Dump the contents of the newly emptied
         // OleDbConnectionStringBuilder
         // to the console window.
         DumpBuilderContents(builder);

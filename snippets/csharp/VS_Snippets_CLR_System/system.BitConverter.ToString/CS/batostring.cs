@@ -10,7 +10,7 @@ class BytesToStringDemo
         const string underLine = "--------------------------------";
 
         Console.WriteLine( name );
-        Console.WriteLine( underLine.Substring( 0, 
+        Console.WriteLine( underLine.Substring( 0,
             Math.Min( name.Length, underLine.Length ) ) );
         Console.WriteLine( BitConverter.ToString( bytes ) );
         Console.WriteLine( );
@@ -26,11 +26,11 @@ class BytesToStringDemo
              0, 168,   3,  41,   4, 172,  32 };
 
         byte[ ] arrayThree = {
-            15,   0,   0, 128,  16,  39, 240, 216, 241, 255, 
+            15,   0,   0, 128,  16,  39, 240, 216, 241, 255,
            127 };
 
         byte[ ] arrayFour = {
-            15,   0,   0,   0,   0,  16,   0, 255,   3,   0, 
+            15,   0,   0,   0,   0,  16,   0, 255,   3,   0,
              0, 202, 154,  59, 255, 255, 255, 255, 127 };
 
         Console.WriteLine( "This example of the " +

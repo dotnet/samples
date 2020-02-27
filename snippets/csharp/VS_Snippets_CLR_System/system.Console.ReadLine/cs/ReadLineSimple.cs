@@ -16,7 +16,7 @@ public class Example
 }
 // The example displays output like the following:
 //     Today is 10/26/2015 at 12:22:22 PM.
-//     
+//
 //     Press any key to continue...
 
 // </Snippet6>

@@ -8,7 +8,7 @@ public class Example
       String[] values = { "09", "12.6", "0", "-13 " };
       foreach (var value in values) {
          bool success, result;
-         int number; 
+         int number;
          success = Int32.TryParse(value, out number);
          if (success) {
             // The method throws no exceptions.
@@ -16,8 +16,8 @@ public class Example
             Console.WriteLine("Converted '{0}' to {1}", value, result);
          }
          else {
-            Console.WriteLine("Unable to convert '{0}'", value); 
-         }         
+            Console.WriteLine("Unable to convert '{0}'", value);
+         }
       }
    }
 }

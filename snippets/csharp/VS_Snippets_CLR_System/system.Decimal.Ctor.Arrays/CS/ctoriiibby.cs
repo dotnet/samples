@@ -8,24 +8,24 @@ class DecimalCtorIIIBByDemo
     public static string GetExceptionType( Exception ex )
     {
         string exceptionType = ex.GetType( ).ToString( );
-        return exceptionType.Substring( 
+        return exceptionType.Substring(
             exceptionType.LastIndexOf( '.' ) + 1 );
     }
 
     // Create a decimal object and display its value.
-    public static void CreateDecimal( int low, int mid, int high, 
+    public static void CreateDecimal( int low, int mid, int high,
         bool isNeg, byte scale )
     {
         // Format the constructor for display.
-        string ctor = String.Format( 
-            "decimal( {0}, {1}, {2}, {3}, {4} )", 
+        string ctor = String.Format(
+            "decimal( {0}, {1}, {2}, {3}, {4} )",
             low, mid, high, isNeg, scale );
         string valOrExc;
 
         try
         {
             // Construct the decimal value.
-            decimal decimalNum = new decimal( 
+            decimal decimalNum = new decimal(
                 low, mid, high, isNeg, scale );
 
             // Format and save the decimal value.
@@ -42,7 +42,7 @@ class DecimalCtorIIIBByDemo
 
         // Display the data on one line if it will fit.
         if ( ctorLen > ctor.Length )
-            Console.WriteLine( "{0}{1}", ctor.PadRight( ctorLen ), 
+            Console.WriteLine( "{0}{1}", ctor.PadRight( ctorLen ),
                 valOrExc );
 
         // Otherwise, display the data on two lines.
@@ -52,16 +52,16 @@ class DecimalCtorIIIBByDemo
             Console.WriteLine( "{0,76}", valOrExc );
         }
     }
-    
+
     public static void Main( )
     {
 
         Console.WriteLine( "This example of the decimal( int, int, " +
             "int, bool, byte ) \nconstructor " +
             "generates the following output.\n" );
-        Console.WriteLine( "{0,-38}{1,38}", "Constructor", 
+        Console.WriteLine( "{0,-38}{1,38}", "Constructor",
             "Value or Exception" );
-        Console.WriteLine( "{0,-38}{1,38}", "-----------", 
+        Console.WriteLine( "{0,-38}{1,38}", "-----------",
             "------------------" );
 
         // Construct decimal objects from the component fields.

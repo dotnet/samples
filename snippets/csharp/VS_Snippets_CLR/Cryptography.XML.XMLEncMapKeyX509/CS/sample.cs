@@ -26,18 +26,18 @@ class Program
         }
 
         // Create a new X509Certificate2 object by loading
-        // an X.509 certificate file.  To use XML encryption 
-        // with an X.509 certificate, use an X509Certificate2 
+        // an X.509 certificate file.  To use XML encryption
+        // with an X.509 certificate, use an X509Certificate2
         // object to encrypt, but use a certificate in a certificate
         // store to decrypt.
 
-        // You can create a new test certificate file using the 
+        // You can create a new test certificate file using the
         // makecert.exe tool.
 
         // Create an X509Certificate2 object for encryption.
         X509Certificate2 cert = new X509Certificate2("test.pfx");
 
-        // Put the certificate in certificate store for decryption.  
+        // Put the certificate in certificate store for decryption.
         X509Store store = new X509Store(StoreLocation.CurrentUser);
 
         store.Open(OpenFlags.ReadWrite);
@@ -73,7 +73,7 @@ class Program
 
     public static void Encrypt(XmlDocument Doc, string ElementToEncrypt, X509Certificate2 Cert)
     {
-        // Check the arguments.  
+        // Check the arguments.
         if (Doc == null)
             throw new ArgumentNullException("Doc");
         if (ElementToEncrypt == null)
@@ -95,8 +95,8 @@ class Program
         }
 
         //////////////////////////////////////////////////
-        // Create a new instance of the EncryptedXml class 
-        // and use it to encrypt the XmlElement with the 
+        // Create a new instance of the EncryptedXml class
+        // and use it to encrypt the XmlElement with the
         // X.509 Certificate.
         //////////////////////////////////////////////////
 
@@ -115,7 +115,7 @@ class Program
 
     public static void Decrypt(XmlDocument Doc)
     {
-        // Check the arguments.  
+        // Check the arguments.
         if (Doc == null)
             throw new ArgumentNullException("Doc");
 

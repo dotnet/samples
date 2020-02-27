@@ -3,7 +3,7 @@ using System;
 using System.IO;
 using System.Xml;
 
-public class Sample 
+public class Sample
 {
   public static void Main()
   {
@@ -16,12 +16,12 @@ public class Sample
        doc.LoadXml("<book xmlns:bk='urn:samples'> " +
                    "<title>Pride And Prejudice</title>" +
                    "<bk:genre>novel</bk:genre>" +
-                   "</book>"); 
+                   "</book>");
 
-       //Load the XmlNodeReader 
+       //Load the XmlNodeReader
        reader = new XmlNodeReader(doc);
-  
-       //Parse the XML.  If they exist, display the prefix and  
+
+       //Parse the XML.  If they exist, display the prefix and
        //namespace URI of each node.
        while (reader.Read()){
          if (reader.IsStartElement()){
@@ -36,8 +36,8 @@ public class Sample
            }
          }
        }
-     } 
-     finally 
+     }
+     finally
      {
         if (reader != null)
           reader.Close();

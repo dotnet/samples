@@ -1,5 +1,5 @@
 ﻿//<Snippet2>
-// Example of the decimal.Round method. 
+// Example of the decimal.Round method.
 using System;
 
 class DecimalRoundDemo
@@ -29,9 +29,9 @@ class DecimalRoundDemo
         ShowDecimalRound( 123.456789M, 6 );
         ShowDecimalRound( 123.456789M, 8 );
         ShowDecimalRound( -123.456M, 0 );
-        ShowDecimalRound( 
+        ShowDecimalRound(
             new decimal( 1230000000, 0, 0, true, 7 ), 3 );
-        ShowDecimalRound( 
+        ShowDecimalRound(
             new decimal( 1230000000, 0, 0, true, 7 ), 11 );
         ShowDecimalRound( -9999999999.9999999999M, 9 );
         ShowDecimalRound( -9999999999.9999999999M, 10 );

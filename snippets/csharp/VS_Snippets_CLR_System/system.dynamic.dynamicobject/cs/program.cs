@@ -8,7 +8,7 @@ using System.Reflection;
 
 // Class description, TrySetMember, TryGetMember
 namespace Test1
-{    
+{
     //<Snippet1>
     // The class derived from DynamicObject.
     public class DynamicDictionary : DynamicObject
@@ -27,7 +27,7 @@ namespace Test1
             }
         }
 
-        // If you try to get a value of a property 
+        // If you try to get a value of a property
         // not defined in the class, this method is called.
         public override bool TryGetMember(
             GetMemberBinder binder, out object result)
@@ -64,7 +64,7 @@ namespace Test1
             // Creating a dynamic dictionary.
             dynamic person = new DynamicDictionary();
 
-            // Adding new dynamic properties. 
+            // Adding new dynamic properties.
             // The TrySetMember method is called.
             person.FirstName = "Ellen";
             person.LastName = "Adams";
@@ -75,7 +75,7 @@ namespace Test1
             Console.WriteLine(person.firstname + " " + person.lastname);
 
             // Getting the value of the Count property.
-            // The TryGetMember is not called, 
+            // The TryGetMember is not called,
             // because the property is defined in the class.
             Console.WriteLine(
                 "Number of dynamic properties:" + person.Count);
@@ -123,12 +123,12 @@ namespace N2
             return true;
         }
 
-        // Perform the binary operation. 
+        // Perform the binary operation.
         public override bool TryBinaryOperation(
             BinaryOperationBinder binder, object arg, out object result)
         {
-            // The Textual property contains the textual representaion 
-            // of two numbers, in addition to the name 
+            // The Textual property contains the textual representaion
+            // of two numbers, in addition to the name
             // of the binary operation.
             string resultTextual =
                 dictionary["Textual"].ToString() + " "
@@ -156,7 +156,7 @@ namespace N2
 
                 // In case of any other binary operation,
                 // print out the type of operation and return false,
-                // which means that the language should determine 
+                // which means that the language should determine
                 // what to do.
                 // (Usually the language just throws an exception.)
                 default:
@@ -258,7 +258,7 @@ namespace n3
         public override bool TryConvert(
             ConvertBinder binder, out object result)
         {
-            // Converting to string. 
+            // Converting to string.
             if (binder.Type == typeof(String))
             {
                 result = dictionary["Textual"];
@@ -272,7 +272,7 @@ namespace n3
                 return true;
             }
 
-            // In case of any other type, the binder 
+            // In case of any other type, the binder
             // attempts to perform the conversion itself.
             // In most cases, a run-time exception is thrown.
             return base.TryConvert(binder, out result);
@@ -372,7 +372,7 @@ namespace N4
             // Creating a dynamic object.
             dynamic sampleObject = new SampleDynamicObject();
 
-            // Creating Property0. 
+            // Creating Property0.
             // The TrySetMember method is called.
             sampleObject.Property0 = "Zero";
 
@@ -438,7 +438,7 @@ namespace N5
                 (args[0].GetType() == typeof(int)) &&
                 (args[1].GetType() == typeof(String)))
             {
-                // If the property already exists, 
+                // If the property already exists,
                 // its value is changed.
                 // Otherwise, a new property is created.
                 if (dictionary.ContainsKey("Numeric"))
@@ -487,7 +487,7 @@ namespace N5
             Console.WriteLine(number.Numeric + " " + number.Textual);
 
             // The following statement produces a run-time exception
-            // because in this example the method invocation 
+            // because in this example the method invocation
             // expects two arguments.
             // number(0);
         }
@@ -586,15 +586,15 @@ namespace N6
             person.Print();
 
             // The following statement throws an exception at run time.
-            // There is no Sample method 
+            // There is no Sample method
             // in the dictionary or in the DynamicDictionary class.
-            // person.Sample();        
+            // person.Sample();
         }
     }
 
     // This example has the following output:
 
-    // FirstName Ellen 
+    // FirstName Ellen
     // LastName Adams
     // Removing all the elements from the dictionary.
     // No elements in the dictionary.
@@ -629,12 +629,12 @@ namespace n7
             return true;
         }
 
-        // Perform the unary operation. 
+        // Perform the unary operation.
         public override bool TryUnaryOperation(
             UnaryOperationBinder binder, out object result)
         {
-            // The Textual property contains 
-            // the name of the unary operation in addition 
+            // The Textual property contains
+            // the name of the unary operation in addition
             // to the textual representaion of the number.
             string resultTextual =
                  binder.Operation + " " +
@@ -651,9 +651,9 @@ namespace n7
                 default:
                     // In case of any other unary operation,
                     // print out the type of operation and return false,
-                    // which means that the language should determine 
+                    // which means that the language should determine
                     // what to do.
-                    // (Usually the language just throws an exception.)            
+                    // (Usually the language just throws an exception.)
                     Console.WriteLine(
                         binder.Operation +
                         ": This unary operation is not implemented");

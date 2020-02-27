@@ -5,13 +5,13 @@ using System;
 class BytesToInt32Demo
 {
     const string formatter = "{0,5}{1,17}{2,15}";
- 
+
     // Convert four byte array elements to an int and display it.
     public static void BAToInt32( byte[ ] bytes, int index )
     {
         int value = BitConverter.ToInt32( bytes, index );
 
-        Console.WriteLine( formatter, index, 
+        Console.WriteLine( formatter, index,
             BitConverter.ToString( bytes, index, 4 ), value );
     }
 
@@ -26,7 +26,7 @@ class BytesToInt32Demo
 
         for( iter = 0; iter < bytes.Length - rowSize; iter += rowSize )
         {
-            Console.Write( 
+            Console.Write(
                 BitConverter.ToString( bytes, iter, rowSize ) );
             Console.WriteLine( "-" );
         }
@@ -38,22 +38,22 @@ class BytesToInt32Demo
     public static void Main( )
     {
         byte[ ] byteArray = {
-             15,   0,   0,   0,   0, 128,   0,   0,  16,   0, 
-              0, 240, 255,   0, 202, 154,  59,   0,  54, 101, 
+             15,   0,   0,   0,   0, 128,   0,   0,  16,   0,
+              0, 240, 255,   0, 202, 154,  59,   0,  54, 101,
             196, 241, 255, 255, 255, 127 };
 
-        Console.WriteLine( 
+        Console.WriteLine(
             "This example of the BitConverter.ToInt32( byte[ ], " +
             "int ) \nmethod generates the following output. It " +
             "converts elements \nof a byte array to int values.\n" );
 
         WriteMultiLineByteArray( byteArray );
 
-        Console.WriteLine( formatter, "index", "array elements", 
+        Console.WriteLine( formatter, "index", "array elements",
             "int" );
-        Console.WriteLine( formatter, "-----", "--------------", 
+        Console.WriteLine( formatter, "-----", "--------------",
             "---" );
-          
+
         // Convert byte array elements to int values.
         BAToInt32( byteArray, 1 );
         BAToInt32( byteArray, 0 );

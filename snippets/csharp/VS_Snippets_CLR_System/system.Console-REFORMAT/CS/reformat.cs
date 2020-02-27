@@ -1,5 +1,5 @@
 ﻿using System;
-// This sample converts tab-delmited input and converts it to 
+// This sample converts tab-delmited input and converts it to
 // comma-delimited output.  Furthermore, it converts all boolean
 // input to numeric representations.
 // System.Console.Write
@@ -21,7 +21,7 @@ public class FormatConverter
                     isFirstField = false;
                 else
                     Console.Write(',');
-                
+
                 // If the field represents a boolean, replace with a numeric representation.
 				bool itemBool;
 				if (Boolean.TryParse(item, out itemBool))
@@ -39,7 +39,7 @@ usage examples:
 To convert tab-delimited input from the keyboard and display
 the output (type CTRL+Z to mark the end of input):
     REFORMAT
-    
+
 To input tab-delimited data from a file and display the output:
     REFORMAT <tabs.txt
 

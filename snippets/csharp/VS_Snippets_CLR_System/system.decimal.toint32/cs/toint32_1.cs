@@ -5,20 +5,20 @@ class Example
 {
    public static void Main( )
    {
-      decimal[] values = { 123m, new decimal(123000, 0, 0, false, 3), 
+      decimal[] values = { 123m, new decimal(123000, 0, 0, false, 3),
                            123.999m, 4294967295.999m, 4294967296m,
-                           4294967296m, 2147483647.999m, 2147483648m, 
+                           4294967296m, 2147483647.999m, 2147483648m,
                            -0.999m, -1m, -2147483648.999m, -2147483649m };
 
       foreach (var value in values) {
          try {
             int number = Decimal.ToInt32(value);
-            Console.WriteLine("{0} --> {1}", value, number);       
+            Console.WriteLine("{0} --> {1}", value, number);
          }
          catch (OverflowException e)
          {
              Console.WriteLine("{0}: {1}", e.GetType().Name, value);
-         }   
+         }
       }
    }
 }

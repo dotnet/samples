@@ -10,7 +10,7 @@ class DecimalFromSingleDemo
     public static string GetExceptionType( Exception ex )
     {
         string exceptionType = ex.GetType( ).ToString( );
-        return exceptionType.Substring( 
+        return exceptionType.Substring(
             exceptionType.LastIndexOf( '.' ) + 1 );
     }
 
@@ -34,12 +34,12 @@ class DecimalFromSingleDemo
 
     public static void Main( )
     {
-        Console.WriteLine( 
+        Console.WriteLine(
             "This example of the explicit conversion from float " +
             "to decimal \ngenerates the following output.\n" );
-        Console.WriteLine( formatter, "float argument", 
+        Console.WriteLine( formatter, "float argument",
             "decimal value" );
-        Console.WriteLine( formatter, "--------------", 
+        Console.WriteLine( formatter, "--------------",
             "-------------" );
 
         // Convert float values and display the results.

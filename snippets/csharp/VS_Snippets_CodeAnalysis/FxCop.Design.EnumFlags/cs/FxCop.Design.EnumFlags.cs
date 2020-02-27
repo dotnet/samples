@@ -5,7 +5,7 @@ namespace DesignLibrary
 {
 // Violates rule: MarkEnumsWithFlags.
 
-   public enum DaysEnumNeedsFlags 
+   public enum DaysEnumNeedsFlags
    {
       None        = 0,
       Monday      = 1,
@@ -17,7 +17,7 @@ namespace DesignLibrary
    }
    // Violates rule: DoNotMarkEnumsWithFlags.
    [Flags]
-   public enum ColorEnumShouldNotHaveFlag 
+   public enum ColorEnumShouldNotHaveFlag
    {
       None        = 0,
       Red         = 1,

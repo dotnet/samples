@@ -22,7 +22,7 @@ class Program
         Console.WriteLine(builder["Jet OLEDB:System database"]);
         Console.WriteLine(builder["Jet OLEDB:Encrypt Database"]);
 
-        // You can set or retrieve any of the "default" values for the 
+        // You can set or retrieve any of the "default" values for the
         // provider, even if you didn't set their values.
         Console.WriteLine(builder["Jet OLEDB:Database Locking Mode"]);
         Console.WriteLine(builder["Jet OLEDB:Global Partial Bulk Ops"]);

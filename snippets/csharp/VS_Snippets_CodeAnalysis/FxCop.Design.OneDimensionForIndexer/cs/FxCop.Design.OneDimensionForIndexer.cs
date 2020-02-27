@@ -5,7 +5,7 @@ namespace DesignLibrary
 {
     public class DayOfWeek03
     {
-        string[,] dayOfWeek = {{"Wed", "Thu", "..."}, 
+        string[,] dayOfWeek = {{"Wed", "Thu", "..."},
                                {"Sat", "Sun", "..."}};
                                // ...
 
@@ -20,10 +20,10 @@ namespace DesignLibrary
 
     public class RedesignedDayOfWeek03
     {
-        string[] dayOfWeek = 
+        string[] dayOfWeek =
             {"Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "Mon"};
 
-        int[] daysInPreviousMonth = 
+        int[] daysInPreviousMonth =
             {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30};
 
         public string GetDayOfWeek(int month, int day)

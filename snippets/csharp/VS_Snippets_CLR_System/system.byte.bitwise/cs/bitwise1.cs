@@ -6,14 +6,14 @@ public class Example
 {
    public static void Main()
    {
-      string[] values = { Convert.ToString(12, 16), 
-                          Convert.ToString(123, 16), 
+      string[] values = { Convert.ToString(12, 16),
+                          Convert.ToString(123, 16),
                           Convert.ToString(245, 16) };
-      
+
       byte mask = 0xFE;
       foreach (string value in values) {
          Byte byteValue = Byte.Parse(value, NumberStyles.AllowHexSpecifier);
-         Console.WriteLine("{0} And {1} = {2}", byteValue, mask,  
+         Console.WriteLine("{0} And {1} = {2}", byteValue, mask,
                            byteValue & mask);
       }
    }

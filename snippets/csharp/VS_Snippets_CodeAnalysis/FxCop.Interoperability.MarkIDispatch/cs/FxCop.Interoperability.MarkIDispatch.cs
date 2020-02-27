@@ -22,7 +22,7 @@ namespace InteroperabilityLibrary
    }
 
    [ComSourceInterfaces(
-      "InteroperabilityLibrary.IEventsInterface\0" + 
+      "InteroperabilityLibrary.IEventsInterface\0" +
       "InteroperabilityLibrary.IMoreEventsInterface")]
    public class EventSource
    {

@@ -15,7 +15,7 @@ public class Example
          prop.SetValue(p, "Samuel");
 
       MethodInfo method = t.GetMethod("ToString");
-      Object retVal = method.Invoke(p, null); 
+      Object retVal = method.Invoke(p, null);
       if (retVal != null)
          Console.WriteLine(retVal);
    }

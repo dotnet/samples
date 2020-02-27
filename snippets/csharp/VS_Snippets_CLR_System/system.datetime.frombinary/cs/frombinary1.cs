@@ -8,12 +8,12 @@ public class Example
       DateTime localDate = new DateTime(2010, 3, 14, 2, 30, 0, DateTimeKind.Local);
       long binLocal = localDate.ToBinary();
       if (TimeZoneInfo.Local.IsInvalidTime(localDate))
-         Console.WriteLine("{0} is an invalid time in the {1} zone.", 
-                           localDate, 
+         Console.WriteLine("{0} is an invalid time in the {1} zone.",
+                           localDate,
                            TimeZoneInfo.Local.StandardName);
 
       DateTime localDate2 = DateTime.FromBinary(binLocal);
-      Console.WriteLine("{0} = {1}: {2}", 
+      Console.WriteLine("{0} = {1}: {2}",
                         localDate, localDate2, localDate.Equals(localDate2));
    }
 }

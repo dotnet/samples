@@ -10,12 +10,12 @@ public class Example
       ConsoleColor dftBackColor = Console.BackgroundColor;
       bool continueFlag = true;
       Console.Clear();
-            
-      do { 
+
+      do {
          ConsoleColor newForeColor = ConsoleColor.White;
          ConsoleColor newBackColor = ConsoleColor.Black;
-                  
-         Char foreColorSelection = GetKeyPress("Select Text Color (B for Blue, R for Red, Y for Yellow): ", 
+
+         Char foreColorSelection = GetKeyPress("Select Text Color (B for Blue, R for Red, Y for Yellow): ",
                                               new Char[] { 'B', 'R', 'Y' } );
          switch (foreColorSelection) {
             case 'B':
@@ -29,7 +29,7 @@ public class Example
             case 'Y':
             case 'y':
                newForeColor = ConsoleColor.DarkYellow;
-               break;   
+               break;
          }
          Char backColorSelection = GetKeyPress("Select Background Color (W for White, G for Green, M for Magenta): ",
                                               new Char[] { 'W', 'G', 'M' });
@@ -45,9 +45,9 @@ public class Example
             case 'M':
             case 'm':
                newBackColor = ConsoleColor.Magenta;
-               break;   
+               break;
          }
-         
+
          Console.WriteLine();
          Console.Write("Enter a message to display: ");
          String textToDisplay = Console.ReadLine();
@@ -66,20 +66,20 @@ public class Example
       } while (continueFlag);
    }
 
-   private static Char GetKeyPress(String msg, Char[] validChars) 
+   private static Char GetKeyPress(String msg, Char[] validChars)
    {
       ConsoleKeyInfo keyPressed;
       bool valid = false;
-      
+
       Console.WriteLine();
       do {
          Console.Write(msg);
          keyPressed = Console.ReadKey();
          Console.WriteLine();
-         if (Array.Exists(validChars, ch => ch.Equals(Char.ToUpper(keyPressed.KeyChar))))           
+         if (Array.Exists(validChars, ch => ch.Equals(Char.ToUpper(keyPressed.KeyChar))))
             valid = true;
       } while (! valid);
-      return keyPressed.KeyChar; 
+      return keyPressed.KeyChar;
    }
 }
 // </Snippet1>

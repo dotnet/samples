@@ -15,7 +15,7 @@ static class Func1
       Console.WriteLine(lazyOne.Value);
       Console.WriteLine(lazyTwo.Value);
    }
-      
+
    static int ExpensiveOne()
    {
       Console.WriteLine("\nExpensiveOne() is executing.");
@@ -55,11 +55,11 @@ class LazyValue<T> where T : struct
 /* The example produces the following output:
 
     LazyValue objects have been created.
-    
+
     ExpensiveOne() is executing.
     1
-    
+
     ExpensiveTwo() is executing.
     5
-*/    
+*/
 // </Snippet5>

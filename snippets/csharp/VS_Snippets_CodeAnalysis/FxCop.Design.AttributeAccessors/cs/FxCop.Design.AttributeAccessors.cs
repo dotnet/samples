@@ -6,11 +6,11 @@ namespace DesignLibrary
 // Violates rule: DefineAccessorsForAttributeArguments.
 
    [AttributeUsage(AttributeTargets.All)]
-   public sealed class BadCustomAttribute :Attribute 
+   public sealed class BadCustomAttribute :Attribute
    {
       string data;
 
-      // Missing the property that corresponds to 
+      // Missing the property that corresponds to
       // the someStringData parameter.
 
       public BadCustomAttribute(string someStringData)
@@ -22,7 +22,7 @@ namespace DesignLibrary
 // Satisfies rule: Attributes should have accessors for all arguments.
 
    [AttributeUsage(AttributeTargets.All)]
-   public sealed class GoodCustomAttribute :Attribute 
+   public sealed class GoodCustomAttribute :Attribute
    {
       string data;
 
@@ -35,7 +35,7 @@ namespace DesignLibrary
 
       public string SomeStringData
       {
-         get 
+         get
          {
             return data;
          }

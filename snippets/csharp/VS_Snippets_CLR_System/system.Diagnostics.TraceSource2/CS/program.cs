@@ -87,7 +87,7 @@ namespace Testing
                     "SourceFilter should let this message through on the console trace listener.");
                 //</Snippet28>
                 ts.Listeners["console"].Filter = null;
-                // Use the TraceData method. 
+                // Use the TraceData method.
                 //<Snippet30>
                 ts.TraceData(TraceEventType.Warning, 7, new object());
                 //</Snippet30>

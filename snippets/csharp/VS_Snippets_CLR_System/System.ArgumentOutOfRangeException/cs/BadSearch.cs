@@ -6,12 +6,12 @@ public class Example
 {
    public static void Main()
    {
-      var list = new List<String>(); 
+      var list = new List<String>();
       list.AddRange( new String[] { "A", "B", "C" } );
       // Get the index of the element whose value is "Z".
       int index = list.FindIndex((new StringSearcher("Z")).FindEquals);
       try {
-         Console.WriteLine("Index {0} contains '{1}'", index, list[index]); 
+         Console.WriteLine("Index {0} contains '{1}'", index, list[index]);
       }
       catch (ArgumentOutOfRangeException e) {
          Console.WriteLine(e.Message);
@@ -22,15 +22,15 @@ public class Example
 internal class StringSearcher
 {
    String value;
-   
+
    public StringSearcher(String value)
    {
       this.value = value;
    }
-   
-   public bool FindEquals(String s) 
+
+   public bool FindEquals(String s)
    {
-      return s.Equals(value, StringComparison.InvariantCulture); 
+      return s.Equals(value, StringComparison.InvariantCulture);
    }
 }
 // The example displays the following output:
@@ -42,13 +42,13 @@ public class Example2
 {
    public static void Test()
    {
-      var list = new List<String>(); 
+      var list = new List<String>();
       list.AddRange( new String[] { "A", "B", "C" } );
       // <Snippet7>
       // Get the index of the element whose value is "Z".
       int index = list.FindIndex((new StringSearcher("Z")).FindEquals);
       if (index >= 0)
-         Console.WriteLine("'Z' is found at index {0}", list[index]); 
+         Console.WriteLine("'Z' is found at index {0}", list[index]);
       // </Snippet7>
    }
 }

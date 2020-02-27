@@ -21,7 +21,7 @@ namespace UsageLibrary
          baseValue = info.GetInt32("baseValue");
       }
 
-      [SecurityPermissionAttribute(SecurityAction.Demand, 
+      [SecurityPermissionAttribute(SecurityAction.Demand,
           SerializationFormatter = true)]
       public virtual void GetObjectData(
          SerializationInfo info, StreamingContext context)

@@ -10,7 +10,7 @@ namespace UsageLibrary
     {
         // Violates rule: DoNotDecreaseInheritedMemberVisibility.
         // The compiler returns an error if this is overridden instead of new.
-        private new void BasePublicMethod(int argument1){}       
+        private new void BasePublicMethod(int argument1){}
     }
 }
 //</Snippet1>

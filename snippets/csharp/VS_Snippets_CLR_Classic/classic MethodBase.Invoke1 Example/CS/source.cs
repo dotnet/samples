@@ -10,7 +10,7 @@ public class MagicClass
     {
         magicBaseValue = 9;
     }
-    
+
     public int ItsMagic(int preMagic)
     {
         return preMagic * magicBaseValue;

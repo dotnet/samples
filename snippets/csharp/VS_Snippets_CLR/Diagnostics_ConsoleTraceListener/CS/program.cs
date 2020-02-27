@@ -1,5 +1,5 @@
 ﻿//<Snippet1>
-// Define the TRACE directive, which enables trace output to the 
+// Define the TRACE directive, which enables trace output to the
 // Trace.Listeners collection. Typically, this directive is defined
 // as a compilation argument.
 #define TRACE
@@ -9,7 +9,7 @@ using System.Diagnostics;
 public class ConsoleTraceSample
 {
 
-    // Define a simple method to write details about the current executing 
+    // Define a simple method to write details about the current executing
     // environment to the trace listener collection.
     public static void WriteEnvironmentInfoToTrace()
     {
@@ -27,7 +27,7 @@ public class ConsoleTraceSample
         Trace.WriteLine("CLR runtime version: " + System.Environment.Version.ToString());
         Trace.WriteLine("Command line: " + System.Environment.CommandLine);
 
-        // Enumerate the trace listener collection and 
+        // Enumerate the trace listener collection and
         // display details about each configured trace listener.
         Trace.WriteLine("Number of configured trace listeners = " + Trace.Listeners.Count.ToString());
 
@@ -71,26 +71,26 @@ public class ConsoleTraceSample
             // trace output to the standard output stream.
             consoleTracer = new ConsoleTraceListener();
         }
-        // Set the name of the trace listener, which helps identify this 
+        // Set the name of the trace listener, which helps identify this
         // particular instance within the trace listener collection.
         consoleTracer.Name = "mainConsoleTracer";
 
         // Write the initial trace message to the console trace listener.
         consoleTracer.WriteLine(DateTime.Now.ToString()+" ["+consoleTracer.Name+"] - Starting output to trace listener.");
 
-        // Add the new console trace listener to 
+        // Add the new console trace listener to
         // the collection of trace listeners.
         Trace.Listeners.Add(consoleTracer);
         // </Snippet2>
 
-        // Call a local method, which writes information about the current 
+        // Call a local method, which writes information about the current
         // execution environment to the configured trace listeners.
         WriteEnvironmentInfoToTrace();
 
         // Write the final trace message to the console trace listener.
         consoleTracer.WriteLine(DateTime.Now.ToString()+" ["+consoleTracer.Name+"] - Ending output to trace listener.");
 
-        // Flush any pending trace messages, remove the 
+        // Flush any pending trace messages, remove the
         // console trace listener from the collection,
         // and close the console trace listener.
         Trace.Flush();

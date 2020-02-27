@@ -8,12 +8,12 @@ namespace DesignLibrary
       string someName;
 
       // Violates rule PropertiesShouldNotBeWriteOnly.
-      public string Name 
-      { 
-         set 
-         { 
-            someName = value; 
-         } 
+      public string Name
+      {
+         set
+         {
+            someName = value;
+         }
       }
    }
 
@@ -21,16 +21,16 @@ namespace DesignLibrary
    {
       string someName;
 
-      public string Name 
-      { 
-         get 
-         { 
-            return someName; 
-         } 
-         set 
-         { 
-            someName = value; 
-         } 
+      public string Name
+      {
+         get
+         {
+            return someName;
+         }
+         set
+         {
+            someName = value;
+         }
       }
    }
 }

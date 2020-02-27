@@ -5,23 +5,23 @@ using System;
 class GetBytesDoubleDemo
 {
     const string formatter = "{0,25:E16}{1,30}";
- 
+
     // Convert a double argument to a byte array and display it.
     public static void GetBytesDouble( double argument )
     {
         byte[ ] byteArray = BitConverter.GetBytes( argument );
-        Console.WriteLine( formatter, argument, 
+        Console.WriteLine( formatter, argument,
             BitConverter.ToString( byteArray ) );
     }
-       
+
     public static void Main( )
     {
-        Console.WriteLine( 
+        Console.WriteLine(
             "This example of the BitConverter.GetBytes( double ) " +
             "\nmethod generates the following output.\n" );
         Console.WriteLine( formatter, "double", "byte array" );
         Console.WriteLine( formatter, "------", "----------" );
-          
+
         // Convert double values and display the results.
         GetBytesDouble( 0.0 );
         GetBytesDouble( 1.0 );

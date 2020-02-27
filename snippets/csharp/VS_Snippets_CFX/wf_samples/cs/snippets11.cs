@@ -38,7 +38,7 @@ namespace WF_Snippets
             //<snippet140>
             workflowRuntime.WorkflowCompleted += OnWorkflowCompleted;
             //</snippet140>
-            
+
             //<snippet141>
             workflowRuntime.WorkflowAborted += OnWorkflowAborted;
             //</snippet141>
@@ -67,7 +67,7 @@ namespace WF_Snippets
             //<snippet149>
             this.CompensateRefund.TargetActivityName = "OrderScope";
             //</snippet149>
-            // <snippet150> 
+            // <snippet150>
             //<snippet151>
             this.NoProductFault.FaultType = typeof(DiscontinuedProductException);
             //</snippet151>
@@ -75,7 +75,7 @@ namespace WF_Snippets
             this.NoProductFault.SetBinding(System.Workflow.ComponentModel.ThrowActivity.FaultProperty, ((System.Workflow.ComponentModel.ActivityBind)(activitybind1)));
             // </snippet150>
 
-            // <snippet152> 
+            // <snippet152>
             this.NoProductFaultHandler.Activities.Add(this.DiscontinuedProduct);
             this.NoProductFaultHandler.Activities.Add(this.CompensateRefund);
             this.NoProductFaultHandler.FaultType = typeof(DiscontinuedProductException);
@@ -93,7 +93,7 @@ namespace WF_Snippets
             this.OrderScope.TransactionOptions.IsolationLevel = System.Transactions.IsolationLevel.Serializable;
             //</snippet154>
 
-            // <snippet155> 
+            // <snippet155>
             this.ReceiverOrder.Name = "ReceiverOrder";
             this.ReceiverOrder.ExecuteCode += new System.EventHandler(this.ReceiveOrderHandler);
             // </snippet155>
@@ -131,18 +131,18 @@ namespace WF_Snippets
             this.Car = new System.Workflow.Activities.CodeActivity();
             this.Airline = new System.Workflow.Activities.CodeActivity();
             // </snippet157>
-            // 
+            //
             // BookingCag
             //
-            // <snippet159> 
+            // <snippet159>
             this.BookingCag.Activities.Add(this.Car);
             this.BookingCag.Activities.Add(this.Airline);
             this.BookingCag.Name = "BookingCag";
             codecondition1.Condition += new System.EventHandler<System.Workflow.Activities.ConditionalEventArgs>(this.CarCondition);
             // </snippet159>
-            // 
+            //
             // Car
-            // 
+            //
             // <snippet160>
             this.Car.Name = "Car";
             this.Car.ExecuteCode += new System.EventHandler(this.Car_ExecuteCode);
@@ -150,15 +150,15 @@ namespace WF_Snippets
             codecondition2.Condition += new System.EventHandler<System.Workflow.Activities.ConditionalEventArgs>(this.AirlineCondition);
             // </snippet158>
             // </snippet160>
-            // 
+            //
             // Airline
-            // 
+            //
             this.Airline.Name = "Airline";
             this.Airline.ExecuteCode += new System.EventHandler(this.Airline_ExecuteCode);
             this.Airline.SetValue(System.Workflow.Activities.ConditionedActivityGroup.WhenConditionProperty, codecondition2);
-            // 
+            //
             // SimpleConditionedActivityGroupWorkflow
-            // 
+            //
             this.Activities.Add(this.BookingCag);
             this.Name = "SimpleConditionedActivityGroupWorkflow";
             this.CanModifyActivities = false;
@@ -222,15 +222,15 @@ namespace WF_Snippets
             this.CanModifyActivities = true;
             System.Workflow.Activities.Rules.RuleSetReference rulesetreference1 = new System.Workflow.Activities.Rules.RuleSetReference();
             this.advancedDiscountPolicy = new System.Workflow.Activities.PolicyActivity();
-            // 
+            //
             // advancedDiscountPolicy
-            // 
+            //
             this.advancedDiscountPolicy.Name = "advancedDiscountPolicy";
             rulesetreference1.RuleSetName = "DiscountRuleSet";
             this.advancedDiscountPolicy.RuleSetReference = rulesetreference1;
-            // 
+            //
             // DiscountPolicyWorkflow
-            // 
+            //
             this.Activities.Add(this.advancedDiscountPolicy);
             this.Name = "DiscountPolicyWorkflow";
             this.Completed += new System.EventHandler(this.WorkflowCompleted);
@@ -261,16 +261,16 @@ namespace WF_Snippets
             System.Workflow.ComponentModel.ActivityBind activityBind1 = new System.Workflow.ComponentModel.ActivityBind();
             this.SampleReplicatorChildActivity1 = new SampleReplicatorChildActivity();
             this.ReplicatorWork = new System.Workflow.Activities.ReplicatorActivity();
-            // 
+            //
             // SampleReplicatorChildActivity1
-            // 
+            //
             this.SampleReplicatorChildActivity1.InstanceData = null;
             this.SampleReplicatorChildActivity1.Name = "SampleReplicatorChildActivity1";
             activityBind1.Name = "SimpleReplicatorWorkflow";
             activityBind1.Path = "ChildData";
-            // 
+            //
             // ReplicatorWork
-            // 
+            //
             // <snippet167>
             this.ReplicatorWork.Activities.Add(this.SampleReplicatorChildActivity1);
             //<snippet168>
@@ -281,9 +281,9 @@ namespace WF_Snippets
             this.ReplicatorWork.SetBinding(System.Workflow.Activities.ReplicatorActivity.InitialChildDataProperty, ((System.Workflow.ComponentModel.ActivityBind)(activityBind1)));
             // </snippet167>
             // </snippet166>
-            // 
+            //
             // SimpleReplicatorWorkflow
-            // 
+            //
             this.Activities.Add(this.ReplicatorWork);
             this.Name = "SimpleReplicatorWorkflow";
             this.CanModifyActivities = false;
@@ -294,7 +294,7 @@ namespace WF_Snippets
     }
 
 // </snippet165>
-    class SampleReplicatorChildActivity : Activity 
+    class SampleReplicatorChildActivity : Activity
     {
         public string InstanceData = "";
     }
@@ -364,27 +364,27 @@ namespace WF_Snippets
             this.terminate = new System.Workflow.ComponentModel.TerminateActivity();
             // </snippet174>
             // <snippet175>
-            // 
+            //
             // suspend
-            // 
+            //
             this.suspend.Error = null;
             this.suspend.Name = "suspend";
-            // 
+            //
             // ConsoleMessage
-            // 
+            //
             this.consoleMessage.Name = "consoleMessage";
             this.consoleMessage.ExecuteCode += new System.EventHandler(this.OnConsoleMessage);
-            // 
+            //
             // terminate
-            // 
+            //
             //<snippet176>
             this.terminate.Error = null;
             //</snippet176>
             this.terminate.Name = "terminate";
             // </snippet175>
-            // 
+            //
             // SuspendAndTerminateWorkflow
-            // 
+            //
             this.Activities.Add(this.suspend);
             this.Activities.Add(this.consoleMessage);
             this.Activities.Add(this.terminate);
@@ -436,14 +436,14 @@ namespace WF_Snippets
             this.throwActivity1 = new System.Workflow.ComponentModel.ThrowActivity();
             activitybind1.Name = "ThrowWorkflow";
             activitybind1.Path = "ThrownException";
-            // 
+            //
             // throwActivity1
-            // 
+            //
             this.throwActivity1.Name = "throwActivity1";
             this.throwActivity1.SetBinding(System.Workflow.ComponentModel.ThrowActivity.FaultProperty, ((System.Workflow.ComponentModel.ActivityBind)(activitybind1)));
-            // 
+            //
             // ThrowWorkflow
-            // 
+            //
             this.Activities.Add(this.throwActivity1);
             this.Name = "ThrowWorkflow";
             this.CanModifyActivities = false;
@@ -478,7 +478,7 @@ namespace WF_Snippets
         void Container1()
         {
             System.Workflow.Activities.CodeCondition codecondition1 = new System.Workflow.Activities.CodeCondition();
-            
+
             // <snippet180>
             // <snippet181>
             // <snippet182>
@@ -488,29 +488,29 @@ namespace WF_Snippets
             this.Sequence2 = new System.Workflow.Activities.SequenceActivity();
             this.ConsoleMessage1 = new System.Workflow.Activities.CodeActivity();
             this.ConsoleMessage2 = new System.Workflow.Activities.CodeActivity();
-            // 
+            //
             // WhileLoop
-            // 
+            //
             this.WhileLoop.Activities.Add(this.Parallel);
             codecondition1.Condition += new System.EventHandler<System.Workflow.Activities.ConditionalEventArgs>(this.WhileCondition);
             this.WhileLoop.Condition = codecondition1;
             this.WhileLoop.Name = "WhileLoop";
             // </snippet182>
-            // 
+            //
             // Parallel
-            // 
+            //
             this.Parallel.Activities.Add(this.Sequence1);
             this.Parallel.Activities.Add(this.Sequence2);
             this.Parallel.Name = "Parallel";
             // </snippet181>
-            // 
+            //
             // Sequence1
-            // 
+            //
             this.Sequence1.Activities.Add(this.ConsoleMessage1);
             this.Sequence1.Name = "Sequence1";
-            // 
+            //
             // Sequence2
-            // 
+            //
             this.Sequence2.Activities.Add(this.ConsoleMessage2);
             this.Sequence2.Name = "Sequence2";
             // </snippet180>

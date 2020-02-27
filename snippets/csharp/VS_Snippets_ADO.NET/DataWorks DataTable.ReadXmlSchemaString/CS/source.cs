@@ -58,7 +58,7 @@ class Program
         Console.WriteLine(label);
         foreach (DataColumn column in table.Columns)
         {
-            Console.WriteLine("\t{0}: {1}", column.ColumnName, 
+            Console.WriteLine("\t{0}: {1}", column.ColumnName,
                 column.DataType.Name);
         }
         Console.WriteLine();

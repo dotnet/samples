@@ -10,7 +10,7 @@ namespace UsageLibrary
       private NativeMethods() {}
 
       // The following method definition violates the rule.
-      [DllImport("kernel32.dll", CharSet = CharSet.Unicode, 
+      [DllImport("kernel32.dll", CharSet = CharSet.Unicode,
           SetLastError = true)]
       internal static extern int ExpandEnvironmentStrings(
          string lpSrc, StringBuilder lpDst, int nSize);
@@ -25,8 +25,8 @@ namespace UsageLibrary
 
          // Call the unmanaged method.
          NativeMethods.ExpandEnvironmentStrings(
-            environmentVariable, 
-            expandedVariable, 
+            environmentVariable,
+            expandedVariable,
             expandedVariable.Capacity);
 
          // Call the equivalent managed method.

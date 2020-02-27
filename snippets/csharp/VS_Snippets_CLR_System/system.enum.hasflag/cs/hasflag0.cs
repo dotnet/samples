@@ -27,10 +27,10 @@ public class Example
          else if (petsInFamily.HasFlag(Pets.Dog))
             familiesWithDog++;
       }
-      Console.WriteLine("{0} of {1} families in the sample have no pets.", 
-                        familiesWithoutPets, petsInFamilies.Length);   
-      Console.WriteLine("{0} of {1} families in the sample have a dog.", 
-                        familiesWithDog, petsInFamilies.Length);   
+      Console.WriteLine("{0} of {1} families in the sample have no pets.",
+                        familiesWithoutPets, petsInFamilies.Length);
+      Console.WriteLine("{0} of {1} families in the sample have a dog.",
+                        familiesWithDog, petsInFamilies.Length);
    }
 }
 // The example displays the following output:

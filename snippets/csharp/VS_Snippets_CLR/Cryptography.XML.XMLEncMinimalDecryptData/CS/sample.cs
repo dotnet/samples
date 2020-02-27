@@ -24,7 +24,7 @@ class Program
             return;
         }
 
-        // Create a new TripleDES key. 
+        // Create a new TripleDES key.
         TripleDESCryptoServiceProvider tDESkey = new TripleDESCryptoServiceProvider();
 
         try
@@ -59,7 +59,7 @@ class Program
 
     public static void Encrypt(XmlDocument Doc, string ElementToEncrypt, SymmetricAlgorithm Alg)
     {
-        // Check the arguments.  
+        // Check the arguments.
         if (Doc == null)
             throw new ArgumentNullException("Doc");
         if (ElementToEncrypt == null)
@@ -81,8 +81,8 @@ class Program
         }
 
         //////////////////////////////////////////////////
-        // Create a new instance of the EncryptedXml class 
-        // and use it to encrypt the XmlElement with the 
+        // Create a new instance of the EncryptedXml class
+        // and use it to encrypt the XmlElement with the
         // symmetric key.
         //////////////////////////////////////////////////
 
@@ -98,7 +98,7 @@ class Program
         EncryptedData edElement = new EncryptedData();
         edElement.Type = EncryptedXml.XmlEncElementUrl;
 
-        // Create an EncryptionMethod element so that the 
+        // Create an EncryptionMethod element so that the
         // receiver knows which algorithm to use for decryption.
         // Determine what kind of algorithm is being used and
         // supply the appropriate URL to the EncryptionMethod element.
@@ -136,7 +136,7 @@ class Program
 
         edElement.EncryptionMethod = new EncryptionMethod(encryptionMethod);
 
-        // Add the encrypted element data to the 
+        // Add the encrypted element data to the
         // EncryptedData object.
         edElement.CipherData.CipherValue = encryptedElement;
 
@@ -150,7 +150,7 @@ class Program
 
     public static void Decrypt(XmlDocument Doc, SymmetricAlgorithm Alg)
     {
-        // Check the arguments.  
+        // Check the arguments.
         if (Doc == null)
             throw new ArgumentNullException("Doc");
         if (Alg == null)

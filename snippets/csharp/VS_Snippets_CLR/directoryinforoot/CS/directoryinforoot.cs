@@ -2,9 +2,9 @@
 using System;
 using System.IO;
 
-public class MoveToTest 
+public class MoveToTest
 {
-    public static void Main() 
+    public static void Main()
     {
 
         // Make a reference to a directory.

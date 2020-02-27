@@ -8,7 +8,7 @@ public class Sample
   public static void Main()
   {
 
-    //Define the order data.  They will be converted to string 
+    //Define the order data.  They will be converted to string
     //before being written out.
     Int16 custID = 32632;
     String orderID = "367A54";
@@ -28,7 +28,7 @@ public class Sample
 
     //Write the order time.
     writer.WriteAttributeString("time", XmlConvert.ToString(orderDate, "HH:mm:ss"));
-    
+
     //Write the order data.
     writer.WriteElementString("orderID", orderID);
     writer.WriteElementString("custID", XmlConvert.ToString(custID));
@@ -36,9 +36,9 @@ public class Sample
 
     //Write the close tag for the root element
     writer.WriteEndElement();
-             
+
     //Write the XML and close the writer
-    writer.Close();  
+    writer.Close();
   }
 }
    // </Snippet1>

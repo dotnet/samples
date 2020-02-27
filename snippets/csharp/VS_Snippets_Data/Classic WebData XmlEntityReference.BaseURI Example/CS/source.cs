@@ -10,7 +10,7 @@ public class Sample
     //Create the XmlDocument.
     XmlDocument doc = new XmlDocument();
     doc.Load("http://localhost/uri.xml");
-                     
+
     //Display information on the entity reference node.
     XmlEntityReference entref = (XmlEntityReference) doc.DocumentElement.LastChild.FirstChild;
     Console.WriteLine("Name of the entity reference:  {0}", entref.Name);

@@ -13,7 +13,7 @@ using System.Text;
    SecurityAction.RequestMinimum, Execution = true)]
 namespace Example
 {
-    //<snippet1>    
+    //<snippet1>
     public class Test
     {
         private void WriteObjectWithInstance(XmlObjectSerializer xm, Company graph,

@@ -22,15 +22,15 @@ public class Example
          Console.Write(number.ToString("X2") + "   ");
          // Display value with four hexadecimal digits.
          Console.WriteLine(number.ToString("X4"));
-      }   
+      }
       // The example displays the following output:
       //       0    -->   000   00   0000
       //       16   -->   016   10   0010
       //       104  -->   104   68   0068
-      //       213  -->   213   D5   00D5      
+      //       213  -->   213   D5   00D5
       // </Snippet1>
    }
-   
+
    private static void CallConvert()
    {
       // <Snippet2>
@@ -42,13 +42,13 @@ public class Example
                            number, Convert.ToString(number, 2),
                            Convert.ToString(number, 8),
                            Convert.ToString(number, 16));
-      }      
+      }
       // The example displays the following output:
       //       Value     Binary   Octal     Hex
       //           0          0       0       0
       //          16      10000      20      10
       //         104    1101000     150      68
-      //         213   11010101     325      d5      
+      //         213   11010101     325      d5
       // </Snippet2>
    }
 }

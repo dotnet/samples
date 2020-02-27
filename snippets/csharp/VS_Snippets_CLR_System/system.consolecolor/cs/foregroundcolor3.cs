@@ -3,7 +3,7 @@ using System;
 
 class Example
 {
-   public static void Main() 
+   public static void Main()
    {
       // Get an array with the values of ConsoleColor enumeration members.
       ConsoleColor[] colors = (ConsoleColor[]) ConsoleColor.GetValues(typeof(ConsoleColor));
@@ -16,24 +16,24 @@ class Example
                         currentBackground);
       foreach (var color in colors) {
          if (color == currentBackground) continue;
-         
+
          Console.ForegroundColor = color;
          Console.WriteLine("   The foreground color is {0}.", color);
       }
       Console.WriteLine();
       // Restore the foreground color.
       Console.ForegroundColor = currentForeground;
-      
+
       // Display each background color except the one that matches the current foreground color.
       Console.WriteLine("All the background colors except {0}, the foreground color:",
                         currentForeground);
       foreach (var color in colors) {
          if (color == currentForeground) continue;
-         
+
          Console.BackgroundColor = color;
          Console.WriteLine("   The background color is {0}.", color);
       }
-      
+
       // Restore the original console colors.
       Console.ResetColor();
       Console.WriteLine("\nOriginal colors restored...");
@@ -56,7 +56,7 @@ class Example
 //       The foreground color is Magenta.
 //       The foreground color is Yellow.
 //       The foreground color is White.
-//    
+//
 //    All the background colors except White, the foreground color:
 //       The background color is Black.
 //       The background color is DarkBlue.
@@ -73,6 +73,6 @@ class Example
 //       The background color is Red.
 //       The background color is Magenta.
 //       The background color is Yellow.
-//    
+//
 //    Original colors restored...
 //</snippet1>

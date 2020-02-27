@@ -24,7 +24,7 @@ class PerfCounterCatCtorMod
             // Ignore the exception from non-supplied arguments.
         }
 
-        // Create a PerformanceCounterCategory object using 
+        // Create a PerformanceCounterCategory object using
         // the appropriate constructor.
         if (categoryName.Length==0)
         {

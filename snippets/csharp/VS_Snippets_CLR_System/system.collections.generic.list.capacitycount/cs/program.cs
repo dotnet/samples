@@ -1,7 +1,7 @@
 ﻿//<snippet1>
 using System;
 using System.Collections.Generic;
-// Simple business object. A PartId is used to identify a part 
+// Simple business object. A PartId is used to identify a part
 // but the part name be different for the same Id.
 public class Part : IEquatable<Part>
 {
@@ -64,7 +64,7 @@ public class Example
         Console.WriteLine("Count: {0}", parts.Count);
     }
     /*
-     This code example produces the following output. 
+     This code example produces the following output.
             Capacity: 0
 
             ID: 1234   Name: crank arm

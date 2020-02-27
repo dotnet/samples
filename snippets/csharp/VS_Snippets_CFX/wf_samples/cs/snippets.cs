@@ -262,7 +262,7 @@ class snippets
         //<snippet17>
         // Create a new workflow runtime
         WorkflowRuntime workflowRuntime = new WorkflowRuntime();
-        // Create a new instance of the out-of-box SqlWorkflowPersistenceService.  
+        // Create a new instance of the out-of-box SqlWorkflowPersistenceService.
         // A persistence service is necessary in order to get workflows from the runtime.
         SqlWorkflowPersistenceService persistenceService =
             new SqlWorkflowPersistenceService(
@@ -440,7 +440,7 @@ class snippets
         // </snippet28>
 
         protected override void OnExecuteDesignerAction(DesignerAction designerAction)
-        {            
+        {
         }
     }
     // <snippet30>
@@ -813,7 +813,7 @@ class snippets
                     finalIdentifier = string.Format("{0}{1}", baseIdentifier, ++index);
                 }
 
-                // add new identifier to collection 
+                // add new identifier to collection
                 identifiers.Add(finalIdentifier);
                 activity.Name = finalIdentifier;
             }
@@ -1021,7 +1021,7 @@ class snippets
         {
         }
         void changeService_ComponentRename(object sender, ComponentRenameEventArgs e)
-        { 
+        {
         }
         public string GetCurrentXoml()
         {
@@ -1353,7 +1353,7 @@ class snippets
 
         protected override bool OnMouseDown(MouseEventArgs eventArgs)
         {
-            // Save mouse position and allow other components to process 
+            // Save mouse position and allow other components to process
             // this event by not returning true.
             mouseDown = true;
             this.positionXOld = eventArgs.X;

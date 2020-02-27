@@ -3,7 +3,7 @@
 // <Snippet1>
 enum Shade
 {
-    White = 0, Gray = 1, Grey = 1, Black = 2 
+    White = 0, Gray = 1, Grey = 1, Black = 2
 }
 // </Snippet1>
 
@@ -16,13 +16,13 @@ public class Example
    }
 
    private static void CallDefault()
-   {   
+   {
       // <Snippet2>
-      string shadeName = ((Shade) 1).ToString();      
+      string shadeName = ((Shade) 1).ToString();
       // </Snippet2>
       Console.WriteLine(shadeName);
    }
-   
+
    private static void CallWithFormatString()
    {
       // <Snippet3>

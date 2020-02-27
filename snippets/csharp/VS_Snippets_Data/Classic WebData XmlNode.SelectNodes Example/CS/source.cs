@@ -14,7 +14,7 @@ public class Sample {
     XmlNode root = doc.DocumentElement;
 
     nodeList=root.SelectNodes("descendant::book[author/last-name='Austen']");
- 
+
     //Change the price on the books.
     foreach (XmlNode book in nodeList)
     {

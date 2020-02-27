@@ -8,15 +8,15 @@ namespace DesignLibrary
         IntPtr unmanagedResource;
         bool disposed = false;
 
-        public UnmanagedResources() 
+        public UnmanagedResources()
         {
             // Allocate the unmanaged resource ...
         }
 
-        public void Dispose() 
+        public void Dispose()
         {
             Dispose(true);
-            GC.SuppressFinalize(this); 
+            GC.SuppressFinalize(this);
         }
 
         protected virtual void Dispose(bool disposing)

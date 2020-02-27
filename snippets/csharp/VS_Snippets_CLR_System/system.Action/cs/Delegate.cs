@@ -7,7 +7,7 @@ public delegate void ShowValue();
 public class Name
 {
    private string instanceName;
-   
+
    public Name(string name)
    {
       this.instanceName = name;

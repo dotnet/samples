@@ -2,9 +2,9 @@
 using System;
 using System.Globalization;
 
-class Sample 
+class Sample
 {
-    public static void Main() 
+    public static void Main()
     {
         // Initialize a DateTime object.
         Console.WriteLine("Initialize the DateTime object to May 16, 2001 3:02:15 AM.\n");

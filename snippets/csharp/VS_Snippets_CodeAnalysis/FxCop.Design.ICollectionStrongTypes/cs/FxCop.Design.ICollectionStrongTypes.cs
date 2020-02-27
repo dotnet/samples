@@ -3,9 +3,9 @@ using System;
 using System.Collections;
 namespace DesignLibrary
 {
-   
+
    public class ExceptionCollection : ICollection
-   {   
+   {
       private ArrayList data;
 
       ExceptionCollection()
@@ -24,11 +24,11 @@ namespace DesignLibrary
       {
          ((ICollection)this).CopyTo(array, index);
       }
-   
+
       // Implement the rest of the ICollection members.
       public int Count
       {
-        get 
+        get
         {
            return data.Count;
         }
@@ -36,17 +36,17 @@ namespace DesignLibrary
 
       public object SyncRoot
       {
-         get 
+         get
         {
-           return this; 
+           return this;
         }
       }
 
       public bool IsSynchronized
       {
-         get 
+         get
          {
-            return false; 
+            return false;
          }
       }
 

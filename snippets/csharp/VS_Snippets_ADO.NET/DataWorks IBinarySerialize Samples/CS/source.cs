@@ -32,7 +32,7 @@ static void Main(string [] args)
 
     Console.WriteLine("String value: " + temp.StringValue);
     Console.WriteLine("Double value: " + temp.DoubleValue);
- 
+
     r.Close();
     fs.Close();
 }
@@ -83,10 +83,10 @@ public void Read(System.IO.BinaryReader r)
 //    Bytes 0 - 19: string text, padded to the right with null characters
 //    Bytes 20+: Double value
 public void Write(System.IO.BinaryWriter w)
-{        
+{
     int maxStringSize = 20;
     string stringValue = "The value of PI: ";
-    string paddedString; 
+    string paddedString;
     double value = 3.14159;
 
     // Pad the string from the right with null characters.

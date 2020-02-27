@@ -3,7 +3,7 @@ using System;
 using System.IO;
 using System.Xml;
 
-public class Sample 
+public class Sample
 {
   public static void Main()
   {
@@ -16,11 +16,11 @@ public class Sample
        doc.LoadXml("<!DOCTYPE book [<!ENTITY h 'harcover'>]>" +
                    "<book genre='novel' misc='sale-item &h; 1987'>" +
                    "</book>");
-        
-       //Create the reader. 
+
+       //Create the reader.
        reader = new XmlNodeReader(doc);
 
-       //Read the misc attribute. The attribute is parsed into multiple 
+       //Read the misc attribute. The attribute is parsed into multiple
        //text and entity reference nodes.
        reader.MoveToContent();
        reader.MoveToAttribute("misc");
@@ -30,9 +30,9 @@ public class Sample
             Console.WriteLine("{0} {1}", reader.NodeType, reader.Name);
           else
              Console.WriteLine("{0} {1}", reader.NodeType, reader.Value);
-        } 
-     } 
-     finally 
+        }
+     }
+     finally
      {
         if (reader != null)
           reader.Close();

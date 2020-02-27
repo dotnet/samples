@@ -11,7 +11,7 @@ namespace ToFileTime
 			string filePath = System.Console.ReadLine();
 
 			if (System.IO.File.Exists(filePath)) {
-				System.DateTime fileCreationDateTime = 
+				System.DateTime fileCreationDateTime =
 					System.IO.File.GetCreationTime(filePath);
 
 				long fileCreationFileTime = fileCreationDateTime.ToFileTime();
@@ -19,7 +19,7 @@ namespace ToFileTime
 				System.Console.WriteLine("{0} in file time is {1}.",
 										 fileCreationDateTime,
 										 fileCreationFileTime);
-			} 
+			}
 			else {
 				System.Console.WriteLine("{0} is an invalid file", filePath);
 			}

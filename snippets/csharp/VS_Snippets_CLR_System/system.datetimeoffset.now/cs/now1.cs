@@ -5,23 +5,23 @@ public class Example
 {
    public static void Main()
    {
-      String[] fmtStrings = { "d", "D", "f", "F", "g", "G", "M", 
+      String[] fmtStrings = { "d", "D", "f", "F", "g", "G", "M",
                               "R", "s", "t", "T", "u", "y" };
-      
+
       DateTimeOffset value = DateTimeOffset.Now;
       // Display date in default format.
       Console.WriteLine(value);
       Console.WriteLine();
-            
+
       // Display date using each of the specified formats.
       foreach (var fmtString in fmtStrings)
-         Console.WriteLine("{0} --> {1}", 
+         Console.WriteLine("{0} --> {1}",
                            fmtString, value.ToString(fmtString));
    }
 }
 // The example displays output similar to the following:
 //    11/19/2012 10:57:11 AM -08:00
-//    
+//
 //    d --> 11/19/2012
 //    D --> Monday, November 19, 2012
 //    f --> Monday, November 19, 2012 10:57 AM

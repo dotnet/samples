@@ -13,7 +13,7 @@ public class Example
    }
 }
 // The example displays the following output:
-//    Unhandled Exception: System.EntryPointNotFoundException: Unable to find 
+//    Unhandled Exception: System.EntryPointNotFoundException: Unable to find
 //    an entry point named 'Double' in DLL '.\TestDll.dll'.
 //       at Example.Double(Int32 number)
 //       at Example.Main()

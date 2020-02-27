@@ -16,8 +16,8 @@ class Program
     private static void UpdateDemographics(Int32 customerID,
         string demoXml, string connectionString)
     {
-        // Update the demographics for a store, which is stored 
-        // in an xml column. 
+        // Update the demographics for a store, which is stored
+        // in an xml column.
         string commandText = "UPDATE Sales.Store SET Demographics = @demographics "
             + "WHERE CustomerID = @ID;";
 
@@ -46,7 +46,7 @@ class Program
     // </Snippet1>
     static private string GetConnectionString()
     {
-        // To avoid storing the connection string in your code, 
+        // To avoid storing the connection string in your code,
         // you can retrieve it from a configuration file.
         return "Data Source=(local);Initial Catalog=AdventureWorks;"
             + "Integrated Security=SSPI";

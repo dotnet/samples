@@ -18,7 +18,7 @@ namespace UriTemplateTableSnippets
 
             //Create a series of templates
             UriTemplate weatherByCity  = new UriTemplate("weather/{state}/{city}");
-            UriTemplate weatherByCountry = new UriTemplate("weather/{country}/{village}");       
+            UriTemplate weatherByCountry = new UriTemplate("weather/{country}/{village}");
             UriTemplate weatherByState = new UriTemplate("weather/{state}");
             UriTemplate traffic = new UriTemplate("traffic/*");
             UriTemplate wildcard = new UriTemplate("*");

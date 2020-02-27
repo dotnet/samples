@@ -2,15 +2,15 @@
 using System;
 
 namespace Samples
-{    
-    // Violates this rule    
-    [Flags]        
+{
+    // Violates this rule
+    [Flags]
     public enum Color
-    { 
-        None    = 0, 
-        Red     = 1, 
-        Orange  = 3, 
-        Yellow  = 4 
+    {
+        None    = 0,
+        Red     = 1,
+        Orange  = 3,
+        Yellow  = 4
     }
 }
 

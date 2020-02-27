@@ -6,15 +6,15 @@ public class Example
    {
    // <Snippet3>
       string value;
-      
+
       value = Double.MinValue.ToString();
       try {
          Console.WriteLine(Double.Parse(value));
-      }   
+      }
       catch (OverflowException) {
          Console.WriteLine($"{value} is outside the range of the Double type.");
       }
-      
+
       value = Double.MaxValue.ToString();
       try {
          Console.WriteLine(Double.Parse(value));
@@ -25,7 +25,7 @@ public class Example
 
       // Format without the default precision.
       value = Double.MinValue.ToString("G17");
-      try 
+      try
       {
           Console.WriteLine(Double.Parse(value));
       }
@@ -36,7 +36,7 @@ public class Example
    // The example displays the following output:
    //    -1.79769313486232E+308 is outside the range of the Double type.
    //    1.79769313486232E+308 is outside the range of the Double type.
-   //    -1.79769313486232E+308   
-   // </Snippet3>   
+   //    -1.79769313486232E+308
+   // </Snippet3>
    }
 }

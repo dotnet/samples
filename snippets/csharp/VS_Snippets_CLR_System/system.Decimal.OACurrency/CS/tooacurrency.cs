@@ -1,5 +1,5 @@
 ﻿//<Snippet1>
-// Example of the decimal.ToOACurrency method. 
+// Example of the decimal.ToOACurrency method.
 using System;
 
 class DecimalToOACurrencyDemo
@@ -10,11 +10,11 @@ class DecimalToOACurrencyDemo
     public static string GetExceptionType( Exception ex )
     {
         string exceptionType = ex.GetType( ).ToString( );
-        return exceptionType.Substring( 
+        return exceptionType.Substring(
             exceptionType.LastIndexOf( '.' ) + 1 );
     }
 
-    // Display the decimal.ToOACurrency parameter and the result 
+    // Display the decimal.ToOACurrency parameter and the result
     // or exception.
     public static void ShowDecimalToOACurrency( decimal Argument )
     {
@@ -26,7 +26,7 @@ class DecimalToOACurrencyDemo
         }
         catch( Exception ex )
         {
-            Console.WriteLine( dataFmt, Argument, 
+            Console.WriteLine( dataFmt, Argument,
                 GetExceptionType( ex ) );
         }
     }
@@ -38,9 +38,9 @@ class DecimalToOACurrencyDemo
             "following output. It displays the argument as a " +
             "decimal \nand the OLE Automation Currency value " +
             "as a long.\n" );
-        Console.WriteLine( dataFmt, "Argument", 
+        Console.WriteLine( dataFmt, "Argument",
             "OA Currency or Exception" );
-        Console.WriteLine( dataFmt, "--------", 
+        Console.WriteLine( dataFmt, "--------",
             "------------------------" );
 
         // Convert decimal values to OLE Automation Currency values.

@@ -2,20 +2,20 @@
 using System;
 using System.IO;
 
-class Test 
+class Test
 {
-    public static void Main() 
+    public static void Main()
     {
-        try 
+        try
         {
             string[] dirs = Directory.GetDirectories(@"c:\", "p*", SearchOption.TopDirectoryOnly);
             Console.WriteLine("The number of directories starting with p is {0}.", dirs.Length);
-            foreach (string dir in dirs) 
+            foreach (string dir in dirs)
             {
                 Console.WriteLine(dir);
             }
-        } 
-        catch (Exception e) 
+        }
+        catch (Exception e)
         {
             Console.WriteLine("The process failed: {0}", e.ToString());
         }

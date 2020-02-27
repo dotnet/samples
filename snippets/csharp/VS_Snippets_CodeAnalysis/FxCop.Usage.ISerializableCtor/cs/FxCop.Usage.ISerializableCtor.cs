@@ -5,10 +5,10 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Security.Permissions;
 
-namespace UsageLibrary 
-{   
+namespace UsageLibrary
+{
     [Serializable]
-    public class SerializationConstructorsRequired : ISerializable 
+    public class SerializationConstructorsRequired : ISerializable
     {
         private  int n1;
 
@@ -21,16 +21,16 @@ namespace UsageLibrary
         // Satisfies rule: ImplementSerializationConstructors.
 
         protected SerializationConstructorsRequired(
-           SerializationInfo info, 
+           SerializationInfo info,
            StreamingContext context)
         {
             n1 = (int) info.GetValue("n1", typeof(int));
         }
 
         // The following method serializes the instance.
-        [SecurityPermission(SecurityAction.LinkDemand, 
+        [SecurityPermission(SecurityAction.LinkDemand,
             Flags=SecurityPermissionFlag.SerializationFormatter)]
-        void ISerializable.GetObjectData(SerializationInfo info, 
+        void ISerializable.GetObjectData(SerializationInfo info,
            StreamingContext context)
         {
             info.AddValue("n1", n1);

@@ -23,7 +23,7 @@ namespace IsDBNull_To_NA_CS
          Application.Run(new Form1());
       }
    }
-   
+
    public partial class Form1 : Form
    {
       private string connectionString = @"Data Source=RONPET59\SQLEXPRESS;Initial Catalog=SurveyDB;Integrated Security=True";
@@ -37,7 +37,7 @@ namespace IsDBNull_To_NA_CS
       {
          // <Snippet1>
          return DBNull.Value.Equals(value);
-         // </Snippet1> 
+         // </Snippet1>
       }
 
       // <Snippet2>
@@ -62,7 +62,7 @@ namespace IsDBNull_To_NA_CS
          int fieldCount = dr.FieldCount;
          object[] fieldValues = new object[fieldCount];
          string[] headers = new string[fieldCount];
-          
+
          // Get names of fields.
          for (int ctr = 0; ctr < fieldCount; ctr++)
             headers[ctr] = dr.GetName(ctr);
@@ -97,6 +97,6 @@ namespace IsDBNull_To_NA_CS
          }
          dr.Close();
       }
-      // </Snippet2>      
+      // </Snippet2>
    }
 }

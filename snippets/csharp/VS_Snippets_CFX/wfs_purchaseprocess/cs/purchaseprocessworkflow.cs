@@ -30,21 +30,21 @@ namespace Microsoft.Samples.WF.PurchaseProcess
             var iterationVariableVendor = new DelegateInArgument<Vendor>();
             var iterationVariableVendorProposal = new DelegateInArgument<VendorProposal>();
             var bestProposal = new Variable<VendorProposal>() { Default = new LambdaValue<VendorProposal>(ctx =>new VendorProposal { Value = double.MaxValue }) };
-            var proposalAdjustedValue = new Variable<double>();            
-            var tmpValue = new Variable<double>();            
-            
+            var proposalAdjustedValue = new Variable<double>();
+            var tmpValue = new Variable<double>();
+
             return new Sequence
             {
                 Variables = { bestProposal, proposalAdjustedValue, requestForProposal },
                 Activities =
-                {             
+                {
                     // assign the Request for Proposal in argument to a variable visible during the schematized persistence setp
                     new Assign<RequestForProposal>
                     {
                         DisplayName = "Assign the Rpf argument to a variable that is visible in persistence",
                         To = new OutArgument<RequestForProposal>(requestForProposal),
                         Value = new LambdaValue<RequestForProposal>(ctx =>Rfp.Get(ctx))
-                    },                    
+                    },
 //<Snippet1>
                     // invite all vendors and wait for their proposals
                     new ParallelForEach<Vendor>
@@ -52,7 +52,7 @@ namespace Microsoft.Samples.WF.PurchaseProcess
                         DisplayName = "Get vendor proposals",
                         Values = new InArgument<IEnumerable<Vendor>>(ctx =>this.Rfp.Get(ctx).InvitedVendors),
                         Body = new ActivityAction<Vendor>()
-                        {                                    
+                        {
                             Argument = iterationVariableVendor,
                             Handler = new Sequence
                             {
@@ -60,8 +60,8 @@ namespace Microsoft.Samples.WF.PurchaseProcess
                                 Activities =
                                 {
                                     // waits for a vendor proposal (creates a bookmark for a vendor)
-                                    new WaitForVendorProposal 
-                                    { 
+                                    new WaitForVendorProposal
+                                    {
                                         VendorId = new LambdaValue<int>(ctx =>iterationVariableVendor.Get(ctx).Id) ,
                                         Result = new OutArgument<double>(tmpValue)
                                     },
@@ -71,20 +71,20 @@ namespace Microsoft.Samples.WF.PurchaseProcess
                                     {
                                         TargetObject = new InArgument<RequestForProposal>(ctx =>this.Rfp.Get(ctx)),
                                         MethodName = "RegisterProposal",
-                                        Parameters = 
+                                        Parameters =
                                         {
                                             new InArgument<Vendor>(iterationVariableVendor),
                                             new InArgument<double>(tmpValue)
                                         }
                                     },
                                 }
-                            }                        
+                            }
                         }
                     },
 //</Snippet1>
 
                     // select the best vendor proposal of all received proposals. The best offer is selected
-                    // using a calculation that adjusts the proposal submitted by the vendor using his reputation 
+                    // using a calculation that adjusts the proposal submitted by the vendor using his reputation
                     new ForEach<VendorProposal>
                     {
                         DisplayName = "Select best proposal",
@@ -105,7 +105,7 @@ namespace Microsoft.Samples.WF.PurchaseProcess
 
                                     // check if the adjusted value is the best proposal
                                     new If
-                                    {                                        
+                                    {
                                         Condition = new InArgument<bool>(ctx =>proposalAdjustedValue.Get(ctx) < bestProposal.Get(ctx).Value),
                                         Then = new Assign<VendorProposal>
                                         {
@@ -114,18 +114,18 @@ namespace Microsoft.Samples.WF.PurchaseProcess
                                         }
                                     }
                                 }
-                            }                        
+                            }
                         }
                     },
                     // set the Request for Proposals best proposal
-                    new Assign<VendorProposal> 
-                    { 
+                    new Assign<VendorProposal>
+                    {
                         To = new OutArgument<VendorProposal>(ctx =>this.Rfp.Get(ctx).BestProposal),
                         Value = new LambdaValue<VendorProposal>(ctx =>bestProposal.Get(ctx))
-                    },            
+                    },
                     // set the Request for Proposals completion date
-                    new Assign<DateTime> 
-                    { 
+                    new Assign<DateTime>
+                    {
                         To = new OutArgument<DateTime>(ctx =>this.Rfp.Get(ctx).CompletionDate),
                         Value = new LambdaValue<DateTime>(ctx =>DateTime.Now)
                     },
@@ -133,14 +133,14 @@ namespace Microsoft.Samples.WF.PurchaseProcess
                     new Persist(),
 
                     // return value of the workflow: best proposal
-                    new Assign<VendorProposal> 
-                    { 
+                    new Assign<VendorProposal>
+                    {
                         To = new OutArgument<VendorProposal>(ctx =>this.Result.Get(ctx)),
                         Value = new LambdaValue<VendorProposal>(ctx =>bestProposal.Get(ctx))
                     }
                 }
             };
-        }    
+        }
     }
     public sealed class WaitForVendorProposal : NativeActivity<double>
     {

@@ -47,12 +47,12 @@ public class Example
       employees.Sort();
 
       var es = new EmployeeSearch("J");
-      int index = employees.FindIndex(4, es.StartsWith);        
+      int index = employees.FindIndex(4, es.StartsWith);
       Console.WriteLine("Starting index of'J': {0}",
                         index >= 0 ? index.ToString() : "Not found");
 
       es = new EmployeeSearch("Ju");
-      index = employees.FindIndex(4, es.StartsWith);        
+      index = employees.FindIndex(4, es.StartsWith);
       Console.WriteLine("Starting index of 'Ju': {0}",
                         index >= 0 ? index.ToString() : "Not found");
    }

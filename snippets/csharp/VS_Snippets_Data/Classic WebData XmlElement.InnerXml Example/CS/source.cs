@@ -19,12 +19,12 @@ public class Test {
     Console.WriteLine("Display the InnerXml of the element...");
     Console.WriteLine(elem.InnerXml);
 
-    // Set InnerText to a string that includes markup.  
+    // Set InnerText to a string that includes markup.
     // The markup is escaped.
     elem.InnerText = "Text containing <markup/> will have char(<) and char(>) escaped.";
     Console.WriteLine( elem.OuterXml );
 
-    // Set InnerXml to a string that includes markup.  
+    // Set InnerXml to a string that includes markup.
     // The markup is not escaped.
     elem.InnerXml = "Text containing <markup/>.";
     Console.WriteLine( elem.OuterXml );

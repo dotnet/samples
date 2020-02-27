@@ -6,14 +6,14 @@ class Example
     public static void Main()
     {
         // Define an array of 16-bit unsigned integer values.
-        ushort[] values = { ushort.MinValue, ushort.MaxValue,     
+        ushort[] values = { ushort.MinValue, ushort.MaxValue,
                             0xFFF, 12345, 40000 };
         // Convert each value to a Decimal.
         foreach (var value in values) {
            Decimal decValue = value;
            Console.WriteLine("{0} ({1}) --> {2} ({3})", value,
                              value.GetType().Name, decValue,
-                             decValue.GetType().Name);         
+                             decValue.GetType().Name);
         }
     }
 }

@@ -8,10 +8,10 @@ public class Example
    {
       var numbers = new List<int>();
       numbers.AddRange( new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 20 } );
-      
+
       var squares = new List<int>();
       for (int ctr = 0; ctr < numbers.Count; ctr++)
-         squares[ctr] = (int) Math.Pow(numbers[ctr], 2); 
+         squares[ctr] = (int) Math.Pow(numbers[ctr], 2);
    }
 }
 // The example displays the following output:
@@ -31,7 +31,7 @@ class Correction
       // <Snippet14>
       var squares = new List<int>();
       for (int ctr = 0; ctr < numbers.Count; ctr++)
-         squares.Add((int) Math.Pow(numbers[ctr], 2)); 
+         squares.Add((int) Math.Pow(numbers[ctr], 2));
       // </Snippet14>
    }
 }

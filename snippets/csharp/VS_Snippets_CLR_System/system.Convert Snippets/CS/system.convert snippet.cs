@@ -93,7 +93,7 @@ namespace BasicSnippetC {
 				byteVal = System.Convert.ToByte(doubleVal);
 				System.Console.WriteLine("{0} as a byte is: {1}.",
 					doubleVal, byteVal);
-			} 
+			}
 			catch (System.OverflowException) {
 				System.Console.WriteLine(
 					"Overflow in double-to-byte conversion.");
@@ -115,7 +115,7 @@ namespace BasicSnippetC {
 				intVal = System.Convert.ToInt32(doubleVal);
 				System.Console.WriteLine("{0} as an int is: {1}",
 					doubleVal, intVal);
-			} 
+			}
 			catch (System.OverflowException) {
 				System.Console.WriteLine(
 					"Overflow in double-to-int conversion.");
@@ -139,12 +139,12 @@ namespace BasicSnippetC {
 					decimalVal, doubleVal);
 
 			// Conversion from double to decimal can overflow.
-			try 
+			try
          {
 			   decimalVal = System.Convert.ToDecimal(doubleVal);
    			System.Console.WriteLine ("{0} as a decimal is: {1}",
 	   			doubleVal, decimalVal);
-			} 
+			}
 			catch (System.OverflowException) {
 				System.Console.WriteLine(
 					"Overflow in double-to-double conversion.");
@@ -171,9 +171,9 @@ namespace BasicSnippetC {
 		//<Snippet7>
 		public void ConvertDoubleString(double doubleVal) {
 			
-			string	stringVal;     
+			string	stringVal;
 
-			// A conversion from Double to string cannot overflow.       
+			// A conversion from Double to string cannot overflow.
 			stringVal = System.Convert.ToString(doubleVal);
 			System.Console.WriteLine("{0} as a string is: {1}",
 				doubleVal, stringVal);
@@ -182,7 +182,7 @@ namespace BasicSnippetC {
 				doubleVal = System.Convert.ToDouble(stringVal);
 				System.Console.WriteLine("{0} as a double is: {1}",
 					stringVal, doubleVal);
-			} 
+			}
 			catch (System.OverflowException) {
 				System.Console.WriteLine(
 					"Conversion from string-to-double overflowed.");
@@ -207,7 +207,7 @@ namespace BasicSnippetC {
 				charVal = System.Convert.ToChar(longVal);
 				System.Console.WriteLine("{0} as a char is {1}",
 					longVal, charVal);
-			} 
+			}
 			catch (System.OverflowException) {
 				System.Console.WriteLine(
 					"Overflow in long-to-char conversion.");
@@ -230,7 +230,7 @@ namespace BasicSnippetC {
 				byteVal = System.Convert.ToByte(longVal);
 				System.Console.WriteLine("{0} as a byte is {1}",
 					longVal, byteVal);
-			} 
+			}
 			catch (System.OverflowException) {
 				System.Console.WriteLine(
 					"Overflow in long-to-byte conversion.");
@@ -250,13 +250,13 @@ namespace BasicSnippetC {
 			
 			// Long to decimal conversion cannot overflow.
 			decimalVal = System.Convert.ToDecimal(longVal);
-			System.Console.WriteLine("{0} as a decimal is {1}", 
+			System.Console.WriteLine("{0} as a decimal is {1}",
 					longVal, decimalVal);
 
 			// Decimal to long conversion can overflow.
 			try {
 				longVal = System.Convert.ToInt64(decimalVal);
-				System.Console.WriteLine("{0} as a long is {1}", 
+				System.Console.WriteLine("{0} as a long is {1}",
 					decimalVal, longVal);
 			}
 			catch (System.OverflowException) {
@@ -273,13 +273,13 @@ namespace BasicSnippetC {
 			
 			// A conversion from Long to float cannot overflow.
 			floatVal = System.Convert.ToSingle(longVal);
-			System.Console.WriteLine("{0} as a float is {1}", 
+			System.Console.WriteLine("{0} as a float is {1}",
 					longVal, floatVal);
 			
 			// A conversion from float to long can overflow.
 			try {
 				longVal = System.Convert.ToInt64(floatVal);
-				System.Console.WriteLine("{0} as a long is {1}", 
+				System.Console.WriteLine("{0} as a long is {1}",
 					floatVal, longVal);
 			}
 			catch (System.OverflowException) {
@@ -326,7 +326,7 @@ namespace BasicSnippetC {
 				byteVal = System.Convert.ToByte(stringVal);
 				System.Console.WriteLine("{0} as a byte is: {1}",
 					stringVal, byteVal);
-			} 
+			}
 			catch (System.OverflowException) {
 				System.Console.WriteLine(
 					"Conversion from string to byte overflowed.");
@@ -339,7 +339,7 @@ namespace BasicSnippetC {
 				System.Console.WriteLine(
 					"The string is null.");
 			}
-            
+
 			//The conversion from byte to string is always valid.
 			stringVal = System.Convert.ToString(byteVal);
 			System.Console.WriteLine("{0} as a string is {1}",
@@ -380,7 +380,7 @@ namespace BasicSnippetC {
 				decimalVal = System.Convert.ToDecimal(stringVal);
 				System.Console.WriteLine(
 					"The string as a decimal is {0}.", decimalVal);
-			} 
+			}
 			catch (System.OverflowException){
 				System.Console.WriteLine(
 					"The conversion from string to decimal overflowed.");
@@ -409,7 +409,7 @@ namespace BasicSnippetC {
 				floatVal = System.Convert.ToSingle(stringVal);
 				System.Console.WriteLine(
 					"The string as a float is {0}.", floatVal);
-			} 
+			}
 			catch (System.OverflowException){
 				System.Console.WriteLine(
 					"The conversion from string-to-float overflowed.");
@@ -438,7 +438,7 @@ namespace BasicSnippetC {
 			// throw an InvalidCastException.
 			try {
 				decimalVal = System.Convert.ToDecimal(charVal);
-			} 
+			}
 			catch (System.InvalidCastException) {
 				System.Console.WriteLine(
 					"Char-to-Decimal conversion is not supported " +
@@ -448,7 +448,7 @@ namespace BasicSnippetC {
 			//Decimal to char conversion is also not supported.
 			try {
 				charVal = System.Convert.ToChar(decimalVal);
-			} 
+			}
 			catch (System.InvalidCastException) {
 				System.Console.WriteLine(
 					"Decimal-to-Char conversion is not supported " +
@@ -504,7 +504,7 @@ namespace BasicSnippetC {
 		//<Snippet20>
 		public void ConvertBoolean() {
 			const int year			= 1979;
-			const int month			= 7;   
+			const int month			= 7;
 			const int day			= 28;
 			const int hour			= 13;
 			const int minute		= 26;

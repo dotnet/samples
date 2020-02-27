@@ -16,8 +16,8 @@ namespace Microsoft.AdoDotNet.CodeSamples
         {
             InitializeComponent();
         }
-        // Hook up the form's Load event handler (you can double-click on 
-        // the form's design surface in Visual Studio), and then add 
+        // Hook up the form's Load event handler (you can double-click on
+        // the form's design surface in Visual Studio), and then add
         // this code to the form's class:
         // You need this delegate in order to fill the grid from
         // a thread other than the form's thread. See the HandleCallback
@@ -28,7 +28,7 @@ namespace Microsoft.AdoDotNet.CodeSamples
         private delegate void DisplayStatusDelegate(string Text);
 
         // This flag ensures that the user does not attempt
-        // to restart the command or close the form while the 
+        // to restart the command or close the form while the
         // asynchronous command is executing.
         private bool isExecuting;
 
@@ -57,7 +57,7 @@ namespace Microsoft.AdoDotNet.CodeSamples
             finally
             {
                 // Closing the reader also closes the connection,
-                // because this reader was created using the 
+                // because this reader was created using the
                 // CommandBehavior.CloseConnection value.
                 if (reader != null)
                 {
@@ -78,32 +78,32 @@ namespace Microsoft.AdoDotNet.CodeSamples
                 // You may not interact with the form and its contents
                 // from a different thread, and this callback procedure
                 // is all but guaranteed to be running from a different thread
-                // than the form. Therefore you cannot simply call code that 
+                // than the form. Therefore you cannot simply call code that
                 // fills the grid, like this:
                 // FillGrid(reader);
                 // Instead, you must call the procedure from the form's thread.
                 // One simple way to accomplish this is to call the Invoke
                 // method of the form, which calls the delegate you supply
-                // from the form's thread. 
+                // from the form's thread.
                 FillGridDelegate del = new FillGridDelegate(FillGrid);
                 this.Invoke(del, reader);
-                // Do not close the reader here, because it is being used in 
+                // Do not close the reader here, because it is being used in
                 // a separate thread. Instead, have the procedure you have
                 // called close the reader once it is done with it.
             }
             catch (Exception ex)
             {
-                // Because you are now running code in a separate thread, 
+                // Because you are now running code in a separate thread,
                 // if you do not handle the exception here, none of your other
-                // code catches the exception. Because there is none of 
+                // code catches the exception. Because there is none of
                 // your code on the call stack in this thread, there is nothing
-                // higher up the stack to catch the exception if you do not 
-                // handle it here. You can either log the exception or 
-                // invoke a delegate (as in the non-error case in this 
+                // higher up the stack to catch the exception if you do not
+                // handle it here. You can either log the exception or
+                // invoke a delegate (as in the non-error case in this
                 // example) to display the error on the form. In no case
                 // can you simply display the error without executing a delegate
-                // as in the try block here. 
-                // You can create the delegate instance as you 
+                // as in the try block here.
+                // You can create the delegate instance as you
                 // invoke it, like this:
                 this.Invoke(new DisplayStatusDelegate(DisplayStatus), "Error: " +
                     ex.Message);
@@ -116,8 +116,8 @@ namespace Microsoft.AdoDotNet.CodeSamples
 
         private string GetConnectionString()
         {
-            // To avoid storing the connection string in your code, 
-            // you can retrieve it from a configuration file. 
+            // To avoid storing the connection string in your code,
+            // you can retrieve it from a configuration file.
 
             // If you do not include the Asynchronous Processing=true name/value pair,
             // you wo not be able to execute the command asynchronously.
@@ -141,7 +141,7 @@ namespace Microsoft.AdoDotNet.CodeSamples
                 {
                     DisplayStatus("Connecting...");
                     connection = new SqlConnection(GetConnectionString());
-                    // To emulate a long-running query, wait for 
+                    // To emulate a long-running query, wait for
                     // a few seconds before retrieving the real data.
                     command = new SqlCommand("WAITFOR DELAY '0:0:5';" +
                         "SELECT ProductID, Name, ListPrice, Weight FROM Production.Product",
@@ -150,8 +150,8 @@ namespace Microsoft.AdoDotNet.CodeSamples
 
                     DisplayStatus("Executing...");
                     isExecuting = true;
-                    // Although it is not required that you pass the 
-                    // SqlCommand object as the second parameter in the 
+                    // Although it is not required that you pass the
+                    // SqlCommand object as the second parameter in the
                     // BeginExecuteReader call, doing so makes it easier
                     // to call EndExecuteReader in the callback procedure.
                     AsyncCallback callback = new AsyncCallback(HandleCallback);

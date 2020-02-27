@@ -10,7 +10,7 @@ namespace InteroperabilityLibrary
       private NativeMethods() {}
 
       // Violates rule UseManagedEquivalentsOfWin32Api.
-      [DllImport("kernel32.dll", CharSet = CharSet.Auto, 
+      [DllImport("kernel32.dll", CharSet = CharSet.Auto,
           SetLastError = true)]
       internal static extern int ExpandEnvironmentStrings(
          string lpSrc, StringBuilder lpDst, int nSize);
@@ -26,8 +26,8 @@ namespace InteroperabilityLibrary
          expandedVariable = new StringBuilder(100);
 
          if(NativeMethods.ExpandEnvironmentStrings(
-            environmentVariable, 
-            expandedVariable, 
+            environmentVariable,
+            expandedVariable,
             expandedVariable.Capacity) == 0)
          {
             // Violates rule CallGetLastErrorImmediatelyAfterPInvoke.
@@ -44,8 +44,8 @@ namespace InteroperabilityLibrary
          expandedVariable = new StringBuilder(100);
 
          if(NativeMethods.ExpandEnvironmentStrings(
-            environmentVariable, 
-            expandedVariable, 
+            environmentVariable,
+            expandedVariable,
             expandedVariable.Capacity) == 0)
          {
             // Satisfies rule CallGetLastErrorImmediatelyAfterPInvoke.

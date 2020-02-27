@@ -5,13 +5,13 @@ using System;
 class BytesToSingleDemo
 {
     const string formatter = "{0,5}{1,17}{2,18:E7}";
- 
+
     // Convert four byte array elements to a float and display it.
     public static void BAToSingle( byte[ ] bytes, int index )
     {
         float value = BitConverter.ToSingle( bytes, index );
 
-        Console.WriteLine( formatter, index, 
+        Console.WriteLine( formatter, index,
             BitConverter.ToString( bytes, index, 4 ), value );
     }
 
@@ -26,7 +26,7 @@ class BytesToSingleDemo
 
         for( iter = 0; iter < bytes.Length - rowSize; iter += rowSize )
         {
-            Console.Write( 
+            Console.Write(
                 BitConverter.ToString( bytes, iter, rowSize ) );
             Console.WriteLine( "-" );
         }
@@ -38,12 +38,12 @@ class BytesToSingleDemo
     public static void Main( )
     {
         byte[ ] byteArray = {
-              0,   0,   0,   0, 128,  63,   0,   0, 112,  65, 
-              0, 255, 127,  71,   0,   0, 128,  59,   0,   0, 
-            128,  47,  73,  70, 131,   5,  75,   6, 158,  63, 
-             77,   6, 158,  63,  80,   6, 158,  63,  30,  55, 
-            190, 121, 255, 255, 127, 255, 255, 127, 127,   1, 
-              0,   0,   0, 192, 255,   0,   0, 128, 255,   0, 
+              0,   0,   0,   0, 128,  63,   0,   0, 112,  65,
+              0, 255, 127,  71,   0,   0, 128,  59,   0,   0,
+            128,  47,  73,  70, 131,   5,  75,   6, 158,  63,
+             77,   6, 158,  63,  80,   6, 158,  63,  30,  55,
+            190, 121, 255, 255, 127, 255, 255, 127, 127,   1,
+              0,   0,   0, 192, 255,   0,   0, 128, 255,   0,
               0, 128, 127 };
 
         Console.WriteLine(
@@ -53,11 +53,11 @@ class BytesToSingleDemo
 
         WriteMultiLineByteArray( byteArray );
 
-        Console.WriteLine( formatter, "index", "array elements", 
+        Console.WriteLine( formatter, "index", "array elements",
             "float" );
-        Console.WriteLine( formatter, "-----", "--------------", 
+        Console.WriteLine( formatter, "-----", "--------------",
             "-----" );
-          
+
         // Convert byte array elements to float values.
         BAToSingle( byteArray, 0 );
         BAToSingle( byteArray, 2 );

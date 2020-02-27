@@ -21,13 +21,13 @@ public class Class1
       double double2 = 1/3;
       // Compare them for equality
       Console.WriteLine(double1.Equals(double2));    // displays false
-      // </Snippet1>   
+      // </Snippet1>
    }
-   
+
    private static void CompareApproximateValues()
    {
       Console.WriteLine("Snippet2");
-      // <Snippet2> 
+      // <Snippet2>
       // Initialize two doubles with apparently identical values
       double double1 = .333333;
       double double2 = (double) 1/3;
@@ -41,8 +41,8 @@ public class Class1
       else
          Console.WriteLine("double1 and double2 are unequal.");
       // </Snippet2>
-   } 
-     
+   }
+
    private static void CompareObjectsUsingEquals()
    {
       // <Snippet3>
@@ -51,12 +51,12 @@ public class Class1
       object double2 = 1/3;
       // Compare them for equality
       Console.WriteLine(double1.Equals(double2));    // displays false
-      // </Snippet3>   
+      // </Snippet3>
    }
-   
+
    private static void CompareApproximateObjectValues()
    {
-      // <Snippet4> 
+      // <Snippet4>
       // Initialize two doubles with apparently identical values
       double double1 = .33333;
       object double2 = (double) 1/3;
@@ -70,5 +70,5 @@ public class Class1
       else
          Console.WriteLine("double1 and double2 are unequal.");
       // </Snippet4>
-   }   
+   }
 }

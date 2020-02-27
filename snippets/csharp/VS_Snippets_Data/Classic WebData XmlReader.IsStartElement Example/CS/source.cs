@@ -3,7 +3,7 @@ using System;
 using System.IO;
 using System.Xml;
 
-public class Sample 
+public class Sample
 {
   public static void Main()
   {
@@ -13,7 +13,7 @@ public class Sample
     {
        //Load the reader with the XML file.
        reader = new XmlTextReader("elems.xml");
-  
+
        //Parse the XML and display the text content of each of the elements.
        while (reader.Read()){
          if (reader.IsStartElement()){
@@ -30,10 +30,10 @@ public class Sample
                Console.WriteLine(reader.ReadString());  //Read the text content of the element.
            }
          }
-       } 
-     } 
+       }
+     }
 
-     finally 
+     finally
      {
         if (reader != null)
           reader.Close();

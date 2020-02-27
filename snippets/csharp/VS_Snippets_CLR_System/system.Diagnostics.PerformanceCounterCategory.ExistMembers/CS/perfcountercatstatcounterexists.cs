@@ -42,15 +42,15 @@ class PerfCounterCatStatCountExistsMod
         catch(Exception ex)
         {
             Console.WriteLine("Unable to check for the existence of " +
-                "counter \"{0}\" in category \"{1}\" on " + 
-                (machineName.Length>0? "computer \"{2}\".": "this computer.") + "\n" + 
+                "counter \"{0}\" in category \"{1}\" on " +
+                (machineName.Length>0? "computer \"{2}\".": "this computer.") + "\n" +
                 ex.Message, counterName, categoryName, machineName);
             return;
         }
 
         // Tell the user whether the counter exists.
-        Console.WriteLine("Counter \"{0}\" "+ (objectExists? "exists": "does not exist") + 
-            " in category \"{1}\" on " + (machineName.Length>0? "computer \"{2}\".": "this computer."), 
+        Console.WriteLine("Counter \"{0}\" "+ (objectExists? "exists": "does not exist") +
+            " in category \"{1}\" on " + (machineName.Length>0? "computer \"{2}\".": "this computer."),
             counterName, categoryName, machineName);
     }
     //</snippet8>

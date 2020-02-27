@@ -15,13 +15,13 @@ public class Example
          Console.WriteLine("The sum of the values equals the total.");
       else
          Console.WriteLine("The sum of the values ({0}) does not equal the total ({1}).",
-                           total, result); 
+                           total, result);
    }
 }
 // The example displays the following output:
-//      The sum of the values (36.64) does not equal the total (36.64).   
+//      The sum of the values (36.64) does not equal the total (36.64).
 //
 // If the index items in the Console.WriteLine statement are changed to {0:R},
 // the example displays the following output:
-//       The sum of the values (27.639999999999997) does not equal the total (27.64).   
+//       The sum of the values (27.639999999999997) does not equal the total (27.64).
 // </Snippet6>

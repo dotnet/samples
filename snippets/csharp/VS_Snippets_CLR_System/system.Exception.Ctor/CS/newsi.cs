@@ -7,7 +7,7 @@ namespace NDP_UE_CS
     // Derive an exception with a specifiable message and inner exception.
     class LogTableOverflowException : Exception
     {
-        const string overflowMessage = 
+        const string overflowMessage =
             "The log table has overflowed.";
 
         public LogTableOverflowException( ) :
@@ -15,13 +15,13 @@ namespace NDP_UE_CS
         { }
 
         public LogTableOverflowException( string auxMessage ) :
-            base( String.Format( "{0} - {1}", 
+            base( String.Format( "{0} - {1}",
                 overflowMessage, auxMessage ) )
         { }
 
-        public LogTableOverflowException( 
+        public LogTableOverflowException(
             string auxMessage, Exception inner ) :
-                base( String.Format( "{0} - {1}", 
+                base( String.Format( "{0} - {1}",
                     overflowMessage, auxMessage ), inner )
         { }
     }
@@ -37,7 +37,7 @@ namespace NDP_UE_CS
         protected string[ ] logArea;
         protected int       elemInUse;
 
-        // The AddRecord method throws a derived exception 
+        // The AddRecord method throws a derived exception
         // if the array bounds exception is caught.
         public    int       AddRecord( string newRecord )
         {
@@ -48,32 +48,32 @@ namespace NDP_UE_CS
             }
             catch( Exception ex )
             {
-                throw new LogTableOverflowException( 
-                    String.Format( "Record \"{0}\" was not logged.", 
+                throw new LogTableOverflowException(
+                    String.Format( "Record \"{0}\" was not logged.",
                         newRecord ), ex );
             }
         }
     }
 
-    class OverflowDemo 
+    class OverflowDemo
     {
         // Create a log table and force an overflow.
-        public static void Main() 
+        public static void Main()
         {
             LogTable log = new LogTable( 4 );
 
-            Console.WriteLine( 
+            Console.WriteLine(
                 "This example of the Exception( string, Exception )" +
                 "\nconstructor generates the following output." );
-            Console.WriteLine( 
+            Console.WriteLine(
                 "\nExample of a derived exception " +
                 "that references an inner exception:\n" );
             try
             {
                 for( int count = 1; ; count++ )
                 {
-                    log.AddRecord( 
-                        String.Format( 
+                    log.AddRecord(
+                        String.Format(
                             "Log record number {0}", count ) );
                 }
             }

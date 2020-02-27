@@ -26,7 +26,7 @@ class Program
         // default values.
         builder.Clear();
 
-        // Pass the OleDbConnectionStringBuilder an existing 
+        // Pass the OleDbConnectionStringBuilder an existing
         // connection string, and you can retrieve and
         // modify any of the elements.
         builder.ConnectionString =
@@ -41,7 +41,7 @@ class Program
         builder["Package Collection"] = "NewPackage";
         builder["Default Schema"] = "NewSchema";
 
-        // Call the Remove method to remove items from 
+        // Call the Remove method to remove items from
         // the collection of key/value pairs.
         builder.Remove("User ID");
 
@@ -51,7 +51,7 @@ class Program
         Console.WriteLine(builder.ConnectionString);
         Console.WriteLine();
 
-        // Setting the indexer adds the value, if 
+        // Setting the indexer adds the value, if
         // necessary.
         builder["User ID"] = "SampleUser";
         builder["Password"] = "SamplePassword";

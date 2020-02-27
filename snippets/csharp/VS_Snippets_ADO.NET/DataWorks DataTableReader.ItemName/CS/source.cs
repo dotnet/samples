@@ -14,7 +14,7 @@ class DataTableReaderPrintCol
         // if  you're going to retrieve information from a column
         // in a loop, it would be better to retrieve the column
         // ordinal once, store the value, and use the methods
-        // of the DataTableReader class directly. 
+        // of the DataTableReader class directly.
         // Use this string-based indexer sparingly.
         object columnValue = null;
 

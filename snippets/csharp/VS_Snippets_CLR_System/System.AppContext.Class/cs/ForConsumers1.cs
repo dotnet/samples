@@ -9,7 +9,7 @@ public class Example
 {
    public static void Main()
    {
-      Console.WriteLine(Path.GetDirectoryName("file://c/temp/dirlist.txt")); 
+      Console.WriteLine(Path.GetDirectoryName("file://c/temp/dirlist.txt"));
    }
 }
 // The example displays the following output:

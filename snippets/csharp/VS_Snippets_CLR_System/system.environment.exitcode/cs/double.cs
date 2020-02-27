@@ -12,7 +12,7 @@ public class Example
    {
       string[] args = Environment.GetCommandLineArgs();
       if (args.Length == 1) {
-         Environment.ExitCode = ERROR_INVALID_COMMAND_LINE;  
+         Environment.ExitCode = ERROR_INVALID_COMMAND_LINE;
       }
       else {
          BigInteger value = 0;

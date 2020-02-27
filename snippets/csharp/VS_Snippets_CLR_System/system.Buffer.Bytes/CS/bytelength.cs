@@ -11,7 +11,7 @@ class ByteLengthDemo
         int byteLength = Buffer.ByteLength( arr );
 
         // Display the array name, type, Length, and ByteLength.
-        Console.WriteLine( formatter, name, arr.GetType( ), 
+        Console.WriteLine( formatter, name, arr.GetType( ),
             arr.Length, byteLength );
     }
 
@@ -25,12 +25,12 @@ class ByteLengthDemo
         double[ ] doubles = { 2E-22, .003, 4.4E44, 555E55 };
         long[ ]   longs   = { 1, 10, 100, 1000, 10000, 100000 };
 
-        Console.WriteLine( 
+        Console.WriteLine(
             "This example of the Buffer.ByteLength( Array ) " +
             "\nmethod generates the following output.\n" );
-        Console.WriteLine( formatter, "Array name", "Array type", 
+        Console.WriteLine( formatter, "Array name", "Array type",
             "Length", "ByteLength" );
-        Console.WriteLine( formatter, "----------", "----------", 
+        Console.WriteLine( formatter, "----------", "----------",
             "------", "----------" );
 
         // Display the Length and ByteLength for each array.

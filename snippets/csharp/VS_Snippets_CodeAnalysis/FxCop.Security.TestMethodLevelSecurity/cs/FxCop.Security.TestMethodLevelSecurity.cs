@@ -11,24 +11,24 @@ namespace TestSecRulesLibrary
    {
       MyClassWithTypeSecurity dataHolder;
 
-      void RetrievePersonalInformation(string description) 
+      void RetrievePersonalInformation(string description)
       {
-         try 
-         { 
-            Console.WriteLine(
-               "{0} Personal information: {1}", 
-               description, dataHolder.PersonalInformation());
-         }
-         catch (SecurityException e) 
+         try
          {
             Console.WriteLine(
-               "{0} Could not access personal information: {1}", 
+               "{0} Personal information: {1}",
+               description, dataHolder.PersonalInformation());
+         }
+         catch (SecurityException e)
+         {
+            Console.WriteLine(
+               "{0} Could not access personal information: {1}",
                description, e.Message);
          }
       }
 
       [STAThread]
-      public static void Main() 
+      public static void Main()
       {
          TestMethodLevelSecurity me = new TestMethodLevelSecurity();
 
@@ -41,15 +41,15 @@ namespace TestSecRulesLibrary
          EnvironmentPermission epw = new EnvironmentPermission(
             EnvironmentPermissionAccess.Write,"PersonalInfo");
          epw.Deny();
-         
-         // Even though the type requires write permission, 
+
+         // Even though the type requires write permission,
          // and you do not have it; you can get the data.
          me.RetrievePersonalInformation(
             "[No write permission (demanded by type)]");
 
-         // Reset the permissions and try to get 
+         // Reset the permissions and try to get
          // data without read permission.
-         CodeAccessPermission.RevertAll();  
+         CodeAccessPermission.RevertAll();
 
          // Deny the read permission required by the method.
          EnvironmentPermission epr = new EnvironmentPermission(
@@ -86,9 +86,9 @@ namespace SecurityRulesLibrary
 
       [EnvironmentPermissionAttribute(SecurityAction.Demand, Read="PersonalInfo")]
       public string PersonalInformation ()
-      { 
+      {
          // Read the variable.
-         return Environment.GetEnvironmentVariable("PersonalInfo"); 
+         return Environment.GetEnvironmentVariable("PersonalInfo");
       }
    }
 }

@@ -32,7 +32,7 @@ class Program
             SqlDataReader reader =
                 commandSourceData.ExecuteReader();
 
-            // Create the SqlBulkCopy object using a connection string. 
+            // Create the SqlBulkCopy object using a connection string.
             // In the real world you would not use SqlBulkCopy to move
             // data from one table to the other in the same database.
             using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString))
@@ -61,7 +61,7 @@ class Program
                 }
             }
 
-            // Perform a final count on the destination 
+            // Perform a final count on the destination
             // table to see how many rows were added.
             long countEnd = System.Convert.ToInt32(
                 commandRowCount.ExecuteScalar());
@@ -73,8 +73,8 @@ class Program
     }
 
     private static string GetConnectionString()
-        // To avoid storing the sourceConnection string in your code, 
-        // you can retrieve it from a configuration file. 
+        // To avoid storing the sourceConnection string in your code,
+        // you can retrieve it from a configuration file.
     {
         return "Data Source=(local); " +
             " Integrated Security=true;" +

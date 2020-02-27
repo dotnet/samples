@@ -5,23 +5,23 @@ using System;
 class GetBytesUInt64Demo
 {
     const string formatter = "{0,22}{1,30}";
- 
+
     // Convert a ulong argument to a byte array and display it.
     public static void GetBytesUInt64( ulong argument )
     {
         byte[ ] byteArray = BitConverter.GetBytes( argument );
-        Console.WriteLine( formatter, argument, 
+        Console.WriteLine( formatter, argument,
             BitConverter.ToString( byteArray ) );
     }
-       
+
     public static void Main( )
     {
-        Console.WriteLine( 
+        Console.WriteLine(
             "This example of the BitConverter.GetBytes( ulong ) " +
             "\nmethod generates the following output.\n" );
         Console.WriteLine( formatter, "ulong", "byte array" );
         Console.WriteLine( formatter, "-----", "----------" );
-          
+
         // Convert ulong values and display the results.
         GetBytesUInt64( 0xFFFFFF );
         GetBytesUInt64( 1000000000 );

@@ -57,7 +57,7 @@ public class Int16Collection : CollectionBase  {
 public class SamplesCollectionBase  {
 
    public static void Main()  {
- 
+
       // Create and initialize a new CollectionBase.
       Int16Collection myI16 = new Int16Collection();
 
@@ -102,7 +102,7 @@ public class SamplesCollectionBase  {
       Console.WriteLine( "Contents of the collection after removing the element 2:" );
       PrintIndexAndValues( myI16 );
    }
- 
+
    // Uses the Count property and the Item property.
    public static void PrintIndexAndValues( Int16Collection myCol )  {
       for ( int i = 0; i < myCol.Count; i++ )
@@ -118,7 +118,7 @@ public class SamplesCollectionBase  {
       Console.WriteLine();
    }
 
-   // Uses the enumerator. 
+   // Uses the enumerator.
    // NOTE: The foreach statement is the preferred way of enumerating the contents of a collection.
    public static void PrintValues2( Int16Collection myCol )  {
       System.Collections.IEnumerator myEnumerator = myCol.GetEnumerator();
@@ -129,7 +129,7 @@ public class SamplesCollectionBase  {
 }
 
 
-/* 
+/*
 This code produces the following output.
 
 Contents of the collection (using foreach):

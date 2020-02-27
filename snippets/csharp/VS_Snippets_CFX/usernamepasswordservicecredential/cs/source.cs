@@ -30,10 +30,10 @@ namespace Example
             sh.AddServiceEndpoint(typeof(ICalculator), b, "UserNamePasswordCalculator");
 
             // Get a reference to the UserNamePasswordServiceCredential object.
-            UserNamePasswordServiceCredential unpCredential = 
+            UserNamePasswordServiceCredential unpCredential =
                 sh.Credentials.UserNameAuthentication;
             // Print out values.
-            Console.WriteLine("IncludeWindowsGroup: {0}", 
+            Console.WriteLine("IncludeWindowsGroup: {0}",
                 unpCredential.IncludeWindowsGroups);
             Console.WriteLine("UserNamePasswordValidationMode: {0}",
                 unpCredential.UserNamePasswordValidationMode);
@@ -43,7 +43,7 @@ namespace Example
                 unpCredential.CacheLogonTokens );
             Console.WriteLine("MaxCachedLogonTokens: {0}",
                 unpCredential.MaxCachedLogonTokens );
-                        
+
             Console.ReadLine();
             //</snippet1>
         }

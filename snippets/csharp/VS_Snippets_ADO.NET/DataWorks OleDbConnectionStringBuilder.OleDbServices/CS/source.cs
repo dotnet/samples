@@ -5,8 +5,8 @@ using System.Data.OleDb;
 
 class Program
 {
-    // These constants correspond to values in the 
-    // OLE DB SDK. You can use these values to 
+    // These constants correspond to values in the
+    // OLE DB SDK. You can use these values to
     // turn features on and off.
     private const int DBPROPVAL_OS_AGR_AFTERSESSION = 8;
     private const int DBPROPVAL_OS_AGR_RESOURCEPOOLING = 1;

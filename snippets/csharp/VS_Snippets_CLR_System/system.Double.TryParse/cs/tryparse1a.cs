@@ -5,17 +5,17 @@ public class Example
 {
    public static void Main()
    {
-      string[] values = { "1,643.57", "$1,643.57", "-1.643e6", 
-                          "-168934617882109132", "123AE6", 
+      string[] values = { "1,643.57", "$1,643.57", "-1.643e6",
+                          "-168934617882109132", "123AE6",
                           null, String.Empty, "ABCDEF" };
       double number;
-      
+
       foreach (var value in values) {
-         if (Double.TryParse(value, out number)) 
+         if (Double.TryParse(value, out number))
             Console.WriteLine("'{0}' --> {1}", value, number);
          else
-            Console.WriteLine("Unable to parse '{0}'.", value);      
-      }   
+            Console.WriteLine("Unable to parse '{0}'.", value);
+      }
    }
 }
 // The example displays the following output:

@@ -55,7 +55,7 @@ namespace DesignLibrary
                 outStream = File.Open(outFile, FileMode.Open);
             }
 
-            // Fix the second violation by re-throwing the generic 
+            // Fix the second violation by re-throwing the generic
             // exception at the end of the catch block.
             catch
             {

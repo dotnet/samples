@@ -10,7 +10,7 @@ public class Example
                           "123,456.789", "123 456,789", "123,456,789.0123",
                           "123 456 789,0123" };
       CultureInfo[] cultures = { new CultureInfo("en-US"),
-                                 new CultureInfo("fr-FR") }; 
+                                 new CultureInfo("fr-FR") };
 
       foreach (CultureInfo culture in cultures)
       {
@@ -27,7 +27,7 @@ public class Example
             }
          }
          Console.WriteLine();
-      }                     
+      }
    }
 }
 // The example displays the following output:
@@ -39,7 +39,7 @@ public class Example
 //                123 456,789  ->  FormatException
 //           123,456,789.0123  ->  123456789.0123
 //           123 456 789,0123  ->  FormatException
-//       
+//
 //       String -> Decimal Conversion Using the fr-FR Culture
 //                  123456789  ->  123456789
 //                 12345.6789  ->  FormatException

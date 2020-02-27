@@ -36,7 +36,7 @@ public class Class1
       // <Snippet1>
       bool falseFlag = false;
       bool trueFlag = true;
-      
+
       Console.WriteLine("{0} converts to {1}.", falseFlag,
                         Convert.ToSByte(falseFlag));
       Console.WriteLine("{0} converts to {1}.", trueFlag,
@@ -46,13 +46,13 @@ public class Class1
       //       true converts to 1.
       // </Snippet1>
    }
-   
+
    private static void ConvertByte()
    {
       // <Snippet2>
       byte[] numbers = { Byte.MinValue, 10, 100, Byte.MaxValue };
       sbyte result;
-      
+
       foreach (byte number in numbers)
       {
          try {
@@ -60,7 +60,7 @@ public class Class1
             Console.WriteLine("Converted the {0} value {1} to the {2} value {3}.",
                               number.GetType().Name, number,
                               result.GetType().Name, result);
-         }                           
+         }
          catch (OverflowException) {
             Console.WriteLine("The {0} value {1} is outside the range of the SByte type.",
                               number.GetType().Name, number);
@@ -73,7 +73,7 @@ public class Class1
       //    The Byte value 255 is outside the range of the SByte type.
       // </Snippet2>
    }
-   
+
    private static void ConvertChar()
    {
       // <Snippet3>
@@ -83,12 +83,12 @@ public class Class1
          try {
             sbyte result = Convert.ToSByte(ch);
             Console.WriteLine("{0} is converted to {1}.", ch, result);
-         }   
+         }
          catch (OverflowException) {
             Console.WriteLine("Unable to convert u+{0} to a byte.",
                               Convert.ToInt16(ch).ToString("X4"));
          }
-      }   
+      }
       // The example displays the following output:
       //    a is converted to 97.
       //    z is converted to 122.
@@ -97,14 +97,14 @@ public class Class1
       //    Unable to convert u+03FF to a byte.
       // </Snippet3>
    }
-   
+
    private static void ConvertDecimal()
    {
       // <Snippet4>
       decimal[] numbers = { Decimal.MinValue, -129.5m, -12.7m, 0m, 16m,
                             103.6m, 255.0m, Decimal.MaxValue };
       sbyte result;
-      
+
       foreach (decimal number in numbers)
       {
          try {
@@ -117,7 +117,7 @@ public class Class1
             Console.WriteLine("The {0} value {1} is outside the range of the SByte type.",
                               number.GetType().Name, number);
          }
-      }                         
+      }
       // The example displays the following output:
       //    The Decimal value -79228162514264337593543950335 is outside the range of the SByte type.
       //    The Decimal value -129.5 is outside the range of the SByte type.
@@ -129,14 +129,14 @@ public class Class1
       //    The Decimal value 79228162514264337593543950335 is outside the range of the SByte type.
       // </Snippet4>
    }
-   
+
    private static void ConvertDouble()
    {
       // <Snippet5>
       double[] numbers = { Double.MinValue, -129.5, -12.7, 0, 16,
                            103.6, 255.0, 1.63509e17, Double.MaxValue};
       sbyte result;
-      
+
       foreach (double number in numbers)
       {
          try {
@@ -149,7 +149,7 @@ public class Class1
             Console.WriteLine("The {0} value {1} is outside the range of the SByte type.",
                               number.GetType().Name, number);
          }
-      }                                  
+      }
       // The example displays the following output:
       //    The Double value -1.79769313486232E+308 is outside the range of the SByte type.
       //    The Double value -129.5 is outside the range of the SByte type.
@@ -162,7 +162,7 @@ public class Class1
       //    The Double value 1.79769313486232E+308 is outside the range of the SByte type.
       // </Snippet5>
    }
-   
+
    private static void ConvertInt16()
    {
       // <Snippet6>
@@ -190,13 +190,13 @@ public class Class1
       //    The Int16 value 32767 is outside the range of the SByte type.
       // </Snippet6>
    }
-   
+
    private static void ConvertInt32()
    {
       // <Snippet7>
       int[] numbers = { Int32.MinValue, -1, 0, 121, 340, Int32.MaxValue };
       sbyte result;
-      
+
       foreach (int number in numbers)
       {
          try {
@@ -219,7 +219,7 @@ public class Class1
       //    The Int32 value 2147483647 is outside the range of the SByte type.
       // </Snippet7>
    }
-   
+
    private static void ConvertInt64()
    {
       // <Snippet8>
@@ -245,16 +245,16 @@ public class Class1
       //    Converted the Int64 value 121 to the SByte value 121.
       //    The Int64 value 340 is outside the range of the SByte type.
       //    The Int64 value 9223372036854775807 is outside the range of the SByte type.
-      // </Snippet8>   
-   }   
-   
+      // </Snippet8>
+   }
+
    private static void ConvertObject()
    {
       // <Snippet9>
       object[] values = { true, -12, 163, 935, 'x', "104", "103.0", "-1",
                           "1.00e2", "One", 1.00e2};
       sbyte result;
-      
+
       foreach (object value in values)
       {
          try {
@@ -262,7 +262,7 @@ public class Class1
             Console.WriteLine("Converted the {0} value {1} to the {2} value {3}.",
                               value.GetType().Name, value,
                               result.GetType().Name, result);
-         }                     
+         }
          catch (OverflowException) {
             Console.WriteLine("The {0} value {1} is outside the range of the SByte type.",
                               value.GetType().Name, value);
@@ -275,7 +275,7 @@ public class Class1
             Console.WriteLine("No conversion to a Byte exists for the {0} value {1}.",
                               value.GetType().Name, value);
          }
-      }                           
+      }
       // The example displays the following output:
       //    Converted the Boolean value true to the SByte value 1.
       //    Converted the Int32 value -12 to the SByte value -12.
@@ -290,14 +290,14 @@ public class Class1
       //    Converted the Double value 100 to the SByte value 100.
       // </Snippet9>
    }
-   
+
    private static void ConvertSingle()
    {
       // <Snippet10>
       float[] numbers = { Single.MinValue, -129.5f, -12.7f, 0f, 16f,
                           103.6f, 255.0f, 1.63509e17f, Single.MaxValue };
       sbyte result;
-      
+
       foreach (float number in numbers)
       {
          try {
@@ -310,7 +310,7 @@ public class Class1
             Console.WriteLine("The {0} value {1} is outside the range of the SByte type.",
                               number.GetType().Name, number);
          }
-      }                                  
+      }
       // The example displays the following output:
       //    The Single value -3.402823E+38 is outside the range of the SByte type.
       //    The Single value -129.5 is outside the range of the SByte type.
@@ -320,16 +320,16 @@ public class Class1
       //    Converted the Single value 103.6 to the SByte value 104.
       //    The Single value 255 is outside the range of the SByte type.
       //    The Single value 1.63509E+17 is outside the range of the SByte type.
-      //    The Single value 3.402823E+38 is outside the range of the SByte type.       
+      //    The Single value 3.402823E+38 is outside the range of the SByte type.
       // </Snippet10>
    }
-   
+
    private static void ConvertUInt16()
    {
       // <Snippet11>
       ushort[] numbers = { UInt16.MinValue, 121, 340, UInt16.MaxValue };
       sbyte result;
-      
+
       foreach (ushort number in numbers)
       {
          try {
@@ -337,7 +337,7 @@ public class Class1
             Console.WriteLine("Converted the {0} value {1} to the {2} value {3}.",
                               number.GetType().Name, number,
                               result.GetType().Name, result);
-         }                     
+         }
          catch (OverflowException) {
             Console.WriteLine("The {0} value {1} is outside the range of the SByte type.",
                               number.GetType().Name, number);
@@ -350,13 +350,13 @@ public class Class1
       //    The UInt16 value 65535 is outside the range of the SByte type.
       // </Snippet11>
    }
-   
+
    private static void ConvertUInt32()
    {
       // <Snippet12>
       uint[] numbers = { UInt32.MinValue, 121, 340, UInt32.MaxValue };
       sbyte result;
-      
+
       foreach (uint number in numbers)
       {
          try {
@@ -377,13 +377,13 @@ public class Class1
       //    The UInt32 value 4294967295 is outside the range of the SByte type.
       // </Snippet12>
    }
-   
+
    private static void ConvertUInt64()
    {
       // <Snippet13>
       ulong[] numbers = { UInt64.MinValue, 121, 340, UInt64.MaxValue };
       sbyte result;
-      
+
       foreach (ulong number in numbers)
       {
          try {
@@ -402,6 +402,6 @@ public class Class1
       //    Converted the UInt64 value 121 to the SByte value 121.
       //    The UInt64 value 340 is outside the range of the SByte type.
       //    The UInt64 value 18446744073709551615 is outside the range of the SByte type.
-      // </Snippet13>   
+      // </Snippet13>
    }
 }
