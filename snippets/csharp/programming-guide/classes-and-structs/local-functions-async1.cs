@@ -5,7 +5,7 @@ class Example
 {
    static void Main()
    {
-      int result = GetMultipleAsync(6).Result;
+      int result = GetMultipleAsync(6).Result; //Line 8
       Console.WriteLine($"The returned value is {result:N0}");
    }
 
@@ -13,7 +13,7 @@ class Example
    {
       Console.WriteLine("Executing GetMultipleAsync...");
       if (secondsDelay < 0 || secondsDelay > 5)
-         throw new ArgumentOutOfRangeException("secondsDelay cannot exceed 5.");
+         throw new ArgumentOutOfRangeException("secondsDelay cannot exceed 5."); // Line 16
          
       await Task.Delay(secondsDelay * 1000);
       return secondsDelay * new Random().Next(2,10);
@@ -27,7 +27,7 @@ class Example
 //    Parameter name: secondsDelay cannot exceed 5.) ---> 
 //         System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
 //    Parameter name: secondsDelay cannot exceed 5.
-//       at Example.<GetMultiple>d__1.MoveNext() in Program.cs:line 17
+//       at Example.<GetMultiple>d__1.MoveNext() in Program.cs:line 16
 //       --- End of inner exception stack trace ---
 //       at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
 //       at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
