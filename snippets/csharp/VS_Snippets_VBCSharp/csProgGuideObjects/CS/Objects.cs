@@ -20,61 +20,6 @@ namespace CsCsrefProgrammingObjects
     //</Snippet1>
 
     //-----------------------------------------------------------------------------
-    //<Snippet2>
-    // Declare and initialize struct objects.
-    class TestCoords
-    {
-        static void Main()
-        {
-            // Initialize.
-            var coords1 = new Coords();
-            var coords2 = new Coords(10, 10);
-
-            // Display results.
-            Console.Write("Coords 1: ");
-            Console.WriteLine($"x = {coords1.x}, y = {coords1.y}");
-
-            Console.Write("Coords 2: ");
-            Console.WriteLine($"x = {coords2.x}, y = {coords2.y}");
-
-            // Keep the console window open in debug mode.
-            Console.WriteLine("Press any key to exit.");
-            Console.ReadKey();
-        }
-    }
-    /* Output:
-        Coords 1: x = 0, y = 0
-        Coords 2: x = 10, y = 10
-    */
-    //</Snippet2>
-
-    //-----------------------------------------------------------------------------
-    //<Snippet3>
-    // Declare a struct object without "new".
-    class TestCoordsNoNew
-    {
-        static void Main()
-        {
-            // Declare an object.
-            Coords coords1;
-
-            // Initialize.
-            coords1.x = 10;
-            coords1.y = 20;
-
-            // Display results.
-            Console.Write("Coords 1: ");
-            Console.WriteLine($"x = {coords1.x}, y = {coords1.y}");
-
-            // Keep the console window open in debug mode.
-            Console.WriteLine("Press any key to exit.");
-            Console.ReadKey();
-        }
-    }
-    // Output: Coords 1: x = 10, y = 20
-    //</Snippet3>
-
-    //-----------------------------------------------------------------------------
     namespace WrapCoords
     {
         //<Snippet4>
@@ -974,14 +919,6 @@ class TestPerson
             //</Snippet87>
         }
     }
-
-    //-----------------------------------------------------------------------------
-    //<Snippet39>
-    public struct PostalAddress
-    {
-        // Fields, properties, methods and events go here...
-    }
-    //</Snippet39>
 
     //-----------------------------------------------------------------------------
     //<Snippet79>
