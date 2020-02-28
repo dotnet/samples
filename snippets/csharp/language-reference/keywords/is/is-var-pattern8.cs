@@ -1,49 +1,42 @@
 ﻿// <Snippet8>
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 class Program
 {
     static void Main()
-   {
-      object[] items = { new Book("The Tempest"), new Person("John") };
-      foreach (var item in items) {
-        if (item is var obj)
-          Console.WriteLine($"Type: {obj.GetType().Name}, Value: {obj}"); 
-      }
-   }
-}
-
-class Book
-{
-    public Book(string title) 
     {
-       Title = title;    
+        int[] testSet = { 100271, 234335, 342439, 999683 };
+
+        var primes = testSet.Where(n => Factor(n).ToList() is var factors
+                                    && factors.Count == 2
+                                    && factors.Contains(1)
+                                    && factors.Contains(n));
+
+        foreach (int prime in primes)
+        {
+            Console.WriteLine($"Found prime: {prime}");
+        }
     }
 
-    public string Title { get; set; }
-
-    public override string ToString()
+    static IEnumerable<int> Factor(int number) 
     {
-       return Title;
+        int max = (int)Math.Sqrt(number);
+        for (int i = 1; i <= max; i++) 
+        {
+            if (number % i == 0)
+            {
+                yield return i;
+                if (i != number / i) 
+                {
+                    yield return number / i;
+                }
+            }
+        }
     }
-}
-
-class Person
-{
-   public Person(string name)
-   {
-      Name = name;
-   }
-
-   public string Name 
-   { get; set; }
-
-   public override string ToString()
-   {
-      return Name;
-   }
 }
 // The example displays the following output:
-//       Type: Book, Value: The Tempest
-//       Type: Person, Value: John
+//       Found prime: 100271
+//       Found prime: 999683
 // </Snippet8>
