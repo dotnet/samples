@@ -8,7 +8,7 @@ class Example
       IEnumerable<int> ienum = OddSequence(50, 110);
       Console.WriteLine("Retrieved enumerator...");
       
-      foreach (var i in ienum)
+      foreach (var i in ienum) //Line 11
       {
          Console.Write($"{i} ");
       }
@@ -19,7 +19,7 @@ class Example
       if (start < 0 || start > 99)
          throw new ArgumentOutOfRangeException("start must be between 0 and 99.");
       if (end > 100)
-         throw new ArgumentOutOfRangeException("end must be less than or equal to 100.");
+         throw new ArgumentOutOfRangeException("end must be less than or equal to 100."); //Line 22
       if (start >= end)
          throw new ArgumentException("start must be less than end.");
          
@@ -35,5 +35,5 @@ class Example
 //    
 //    Unhandled Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
 //    Parameter name: end must be less than or equal to 100.
-//       at Sequence.<GetNumericRange>d__1.MoveNext() in Program.cs:line 23
-//       at Example.Main() in Program.cs:line 43
+//       at Sequence.<GetNumericRange>d__1.MoveNext() in Program.cs:line 11
+//       at Example.Main() in Program.cs:line 22
