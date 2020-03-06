@@ -2,7 +2,8 @@
 Option Strict On
 
 ' <Snippet2>
-<Flags()> Public Enum PhoneService As Integer
+<Flags()>
+Public Enum PhoneService As Integer
    None = 0
    LandLine = 1
    Cell = 2
