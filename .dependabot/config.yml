@@ -636,9 +636,6 @@ update_configs:
     directory: "/framework/libraries/net45-compat-library/src/Library" # Library.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/framework/libraries/pcl-library/src/Library" # Library.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
     directory: "/snippets/common/VS_Snippets_CFX/s_uepolicyconversioncontext/cs2" # cs2.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
