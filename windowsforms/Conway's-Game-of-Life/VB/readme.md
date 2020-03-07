@@ -36,7 +36,7 @@ description: "The Game of Life, also known simply as Life, is a cellular automat
 
 ## Description
 
-This Windows Forms sample was ported to .NET Core from a [previous .NET Framework 4.5 sample](https://github.com/microsoftarchive/msdn-code-gallery-community-a-c/tree/master/Conway's%20Game%20of%20Life/%5BVB%5D-Conway's%20Game%20of%20Life/VB).
+This Windows Forms sample was ported to .NET Core from a [previous .NET Framework 4.5 sample](https://github.com/microsoftarchive/msdn-code-gallery-community-a-c/tree/master/Conway's%20Game%20of%20Life/%5BVB%5D-Conway's%20Game%20of%20Life/VB).  This illustrates how to use Visual Basic in WinForms in .NET Core 3.1. Visual Basic support for WinForms is not fully supported in .NET Core 3.1, but the features used in this sample work fine.
 
 The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.
 
