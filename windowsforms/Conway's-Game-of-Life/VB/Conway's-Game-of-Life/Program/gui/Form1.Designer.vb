@@ -24,7 +24,7 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.DataGridView1 = New ExDGV()
+        Me.DataGridView1 = New Conways_Game_of_Life.ExDGV()
         Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()

@@ -3,8 +3,8 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>Sudoku</RootNamespace>
-    <StartupObject>Form1</StartupObject>
-    <RootNamespace></RootNamespace>
+    <StartupObject>Conways_Game_of_Life.Form1</StartupObject>
+    <RootNamespace>Conways_Game_of_Life</RootNamespace>
     <AssemblyName>Conways Game of Life</AssemblyName>
     <UseWindowsForms>true</UseWindowsForms>
     <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
