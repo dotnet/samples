@@ -20,7 +20,7 @@ writer.WriteElementString("orderID", "2-36-00a")
 writer.Flush()
 writer.Close()
 
-' Do additonal processing on the stream.
+' Do additional processing on the stream.
 '</snippet1>
         
   end sub
