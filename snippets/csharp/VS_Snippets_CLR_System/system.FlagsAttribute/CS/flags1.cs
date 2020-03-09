@@ -1,7 +1,8 @@
 ﻿// <Snippet2>
 using System;
 
-[Flags] public enum PhoneService
+[Flags]
+public enum PhoneService
 {
    None = 0,
    LandLine = 1,
