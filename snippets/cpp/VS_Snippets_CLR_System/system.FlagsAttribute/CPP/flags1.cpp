@@ -1,7 +1,8 @@
 // <Snippet2>
 using namespace System;
 
-[Flags] enum class PhoneService
+[Flags]
+enum class PhoneService
 {
    None = 0,
    LandLine = 1,
