@@ -22,6 +22,7 @@ If you're new to .NET Core, here are a few resources to help you understand the 
 | [DataGridView Sample](datagridview) | This sample demonstrates DataGridView usage in .NET Core 3 |
 | [Graphics Sample](graphics) | This sample demonstrates using GDI+ APIs via the Graphics type in .NET Core 3 |
 | [Sudoku Sample](Sudoku) | This sample demonstrates creating a game using event handling and the Graphics type in .NET Core 3 |
+| [Conway's Game of Life Sample](Conway's-Game-of-Life) | This sample demonstrates creating a DataGridView extension to handle OnRowPrePaint and trapping Windows Messages to prevent a left mouse click in .NET Core 3 |
 
 ## Getting Started
 
