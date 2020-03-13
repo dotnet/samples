@@ -5,6 +5,7 @@ products:
 - dotnet-core
 page_type: sample
 name: "Inspect assembly contents using MetadataLoadContext"
+urlFragment: "inspect-assembly-contents-using-metadataloadcontext"
 description: "A sample console application that shows how to use MetadataLoadContext to load an assembly for inspection purposes"
 ---
 # Inspect assembly contents using MetadataLoadContext
