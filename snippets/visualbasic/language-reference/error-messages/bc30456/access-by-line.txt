@@ -1,1 +1,0 @@
-﻿bc30456.vbproj: ~/docs/visual-basic/misc/bc30456.md
