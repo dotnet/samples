@@ -1,3 +1,0 @@
-﻿to-pig-latin.fsx: ~/docs/fsharp/get-started/get-started-vscode.md
-pig-latin.fs: ~/docs/fsharp/get-started/get-started-vscode.md
-
