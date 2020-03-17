@@ -53,6 +53,14 @@ void Sampler::DoSampling(ICorProfilerInfo10 *pProfInfo, CorProfiler *parent)
 
         s_waitEvent.Wait();
 
+        // This is a hack that was convenient for writing this profiler.
+        // It checks if any methods have been jitted yet, but the runtime
+        // can execute managed code from ready to run images without jitting
+        // any code so it won't always work correctly.
+        //
+        // It also isn't strictly necessary to check this, you can suspend the 
+        // runtime at any point but for this profiler we don't care until there
+        // are managed callstacks to sample.
         if (!parent->IsRuntimeExecutingManagedCode())
         {
             printf("Runtime has not started executing managed code yet.\n");
