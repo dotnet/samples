@@ -20,7 +20,7 @@ namespace MetadataLoadContextSample
 
             try
             {
-                //get the array of runtime assemblies
+                // Get the array of runtime assemblies.
                 //this will allow us to at least inspect types depending only on BCL
                 string[] runtimeAssemblies = Directory.GetFiles(RuntimeEnvironment.GetRuntimeDirectory(), "*.dll");
 
@@ -50,7 +50,7 @@ namespace MetadataLoadContextSample
                         catch (FileNotFoundException ex)
                         {
                             //we are missing the required dependency assembly
-                            Console.WriteLine("Error: " + ex.Message);
+                            Console.WriteLine("Error getting attribute type: " + ex.Message);
                         }
                     }
 
