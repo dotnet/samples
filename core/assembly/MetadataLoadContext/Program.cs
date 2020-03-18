@@ -21,24 +21,24 @@ namespace MetadataLoadContextSample
             try
             {
                 // Get the array of runtime assemblies.
-                //this will allow us to at least inspect types depending only on BCL
+                // This will allow us to at least inspect types depending only on BCL.
                 string[] runtimeAssemblies = Directory.GetFiles(RuntimeEnvironment.GetRuntimeDirectory(), "*.dll");
 
-                //create the list of assembly paths consisting of runtime assemblies and the input file
+                // Create the list of assembly paths consisting of runtime assemblies and the input file.
                 var paths = new List<string>(runtimeAssemblies);
                 paths.Add(inputFile);
 
-                //create MetadataLoadContext that can resolve assemblies using the created list
+                // Create MetadataLoadContext that can resolve assemblies using the created list.
                 var resolver = new PathAssemblyResolver(paths);
                 var mlc = new MetadataLoadContext(resolver);
 
                 using (mlc)
                 {
-                    //load assembly into MetadataLoadContext
+                    // Load assembly into MetadataLoadContext.
                     Assembly assembly = mlc.LoadFromAssemblyPath(inputFile);
                     AssemblyName name = assembly.GetName();
 
-                    //print assembly attribute information
+                    // Print assembly attribute information.
                     Console.WriteLine(name.Name + " has following attributes: ");
 
                     foreach (CustomAttributeData attr in assembly.GetCustomAttributesData())
@@ -49,14 +49,14 @@ namespace MetadataLoadContextSample
                         }
                         catch (FileNotFoundException ex)
                         {
-                            //we are missing the required dependency assembly
+                            // We are missing the required dependency assembly.
                             Console.WriteLine("Error getting attribute type: " + ex.Message);
                         }
                     }
 
                     Console.WriteLine();
 
-                    //print assembly type information
+                    // Print assembly type information.
                     Console.WriteLine(name.Name + " contains following types: ");
 
                     foreach (TypeInfo t in assembly.GetTypes())
@@ -96,7 +96,7 @@ namespace MetadataLoadContextSample
                         }
                         catch (System.IO.FileNotFoundException ex)
                         {
-                            //we are missing the required dependency assembly
+                            // We are missing the required dependency assembly.
                             Console.WriteLine("Error: " + ex.Message);
                         }
                     }
