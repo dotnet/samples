@@ -6,7 +6,7 @@ namespace Projection
 {
     public class SelectSample6
     {
-        //This sample uses select and query syntax to produce a sequence containing some properties of Products, including UnitPrice 
+        //This sample uses select and query syntax to produce a sequence containing some properties of Products, including UnitPrice
         //which is renamed to Price in the resulting type.
         //
         //Outputs:
@@ -103,7 +103,7 @@ namespace Projection
             }
         }
 
-        //This sample uses selectand method syntax to produce a sequence containing some properties of Products, including UnitPrice 
+        //This sample uses selectand method syntax to produce a sequence containing some properties of Products, including UnitPrice
         //which is renamed to Price in the resulting type.
         //
         //Outputs:

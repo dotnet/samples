@@ -17,7 +17,7 @@ namespace Projection
         // 8
         // 3
         // 1
-        public static void QuerySyntaxExample() 
+        public static void QuerySyntaxExample()
         {
             int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
 
@@ -45,7 +45,7 @@ namespace Projection
         // 8
         // 3
         // 1
-        public static void MethodSyntaxExample() 
+        public static void MethodSyntaxExample()
         {
             int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
 

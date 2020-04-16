@@ -2,10 +2,10 @@
 * Module Name:  JustInTimeDataLoading
 * Project:      CSWinFormDataGridView
 * Copyright (c) Microsoft Corporation.
-* 
-* This sample demonstrates how to use virtual mode in the DataGridView control 
-* with a data cache that loads data from a server only when it is needed. 
-* This kind of data loading is called "Just-in-time data loading". 
+*
+* This sample demonstrates how to use virtual mode in the DataGridView control
+* with a data cache that loads data from a server only when it is needed.
+* This kind of data loading is called "Just-in-time data loading".
 \**********************************************************************************/
 
 #region Using directives
@@ -31,7 +31,7 @@ namespace CSWinFormDataGridView.JustInTimeDataLoading
 
         private Cache memoryCache;
 
-        // Specify a connection string. Replace the given value with a 
+        // Specify a connection string. Replace the given value with a
         // valid connection string for a Northwind SQL Server sample
         // database accessible to your system.
         private string connectionString =
@@ -45,9 +45,9 @@ namespace CSWinFormDataGridView.JustInTimeDataLoading
             // Enable VirtualMode on the DataGridView
             this.dataGridView1.VirtualMode = true;
 
-            // Handle the CellValueNeeded event to retrieve the requested cell value 
+            // Handle the CellValueNeeded event to retrieve the requested cell value
             // from the data store or the Customer object currently in edit.
-            // This event occurs whenever the DataGridView control needs to paint a cell. 
+            // This event occurs whenever the DataGridView control needs to paint a cell.
             this.dataGridView1.CellValueNeeded += new
                 DataGridViewCellValueEventHandler(dataGridView1_CellValueNeeded);
 

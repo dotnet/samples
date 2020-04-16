@@ -81,7 +81,7 @@ namespace Join
 
         // This sample shows how to efficiently join elements of two sequences based on equality between key
         // expressions over the two.
-        // Output: 
+        // Output:
         // Chai: Beverages
         // Chang: Beverages
         // Guarana Fantastica: Beverages

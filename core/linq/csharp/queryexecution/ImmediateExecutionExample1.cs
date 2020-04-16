@@ -22,7 +22,7 @@ namespace QueryExecution
         public static void QuerySyntaxExample()
         {
             // Methods like ToList(), Max(), and Count() cause the query to be
-            // executed immediately.            
+            // executed immediately.
             int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
 
             int i = 0;
@@ -56,7 +56,7 @@ namespace QueryExecution
         public static void MethodSyntaxExample()
         {
             // Methods like ToList(), Max(), and Count() cause the query to be
-            // executed immediately.            
+            // executed immediately.
             int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
 
             int i = 0;

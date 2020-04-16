@@ -48,9 +48,9 @@ Namespace MatchingGame
             Me.timer1 = New System.Windows.Forms.Timer(Me.components)
             Me.tableLayoutPanel1.SuspendLayout()
             Me.SuspendLayout()
-            ' 
+            '
             ' tableLayoutPanel1
-            ' 
+            '
             Me.tableLayoutPanel1.BackColor = System.Drawing.Color.CornflowerBlue
             Me.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset
             Me.tableLayoutPanel1.ColumnCount = 4
@@ -84,9 +84,9 @@ Namespace MatchingGame
             Me.tableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F))
             Me.tableLayoutPanel1.Size = New System.Drawing.Size(534, 511)
             Me.tableLayoutPanel1.TabIndex = 0
-            ' 
+            '
             ' label16
-            ' 
+            '
             Me.label16.Dock = System.Windows.Forms.DockStyle.Fill
             Me.label16.Font = New System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (CByte((2))))
             Me.label16.Location = New System.Drawing.Point(404, 383)
@@ -96,9 +96,9 @@ Namespace MatchingGame
             Me.label16.Text = "c"
             Me.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             AddHandler Me.label16.Click, New System.EventHandler(AddressOf Me.label_Click)
-            ' 
+            '
             ' label15
-            ' 
+            '
             Me.label15.Dock = System.Windows.Forms.DockStyle.Fill
             Me.label15.Font = New System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (CByte((2))))
             Me.label15.Location = New System.Drawing.Point(271, 383)
@@ -108,9 +108,9 @@ Namespace MatchingGame
             Me.label15.Text = "c"
             Me.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             AddHandler Me.label15.Click, New System.EventHandler(AddressOf Me.label_Click)
-            ' 
+            '
             ' label14
-            ' 
+            '
             Me.label14.Dock = System.Windows.Forms.DockStyle.Fill
             Me.label14.Font = New System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (CByte((2))))
             Me.label14.Location = New System.Drawing.Point(138, 383)
@@ -120,9 +120,9 @@ Namespace MatchingGame
             Me.label14.Text = "c"
             Me.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             AddHandler Me.label14.Click, New System.EventHandler(AddressOf Me.label_Click)
-            ' 
+            '
             ' label13
-            ' 
+            '
             Me.label13.Dock = System.Windows.Forms.DockStyle.Fill
             Me.label13.Font = New System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (CByte((2))))
             Me.label13.Location = New System.Drawing.Point(5, 383)
@@ -132,9 +132,9 @@ Namespace MatchingGame
             Me.label13.Text = "c"
             Me.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             AddHandler Me.label13.Click, New System.EventHandler(AddressOf Me.label_Click)
-            ' 
+            '
             ' label12
-            ' 
+            '
             Me.label12.Dock = System.Windows.Forms.DockStyle.Fill
             Me.label12.Font = New System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (CByte((2))))
             Me.label12.Location = New System.Drawing.Point(404, 256)
@@ -144,9 +144,9 @@ Namespace MatchingGame
             Me.label12.Text = "c"
             Me.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             AddHandler Me.label12.Click, New System.EventHandler(AddressOf Me.label_Click)
-            ' 
+            '
             ' label11
-            ' 
+            '
             Me.label11.Dock = System.Windows.Forms.DockStyle.Fill
             Me.label11.Font = New System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (CByte((2))))
             Me.label11.Location = New System.Drawing.Point(271, 256)
@@ -156,9 +156,9 @@ Namespace MatchingGame
             Me.label11.Text = "c"
             Me.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             AddHandler Me.label11.Click, New System.EventHandler(AddressOf Me.label_Click)
-            ' 
+            '
             ' label10
-            ' 
+            '
             Me.label10.Dock = System.Windows.Forms.DockStyle.Fill
             Me.label10.Font = New System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (CByte((2))))
             Me.label10.Location = New System.Drawing.Point(138, 256)
@@ -168,9 +168,9 @@ Namespace MatchingGame
             Me.label10.Text = "c"
             Me.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             AddHandler Me.label10.Click, New System.EventHandler(AddressOf Me.label_Click)
-            ' 
+            '
             ' label9
-            ' 
+            '
             Me.label9.Dock = System.Windows.Forms.DockStyle.Fill
             Me.label9.Font = New System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (CByte((2))))
             Me.label9.Location = New System.Drawing.Point(5, 256)
@@ -180,9 +180,9 @@ Namespace MatchingGame
             Me.label9.Text = "c"
             Me.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             AddHandler Me.label9.Click, New System.EventHandler(AddressOf Me.label_Click)
-            ' 
+            '
             ' label8
-            ' 
+            '
             Me.label8.Dock = System.Windows.Forms.DockStyle.Fill
             Me.label8.Font = New System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (CByte((2))))
             Me.label8.Location = New System.Drawing.Point(404, 129)
@@ -192,9 +192,9 @@ Namespace MatchingGame
             Me.label8.Text = "c"
             Me.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             AddHandler Me.label8.Click, New System.EventHandler(AddressOf Me.label_Click)
-            ' 
+            '
             ' label7
-            ' 
+            '
             Me.label7.Dock = System.Windows.Forms.DockStyle.Fill
             Me.label7.Font = New System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (CByte((2))))
             Me.label7.Location = New System.Drawing.Point(271, 129)
@@ -204,9 +204,9 @@ Namespace MatchingGame
             Me.label7.Text = "c"
             Me.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             AddHandler Me.label7.Click, New System.EventHandler(AddressOf Me.label_Click)
-            ' 
+            '
             ' label6
-            ' 
+            '
             Me.label6.Dock = System.Windows.Forms.DockStyle.Fill
             Me.label6.Font = New System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (CByte((2))))
             Me.label6.Location = New System.Drawing.Point(138, 129)
@@ -216,9 +216,9 @@ Namespace MatchingGame
             Me.label6.Text = "c"
             Me.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             AddHandler Me.label6.Click, New System.EventHandler(AddressOf Me.label_Click)
-            ' 
+            '
             ' label5
-            ' 
+            '
             Me.label5.Dock = System.Windows.Forms.DockStyle.Fill
             Me.label5.Font = New System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (CByte((2))))
             Me.label5.Location = New System.Drawing.Point(5, 129)
@@ -228,9 +228,9 @@ Namespace MatchingGame
             Me.label5.Text = "c"
             Me.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             AddHandler Me.label5.Click, New System.EventHandler(AddressOf Me.label_Click)
-            ' 
+            '
             ' label4
-            ' 
+            '
             Me.label4.Dock = System.Windows.Forms.DockStyle.Fill
             Me.label4.Font = New System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (CByte((2))))
             Me.label4.Location = New System.Drawing.Point(404, 2)
@@ -240,9 +240,9 @@ Namespace MatchingGame
             Me.label4.Text = "c"
             Me.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             AddHandler Me.label4.Click, New System.EventHandler(AddressOf Me.label_Click)
-            ' 
+            '
             ' label3
-            ' 
+            '
             Me.label3.Dock = System.Windows.Forms.DockStyle.Fill
             Me.label3.Font = New System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (CByte((2))))
             Me.label3.Location = New System.Drawing.Point(271, 2)
@@ -252,9 +252,9 @@ Namespace MatchingGame
             Me.label3.Text = "c"
             Me.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             AddHandler Me.label3.Click, New System.EventHandler(AddressOf Me.label_Click)
-            ' 
+            '
             ' label2
-            ' 
+            '
             Me.label2.Dock = System.Windows.Forms.DockStyle.Fill
             Me.label2.Font = New System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (CByte((2))))
             Me.label2.Location = New System.Drawing.Point(138, 2)
@@ -264,9 +264,9 @@ Namespace MatchingGame
             Me.label2.Text = "c"
             Me.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             AddHandler Me.label2.Click, New System.EventHandler(AddressOf Me.label_Click)
-            ' 
+            '
             ' label1
-            ' 
+            '
             Me.label1.Dock = System.Windows.Forms.DockStyle.Fill
             Me.label1.Font = New System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (CByte((2))))
             Me.label1.Location = New System.Drawing.Point(5, 2)
@@ -276,14 +276,14 @@ Namespace MatchingGame
             Me.label1.Text = "c"
             Me.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             AddHandler Me.label1.Click, New System.EventHandler(AddressOf Me.label_Click)
-            ' 
+            '
             ' timer1
-            ' 
+            '
             Me.timer1.Interval = 750
             AddHandler Me.timer1.Tick, New System.EventHandler(AddressOf Me.timer1_Tick)
-            ' 
+            '
             ' Form1
-            ' 
+            '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6F, 13F)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.ClientSize = New System.Drawing.Size(534, 511)

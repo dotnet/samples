@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Concatenation 
+namespace Concatenation
 {
     public class Concat2
     {
@@ -14,23 +14,23 @@ namespace Concatenation
         //  Original Frankfurter grune Sobe
         public static void QuerySyntaxExample()
         {
-            List<Customer> customers = Data.Customers; 
-            List<Product> products = Data.Products; 
-  
-            var customerNames = 
-                from c in customers 
-                select c.CustomerName; 
+            List<Customer> customers = Data.Customers;
+            List<Product> products = Data.Products;
 
-            var productNames = 
-                from p in products 
-                select p.ProductName;  
+            var customerNames =
+                from c in customers
+                select c.CustomerName;
 
-            var allNames = customerNames.Concat(productNames); 
+            var productNames =
+                from p in products
+                select p.ProductName;
 
-            Console.WriteLine("Customer and product names:"); 
-            foreach (var n in allNames) 
-            { 
-                Console.WriteLine(n); 
+            var allNames = customerNames.Concat(productNames);
+
+            Console.WriteLine("Customer and product names:");
+            foreach (var n in allNames)
+            {
+                Console.WriteLine(n);
             }
         }
 
@@ -42,18 +42,18 @@ namespace Concatenation
         //  Original Frankfurter grune Sobe
         public static void MethodSyntaxExample()
         {
-            List<Customer> customers = Data.Customers; 
-            List<Product> products = Data.Products; 
-  
-            var customerNames = customers.Select(c => c.CustomerName); 
+            List<Customer> customers = Data.Customers;
+            List<Product> products = Data.Products;
+
+            var customerNames = customers.Select(c => c.CustomerName);
             var productNames = products.Select(p => p.ProductName);
-            
-            var allNames = customerNames.Concat(productNames); 
-        
-            Console.WriteLine("Customer and product names:"); 
-            foreach (var n in allNames) 
-            { 
-                Console.WriteLine(n); 
+
+            var allNames = customerNames.Concat(productNames);
+
+            Console.WriteLine("Customer and product names:");
+            foreach (var n in allNames)
+            {
+                Console.WriteLine(n);
             }
         }
     }

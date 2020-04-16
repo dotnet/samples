@@ -5,9 +5,9 @@ namespace Partitioning
 {
     public static class SkipWhileSample2
     {
-        // This sample uses SkipWhile to get the elements of the array starting from the first element less 
+        // This sample uses SkipWhile to get the elements of the array starting from the first element less
         // than its position.
-        // Output: 
+        // Output:
         // All elements starting from first element less than its position:
         // 1
         // 3

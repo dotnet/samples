@@ -18,7 +18,7 @@ namespace IndexersSamples
             SampleThree();
             SampleFour();
         }
-        
+
         private static void SampleOne()
         {
             // Create a store:
@@ -79,7 +79,7 @@ namespace IndexersSamples
             item = generator[0.30, 0.0001];
             Console.WriteLine(item);
         }
-        
+
         private static void SampleFour()
         {
             var data = new HistoricalWeatherData();

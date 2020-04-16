@@ -2,8 +2,8 @@
 * Module Name:  EditingControlHosting
 * Project:      CSWinFormDataGridView
 * Copyright (c) Microsoft Corporation.
-* 
-* This sample demonstrates how to host a control in the current DataGridViewCell  for 
+*
+* This sample demonstrates how to host a control in the current DataGridViewCell  for
 * editing.
 \******************************************************************************************/
 
@@ -34,17 +34,17 @@ namespace CSWinFormDataGridView.EditingControlHosting
         {
             this.maskedTextBoxForEditing = new MaskedTextBox();
 
-            // The "000-00-0000" mask allows only digits can be input 
+            // The "000-00-0000" mask allows only digits can be input
             this.maskedTextBoxForEditing.Mask = "000-00-0000";
             // this.maskedTextBoxForEditing.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
 
-            // Hide the MaskedTextBox 
+            // Hide the MaskedTextBox
             this.maskedTextBoxForEditing.Visible = false;
 
             // Add the MaskedTextBox to the DataGridView's control collection
             this.dataGridView1.Controls.Add(this.maskedTextBoxForEditing);
 
-            // Add a DataGridViewTextBoxColumn to the 
+            // Add a DataGridViewTextBoxColumn to the
             DataGridViewTextBoxColumn tc = new DataGridViewTextBoxColumn();
             tc.HeaderText = "Mask Column";
             tc.Name = "MaskColumn";
@@ -61,7 +61,7 @@ namespace CSWinFormDataGridView.EditingControlHosting
             this.dataGridView1.CellBeginEdit +=
                 new DataGridViewCellCancelEventHandler(dataGridView1_CellBeginEdit);
 
-            // Handle the CellEndEdit event to hide the MaskedTextBox when 
+            // Handle the CellEndEdit event to hide the MaskedTextBox when
             // editing completes.
             this.dataGridView1.CellEndEdit += new DataGridViewCellEventHandler(dataGridView1_CellEndEdit);
 
@@ -69,16 +69,16 @@ namespace CSWinFormDataGridView.EditingControlHosting
             // when scrolling the DataGridView
             this.dataGridView1.Scroll += new ScrollEventHandler(dataGridView1_Scroll);
 
-            // Handle the EditingControlShowing event to pass the focus to the 
+            // Handle the EditingControlShowing event to pass the focus to the
             // MaskedTextBox when begin editing with keystrokes
-            this.dataGridView1.EditingControlShowing += 
+            this.dataGridView1.EditingControlShowing +=
                 new DataGridViewEditingControlShowingEventHandler(dataGridView1_EditingControlShowing);
         }
 
         void dataGridView1_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
             // If the current cell is on the "MaskColumn", we use the MaskedTextBox control
-            // for editing instead of the default TextBox control; 
+            // for editing instead of the default TextBox control;
             if (e.ColumnIndex == this.dataGridView1.Columns["MaskColumn"].Index)
             {
                 // Calculate the cell bounds of the current cell
@@ -88,13 +88,13 @@ namespace CSWinFormDataGridView.EditingControlHosting
                 this.maskedTextBoxForEditing.Size = rect.Size;
                 this.maskedTextBoxForEditing.Location = rect.Location;
 
-                // Set value for the MaskedTextBox 
+                // Set value for the MaskedTextBox
                 if (this.dataGridView1.CurrentCell.Value != null)
                 {
                     this.maskedTextBoxForEditing.Text = this.dataGridView1.CurrentCell.Value.ToString();
                 }
 
-                // Show the MaskedTextBox 
+                // Show the MaskedTextBox
                 this.maskedTextBoxForEditing.Visible = true;
             }
         }
@@ -135,11 +135,11 @@ namespace CSWinFormDataGridView.EditingControlHosting
             }
         }
 
-        void dataGridView1_EditingControlShowing(object sender, 
+        void dataGridView1_EditingControlShowing(object sender,
             DataGridViewEditingControlShowingEventArgs e)
         {
             if (!this.IsKeyPressHandled
-                && this.dataGridView1.CurrentCell.ColumnIndex == 
+                && this.dataGridView1.CurrentCell.ColumnIndex ==
                 this.dataGridView1.Columns["MaskColumn"].Index)
             {
                 TextBox tb = e.Control as TextBox;
@@ -150,7 +150,7 @@ namespace CSWinFormDataGridView.EditingControlHosting
 
         void tb_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (this.dataGridView1.CurrentCell.ColumnIndex == 
+            if (this.dataGridView1.CurrentCell.ColumnIndex ==
                 this.dataGridView1.Columns["MaskColumn"].Index)
             {
                 // Prevent the key char to be input in the editing control

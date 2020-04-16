@@ -2,7 +2,7 @@
 * Module Name:  MaskedTextBoxColumn.cs
 * Project:      CSWinFormDataGridView
 * Copyright (c) Microsoft Corporation.
-* 
+*
 * This sample demonstrates how to create a custom DataGridView column.
 \**********************************************************************************/
 
@@ -32,7 +32,7 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
 
         /// <summary>
         /// Initializes a new instance of this class, making sure to pass
-        /// to its base constructor an instance of a MaskedTextBoxCell 
+        /// to its base constructor an instance of a MaskedTextBoxCell
         /// class to use as the basic template.
         /// </summary>
         public MaskedTextBoxColumn()
@@ -54,7 +54,7 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
         /// <summary>
         /// The template cell that will be used for this column by default,
         /// unless a specific cell is set for a particular row.
-        /// 
+        ///
         /// A MaskedTextBoxCell cell which will serve as the template cell
         /// for this column.
         /// </summary>
@@ -67,7 +67,7 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
 
             set
             {
-                //  Only cell types that derive from MaskedTextBoxCell are supported 
+                //  Only cell types that derive from MaskedTextBoxCell are supported
                 // as the cell template.
                 if (value != null && !value.GetType().IsAssignableFrom(
                     typeof(MaskedTextBoxCell)))
@@ -84,7 +84,7 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
         /// <summary>
         /// Indicates the Mask property that is used on the MaskedTextBox
         /// for entering new data into cells of this type.
-        /// 
+        ///
         /// See the MaskedTextBox control documentation for more details.
         /// </summary>
         public virtual string Mask
@@ -131,9 +131,9 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
 
         /// <summary>
         /// By default, the MaskedTextBox uses the underscore (_) character
-        /// to prompt for required characters.  This propertly lets you 
+        /// to prompt for required characters.  This propertly lets you
         /// choose a different one.
-        /// 
+        ///
         /// See the MaskedTextBox control documentation for more details.
         /// </summary>
         public virtual char PromptChar
@@ -182,7 +182,7 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
         /// Indicates whether any unfilled characters in the mask should be
         /// be included as prompt characters when somebody asks for the text
         /// of the MaskedTextBox for a particular cell programmatically.
-        /// 
+        ///
         /// See the MaskedTextBox control documentation for more details.
         /// </summary>
         public virtual bool IncludePrompt
@@ -231,7 +231,7 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
         /// Controls whether or not literal (non-prompt) characters should
         /// be included in the output of the Text property for newly entered
         /// data in a cell of this type.
-        /// 
+        ///
         /// See the MaskedTextBox control documentation for more details.
         /// </summary>
         public virtual bool IncludeLiterals

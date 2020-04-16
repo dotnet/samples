@@ -2,11 +2,11 @@
 * Module Name:  MaskedTextBoxColumn.cs
 * Project:      CSWinFormDataGridView
 * Copyright (c) Microsoft Corporation.
-* 
-* This sample demonstrates the use of custom column definitions within the Windows Forms 
+*
+* This sample demonstrates the use of custom column definitions within the Windows Forms
 * DataGridView control.
-* 
-* The Employee ID, SSN, State and Zip Code columns use MaskedTextBox controls for format 
+*
+* The Employee ID, SSN, State and Zip Code columns use MaskedTextBox controls for format
 * and validate their input.
 \******************************************************************************************/
 
@@ -58,7 +58,7 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
             //
             // [American] Social Security number, of the format:
             // ###-##-####
-            // 
+            //
             mtbColumn = new MaskedTextBoxColumn();
             mtbColumn.HeaderText = "SSN";
             mtbColumn.Mask = "000-00-0000";
@@ -238,7 +238,7 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
             return sb.ToString();
         }
     }
-    
-    #endregion 
+
+    #endregion
 
 }

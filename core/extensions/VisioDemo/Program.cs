@@ -43,9 +43,9 @@ namespace VisioDemo
 
                 var endShp = vPag.DropConnected(processMst, nextShp, Visio.VisAutoConnectDir.visAutoConnectDirRight);
                 endShp.Text = "F";
-                
+
                 //Set 'Parallel' theme
-                vPag.SetTheme(40); 
+                vPag.SetTheme(40);
             }
             catch (Exception e)
             {

@@ -11,7 +11,7 @@ namespace ExpressionTreeSamples
     public class ExpressionTreeBuildingSampleOne : Sample
     {
         public override string Name { get; } = "Building Expression Trees, Sample 1: Creating a statement based tree";
-        
+
         public override void Run()
         {
              var lambda = Expression.Lambda(
