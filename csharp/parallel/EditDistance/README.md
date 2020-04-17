@@ -23,7 +23,7 @@ The sample source code uses the following types and members:
 
 - `ParallelEnumerable.Range`
 - `ParallelAlgorithms.Wavefront`
-   - [Details of the Wavefront algorithm](https://en.wikipedia.org/wiki/Wavefront)
+  - [Details of the Wavefront algorithm](https://en.wikipedia.org/wiki/Wavefront)
 - `Environment.ProcessorCount`
 
 ## Building the sample
