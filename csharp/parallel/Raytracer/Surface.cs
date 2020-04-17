@@ -2,12 +2,12 @@
 
 namespace Raytracer
 {
-    class Surface
+    readonly struct Surface
     {
-        public Func<Vector, Color> Diffuse;
-        public Func<Vector, Color> Specular;
-        public Func<Vector, double> Reflect;
-        public double Roughness;
+        public readonly Func<Vector, Color> Diffuse;
+        public readonly Func<Vector, Color> Specular;
+        public readonly Func<Vector, double> Reflect;
+        public readonly double Roughness;
 
         public Surface(
             Func<Vector, Color> diffuse,

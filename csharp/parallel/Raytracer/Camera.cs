@@ -1,11 +1,11 @@
 ﻿namespace Raytracer
 {
-    class Camera
+    readonly struct Camera
     {
-        public Vector Pos;
-        public Vector Forward;
-        public Vector Up;
-        public Vector Right;
+        public readonly Vector Pos;
+        public readonly Vector Forward;
+        public readonly Vector Up;
+        public readonly Vector Right;
 
         public Camera(Vector pos, Vector forward, Vector up, Vector right) =>
             (Pos, Forward, Up, Right) = (pos, forward, up, right);

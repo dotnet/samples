@@ -1,9 +1,9 @@
 ﻿namespace Raytracer
 {
-    struct Ray
+    readonly struct Ray
     {
-        public Vector Start;
-        public Vector Dir;
+        public readonly Vector Start;
+        public readonly Vector Dir;
 
         public Ray(Vector start, Vector dir) => (Start, Dir) = (start, dir);
     }

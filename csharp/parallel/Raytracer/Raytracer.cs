@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Raytracer
 {
@@ -33,34 +34,50 @@ namespace Raytracer
             }
         }
 
-        internal void RenderParallel(Scene scene, int[] rgb, ParallelOptions options) =>
-            Parallel.For(0, _screenHeight, options, y =>
+        internal void RenderParallel(Scene scene, int[] rgb, ParallelOptions options)
+        {
+            try
             {
-                int stride = y * _screenWidth;
-                Camera camera = scene.Camera;
-                for (int x = 0; x < _screenWidth; x++)
+                Parallel.For(0, _screenHeight, options, y =>
                 {
-                    Color color = TraceRay(new Ray(camera.Pos, GetPoint(x, y, camera)), scene, 0);
-                    rgb[x + stride] = color.ToInt32();
-                }
-            });
+                    int stride = y * _screenWidth;
+                    Camera camera = scene.Camera;
+                    for (int x = 0; x < _screenWidth; x++)
+                    {
+                        Color color = TraceRay(new Ray(camera.Pos, GetPoint(x, y, camera)), scene, 0);
+                        rgb[x + stride] = color.ToInt32();
+                    }
+                });
+            }
+            catch (OperationCanceledException)
+            {
+                // Catch this to prevent the UI from crashing, we know a cancellation will occur.
+            }
+        }
 
         internal void RenderParallelShowingThreads(Scene scene, int[] rgb, ParallelOptions options)
         {
-            int id = 0;
-            Parallel.For<double>(0, _screenHeight, options, () => GetHueShift(Interlocked.Increment(ref id)), (y, state, hue) =>
+            try
             {
-                int stride = y * _screenWidth;
-                Camera camera = scene.Camera;
-                for (int x = 0; x < _screenWidth; x++)
+                int id = 0;
+                Parallel.For<double>(0, _screenHeight, options, () => GetHueShift(Interlocked.Increment(ref id)), (y, state, hue) =>
                 {
-                    Color color = TraceRay(new Ray(camera.Pos, GetPoint(x, y, camera)), scene, 0);
-                    color.ChangeHue(hue);
-                    rgb[x + stride] = color.ToInt32();
-                }
-                return hue;
-            },
-            hue => Interlocked.Decrement(ref id));
+                    int stride = y * _screenWidth;
+                    Camera camera = scene.Camera;
+                    for (int x = 0; x < _screenWidth; x++)
+                    {
+                        Color color = TraceRay(new Ray(camera.Pos, GetPoint(x, y, camera)), scene, 0);
+                        color.ChangeHue(hue);
+                        rgb[x + stride] = color.ToInt32();
+                    }
+                    return hue;
+                },
+                hue => Interlocked.Decrement(ref id));
+            }
+            catch (OperationCanceledException)
+            {
+                // Catch this to prevent the UI from crashing, we know a cancellation will occur.
+            }
         }
 
         private double GetHueShift(int id)
@@ -152,12 +169,11 @@ namespace Raytracer
 
         private Color Shade(ISect isect, Scene scene, int depth)
         {
-            Vector d = isect.Ray.Dir;
-            Vector pos = Vector.Plus(Vector.Times(isect.Dist, isect.Ray.Dir), isect.Ray.Start);
-            Vector normal = isect.Thing.Normal(pos);
-            Vector reflectDir = Vector.Minus(d, Vector.Times(2 * Vector.Dot(normal, d), normal));
-            Color ret = Color.DefaultColor;
-            ret = Color.Plus(ret, GetNaturalColor(isect.Thing, pos, normal, reflectDir, scene));
+            var d = isect.Ray.Dir;
+            var pos = Vector.Plus(Vector.Times(isect.Dist, isect.Ray.Dir), isect.Ray.Start);
+            var normal = isect.Thing.Normal(pos);
+            var reflectDir = Vector.Minus(d, Vector.Times(2 * Vector.Dot(normal, d), normal));
+            var ret = Color.Plus(Color.DefaultColor, GetNaturalColor(isect.Thing, pos, normal, reflectDir, scene));
             if (depth >= MaxDepth)
             {
                 return Color.Plus(ret, new Color(.5, .5, .5));

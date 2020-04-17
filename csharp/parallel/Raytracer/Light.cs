@@ -1,9 +1,9 @@
 ﻿namespace Raytracer
 {
-    class Light
+    readonly struct Light
     {
-        public Vector Pos;
-        public Color Color;
+        public readonly Vector Pos;
+        public readonly Color Color;
 
         public Light(Vector pos, Color color) => (Pos, Color) = (pos, color);
     }

@@ -2,7 +2,7 @@
 
 namespace Raytracer
 {
-    public struct Color
+    struct Color
     {
         public double R;
         public double G;
