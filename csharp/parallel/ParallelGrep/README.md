@@ -1,28 +1,41 @@
-# C# Parallel grep sample
+---
+languages:
+   - csharp
+ products:
+   - dotnet-core
+page_type: sample
+name: ".NET Core parallel computation of PI"
+urlFragment: "parallel-programming-grep-cs"
+description: "A .NET Core console application that implements grep functionality across a file system using PLINQ."
+---
 
-This .NET Core console application that implements ["grep"](https://en.wikipedia.org/wiki/Grep) functionality across a file system using PLINQ.
+# .NET Core parallel grep sample
 
-## Key Features
+The sample source code is a .NET Core console application written in C#, that implements ["grep"](https://en.wikipedia.org/wiki/Grep) functionality across a file system using PLINQ.
 
-This sample demonstrates:
+## Sample prerequisites
+
+This sample is written in C# and targets .NET Core 3.1. It requires the [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1).
+
+## Types and members in use
+
+The sample source code uses the following types and members:
 
 - `ThreadLocal`
 - `.AsParallel()`
 - `.AsOrdered()`
 - `.WithMergeOptions(ParallelMergeOptions.NotBuffered)`
 
-## Build and Run
+## Building the sample
 
-To build and run the sample, type the following two commands:
+The source code includes an MSBuild project file for C# (a *.csproj* file) that targets .NET Core 3.1. After you download the *.zip* file containing the example code, create a directory and select **Download ZIP** to download the sample code files to your computer. To build the example:
 
-```
-dotnet restore
-dotnet run
-```
-
-`dotnet restore` restores the dependencies for this sample.
-
-`dotnet run` builds the sample and runs the output assembly.
-
-**Note:** Starting with .NET Core 2.0 SDK, you don't have to run [`dotnet restore`](https://docs.microsoft.com/dotnet/core/tools/dotnet-restore) because it's run implicitly by all commands that require a restore to occur, such as `dotnet new`, `dotnet build` and `dotnet run`.
-It's still a valid command in certain scenarios where doing an explicit restore makes sense, such as [continuous integration builds in Azure DevOps Services](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core) or in build systems that need to explicitly control the time at which the restore occurs.
+1. Download the *.zip* file containing.
+2. Create the directory to which you want to copy the files.
+3. Copy the files from the *.zip* file to the directory you just created.
+4. If you are using Visual Studio 2019:
+   1. In Visual Studio, select **Open a project or solution** (or **File** > **Open** > **Project/Solution** from the Visual Studio menu.
+   2. Select **Debug** > **Start Debugging** from the Visual Studio menu to build and launch the application.
+5. If you are working from the command line:
+   1. Navigate to the directory that contains the sample.
+   2. Type in the command `dotnet run` to build and launch the application.
