@@ -18,7 +18,7 @@ namespace System.Collections.Concurrent
         /// <param name="collection">The collection to be cleared.</param>
         public static void Clear<T>(this IProducerConsumerCollection<T> collection)
         {
-            while (collection.TryTake(out _)) ;
+            while (collection.TryTake(out _)) {};
         }
 
         /// <summary>Creates an enumerable which will consume and return elements from the collection.</summary>
@@ -68,7 +68,8 @@ namespace System.Collections.Concurrent
         /// An IProducerConsumerCollection that wraps the target collection and supports only add
         /// functionality, not take.
         /// </returns>
-        public static IProducerConsumerCollection<T> ToProducerOnlyCollection<T>(this IProducerConsumerCollection<T> collection) => new ProduceOrConsumeOnlyCollection<T>(collection, true);
+        public static IProducerConsumerCollection<T> ToProducerOnlyCollection<T>(this IProducerConsumerCollection<T> collection) =>
+            new ProduceOrConsumeOnlyCollection<T>(collection, true);
 
         /// <summary>Creates a take-only facade for the collection.</summary>
         /// <typeparam name="T">Specifies the type of the elements in the collection.</typeparam>
@@ -77,7 +78,8 @@ namespace System.Collections.Concurrent
         /// An IProducerConsumerCollection that wraps the target collection and supports only take
         /// functionality, not add.
         /// </returns>
-        public static IProducerConsumerCollection<T> ToConsumerOnlyCollection<T>(this IProducerConsumerCollection<T> collection) => new ProduceOrConsumeOnlyCollection<T>(collection, false);
+        public static IProducerConsumerCollection<T> ToConsumerOnlyCollection<T>(this IProducerConsumerCollection<T> collection) =>
+            new ProduceOrConsumeOnlyCollection<T>(collection, false);
 
         // Internal wrapper that throws NotSupportedException when mutating methods (add/take) are used from the wrong mode
         private sealed class ProduceOrConsumeOnlyCollection<T> : ProducerConsumerCollectionBase<T>

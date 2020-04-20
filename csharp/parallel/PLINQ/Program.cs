@@ -6,15 +6,17 @@ using System.Threading.Tasks;
 
 class Program
 {
-    static void Main()
+    static async Task Main()
     {
         // Uncomment each of the below four lines one-by-one
         // to test the relevant PLINQ operation
 
         AsOrdered();
-        //WithMergeOptions();
-        //WithCancellation();
-        //WithDegreeOfParallelism();
+        // await WithMergeOptions();
+        // await WithCancellation();
+        // WithDegreeOfParallelism();
+
+        await Task.CompletedTask;
     }
 
     static void AsOrdered()
@@ -62,7 +64,7 @@ class Program
         #endregion
     }
 
-    static void WithMergeOptions()
+    static async Task WithMergeOptions()
     {
         #region Define the query
         var items = ParallelEnumerable.Range(1, 1_000);
@@ -73,7 +75,7 @@ class Program
         #region Auto Buffered
         foreach (var e in q)
         {
-            Console.WriteLine(e);
+            Console.WriteLine(await e);
         }
 
         Console.Write("Complete: Auto buffered");
@@ -83,7 +85,7 @@ class Program
         #region Fully Buffered
         foreach (var e in q.WithMergeOptions(ParallelMergeOptions.FullyBuffered))
         {
-            Console.WriteLine(e);
+            Console.WriteLine(await e);
         }
 
         Console.Write("Complete: Fully buffered");
@@ -93,7 +95,7 @@ class Program
         #region Not buffered
         foreach (var e in q.WithMergeOptions(ParallelMergeOptions.NotBuffered))
         {
-            Console.WriteLine(e);
+            Console.WriteLine(await e);
         }
 
         Console.Write("Complete: Not buffered");
@@ -101,7 +103,7 @@ class Program
         #endregion
     }
 
-    static void WithCancellation()
+    static async Task WithCancellation()
     {
         #region Define the query
         var items = ParallelEnumerable.Range(1, 1_000);
@@ -113,9 +115,9 @@ class Program
         #endregion
 
         #region Kick off the asynchronous cancellation
-        Task.Factory.StartNew(() =>
+        _ = Task.Run(async () =>
         {
-            Thread.Sleep(300);
+            await Task.Delay(300);
             cts.Cancel();
         });
         #endregion
@@ -125,7 +127,7 @@ class Program
         {
             foreach (var e in q.WithCancellation(cts.Token))
             {
-                Console.WriteLine(e);
+                Console.WriteLine(await e);
             }
         }
         catch (OperationCanceledException)
@@ -168,9 +170,9 @@ class Program
     }
 
     #region Helper functions
-    static int DoWork(int input)
+    static async Task<int> DoWork(int input)
     {
-        Thread.Sleep(20);
+        await Task.Delay(20);
         return input * 2;
     }
 

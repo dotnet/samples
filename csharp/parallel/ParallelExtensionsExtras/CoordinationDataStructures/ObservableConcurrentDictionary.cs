@@ -48,19 +48,14 @@ namespace System.Collections.Concurrent
         {
             var collectionHandler = CollectionChanged;
             var propertyHandler = PropertyChanged;
-            if (collectionHandler != null || propertyHandler != null)
+
+            _context.Post(s =>
             {
-                _context.Post(s =>
-                {
-                    collectionHandler?.Invoke(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
-                    if (propertyHandler != null)
-                    {
-                        propertyHandler(this, new PropertyChangedEventArgs("Count"));
-                        propertyHandler(this, new PropertyChangedEventArgs(nameof(Keys)));
-                        propertyHandler(this, new PropertyChangedEventArgs(nameof(Values)));
-                    }
-                }, null);
-            }
+                collectionHandler?.Invoke(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
+                propertyHandler?.Invoke(this, new PropertyChangedEventArgs("Count"));
+                propertyHandler?.Invoke(this, new PropertyChangedEventArgs(nameof(Keys)));
+                propertyHandler?.Invoke(this, new PropertyChangedEventArgs(nameof(Values)));
+            }, null);
         }
 
         /// <summary>Attempts to add an item to the dictionary, notifying observers of any changes.</summary>

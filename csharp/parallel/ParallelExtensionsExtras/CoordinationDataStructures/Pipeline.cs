@@ -23,7 +23,8 @@ namespace System.Threading
         /// <typeparam name="TOutput">Specifies the type of the output data from this stage of the pipeline.</typeparam>
         /// <param name="func">The function used to process input data into output data.</param>
         /// <returns>A pipeline for converting from input data to output data.</returns>
-        public static Pipeline<TInput, TOutput> Create<TInput, TOutput>(Func<TInput, TOutput> func) => Create(func, 1);
+        public static Pipeline<TInput, TOutput> Create<TInput, TOutput>(Func<TInput, TOutput> func) =>
+            Create(func, 1);
 
         /// <summary>Creates a new pipeline, with the specified function as the sole stage.</summary>
         /// <typeparam name="TInput">Specifies the type of the input data to the pipeline.</typeparam>
@@ -91,7 +92,6 @@ namespace System.Threading
         /// <returns>An enumerable of the results of the pipeline.</returns>
         public IEnumerable<TOutput> Process(IEnumerable<TInput> source, CancellationToken cancellationToken)
         {
-            // Validate arguments
             if (source == null) throw new ArgumentNullException(nameof(source));
             return ProcessNoArgValidation(source, cancellationToken);
         }
@@ -103,25 +103,24 @@ namespace System.Threading
         private IEnumerable<TOutput> ProcessNoArgValidation(IEnumerable<TInput> source, CancellationToken cancellationToken)
         {
             // Create a blocking collection for communication with the query running in a background task
-            using (var output = new BlockingCollection<TOutput>())
+            using var output = new BlockingCollection<TOutput>();
+
+            // Start a task to run the core of the stage
+            var processingTask = Task.Factory.StartNew(() =>
             {
-                // Start a task to run the core of the stage
-                var processingTask = Task.Factory.StartNew(() =>
-                {
-                    try { ProcessCore(source, cancellationToken, output); }
-                    finally { output.CompleteAdding(); }
-                }, CancellationToken.None, TaskCreationOptions.None, Pipeline.s_scheduler);
+                try { ProcessCore(source, cancellationToken, output); }
+                finally { output.CompleteAdding(); }
+            }, CancellationToken.None, TaskCreationOptions.None, Pipeline.s_scheduler);
 
-                // Enumerate and yield the results.  This makes ProcessNoArgValidation
-                // lazy, in that processing won't start until enumeration begins.
-                foreach (var result in output.GetConsumingEnumerable(cancellationToken))
-                {
-                    yield return result;
-                }
-
-                // Make sure the processing task has shut down, and propagate any exceptions that occurred
-                processingTask.Wait();
+            // Enumerate and yield the results.  This makes ProcessNoArgValidation
+            // lazy, in that processing won't start until enumeration begins.
+            foreach (var result in output.GetConsumingEnumerable(cancellationToken))
+            {
+                yield return result;
             }
+
+            // Make sure the processing task has shut down, and propagate any exceptions that occurred
+            processingTask.Wait();
         }
 
         /// <summary>Implements the core processing for a pipeline stage.</summary>

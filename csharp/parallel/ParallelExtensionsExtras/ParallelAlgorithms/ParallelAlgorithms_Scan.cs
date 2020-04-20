@@ -75,7 +75,7 @@ namespace System.Threading.Algorithms
         /// at the relevant type and operation will perform significantly better than
         /// this generalized implementation.
         /// </remarks>
-        public static void ScanInPlace<T>(T [] data, Func<T, T, T> function, bool loadBalance)
+        public static void ScanInPlace<T>(T[] data, Func<T, T, T> function, bool loadBalance)
         {
             // Validate arguments
             if (data == null) throw new ArgumentNullException(nameof(data));
@@ -140,7 +140,7 @@ namespace System.Threading.Algorithms
         /// <param name="arrLength">The length of the data in arr over which the scan is being computed.</param>
         /// <param name="skip">The inclusive distance between elements over which the scan is being computed.</param>
         /// <remarks>No parameter validation is performed.</remarks>
-        private static void InclusiveScanInPlaceWithLoadBalancingParallel<T>(T[] arr, Func<T, T, T> function, 
+        private static void InclusiveScanInPlaceWithLoadBalancingParallel<T>(T[] arr, Func<T, T, T> function,
             int arrStart, int arrLength, int skip)
         {
             // If the length is 0 or 1, just return a copy of the original array.
@@ -171,44 +171,45 @@ namespace System.Threading.Algorithms
         {
             int procCount = Environment.ProcessorCount;
             T[] intermediatePartials = new T[procCount];
-            using (var phaseBarrier = new Barrier(procCount, 
-                _ => ExclusiveScanInPlaceSerial(intermediatePartials, function, 0, intermediatePartials.Length)))
-            {
-                // Compute the size of each range
-                int rangeSize = arr.Length / procCount;
-                int nextRangeStart = 0;
+            using var phaseBarrier =
+                new Barrier(procCount,
+                    _ => ExclusiveScanInPlaceSerial(
+                        intermediatePartials, function, 0, intermediatePartials.Length));
 
-                // Create, store, and wait on all of the tasks
-                var tasks = new Task[procCount];
-                for (int i = 0; i < procCount; i++, nextRangeStart += rangeSize)
+            // Compute the size of each range
+            int rangeSize = arr.Length / procCount;
+            int nextRangeStart = 0;
+
+            // Create, store, and wait on all of the tasks
+            var tasks = new Task[procCount];
+            for (int i = 0; i < procCount; i++, nextRangeStart += rangeSize)
+            {
+                // Get the range for each task, then start it
+                int rangeNum = i;
+                int lowerRangeInclusive = nextRangeStart;
+                int upperRangeExclusive = i < procCount - 1 ? nextRangeStart + rangeSize : arr.Length;
+                tasks[rangeNum] = Task.Factory.StartNew(() =>
                 {
-                    // Get the range for each task, then start it
-                    int rangeNum = i;
-                    int lowerRangeInclusive = nextRangeStart;
-                    int upperRangeExclusive = i < procCount - 1 ? nextRangeStart + rangeSize : arr.Length;
-                    tasks[rangeNum] = Task.Factory.StartNew(() =>
-                    {
                         // Phase 1: Prefix scan assigned range, and copy upper bound to intermediate partials
                         InclusiveScanInPlaceSerial(arr, function, lowerRangeInclusive, upperRangeExclusive, 1);
-                        intermediatePartials[rangeNum] = arr[upperRangeExclusive - 1];
+                    intermediatePartials[rangeNum] = arr[upperRangeExclusive - 1];
 
                         // Phase 2: One thread only should prefix scan the intermediaries... done implicitly by the barrier
                         phaseBarrier.SignalAndWait();
 
                         // Phase 3: Incorporate partials
                         if (rangeNum != 0)
+                    {
+                        for (int j = lowerRangeInclusive; j < upperRangeExclusive; j++)
                         {
-                            for (int j = lowerRangeInclusive; j < upperRangeExclusive; j++)
-                            {
-                                arr[j] = function(intermediatePartials[rangeNum], arr[j]);
-                            }
+                            arr[j] = function(intermediatePartials[rangeNum], arr[j]);
                         }
-                    });
-                }
-
-                // Wait for all of the tasks to complete
-                Task.WaitAll(tasks);
+                    }
+                });
             }
+
+            // Wait for all of the tasks to complete
+            Task.WaitAll(tasks);
         }
     }
 }

@@ -52,11 +52,8 @@ namespace System.Threading.Async
         /// <summary>Disposes of the collection.</summary>
         public void Dispose()
         {
-            if (_semaphore != null)
-            {
-                _semaphore.Dispose();
-                _semaphore = null;
-            }
+            _semaphore?.Dispose();
+            _semaphore = null;
         }
     }
 }

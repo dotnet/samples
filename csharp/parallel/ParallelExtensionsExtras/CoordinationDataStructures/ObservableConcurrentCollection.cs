@@ -19,7 +19,7 @@ namespace System.Collections.Concurrent
     /// <typeparam name="T">Specifies the type of the elements in this collection.</typeparam>
     [DebuggerDisplay("Count={Count}")]
     [DebuggerTypeProxy(typeof(IProducerConsumerCollection_DebugView<>))]
-    public class ObservableConcurrentCollection<T> : 
+    public class ObservableConcurrentCollection<T> :
         ProducerConsumerCollectionBase<T>, INotifyCollectionChanged, INotifyPropertyChanged
     {
         private readonly SynchronizationContext _context;
@@ -48,14 +48,12 @@ namespace System.Collections.Concurrent
         {
             var collectionHandler = CollectionChanged;
             var propertyHandler = PropertyChanged;
-            if (collectionHandler != null || propertyHandler != null)
+
+            _context.Post(s =>
             {
-                _context.Post(s =>
-                {
-                    collectionHandler?.Invoke(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
-                    propertyHandler?.Invoke(this, new PropertyChangedEventArgs(nameof(Count)));
-                }, null);
-            }
+                collectionHandler?.Invoke(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
+                propertyHandler?.Invoke(this, new PropertyChangedEventArgs(nameof(Count)));
+            }, null);
         }
 
         protected override bool TryAdd(T item)

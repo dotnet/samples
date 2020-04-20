@@ -33,8 +33,7 @@ namespace System.Threading
         }
 
         /// <summary>Increments the current count by one.</summary>
-        public void AddCount() =>
-            _event.AddCount();
+        public void AddCount() => _event.AddCount();
 
         /// <summary>Registers a signal with the event, decrementing its count.</summary>
         public void Signal()
