@@ -6,16 +6,16 @@ languages:
 page_type: sample
 name: ".NET Core parallel animated ray-traced bouncing ball"
 urlFragment: "parallel-programming-winforms-raytracer-cs"
-description: "A .NET Core WinForms application that demonstrates an animated, ray-traced bouncing ball with parallel programming."
+description: "A .NET Core WPF application that demonstrates AI algorithms using minimax with alpha-beta pruning and parallel AI."
 ---
 
 # .NET Core parallel programming with PLINQ
 
-The sample source code is a .NET Core WinForms application written in C#, that provides an animated, ray-traced bouncing ball. Sequential and parallel implementations are provided, as is a special parallel implementation that colors the animated image based on which thread was used to calculate which regions.
+The sample source code is a .NET Core WPF application written in C#, that demonstrates AI algorithms using minimax with alpha-beta pruning, and the parallel AI (light player) uses Tasks and CancellationTokens to achieve speedup via parallelism.
 
 ## Demo
 
-![Demo raytracer app](assets/demo.gif)
+![Demo raytracer app](assets/demo.png)
 
 ## Sample prerequisites
 
@@ -25,10 +25,15 @@ This sample is written in C# and targets .NET Core 3.1. It requires the [.NET Co
 
 The sample source code uses the following types and members:
 
-- `Parallel.For`
-- `ParallelOptions`
-  - `CancellationToken`
-  - `MaxDegreeOfParallelism`
+- `Monitor.Enter`
+- `Monitor.Exit`
+- `CancellationTokenSource`
+- `CancellationToken`
+- `Queue<Task>`
+- `Task.WaitAll`
+- `Task.Run`
+- `Task.Factory.StartNew`
+- `TaskScheduler.FromCurrentSynchronizationContext`
 
 ## Building the sample
 
