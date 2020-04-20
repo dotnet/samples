@@ -13,6 +13,10 @@ description: "A .NET Core console application that demonstrates some of the ways
 
 The sample source code is a .NET Core console application written in C#, that provides an animated, ray-traced bouncing ball.  Sequential and parallel implementations are provided, as is a special parallel implementation that colors the animated image based on which thread was used to calculate which regions.
 
+## Demo
+
+![Demo raytracer app](assets/demo.gif)
+
 ## Sample prerequisites
 
 This sample is written in C# and targets .NET Core 3.1. It requires the [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1).
