@@ -39,8 +39,8 @@ namespace Raytracer
                 _showThreads = _showThreadsCheckBox.Checked;
                 _cancellation = new CancellationTokenSource();
                 Task.Factory.StartNew(RenderLoop,
-                    _cancellation.Token, _cancellation.Token).
-                    ContinueWith(delegate
+                    _cancellation.Token, _cancellation.Token)
+                    .ContinueWith(antedecent =>
                     {
                         _isParallelCheckBox.Enabled = true;
                         _showThreadsCheckBox.Enabled = _isParallelCheckBox.Checked;

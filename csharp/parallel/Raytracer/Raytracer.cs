@@ -115,9 +115,9 @@ namespace Raytracer
         private ISect MinIntersection(Ray ray, Scene scene)
         {
             var min = ISect.Null;
-            foreach (SceneObject obj in scene.Things)
+            foreach (var obj in scene.Things)
             {
-                ISect isect = obj.Intersect(ray);
+                var isect = obj.Intersect(ray);
                 if (!ISect.IsNull(isect))
                 {
                     if (ISect.IsNull(min) || min.Dist > isect.Dist)
@@ -131,19 +131,19 @@ namespace Raytracer
 
         private double TestRay(Ray ray, Scene scene)
         {
-            ISect isect = MinIntersection(ray, scene);
+            var isect = MinIntersection(ray, scene);
             return ISect.IsNull(isect) ? 0 : isect.Dist;
         }
 
         private Color TraceRay(Ray ray, Scene scene, int depth)
         {
-            ISect isect = MinIntersection(ray, scene);
+            var isect = MinIntersection(ray, scene);
             return ISect.IsNull(isect) ? Color.Background : Shade(isect, scene, depth);
         }
 
         private Color GetNaturalColor(SceneObject thing, Vector pos, Vector norm, Vector rd, Scene scene)
         {
-            Color ret = new Color(0, 0, 0);
+            var ret = new Color(0, 0, 0);
             foreach (Light light in scene.Lights)
             {
                 Vector ldis = Vector.Minus(light.Pos, pos);
