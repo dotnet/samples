@@ -11,7 +11,7 @@ class Program
         // Uncomment each of the below four lines one-by-one
         // to test the relevant PLINQ operation
 
-        AsOrdered();
+        await AsOrdered();
         // await WithMergeOptions();
         // await WithCancellation();
         // WithDegreeOfParallelism();
@@ -19,17 +19,17 @@ class Program
         await Task.CompletedTask;
     }
 
-    static void AsOrdered()
+    static async Task AsOrdered()
     {
         #region Sequential
         var items = Enumerable.Range(1, 100);
         var q = from e in items
                 where e % 2 == 0 // is even
-                select e;
+                select DoWork(e);
 
         foreach (var e in q)
         {
-            Console.WriteLine(e);
+            Console.WriteLine(await e);
         }
         Console.Write("Complete: Sequential");
         Console.ReadLine();
@@ -39,11 +39,11 @@ class Program
         var items2 = ParallelEnumerable.Range(1, 100);
         q = from e in items2
             where e % 2 == 0 // is even
-            select e;
+            select DoWork(e);
 
         foreach (var e in q)
         {
-            Console.WriteLine(e);
+            Console.WriteLine(await e);
         }
         Console.Write("Complete: Parallel");
         Console.ReadLine();
@@ -52,11 +52,11 @@ class Program
         #region Parallel with Ordering
         q = from e in items2.AsOrdered()
             where e % 2 == 0 // is even
-            select e;
+            select DoWork(e);
 
         foreach (var e in q)
         {
-            Console.WriteLine(e);
+            Console.WriteLine(await e);
         }
 
         Console.Write("Complete: Parallel with Ordering");
