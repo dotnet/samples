@@ -8,6 +8,7 @@ using System.Windows.Media.Media3D;
 using System.Windows.Media.Animation;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Printing;
 
 namespace Raytracer.Wpf
 {
@@ -179,24 +180,25 @@ namespace Raytracer.Wpf
                 ShowGhost(m.Row, m.Col, _gameEngine.IsLightMove);
             }
 
-            var gs = _gameEngine.GetGameResult();
-            switch (gs.GameState)
+            var gameResult = _gameEngine.GetGameResult();
+            var (isGameOver, message, result) = HandleGameState(gameResult);
+            if (!result)
             {
-                case ReversiGameState.LightWon:
-                    _isGameOver = true;
-                    MessageBox.Show($"Light Won! {gs.NumLightPieces}-{gs.NumDarkPieces}", "GAME OVER");
-                    return false;
-                case ReversiGameState.DarkWon:
-                    _isGameOver = true;
-                    MessageBox.Show($"Dark Won! {gs.NumLightPieces}-{gs.NumDarkPieces}", "GAME OVER");
-                    return false;
-                case ReversiGameState.Draw:
-                    _isGameOver = true;
-                    MessageBox.Show($"Draw! {gs.NumLightPieces}-{gs.NumDarkPieces}", "GAME OVER");
-                    return false;
-                default:
-                    return true;
+                _isGameOver = isGameOver;
+                MessageBox.Show(message, "GAME OVER");
             }
+
+            return result;
+
+            static (bool isGameOver, string message, bool result) HandleGameState(
+                ReversiGameResult result) =>
+            result.GameState switch
+            {
+                ReversiGameState.LightWon => (true, $"Light Won! {result.NumLightPieces}-{result.NumDarkPieces}", false),
+                ReversiGameState.DarkWon => (true, $"Dark Won! {result.NumLightPieces}-{result.NumDarkPieces}", false),
+                ReversiGameState.Draw => (true, $"Draw! {result.NumLightPieces}-{result.NumDarkPieces}", false),
+                _ => (false, null, true)
+            };
         }
 
         private void OnMainWindowKeyDown(object sender, KeyEventArgs e)
