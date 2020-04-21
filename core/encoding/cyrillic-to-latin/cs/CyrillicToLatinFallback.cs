@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-class CyrillicToLatinFallback : EncoderFallback 
+class CyrillicToLatinFallback : EncoderFallback
 {
-   private Dictionary<Char, String> table; 
+   private Dictionary<Char, String> table;
 
    public CyrillicToLatinFallback()
    {
@@ -38,7 +38,7 @@ class CyrillicToLatinFallback : EncoderFallback
       table.Add('\u0427', "Ch");
       table.Add('\u0428', "Sh");
       table.Add('\u0429', "Shch");
-      table.Add('\u042A', "'");    // Hard sign              
+      table.Add('\u042A', "'");    // Hard sign
       table.Add('\u042B', "Ye");
       table.Add('\u042C', "'");    // Soft sign
       table.Add('\u042D', "E");
@@ -79,14 +79,14 @@ class CyrillicToLatinFallback : EncoderFallback
       table.Add('\u044F', "ia");
    }
 
-   public override EncoderFallbackBuffer CreateFallbackBuffer() 
+   public override EncoderFallbackBuffer CreateFallbackBuffer()
    {
       return new CyrillicToLatinFallbackBuffer(table);
    }
 
-   public override int MaxCharCount 
+   public override int MaxCharCount
    {
-      get { return 4; }                  // Maximum is "Shch" and "shch" 
+      get { return 4; }                  // Maximum is "Shch" and "shch"
    }
 }
 
@@ -112,7 +112,7 @@ public class CyrillicToLatinFallbackBuffer : EncoderFallbackBuffer
 
    public override bool Fallback(char charUnknown, int index)
    {
-      if (charUnknown >= '\u0410' & charUnknown <= '\u044F') 
+      if (charUnknown >= '\u0410' & charUnknown <= '\u044F')
       {
          buffer = table[charUnknown];
          leftToReturn = buffer.Length - 1;
@@ -130,7 +130,7 @@ public class CyrillicToLatinFallbackBuffer : EncoderFallbackBuffer
          bufferIndex++;
          charToReturn = buffer[bufferIndex];
       }
-      else 
+      else
       {
          charToReturn = '\u0000';
       }
@@ -139,7 +139,7 @@ public class CyrillicToLatinFallbackBuffer : EncoderFallbackBuffer
 
    public override bool MovePrevious()
    {
-      if (bufferIndex > 0) 
+      if (bufferIndex > 0)
       {
          bufferIndex--;
          leftToReturn++;

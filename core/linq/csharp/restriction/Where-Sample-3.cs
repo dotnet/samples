@@ -6,9 +6,9 @@ namespace Restriction
 {
     public class WhereClause3
     {
-        //This sample uses the where clause using query syntax to find all products that are in stock and cost 
+        //This sample uses the where clause using query syntax to find all products that are in stock and cost
         //more than 50.00 per unit.
-        //Outputs the following to Console 
+        //Outputs the following to Console
         //
         // In-stock products that cost more than 50.00:
         // Mishi Kobe Niku is in stock and costs more than 50.00.
@@ -33,9 +33,9 @@ namespace Restriction
             }
         }
 
-        //This sample uses the where clause using method syntax to find all products that are in stock and cost 
+        //This sample uses the where clause using method syntax to find all products that are in stock and cost
         //more than 50.00 per unit.
-        //Outputs the following to Console 
+        //Outputs the following to Console
         //
         // In-stock products that cost more than 50.00:
         // Mishi Kobe Niku is in stock and costs more than 50.00.
@@ -49,7 +49,7 @@ namespace Restriction
             List<Product> products = Data.Products;
 
             var expensiveInStockProducts = products.Where(prod=>prod.UnitsInStock > 0 && prod.UnitPrice > 50.00M);
-            
+
             Console.WriteLine("In-stock products that cost more than 50.00:");
             foreach (var product in expensiveInStockProducts)
             {

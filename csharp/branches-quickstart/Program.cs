@@ -38,7 +38,7 @@ namespace BranchesAndLoops
             {
                 Console.WriteLine("The answer is not greater than 10");
                 Console.WriteLine("And the first number is not greater than the second");
-            }            
+            }
         }
 
         static void ChallengeAnswer()
@@ -75,7 +75,7 @@ namespace BranchesAndLoops
             for(int index = 0; index < 10; index++)
             {
                 Console.WriteLine($"Hello World! The index is {index}");
-            } 
+            }
 
             ChallengeAnswer();
         }

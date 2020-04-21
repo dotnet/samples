@@ -2,7 +2,7 @@
 * Module Name:  DataGridViewPaging
 * Project:      CSWinFormDataGridView
 * Copyright (c) Microsoft Corporation.
-* 
+*
 * This sample demonstrates how to page data in the  DataGridView control;
 \**********************************************************************************/
 
@@ -49,7 +49,7 @@ namespace CSWinFormDataGridView.DataGridViewPaging
 
             // Get total count of the pages;
             this.GetTotalPageCount();
-            
+
             this.dataGridView1.ReadOnly = true;
 
             // Load the first page of data;

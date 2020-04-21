@@ -19,7 +19,7 @@ namespace NumbersInCSharp
         }
 
         static void OrderPrecedence()
-        {   
+        {
             int a = 5;
             int b = 4;
             int c = 2;
@@ -54,7 +54,7 @@ namespace NumbersInCSharp
             Console.WriteLine($"The range of integers is {min} to {max}");
 
             int what = max + 3;
-            Console.WriteLine($"An example of overflow: {what}");            
+            Console.WriteLine($"An example of overflow: {what}");
         }
 
         static void WorkWithDoubles()
@@ -74,9 +74,9 @@ namespace NumbersInCSharp
             double max = double.MaxValue;
             double min = double.MinValue;
             Console.WriteLine($"The range of double is {min} to {max}");
-            
+
             double third = 1.0 / 3.0;
-            Console.WriteLine(third);            
+            Console.WriteLine(third);
         }
 
         static void Main(string[] args)

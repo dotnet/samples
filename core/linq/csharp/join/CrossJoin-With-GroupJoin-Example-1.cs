@@ -7,7 +7,7 @@ namespace Join
     public static class CrossJoinWithGroupJoinExample1
     {
         // The group join operator is more general than join, as this slightly more verbose version of the cross join sample shows.
-        // Output: 
+        // Output:
         // Chai: Beverages
         // Chang: Beverages
         // Guarana Fantastica: Beverages
@@ -80,7 +80,7 @@ namespace Join
         }
 
         // The group join operator is more general than join, as this slightly more verbose version of the cross join sample shows.
-        // Output: 
+        // Output:
         // Chai: Beverages
         // Chang: Beverages
         // Guarana Fantastica: Beverages

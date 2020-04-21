@@ -4,7 +4,7 @@ namespace Restriction
 {
     //This sample demonstrates an indexed where clause that returns digits whose name is
     //shorter than their value.
-    //Outputs the following to Console 
+    //Outputs the following to Console
     //
     // Short digits:
     // The word five is shorter than its value.

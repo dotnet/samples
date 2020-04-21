@@ -7,7 +7,7 @@ namespace Partitioning
     {
         // This sample uses TakeWhile to return elements starting from the beginning of the array
         // until a number is hit that is less than its position in the array.
-        // Output: 
+        // Output:
         // First numbers not less than their position:
         // 5
         // 4

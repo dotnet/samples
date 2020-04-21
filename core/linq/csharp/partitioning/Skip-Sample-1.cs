@@ -5,8 +5,8 @@ namespace Partitioning
 {
     public static class SkipSample1
     {
-        // This sample uses Skip to get all but the first four elements of the array. 
-        // Output: 
+        // This sample uses Skip to get all but the first four elements of the array.
+        // Output:
         // All but first 4 numbers:
         // 9
         // 8

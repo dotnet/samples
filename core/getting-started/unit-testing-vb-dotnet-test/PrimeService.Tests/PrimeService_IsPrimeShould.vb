@@ -22,18 +22,18 @@
             <InlineData(7)>
             Public Sub IsPrime_PrimesLessThan10_ReturnTrue(value As Integer)
                 Dim result As Boolean = _primeService.IsPrime(value)
-    
+
                 Assert.True(result, $"{value} should be prime")
             End Sub
 
             <Theory>
             <InlineData(4)>
             <InlineData(6)>
-            <InlineData(8)> 
-            <InlineData(9)> 
+            <InlineData(8)>
+            <InlineData(9)>
             Public Sub IsPrime_NonPrimesLessThan10_ReturnFalse(value As Integer)
                 Dim result As Boolean = _primeService.IsPrime(value)
-    
+
                 Assert.False(result, $"{value} should not be prime")
             End Sub
         End Class

@@ -8,7 +8,7 @@ namespace ExpressionTreeSamples
     public class ExpressionTreeInterpretingSampleThree : Sample
     {
         public override string Name { get; } = "Interpreting Expression Trees, Sample 3: Building a General Visitor";
-        
+
         public override void Run()
         {
             Expression<Func<int, int, int>> addition = (a, b) => a + b;

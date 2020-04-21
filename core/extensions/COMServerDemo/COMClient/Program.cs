@@ -19,7 +19,7 @@ namespace COMClient
     namespace Activation
     {
         /// <summary>
-        /// Managed definition of CoClass 
+        /// Managed definition of CoClass
         /// </summary>
         [ComImport]
         [CoClass(typeof(ServerClass))]

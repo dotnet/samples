@@ -7,7 +7,7 @@ namespace Partitioning
     {
         // This sample uses SkipWhile to get the elements of the array starting from the first element
         // divisible by 3.
-        // Output: 
+        // Output:
         // All elements starting from first element divisible by 3:
         // 3
         // 9

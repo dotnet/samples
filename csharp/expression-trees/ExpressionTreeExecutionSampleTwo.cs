@@ -25,7 +25,7 @@ namespace ExpressionTreeSamples
     public class ExpressionTreeExecutionSampleTwo : Sample
     {
         public override string Name { get; } = "Executing Expression Trees, Sample 2: Bound Variables";
-        
+
         public override void Run()
         {
             var del = CreateBoundFunc();
@@ -39,7 +39,7 @@ namespace ExpressionTreeSamples
                 Console.WriteLine(e.ToString());
             }
         }
-        
+
         private static Func<int, int> CreateBoundFunc()
         {
             var constant = 5; // constant is captured by the expression tree
