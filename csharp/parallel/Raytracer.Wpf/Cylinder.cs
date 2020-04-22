@@ -1,4 +1,9 @@
-﻿using System.Windows.Media;
+﻿//
+// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE.md file in the project root for full license information.
+//
+
+using System.Windows.Media;
 using System.Windows.Media.Media3D;
 using System.Windows;
 

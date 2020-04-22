@@ -1,14 +1,18 @@
-﻿using System;
+﻿//
+// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE.md file in the project root for full license information.
+//
+
+using System;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Media3D;
 using System.Windows.Media.Animation;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Printing;
+using System.Windows.Media.Media3D;
 
 namespace Raytracer.Wpf
 {
