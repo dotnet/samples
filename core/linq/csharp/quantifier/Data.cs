@@ -2,7 +2,7 @@
 
 namespace Quantifier
 {
-    //The Data class is used as a fake repository 
+    //The Data class is used as a fake repository
     public class Data
     {
         public static List<Product> Products => new List<Product>()

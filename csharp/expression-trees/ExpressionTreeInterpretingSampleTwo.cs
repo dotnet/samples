@@ -6,7 +6,7 @@ namespace ExpressionTreeSamples
     public class ExpressionTreeInterpretingSampleTwo : Sample
     {
         public override string Name { get; } = "Interpreting Expression Trees, Sample 2: Understanding Binary Expression Nodes";
-        
+
         public override void Run()
         {
             Expression<Func<int, int, int>> addition = (a, b) => a + b;

@@ -7,7 +7,7 @@ namespace Aggregate
     public static class CountSample4
     {
         // This sample uses Count and query syntax to return a list of product counts per category.
-        // Output: 
+        // Output:
         // There are 12 products in the Beverages category.
         // There are 12 products in the Condiments category.
         // There are 5 products in the Produce category.
@@ -33,7 +33,7 @@ namespace Aggregate
         }
 
         // This sample uses Count and method syntax to return a list of product counts per category.
-        // Output: 
+        // Output:
         // There are 12 products in the Beverages category.
         // There are 12 products in the Condiments category.
         // There are 5 products in the Produce category.

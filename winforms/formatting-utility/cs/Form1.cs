@@ -26,7 +26,7 @@ namespace Formatter
 
       private string[] numberFormats = {"C", "D", "E", "e", "F", "G", "N", "P", "R", "X", "x"};
       private const int DEFAULTSELECTION = 5;
-      private string[] dateFormats = { "g", "d", "D", "f", "F", "g", "G", "M", "O", "R", "s", 
+      private string[] dateFormats = { "g", "d", "D", "f", "F", "g", "G", "M", "O", "R", "s",
                                        "t", "T", "u", "U", "Y" };
 
       public Form1()
@@ -120,10 +120,10 @@ namespace Formatter
          this.Result.Text = String.Empty;
 
          // Get name of the current culture.
-         CultureInfo culture = null;      
+         CultureInfo culture = null;
          string cultureName = (string) this.CultureNames.Items[this.CultureNames.SelectedIndex];
          // If the selected culture is the invariant culture, change its name.
-         if (cultureName == rm.GetString("InvariantCultureName")) 
+         if (cultureName == rm.GetString("InvariantCultureName"))
             cultureName = String.Empty;
          culture = CultureInfo.CreateSpecificCulture(cultureName);
 
@@ -193,7 +193,7 @@ namespace Formatter
                }
                else {
                   // Format an Int64
-                  if (bigintToFormat >= Int64.MinValue && bigintToFormat <= Int64.MaxValue) { 
+                  if (bigintToFormat >= Int64.MinValue && bigintToFormat <= Int64.MaxValue) {
                      intToFormat = (long) bigintToFormat;
                      try {
                         this.Result.Text = intToFormat.ToString(this.FormatStrings.Text, culture);
@@ -233,7 +233,7 @@ namespace Formatter
       {
          this.Result.Text = String.Empty;
 
-         if (valueInfo) { 
+         if (valueInfo) {
             label.Text = String.Empty;
             valueInfo = false;
          }

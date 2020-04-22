@@ -2,8 +2,8 @@
 * Module Name:  MultipleLayeredColumnHeader
 * Project:      CSWinFormDataGridView
 * Copyright (c) Microsoft Corporation.
-* 
-* 
+*
+*
 * This sample demonstrates how to display multiple layer column headers on the DataGridView.
 \******************************************************************************************/
 
@@ -47,7 +47,7 @@ namespace CSWinFormDataGridView.MultipleLayeredColumnHeader
             this.dataGridView1.ColumnHeadersHeight =
                         this.dataGridView1.ColumnHeadersHeight * 2;
 
-            // Adjust the text alignment on the column headers to make the text display 
+            // Adjust the text alignment on the column headers to make the text display
             // at the center of the bottom;
             this.dataGridView1.ColumnHeadersDefaultCellStyle.Alignment =
                  DataGridViewContentAlignment.BottomCenter;
@@ -75,7 +75,7 @@ namespace CSWinFormDataGridView.MultipleLayeredColumnHeader
                 r1.Width = r1.Width * 2 - 2;
                 r1.Height = r1.Height / 2 - 2;
 
-                using (SolidBrush br = 
+                using (SolidBrush br =
                     new SolidBrush(
                         this.dataGridView1.ColumnHeadersDefaultCellStyle.BackColor))
                 {
@@ -88,7 +88,7 @@ namespace CSWinFormDataGridView.MultipleLayeredColumnHeader
                 }
 
                 using( StringFormat format = new StringFormat())
-                using (SolidBrush br = 
+                using (SolidBrush br =
                     new SolidBrush(
                         this.dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor))
                 {

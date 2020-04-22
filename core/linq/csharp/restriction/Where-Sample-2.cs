@@ -7,7 +7,7 @@ namespace Restriction
     public class WhereClause2
     {
         //This sample uses the where clause to find all products that are out of stock using query syntax.
-        //Outputs the following to Console 
+        //Outputs the following to Console
         //
         // Sold out products:
         // Chef Anton's Gumbo Mix is sold out!
@@ -32,7 +32,7 @@ namespace Restriction
         }
 
         //This sample uses the where clause to find all products that are out of stock using query syntax.
-        //Outputs the following to Console 
+        //Outputs the following to Console
         //
         // Sold out products:
         // Chef Anton's Gumbo Mix is sold out!
@@ -45,7 +45,7 @@ namespace Restriction
             List<Product> products = Data.Products;
 
             var soldOutProducts = products.Where(prod => prod.UnitsInStock == 0);
-            
+
             Console.WriteLine("Sold out products:");
             foreach (var product in soldOutProducts)
             {

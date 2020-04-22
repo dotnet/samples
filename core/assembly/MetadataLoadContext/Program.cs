@@ -9,7 +9,7 @@ namespace MetadataLoadContextSample
     class Program
     {
         static int Main(string[] args)
-        {            
+        {
             if (args.Length < 1)
             {
                 Console.WriteLine("Usage: dotnet MetadataLoadContextSample.dll <assembly path>");

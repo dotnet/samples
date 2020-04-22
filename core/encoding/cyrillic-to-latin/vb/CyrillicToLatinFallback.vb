@@ -35,7 +35,7 @@ Public Class CyrillicToLatinFallback : Inherits EncoderFallback
       table.Add(ChrW(&H0427), "Ch")
       table.Add(ChrW(&H0428), "Sh")
       table.Add(ChrW(&H0429), "Shch")
-      table.Add(ChrW(&H042A), "'")    ' Hard sign              
+      table.Add(ChrW(&H042A), "'")    ' Hard sign
       table.Add(ChrW(&H042B), "Ye")
       table.Add(ChrW(&H042C), "'")    ' Soft sign
       table.Add(ChrW(&H042D), "E")

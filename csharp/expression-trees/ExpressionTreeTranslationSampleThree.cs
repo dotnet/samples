@@ -6,7 +6,7 @@ namespace ExpressionTreeSamples
     public class ExpressionTreeTranslationSampleThree : Sample
     {
         public override string Name { get; } = "Translation Expression Trees, Sample 3: Computing the sum of an addition tree with logging";
-        
+
         public override void Run()
         {
             var one = Expression.Constant(1, typeof(int));

@@ -2,16 +2,16 @@
 * Module Name:  MainForm.cs
 * Project:      WinFormGraphics
 * Copyright (c) Microsoft Corporation.
-* 
-* The Graphics sample demonstrates the fundamentals of GDI+ programming. 
-* GDI+ allows you to create graphics, draw text, and manipulate graphical images as objects. 
-* GDI+ is designed to offer performance as well as ease of use. 
-* You can use GDI+ to render graphical images on Windows Forms and controls. 
-* GDI+ has fully replaced GDI, and is now the only way to render graphics programmatically 
+*
+* The Graphics sample demonstrates the fundamentals of GDI+ programming.
+* GDI+ allows you to create graphics, draw text, and manipulate graphical images as objects.
+* GDI+ is designed to offer performance as well as ease of use.
+* You can use GDI+ to render graphical images on Windows Forms and controls.
+* GDI+ has fully replaced GDI, and is now the only way to render graphics programmatically
 * in Windows Forms applications.
 *
 * In this sample, there're 5 examples:
-* 
+*
 * 1. Draw A Line.
 *    Demonstrates how to draw a solid/dash/dot line.
 * 2. Draw A Curve.
@@ -23,7 +23,7 @@
 *    Demonstrates how to draw a vertical string.
 * 5. Draw A Ellipse With Gradient Brush.
 *    Demonstrates how to draw a shape with gradient effect.
-* 
+*
 * THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND,
 * EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED
 * WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.
@@ -127,8 +127,8 @@ namespace WinFormGraphics
 
                 // Use a LinearGradientBrush to draw the ellipse.
                 using (var br = new LinearGradientBrush(
-                        r, Color.Silver, 
-                        Color.Black, 
+                        r, Color.Silver,
+                        Color.Black,
                         LinearGradientMode.Vertical))
                 {
                     e.Graphics.FillEllipse(br, r);
