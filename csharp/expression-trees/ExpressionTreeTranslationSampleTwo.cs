@@ -6,7 +6,7 @@ namespace ExpressionTreeSamples
     public class ExpressionTreeTranslationSampleTwo : Sample
     {
         public override string Name { get; } = "Translation Expression Trees, Sample 2: Computing the sum of an addition tree";
-        
+
         public override void Run()
         {
             var one = Expression.Constant(1, typeof(int));
@@ -17,7 +17,7 @@ namespace ExpressionTreeSamples
             var add2 = Expression.Add(three, four);
             var sum = Expression.Add(addition, add2);
 
-            // Declare the delegate, so we can call it 
+            // Declare the delegate, so we can call it
             // from itself recursively:
             Func<Expression, int> aggregate = null;
             // Aggregate, return constants, or the sum of the left and right operand.

@@ -5,7 +5,7 @@ using System.Xml.Linq;
 
 namespace Projection
 {
-    //The Data class is used as a fake repository 
+    //The Data class is used as a fake repository
     public static class Data
     {
         public static List<Product> Products => new List<Product>()

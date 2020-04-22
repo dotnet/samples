@@ -6,7 +6,7 @@ namespace ExpressionTreeSamples
     public class ExpressionTreeInterpretingSampleOne : Sample
     {
         public override string Name { get; } = "Interpreting Expression Trees, Sample 1: Understanding Constant Nodes";
-        
+
         public override void Run()
         {
             var constant = Expression.Constant(24, typeof(int));

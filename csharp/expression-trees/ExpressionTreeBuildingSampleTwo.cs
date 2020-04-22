@@ -10,7 +10,7 @@ namespace ExpressionTreeSamples
     public class ExpressionTreeBuildingSampleTwo : Sample
     {
         public override string Name { get; } = "Building Expression Trees, Sample 2: Building Loops and Conditionals";
-        
+
         public override void Run()
         {
             // This code builds the equivalent of:

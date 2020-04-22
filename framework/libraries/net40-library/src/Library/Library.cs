@@ -23,29 +23,29 @@ namespace Library
         public string GetDotNetCount()
         {
             string url = "http://www.dotnetfoundation.org/";
-          
+
             var uri = new Uri(url);
-            
+
             string result = "";
-            
+
             lock(_locker)
-            { 
+            {
                 result = _client.DownloadString(uri);
             }
-            
+
             int dotNetCount = Regex.Matches(result, ".NET").Count;
-            
+
             return $"Dotnet Foundation mentions .NET {dotNetCount} times!";
         }
 #else
         public async Task<string> GetDotNetCountAsync()
         {
             string url = "http://www.dotnetfoundation.org/";
-            
+
             var result = await _client.GetStringAsync(url);
-            
+
             int dotNetCount = Regex.Matches(result, ".NET").Count;
-            
+
             return $"dotnetfoundation.org mentions .NET {dotNetCount} times in its HTML!";
         }
 #endif

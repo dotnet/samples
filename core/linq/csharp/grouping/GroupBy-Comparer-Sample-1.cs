@@ -5,9 +5,9 @@ namespace Grouping
 {
     public class GroupByComparer1
     {
-        //This sample uses GroupBy to partition trimmed elements of an array using a 
+        //This sample uses GroupBy to partition trimmed elements of an array using a
         // custom comparer that matches words that are anagrams of each other.
-        //Outputs the following to Console: 
+        //Outputs the following to Console:
         //from
         //    from
         //    form
@@ -24,7 +24,7 @@ namespace Grouping
             string[] anagrams = { "from   ", " salt", " earn ", "  last   ", " near ", " form  " };
 
             var orderGroups = anagrams.GroupBy(w => w.Trim(), new AnagramEqualityComparer());
-            
+
             foreach (var s in orderGroups)
             {
                 Console.WriteLine("--------------");
@@ -35,5 +35,5 @@ namespace Grouping
                 }
             }
         }
-    }   
+    }
 }

@@ -6,7 +6,7 @@ namespace ExpressionTreeSamples
     public class ExpressionTreeTranslationSampleOne : Sample
     {
         public override string Name { get; } = "Translation Expression Trees, Sample 1: Replacing Constant Nodes";
-        
+
         public override void Run()
         {
             var one = Expression.Constant(1, typeof(int));
@@ -19,7 +19,7 @@ namespace ExpressionTreeSamples
             var answer = func();
             Console.WriteLine(answer);
        }
-       
+
        private static Expression ReplaceNodes(Expression original)
        {
            if (original.NodeType == ExpressionType.Constant)

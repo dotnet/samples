@@ -6,7 +6,7 @@ namespace Element
     public static class ElementAtSample1
     {
         // This sample uses ElementAt and query syntaxto retrieve the second number greater than 5 from an array.
-        // Output: 
+        // Output:
         // Second number > 5: 8
         public static void QuerySyntaxExample()
         {
@@ -22,7 +22,7 @@ namespace Element
         }
 
         // This sample uses ElementAt and method syntax to retrieve the second number greater than 5 from an array.
-        // Output: 
+        // Output:
         // Second number > 5: 8
         public static void MethodSyntaxExample()
         {
@@ -30,7 +30,7 @@ namespace Element
 
             // Second number is index 1 because sequences use 0-based indexing.
             int fourthLowNum = (numbers.Where(num => num > 5)).ElementAt(1);
-               
+
             Console.WriteLine($"Second number > 5: {fourthLowNum}");
         }
     }

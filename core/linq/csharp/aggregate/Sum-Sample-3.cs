@@ -7,7 +7,7 @@ namespace Aggregate
     public static class SumSample3
     {
         // This sample uses Sum amd query syntax to get the total units in stock for each product category.
-        // Output: 
+        // Output:
         // Category Beverages has 559 unit(s) in stock.
         // Category Condiments has 507 unit(s) in stock.
         // Category Produce has 100 unit(s) in stock.
@@ -32,7 +32,7 @@ namespace Aggregate
         }
 
         // This sample uses Sum and method syntax to get the total units in stock for each product category.
-        // Output: 
+        // Output:
         // Category Beverages has 559 unit(s) in stock.
         // Category Condiments has 507 unit(s) in stock.
         // Category Produce has 100 unit(s) in stock.

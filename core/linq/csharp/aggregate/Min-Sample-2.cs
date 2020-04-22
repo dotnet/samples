@@ -6,7 +6,7 @@ namespace Aggregate
     public static class MinSample2
     {
         // This sample uses Min to get the length of the shortest word in an array.
-        // Output: 
+        // Output:
         // The shortest word is 5 characters long.
         public static void Example()
         {

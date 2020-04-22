@@ -9,7 +9,7 @@ namespace ExpressionTreeSamples
     public class ExpressionTreeInterpretingSampleFour : Sample
     {
         public override string Name { get; } = "Interpreting Expression Trees, Sample 4: Method Calls and Conditionals";
-        
+
         public override void Run()
         {
             Expression<Func<int, int>> factorial = (n) =>

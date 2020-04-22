@@ -7,7 +7,7 @@ namespace Generation
     {
         // This sample uses Range and query syntax to generate a sequence of numbers from 100 to 109
         // that is used to find which numbers in that range are odd and even.
-        // Output: 
+        // Output:
         // The number 100 is even.
         // The number 101 is odd.
         // The number 102 is even.
@@ -32,7 +32,7 @@ namespace Generation
 
         // This sample uses Range and method syntax to generate a sequence of numbers from 100 to 109
         // that is used to find which numbers in that range are odd and even.
-        // Output: 
+        // Output:
         // The number 100 is even.
         // The number 101 is odd.
         // The number 102 is even.

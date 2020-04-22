@@ -6,8 +6,8 @@ namespace Join
 {
     public static class GroupJoinExample1
     {
-        // Using a group join you can get all the products that match a given category bundled as a sequence. 
-        // Output: 
+        // Using a group join you can get all the products that match a given category bundled as a sequence.
+        // Output:
         // Beverages:
         //    Chai
         //    Chang
@@ -87,7 +87,7 @@ namespace Join
             }
         }
 
-        // Using a group join you can get all the products that match a given category bundled as a sequence. 
+        // Using a group join you can get all the products that match a given category bundled as a sequence.
         // Output:
         // Beverages:
         //    Chai

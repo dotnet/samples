@@ -2,7 +2,7 @@
 * Module Name:  MaskedTextBoxEditingControl.cs
 * Project:      CSWinFormDataGridView
 * Copyright (c) Microsoft Corporation.
-* 
+*
 * This sample demonstrates how to create a custom DataGridView column.
 \**********************************************************************************/
 
@@ -114,7 +114,7 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
                 case Keys.Left:
                     //
                     // If the end of the selection is at the begining of the
-                    // string or if the entire text is selected send this character 
+                    // string or if the entire text is selected send this character
                     // to the dataGridView; else process the key event.
                     //
                     if (!(this.SelectionLength == 0
@@ -164,7 +164,7 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
             else
             {
                 //
-                // Do not select all the text, but position the caret at the 
+                // Do not select all the text, but position the caret at the
                 // end of the text.
                 //
                 this.SelectionStart = this.ToString().Length;
@@ -199,7 +199,7 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
         }
 
         //  Make the MaskedTextBox control match the style and colors of
-        //  the host DataGridView control and other editing controls 
+        //  the host DataGridView control and other editing controls
         //  before showing the editing control.
         public void ApplyCellStyleToEditingControl(DataGridViewCellStyle dataGridViewCellStyle)
         {
@@ -226,7 +226,7 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
         #endregion // IDataGridViewEditingControl.
 
         /// <summary>
-        /// Routine to translate between DataGridView content alignments and text 
+        /// Routine to translate between DataGridView content alignments and text
         /// box horizontal alignments.
         /// </summary>
         /// <param name="align"></param>

@@ -7,11 +7,11 @@ class ConsoleModule
    static void Main()
    {
       string[] args = Environment.GetCommandLineArgs();
-      
+
       // Get command line arguments.
       if (args.Length != 3 || String.IsNullOrWhiteSpace(args[1]) || String.IsNullOrWhiteSpace(args[2]))
       {
-         Console.WriteLine("There must be a source and a destination file."); 
+         Console.WriteLine("There must be a source and a destination file.");
          ShowSyntax();
          return;
       }
@@ -27,15 +27,15 @@ class ConsoleModule
 
       try
       {
-         using (var sr = new StreamReader(source)) 
+         using (var sr = new StreamReader(source))
          {
             // Check whether destination file exists and exit if it should not be overwritten.
-            if (File.Exists(destination)) 
+            if (File.Exists(destination))
             {
-               Console.Write("The destination file {1}   '{0}'{1}exists. Overwrite it? (Y/N) ", 
+               Console.Write("The destination file {1}   '{0}'{1}exists. Overwrite it? (Y/N) ",
                            source, Environment.NewLine);
                ConsoleKeyInfo keyPressed = Console.ReadKey(true);
-               if (Char.ToUpper(keyPressed.KeyChar) == 'Y' | Char.ToUpper(keyPressed.KeyChar) == 'N') 
+               if (Char.ToUpper(keyPressed.KeyChar) == 'Y' | Char.ToUpper(keyPressed.KeyChar) == 'N')
                {
                   Console.WriteLine(keyPressed.KeyChar);
                   if (Char.ToUpper(keyPressed.KeyChar) == 'N')
@@ -52,9 +52,9 @@ class ConsoleModule
 
                // Define buffer to read characters
                char[] buffer = new char[100];
-               int charsRead; 
+               int charsRead;
 
-               do 
+               do
                {
                   // Read next 100 characters from input stream.
                   charsRead = sr.ReadBlock(buffer, 0, buffer.Length);
@@ -72,12 +72,12 @@ class ConsoleModule
             }
          }
       }
-      catch (DirectoryNotFoundException e) 
+      catch (DirectoryNotFoundException e)
       {
          Console.WriteLine($"Invalid directory: {e.Message}");
          return;
       }
-      catch (IOException e) 
+      catch (IOException e)
       {
          Console.WriteLine($"I/O exception: {e.Message}");
          return;

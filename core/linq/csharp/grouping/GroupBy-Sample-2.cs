@@ -16,21 +16,21 @@ namespace Grouping
         //   Words that start with the letter 'a':
         //   abacus
         //   apple
-        public static void QuerySyntaxExample() 
-        { 
-            string[] words = { "blueberry", "chimpanzee", "abacus", "banana", "apple", "cheese" }; 
-        
-            var wordGroups = 
-                from w in words 
-                group w by w[0] into g 
-                select new { FirstLetter = g.Key, Words = g }; 
-        
-            foreach (var g in wordGroups) 
-            { 
-                Console.WriteLine("Words that start with the letter '{0}':", g.FirstLetter); 
-                foreach (var w in g.Words) 
-                { 
-                    Console.WriteLine(w); 
+        public static void QuerySyntaxExample()
+        {
+            string[] words = { "blueberry", "chimpanzee", "abacus", "banana", "apple", "cheese" };
+
+            var wordGroups =
+                from w in words
+                group w by w[0] into g
+                select new { FirstLetter = g.Key, Words = g };
+
+            foreach (var g in wordGroups)
+            {
+                Console.WriteLine("Words that start with the letter '{0}':", g.FirstLetter);
+                foreach (var w in g.Words)
+                {
+                    Console.WriteLine(w);
                 }
             }
         }
@@ -45,19 +45,19 @@ namespace Grouping
         //   Words that start with the letter 'a':
         //   abacus
         //   apple
-        public static void MethodSyntaxExample() 
+        public static void MethodSyntaxExample()
         {
-            string[] words = { "blueberry", "chimpanzee", "abacus", "banana", "apple", "cheese" }; 
+            string[] words = { "blueberry", "chimpanzee", "abacus", "banana", "apple", "cheese" };
 
-            var wordGroups = words.GroupBy(w => w[0], 
+            var wordGroups = words.GroupBy(w => w[0],
                  (Key, g) => new { FirstLetter = Key, Words = g });
 
-            foreach (var g in wordGroups) 
-            { 
-                Console.WriteLine("Words that start with the letter '{0}':", g.FirstLetter); 
-                foreach (var w in g.Words) 
-                { 
-                    Console.WriteLine(w); 
+            foreach (var g in wordGroups)
+            {
+                Console.WriteLine("Words that start with the letter '{0}':", g.FirstLetter);
+                foreach (var w in g.Words)
+                {
+                    Console.WriteLine(w);
                 }
             }
         }

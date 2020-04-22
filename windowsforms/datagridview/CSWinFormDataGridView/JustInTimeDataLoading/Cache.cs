@@ -1,12 +1,12 @@
 ﻿/************************************* Module Header **************************************\
-* Module Name:  JustInTimeDataLoading.Cache 
+* Module Name:  JustInTimeDataLoading.Cache
 * Project:      CSWinFormDataGridView
 * Copyright (c) Microsoft Corporation.
-* 
-* 
-* This sample demonstrates how to use virtual mode in the DataGridView control 
-* with a data cache that loads data from a server only when it is needed. 
-* This kind of data loading is called "Just-in-time data loading". 
+*
+*
+* This sample demonstrates how to use virtual mode in the DataGridView control
+* with a data cache that loads data from a server only when it is needed.
+* This kind of data loading is called "Just-in-time data loading".
 \******************************************************************************************/
 
 using System;
@@ -127,9 +127,9 @@ namespace CSWinFormDataGridView.JustInTimeDataLoading
         {
             cachePages = new DataPage[]{
             new DataPage(dataSupply.SupplyPageOfData(
-                DataPage.MapToLowerBoundary(0), RowsPerPage), 0), 
+                DataPage.MapToLowerBoundary(0), RowsPerPage), 0),
             new DataPage(dataSupply.SupplyPageOfData(
-                DataPage.MapToLowerBoundary(RowsPerPage), 
+                DataPage.MapToLowerBoundary(RowsPerPage),
                 RowsPerPage), RowsPerPage)};
         }
 
@@ -180,7 +180,7 @@ namespace CSWinFormDataGridView.JustInTimeDataLoading
 
         /// <summary>
         /// Returns a value indicating whether the given row index is contained
-        /// in the given DataPage. 
+        /// in the given DataPage.
         /// </summary>
         /// <param name="pageNumber"></param>
         /// <param name="rowIndex"></param>
@@ -192,7 +192,7 @@ namespace CSWinFormDataGridView.JustInTimeDataLoading
         }
     }
 
-    #endregion 
+    #endregion
 
     #region IDataPageRetriever Interface
 
@@ -300,7 +300,7 @@ namespace CSWinFormDataGridView.JustInTimeDataLoading
 
         public DataTable SupplyPageOfData(int lowerPageBoundary, int rowsPerPage)
         {
-            // Store the name of the ID column. This column must contain unique 
+            // Store the name of the ID column. This column must contain unique
             // values so the SQL below will work properly.
             columnToSortBy ??= this.Columns[0].ColumnName;
 
@@ -327,5 +327,5 @@ namespace CSWinFormDataGridView.JustInTimeDataLoading
         }
     }
 
-    #endregion 
+    #endregion
 }
