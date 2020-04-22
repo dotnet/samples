@@ -1,0 +1,147 @@
+﻿<Window x:Class="Raytracer.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Raytracer.Wpf"
+        mc:Ignorable="d"
+        Background="Black"
+        Title="Reversi" Height="487" MinHeight="487" Width="733" MinWidth="733"
+        KeyDown="OnMainWindowKeyDown" Loaded="OnMainWindowLoaded">
+    <Grid>
+        <!--gameboard viewbox-->
+        <Viewbox>
+            <Viewport3D x:Name="mainViewport" Width="150" Height="150" MouseUp="OnMainViewPortMouseUp" >
+                <Viewport3D.Camera>
+                    <PerspectiveCamera x:Name="mainCamera"  UpDirection="0,0,1" Position="0,-100, 160" LookDirection="0,100,-175" FieldOfView="30"/>
+                </Viewport3D.Camera>
+                <Viewport3D.Children>
+                    <!--Light-->
+                    <ModelVisual3D>
+                        <ModelVisual3D.Content>
+                            <DirectionalLight Color="White" Direction="0,100,-175"/>
+                        </ModelVisual3D.Content>
+                    </ModelVisual3D>
+                    <!--Game Board-->
+                    <ModelVisual3D x:Name="m_gameBoard">
+                        <ModelVisual3D.Content>
+                            <Model3DGroup>
+                                <!--Top of board-->
+                                <GeometryModel3D>
+                                    <GeometryModel3D.Geometry>
+                                        <MeshGeometry3D
+                                    Positions="-40,-40,0  40,-40,0 -40,40,0  40,40,0"  
+                                    TriangleIndices="0 1 2 1 3 2"
+                                    TextureCoordinates="0,1 1,1 0,0 1,0"/>
+                                    </GeometryModel3D.Geometry>
+                                    <GeometryModel3D.Material>
+                                        <MaterialGroup>
+                                            <DiffuseMaterial>
+                                                <DiffuseMaterial.Brush>
+                                                    <ImageBrush ImageSource="gameboard.jpg" Stretch="Fill" />
+                                                </DiffuseMaterial.Brush>
+                                            </DiffuseMaterial>
+                                        </MaterialGroup>
+                                    </GeometryModel3D.Material>
+                                </GeometryModel3D>
+                                <!--Front of board-->
+                                <GeometryModel3D>
+                                    <GeometryModel3D.Geometry>
+                                        <MeshGeometry3D
+                                        Positions="-40,-40,-20 40,-40,-20, -40,-40,0 40,-40,0"
+                                        TriangleIndices="0 1 2 1 3 2"/>
+                                    </GeometryModel3D.Geometry>
+                                    <GeometryModel3D.Material>
+                                        <DiffuseMaterial>
+                                            <DiffuseMaterial.Brush>
+                                                <SolidColorBrush Color="Green"/>
+                                            </DiffuseMaterial.Brush>
+                                        </DiffuseMaterial>
+                                    </GeometryModel3D.Material>
+                                </GeometryModel3D>
+                            </Model3DGroup>
+                        </ModelVisual3D.Content>
+                    </ModelVisual3D>
+                </Viewport3D.Children>
+            </Viewport3D>
+        </Viewbox>
+        <!--sequential player badge-->
+        <Grid Name="theGrid" Width="229" Height="112" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" >
+            <Rectangle RadiusX="15" RadiusY="15" Stroke="LightGreen">
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="Green" Opacity=".5"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <!--player icon-->
+            <Viewport3D Name="seqPlayerViewport" Width="100" Height="100" HorizontalAlignment="Left" Margin="5">
+                <Viewport3D.Camera>
+                    <PerspectiveCamera UpDirection="0,0,1" Position="0,-30, 30" LookDirection="0,30,-30" FieldOfView="20"/>
+                </Viewport3D.Camera>
+                <Viewport3D.Children>
+                    <!--Light-->
+                    <ModelVisual3D>
+                        <ModelVisual3D.Content>
+                            <DirectionalLight Color="White" Direction="0,100,-175"/>
+                        </ModelVisual3D.Content>
+                    </ModelVisual3D>
+                </Viewport3D.Children>
+            </Viewport3D>
+            <Label Name="ui_seqPlayerLabel" Height="30" BorderThickness="0" Foreground="LightGreen"
+                         FontSize="16" VerticalAlignment="Top" HorizontalContentAlignment="Right" Margin="0,0,10,0" >You</Label>
+            <Label Name="ui_seqLabel" Foreground="LightGreen"  
+                         FontSize="16" HorizontalContentAlignment="Center" Margin="110,65,19,20" />
+            <ProgressBar Name="ui_seqProgBar" Width="100" Minimum="0" Maximum="100"
+                         Orientation="Horizontal" IsIndeterminate="False" Visibility="Hidden" HorizontalAlignment="Right" Margin="0,45,19,47" />
+        </Grid>
+        <!--parallel player badge-->
+        <Grid Width="229" Height="112" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="10" >
+            <Rectangle RadiusX="15" RadiusY="15" Stroke="LightGreen">
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="Green" Opacity=".5"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <!--player icon-->
+            <Viewport3D Name="parPlayerViewport" Width="100" Height="100" HorizontalAlignment="Left" Margin="5">
+                <Viewport3D.Camera>
+                    <PerspectiveCamera UpDirection="0,0,1" Position="0,-30, 30" LookDirection="0,30,-30" FieldOfView="20"/>
+                </Viewport3D.Camera>
+                <Viewport3D.Children>
+                    <!--Light-->
+                    <ModelVisual3D>
+                        <ModelVisual3D.Content>
+                            <DirectionalLight Color="White" Direction="0,100,-175"/>
+                        </ModelVisual3D.Content>
+                    </ModelVisual3D>
+                </Viewport3D.Children>
+            </Viewport3D>
+            <Label Height="30" BorderThickness="0" Foreground="LightGreen"
+                         FontSize="16" VerticalAlignment="Top" HorizontalContentAlignment="Right" Margin="0,0,10,0">Parallel Player</Label>
+            <Label Name="ui_parLabel" Foreground="LightGreen"  
+                         FontSize="16" HorizontalContentAlignment="Center" Margin="110,65,19,20" />
+            <ProgressBar Name="ui_parProgBar" Width="100" Minimum="0" Maximum="100"
+                         Orientation="Horizontal" IsIndeterminate="False" Visibility="Hidden" HorizontalAlignment="Right" Margin="0,45,19,47" />
+        </Grid>
+        <Button Name="ui_startStopButton" Width="150" Click="OnStartStopButtonClick" FontWeight="Normal" VerticalAlignment="Top" Margin="10" Content="Start Sequential vs. Parallel"
+               BorderBrush="LightGreen" Foreground="LightGreen" OverridesDefaultStyle="False">
+            <Button.Background>
+                <SolidColorBrush Color="Green" Opacity=".5"/>
+            </Button.Background>
+        </Button>
+        <!--settings control-->
+        <Expander Name="ui_settings" Header="Settings" ExpandDirection="Up" Foreground="LightGreen" BorderBrush="LightGreen" VerticalAlignment="Bottom">
+            <Expander.Background>
+                <SolidColorBrush Color="Green" Opacity=".5"/>
+            </Expander.Background>
+            <WrapPanel HorizontalAlignment="Center">
+                <Label Name="ui_dopLabel" Foreground="LightGreen"  HorizontalAlignment="Center" FontWeight="Bold">DOP</Label>
+                <Slider Name="ui_dopSlider" Width="100" Margin="10" TickPlacement="BottomRight" IsSnapToTickEnabled="True" AutoToolTipPlacement="BottomRight"/>
+                <Label Name="ui_depthLabel" Foreground="LightGreen" HorizontalAlignment="Center" FontWeight="Bold">Depth</Label>
+                <Slider Name="ui_depthSlider" Width="100" Margin="10" TickPlacement="BottomRight" IsSnapToTickEnabled="True" AutoToolTipPlacement="BottomRight"/>
+                <Label Name="ui_timeoutLabel"  Foreground="LightGreen"  HorizontalAlignment="Center" FontWeight="Bold">Timeout</Label>
+                <Slider Name="ui_timeoutSlider" Width="100" Margin="10" TickPlacement="BottomRight" IsSnapToTickEnabled="True" AutoToolTipPlacement="BottomRight"/>
+                <CheckBox Content="Animation"  Foreground="LightGreen"  Margin="10" Height="16" HorizontalAlignment="Left" Name="m_animationCheckBox" VerticalAlignment="Top" Width="120" Checked="OnAnimationToggler" Unchecked="OnAnimationToggler" IsChecked="True" />
+            </WrapPanel>
+        </Expander>
+
+    </Grid>
+</Window>
