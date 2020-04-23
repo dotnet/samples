@@ -5,7 +5,7 @@ products:
 - dotnet
 - dotnet-core
 page_type: sample
-name: ".NET Core parallel computation of PI"
+name: ".NET Core parallel grep sample"
 urlFragment: "parallel-programming-grep-cs"
 description: "A .NET Core console application that implements grep functionality across a file system using PLINQ."
 ---

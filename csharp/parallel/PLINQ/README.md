@@ -5,7 +5,7 @@ products:
 - dotnet
 - dotnet-core
 page_type: sample
-name: ".NET Core parallel computation of PI"
+name: ".NET Core parallel programming with PLINQ"
 urlFragment: "parallel-programming-plinq-cs"
 description: "A .NET Core console application that demonstrates some of the ways PLINQ query execution may be controlled and configured."
 ---
