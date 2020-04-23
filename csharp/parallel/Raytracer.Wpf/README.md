@@ -7,7 +7,7 @@ products:
 - windows-wpf
 page_type: sample
 name: ".NET Core parallel animated ray-traced bouncing ball"
-urlFragment: "parallel-programming-winforms-raytracer-cs"
+urlFragment: "parallel-programming-wpf-raytracer-cs"
 description: "A .NET Core WPF application that demonstrates AI algorithms using minimax with alpha-beta pruning and parallel AI."
 ---
 
