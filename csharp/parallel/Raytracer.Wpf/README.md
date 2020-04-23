@@ -2,7 +2,9 @@
 languages:
 - csharp
 products:
+- dotnet
 - dotnet-core
+- windows-wpf
 page_type: sample
 name: ".NET Core parallel animated ray-traced bouncing ball"
 urlFragment: "parallel-programming-winforms-raytracer-cs"

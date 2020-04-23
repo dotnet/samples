@@ -2,7 +2,8 @@
 languages:
 - csharp
 products:
-- dotnet-core
+- dotnet
+- dotnet-standard
 page_type: sample
 name: ".NET Standard parallel extensions extras"
 urlFragment: "parallel-programming-extensions-extras-cs"
