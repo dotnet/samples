@@ -1,10 +1,11 @@
 ---
 languages:
-   - csharp
- products:
-   - dotnet-core
+- csharp
+products:
+- dotnet
+- dotnet-core
 page_type: sample
-name: ".NET Core parallel computation of PI"
+name: ".NET Core parallel wavefront algorithm sample"
 urlFragment: "parallel-programming-edit-distance-cs"
 description: "A .NET Core console application that uses Task to parallelize the edit distance dynamic programming problem between two strings."
 ---
