@@ -1,11 +1,13 @@
 ---
 languages:
-   - csharp
- products:
-   - dotnet-core
+- csharp
+products:
+- dotnet
+- dotnet-core
+- windows-wpf
 page_type: sample
-name: ".NET Core parallel animated ray-traced bouncing ball"
-urlFragment: "parallel-programming-winforms-raytracer-cs"
+name: ".NET Core parallel interactive reversi game"
+urlFragment: "parallel-programming-wpf-raytracer-cs"
 description: "A .NET Core WPF application that demonstrates AI algorithms using minimax with alpha-beta pruning and parallel AI."
 ---
 
