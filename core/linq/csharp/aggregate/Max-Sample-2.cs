@@ -11,7 +11,7 @@ namespace Aggregate
         // The longest word is 9 characters long.
         public static void Example()
         {
-            string[] words = {"cherry", "apple", "blueberry"};
+            string[] words = { "cherry", "apple", "blueberry" };
 
             int longestLength = words.Max(w => w.Length);
 

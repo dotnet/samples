@@ -74,7 +74,7 @@ namespace Join
                 from c in categories
                 join p in products on c equals p.Category into ps
                 from p in ps.DefaultIfEmpty()
-                select new {Category = c, ProductName = p == null ? "(No products)" : p.ProductName};
+                select new { Category = c, ProductName = p == null ? "(No products)" : p.ProductName };
 
             foreach (var v in q)
             {
@@ -148,9 +148,9 @@ namespace Join
             List<Product> products = Data.Products;
 
             var q =
-                categories.GroupJoin(products, c => c, p => p.Category, (c, ps) => new {c, ps})
+                categories.GroupJoin(products, c => c, p => p.Category, (c, ps) => new { c, ps })
                     .SelectMany(@t => @t.ps.DefaultIfEmpty(),
-                        (@t, p) => new {Category = @t.c, ProductName = p == null ? "(No products)" : p.ProductName});
+                        (@t, p) => new { Category = @t.c, ProductName = p == null ? "(No products)" : p.ProductName });
 
             foreach (var v in q)
             {

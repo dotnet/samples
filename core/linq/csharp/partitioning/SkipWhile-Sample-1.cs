@@ -18,12 +18,12 @@ namespace Partitioning
         // 0
         public static void Example()
         {
-            int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
+            int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
 
             // In the lambda expression, 'n' is the input parameter that identifies each
             // element in the collection in succession. It is is inferred to be
             // of type int because numbers is an int array.
-            var allButFirst3Numbers = numbers.SkipWhile(n => n%3 != 0);
+            var allButFirst3Numbers = numbers.SkipWhile(n => n % 3 != 0);
 
             Console.WriteLine("All elements starting from first element divisible by 3:");
             foreach (var n in allButFirst3Numbers)

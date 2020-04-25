@@ -15,7 +15,7 @@ namespace Partitioning
         // 3
         public static void Example()
         {
-            int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
+            int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
 
             var firstNumbersLessThan6 = numbers.TakeWhile(n => n < 6);
 

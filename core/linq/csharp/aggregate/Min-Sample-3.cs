@@ -24,7 +24,7 @@ namespace Aggregate
                 from p in products
                 group p by p.Category
                 into g
-                select new {CategoryName = g.Key, CheapestPrice = g.Min(p => p.UnitPrice)};
+                select new { CategoryName = g.Key, CheapestPrice = g.Min(p => p.UnitPrice) };
             foreach (var category in categories)
             {
                 Console.WriteLine(
@@ -48,7 +48,7 @@ namespace Aggregate
 
             var categories =
                 products.GroupBy(p => p.Category)
-                    .Select(g => new {CategoryName = g.Key, CheapestPrice = g.Min(p => p.UnitPrice)});
+                    .Select(g => new { CategoryName = g.Key, CheapestPrice = g.Min(p => p.UnitPrice) });
             foreach (var category in categories)
             {
                 Console.WriteLine(

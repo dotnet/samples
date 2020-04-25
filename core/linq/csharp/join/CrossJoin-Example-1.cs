@@ -71,7 +71,7 @@ namespace Join
             var q =
                 from c in categories
                 join p in products on c equals p.Category
-                select new {Category = c, p.ProductName};
+                select new { Category = c, p.ProductName };
 
             foreach (var v in q)
             {
@@ -141,7 +141,7 @@ namespace Join
 
             List<Product> products = Data.Products;
 
-            var q = categories.Join(products, c => c, p => p.Category, (c, p) => new {Category = c, p.ProductName});
+            var q = categories.Join(products, c => c, p => p.Category, (c, p) => new { Category = c, p.ProductName });
 
             foreach (var v in q)
             {
