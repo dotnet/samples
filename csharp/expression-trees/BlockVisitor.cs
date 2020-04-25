@@ -26,10 +26,10 @@ namespace ExpressionVisitor
             }
 
             Console.WriteLine($"{prefix}Block Statements:");
-            foreach(var statement in node.Expressions)
+            foreach (var statement in node.Expressions)
             {
                 var statementVisitor = Visitor.CreateFromExpression(statement);
-                statementVisitor.Visit(prefix+"\t");
+                statementVisitor.Visit(prefix + "\t");
             }
         }
     }

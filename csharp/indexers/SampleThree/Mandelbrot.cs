@@ -9,7 +9,7 @@
             this.maxIterations = maxIterations;
         }
 
-        public int this [double x, double y]
+        public int this[double x, double y]
         {
             get
             {
@@ -17,7 +17,7 @@
                 var x0 = x;
                 var y0 = y;
 
-                while ((x*x + y * y < 4) &&
+                while ((x * x + y * y < 4) &&
                     (iterations < maxIterations))
                 {
                     var newX = x * x - y * y + x0;

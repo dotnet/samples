@@ -11,7 +11,7 @@ namespace Quantifier
         //There is a word in the list that contains 'ei': True
         public static void Example()
         {
-            string[] words = {"believe", "relief", "receipt", "field"};
+            string[] words = { "believe", "relief", "receipt", "field" };
 
             bool iAfterE = words.Any(w => w.Contains("ei"));
 

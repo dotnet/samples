@@ -46,7 +46,7 @@ namespace SetOperators
         {
             List<Product> products = Data.Products;
 
-            var categoryNames = products.Select(p=> p.Category).Distinct();
+            var categoryNames = products.Select(p => p.Category).Distinct();
 
             Console.WriteLine("Category names:");
             foreach (var n in categoryNames)

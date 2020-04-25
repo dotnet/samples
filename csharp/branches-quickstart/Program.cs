@@ -72,7 +72,7 @@ namespace BranchesAndLoops
                 counter++;
             } while (counter < 10);
 
-            for(int index = 0; index < 10; index++)
+            for (int index = 0; index < 10; index++)
             {
                 Console.WriteLine($"Hello World! The index is {index}");
             }

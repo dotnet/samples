@@ -18,22 +18,22 @@ namespace ExpressionTreeSamples
             var func = (Func<int>)executableFunc.Compile();
             var answer = func();
             Console.WriteLine(answer);
-       }
+        }
 
-       private static Expression ReplaceNodes(Expression original)
-       {
-           if (original.NodeType == ExpressionType.Constant)
-           {
-               return Expression.Multiply(original, Expression.Constant(10));
-           }
-           else if (original.NodeType == ExpressionType.Add)
-           {
-               var binaryExpression = (BinaryExpression)original;
-               return Expression.Add(
-                   ReplaceNodes(binaryExpression.Left),
-                   ReplaceNodes(binaryExpression.Right));
-           }
-           return original;
-       }
+        private static Expression ReplaceNodes(Expression original)
+        {
+            if (original.NodeType == ExpressionType.Constant)
+            {
+                return Expression.Multiply(original, Expression.Constant(10));
+            }
+            else if (original.NodeType == ExpressionType.Add)
+            {
+                var binaryExpression = (BinaryExpression)original;
+                return Expression.Add(
+                    ReplaceNodes(binaryExpression.Left),
+                    ReplaceNodes(binaryExpression.Right));
+            }
+            return original;
+        }
     }
 }
