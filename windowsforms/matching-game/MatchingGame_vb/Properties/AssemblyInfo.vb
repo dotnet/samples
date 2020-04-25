@@ -1,4 +1,4 @@
-Option Explicit Off
+﻿Option Explicit Off
 Option Infer On
 Option Strict Off
 Imports System.Reflection

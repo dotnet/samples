@@ -36,8 +36,8 @@ namespace System.Linq
         }
 
         public static Task<TResult> SelectMany<TSource, TCollection, TResult>(
-            this Task<TSource> source, 
-            Func<TSource, Task<TCollection>> collectionSelector, 
+            this Task<TSource> source,
+            Func<TSource, Task<TCollection>> collectionSelector,
             Func<TSource, TCollection, TResult> resultSelector)
         {
             // Validate arguments
@@ -80,10 +80,10 @@ namespace System.Linq
             Join(outer, inner, outerKeySelector, innerKeySelector, resultSelector, EqualityComparer<TKey>.Default);
 
         public static Task<TResult> Join<TOuter, TInner, TKey, TResult>(
-            this Task<TOuter> outer, Task<TInner> inner, 
-            Func<TOuter, TKey> outerKeySelector, 
-            Func<TInner, TKey> innerKeySelector, 
-            Func<TOuter, TInner, TResult> resultSelector, 
+            this Task<TOuter> outer, Task<TInner> inner,
+            Func<TOuter, TKey> outerKeySelector,
+            Func<TInner, TKey> innerKeySelector,
+            Func<TOuter, TInner, TResult> resultSelector,
             IEqualityComparer<TKey> comparer)
         {
             // Validate arguments
@@ -128,10 +128,10 @@ namespace System.Linq
             GroupJoin(outer, inner, outerKeySelector, innerKeySelector, resultSelector, EqualityComparer<TKey>.Default);
 
         public static Task<TResult> GroupJoin<TOuter, TInner, TKey, TResult>(
-            this Task<TOuter> outer, Task<TInner> inner, 
-            Func<TOuter, TKey> outerKeySelector, 
+            this Task<TOuter> outer, Task<TInner> inner,
+            Func<TOuter, TKey> outerKeySelector,
             Func<TInner, TKey> innerKeySelector,
-            Func<TOuter, Task<TInner>, TResult> resultSelector, 
+            Func<TOuter, Task<TInner>, TResult> resultSelector,
             IEqualityComparer<TKey> comparer)
         {
             // Validate arguments
@@ -181,14 +181,14 @@ namespace System.Linq
                 var result = t.Result;
                 var key = keySelector(result);
                 var element = elementSelector(result);
-                return (IGrouping<TKey,TElement>)new OneElementGrouping<TKey,TElement> { Key = key, Element = element };
+                return (IGrouping<TKey, TElement>)new OneElementGrouping<TKey, TElement> { Key = key, Element = element };
             }, TaskContinuationOptions.NotOnCanceled);
         }
 
         /// <summary>Represents a grouping of one element.</summary>
         /// <typeparam name="TKey">The type of the key for the element.</typeparam>
         /// <typeparam name="TElement">The type of the element.</typeparam>
-        private class OneElementGrouping<TKey,TElement> : IGrouping<TKey, TElement>
+        private class OneElementGrouping<TKey, TElement> : IGrouping<TKey, TElement>
         {
             public TKey Key { get; internal set; }
             internal TElement Element { get; set; }

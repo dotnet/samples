@@ -48,7 +48,7 @@ namespace System.Net.NetworkInformation
             if (smtpClient == null) throw new ArgumentNullException(nameof(smtpClient));
 
             // Create a TaskCompletionSource to represent the operation
-             var tcs = new TaskCompletionSource<object>(userToken);
+            var tcs = new TaskCompletionSource<object>(userToken);
 
             // Register a handler that will transfer completion results to the TCS Task
             SendCompletedEventHandler handler = null;
@@ -61,7 +61,7 @@ namespace System.Net.NetworkInformation
             {
                 sendAsync(tcs);
             }
-            catch(Exception exc)
+            catch (Exception exc)
             {
                 smtpClient.SendCompleted -= handler;
                 tcs.TrySetException(exc);

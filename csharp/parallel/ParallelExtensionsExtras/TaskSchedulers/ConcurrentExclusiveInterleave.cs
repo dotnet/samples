@@ -45,18 +45,21 @@ namespace System.Threading.Tasks.Schedulers
         private readonly bool _exclusiveProcessingIncludesChildren;
 
         /// <summary>Initialies the ConcurrentExclusiveInterleave.</summary>
-        public ConcurrentExclusiveInterleave() : 
-            this(TaskScheduler.Current, false) {}
+        public ConcurrentExclusiveInterleave() :
+            this(TaskScheduler.Current, false)
+        { }
 
         /// <summary>Initialies the ConcurrentExclusiveInterleave.</summary>
         /// <param name="exclusiveProcessingIncludesChildren">Whether the exclusive processing of a task should include all of its children as well.</param>
-        public ConcurrentExclusiveInterleave(bool exclusiveProcessingIncludesChildren) : 
-            this(TaskScheduler.Current, exclusiveProcessingIncludesChildren) {}
+        public ConcurrentExclusiveInterleave(bool exclusiveProcessingIncludesChildren) :
+            this(TaskScheduler.Current, exclusiveProcessingIncludesChildren)
+        { }
 
         /// <summary>Initialies the ConcurrentExclusiveInterleave.</summary>
         /// <param name="targetScheduler">The target scheduler on which this interleave should execute.</param>
         public ConcurrentExclusiveInterleave(TaskScheduler targetScheduler) :
-            this(targetScheduler, false) {}
+            this(targetScheduler, false)
+        { }
 
         /// <summary>Initialies the ConcurrentExclusiveInterleave.</summary>
         /// <param name="targetScheduler">The target scheduler on which this interleave should execute.</param>
@@ -243,7 +246,7 @@ namespace System.Threading.Tasks.Schedulers
 
             /// <summary>Executes a task on this scheduler.</summary>
             /// <param name="task">The task to be executed.</param>
-            internal void ExecuteTask(Task task) 
+            internal void ExecuteTask(Task task)
             {
                 var processingTaskOnCurrentThread = _processingTaskOnCurrentThread.Value;
                 if (!processingTaskOnCurrentThread) _processingTaskOnCurrentThread.Value = true;
