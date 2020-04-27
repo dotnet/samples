@@ -12,7 +12,7 @@ description: "A .NET Core console application that demonstrates some of the ways
 
 # .NET Core parallel programming with PLINQ
 
-The sample source code is a .NET Core console application written in C#, that demonstrates some of the ways PLINQ query execution may be controlled and configured.
+The sample source code is a .NET Core Console application written in C#, that demonstrates some of the ways PLINQ query execution may be controlled and configured.
 
 ## Sample prerequisites
 

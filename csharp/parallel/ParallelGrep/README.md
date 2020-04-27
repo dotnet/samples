@@ -12,7 +12,7 @@ description: "A .NET Core console application that implements grep functionality
 
 # .NET Core parallel grep sample
 
-The sample source code is a .NET Core console application written in C#, that implements ["grep"](https://en.wikipedia.org/wiki/Grep) functionality across a file system using PLINQ.
+The sample source code is a .NET Core Console application written in C#, that implements ["grep"](https://en.wikipedia.org/wiki/Grep) functionality across a file system using PLINQ.
 
 ## Sample prerequisites
 

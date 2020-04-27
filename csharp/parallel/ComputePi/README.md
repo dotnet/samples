@@ -12,7 +12,7 @@ description: "A .NET Core console application that estimates the value of PI usi
 
 # .NET Core parallel computation of PI
 
-The sample source code is a .NET Core console application written in C#, that estimates the value of PI using a variety of both serial and parallel implementations. The sample demonstrates elapsed time comparisons between serial execution and parallel functional equivalents. The parallel implementations make use of PLINQ and the `Parallel` class.
+The sample source code is a .NET Core Console application written in C#, that estimates the value of PI using a variety of both serial and parallel implementations. The sample demonstrates elapsed time comparisons between serial execution and parallel functional equivalents. The parallel implementations make use of PLINQ and the `Parallel` class.
 
 ## Sample prerequisites
 
