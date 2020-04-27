@@ -13,7 +13,7 @@ description: "A .NET Core WPF application that demonstrates AI algorithms using 
 
 # .NET Core parallel programming with PLINQ
 
-The sample source code is a .NET Core WPF application written in C#, that demonstrates AI algorithms using minimax with alpha-beta pruning, and the parallel AI (light player) uses Tasks and CancellationTokens to achieve speedup via parallelism.
+The sample source code is a .NET Core WPF application written in C#, that demonstrates AI algorithms using minimax with alpha-beta pruning, and the parallel AI (light player) uses Tasks and CancellationTokens to achieve speedup via parallelism. For more information, see [.NET Core 3 for Windows Desktop](https://devblogs.microsoft.com/dotnet/net-core-3-for-windows-desktop/).
 
 ## Demo
 
