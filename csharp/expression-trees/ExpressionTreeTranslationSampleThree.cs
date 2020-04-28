@@ -27,7 +27,7 @@ namespace ExpressionTreeSamples
             Console.WriteLine("Rearranging the order of operations");
             theSum = Aggregate(sum);
             Console.WriteLine(theSum);
-       }
+        }
 
         private static int Aggregate(Expression exp)
         {

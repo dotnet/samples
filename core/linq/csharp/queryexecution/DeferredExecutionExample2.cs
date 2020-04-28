@@ -32,7 +32,7 @@ namespace QueryExecution
         {
             // Deferred execution lets us define a query once
             // and then reuse it later in various ways.
-            int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
+            int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
             var lowNumbers =
                 from num in numbers
                 where num <= 3
@@ -47,7 +47,7 @@ namespace QueryExecution
             // Query the original query.
             var lowEvenNumbers =
                 from num in lowNumbers
-                where num%2 == 0
+                where num % 2 == 0
                 select num;
 
             Console.WriteLine("Run lowEvenNumbers query:");
@@ -99,7 +99,7 @@ namespace QueryExecution
         {
             // Deferred execution lets us define a query once
             // and then reuse it later in various ways.
-            int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
+            int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
             var lowNumbers = numbers.Where(num => num <= 3);
 
             Console.WriteLine("First run numbers <= 3:");
@@ -109,7 +109,7 @@ namespace QueryExecution
             }
 
             // Query the original query.
-            var lowEvenNumbers = lowNumbers.Where(num => num%2 == 0);
+            var lowEvenNumbers = lowNumbers.Where(num => num % 2 == 0);
 
             Console.WriteLine("Run lowEvenNumbers query:");
             foreach (int n in lowEvenNumbers)

@@ -17,7 +17,7 @@ namespace ExpressionVisitor
         public ExpressionType NodeType => this.node.NodeType;
         public static Visitor CreateFromExpression(Expression node)
         {
-            switch(node.NodeType)
+            switch (node.NodeType)
             {
                 case ExpressionType.Constant:
                     return new ConstantVisitor((ConstantExpression)node);
