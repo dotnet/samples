@@ -12,7 +12,7 @@ description: "A .NET Core console application that uses Task to parallelize the 
 
 # .NET Core parallel wavefront algorithm sample
 
-The sample source code is a .NET Core console application written in C#, that uses `Task` to parallelize a dynamic programming problem. The dynamic programming problem is computing the ["edit distance"](https://en.wikipedia.org/wiki/Edit_distance) between two strings.
+The sample source code is a .NET Core Console application written in C#, that uses `Task` to parallelize a dynamic programming problem. The dynamic programming problem is computing the ["edit distance"](https://en.wikipedia.org/wiki/Edit_distance) between two strings.
 
 ## Sample prerequisites
 
