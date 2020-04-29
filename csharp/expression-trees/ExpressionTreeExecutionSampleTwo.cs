@@ -31,10 +31,12 @@ namespace ExpressionTreeSamples
             var del = CreateBoundFunc();
             Console.WriteLine(del(5));
 
-            try {
+            try
+            {
                 var del2 = CreateBoundResource();
                 Console.WriteLine(del2(5));
-            } catch (ObjectDisposedException e)
+            }
+            catch (ObjectDisposedException e)
             {
                 Console.WriteLine(e.ToString());
             }

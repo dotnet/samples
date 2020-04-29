@@ -106,9 +106,9 @@ namespace Projection
             List<Customer> customers = Data.Customers;
 
             var orders =
-                customers.SelectMany(c => c.Orders, (c, o) => new {c, o})
+                customers.SelectMany(c => c.Orders, (c, o) => new { c, o })
                     .Where(t => t.o.Total < 100.00M)
-                    .Select(t => new {t.c.CustomerId, t.o.OrderId, t.o.Total});
+                    .Select(t => new { t.c.CustomerId, t.o.OrderId, t.o.Total });
             foreach (var order in orders)
             {
                 Console.WriteLine($"CustomerId={order.CustomerId} OrderId={order.OrderId} Total={order.Total:C}");

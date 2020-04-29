@@ -36,7 +36,7 @@ namespace Projection
         {
             string[] words = { "aPPLE", "BlUeBeRrY", "cHeRry" };
 
-            var upperLowerWords = words.Select(w => new {Upper = w.ToUpper(), Lower = w.ToLower()});
+            var upperLowerWords = words.Select(w => new { Upper = w.ToUpper(), Lower = w.ToLower() });
 
             foreach (var ul in upperLowerWords)
             {

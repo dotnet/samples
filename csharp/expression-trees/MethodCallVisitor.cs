@@ -30,7 +30,7 @@ namespace ExpressionVisitor
             Console.WriteLine($"{prefix}The return type is {methodInfo.ReturnType}");
             // There is more here, like generic arguments, and so on.
             Console.WriteLine($"{prefix}The Arguments are:");
-            foreach(var arg in node.Arguments)
+            foreach (var arg in node.Arguments)
             {
                 var argVisitor = Visitor.CreateFromExpression(arg);
                 argVisitor.Visit(prefix + "\t");

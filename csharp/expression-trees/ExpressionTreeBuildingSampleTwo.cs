@@ -63,6 +63,6 @@ namespace ExpressionTreeSamples
             Console.WriteLine(func(5));
             var visitor = Visitor.CreateFromExpression(factorial);
             visitor.Visit("");
-       }
+        }
     }
 }

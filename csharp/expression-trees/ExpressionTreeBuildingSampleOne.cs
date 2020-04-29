@@ -14,12 +14,12 @@ namespace ExpressionTreeSamples
 
         public override void Run()
         {
-             var lambda = Expression.Lambda(
-                Expression.Add(
-                    Expression.Constant(1, typeof(int)),
-                    Expression.Constant(2, typeof(int))
-                )
-            );
+            var lambda = Expression.Lambda(
+               Expression.Add(
+                   Expression.Constant(1, typeof(int)),
+                   Expression.Constant(2, typeof(int))
+               )
+           );
 
             var xParameter = Expression.Parameter(typeof(double), "x");
             var yParameter = Expression.Parameter(typeof(double), "y");
@@ -38,6 +38,6 @@ namespace ExpressionTreeSamples
 
             var visitor = Visitor.CreateFromExpression(distanceLambda);
             visitor.Visit("");
-       }
+        }
     }
 }

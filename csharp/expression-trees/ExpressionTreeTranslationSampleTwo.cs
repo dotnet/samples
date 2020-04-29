@@ -29,6 +29,6 @@ namespace ExpressionTreeSamples
 
             var theSum = aggregate(sum);
             Console.WriteLine(theSum);
-       }
+        }
     }
 }

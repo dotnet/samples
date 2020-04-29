@@ -50,9 +50,9 @@ namespace Projection
 
             var orders =
                 customers.Where(c => c.Region == "WA")
-                    .SelectMany(c => c.Orders, (c, o) => new {c, o})
+                    .SelectMany(c => c.Orders, (c, o) => new { c, o })
                     .Where(t => t.o.OrderDate >= cutoffDate)
-                    .Select(t => new {t.c.CustomerId, t.o.OrderId});
+                    .Select(t => new { t.c.CustomerId, t.o.OrderId });
             foreach (var order in orders)
             {
                 Console.WriteLine($"CustomerId={order.CustomerId} OrderId={order.OrderId}");
