@@ -22,7 +22,7 @@ namespace QueryExecution
         public static void QuerySyntaxExample()
         {
             // Queries are not executed until you enumerate over them.
-            int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
+            int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
 
             int i = 0;
             var simpleQuery =
@@ -56,7 +56,7 @@ namespace QueryExecution
         public static void MethodSyntaxExample()
         {
             // Queries are not executed until you enumerate over them.
-            int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
+            int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
 
             int i = 0;
             var simpleQuery = numbers.Select(num => ++i);

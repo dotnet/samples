@@ -73,7 +73,7 @@ namespace Quantifier
                 group prod by prod.Category
                 into prodGroup
                 where prodGroup.All(p => p.UnitsInStock > 0)
-                select new {Category = prodGroup.Key, Products = prodGroup};
+                select new { Category = prodGroup.Key, Products = prodGroup };
 
             foreach (var group in productGroups)
             {
@@ -151,7 +151,7 @@ namespace Quantifier
             var productGroups =
                 products.GroupBy(prod => prod.Category)
                     .Where(prodGroup => prodGroup.All(p => p.UnitsInStock > 0))
-                    .Select(prodGroup => new {Category = prodGroup.Key, Products = prodGroup});
+                    .Select(prodGroup => new { Category = prodGroup.Key, Products = prodGroup });
 
             foreach (var group in productGroups)
             {

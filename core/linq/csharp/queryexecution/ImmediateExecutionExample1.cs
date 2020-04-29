@@ -23,7 +23,7 @@ namespace QueryExecution
         {
             // Methods like ToList(), Max(), and Count() cause the query to be
             // executed immediately.
-            int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
+            int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
 
             int i = 0;
             var immediateQuery = (
@@ -57,7 +57,7 @@ namespace QueryExecution
         {
             // Methods like ToList(), Max(), and Count() cause the query to be
             // executed immediately.
-            int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
+            int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
 
             int i = 0;
             var immediateQuery = numbers.Select(num => ++i).ToList();

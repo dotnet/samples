@@ -62,9 +62,9 @@ namespace Projection
             List<Customer> customers = Data.Customers;
 
             var orders =
-                customers.SelectMany(c => c.Orders, (c, o) => new {c, o})
+                customers.SelectMany(c => c.Orders, (c, o) => new { c, o })
                     .Where(t => t.o.OrderDate >= new DateTime(2015, 5, 1))
-                    .Select(t => new {t.c.CustomerId, t.o.OrderId, t.o.OrderDate});
+                    .Select(t => new { t.c.CustomerId, t.o.OrderId, t.o.OrderDate });
             foreach (var order in orders)
             {
                 Console.WriteLine($"CustomerId={order.CustomerId} OrderId={order.OrderId} OrderDate={order.OrderDate:yyyy-MM-dd}");

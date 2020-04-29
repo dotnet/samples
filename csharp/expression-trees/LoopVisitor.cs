@@ -20,7 +20,7 @@ namespace ExpressionVisitor
 
             Console.WriteLine($"{prefix}Body is:");
             var bodyVisitor = Visitor.CreateFromExpression(node.Body);
-            bodyVisitor.Visit(prefix+"\t");
+            bodyVisitor.Visit(prefix + "\t");
         }
     }
 }

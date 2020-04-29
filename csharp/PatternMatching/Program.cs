@@ -30,7 +30,7 @@ namespace PatternMatching
             WriteLine(wrong);
         }
 
-#region VarCaseExpression
+        #region VarCaseExpression
         static object CreateShape(string shapeDescription)
         {
             switch (shapeDescription)
@@ -51,6 +51,6 @@ namespace PatternMatching
                     return "invalid shape description";
             }
         }
-#endregion
+        #endregion
     }
 }

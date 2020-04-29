@@ -48,7 +48,7 @@ namespace Restriction
         {
             List<Product> products = Data.Products;
 
-            var expensiveInStockProducts = products.Where(prod=>prod.UnitsInStock > 0 && prod.UnitPrice > 50.00M);
+            var expensiveInStockProducts = products.Where(prod => prod.UnitsInStock > 0 && prod.UnitPrice > 50.00M);
 
             Console.WriteLine("In-stock products that cost more than 50.00:");
             foreach (var product in expensiveInStockProducts)

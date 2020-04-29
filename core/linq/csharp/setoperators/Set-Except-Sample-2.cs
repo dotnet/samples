@@ -23,13 +23,13 @@ namespace SetOperators
         //   S
         //   R
         //   Z
-       public static void MethodSyntaxExample()
+        public static void MethodSyntaxExample()
         {
             List<Product> products = Data.Products;
             List<Customer> customers = Data.Customers;
 
-            var productFirstChars = products.Select(p=> p.ProductName[0]);
-            var customerFirstChars = customers.Select(c=> c.CustomerName[0]);
+            var productFirstChars = products.Select(p => p.ProductName[0]);
+            var customerFirstChars = customers.Select(c => c.CustomerName[0]);
 
             var productOnlyFirstChars = productFirstChars.Except(customerFirstChars);
 

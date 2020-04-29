@@ -23,7 +23,7 @@ namespace IndexersSamples.SampleOne
 
                 // This stays as random stuff:
                 var generator = new Random();
-                for(int i=0; i < length; i++)
+                for (int i = 0; i < length; i++)
                 {
                     var m = new Measurements
                     {
