@@ -10,7 +10,7 @@ Demonstrates how to implement and utilize the `ComWrappers` API by manually impl
 
 This is already fully supported by the built-in COM interop system, but this demonstrates a way for users to provide their own implementation.
 
-**Note** There are two sections of code commented as `WORKAROUND`. These sections are needed to trick the existing `WebBrowser.ObjectForScripting` API into accepting a .NET object but receiving a `ComWrappers` generated `IDispatch` implementation.
+**Note** There are two sections of code commented as `WORKAROUND`. These sections are needed to trick the `WebBrowser.ObjectForScripting` API into accepting a .NET object but receiving a `ComWrappers` generated `IDispatch` implementation instead.
 
 Build and Run
 -------------

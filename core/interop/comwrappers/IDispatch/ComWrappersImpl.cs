@@ -12,7 +12,7 @@ internal unsafe class ComWrappersImpl : ComWrappers
 {
     private static readonly ComInterfaceEntry* wrapperEntry;
 
-    // This class only exposed IDispatch and the vtable is always the same.
+    // This class only exposes IDispatch and the vtable is always the same.
     // The below isn't the most efficient but it is reasonable for prototyping.
     // If additional interfaces want to be exposed, add them here.
     static ComWrappersImpl()

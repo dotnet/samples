@@ -51,7 +51,6 @@ $@"<button onClick=""dispatch()"">Send to .NET!</button>
             {
                 Debug.WriteLine($"{nameof(Func3)}({msg})");
                 this.form.textBox1.Text = msg;
-                
             }
         }
     }

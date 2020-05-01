@@ -116,10 +116,11 @@ public class AnyObjectProxy : ComWrappersImpl.IDispatch,
 
         if (result != null)
         {
-            // Lots of special cases need should be addressed here.
+            // Lots of special cases should be addressed here.
             //  * Arrays, IEnumerable
             //  * IDispatch/IUnknown instances
-            //  * .NET object should be wrapped by ComWrappers
+            //  * .NET object could be wrapped by ComWrappers
+            //  * .NET objects that are already COM objects can be safely passed on
             //  * etc
             Marshal.GetNativeVariantForObject(result, VarResult);
         }
@@ -132,7 +133,7 @@ public class AnyObjectProxy : ComWrappersImpl.IDispatch,
             return Array.Empty<object>();
         }
 
-        // Lots of special cases need should be addressed here.
+        // Lots of special cases should be addressed here.
         //  * Arrays
         //  * IDispatch/IUnknown instances
         //  * .NET objects passed back as arguments
@@ -142,14 +143,14 @@ public class AnyObjectProxy : ComWrappersImpl.IDispatch,
 
     /* WORKAROUND for WinForms WebBrowser control API */
     [ThreadStatic] bool inGetInterface = false; // Needed since the ComWrappers API calls this prior
-                                                // to callling user defined interfaces.
+                                                // to calling user defined interfaces.
     CustomQueryInterfaceResult ICustomQueryInterface.GetInterface(ref Guid iid, out IntPtr ppv)
     {
         Debug.Assert(this.wrapperPtr != IntPtr.Zero);
         ppv = IntPtr.Zero;
 
-        // Return the ComWrappers IDispatch implementation instead
-        // of the one provided by the runtime.
+        // Return the ComWrappers IDispatch implementation
+        // instead of the one provided by the runtime.
         if (!this.inGetInterface
             && iid == typeof(ComWrappersImpl.IDispatch).GUID)
         {
