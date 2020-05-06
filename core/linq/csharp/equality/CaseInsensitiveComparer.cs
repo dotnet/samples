@@ -10,7 +10,7 @@ namespace Equality
     {
         bool IEqualityComparer<string>.Equals(string x, string y)
         {
-             return string.Equals(x, y, StringComparison.OrdinalIgnoreCase);
+            return string.Equals(x, y, StringComparison.OrdinalIgnoreCase);
         }
 
         int IEqualityComparer<string>.GetHashCode(string obj)

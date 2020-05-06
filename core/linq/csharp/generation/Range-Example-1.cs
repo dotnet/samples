@@ -46,7 +46,7 @@ namespace Generation
         public static void MethodSyntaxExample()
         {
             var numbers =
-                Enumerable.Range(100, 10).Select(n => new {Number = n, OddEven = n%2 == 1 ? "odd" : "even"});
+                Enumerable.Range(100, 10).Select(n => new { Number = n, OddEven = n % 2 == 1 ? "odd" : "even" });
 
             foreach (var n in numbers)
             {
