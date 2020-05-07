@@ -25,8 +25,8 @@ namespace CustomSequence
         // Dot product: 109
         public static void Example()
         {
-            int[] vectorA = {0, 2, 4, 5, 6};
-            int[] vectorB = {1, 3, 5, 7, 8};
+            int[] vectorA = { 0, 2, 4, 5, 6 };
+            int[] vectorB = { 1, 3, 5, 7, 8 };
 
             int dotProduct = vectorA.Combine(vectorB, (a, b) => a * b).Sum();
 

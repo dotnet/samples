@@ -10,7 +10,7 @@ namespace Aggregate
         // There are 3 unique factors of 300.
         public static void MethodSyntaxExample()
         {
-            int[] factorsOf300 = {2, 2, 3, 5, 5};
+            int[] factorsOf300 = { 2, 2, 3, 5, 5 };
 
             int uniqueFactors = factorsOf300.Distinct().Count();
 
@@ -22,7 +22,7 @@ namespace Aggregate
         // There are 3 unique factors of 300.
         public static void QuerySyntaxExample()
         {
-            int[] factorsOf300 = {2, 2, 3, 5, 5};
+            int[] factorsOf300 = { 2, 2, 3, 5, 5 };
 
             int uniqueFactors =
                 (from f in factorsOf300 select f).Distinct().Count();

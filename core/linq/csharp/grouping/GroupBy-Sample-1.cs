@@ -37,7 +37,7 @@ namespace Grouping
                 Console.WriteLine("Numbers with a remainder of {0} when divided by 5:", g.Remainder);
                 foreach (var n in g.Numbers)
                 {
-                  Console.WriteLine(n);
+                    Console.WriteLine(n);
                 }
             }
         }
@@ -72,7 +72,7 @@ namespace Grouping
                 Console.WriteLine("Numbers with a remainder of {0} when divided by 5:", g.Remainder);
                 foreach (var n in g.Numbers)
                 {
-                Console.WriteLine(n);
+                    Console.WriteLine(n);
                 }
             }
         }

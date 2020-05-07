@@ -56,7 +56,7 @@ namespace Aggregate
 
             var categories =
                 products.GroupBy(prod => prod.Category)
-                    .Select(prodGroup => new {prodGroup, maxPrice = prodGroup.Max(p => p.UnitPrice)})
+                    .Select(prodGroup => new { prodGroup, maxPrice = prodGroup.Max(p => p.UnitPrice) })
                     .Select(@t => new
                     {
                         CategoryName = @t.prodGroup.Key,

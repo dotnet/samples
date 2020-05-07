@@ -24,7 +24,7 @@ namespace Aggregate
                 from prod in products
                 group prod by prod.Category
                 into prodGroup
-                select new {CategoryName = prodGroup.Key, ProductCount = prodGroup.Count()};
+                select new { CategoryName = prodGroup.Key, ProductCount = prodGroup.Count() };
 
             foreach (var item in categoryCounts)
             {
@@ -48,7 +48,7 @@ namespace Aggregate
 
             var categoryCounts =
                 products.GroupBy(prod => prod.Category)
-                    .Select(prodGroup => new {CategoryName = prodGroup.Key, ProductCount = prodGroup.Count()});
+                    .Select(prodGroup => new { CategoryName = prodGroup.Key, ProductCount = prodGroup.Count() });
 
             foreach (var item in categoryCounts)
             {

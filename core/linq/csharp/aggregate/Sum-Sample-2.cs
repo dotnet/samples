@@ -10,7 +10,7 @@ namespace Aggregate
         // There are a total of 20 characters in these words.
         public static void Example()
         {
-            string[] words = {"cherry", "apple", "blueberry"};
+            string[] words = { "cherry", "apple", "blueberry" };
 
             double totalChars = words.Sum(w => w.Length);
 

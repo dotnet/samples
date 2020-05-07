@@ -63,7 +63,7 @@ namespace Aggregate
             var categories =
                 products.GroupBy(prod => prod.Category)
                     .Select(
-                        prodGroup => new {CategoryName = prodGroup.Key, AveragePrice = prodGroup.Average(p => p.UnitPrice)});
+                        prodGroup => new { CategoryName = prodGroup.Key, AveragePrice = prodGroup.Average(p => p.UnitPrice) });
 
             foreach (var category in categories)
             {

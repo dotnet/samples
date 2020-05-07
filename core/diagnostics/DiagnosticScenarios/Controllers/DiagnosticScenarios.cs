@@ -21,7 +21,8 @@ namespace testwebapi.Controllers
         [Route("deadlock/")]
         public ActionResult<string> deadlock()
         {
-            (new System.Threading.Thread(() => {
+            (new System.Threading.Thread(() =>
+            {
                 DeadlockFunc();
             })).Start();
 
@@ -30,7 +31,8 @@ namespace testwebapi.Controllers
             var threads = new Thread[300];
             for (int i = 0; i < 300; i++)
             {
-                (threads[i] = new Thread(() => {
+                (threads[i] = new Thread(() =>
+                {
                     lock (o1) { Thread.Sleep(100); }
                 })).Start();
             }
@@ -47,7 +49,8 @@ namespace testwebapi.Controllers
         {
             lock (o1)
             {
-                (new Thread(() => {
+                (new Thread(() =>
+                {
                     lock (o2) { Monitor.Enter(o1); }
                 })).Start();
 
