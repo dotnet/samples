@@ -75,7 +75,7 @@ namespace Join
             var q =
                 from c in categories
                 join p in products on c equals p.Category into ps
-                select new {Category = c, Products = ps};
+                select new { Category = c, Products = ps };
 
             foreach (var v in q)
             {
@@ -153,7 +153,7 @@ namespace Join
 
             List<Product> products = Data.Products;
 
-            var q = categories.GroupJoin(products, c => c, p => p.Category, (c, ps) => new {Category = c, Products = ps});
+            var q = categories.GroupJoin(products, c => c, p => p.Category, (c, ps) => new { Category = c, Products = ps });
 
             foreach (var v in q)
             {

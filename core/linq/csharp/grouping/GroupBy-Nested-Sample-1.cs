@@ -14,9 +14,9 @@ namespace Grouping
 
             var customerOrderGroups = from c in customers
                                       select new
-                                        {
-                                            c.CustomerName,
-                                            YearGroups =
+                                      {
+                                          c.CustomerName,
+                                          YearGroups =
                                                 from o in c.Orders
                                                 group o by o.OrderDate.Year into yg
                                                 select new
@@ -31,7 +31,7 @@ namespace Grouping
                                                             Orders = mg
                                                         }
                                                 }
-                                        };
+                                      };
 
             foreach (var c in customerOrderGroups)
             {

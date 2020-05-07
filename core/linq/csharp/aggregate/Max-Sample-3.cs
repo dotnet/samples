@@ -24,7 +24,7 @@ namespace Aggregate
                 from prod in products
                 group prod by prod.Category
                 into prodGroup
-                select new {CategoryName = prodGroup.Key, MostExpensivePrice = prodGroup.Max(p => p.UnitPrice)};
+                select new { CategoryName = prodGroup.Key, MostExpensivePrice = prodGroup.Max(p => p.UnitPrice) };
 
             foreach (var category in categories)
             {
@@ -51,7 +51,7 @@ namespace Aggregate
                 products.GroupBy(prod => prod.Category)
                     .Select(
                         prodGroup =>
-                            new {CategoryName = prodGroup.Key, MostExpensivePrice = prodGroup.Max(p => p.UnitPrice)});
+                            new { CategoryName = prodGroup.Key, MostExpensivePrice = prodGroup.Max(p => p.UnitPrice) });
 
             foreach (var category in categories)
             {

@@ -17,7 +17,7 @@ namespace Aggregate
             List<Customer> customers = Data.Customers;
             var orderCounts =
                 from c in customers
-                select new {Customer = c.CustomerName, OrderCount = c.Orders.Count()};
+                select new { Customer = c.CustomerName, OrderCount = c.Orders.Count() };
 
             foreach (var item in orderCounts)
             {

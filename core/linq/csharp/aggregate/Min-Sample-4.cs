@@ -50,7 +50,7 @@ namespace Aggregate
 
             var categories =
                 products.GroupBy(prod => prod.Category)
-                    .Select(prodGroup => new {prodGroup, minPrice = prodGroup.Min(p => p.UnitPrice)})
+                    .Select(prodGroup => new { prodGroup, minPrice = prodGroup.Min(p => p.UnitPrice) })
                     .Select(
                         @t =>
                             new
