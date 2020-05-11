@@ -187,15 +187,15 @@ namespace System.Threading.Algorithms
                 int upperRangeExclusive = i < procCount - 1 ? nextRangeStart + rangeSize : arr.Length;
                 tasks[rangeNum] = Task.Factory.StartNew(() =>
                 {
-                        // Phase 1: Prefix scan assigned range, and copy upper bound to intermediate partials
-                        InclusiveScanInPlaceSerial(arr, function, lowerRangeInclusive, upperRangeExclusive, 1);
+                    // Phase 1: Prefix scan assigned range, and copy upper bound to intermediate partials
+                    InclusiveScanInPlaceSerial(arr, function, lowerRangeInclusive, upperRangeExclusive, 1);
                     intermediatePartials[rangeNum] = arr[upperRangeExclusive - 1];
 
-                        // Phase 2: One thread only should prefix scan the intermediaries... done implicitly by the barrier
-                        phaseBarrier.SignalAndWait();
+                    // Phase 2: One thread only should prefix scan the intermediaries... done implicitly by the barrier
+                    phaseBarrier.SignalAndWait();
 
-                        // Phase 3: Incorporate partials
-                        if (rangeNum != 0)
+                    // Phase 3: Incorporate partials
+                    if (rangeNum != 0)
                     {
                         for (int j = lowerRangeInclusive; j < upperRangeExclusive; j++)
                         {

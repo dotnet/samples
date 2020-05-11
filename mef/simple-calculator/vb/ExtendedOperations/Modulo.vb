@@ -1,4 +1,4 @@
-Imports System.ComponentModel.Composition
+﻿Imports System.ComponentModel.Composition
 Imports MefCalculator.MefCalculatorInterfaces
 
 <Export(GetType(IOperation))>

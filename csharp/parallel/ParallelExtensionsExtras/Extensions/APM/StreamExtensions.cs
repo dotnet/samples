@@ -158,7 +158,7 @@ namespace System.IO
             byte[][] buffers = new byte[2][] { new byte[BUFFER_SIZE], new byte[BUFFER_SIZE] };
             int filledBufferNum = 0;
             Task writeTask = null;
-            
+
             // Until there's no more data to be read
             while (true)
             {
@@ -179,7 +179,7 @@ namespace System.IO
                     yield return Task.Factory.WhenAll(tasks);
                     Task.WaitAll(tasks); // propagate any exceptions that may have occurred
                 }
-                
+
                 // If no data was read, nothing more to do.
                 if (readTask.Result <= 0) break;
 

@@ -102,7 +102,7 @@ namespace System.Threading.Tasks
         {
             task.ContinueWith(t => { _ = t.Exception; },
                 CancellationToken.None,
-                TaskContinuationOptions.ExecuteSynchronously | TaskContinuationOptions.OnlyOnFaulted, 
+                TaskContinuationOptions.ExecuteSynchronously | TaskContinuationOptions.OnlyOnFaulted,
                 TaskScheduler.Default);
             return task;
         }
@@ -141,7 +141,7 @@ namespace System.Threading.Tasks
 
         /// <summary>Propagates any exceptions that occurred on the specified tasks.</summary>
         /// <param name="task">The Tassk whose exceptions are to be propagated.</param>
-        public static void PropagateExceptions(this Task [] tasks)
+        public static void PropagateExceptions(this Task[] tasks)
         {
             if (tasks == null) throw new ArgumentNullException(nameof(tasks));
             if (tasks.Any(t => t == null)) throw new ArgumentException(nameof(tasks));
@@ -256,7 +256,7 @@ namespace System.Threading.Tasks
         {
             if (task == null) throw new ArgumentNullException(nameof(task));
             task.ContinueWith(t => t.Wait(), CancellationToken.None,
-                TaskContinuationOptions.AttachedToParent | 
+                TaskContinuationOptions.AttachedToParent |
                 TaskContinuationOptions.ExecuteSynchronously, TaskScheduler.Default);
         }
         #endregion

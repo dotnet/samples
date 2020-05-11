@@ -31,7 +31,7 @@ namespace System.Threading
     /// <typeparam name="TValue">Specifies the type of the cache's values.</typeparam>
     [DebuggerTypeProxy(typeof(AsyncCache_DebugView<,>))]
     [DebuggerDisplay("Count={Count}")]
-    public class AsyncCache<TKey, TValue> : ICollection<KeyValuePair<TKey,Task<TValue>>>
+    public class AsyncCache<TKey, TValue> : ICollection<KeyValuePair<TKey, Task<TValue>>>
     {
         /// <summary>The factory to use to create tasks.</summary>
         private readonly Func<TKey, Task<TValue>> _valueFactory;
@@ -134,6 +134,7 @@ namespace System.Threading
     {
         /// <summary>Initializes the HtmlCache.</summary>
         public HtmlAsyncCache() :
-            base(uri => new WebClient().DownloadStringTask(uri)) { }
+            base(uri => new WebClient().DownloadStringTask(uri))
+        { }
     }
 }

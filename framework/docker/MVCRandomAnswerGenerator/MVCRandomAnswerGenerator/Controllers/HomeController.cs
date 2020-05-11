@@ -11,7 +11,7 @@ namespace MVCRandomAnswerGenerator.Controllers
     {
         private static List<QuestionAndAnswer> allAnswers = new List<QuestionAndAnswer>();
 
-    public ActionResult Index()
+        public ActionResult Index()
         {
             // Ask a question.
             // Return with the answer.
@@ -28,7 +28,7 @@ namespace MVCRandomAnswerGenerator.Controllers
                 Answer = AnswerGenerator.GenerateAnswer(NextQuestion)
             };
 
-            allAnswers.Insert(0,latest);
+            allAnswers.Insert(0, latest);
 
             return View(allAnswers);
         }

@@ -5,12 +5,12 @@ namespace list_quickstart
 {
     class Program
     {
-#region WorkingWithStrings
+        #region WorkingWithStrings
         static void Main(string[] args)
         {
             WorkingWithStrings();
 
-            var fibonacciNumbers = new List<int> {1, 1};
+            var fibonacciNumbers = new List<int> { 1, 1 };
 
             while (fibonacciNumbers.Count < 20)
             {
@@ -19,7 +19,7 @@ namespace list_quickstart
 
                 fibonacciNumbers.Add(previous + previous2);
             }
-            foreach(var item in fibonacciNumbers)
+            foreach (var item in fibonacciNumbers)
                 Console.WriteLine(item);
         }
 
@@ -57,6 +57,6 @@ namespace list_quickstart
                 Console.WriteLine($"Hello {name.ToUpper()}!");
             }
         }
-#endregion
+        #endregion
     }
 }

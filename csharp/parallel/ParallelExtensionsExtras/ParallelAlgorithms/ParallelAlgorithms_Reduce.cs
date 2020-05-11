@@ -59,7 +59,7 @@ namespace System.Threading.Algorithms
         /// <param name="associativeCommutativeOperation">The reduction operation.</param>
         /// <returns>The reduced value.</returns>
         public static T Reduce<T>(
-            int fromInclusive, int toExclusive, ParallelOptions parallelOptions, 
+            int fromInclusive, int toExclusive, ParallelOptions parallelOptions,
             Func<int, T> mapOperation, T seed, Func<T, T, T> associativeCommutativeOperation)
         {
             if (parallelOptions == null) throw new ArgumentNullException(nameof(parallelOptions));

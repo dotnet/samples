@@ -67,7 +67,7 @@ namespace System.Linq
 
         public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator()
         {
-            for (int i = _topNKeys.Count - 1; i>=0; i--)
+            for (int i = _topNKeys.Count - 1; i >= 0; i--)
             {
                 yield return new KeyValuePair<TKey, TValue>(_topNKeys[i], _topNValues[i]);
             }

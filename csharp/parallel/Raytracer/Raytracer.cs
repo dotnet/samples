@@ -111,7 +111,7 @@ namespace Raytracer
                 new Light(new Vector(-2,2.5,0),new Color(.5,.45,.41)),
                 new Light(new Vector(2,4.5,2), new Color(.99,.95,.8))
             };
-            
+
             return new Scene(things, lights, Camera.Create(new Vector(2.75, 2, 3.75), new Vector(-0.6, .5, 0)));
         }
 
