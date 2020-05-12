@@ -33,11 +33,11 @@ namespace System.Threading.Tasks
         {
             // Validate the task
             if (taskOrFunction == null) throw new ArgumentNullException(nameof(taskOrFunction));
-            lock(_tasks)
+            lock (_tasks)
             {
                 // If there is currently no task in flight, we'll start this one
                 if (_taskInFlight == null) StartTask_CallUnderLock(taskOrFunction);
-                    // Otherwise, just queue the task to be started later
+                // Otherwise, just queue the task to be started later
                 else _tasks.Enqueue(taskOrFunction);
             }
         }

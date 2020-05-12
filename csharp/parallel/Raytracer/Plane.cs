@@ -16,7 +16,7 @@ namespace Raytracer
         public override ISect Intersect(Ray ray)
         {
             var denom = Vector.Dot(Norm, ray.Dir);
-            return denom > 0 ? ISect.Null: new ISect(this, ray, (Vector.Dot(Norm, ray.Start) + Offset) / -denom);
+            return denom > 0 ? ISect.Null : new ISect(this, ray, (Vector.Dot(Norm, ray.Start) + Offset) / -denom);
         }
 
         public override Vector Normal(Vector pos) => Norm;

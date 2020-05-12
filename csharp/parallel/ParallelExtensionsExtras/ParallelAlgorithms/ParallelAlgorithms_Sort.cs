@@ -81,7 +81,7 @@ namespace System.Threading.Algorithms
         /// <param name="index">The index at which to start the sort, inclusive.</param>
         /// <param name="length">The number of elements to be sorted, starting at the start index.</param>
         /// <param name="comparer">The comparer used to compare two elements during the sort operation.</param>
-        public static void Sort<TKey, TValue>(TKey [] keys, TValue [] items, int index, int length, IComparer<TKey> comparer)
+        public static void Sort<TKey, TValue>(TKey[] keys, TValue[] items, int index, int length, IComparer<TKey> comparer)
         {
             if (keys == null) throw new ArgumentNullException(nameof(keys));
             if (index < 0 || length < 0) throw new ArgumentOutOfRangeException(length < 0 ? nameof(length) : nameof(index));

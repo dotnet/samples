@@ -55,7 +55,8 @@ namespace System.Threading.Tasks.Schedulers
                         }
                     }
                     finally { _remainingThreadsToShutdown.Signal(); }
-                }) { IsBackground = true }.Start();
+                })
+                { IsBackground = true }.Start();
             }
         }
 
@@ -125,7 +126,7 @@ namespace System.Threading.Tasks.Schedulers
             /// <summary>Notify that I/O completion port that new work is available.</summary>
             public void NotifyOne()
             {
-                if (!PostQueuedCompletionStatus(_handle, IntPtr.Zero, IntPtr.Zero, IntPtr.Zero)) 
+                if (!PostQueuedCompletionStatus(_handle, IntPtr.Zero, IntPtr.Zero, IntPtr.Zero))
                     throw new Win32Exception();
             }
 

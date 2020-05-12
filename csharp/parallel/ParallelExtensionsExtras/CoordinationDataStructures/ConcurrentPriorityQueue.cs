@@ -13,14 +13,14 @@ namespace System.Collections.Concurrent
     /// <typeparam name="TValue">Specifies the type of elements in the queue.</typeparam>
     [DebuggerDisplay("Count={Count}")]
     public class ConcurrentPriorityQueue<TKey, TValue> :
-        IProducerConsumerCollection<KeyValuePair<TKey,TValue>> 
+        IProducerConsumerCollection<KeyValuePair<TKey, TValue>>
         where TKey : IComparable<TKey>
     {
         private readonly object _syncLock = new object();
         private readonly MinBinaryHeap _minHeap = new MinBinaryHeap();
 
         /// <summary>Initializes a new instance of the ConcurrentPriorityQueue class.</summary>
-        public ConcurrentPriorityQueue() {}
+        public ConcurrentPriorityQueue() { }
 
         /// <summary>Initializes a new instance of the ConcurrentPriorityQueue class that contains elements copied from the specified collection.</summary>
         /// <param name="collection">The collection whose elements are copied to the new ConcurrentPriorityQueue.</param>
@@ -88,7 +88,7 @@ namespace System.Collections.Concurrent
         }
 
         /// <summary>Empties the queue.</summary>
-        public void Clear() { lock(_syncLock) _minHeap.Clear(); }
+        public void Clear() { lock (_syncLock) _minHeap.Clear(); }
 
         /// <summary>Gets whether the queue is empty.</summary>
         public bool IsEmpty => Count == 0;
@@ -209,7 +209,7 @@ namespace System.Collections.Concurrent
                 Insert(new KeyValuePair<TKey, TValue>(key, value));
 
             /// <summary>Adds an item to the heap.</summary>
-            public void Insert(KeyValuePair<TKey,TValue> entry)
+            public void Insert(KeyValuePair<TKey, TValue> entry)
             {
                 // Add the item to the list, making sure to keep track of where it was added.
                 Items.Add(entry);
@@ -223,7 +223,7 @@ namespace System.Collections.Concurrent
                 while (pos > 0)
                 {
                     // Get the next position to check
-                    int nextPos = (pos-1) / 2;
+                    int nextPos = (pos - 1) / 2;
 
                     // Extract the entry at the next position
                     var toCheck = Items[nextPos];

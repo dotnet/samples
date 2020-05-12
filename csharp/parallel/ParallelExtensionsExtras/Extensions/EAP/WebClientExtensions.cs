@@ -38,7 +38,7 @@ namespace System.Net
             {
                 webClient.DownloadDataAsync(address, tcs);
             }
-            catch(Exception exc)
+            catch (Exception exc)
             {
                 // If something goes wrong kicking off the async work,
                 // unregister the callback and cancel the created task
@@ -67,7 +67,7 @@ namespace System.Net
         {
             // Create the task to be returned
             var tcs = new TaskCompletionSource<object>(address);
-            
+
             // Setup the callback event handler
             AsyncCompletedEventHandler handler = null;
             handler = (sender, e) => EAPCommon.HandleCompletion(tcs, e, () => null, () => webClient.DownloadFileCompleted -= handler);
@@ -78,7 +78,7 @@ namespace System.Net
             {
                 webClient.DownloadFileAsync(address, fileName, tcs);
             }
-            catch(Exception exc)
+            catch (Exception exc)
             {
                 // If something goes wrong kicking off the async work,
                 // unregister the callback and cancel the created task
@@ -116,7 +116,7 @@ namespace System.Net
             {
                 webClient.DownloadStringAsync(address, tcs);
             }
-            catch(Exception exc)
+            catch (Exception exc)
             {
                 // If something goes wrong kicking off the async work,
                 // unregister the callback and cancel the created task
@@ -154,7 +154,7 @@ namespace System.Net
             {
                 webClient.OpenReadAsync(address, tcs);
             }
-            catch(Exception exc)
+            catch (Exception exc)
             {
                 // If something goes wrong kicking off the async work,
                 // unregister the callback and cancel the created task
@@ -194,14 +194,14 @@ namespace System.Net
             {
                 webClient.OpenWriteAsync(address, method, tcs);
             }
-            catch(Exception exc)
+            catch (Exception exc)
             {
                 // If something goes wrong kicking off the async work,
                 // unregister the callback and cancel the created task
                 webClient.OpenWriteCompleted -= handler;
                 tcs.TrySetException(exc);
             }
-            
+
             // Return the task that represents the async operation
             return tcs.Task;
         }
@@ -222,7 +222,7 @@ namespace System.Net
         /// <param name="method">The HTTP method that should be used to upload the data.</param>
         /// <param name="data">The data to upload.</param>
         /// <returns>A Task containing the data in the response from the upload.</returns>
-        public static Task<byte[]> UploadDataTask(this WebClient webClient, Uri address, string method, byte [] data)
+        public static Task<byte[]> UploadDataTask(this WebClient webClient, Uri address, string method, byte[] data)
         {
             // Create the task to be returned
             var tcs = new TaskCompletionSource<byte[]>(address);
@@ -237,7 +237,7 @@ namespace System.Net
             {
                 webClient.UploadDataAsync(address, method, data, tcs);
             }
-            catch(Exception exc)
+            catch (Exception exc)
             {
                 // If something goes wrong kicking off the async work,
                 // unregister the callback and cancel the created task
@@ -281,7 +281,7 @@ namespace System.Net
             {
                 webClient.UploadFileAsync(address, method, fileName, tcs);
             }
-            catch(Exception exc)
+            catch (Exception exc)
             {
                 // If something goes wrong kicking off the async work,
                 // unregister the callback and cancel the created task
@@ -317,7 +317,7 @@ namespace System.Net
 
             // Setup the callback event handler
             UploadStringCompletedEventHandler handler = null;
-            handler = (sender, e) => EAPCommon.HandleCompletion(tcs, e, () => e.Result, ()=> webClient.UploadStringCompleted -= handler);
+            handler = (sender, e) => EAPCommon.HandleCompletion(tcs, e, () => e.Result, () => webClient.UploadStringCompleted -= handler);
             webClient.UploadStringCompleted += handler;
 
             // Start the async work
@@ -325,7 +325,7 @@ namespace System.Net
             {
                 webClient.UploadStringAsync(address, method, data, tcs);
             }
-            catch(Exception exc)
+            catch (Exception exc)
             {
                 // If something goes wrong kicking off the async work,
                 // unregister the callback and cancel the created task

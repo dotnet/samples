@@ -15,7 +15,7 @@ namespace System.Collections.Concurrent
         /// <param name="collection">The collection to be cleared.</param>
         public static void Clear<T>(this IProducerConsumerCollection<T> collection)
         {
-            while (collection.TryTake(out _)) {};
+            while (collection.TryTake(out _)) { };
         }
 
         /// <summary>Creates an enumerable which will consume and return elements from the collection.</summary>
@@ -53,8 +53,8 @@ namespace System.Collections.Concurrent
             return source.Subscribe(new DelegateBasedObserver<T>
             (
                 onNext: item => target.TryAdd(item),
-                onError: error => {},
-                onCompleted: () => {}
+                onError: error => { },
+                onCompleted: () => { }
             ));
         }
 

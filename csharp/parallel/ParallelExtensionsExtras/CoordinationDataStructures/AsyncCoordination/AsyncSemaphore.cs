@@ -40,7 +40,7 @@ namespace System.Threading.Async
         /// <summary>Gets the maximum count.</summary>
         public int MaximumCount { get; private set; }
         /// <summary>Gets the number of operations currently waiting on the semaphore.</summary>
-        public int WaitingCount { get { lock(_waitingTasks) return _waitingTasks.Count; } }
+        public int WaitingCount { get { lock (_waitingTasks) return _waitingTasks.Count; } }
 
         /// <summary>Waits for a unit to be available in the semaphore.</summary>
         /// <returns>A Task that will be completed when a unit is available and this Wait operation succeeds.</returns>
@@ -118,7 +118,7 @@ namespace System.Threading.Async
                     var tcs = _waitingTasks.Dequeue();
                     tcs.SetResult(null);
                 }
-                    // Otherwise, increment the available count
+                // Otherwise, increment the available count
                 else CurrentCount++;
             }
         }

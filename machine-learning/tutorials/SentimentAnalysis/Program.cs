@@ -200,7 +200,7 @@ namespace SentimentAnalysis
             Console.WriteLine();
 
             // <SnippetDisplayResults>
-            foreach (SentimentPrediction prediction  in predictedResults)
+            foreach (SentimentPrediction prediction in predictedResults)
             {
                 Console.WriteLine($"Sentiment: {prediction.SentimentText} | Prediction: {(Convert.ToBoolean(prediction.Prediction) ? "Positive" : "Negative")} | Probability: {prediction.Probability} ");
             }

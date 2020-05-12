@@ -123,7 +123,7 @@ namespace WinFormGraphics
                 #region Example 5 -- Draw A Ellipse With Gradient Brush
 
                 // Specify a bound for the ellipse.
-                var r = new Rectangle(350, 280,280,150);
+                var r = new Rectangle(350, 280, 280, 150);
 
                 // Use a LinearGradientBrush to draw the ellipse.
                 using (var br = new LinearGradientBrush(

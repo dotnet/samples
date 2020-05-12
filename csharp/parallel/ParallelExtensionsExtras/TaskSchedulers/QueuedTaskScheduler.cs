@@ -113,7 +113,7 @@ namespace System.Threading.Tasks.Schedulers
             // If 0, use the number of logical processors.  But make sure whatever value we pick
             // is not greater than the degree of parallelism allowed by the underlying scheduler.
             _concurrencyLevel = maxConcurrencyLevel != 0 ? maxConcurrencyLevel : Environment.ProcessorCount;
-            if (targetScheduler.MaximumConcurrencyLevel > 0 && 
+            if (targetScheduler.MaximumConcurrencyLevel > 0 &&
                 targetScheduler.MaximumConcurrencyLevel < _concurrencyLevel)
             {
                 _concurrencyLevel = targetScheduler.MaximumConcurrencyLevel;
