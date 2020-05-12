@@ -66,7 +66,7 @@ namespace System.IO
             var asyncWrite = fs.WriteAsync(bytes, 0, bytes.Length);
 
             // When complete, close the file and propagate any exceptions
-            var closedFile = asyncWrite.ContinueWith(t => 
+            var closedFile = asyncWrite.ContinueWith(t =>
             {
                 var e = t.Exception;
                 fs.Close();
@@ -114,7 +114,7 @@ namespace System.IO
         {
             // First encode the string contents into a byte array
             var encoded = Task.Factory.StartNew(
-                state => Encoding.UTF8.GetBytes((string)state), 
+                state => Encoding.UTF8.GetBytes((string)state),
                 contents);
 
             // When encoding is done, write all of the contents to the file.  Return

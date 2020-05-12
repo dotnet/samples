@@ -65,7 +65,7 @@ namespace CSWinFormDataGridView.MultipleLayeredColumnHeader
             // Data for the "merged" header cells
             string[] monthes = { "January", "February", "March" };
 
-            for (int j = 0; j < this.dataGridView1.ColumnCount; )
+            for (int j = 0; j < this.dataGridView1.ColumnCount;)
             {
                 // Get the column header cell bounds
                 Rectangle r1 = this.dataGridView1.GetCellDisplayRectangle(j, -1, true);
@@ -87,7 +87,7 @@ namespace CSWinFormDataGridView.MultipleLayeredColumnHeader
                     e.Graphics.DrawLine(p, r1.X, r1.Bottom, r1.Right, r1.Bottom);
                 }
 
-                using( StringFormat format = new StringFormat())
+                using (StringFormat format = new StringFormat())
                 using (SolidBrush br =
                     new SolidBrush(
                         this.dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor))

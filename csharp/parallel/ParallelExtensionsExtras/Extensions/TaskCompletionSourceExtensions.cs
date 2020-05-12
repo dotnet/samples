@@ -37,12 +37,12 @@ namespace System.Threading.Tasks
         /// <returns>Whether the transfer could be completed.</returns>
         public static bool TrySetFromTask<TResult>(this TaskCompletionSource<TResult> resultSetter, Task task) =>
             task.Status switch
-        {
-            TaskStatus.RanToCompletion => resultSetter.TrySetResult(task is Task<TResult> ? ((Task<TResult>)task).Result : default),
-            TaskStatus.Faulted => resultSetter.TrySetException(task.Exception.InnerExceptions),
-            TaskStatus.Canceled => resultSetter.TrySetCanceled(),
-            _ => throw new InvalidOperationException("The task was not completed."),
-        };
+            {
+                TaskStatus.RanToCompletion => resultSetter.TrySetResult(task is Task<TResult> ? ((Task<TResult>)task).Result : default),
+                TaskStatus.Faulted => resultSetter.TrySetException(task.Exception.InnerExceptions),
+                TaskStatus.Canceled => resultSetter.TrySetCanceled(),
+                _ => throw new InvalidOperationException("The task was not completed."),
+            };
 
         /// <summary>Attempts to transfer the result of a Task to the TaskCompletionSource.</summary>
         /// <typeparam name="TResult">Specifies the type of the result.</typeparam>

@@ -29,7 +29,7 @@ namespace System.Threading.Tasks
         /// <returns>A Task that represents the complete asynchronous operation.</returns>
         public static Task Iterate(
             this TaskFactory factory,
-            IEnumerable<object> source, 
+            IEnumerable<object> source,
             CancellationToken cancellationToken)
         {
             if (factory == null) throw new ArgumentNullException(nameof(factory));
@@ -43,7 +43,7 @@ namespace System.Threading.Tasks
         /// <returns>A Task that represents the complete asynchronous operation.</returns>
         public static Task Iterate(
             this TaskFactory factory,
-            IEnumerable<object> source, 
+            IEnumerable<object> source,
             TaskCreationOptions creationOptions)
         {
             if (factory == null) throw new ArgumentNullException(nameof(factory));
@@ -57,7 +57,7 @@ namespace System.Threading.Tasks
         /// <returns>A Task that represents the complete asynchronous operation.</returns>
         public static Task Iterate(
             this TaskFactory factory,
-            IEnumerable<object> source, 
+            IEnumerable<object> source,
             TaskScheduler scheduler)
         {
             if (factory == null) throw new ArgumentNullException(nameof(factory));
@@ -197,7 +197,7 @@ namespace System.Threading.Tasks
                 }
                 // If MoveNext throws an exception, propagate that to the user,
                 // either as cancellation or as a fault
-                catch (Exception exc) 
+                catch (Exception exc)
                 {
                     if (exc is OperationCanceledException oce && oce.CancellationToken == cancellationToken)
                     {
@@ -209,7 +209,7 @@ namespace System.Threading.Tasks
 
             // Get things started by launching the first task
             factory.StartNew(() => recursiveBody(null), CancellationToken.None, TaskCreationOptions.None, scheduler).IgnoreExceptions();
-            
+
             // Return the representative task to the user
             return trs.Task;
         }

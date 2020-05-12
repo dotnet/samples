@@ -1,4 +1,4 @@
-Imports System.Console
+﻿Imports System.Console
 Imports System.ComponentModel.Composition
 Imports System.ComponentModel.Composition.Hosting
 Imports MefCalculator.MefCalculatorInterfaces

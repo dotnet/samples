@@ -17,7 +17,7 @@ namespace System.Threading.Tasks
         /// Iteration will cease if a task faults.
         /// </param>
         /// <returns>A Task that will return the list of tracked tasks iterated.</returns>
-        public static Task<IList<Task>> TrackedSequence(this TaskFactory factory, params Func<Task> [] functions)
+        public static Task<IList<Task>> TrackedSequence(this TaskFactory factory, params Func<Task>[] functions)
         {
             var tcs = new TaskCompletionSource<IList<Task>>();
             factory.Iterate(TrackedSequenceInternal(functions, tcs).Cast<object>());

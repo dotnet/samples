@@ -1,4 +1,4 @@
-Imports System.ComponentModel.Composition
+﻿Imports System.ComponentModel.Composition
 Imports System.ComponentModel.Composition.Hosting
 
 Public Module MefCalculatorInterfaces

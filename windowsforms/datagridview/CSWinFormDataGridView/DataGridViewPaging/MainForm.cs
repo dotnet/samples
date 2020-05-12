@@ -89,12 +89,12 @@ namespace CSWinFormDataGridView.DataGridViewPaging
             }
             else
             {
-                int lowerPageBoundary = ( page - 1) * PageSize;
+                int lowerPageBoundary = (page - 1) * PageSize;
 
                 command.CommandText = "Select Top " + PageSize +
                     " * From Orders " +
-                    " WHERE OrderID NOT IN "+
-                    " (SELECT TOP " + lowerPageBoundary + " OrderID From Orders Order By OrderID) "+
+                    " WHERE OrderID NOT IN " +
+                    " (SELECT TOP " + lowerPageBoundary + " OrderID From Orders Order By OrderID) " +
                     " Order By OrderID";
             }
             try

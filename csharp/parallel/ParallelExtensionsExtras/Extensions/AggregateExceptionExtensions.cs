@@ -32,18 +32,18 @@ namespace System
                 var result = HandleRecursively(aggregateException, predicate);
                 if (result != null) throw result;
             }
-                // Otherwise, default back to the implementation on AggregateException
+            // Otherwise, default back to the implementation on AggregateException
             else aggregateException.Handle(predicate);
         }
 
         private static AggregateException HandleRecursively(
             AggregateException aggregateException, Func<Exception, bool> predicate)
-        {   
+        {
             // Maintain a list of exceptions to be rethrown
             List<Exception> innerExceptions = null;
 
             // Loop over all of the inner exceptions
-            foreach(var inner in aggregateException.InnerExceptions)
+            foreach (var inner in aggregateException.InnerExceptions)
             {
                 // If the inner exception is itself an aggregate, process recursively
                 if (inner is AggregateException innerAsAggregate)
@@ -63,7 +63,7 @@ namespace System
                     innerExceptions.Add(inner);
                 }
             }
-            
+
             // If there are any remaining exceptions, return them in a new aggregate.
             return innerExceptions.Count > 0 ?
                 new AggregateException(aggregateException.Message, innerExceptions) :

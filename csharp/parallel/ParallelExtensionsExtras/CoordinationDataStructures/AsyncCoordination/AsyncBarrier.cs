@@ -40,9 +40,9 @@ namespace System.Threading.Async
         public Task SignalAndWait()
         {
             var curCts = _currentSignalTask;
-        #pragma warning disable 420
+#pragma warning disable 420
             if (Interlocked.Decrement(ref _remainingParticipants) == 0)
-        #pragma warning restore 420
+#pragma warning restore 420
             {
                 _remainingParticipants = _participantCount;
                 _currentSignalTask = new TaskCompletionSource<object>();

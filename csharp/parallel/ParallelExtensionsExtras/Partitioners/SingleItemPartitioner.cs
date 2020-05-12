@@ -111,7 +111,7 @@ namespace System.Collections.Concurrent.Partitioners
                                 }
                                 else yield break;
                             }
-                            yield return new KeyValuePair<long,T>(position, nextItem);
+                            yield return new KeyValuePair<long, T>(position, nextItem);
                         }
                     }
                     finally { if (Interlocked.Decrement(ref _remainingPartitions) == 0) _sharedEnumerator.Dispose(); }

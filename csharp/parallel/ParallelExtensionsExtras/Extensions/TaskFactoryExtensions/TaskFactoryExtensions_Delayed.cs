@@ -67,7 +67,7 @@ namespace System.Threading.Tasks
 
             // Start the timer and hand back the task...
             try { timer.Change(millisecondsDelay, Timeout.Infinite); }
-            catch(ObjectDisposedException) {} // in case there's a race with cancellation; this is benign
+            catch (ObjectDisposedException) { } // in case there's a race with cancellation; this is benign
 
             return tcs.Task;
         }
@@ -127,7 +127,7 @@ namespace System.Threading.Tasks
         /// <returns>The created Task.</returns>
         public static Task StartNewDelayed(
             this TaskFactory factory,
-            int millisecondsDelay, Action action, 
+            int millisecondsDelay, Action action,
             CancellationToken cancellationToken, TaskCreationOptions creationOptions, TaskScheduler scheduler)
         {
             if (factory == null) throw new ArgumentNullException(nameof(factory));

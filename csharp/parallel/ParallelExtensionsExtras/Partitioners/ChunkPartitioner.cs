@@ -96,7 +96,7 @@ namespace System.Collections.Concurrent.Partitioners
 
             // Create an array of dynamic partitions and return them
             var partitions = new IEnumerator<KeyValuePair<long, T>>[partitionCount];
-            var dynamicPartitions = GetOrderableDynamicPartitions(true); 
+            var dynamicPartitions = GetOrderableDynamicPartitions(true);
             for (int i = 0; i < partitionCount; i++)
             {
                 partitions[i] = dynamicPartitions.GetEnumerator(); // Create and store the next partition

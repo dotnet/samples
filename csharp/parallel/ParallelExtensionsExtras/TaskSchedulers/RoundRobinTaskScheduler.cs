@@ -27,7 +27,7 @@ namespace System.Threading.Tasks.Schedulers
         /// <summary>Gets a collection of all schedulers in this group.</summary>
         public ReadOnlyCollection<TaskScheduler> Schedulers
         {
-            get { lock(_queues) return new ReadOnlyCollection<TaskScheduler>(_queues.Cast<TaskScheduler>().ToArray()); }
+            get { lock (_queues) return new ReadOnlyCollection<TaskScheduler>(_queues.Cast<TaskScheduler>().ToArray()); }
         }
 
         /// <summary>Removes a scheduler from the group.</summary>
@@ -85,8 +85,8 @@ namespace System.Threading.Tasks.Schedulers
             internal Queue<Task> _workItems = new Queue<Task>();
             internal bool _disposed;
 
-            protected override IEnumerable<Task> GetScheduledTasks() 
-            { 
+            protected override IEnumerable<Task> GetScheduledTasks()
+            {
                 object obj = _pool._queues;
                 bool lockTaken = false;
                 try

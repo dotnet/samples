@@ -179,7 +179,7 @@ namespace System.Net.NetworkInformation
             {
                 sendAsync(tcs);
             }
-            catch(Exception exc)
+            catch (Exception exc)
             {
                 ping.PingCompleted -= handler;
                 tcs.TrySetException(exc);

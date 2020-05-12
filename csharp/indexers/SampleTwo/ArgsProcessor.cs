@@ -14,7 +14,7 @@ namespace IndexersSamples.SampleTwo
 
         public void Process(string[] args)
         {
-            foreach(var arg in args)
+            foreach (var arg in args)
             {
                 actions[arg]?.Invoke();
             }
@@ -28,7 +28,7 @@ namespace IndexersSamples.SampleTwo
         {
             get
             {
-                Action defaultAction = () => {} ;
+                Action defaultAction = () => { };
                 return argsActions.TryGetValue(s, out Action action) ? action : defaultAction;
             }
         }
