@@ -6,19 +6,25 @@ update_configs:
     directory: "/core/json" # ReaderSample.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/csharp/indexers" # indexers.csproj
+    directory: "/csharp/branches-quickstart" # BranchesAndLoops.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/csharp/classes-quickstart" # classes.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/csharp/branches-quickstart" # BranchesAndLoops.csproj
+    directory: "/csharp/delegates-and-events" # delegates-and-events.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/csharp/serialization" # serialization.csproj
+    directory: "/csharp/events" # events.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/csharp/expression-trees" # expression-trees.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/csharp/indexers" # indexers.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/csharp/iterators" # iterators.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/csharp/list-quickstart" # list-quickstart.csproj
@@ -27,79 +33,10 @@ update_configs:
     directory: "/csharp/numbers-quickstart" # NumbersInCSharp.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/csharp/delegates-and-events" # delegates-and-events.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
     directory: "/csharp/PatternMatching" # PatternMatching.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/csharp/events" # events.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/csharp/iterators" # iterators.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/console-apps/fibonacci-msbuild" # Hello.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/console-apps/HelloMsBuild" # Hello.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/console-apps/FibonacciBetterMsBuild" # Fibonacci.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/linker/HelloWorldTrimmed" # HelloWorldTrimmed.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/linker/TrimmedWithAdditionalRoots" # TrimmedWithAdditionalRoots.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/extensions/VisioDemo" # VisioDemo.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/extensions/DllMapDemo" # Demo.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/extensions/ExcelDemo" # ExcelDemo.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/diagnostics/DiagnosticScenarios" # DiagnosticScenarios.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/windowsforms/matching-game/MatchingGame" # MatchingGameCS.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/windowsforms/matching-game/MatchingGame_vb" # matchinggame_VB.vbproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/windowsforms/datagridview/CSWinFormDataGridView" # CSWinFormDataGridView.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/windowsforms/helloworld-sharedsource/CoreWindowsFormsApp" # CoreWindowsFormsApp.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/windowsforms/helloworld-sharedsource/WindowsFormsApp" # WindowsFormsApp.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/windowsforms/helloworld-sharedsource/WindowsFormsForm" # WindowsFormsForm.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/windowsforms/graphics/WinFormGraphics" # WinFormGraphics.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/windowsforms/graphics/WinFormGraphics_vb" # winformgraphics_vb.vbproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/windowsforms/MSIX-WindowsForms/WindowsFormsApp1" # WindowsFormsApp1.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/windowsforms/MSIX-WindowsForms/CoreWinFormsApp1" # CoreWinFormsApp1.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/windowsforms/helloworld-links/NetCore3App" # NetCore3App.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/windowsforms/helloworld-links/FullFxApp" # FullFxApp.csproj
+    directory: "/csharp/serialization" # serialization.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/async/async-and-await/cs" # AsyncFirstExampleCS.csproj
@@ -108,43 +45,34 @@ update_configs:
     directory: "/async/async-and-await/vb" # AsyncFirstExampleVB.vbproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/mef/simple-calculator/vb" # SimpleCalculator2.vbproj
+    directory: "/core/assembly/MetadataLoadContext" # MetadataLoadContextSample.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/wpf/HelloWorld-WithLinkedFiles/HelloWorldCore" # HelloWorldCore.csproj
+    directory: "/core/console-apps/fibonacci-msbuild" # Hello.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/wpf/HelloWorld-WithLinkedFiles/HelloWorldNetFx" # HelloWorldNetFx.csproj
+    directory: "/core/console-apps/FibonacciBetterMsBuild" # Fibonacci.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/wpf/WPF-WinRT/WPF-WinRT-NetFx" # WPF-WinRT-NetFx.csproj
+    directory: "/core/console-apps/HelloMsBuild" # Hello.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/wpf/WPF-WinRT/WPF-WinRT-Core" # WPF-WinRT-Core.csproj
+    directory: "/core/diagnostics/DiagnosticScenarios" # DiagnosticScenarios.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/winforms/formatting-utility/cs" # FormatUtility.csproj
+    directory: "/core/extensions/DllMapDemo" # Demo.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/winforms/formatting-utility/vb" # FormatUtility.vbproj
+    directory: "/core/extensions/ExcelDemo" # ExcelDemo.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/csharp/safe-efficient-code/benchmark" # benchmark.csproj
+    directory: "/core/extensions/VisioDemo" # VisioDemo.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/csharp/safe-efficient-code/ref-readonly-struct" # ref-readonly-struct.csproj
+    directory: "/core/linker/HelloWorldTrimmed" # HelloWorldTrimmed.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/csharp/NullableIntroduction/NullableIntroduction" # NullableIntroduction.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/csharp/unit-testing-best-practices/unit-testing-best-practices" # unit-testing-best-practices.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/csharp/unit-testing-best-practices/before" # unit-testing-best-practices-before.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/csharp/unit-testing-best-practices/after" # unit-testing-best-practices-after.csproj
+    directory: "/core/linker/TrimmedWithAdditionalRoots" # TrimmedWithAdditionalRoots.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/csharp/getting-started/console-linq" # console-linq.csproj
@@ -156,46 +84,136 @@ update_configs:
     directory: "/csharp/getting-started/console-webapiclient" # webapiclient.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/csharp/tutorials/mixins-with-interfaces" # mixins-with-interfaces.csproj
+    directory: "/csharp/NullableIntroduction/NullableIntroduction" # NullableIntroduction.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/csharp/versioning/override" # override.csproj
+    directory: "/csharp/parallel/ComputePi" # ComputePi.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/csharp/versioning/new" # new.csproj
+    directory: "/csharp/parallel/EditDistance" # EditDistance.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/csharp/parallel/ParallelExtensionsExtras" # ParallelExtensionsExtras.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/csharp/parallel/ParallelGrep" # ParallelGrep.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/csharp/parallel/PLINQ" # PLINQ.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/csharp/parallel/Raytracer" # Raytracer.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/csharp/parallel/Raytracer.Wpf" # Raytracer.Wpf.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/csharp/roslyn-sdk/SemanticQuickStart" # SemanticQuickStart.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/machine-learning/tutorials/MovieRecommendation" # MovieRecommendation.csproj
+    directory: "/csharp/safe-efficient-code/benchmark" # benchmark.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/machine-learning/tutorials/TransferLearningTF" # TransferLearningTF.csproj
+    directory: "/csharp/safe-efficient-code/ref-readonly-struct" # ref-readonly-struct.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/machine-learning/tutorials/TaxiFarePrediction" # TaxiFarePrediction.csproj
+    directory: "/csharp/tutorials/mixins-with-interfaces" # mixins-with-interfaces.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/csharp/unit-testing-best-practices/after" # unit-testing-best-practices-after.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/csharp/unit-testing-best-practices/before" # unit-testing-best-practices-before.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/csharp/unit-testing-best-practices/unit-testing-best-practices" # unit-testing-best-practices.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/csharp/versioning/new" # new.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/csharp/versioning/override" # override.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/machine-learning/tutorials/GitHubIssueClassification" # GitHubIssueClassification.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/machine-learning/tutorials/TextClassificationTF" # TextClassificationTF.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
     directory: "/machine-learning/tutorials/IrisFlowerClustering" # IrisFlowerClustering.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/machine-learning/tutorials/SentimentAnalysis" # SentimentAnalysis.csproj
+    directory: "/machine-learning/tutorials/MovieRecommendation" # MovieRecommendation.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/machine-learning/tutorials/ProductSalesAnomalyDetection" # ProductSalesAnomalyDetection.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/core/whats-new/whats-new-in-21/cs" # whats-new.csproj
+    directory: "/machine-learning/tutorials/SentimentAnalysis" # SentimentAnalysis.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/core/whats-new/whats-new-in-21/vb" # whats-new.vbproj
+    directory: "/machine-learning/tutorials/TaxiFarePrediction" # TaxiFarePrediction.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/machine-learning/tutorials/TextClassificationTF" # TextClassificationTF.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/machine-learning/tutorials/TransferLearningTF" # TransferLearningTF.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/mef/simple-calculator/vb" # SimpleCalculator2.vbproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/windowsforms/datagridview/CSWinFormDataGridView" # CSWinFormDataGridView.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/windowsforms/graphics/WinFormGraphics" # WinFormGraphics.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/windowsforms/graphics/WinFormGraphics_vb" # winformgraphics_vb.vbproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/windowsforms/helloworld-links/FullFxApp" # FullFxApp.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/windowsforms/helloworld-links/NetCore3App" # NetCore3App.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/windowsforms/helloworld-sharedsource/CoreWindowsFormsApp" # CoreWindowsFormsApp.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/windowsforms/helloworld-sharedsource/WindowsFormsApp" # WindowsFormsApp.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/windowsforms/helloworld-sharedsource/WindowsFormsForm" # WindowsFormsForm.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/windowsforms/matching-game/MatchingGame" # MatchingGameCS.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/windowsforms/matching-game/MatchingGame_vb" # matchinggame_VB.vbproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/windowsforms/MSIX-WindowsForms/CoreWinFormsApp1" # CoreWinFormsApp1.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/windowsforms/MSIX-WindowsForms/WindowsFormsApp1" # WindowsFormsApp1.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/winforms/formatting-utility/cs" # FormatUtility.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/winforms/formatting-utility/vb" # FormatUtility.vbproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/wpf/HelloWorld-WithLinkedFiles/HelloWorldCore" # HelloWorldCore.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/wpf/HelloWorld-WithLinkedFiles/HelloWorldNetFx" # HelloWorldNetFx.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/wpf/WPF-WinRT/WPF-WinRT-Core" # WPF-WinRT-Core.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/wpf/WPF-WinRT/WPF-WinRT-NetFx" # WPF-WinRT-NetFx.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/core/encoding/cyrillic-to-latin/cs" # CyrillicToLatin.csproj
@@ -204,124 +222,52 @@ update_configs:
     directory: "/core/encoding/cyrillic-to-latin/vb" # CyrillicToLatin.vbproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
+    directory: "/core/extensions/AppWithPlugin/AppWithPlugin" # AppWithPlugin.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/extensions/AppWithPlugin/FrenchPlugin" # FrenchPlugin.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/extensions/AppWithPlugin/HelloPlugin" # HelloPlugin.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/extensions/AppWithPlugin/JsonPlugin" # JsonPlugin.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/extensions/AppWithPlugin/OldJsonPlugin" # OldJsonPlugin.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/extensions/AppWithPlugin/PluginBase" # PluginBase.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/extensions/AppWithPlugin/UVPlugin" # UVPlugin.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/extensions/AppWithPlugin/XcopyablePlugin" # XcopyablePlugin.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/extensions/COMServerDemo/COMClient" # COMClient.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/extensions/COMServerDemo/COMServer" # COMServer.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/extensions/NetComSxS/Client" # Client.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
     directory: "/core/extensions/NetComSxS/Contracts" # Contracts.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/core/extensions/NetComSxS/Server" # Server.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/core/extensions/NetComSxS/Client" # Client.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/extensions/COMServerDemo/COMServer" # COMServer.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/extensions/COMServerDemo/COMClient" # COMClient.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/extensions/AppWithPlugin/XcopyablePlugin" # XcopyablePlugin.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/extensions/AppWithPlugin/FrenchPlugin" # FrenchPlugin.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/extensions/AppWithPlugin/JsonPlugin" # JsonPlugin.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/extensions/AppWithPlugin/HelloPlugin" # HelloPlugin.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/extensions/AppWithPlugin/OldJsonPlugin" # OldJsonPlugin.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/extensions/AppWithPlugin/AppWithPlugin" # AppWithPlugin.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/extensions/AppWithPlugin/UVPlugin" # UVPlugin.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/extensions/AppWithPlugin/PluginBase" # PluginBase.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/linq/csharp/concatenation" # concatenation.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/linq/csharp/setoperators" # setoperators.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/linq/csharp/join" # join.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/linq/csharp/customsequence" # customsequence.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/linq/csharp/grouping" # grouping.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/linq/csharp/aggregate" # aggregate.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/linq/csharp/element" # element.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/linq/csharp/quantifier" # quantifier.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/linq/csharp/equality" # equality.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/linq/csharp/ordering" # ordering.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/linq/csharp/conversion" # conversion.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/linq/csharp/queryexecution" # queryexecution.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/linq/csharp/restriction" # restriction.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/linq/csharp/partitioning" # partitioning.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/linq/csharp/generation" # generation.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/linq/csharp/projection" # projection.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/getting-started/unit-testing-with-fsharp-nunit/MathService.Tests" # MathService.Tests.fsproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/getting-started/unit-testing-with-fsharp-nunit/MathService" # MathService.fsproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/getting-started/unit-testing-with-fsharp-mstest/MathService.Tests" # MathService.Tests.fsproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/getting-started/unit-testing-with-fsharp-mstest/MathService" # MathService.fsproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/getting-started/unit-testing-with-fsharp/MathService.Tests" # MathService.Tests.fsproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/getting-started/unit-testing-with-fsharp/MathService" # MathService.fsproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/getting-started/unit-testing-using-mstest/PrimeService" # PrimeService.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/getting-started/unit-testing-using-mstest/PrimeService.Tests" # PrimeService.Tests.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
     directory: "/core/getting-started/golden/app" # app.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/core/getting-started/golden/test-library" # test-library.csproj
+    directory: "/core/getting-started/golden/library" # library.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/core/getting-started/golden/library" # library.csproj
+    directory: "/core/getting-started/golden/test-library" # test-library.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/core/getting-started/unit-testing-using-dotnet-test/PrimeService" # PrimeService.csproj
@@ -330,16 +276,16 @@ update_configs:
     directory: "/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests" # PrimeService.Tests.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
+    directory: "/core/getting-started/unit-testing-using-mstest/PrimeService" # PrimeService.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/getting-started/unit-testing-using-mstest/PrimeService.Tests" # PrimeService.Tests.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
     directory: "/core/getting-started/unit-testing-using-nunit/PrimeService" # PrimeService.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/core/getting-started/unit-testing-using-nunit/PrimeService.Tests" # PrimeService.Tests.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/getting-started/unit-testing-vb-nunit/PrimeService" # PrimeService.vbproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests" # PrimeService.Tests.vbproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/core/getting-started/unit-testing-vb-dotnet-test/PrimeService" # PrimeService.vbproj
@@ -354,22 +300,127 @@ update_configs:
     directory: "/core/getting-started/unit-testing-vb-mstest/PrimeService.Tests" # PrimeService.Tests.vbproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/core/tutorials/Unloading/Interface" # Interface.csproj
+    directory: "/core/getting-started/unit-testing-vb-nunit/PrimeService" # PrimeService.vbproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/core/tutorials/Unloading/PluginDependency" # PluginDependency.csproj
+    directory: "/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests" # PrimeService.Tests.vbproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/getting-started/unit-testing-with-fsharp/MathService" # MathService.fsproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/getting-started/unit-testing-with-fsharp/MathService.Tests" # MathService.Tests.fsproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/getting-started/unit-testing-with-fsharp-mstest/MathService" # MathService.fsproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/getting-started/unit-testing-with-fsharp-mstest/MathService.Tests" # MathService.Tests.fsproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/getting-started/unit-testing-with-fsharp-nunit/MathService" # MathService.fsproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/getting-started/unit-testing-with-fsharp-nunit/MathService.Tests" # MathService.Tests.fsproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/interop/comwrappers/IDispatch" # ComWrappersIDispatch.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/linq/csharp/aggregate" # aggregate.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/linq/csharp/concatenation" # concatenation.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/linq/csharp/conversion" # conversion.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/linq/csharp/customsequence" # customsequence.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/linq/csharp/element" # element.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/linq/csharp/equality" # equality.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/linq/csharp/generation" # generation.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/linq/csharp/grouping" # grouping.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/linq/csharp/join" # join.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/linq/csharp/ordering" # ordering.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/linq/csharp/partitioning" # partitioning.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/linq/csharp/projection" # projection.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/linq/csharp/quantifier" # quantifier.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/linq/csharp/queryexecution" # queryexecution.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/linq/csharp/restriction" # restriction.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/linq/csharp/setoperators" # setoperators.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/core/tutorials/Unloading/Host" # Host.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
+    directory: "/core/tutorials/Unloading/Interface" # Interface.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
     directory: "/core/tutorials/Unloading/Plugin" # Plugin.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/tutorials/Unloading/PluginDependency" # PluginDependency.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/whats-new/whats-new-in-21/cs" # whats-new.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/whats-new/whats-new-in-21/vb" # whats-new.vbproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree" # HelloSyntaxTree.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker" # SyntaxWalker.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS" # ConstructionCS.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS" # TransformationCS.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/csharp/tutorials/exploration/csharp6-finished" # csharp6-finished.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/csharp/tutorials/exploration/csharp6-starter" # csharp6-starter.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/framework/docker/ConsoleRandomAnswerGenerator/ConsoleRandomAnswerGenerator" # ConsoleRandomAnswerGenerator.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/framework/docker/MVCRandomAnswerGenerator/MVCRandomAnswerGenerator" # MVCRandomAnswerGenerator.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/framework/docker/ConsoleRandomAnswerGenerator/ConsoleRandomAnswerGenerator" # ConsoleRandomAnswerGenerator.csproj
+    directory: "/mef/simple-calculator/vb/ExtendedOperations" # ExtendedOperations.vbproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/mef/simple-calculator/vb/MefCalculator" # MefCalculator.vbproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/windowsforms/Conway's-Game-of-Life/VB/Conway's-Game-of-Life" # Conway's-Game-of-Life.vbproj
@@ -378,37 +429,10 @@ update_configs:
     directory: "/windowsforms/Sudoku/VB/sudoku" # sudoku.vbproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/mef/simple-calculator/vb/MefCalculator" # MefCalculator.vbproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/mef/simple-calculator/vb/ExtendedOperations" # ExtendedOperations.vbproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/csharp/tutorials/exploration/csharp6-starter" # csharp6-starter.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/csharp/tutorials/exploration/csharp6-finished" # csharp6-finished.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS" # TransformationCS.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS" # ConstructionCS.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker" # SyntaxWalker.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree" # HelloSyntaxTree.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/console-apps/NewTypesMsBuild/test/NewTypesTests" # NewTypesTests.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
     directory: "/core/console-apps/NewTypesMsBuild/src/NewTypes" # NewTypes.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/core/getting-started/golden/test/test-library" # test-library.csproj
+    directory: "/core/console-apps/NewTypesMsBuild/test/NewTypesTests" # NewTypesTests.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/core/getting-started/golden/src/app" # app.csproj
@@ -417,73 +441,37 @@ update_configs:
     directory: "/core/getting-started/golden/src/library" # library.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/core/hosting/HostWithCoreClrHost/src/ManagedLibrary" # ManagedLibrary.csproj
+    directory: "/core/getting-started/golden/test/test-library" # test-library.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/core/hosting/HostWithHostFxr/src/NativeHost" # NativeHost.csproj
+    directory: "/core/hosting/HostWithCoreClrHost/src/ManagedLibrary" # ManagedLibrary.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/core/hosting/HostWithHostFxr/src/DotNetLib" # DotNetLib.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/core/tutorials/using-on-mac-vs-full-solution/WordCounter/WordCounterApp" # WordCounterApp.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/core/tutorials/using-on-mac-vs-full-solution/WordCounter/TextUtils" # TextUtils.csproj
+    directory: "/core/hosting/HostWithHostFxr/src/NativeHost" # NativeHost.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/core/tutorials/using-on-mac-vs-full-solution/WordCounter/TestLibrary" # TestLibrary.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/framework/libraries/net45-compat-library/src/Library" # Library.csproj
+    directory: "/core/tutorials/using-on-mac-vs-full-solution/WordCounter/TextUtils" # TextUtils.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/framework/libraries/migrate-library-csproj-keep-existing/tests/Car.Tests.Net45" # Car.Tests.Net45.csproj
+    directory: "/core/tutorials/using-on-mac-vs-full-solution/WordCounter/WordCounterApp" # WordCounterApp.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/framework/libraries/migrate-library-csproj-keep-existing/tests/Car.Tests" # Car.Tests.csproj
+    directory: "/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst" # MakeConst.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/framework/libraries/migrate-library-csproj-keep-existing/src/Car" # Car.csproj
+    directory: "/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test" # MakeConst.Test.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/framework/libraries/migrate-library-csproj-keep-existing/src/Car.Net45" # Car.Net45.csproj
+    directory: "/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Vsix" # MakeConst.Vsix.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/framework/libraries/migrate-library/tests/Car.Tests" # Car.Tests.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/framework/libraries/migrate-library/src/Car" # Car.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/framework/libraries/frameworks-library/src/Library" # Library.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/framework/libraries/migrate-library-csproj/tests/Car.Tests" # Car.Tests.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/framework/libraries/migrate-library-csproj/src/Car" # Car.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/framework/libraries/net40-library/src/Library" # Library.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/csharp/tutorials/patterns/finished/toll-calculator" # toll-calculator.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/csharp/tutorials/patterns/start/toll-calculator" # toll-calculator.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader.Tests" # SimpleFeedReader.Tests.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader" # SimpleFeedReader.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader.Tests" # SimpleFeedReader.Tests.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader" # SimpleFeedReader.csproj
+    directory: "/csharp/roslyn-sdk/Tutorials/MakeConstTestProject/MakeConstTestProject" # MakeConstTestProject.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/csharp/tutorials/default-interface-members-versions/finished/customer-relationship" # customer-relationship.csproj
@@ -492,16 +480,55 @@ update_configs:
     directory: "/csharp/tutorials/default-interface-members-versions/starter/customer-relationship" # customer-relationship.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/csharp/roslyn-sdk/Tutorials/MakeConstTestProject/MakeConstTestProject" # MakeConstTestProject.csproj
+    directory: "/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader" # SimpleFeedReader.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test" # MakeConst.Test.csproj
+    directory: "/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader.Tests" # SimpleFeedReader.Tests.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst" # MakeConst.csproj
+    directory: "/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader" # SimpleFeedReader.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Vsix" # MakeConst.Vsix.csproj
+    directory: "/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader.Tests" # SimpleFeedReader.Tests.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/csharp/tutorials/patterns/finished/toll-calculator" # toll-calculator.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/csharp/tutorials/patterns/start/toll-calculator" # toll-calculator.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/framework/libraries/frameworks-library/src/Library" # Library.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/framework/libraries/migrate-library/src/Car" # Car.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/framework/libraries/migrate-library/tests/Car.Tests" # Car.Tests.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/framework/libraries/migrate-library-csproj/src/Car" # Car.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/framework/libraries/migrate-library-csproj/tests/Car.Tests" # Car.Tests.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/framework/libraries/migrate-library-csproj-keep-existing/src/Car" # Car.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/framework/libraries/migrate-library-csproj-keep-existing/src/Car.Net45" # Car.Net45.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/framework/libraries/migrate-library-csproj-keep-existing/tests/Car.Tests" # Car.Tests.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/framework/libraries/migrate-library-csproj-keep-existing/tests/Car.Tests.Net45" # Car.Tests.Net45.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/framework/libraries/net40-library/src/Library" # Library.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/framework/libraries/net45-compat-library/src/Library" # Library.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/core/interop/pinvoke/marshaling/src/MarshalingSample" # MarshalingSample.csproj
