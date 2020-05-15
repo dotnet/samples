@@ -6,9 +6,6 @@
 
 namespace XUnit.Project
 {
-    [CollectionDefinition("Xyz Test Collection")]
-    public class Collection1 { }
-
     [Collection("Xzy Test Collection")]
     public class TestsInCollection1
     {
@@ -25,9 +22,6 @@ namespace XUnit.Project
         }
     }
 
-    [CollectionDefinition("Abc Test Collection")]
-    public class Collection2 { }
-
     [Collection("Abc Test Collection")]
     public class TestsInCollection2
     {
@@ -43,9 +37,6 @@ namespace XUnit.Project
             Collection2Run = true;
         }
     }
-
-    [CollectionDefinition("Mno Test Collection")]
-    public class Collection3 { }
 
     [Collection("Mno Test Collection")]
     public class TestsInCollection3
