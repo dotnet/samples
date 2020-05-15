@@ -9,7 +9,7 @@ namespace NUnit.Project
         public static bool Test3Called;
 
         [Test]
-        public void Test1()
+        public void Test11()
         {
             Test1Called = true;
 

@@ -1,4 +1,4 @@
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace NUnit.Project
 {
@@ -10,7 +10,7 @@ namespace NUnit.Project
         public static bool Test3Called;
 
         [Test, Order(5)]
-        public void Test3()
+        public void Test1()
         {
             Test3Called = true;
 
@@ -40,7 +40,7 @@ namespace NUnit.Project
         }
 
         [Test, Order(-5)]
-        public void Test1()
+        public void Test3()
         {
             Test1Called = true;
 
