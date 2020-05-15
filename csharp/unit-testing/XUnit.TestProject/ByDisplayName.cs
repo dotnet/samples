@@ -1,9 +1,8 @@
 ﻿using Xunit;
 
-[assembly: TestCollectionOrderer("XUnit.Project.Orderers.DisplayNameOrderer", "XUnit.Project")]
-
 // Need to turn off test parallelization so we can validate the run order
 [assembly: CollectionBehavior(DisableTestParallelization = true)]
+[assembly: TestCollectionOrderer("XUnit.Project.Orderers.DisplayNameOrderer", "XUnit.Project")]
 
 namespace XUnit.Project
 {
