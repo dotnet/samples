@@ -1,6 +1,6 @@
 # .NET Samples
 
-![Markdownlint](https://github.com/dotnet/samples/workflows/Markdownlint/badge.svg) 
+![Markdownlint](https://github.com/dotnet/samples/workflows/Markdownlint/badge.svg)
 
 This repo contains all the sample code that is part of any topic under
 the .NET documentation. There are several different projects that
