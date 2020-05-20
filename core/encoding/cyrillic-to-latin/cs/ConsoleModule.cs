@@ -45,7 +45,7 @@ class ConsoleModule
                 using (var sw = new StreamWriter(destination, false, System.Text.Encoding.UTF8))
                 {
                     // Instantiate the encoder
-                    Encoding encoding = Encoding.GetEncoding("us-ascii", new CyrillicToRomanFallback(), new DecoderExceptionFallback());
+                    Encoding encoding = Encoding.GetEncoding("us-ascii", new CyrillicToLatinFallback(), new DecoderExceptionFallback());
                     // This is an encoding operation, so we only need to get the encoder.
                     Encoder encoder = encoding.GetEncoder();
                     Decoder decoder = encoding.GetDecoder();
