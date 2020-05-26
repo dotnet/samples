@@ -12,8 +12,7 @@ The content team tracks issues for .NET documentation in the [dotnet/docs](https
 - For existing samples, file the issue on the page with the sample.
 - To suggest new samples, file the issue on the index page where you want to see the new sample.
 
-The code in this repository represent programs that demonstrate application or library scenarios. These samples often use more than one technology, feature, or toolkit. The readme.md file for each sample will refer to the article so that
-you can read more about the concepts covered in each sample.
+The code in this repository represents programs that demonstrate application or library scenarios. These samples often use more than one technology, feature, or toolkit. Each sample has a readme.md file that explains the sample and links to resources for more information.
 
 Samples should be buildable projects. Those projects should build and
 run on the widest set of platforms possible for the given sample. In practice, that means building .NET Core-based console applications where possible. Samples that are specific to the web or a UI framework should add those tools as needed. Examples include web applications, mobile apps, WPF or WinForms apps, and so on.
@@ -23,7 +22,7 @@ project. Ideally, add tests for correctness on samples as well.
 
 ## Building a sample
 
-You build any .NET Core sample using the .NET Core CLI, which can be installed with [the .NET Core SDK](https://www.microsoft.com/net/download). Then, execute
+Build any .NET Core sample using the .NET Core CLI, which is installed with [the .NET Core SDK](https://www.microsoft.com/net/download). Then run
 these commands from the CLI in the directory of any sample:
 
 ```console
