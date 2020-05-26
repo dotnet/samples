@@ -19,8 +19,6 @@ Text in brackets are placeholders; replace the text with the requested informati
 
 [Describe the outdated practice and what would be preferred for modern code]
 
-[What article (in dotnet/docs or dotnet/dotnet-api-docs) uses this sample?]
-
 <!-- Do not modify anything below this line -->
 
 ---
