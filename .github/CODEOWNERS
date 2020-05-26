@@ -20,28 +20,8 @@
 # ML.NET samples:
 /machine-learning/**  @natke
 
-#### Snippets (under samples)
-
-# C# Snippets:
-/snippets/csharp/** @BillWagner
-# Visual Basic snippets:
-/snippets/visualbasic/** @BillWagner
-# F# Snippets:
-/snippets/fsharp/** @cartermp
-
-# System.Json samples:
-/snippets/core/system-text-json/** @tdykstra
-
-# Text runes:
-/snippets/core/rune/**  @tdykstra
-
 # WPF folders:
-/snippets/xaml/wpf/**   @thraka
-/snippets/csharp/wpf/**   @thraka
-/snippets/visualbasic/wpf/**   @thraka
-/snippets/desktop-guide/wpf/**   @thraka
+/wpf/**   @thraka
 
 # Windows forms areas:
-/winforms/** @thraka
-/snippets/winforms/**  @thraka
-
+/windowsforms/** @thraka
