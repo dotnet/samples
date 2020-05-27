@@ -12,25 +12,17 @@ The content team tracks issues for .NET documentation in the [dotnet/docs](https
 - For existing samples, file the issue on the page with the sample.
 - To suggest new samples, file the issue on the index page where you want to see the new sample.
 
-There are two classes of code in this repository:
+The code in this repository represents programs that demonstrate application or library scenarios. These samples often use more than one technology, feature, or toolkit. Each sample has a readme.md file that explains the sample and links to resources for more information.
 
-- **Snippets** represent small focused examples that demonstrate one feature or syntax. These should be no more than a single screen of code.
-- **Samples** represent programs that demonstrate application or library scenarios. These samples are typically larger than snippets, and often use more than one technology, feature, or toolkit. The readme.md file for each sample will refer to the article so that
-you can read more about the concepts covered in each sample.
-
-Both samples and snippets should be buildable projects. Those projects should build and
+Samples should be buildable projects. Those projects should build and
 run on the widest set of platforms possible for the given sample. In practice, that means building .NET Core-based console applications where possible. Samples that are specific to the web or a UI framework should add those tools as needed. Examples include web applications, mobile apps, WPF or WinForms apps, and so on.
 
 We are working toward having a CI system in place for all code. When you make any updates to samples, make sure each update is part of a buildable
 project. Ideally, add tests for correctness on samples as well.
 
-## Snippets
+## Building a sample
 
-Snippets are extracted from small programs that include the snippet. Snippets are all located in the top level **/snippets** folder. While snippets are small blocks of code, we want to move toward snippets that are part of buildable sample projects.
-
-## Building a snippet or sample
-
-You build any .NET Core snippet or sample using the .NET Core CLI, which can be installed with [the .NET Core SDK](https://www.microsoft.com/net/download). Then, execute
+Build any .NET Core sample using the .NET Core CLI, which is installed with [the .NET Core SDK](https://www.microsoft.com/net/download). Then run
 these commands from the CLI in the directory of any sample:
 
 ```console
@@ -52,7 +44,7 @@ a specific platform. Other samples and snippets require the .NET Framework
 and will run on Windows platforms, and will need the Developer Pack for
 the target Framework version.
 
-## Creating new samples or snippets
+## Creating new samples
 
 If you wish to add a code sample:
 
