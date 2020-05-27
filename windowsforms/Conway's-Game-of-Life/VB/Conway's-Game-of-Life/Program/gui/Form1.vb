@@ -30,6 +30,8 @@
 
         _animation = New Animation(DataGridView1)
 
+        Me.Text = $"Conway's Game of Life -- {System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription} ({System.Runtime.InteropServices.RuntimeInformation.OSArchitecture})"
+
     End Sub
 
     Private Sub Form1_Shown(sender As Object, e As EventArgs) Handles Me.Shown
