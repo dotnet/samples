@@ -3,16 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnit.Project", "XUnit.TestProject\XUnit.Project.csproj", "{04082197-A92E-49DC-8349-F11CB93D9E8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XUnit.Project", "XUnit.TestProject\XUnit.Project.csproj", "{04082197-A92E-49DC-8349-F11CB93D9E8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnit.Project", "NUnit.TestProject\NUnit.Project.csproj", "{20D0BC71-F331-4D52-B281-7E743386C536}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NUnit.Project", "NUnit.TestProject\NUnit.Project.csproj", "{20D0BC71-F331-4D52-B281-7E743386C536}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSTest.Project", "MSTest.Project\MSTest.Project.csproj", "{2BFAD3EE-A562-4825-995D-462484112A59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSTest.Project", "MSTest.Project\MSTest.Project.csproj", "{2BFAD3EE-A562-4825-995D-462484112A59}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{11197C29-FF8A-40DA-8E27-9BD52125EAF8}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XUnit.Coverlet.Collector", "XUnit.Coverlet.Collector\XUnit.Coverlet.Collector.csproj", "{21BCE9AE-A737-4D42-B215-D542324C2333}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Numbers", "Numbers\Numbers.csproj", "{AAA46FA3-94B5-4D04-8A1A-C91207116A10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnit.Coverlet.MSBuild", "XUnit.Coverlet.MSBuild\XUnit.Coverlet.MSBuild.csproj", "{2A589CDE-DEDE-46D3-A9AC-EB80447D9572}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +39,18 @@ Global
 		{2BFAD3EE-A562-4825-995D-462484112A59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BFAD3EE-A562-4825-995D-462484112A59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BFAD3EE-A562-4825-995D-462484112A59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21BCE9AE-A737-4D42-B215-D542324C2333}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21BCE9AE-A737-4D42-B215-D542324C2333}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21BCE9AE-A737-4D42-B215-D542324C2333}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21BCE9AE-A737-4D42-B215-D542324C2333}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAA46FA3-94B5-4D04-8A1A-C91207116A10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAA46FA3-94B5-4D04-8A1A-C91207116A10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAA46FA3-94B5-4D04-8A1A-C91207116A10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAA46FA3-94B5-4D04-8A1A-C91207116A10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A589CDE-DEDE-46D3-A9AC-EB80447D9572}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A589CDE-DEDE-46D3-A9AC-EB80447D9572}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A589CDE-DEDE-46D3-A9AC-EB80447D9572}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A589CDE-DEDE-46D3-A9AC-EB80447D9572}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
