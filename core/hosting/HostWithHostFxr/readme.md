@@ -6,7 +6,8 @@ This project demonstrates a way for a native process to host .NET Core using the
 
 Demonstrates how to locate and initialize .NET Core 3.0 from a non-.NET Core process and subsequently load and call into  a .NET Core assembly.
 
-The `nethost` header and library are part of the Microsoft.NETCore.DotNetAppHost package and are also installed as a runtime pack by the .NET SDK. The library should be deployed alongside the host. This sample uses the files installed with the .NET SDK.
+The `nethost` header and library are part of the `Microsoft.NETCore.DotNetAppHost` package and are also installed as a runtime pack by the .NET Core SDK. The library should be deployed alongside the host. This sample uses the files installed with the .NET Core SDK.  
+*Note: The `Microsoft.NETCore.DotNetAppHost` package is a [metapackage](https://docs.microsoft.com/dotnet/core/packages#metapackages) that doesn't actually contain the files. It only references RID-specific packages that contain the files. For example, the package with the actual files for `linux-x64` is `runtime.linux-x64.Microsoft.NETCore.DotNetAppHost`.*
 
 The `coreclr_delegates.h` and `hostfxr.h` files are copied from the [core-setup](https://github.com/dotnet/core-setup) repo.
 
@@ -14,7 +15,7 @@ Additional comments are contained in source and project files.
 
 ## Prerequisites
 
-* .NET Core 3.0 (at least Preview 7) - [https://dot.net](https://github.com/dotnet/core-sdk#installers-and-binaries)
+* [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download) or a later version
 
 * C++ compiler
   * Windows: `cl.exe`
