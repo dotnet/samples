@@ -25,13 +25,16 @@ Another part of the repo is the `GoBuilder` project.  This lives in  `<SolutionD
 
 ### Prereqs
 
-You must have Golang installed on your machine to build the Golang executables.  If you do not have Golang installed, check out [install Golang](https://golang.org/dl/ "Installing Golang") and for Windows machines, download and install the Microsoft Windows **.msi**.  Follow the installation instructions on the [download page](https://golang.org/doc/install?download=go1.14.4.windows-amd64.msi "The Go Programming Language: Getting Started").
+* .NET Core 3.1 - [https://dot.net](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+
+* Golang v1.12+ - You must have Golang installed on your machine to build the Golang executables.  If you do not have Golang installed, check out [install Golang](https://golang.org/dl/ "Installing Golang") and for Windows machines, download and install the Microsoft Windows **.msi**.  Follow the installation instructions on the [download page](https://golang.org/doc/install?download=go1.14.4.windows-amd64.msi "The Go Programming Language: Getting Started").
+
+
 
 ### Building the Shared Libraries
 
-If you want to run the **SharedC** project you have to build the solution first.  This will automatically build the 2 Go packages used in this sample (**helloworld** and **math**).
-This will build the libraries and add them to `<ProjectRoot>/SharedC/bin/<BuildConfig>/netcoreapp3.1`.  By default, the project is configured to build only the Windows **.dll's**.  If you want to build the Go libraries on a Linux machine you will need to change the target operating system in the `GoBuilder` powershell scripts (these can be found where the `GOOS` environment vairable is set in the `build-helloworld.ps1` and `build-math.ps1` scripts).  One of the pitfalls of cgo is cross platform compilation, it is not super simple.  The reason This is because cgo in Linux uses a different C compiler than stock Windows.  If you are interested in cgo cross platfrom compilation [this article](https://www.bluematador.com/blog/golang-pros-cons-part-5-cross-platform-compiling) will help with the proper compiler configurations.
+Before running the **SharedC** project you must build the solution first.  This will automatically build the 2 Go packages used in this sample (**helloworld** and **math**) and add them to `<ProjectRoot>/SharedC/bin/<BuildConfig>/netcoreapp3.1`.  By default, the project is configured to build only the Windows **.dll's**.  If you want to build the Go libraries on a Linux machine you will need to change the target operating system in the `GoBuilder` powershell scripts.  One of the pitfalls of cgo is cross platform compilation, it is not super simple.  The reason is because cgo in the Linux environment uses a different C compiler than stock Windows.  If you are interested in cgo cross platfrom compilation [this article](https://www.bluematador.com/blog/golang-pros-cons-part-5-cross-platform-compiling) will help with the proper compiler configurations.
 
 ### Running the Project
 
-Once the solution has been successfully built, all you need to do is run the `SharedC` project in **VisualStudio**.  A console will pop up and output the results of executing the imported Go functions.  You can debug the `Program.cs` as well if you want to step through and get a better idea of what is going on.
+Once the solution has been successfully built, all you need to do is run the `SharedC` project in **VisualStudio**.  A console will pop up, execute the imported Go functions, and output the results.  You can debug the `Program.cs` as well if you want to step through and get a better idea of what is going on.
