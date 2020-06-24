@@ -28,7 +28,7 @@
   </PropertyGroup>
 
   <Target Name="GoBuild" AfterTargets="BeforeCompile">
-    <Exec Command="powershell -file &quot;$(SolutionDir)Go\build-all.ps1&quot; -solutionDir $(SolutionDir) -buildConfig $(Configuration)" />
+    <Exec Command="powershell -file &quot;$(SolutionDir)Go\build-all.ps1&quot; -solutionDir $(SolutionDir) -outDir $(OutDir) -buildConfig $(Configuration)" />
   </Target>
 
 </Project>

@@ -30,8 +30,10 @@
 param 
 (
     [Parameter(Position=0, Mandatory=$true)]
-    [string] $solutionDir,
+    [string]$solutionDir,
     [Parameter(Position=1, Mandatory=$false)]
+    [string]$outDir = "bin\Debug\netcoreapp2.0\",
+    [Parameter(Position=2, Mandatory=$false)]
     [string]$buildConfig = "Debug"
 )
 
@@ -39,7 +41,9 @@ $orgDirectory = Get-Location
 
 $env:BUILD_GOROOT = "$solutionDir\Go"
 $env:BUILD_PATH   = "$solutionDir\SharedC\bin\$buildConfig\netcoreapp3.1"
-$env:LOG_PATH     = "$solutionDir\Go\GoBuilder\bin\$buildConfig\netstandard2.0"
+$env:LOG_PATH     = "$solutionDir"+"Go\GoBuilder\$outDir"
+
+echo $env:LOG_PATH
 
 Set-Location $env:BUILD_GOROOT
 
