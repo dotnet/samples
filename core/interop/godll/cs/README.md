@@ -37,4 +37,4 @@ Before running the **SharedC** project you must build the solution first.  This 
 
 ### Running the Project
 
-Once the solution has been successfully built, all you need to do is run the `SharedC` project in **VisualStudio**.  A console will pop up, execute the imported Go functions, and output the results.  You can debug the `Program.cs` as well if you want to step through and get a better idea of what is going on.
+Once the solution has been successfully built, all you need to do is run the **SharedC** project in **VisualStudio**.  A console will pop up, execute the imported Go functions, and output the results.  You can debug the `Program.cs` as well if you want to step through and get a better idea of what is going on.
