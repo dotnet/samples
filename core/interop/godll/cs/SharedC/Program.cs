@@ -6,7 +6,10 @@ namespace SharedC
 {
     unsafe class Program
     {
-        // shared library.
+        // GoString represents a String in
+        // golang and allows us to pass strings to
+        // the external shared library function as
+        // parameter values.
         struct GoString
         {
             public IntPtr p;
