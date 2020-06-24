@@ -76,6 +76,7 @@ namespace SharedC
 
             n           = (int) gs.len;
             Int64[] arr = new Int64[n];
+
             for (int i  = 0; i < n; i++)
             {
                 arr[i]  = Marshal.ReadInt64(gs.data, i*Marshal.SizeOf(typeof(Int64)));
@@ -86,6 +87,7 @@ namespace SharedC
 
             byte* buf       = (byte*)helloResult;
             byte[] lenBytes = new byte[4];
+
             for (int i = 0; i < 4; i++)
             {
                 lenBytes[i] = *buf++;
@@ -93,12 +95,12 @@ namespace SharedC
 
             // Read the result itself
 
-            n               = BitConverter.ToInt32(lenBytes, 0);
-            int j           = 0;
-            byte[] bytes    = new byte[n];
+            n            = BitConverter.ToInt32(lenBytes, 0);
+            int j        = 0;
+            byte[] bytes = new byte[n];
+
             for (int i = 0; i < n; i++)
             {
-
                 // Skip the first 4 bytes because
                 // they hold the size
 
