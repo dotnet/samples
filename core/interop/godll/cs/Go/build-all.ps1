@@ -23,6 +23,9 @@
 #       -solutionDir        - The directory that the solution is in.  This
 #                             is needed to build the Golang libraries.
 #
+#       -outDir             - The directory where build logs and archives
+#                             will land.
+#
 #       -buildConfig Debug  - Optionally specifies the build configuration,
 #                             either "Debug" or "Release".  This defaults
 #                             to "Debug".
