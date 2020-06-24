@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29021.104
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoBuilder", "Go\GoBuilder\GoBuilder.csproj", "{ABC9475D-2E88-4A9D-9FED-4B73D28702AF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedC", "SharedC\SharedC.csproj", "{F46FAFEC-7590-4F12-B143-493F8C7861CB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Go", "Go", "{CF919763-8E02-42C8-B603-BA8510FC25F4}"
+	ProjectSection(SolutionItems) = preProject
+		Go\build-all.ps1 = Go\build-all.ps1
+		Go\build-helloworld.ps1 = Go\build-helloworld.ps1
+		Go\build-math.ps1 = Go\build-math.ps1
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CodeDoc|Any CPU = CodeDoc|Any CPU
+		CodeDoc|x64 = CodeDoc|x64
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABC9475D-2E88-4A9D-9FED-4B73D28702AF}.CodeDoc|Any CPU.ActiveCfg = CodeDoc|Any CPU
+		{ABC9475D-2E88-4A9D-9FED-4B73D28702AF}.CodeDoc|Any CPU.Build.0 = CodeDoc|Any CPU
+		{ABC9475D-2E88-4A9D-9FED-4B73D28702AF}.CodeDoc|x64.ActiveCfg = CodeDoc|Any CPU
+		{ABC9475D-2E88-4A9D-9FED-4B73D28702AF}.CodeDoc|x64.Build.0 = CodeDoc|Any CPU
+		{ABC9475D-2E88-4A9D-9FED-4B73D28702AF}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{ABC9475D-2E88-4A9D-9FED-4B73D28702AF}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{ABC9475D-2E88-4A9D-9FED-4B73D28702AF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{ABC9475D-2E88-4A9D-9FED-4B73D28702AF}.Debug|x64.Build.0 = Debug|Any CPU
+		{ABC9475D-2E88-4A9D-9FED-4B73D28702AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABC9475D-2E88-4A9D-9FED-4B73D28702AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABC9475D-2E88-4A9D-9FED-4B73D28702AF}.Release|x64.ActiveCfg = Release|Any CPU
+		{ABC9475D-2E88-4A9D-9FED-4B73D28702AF}.Release|x64.Build.0 = Release|Any CPU
+		{F46FAFEC-7590-4F12-B143-493F8C7861CB}.CodeDoc|Any CPU.ActiveCfg = Release|Any CPU
+		{F46FAFEC-7590-4F12-B143-493F8C7861CB}.CodeDoc|Any CPU.Build.0 = Release|Any CPU
+		{F46FAFEC-7590-4F12-B143-493F8C7861CB}.CodeDoc|x64.ActiveCfg = Release|x64
+		{F46FAFEC-7590-4F12-B143-493F8C7861CB}.CodeDoc|x64.Build.0 = Release|x64
+		{F46FAFEC-7590-4F12-B143-493F8C7861CB}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{F46FAFEC-7590-4F12-B143-493F8C7861CB}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{F46FAFEC-7590-4F12-B143-493F8C7861CB}.Debug|x64.ActiveCfg = Debug|x64
+		{F46FAFEC-7590-4F12-B143-493F8C7861CB}.Debug|x64.Build.0 = Debug|x64
+		{F46FAFEC-7590-4F12-B143-493F8C7861CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F46FAFEC-7590-4F12-B143-493F8C7861CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F46FAFEC-7590-4F12-B143-493F8C7861CB}.Release|x64.ActiveCfg = Release|x64
+		{F46FAFEC-7590-4F12-B143-493F8C7861CB}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ABC9475D-2E88-4A9D-9FED-4B73D28702AF} = {CF919763-8E02-42C8-B603-BA8510FC25F4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {530F0D65-70C4-43A2-A104-19A3C8E4569E}
+	EndGlobalSection
+EndGlobal
