@@ -6,8 +6,8 @@ products:
 - dotnet-core
 page_type: sample
 name: "Calling Go functions from C# code"
-urlFragment: "cyrillic-transliteration-cs"
-description: "A simple example of using golang's [cgo](https://golang.org/cmd/cgo/) library and .NET's [P/Invoke](https://docs.microsoft.com/en-us/dotnet/standard/native-interop/pinvoke) to compile Go code into .dll's that's functions can be called from C# code."
+urlFragment: "shared-c-dotnet-cs"
+description: "A simple example of using golang's cgo library and .NET's P/Invoke to compile Go code into .dll's that's functions can be called from C# code."
 ---
 
 # Calling Go functions from C# code
