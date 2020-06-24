@@ -29,6 +29,6 @@ You must have Golang installed on your machine to build the Golang executables. 
 If you want to run the **SharedC** project you have to build the solution first.  This will automatically build the 2 Go packages used in this sample (**helloworld** and **math**).
 This will build the libraries and add them to `<ProjectRoot>/SharedC/bin/<BuildConfig>/netcoreapp3.1`.  By default, the project is configured to build only the Windows **.dll's**.  If you want to build the Go libraries for on a Linux machine you will need to change the target operating system in the `GoBuilder` powershell scripts.  These can be changed via the `GOOS` environment vairable.  One of the pitfalls of cgo is cross platform compilation, it is not super simple.  The reason This is because cgo in Linux uses a different C compiler than stock Windows.  If you are interested in cgo cross platfrom compilation [this article] will help with the proper compiler configurations.
 
-### Running the project
+### Running the Project
 Once the solution has been successfully built, all you need to do is run the `SharedC` project in **VisualStudio**.  A console will pop up and output the results of executing the imported Go functions.  These can be seen in `Program.cs`.
 
