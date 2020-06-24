@@ -6,7 +6,7 @@ products:
 - dotnet-core
 page_type: sample
 name: "Calling Go functions from C# code"
-urlFragment: "shared-c-dotnet-cs"
+urlFragment: "golang-shared-c-dotnet-cs"
 description: "A simple example of using golang's cgo library and .NET's P/Invoke to call Go functions from C# code like a C-style API."
 ---
 
