@@ -19,7 +19,7 @@ This project consists of 2 primary components:
 1. The .NET Core app that imports and calls functions from the Shared C libraries.  This code is found in `<SolutionDir>/SharedC/Program.cs`.
 2. The Go packages that define the imported functions and are compiled into the Shared C libraries.  This code is located in `<SolutionDir>/Go/src/shared-c/cmd/*`.  There are 2 Go projects, **helloworld** and **math**.  Each deal with different use cases and exhibits how to write C-style APIs in Go that handle a variety of data types and situations.
 
-Another part of the repo is the `GoBuilder` project.  This lives in  `<SolutionDir>/Go/` and is responsible for automating the building of the Go libraries.  On build `GoBuilder` triggers an event that executes a series of powershell scripts.  If errors occur when building the Go libraries the Go build logs can be found in  `<SolutionDir>/Go/GoBuilder/bin/<BuildConfig>/netstandard2.0`.
+Another part of the repo is the `GoBuilder` project.  This lives in  `<SolutionDir>/Go/` and is responsible for automating the building of the Go libraries.  On build, `GoBuilder` executes a build-all powershell script that builds all of the Go packages in the repo.  If errors occur when building the Go libraries the Go build logs can be found in  `<SolutionDir>/Go/GoBuilder/bin/<BuildConfig>/netstandard2.0`.
 
 ## Building and Running
 
