@@ -12,7 +12,7 @@ description: "A simple example of using golang's cgo library and .NET's P/Invoke
 
 # Calling Go functions from C# code
 
-Go has a library called [cgo](https://golang.org/cmd/cgo/) that enables the creation of Go packages that call C code.  One of cgo's coolest features is that it enables Go packages to be compiled into C shared libraries, exposing Go functions as a C-style APIs.  This sample shows how we can compile a Go project into a Shared C **.dll** and call Go functions from within .NET Core project using .NET's [P/Invoke](https://docs.microsoft.com/en-us/dotnet/standard/native-interop/pinvoke).
+Go has a library called [cgo](https://golang.org/cmd/cgo/) that enables the creation of Go packages that call C code.  One of cgo's coolest features is that it enables Go packages to be compiled into C shared libraries, exposing Go functions as a C-style APIs.  This sample shows how we can compile a Go project into a Shared C **.dll** and call Go functions from within a .NET Core project using .NET's [P/Invoke](https://docs.microsoft.com/en-us/dotnet/standard/native-interop/pinvoke).
 
 This project consists of 2 primary components:
 
