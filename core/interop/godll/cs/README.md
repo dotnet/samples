@@ -25,7 +25,7 @@ Another part of the repo is the `GoBuilder` project.  This lives in  `<SolutionD
 
 ### Prereqs
 
-* **.NET Core 3.1** - [https://dot.net](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+* **.NET Core 3.1** - [download](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 * **Golang v1.12+** - You must have Golang installed on your machine to build the Golang executables.  If you do not have Golang installed, check out [install Golang](https://golang.org/dl/ "Installing Golang") and for Windows machines, download and install the Microsoft Windows **.msi**.  Follow the installation instructions on the [download page](https://golang.org/doc/install?download=go1.14.4.windows-amd64.msi "The Go Programming Language: Getting Started").
 
