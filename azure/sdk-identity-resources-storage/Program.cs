@@ -21,7 +21,7 @@ namespace AzureIdentityStorageExample
         {
             string subscriptionId = Environment.GetEnvironmentVariable("AZURE_SUBSCRIPTION_ID");
 
-            DefaultAzureCredential credentials = new DefaultAzureCredential();
+            var credential = new DefaultAzureCredential();
 
             using var resourcesManagementClient = new ResourcesManagementClient(subscriptionId, credential);
             using var storageManagementClient = new StorageManagementClient(subscriptionId, credential);
