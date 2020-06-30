@@ -24,7 +24,7 @@ Use the [Azure Cloud Shell](https://shell.azure.com) to create/get client secret
     }
     ```
 
-* Use the returned credentials above to set the following environment variables:
+* Use the returned credentials above to set the following environment variables.
 
     |Variable name|Value
     |-|-
