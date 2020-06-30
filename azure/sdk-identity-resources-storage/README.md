@@ -2,7 +2,7 @@
 
 * An [Azure subscription]().
 
-## Preparing to run the sample
+## Prepare to run the sample
 
 Use the [Azure Cloud Shell](https://shell.azure.com) to create/get client secret credentials.
 
