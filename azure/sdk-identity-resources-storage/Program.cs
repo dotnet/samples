@@ -71,22 +71,20 @@ namespace AzureIdentityStorageExample
 
         private static async Task<string> GetStorageAccountName(StorageManagementClient storageManagementClient)
         {
-            bool foundAvailableName = false;
-            string storageAccountName = string.Empty;
-
-            while (!foundAvailableName)
+            string storageAccountName = RandomName("storage", 20);
+            while (true)
             {
-                storageAccountName = RandomName("storage", 20);
                 Response<CheckNameAvailabilityResult> availability =
                     await storageManagementClient.StorageAccounts.CheckNameAvailabilityAsync(
                         new StorageAccountCheckNameAvailabilityParameters(storageAccountName));
 
-                if (availability.Value.NameAvailable.GetValueOrDefault())
+                if (availability.Value.NameAvailable)
                 {
-                    foundAvailableName = true;
+                    return storageAccountName;
                 }
+                
+                storageAccountName = RandomName("storage", 20);
             }
-            return storageAccountName;
         }
 
         private static async Task UploadBlobToStorageAccountUsingClientConnectionString(StorageManagementClient storageManagementClient, string resourceGroupName, string storageName)
