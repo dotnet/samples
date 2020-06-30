@@ -4,7 +4,7 @@
 
 ## Prepare to run the sample
 
-Use the [Azure Cloud Shell](https://shell.azure.com) to create/get client secret credentials.
+Use the [Azure Cloud Shell](https://shell.azure.com) to create and get client secret credentials:
 
 * Create a service principal and configure its access to Azure resources:
 
