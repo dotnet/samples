@@ -40,7 +40,6 @@ namespace AzureIdentityStorageExample
 
             await DeleteResourceGroup(resourcesManagementClient, resourceGroupName);
 
-            return;
         }
 
         private static async Task DeleteResourceGroup(ResourcesManagementClient resourcesManagementClient, string resourceGroupName)
