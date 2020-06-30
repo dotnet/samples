@@ -28,7 +28,7 @@ Use the [Azure Cloud Shell](https://shell.azure.com) to create/get client secret
 
     |Variable name|Value
     |-|-
-    |`AZURE_CLIENT_ID`|service principal's app id
+    |`AZURE_CLIENT_ID`|service principal's app identifier
     |`AZURE_TENANT_ID`|id of the principal's Azure Active Directory tenant
     |`AZURE_CLIENT_SECRET`|one of the service principal's client secrets
 
