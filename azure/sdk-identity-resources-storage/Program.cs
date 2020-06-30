@@ -93,9 +93,10 @@ namespace AzureIdentityStorageExample
         {
             Console.WriteLine("Creating a container and uploading a blob...");
 
-            string uploadFileName = "dotnet-bot.png";
-            string containerName = "images";
-            string connectionString = await GetStorageConnectionString(storageManagementClient, resourceGroupName, storageName);
+            const string uploadFileName = "dotnet-bot.png";
+            const string containerName = "images";
+            
+            string connectionString = await GetStorageConnectionStringAsync(storageManagementClient, resourceGroupName, storageName);
 
             var containerClient = new BlobContainerClient(connectionString, containerName);
             await containerClient.CreateIfNotExistsAsync(publicAccessType: PublicAccessType.Blob);
@@ -103,7 +104,7 @@ namespace AzureIdentityStorageExample
             BlobClient blobClient = containerClient.GetBlobClient(uploadFileName);
             await blobClient.UploadAsync(uploadFileName);
 
-            Console.WriteLine($"Your blob is at https://{storageName}.blob.core.windows.net/{containerName}/{uploadFileName}");
+            Console.WriteLine($"Your blob is at {blobClient.Uri}");
         }
 
 
