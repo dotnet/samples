@@ -23,8 +23,8 @@ namespace AzureIdentityStorageExample
 
             DefaultAzureCredential credentials = new DefaultAzureCredential();
 
-            ResourcesManagementClient resourcesManagementClient = new ResourcesManagementClient(subscriptionId, credentials);
-            StorageManagementClient storageManagementClient = new StorageManagementClient(subscriptionId, credentials);
+            using var resourcesManagementClient = new ResourcesManagementClient(subscriptionId, credential);
+            using var storageManagementClient = new StorageManagementClient(subscriptionId, credential);
 
             // Create a Resource Group
             string resourceGroupName = await CreateResourceGroup(resourcesManagementClient);
