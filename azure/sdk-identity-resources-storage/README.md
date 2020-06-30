@@ -1,14 +1,19 @@
 ﻿## Prerequisites
+
 * An [Azure subscription]().
 
 ## Preparing to run the sample
+
 Use the [Azure Cloud Shell](https://shell.azure.com) to create/get client secret credentials.
 
- * Create a service principal and configure its access to Azure resources:
+* Create a service principal and configure its access to Azure resources:
+
     ```bash
     az ad sp create-for-rbac -n <your-application-name> --skip-assignment
     ```
+
     Output:
+
     ```json
     {
         "appId": "generated-app-ID",
@@ -18,6 +23,7 @@ Use the [Azure Cloud Shell](https://shell.azure.com) to create/get client secret
         "tenant": "tenant-ID"
     }
     ```
+
 * Use the returned credentials above to set the following environment variables:
 
     |variable name|value
@@ -27,11 +33,13 @@ Use the [Azure Cloud Shell](https://shell.azure.com) to create/get client secret
     |`AZURE_CLIENT_SECRET`|one of the service principal's client secrets
 
 * Get the account details of the subscription you want to use for this sample.
+
     ```bash
     az account show
     ```
 
     Output:
+
     ```json
     {
       "environmentName": "AzureCloud",
@@ -54,7 +62,7 @@ Use the [Azure Cloud Shell](https://shell.azure.com) to create/get client secret
 
     |variable name|value
     |-|-
-    |`AZURE_SUBSCRIPTION_ID`|service principal's app id
+    |`AZURE_SUBSCRIPTION_ID`|subscription id for resources
 
 ## Run the sample
 
