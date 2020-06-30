@@ -109,8 +109,9 @@ namespace AzureIdentityStorageExample
 
         private static async Task<string> GetStorageConnectionString(StorageManagementClient storageManagementClient, string resourceGroupName, string storageAccountName)
         {
-            Response<StorageAccountListKeysResult> keys = await storageManagementClient.StorageAccounts.ListKeysAsync(resourceGroupName, storageAccountName);
-            StorageAccountKey storageKey = keys.Value.Keys[0];
+            Response<StorageAccountListKeysResult> keysResponse = await storageManagementClient.StorageAccounts.ListKeysAsync(resourceGroupName, storageAccountName);
+            StorageAccountKey storageKey = keysResponse.Value.Keys[0];
+            
             return $"DefaultEndpointsProtocol=https;AccountName={storageAccountName};AccountKey={storageKey.Value};EndpointSuffix=core.windows.net;";
         }
 
