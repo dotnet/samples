@@ -26,7 +26,7 @@ Use the [Azure Cloud Shell](https://shell.azure.com) to create/get client secret
 
 * Use the returned credentials above to set the following environment variables:
 
-    |variable name|value
+    |Variable name|Value
     |-|-
     |`AZURE_CLIENT_ID`|service principal's app id
     |`AZURE_TENANT_ID`|id of the principal's Azure Active Directory tenant
