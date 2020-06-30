@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>2eec9aab-2e9b-4211-82f7-98c5894764e9</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="dotnet-bot.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="dotnet-bot.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Identity" Version="1.2.0-preview.4" />
+    <PackageReference Include="Azure.ResourceManager.Resources" Version="1.0.0-preview.1" />
+    <PackageReference Include="Azure.ResourceManager.Storage" Version="1.0.0-preview.1" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.5.0-preview.4" />
+  </ItemGroup>
+
+</Project>
