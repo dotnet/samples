@@ -17,8 +17,8 @@ Use the [Azure Cloud Shell](https://shell.azure.com) to create/get client secret
     ```json
     {
         "appId": "generated-app-ID",
-        "displayName": "dummy-app-name",
-        "name": "http://dummy-app-name",
+        "displayName": "sample-app-name",
+        "name": "http://sample-app-name",
         "password": "random-password",
         "tenant": "tenant-ID"
     }
