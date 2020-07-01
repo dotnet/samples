@@ -101,11 +101,11 @@ namespace AzureIdentityStorageExample
             string storageAccountName = RandomName("storage", 20);
             while (true)
             {
-                Response<CheckNameAvailabilityResult> availability =
+                Response<CheckNameAvailabilityResult> availabilityResponse =
                     await storageManagementClient.StorageAccounts.CheckNameAvailabilityAsync(
                         new StorageAccountCheckNameAvailabilityParameters(storageAccountName));
 
-                if (availability.Value.NameAvailable.GetValueOrDefault())
+                if (availabilityResponse.Value.NameAvailable.GetValueOrDefault())
                 {
                     return storageAccountName;
                 }
