@@ -24,7 +24,7 @@ namespace AzureIdentityStorageExample
         const string UploadFileName2 = "dotnet-bot_grilling.png";
         const string BlobContainerName = "images";
 
-        static async Task Main(string[] args)
+        static async Task Main()
         {
             string subscriptionId = Environment.GetEnvironmentVariable("AZURE_SUBSCRIPTION_ID");
 
