@@ -1,15 +1,15 @@
 ﻿## Prerequisites
 
-* An [Azure subscription]().
+* An [Azure subscription](https://azure.microsoft.com/free/dotnet/).
 
 ## Prepare to run the sample
 
 Use the [Azure Cloud Shell](https://shell.azure.com) to create and get client secret credentials:
 
-* Create a service principal and configure its access to Azure resources:
+1. Create a service principal and configure its access to Azure resources:
 
     ```bash
-    az ad sp create-for-rbac -n <your-application-name> --skip-assignment
+    az ad sp create-for-rbac -n <your-application-name>
     ```
 
     Output:
@@ -24,15 +24,27 @@ Use the [Azure Cloud Shell](https://shell.azure.com) to create and get client se
     }
     ```
 
-* Use the returned credentials above to set the following environment variables.
+    This creates a service principal. This is an identity for your app to use to perform Azure operations. The service principal is created with the *Contributor* role by default.
 
-    |Variable name|Value
-    |-|-
-    |`AZURE_CLIENT_ID`|service principal's app identifier
-    |`AZURE_TENANT_ID`|identifier of the principal's Azure Active Directory tenant
-    |`AZURE_CLIENT_SECRET`|one of the service principal's client secrets
+1. Assign the *Storage Blob Data Contributor* role to the new service principal. Use the URL in the `name` property from the output in the previous step, including `http://`.
 
-* Get the account details of the subscription you want to use for this sample.
+    ```bash
+    az role assignment create --role "Storage Blob Data Contributor" --assignee <sample-app-name-url>
+    ```
+
+    This will allow the service principal to perform blob data operations using Azure.Identity (as opposed to a connection string)
+
+1. Use the returned credentials from the first step to set the following environment variables.
+
+    |Variable name|Description|Value|
+    |-|-|-|
+    |`AZURE_CLIENT_ID`|Service principal's app identifier|`appId`|
+    |`AZURE_TENANT_ID`|Identifier of the principal's Azure Active Directory tenant|`tenant`|
+    |`AZURE_CLIENT_SECRET`|Client app secret|`password`|
+
+    Azure.Identity reads these values from the environment at runtime to create a `DefaultAzureCredential` object.
+
+1. Get the account details of the subscription you want to use for this sample.
 
     ```bash
     az account show
@@ -58,14 +70,21 @@ Use the [Azure Cloud Shell](https://shell.azure.com) to create and get client se
     }
     ```
 
-* Set the `AZURE_SUBSCRIPTION_ID` environment variable using the `id` property of the information retrieved in the previous step.
+1. Set an environment variable named `AZURE_SUBSCRIPTION_ID` using the `id` property of the information retrieved in the previous step.
 
-    |variable name|value
-    |-|-
-    |`AZURE_SUBSCRIPTION_ID`|subscription id for resources
+> [!NOTE]
+> Environment variables can be set in your operating system, or you can use a [*launchSettings.json* file](https://docs.microsoft.com/aspnet/core/fundamentals/environments?view=aspnetcore-3.1#lsj).
 
 ## Run the sample
 
 ```bash
 dotnet run
+```
+
+## Clean up the service principal
+
+You should remove unused service principals. Use the URL in the `name` property from the output in the first step, including `http://`.
+
+```bash
+az ad sp delete --id <sample-app-name-url>
 ```

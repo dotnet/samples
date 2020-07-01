@@ -3,15 +3,18 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UserSecretsId>2eec9aab-2e9b-4211-82f7-98c5894764e9</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="dotnet-bot.png" />
+    <None Remove="dotnet-bot_chilling.png" />
+    <None Remove="dotnet-bot_grilling.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="dotnet-bot.png">
+    <Content Include="dotnet-bot_chilling.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dotnet-bot_grilling.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
@@ -21,10 +24,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Azure.Identity" Version="1.2.0-preview.4" />
+    <PackageReference Include="Azure.Identity" Version="1.1.1" />
     <PackageReference Include="Azure.ResourceManager.Resources" Version="1.0.0-preview.1" />
     <PackageReference Include="Azure.ResourceManager.Storage" Version="1.0.0-preview.1" />
-    <PackageReference Include="Azure.Storage.Blobs" Version="12.5.0-preview.4" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.4.4" />
   </ItemGroup>
 
 </Project>
