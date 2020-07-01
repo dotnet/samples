@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Threading.Tasks;
 
 using Azure;
@@ -23,8 +24,8 @@ namespace AzureIdentityStorageExample
 
             var credential = new DefaultAzureCredential();
 
-            using var resourcesManagementClient = new ResourcesManagementClient(subscriptionId, credential);
-            using var storageManagementClient = new StorageManagementClient(subscriptionId, credential);
+            var resourcesManagementClient = new ResourcesManagementClient(subscriptionId, credential);
+            var storageManagementClient = new StorageManagementClient(subscriptionId, credential);
 
             // Create a Resource Group
             string resourceGroupName = await CreateResourceGroup(resourcesManagementClient);
@@ -42,12 +43,14 @@ namespace AzureIdentityStorageExample
 
         }
 
-        private static async Task DeleteResourceGroup(ResourcesManagementClient resourcesManagementClient, string resourceGroupName)
+        private static async Task<string> CreateResourceGroup(ResourcesManagementClient resourcesManagementClient)
         {
-            Console.WriteLine($"Deleting resource group {resourceGroupName}...");
-            ResourceGroupsDeleteOperation deleteOperation = await resourcesManagementClient.ResourceGroups.StartDeleteAsync(resourceGroupName);
-            await deleteOperation.WaitForCompletionAsync();
+            string resourceGroupName = RandomName("rg", 20);
+            Console.WriteLine($"Creating resource group {resourceGroupName}...");
+            await resourcesManagementClient.ResourceGroups.CreateOrUpdateAsync(resourceGroupName, new ResourceGroup("West US"));
             Console.WriteLine("Done!");
+
+            return resourceGroupName;
         }
 
         private static async Task<string> CreateStorageAccount(StorageManagementClient storageManagementClient, string rgName)
@@ -107,32 +110,31 @@ namespace AzureIdentityStorageExample
             Console.WriteLine($"Your blob is at {blobClient.Uri}");
         }
 
-
         static async Task<string> GetStorageConnectionStringAsync(StorageManagementClient storageManagementClient, string resourceGroupName, string storageAccountName)
         {
             Response<StorageAccountListKeysResult> keysResponse = await storageManagementClient.StorageAccounts.ListKeysAsync(resourceGroupName, storageAccountName);
             StorageAccountKey storageKey = keysResponse.Value.Keys[0];
-            
+
             return $"DefaultEndpointsProtocol=https;AccountName={storageAccountName};AccountKey={storageKey.Value};EndpointSuffix=core.windows.net;";
         }
 
-        private static async Task<string> CreateResourceGroup(ResourcesManagementClient resourcesManagementClient)
+        private static async Task DeleteResourceGroup(ResourcesManagementClient resourcesManagementClient, string resourceGroupName)
         {
-            string resourceGroupName = RandomName("rg", 20);
-            Console.WriteLine($"Creating resource group {resourceGroupName}...");
-            await resourcesManagementClient.ResourceGroups.CreateOrUpdateAsync(resourceGroupName, new ResourceGroup("West US"));
+            Console.WriteLine($"Deleting resource group {resourceGroupName}...");
+            ResourceGroupsDeleteOperation deleteOperation = await resourcesManagementClient.ResourceGroups.StartDeleteAsync(resourceGroupName);
+            await deleteOperation.WaitForCompletionAsync();
             Console.WriteLine("Done!");
-
-            return resourceGroupName;
         }
+
+
 
         static string RandomName(string prefix, int maxLen)
         {
             var random = new Random();
-            string s = prefix;
+            var sb = new StringBuilder(prefix);
             for (int i = 0; i < (maxLen - prefix.Length); i++)
-                s = String.Concat(s, random.Next(10).ToString());
-            return s;            
+                sb.Append(random.Next(10).ToString());
+            return sb.ToString();
         }
     }
 }
