@@ -1,4 +1,4 @@
-﻿---
+---
 languages:
 - csharp
 products:
@@ -9,6 +9,7 @@ name: "Azure Identity, Resource Management, and Storage sample"
 urlFragment: "azure-identity-resource-management-storage"
 description: "A sample console application that shows how to the Azure SDK for .NET to authenticate an app using a service principal, create a resource group, create a storage account, and upload a blob."
 ---
+
 # Azure Identity, Resource Management, and Storage sample
 
 This sample console application accomplishes the following tasks using the Azure SDK for .NET:
