@@ -21,6 +21,9 @@ This sample console application accomplishes the following tasks using the Azure
 * Uploads an image to the storage account using `DefaultAzureCredential`.
 * Deletes the resource group and all of its contents.
 
+> [!NOTE]
+> This sample uses preview packages for *Azure.ResourceManager.Resource* and *Azure.ResourceManagement.Storage*. *Azure.Identity* and *Azure.Storage.Blobs* are generally available.
+
 ## Prerequisites
 
 * An [Azure subscription](https://azure.microsoft.com/free/dotnet/).
