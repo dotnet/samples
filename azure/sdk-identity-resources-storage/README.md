@@ -1,4 +1,26 @@
-﻿## Prerequisites
+﻿---
+languages:
+- csharp
+products:
+- dotnet-core
+- azure
+page_type: sample
+name: "Azure Identity, Resource Management, and Storage sample"
+urlFragment: "azure-identity-resource-management-storage"
+description: "A sample console application that shows how to the Azure SDK for .NET to authenticate an app using a service principal, create a resource group, create a storage account, and upload a blob."
+---
+# Azure Identity, Resource Management, and Storage sample
+
+This sample console application accomplishes the following tasks using the Azure SDK for .NET:
+
+* Creates a `DefaultAzureCredential` to represent the app's credentials
+* Creates a resource group
+* Creates a storage account in the resource group
+* Uploads an image to the storage account using a storage connection string
+* Uploads an image to the storage account using `DefaultAzureCredential`
+* Deletes the resource group and all of its contents.
+
+## Prerequisites
 
 * An [Azure subscription](https://azure.microsoft.com/free/dotnet/).
 

@@ -127,9 +127,9 @@ namespace AzureIdentityStorageExample
             await blobClient.UploadAsync(UploadFileName1);
 
             Console.WriteLine($"Your blob uploaded with a connection string is at:");
-            Console.WriteLine("\r\n");
+            Console.WriteLine("");
             Console.WriteLine(blobClient.Uri);
-            Console.WriteLine("\r\n");
+            Console.WriteLine("");
         }
 
         private static async Task UploadBlobUsingDefaultAzureCredentialAsync(StorageManagementClient storageManagementClient, string resourceGroupName, string storageName, TokenCredential credential)
@@ -145,9 +145,9 @@ namespace AzureIdentityStorageExample
             await blobClient.UploadAsync(UploadFileName2);
 
             Console.WriteLine($"Your blob uploaded with DefaultAzureCredential is at:");
-            Console.WriteLine("\r\n");
+            Console.WriteLine("");
             Console.WriteLine(blobClient.Uri);
-            Console.WriteLine("\r\n");
+            Console.WriteLine("");
         }
 
 
