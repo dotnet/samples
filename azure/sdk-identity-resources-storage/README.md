@@ -100,6 +100,7 @@ Use the [Azure Cloud Shell](https://shell.azure.com) to create and get client se
 ## Run the sample
 
 ```bash
+dotnet build
 dotnet run
 ```
 
