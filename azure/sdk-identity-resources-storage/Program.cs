@@ -20,8 +20,8 @@ namespace AzureIdentityStorageExample
     class Program
     {
         const string ResourceRegion = "West US";
-        const string UploadFileName1 = "dotnet-bot_chilling.png";
-        const string UploadFileName2 = "dotnet-bot_grilling.png";
+        const string DotNetBotChillingPng = "dotnet-bot_chilling.png";
+        const string DotNetBotGrillingPng = "dotnet-bot_grilling.png";
         const string BlobContainerName = "images";
 
         static async Task Main()
@@ -81,22 +81,22 @@ namespace AzureIdentityStorageExample
         {
             Console.WriteLine("Creating a new storage account...");
 
-            string storageAccountName = await GetStorageAccountName(storageManagementClient);
-            StorageAccountCreateParameters parms = new StorageAccountCreateParameters(
+            string storageAccountName = await GenerateStorageAccountNameAsync(storageManagementClient);
+            StorageAccountCreateParameters parameters = new StorageAccountCreateParameters(
                                                     new Sku("Standard_LRS"),
                                                     Kind.BlobStorage,
-                                                    ResourceRegion);
-            parms.AccessTier = AccessTier.Hot;
+                                                    ResourceRegion)
+                                                    { AccessTier = AccessTier.Hot };
 
-            StorageAccountsCreateOperation createStorageAccount =
-                await storageManagementClient.StorageAccounts.StartCreateAsync(rgName, storageAccountName, parms);
-            await createStorageAccount.WaitForCompletionAsync();
+            StorageAccountsCreateOperation createStorageAccountOperation =
+                await storageManagementClient.StorageAccounts.StartCreateAsync(rgName, storageAccountName, parameters);
+            await createStorageAccountOperation.WaitForCompletionAsync();
             Console.WriteLine($"Done creating account {storageAccountName}.");
 
             return storageAccountName;
         }
 
-        private static async Task<string> GetStorageAccountName(StorageManagementClient storageManagementClient)
+        private static async Task<string> GenerateStorageAccountNameAsync(StorageManagementClient storageManagementClient)
         {
             string storageAccountName = RandomName("storage", 20);
             while (true)
@@ -116,15 +116,15 @@ namespace AzureIdentityStorageExample
 
         private static async Task UploadBlobUsingStorageConnectionStringAsync(StorageManagementClient storageManagementClient, string resourceGroupName, string storageName)
         {
-            Console.WriteLine("Creating a container and uploading a blob using a storage connection string...");
+            Console.WriteLine($"Creating a container and uploading blob {DotNetBotChillingPng} using a storage connection string...");
 
             string connectionString = await GetStorageConnectionStringAsync(storageManagementClient, resourceGroupName, storageName);
 
             var containerClient = new BlobContainerClient(connectionString, BlobContainerName);
             await containerClient.CreateIfNotExistsAsync(publicAccessType: PublicAccessType.Blob);
 
-            BlobClient blobClient = containerClient.GetBlobClient(UploadFileName1);
-            await blobClient.UploadAsync(UploadFileName1);
+            BlobClient blobClient = containerClient.GetBlobClient(DotNetBotChillingPng);
+            await blobClient.UploadAsync(DotNetBotChillingPng);
 
             Console.WriteLine($"Your blob uploaded with a connection string is at:");
             Console.WriteLine("");
@@ -134,15 +134,15 @@ namespace AzureIdentityStorageExample
 
         private static async Task UploadBlobUsingDefaultAzureCredentialAsync(StorageManagementClient storageManagementClient, string resourceGroupName, string storageName, TokenCredential credential)
         {
-            Console.WriteLine("Uploading a blob using DefaultAzureCredential...");
+            Console.WriteLine($"Uploading blob {DotNetBotGrillingPng} using DefaultAzureCredential...");
 
             string connectionString = await GetStorageConnectionStringAsync(storageManagementClient, resourceGroupName, storageName);
 
             string blobEndpoint = storageManagementClient.StorageAccounts.GetProperties(resourceGroupName, storageName).Value.PrimaryEndpoints.Blob;
             var containerClient = new BlobContainerClient(new Uri($"{blobEndpoint}{BlobContainerName}"), credential);
 
-            BlobClient blobClient = containerClient.GetBlobClient(UploadFileName2);
-            await blobClient.UploadAsync(UploadFileName2);
+            BlobClient blobClient = containerClient.GetBlobClient(DotNetBotGrillingPng);
+            await blobClient.UploadAsync(DotNetBotGrillingPng);
 
             Console.WriteLine($"Your blob uploaded with DefaultAzureCredential is at:");
             Console.WriteLine("");
