@@ -211,3 +211,4 @@ _dependentPackages/
 # Fake
 .fake/
 
+/azure/sdk-identity-resources-storage/Properties/launchSettings.json
