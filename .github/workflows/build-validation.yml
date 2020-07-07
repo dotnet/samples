@@ -39,8 +39,10 @@ jobs:
     - name: Setup .NET Core SDK Preview
       if: ${{ env.DOTNET_DO_INSTALL == 'true' }}
       run: |
+        echo "Downloading dotnet-install.ps1"
         Invoke-WebRequest https://dot.net/v1/dotnet-install.ps1 -OutFile dotnet-install.ps1
-        .\dotnet-install.ps1 -InstallDir "c:\program files\dotnet" -DryRun -Channel "${{ env.DOTNET_VERSION }}"
+        echo "Installing dotnet version ${{ env.DOTNET_INSTALLER_CHANNEL }}"
+        .\dotnet-install.ps1 -InstallDir "c:\program files\dotnet" -Channel "${{ env.DOTNET_INSTALLER_CHANNEL }}"
       
     # Install locate projs global tool
     - name: Install LocateProjects tool
