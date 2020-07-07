@@ -24,8 +24,20 @@ This sample is written in Visual Basic and targets .NET 5.0 running on Windows. 
 
 ## Building the sample
 
-Build and run the demo:
+To download and run the sample, follow these steps:
 
-```
-TaskDialogDemo\vb> dotnet run
-```
+01. Download and unzip the sample.
+
+01. In Visual Studio 2019 or later:
+
+    01. On the menu bar, choose **File** > **Open** > **Project/Solution**.
+
+    01. Navigate to the folder that holds the unzipped sample code, and open the project (*.vbproj*) file.
+
+    01. Choose the F5 key, or Ctrl+F5 keys, to run the project.
+
+01. From the command line:
+
+    01. Navigate to the folder that holds the unzipped sample code.
+
+    01. At the command line, type `dotnet run`.
