@@ -1,6 +1,6 @@
 # WPF-WinRT
 
-This sample shows how to consume the Windows 10 API from .NET Core and .Net Framework projects.
+This sample shows how to consume the Windows 10 API from .NET Core and .NET Framework projects.
 
 ## Pre-requisites
 
