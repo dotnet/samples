@@ -7,7 +7,6 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-
   <ItemGroup>
     <ApplicationDefinition Include="..\WPF-WinRT-NetFx\App.xaml" Link="App.xaml" />
     <Compile Include="..\WPF-WinRT-NetFx\App.xaml.cs" Link="App.xaml.cs" />

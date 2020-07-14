@@ -8,7 +8,7 @@
     <AssemblyName>WinFormGraphics</AssemblyName>
 
     <!-- Don't automatically generate assembly info attributes
-      found in AssemblyInfo.vb. This property is useful for 
+      found in AssemblyInfo.vb. This property is useful for
       applications ported from NetFx, which may have used
       AssemblyInfo.vb -->
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
@@ -19,7 +19,7 @@
         directory or descendant directories will be included.
         Optionally, they can be updated as demonstrated here
         so that dependent files will appear as expected in
-        Visual Studio's solution explorer. -->  
+        Visual Studio's solution explorer. -->
     <Compile Update="MainForm.Designer.vb">
       <DependentUpon>MainForm.vb</DependentUpon>
     </Compile>

@@ -7,7 +7,7 @@
     <AssemblyName>MatchingGame</AssemblyName>
 
     <!-- Don't automatically generate assembly info attributes
-         found in AssemblyInfo.vb. This property is useful for 
+         found in AssemblyInfo.vb. This property is useful for
          applications ported from NetFx, which may have used
          AssemblyInfo.vb -->
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>

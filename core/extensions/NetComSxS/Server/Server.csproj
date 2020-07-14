@@ -33,7 +33,7 @@
     <Copy SourceFiles="@(ServerOutput)"
           DestinationFolder="../Client/$(BaseOutputPath)$(Configuration)/%(ClientTfm.Identity)/" />
   </Target>
-  
+
   <Target Name="ServerUsage_NetFX"
           Condition="'$(NetFXServer)' == 'true' and '$(TargetFramework)' == 'net472'"
           AfterTargets="Build">

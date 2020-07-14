@@ -4,7 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
-  
+
   <!--
     The following 'COMReference' items were copied from a .NET Framework project. They were added by using the Visual Studio COM References window. For more information, see https://docs.microsoft.com/visualstudio/ide/managing-references-in-a-project.
 

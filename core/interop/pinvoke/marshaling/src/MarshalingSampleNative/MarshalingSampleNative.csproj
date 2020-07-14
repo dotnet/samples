@@ -12,7 +12,7 @@
       <Visible>false</Visible>
     </Content>
   </ItemGroup>
-  
+
   <!-- Target to build the native project, the output goes directly to the bin directory -->
   <Target Name="BuildNativeProject" AfterTargets="Build">
     <PropertyGroup>

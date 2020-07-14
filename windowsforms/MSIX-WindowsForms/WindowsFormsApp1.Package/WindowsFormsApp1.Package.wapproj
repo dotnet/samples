@@ -40,7 +40,7 @@
     <DefaultLanguage>en-US</DefaultLanguage>
     <PackageCertificateKeyFile>WindowsFormsApp1.Package_TemporaryKey.pfx</PackageCertificateKeyFile>
     <GenerateAppInstallerFile>false</GenerateAppInstallerFile>
-    <AppxAutoIncrementPackageRevision>false</AppxAutoIncrementPackageRevision>    
+    <AppxAutoIncrementPackageRevision>false</AppxAutoIncrementPackageRevision>
     <EntryPointProjectUniqueName>..\CoreWinFormsApp1\CoreWinFormsApp1.csproj</EntryPointProjectUniqueName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -75,7 +75,7 @@
   </ItemGroup>
   <Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" />
   <PropertyGroup>
-    <PackageOutputGroups>@(PackageOutputGroups);__GetPublishItems</PackageOutputGroups>    
+    <PackageOutputGroups>@(PackageOutputGroups);__GetPublishItems</PackageOutputGroups>
   </PropertyGroup>
   <Target Name="_ValidateAppReferenceItems" />
   <Target Name="_FixEntryPoint" AfterTargets="_ConvertItems">

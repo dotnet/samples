@@ -11,5 +11,5 @@
     <ProjectReference Include="src/MarshalingSample/*.csproj" />
     <ProjectReference Include="src/MarshalingSampleNative/*.csproj" />
   </ItemGroup>
-  
+
 </Project>
