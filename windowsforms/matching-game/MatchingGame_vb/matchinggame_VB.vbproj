@@ -3,6 +3,7 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
     <RootNamespace>MatchingGame</RootNamespace>
     <AssemblyName>MatchingGame</AssemblyName>
 
@@ -10,8 +11,8 @@
          found in AssemblyInfo.vb. This property is useful for
          applications ported from NetFx, which may have used
          AssemblyInfo.vb -->
-    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-  <UseWindowsForms>true</UseWindowsForms></PropertyGroup>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
 
   <ItemGroup></ItemGroup>
 
