@@ -71,7 +71,7 @@ Namespace WinFormGraphics
                 ' Draw a curve with default rendering mode. (No antialiasing.)
 
                 ' Specify a collection of points for the curve.
-                Dim ps As Point() = New Point() { _
+                Dim ps = New Point() {
 New Point(40, 250),
 New Point(80, 300),
 New Point(120, 200)}
@@ -79,7 +79,7 @@ New Point(120, 200)}
                 e.Graphics.DrawCurve(p, ps)
 
                 ' Specify a collection of points for the curve.
-                Dim ps2 As New Point() { _
+                Dim ps2 = New Point() {
 New Point(150, 250),
 New Point(190, 300),
 New Point(230, 200)}
