@@ -8,15 +8,15 @@ namespace Grouping
     {
         public bool Equals(string x, string y)
         {
-            return getCanonicalString(x) == getCanonicalString(y);
+            return GetCanonicalString(x) == GetCanonicalString(y);
         }
 
         public int GetHashCode(string obj)
         {
-            return getCanonicalString(obj).GetHashCode();
+            return GetCanonicalString(obj).GetHashCode();
         }
 
-        private string getCanonicalString(string word)
+        private string GetCanonicalString(string word)
         {
             char[] wordChars = word.ToCharArray();
             Array.Sort<char>(wordChars);
