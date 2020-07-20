@@ -65,28 +65,26 @@ namespace IDynamicInterfaceCastableSample
         [UnmanagedFunctionPointer(CallingConvention.StdCall)]
         public delegate void CreateObjectsDelegate([In, Out] IntPtr[] objects, int size);
 
-        static void Main(string[] _)
+        static void Main()
         {
             IntPtr nativeLib = NativeLibrary.Load("NativeLib", System.Reflection.Assembly.GetExecutingAssembly(), DllImportSearchPath.AssemblyDirectory);
             IntPtr func = NativeLibrary.GetExport(nativeLib, "CreateObjects");
 
             int count = 4;
-            IntPtr[] nativePtrArray = new IntPtr[count];
+            var nativePtrArray = new IntPtr[count];
 
             var createObjects = Marshal.GetDelegateForFunctionPointer<CreateObjectsDelegate>(func);
             createObjects(nativePtrArray, count);
 
             var interfaceMap = new Dictionary<RuntimeTypeHandle, RuntimeTypeHandle>
             {
-                { typeof(IGreet).TypeHandle, typeof(IGreetImpl).TypeHandle },
-                { typeof(ICompute).TypeHandle, typeof(IComputeImpl).TypeHandle },
+                [typeof(IGreet).TypeHandle] = typeof(IGreetImpl).TypeHandle,
+                [typeof(ICompute).TypeHandle] = typeof(IComputeImpl).TypeHandle
             };
             for (int i = 0; i < count; i++)
             {
-                using (NativeObject obj = new NativeObject($"Native Object #{i}", nativePtrArray[i], interfaceMap))
-                {
-                    InspectObject(obj);
-                }
+               using var obj = new NativeObject($"Native Object #{i}", nativePtrArray[i], interfaceMap);
+               InspectObject(obj);
             }
 
             NativeLibrary.Free(nativeLib);
@@ -109,7 +107,7 @@ namespace IDynamicInterfaceCastableSample
             if (obj is ICompute compute)
             {
                 Console.WriteLine($" - implements {nameof(ICompute)}");
-                Console.WriteLine($"    -- Returned sum: {compute.Sum(1, 2)}");
+                Console.WriteLine($"    -- Returned sum (1 + 2 + <objectNumber>): {compute.Sum(1, 2)}");
             }
             else
             {
