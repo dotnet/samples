@@ -1,5 +1,4 @@
-`IDynamicInterfaceCastable` Sample
-================
+# `IDynamicInterfaceCastable` Sample
 
 The [`IDynamicInterfaceCastable` API](https://github.com/dotnet/runtime/issues/36654) was introduced in .NET 5 as a way for creating a .NET class that supports interfaces which are not in its metadata.
 
@@ -7,8 +6,7 @@ This sample provides an implementation of `IDynamicInterfaceCastable` that proje
 
 Note: The sample uses `Marshal` APIs as part of interacting with the native library. The introduction of [C# function pointers](https://github.com/dotnet/csharplang/blob/994c41586e07e38fb6b30902b1715b4025d80c52/proposals/function-pointers.md) will allow that interaction to occur in a more performant manner.
 
-Prerequisites
-------------
+## Prerequisites
 
 * .NET Core 5.0 Preview 7 or later
 
@@ -16,8 +14,7 @@ Prerequisites
   * Windows: `cl.exe`
   * Linux/OSX: `g++`
 
-Build and Run
--------------
+## Build and Run
 
 1) In order to build and run, all prerequisites must be installed. The following are also required:
 
@@ -61,7 +58,6 @@ Native Object #3
 
 Note: The way the sample is built is relatively complicated. The goal is that it's possible to build and run the sample with simple `dotnet run` with minimal requirements on pre-installed tools. Typically real-world projects which have both managed and native components will use different build systems for each; for example msbuild/dotnet for managed and CMake for native.
 
-Visual Studio support
----------------------
+## Visual Studio support
 
-The `src\IDynamicInterfaceCastableSample.sln` can be used to open the sample in Visual Studio 2019. In order to be able to build from Visual Studio, though, it has to be started from the correct developer environment. From the developer environment console, start it with `devenv src\IDynamicInterfaceCastableSample.sln`. With that, the solution can be built. To run it set the start project to `IDynamicInterfaceCastableSample`.
+The `src\IDynamicInterfaceCastableSample.sln` can be used to open the sample in Visual Studio 2019. In order to be able to build from Visual Studio, though, it has to be started from the correct developer environment. From the developer environment console, start it with `devenv src\IDynamicInterfaceCastableSample.sln`. With that, the solution can be built. To run it, set the start project to `IDynamicInterfaceCastableSample`.
