@@ -8,15 +8,15 @@ namespace IDynamicInterfaceCastableSample
     {
         public string Name { get; }
 
-        private delegate int _QueryInterface(IntPtr _this, ref Guid iid, out IntPtr ppv);
-        private delegate uint _Release(IntPtr _this);
+        private delegate int QueryInterfaceDelegate(IntPtr _this, ref Guid iid, out IntPtr ppv);
+        private delegate uint ReleaseDelegate(IntPtr _this);
 
         [StructLayout(LayoutKind.Sequential)]
         private struct IUnknownVtbl
         {
-            public _QueryInterface QueryInterface;
+            public QueryInterfaceDelegate QueryInterface;
             public IntPtr AddRef;
-            public _Release Release;
+            public ReleaseDelegate Release;
         }
 
         [StructLayout(LayoutKind.Sequential)]

@@ -27,10 +27,10 @@ namespace IDynamicInterfaceCastableSample
                 public IntPtr QueryInterface;
                 public IntPtr AddRef;
                 public IntPtr Release;
-                public _Hello Hello;
+                public HelloDelegate Hello;
             }
 
-            private delegate void _Hello(IntPtr _this);
+            private delegate void HelloDelegate(IntPtr _this);
 
             void IGreet.Hello()
             {
@@ -49,10 +49,10 @@ namespace IDynamicInterfaceCastableSample
                 public IntPtr QueryInterface;
                 public IntPtr AddRef;
                 public IntPtr Release;
-                public _Sum Sum;
+                public SumDelegate Sum;
             }
 
-            private delegate int _Sum(IntPtr _this, int a, int b);
+            private delegate int SumDelegate(IntPtr _this, int a, int b);
 
             int ICompute.Sum(int a, int b)
             {
