@@ -31,50 +31,50 @@ namespace IDynamicInterfaceCastableSample
             public object Vtbl;
         }
 
-        private readonly Dictionary<RuntimeTypeHandle, RuntimeTypeHandle> interfaceTypeToImplType;
-        private readonly IntPtr objPtr;
-        private readonly IUnknownVtbl unknownVtbl;
-        private readonly Dictionary<RuntimeTypeHandle, NativeImpl> typeToNativeImpl = new Dictionary<RuntimeTypeHandle, NativeImpl>();
+        private readonly Dictionary<RuntimeTypeHandle, RuntimeTypeHandle> _interfaceTypeToImplType;
+        private readonly IntPtr _objPtr;
+        private readonly IUnknownVtbl _unknownVtbl;
+        private readonly Dictionary<RuntimeTypeHandle, NativeImpl> _typeToNativeImpl = new Dictionary<RuntimeTypeHandle, NativeImpl>();
 
         public NativeObject(string name, IntPtr obj, Dictionary<RuntimeTypeHandle, RuntimeTypeHandle> interfaceMap)
         {
             Name = name;
-            objPtr = obj;
-            interfaceTypeToImplType = interfaceMap;
+            _objPtr = obj;
+            _interfaceTypeToImplType = interfaceMap;
             VtblPtr vtblPtr = Marshal.PtrToStructure<VtblPtr>(obj);
-            unknownVtbl = Marshal.PtrToStructure<IUnknownVtbl>(vtblPtr.Vtbl);
+            _unknownVtbl = Marshal.PtrToStructure<IUnknownVtbl>(vtblPtr.Vtbl);
         }
 
         bool IDynamicInterfaceCastable.IsInterfaceImplemented(RuntimeTypeHandle interfaceType, bool throwIfNotImplemented)
         {
-            if (!interfaceTypeToImplType.ContainsKey(interfaceType))
+            if (!_interfaceTypeToImplType.ContainsKey(interfaceType))
                 return false;
 
-            if (typeToNativeImpl.ContainsKey(interfaceType))
+            if (_typeToNativeImpl.ContainsKey(interfaceType))
                 return true;
 
             Type type = Type.GetTypeFromHandle(interfaceType);
             Guid guid = type.GUID;
-            bool success = unknownVtbl.QueryInterface(objPtr, ref guid, out IntPtr ppv) == 0;
+            bool success = _unknownVtbl.QueryInterface(_objPtr, ref guid, out IntPtr ppv) == 0;
             if (!success)
                 return false;
 
-            typeToNativeImpl.Add(interfaceType, new NativeImpl { Ptr = ppv });
+            _typeToNativeImpl.Add(interfaceType, new NativeImpl { Ptr = ppv });
             return true;
         }
 
         RuntimeTypeHandle IDynamicInterfaceCastable.GetInterfaceImplementation(RuntimeTypeHandle interfaceType)
         {
             Type type = Type.GetTypeFromHandle(interfaceType);
-            if (!typeToNativeImpl.ContainsKey(interfaceType) || !interfaceTypeToImplType.ContainsKey(interfaceType))
+            if (!_typeToNativeImpl.ContainsKey(interfaceType) || !_interfaceTypeToImplType.ContainsKey(interfaceType))
                 return default;
 
-            return interfaceTypeToImplType[interfaceType];
+            return _interfaceTypeToImplType[interfaceType];
         }
 
         public T GetVtbl<T>(RuntimeTypeHandle interfaceType, out IntPtr ptr)
         {
-            if (!typeToNativeImpl.TryGetValue(interfaceType, out NativeImpl impl))
+            if (!_typeToNativeImpl.TryGetValue(interfaceType, out NativeImpl impl))
                 throw new InvalidOperationException();
 
             ptr = impl.Ptr;
@@ -90,11 +90,11 @@ namespace IDynamicInterfaceCastableSample
 
         public void Dispose()
         {
-            unknownVtbl.Release(objPtr);
+            _unknownVtbl.Release(_objPtr);
 
             // Release for every successful QI
-            for (var i = 0; i < typeToNativeImpl.Count; i++)
-                unknownVtbl.Release(objPtr);
+            for (var i = 0; i < _typeToNativeImpl.Count; i++)
+                _unknownVtbl.Release(_objPtr);
         }
     }
 }
