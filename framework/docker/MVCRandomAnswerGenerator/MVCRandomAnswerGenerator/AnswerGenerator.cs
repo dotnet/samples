@@ -34,7 +34,7 @@ namespace MVCRandomAnswerGenerator
         public static string GenerateAnswer(string question)
         {
             var r = new Random(question.GetHashCode());
-            var index = r.Next(Answers.Length - 1);
+            var index = r.Next(Answers.Length);
             return Answers[index];
         }
     }

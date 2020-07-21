@@ -7,7 +7,7 @@ products:
 page_type: sample
 name: "Azure Identity, Resource Management, and Storage sample"
 urlFragment: "azure-identity-resource-management-storage"
-description: "A sample console application that shows how to the Azure SDK for .NET to authenticate an app using a service principal, create a resource group, create a storage account, and upload a blob."
+description: "A sample console application that shows how to use the Azure SDK for .NET to authenticate an app using a service principal, create a resource group, create a storage account, and upload a blob."
 ---
 
 # Azure Identity, Resource Management, and Storage sample
@@ -34,7 +34,7 @@ Use the [Azure Cloud Shell](https://shell.azure.com) to create and get client se
 
 1. Create a service principal and configure its access to Azure resources:
 
-    ```bash
+    ```azurecli
     az ad sp create-for-rbac -n <your-application-name>
     ```
 
@@ -54,7 +54,7 @@ Use the [Azure Cloud Shell](https://shell.azure.com) to create and get client se
 
 1. Assign the *Storage Blob Data Contributor* role to the new service principal. Use the URL in the `name` property from the output in the previous step, including `http://`.
 
-    ```bash
+    ```azurecli
     az role assignment create --role "Storage Blob Data Contributor" --assignee <sample-app-name-url>
     ```
 
@@ -72,7 +72,7 @@ Use the [Azure Cloud Shell](https://shell.azure.com) to create and get client se
 
 1. Get the account details of the subscription you want to use for this sample.
 
-    ```bash
+    ```azurecli
     az account show
     ```
 
@@ -103,7 +103,7 @@ Use the [Azure Cloud Shell](https://shell.azure.com) to create and get client se
 
 ## Run the sample
 
-```bash
+```dotnetcli
 dotnet build
 dotnet run
 ```
@@ -112,6 +112,6 @@ dotnet run
 
 You should remove unused service principals. Use the URL in the `name` property from the output in the first step, including `http://`.
 
-```bash
+```azurecli
 az ad sp delete --id <sample-app-name-url>
 ```
