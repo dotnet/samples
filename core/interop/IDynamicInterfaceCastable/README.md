@@ -1,3 +1,15 @@
+---
+languages:
+- csharp
+- cpp
+products:
+- dotnet-core
+page_type: sample
+name: "IDynamicInterfaceCastable: Supporting Interfaces Dynamically"
+urlFragment: "idynamicinterfacecastable"
+description: "A .NET application that shows how to implement IDynamicInterfaceCastable to project a native object as implementing different managed interfaces."
+---
+
 # `IDynamicInterfaceCastable` Sample
 
 The [`IDynamicInterfaceCastable` API](https://github.com/dotnet/runtime/issues/36654) was introduced in .NET 5 as a way for creating a .NET class that supports interfaces which are not in its metadata.
@@ -12,6 +24,7 @@ Note: The sample uses `Marshal` APIs as part of interacting with the native libr
 
 * C++ compiler
   * Windows: `cl.exe`
+    * See [installation instructions](https://docs.microsoft.com/cpp/build/building-on-the-command-line#download-and-install-the-tools).
   * Linux/OSX: `g++`
 
 ## Build and Run
