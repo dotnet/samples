@@ -12,7 +12,7 @@ description: "A .NET application that shows how to implement IDynamicInterfaceCa
 
 # `IDynamicInterfaceCastable` Sample
 
-The [`IDynamicInterfaceCastable` API](https://github.com/dotnet/runtime/issues/36654) was introduced in .NET 5 as a way for creating a .NET class that supports interfaces which are not in its metadata.
+The [`IDynamicInterfaceCastable` API](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.idynamicinterfacecastable) was introduced in .NET 5 as a way for creating a .NET class that supports interfaces which are not in its metadata.
 
 This sample provides an implementation of `IDynamicInterfaceCastable` that projects a native object as implementing different known managed interfaces. It uses COM conventions (e.g. `QueryInterface`) for interacting with the native object, but does not require the actual COM system.
 
@@ -20,7 +20,7 @@ Note: The sample uses `Marshal` APIs as part of interacting with the native libr
 
 ## Prerequisites
 
-* .NET Core 5.0 Preview 7 or later
+* [.NET Core 5.0 SDK](https://dotnet.microsoft.com/download) Preview 7 or later
 
 * C++ compiler
   * Windows: `cl.exe`
@@ -31,7 +31,7 @@ Note: The sample uses `Marshal` APIs as part of interacting with the native libr
 
 1) In order to build and run, all prerequisites must be installed. The following are also required:
 
-    * On Linux/OSX, the C++ compiler (``g++`) must be on the path.
+    * On Linux/OSX, the C++ compiler (`g++`) must be on the path.
     * The C++ compiler (`cl.exe` or `g++`) and `dotnet` must be the same bitness (32-bit versus 64-bit).
       * On Windows, the sample is set up to use the bitness of `dotnet` to find the corresponding `cl.exe`
 
