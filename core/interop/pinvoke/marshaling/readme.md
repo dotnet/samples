@@ -1,26 +1,35 @@
-.NET Core PInvoke Marshaling Sample
-================
+---
+languages:
+- csharp
+- cpp
+products:
+- dotnet-core
+page_type: sample
+name: "P/Invoke Marshaling Sample"
+urlFragment: "pinvoke-marshal-arguments"
+description: "A .NET application that demonstrates different ways to marshal arguments to native functions when using P/Invokes."
+---
 
-This project demonstrates different ways to marshal arguments to native function when using PInvokes. Documentation can be found here for [PInvokes](https://docs.microsoft.com/dotnet/standard/native-interop/pinvoke) and here for the [Type marshaling](https://docs.microsoft.com/dotnet/standard/native-interop/type-marshaling).
+# .NET Core P/Invoke Marshaling Sample
 
-Prerequisites
-------------
+This project demonstrates different ways to marshal arguments to native functions when using P/Invokes. Documentation can be found here for [P/Invokes](https://docs.microsoft.com/dotnet/standard/native-interop/pinvoke) and here for the [Type marshaling](https://docs.microsoft.com/dotnet/standard/native-interop/type-marshaling).
 
-* .NET Core 3.0 (at least Preview 6) - [https://dot.net](https://github.com/dotnet/core-sdk#installers-and-binaries)
+## Prerequisites
+
+* [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download) (at least Preview 6)
 
 * C++ compiler
   * Windows: `cl.exe`
+    * See [installation instructions](https://docs.microsoft.com/cpp/build/building-on-the-command-line#download-and-install-the-tools).
   * Linux/OSX: `g++`
 
-Build and Run
--------------
+## Build and Run
 
 1) In order to build and run, all prerequisites must be installed. The following are also required:
 
-    * The C++ compiler (`cl.exe` or `g++`) must be on the path.
-      * On Windows, a [Developer Command Prompt for Visual Studio](https://docs.microsoft.com/cpp/build/building-on-the-command-line#developer_command_prompt_shortcuts) should be used.
+    * On Linux/OSX, the C++ compiler (`g++`) must be on the path.
     * The C++ compiler (`cl.exe` or `g++`) and `dotnet` must be the same bitness (32-bit versus 64-bit).
-      * On Windows, the default developer command prompt for VS uses the 32-bit compilers, but `dotnet` is typically 64-bit by default. Make sure to select the "x64 Native Tools Command Prompt for VS 2019" (or 2017).
+      * On Windows, the sample is set up to use the bitness of `dotnet` to find the corresponding `cl.exe`
 
 1) Navigate to the root directory and run `dotnet build`
 
@@ -33,7 +42,6 @@ Build and Run
 
 Note: The way the sample is built is relatively complicated. The goal is that it's possible to build and run the sample with simple `dotnet run` with minimal requirements on pre-installed tools. Typically real-world projects which have both managed and native components will use different build systems for each; for example msbuild/dotnet for managed and CMake for native.
 
-Visual Studio support
----------------------
+## Visual Studio support
 
-The `src\MarshalingSample.sln` can be used to open the sample in Visual Studio 2019. In order to be able to build from Visual Studio, though, it has to be started from the correct developer environment. From the developer environment console, start it with `devenv src\MarshalingSample.sln`. With that, the solution can be built. To run it set the start project to `MarshalingSample`.
+The `src\MarshalingSample.sln` can be used to open the sample in Visual Studio 2019. In order to be able to build from Visual Studio, though, it has to be started from the correct developer environment. From the developer environment console, start it with `devenv src\MarshalingSample.sln`. With that, the solution can be built. To run it, set the start project to `MarshalingSample`.

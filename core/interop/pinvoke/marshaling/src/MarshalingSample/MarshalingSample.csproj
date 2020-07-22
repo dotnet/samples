@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <OutputType>exe</OutputType>
+    <UseAppHost>true</UseAppHost>
     <DefineConstants Condition="'$(OS)' == 'Windows_NT'">$(DefineConstants);WINDOWS</DefineConstants>
   </PropertyGroup>
 
@@ -12,10 +13,13 @@
     </ProjectReference>
   </ItemGroup>
 
-  <Target Name="SetupForDemo" AfterTargets="Build">
+  <ItemGroup>
+    <Clean Include="$(BinRoot)/$(Configuration)/$(TargetName).*" />
+  </ItemGroup>
 
+  <Target Name="SetupForDemo" AfterTargets="Build">
     <ItemGroup>
-      <AllOutputs Include="$(OutputPath)MarshalingSample.*" />
+      <AllOutputs Include="$(OutputPath)$(TargetName).*" />
     </ItemGroup>
 
     <!-- Copy the project outputs to the bin directory -->
