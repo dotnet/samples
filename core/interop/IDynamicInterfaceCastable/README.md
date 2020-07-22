@@ -31,10 +31,9 @@ Note: The sample uses `Marshal` APIs as part of interacting with the native libr
 
 1) In order to build and run, all prerequisites must be installed. The following are also required:
 
-    * The C++ compiler (`cl.exe` or `g++`) must be on the path.
-      * On Windows, a [Developer Command Prompt for Visual Studio](https://docs.microsoft.com/cpp/build/building-on-the-command-line#developer_command_prompt_shortcuts) should be used.
+    * On Linux/OSX, the C++ compiler (``g++`) must be on the path.
     * The C++ compiler (`cl.exe` or `g++`) and `dotnet` must be the same bitness (32-bit versus 64-bit).
-      * On Windows, the default developer command prompt for VS uses the 32-bit compilers, but `dotnet` is typically 64-bit by default. Make sure to select the "x64 Native Tools Command Prompt for VS 2019" (or 2017).
+      * On Windows, the sample is set up to use the bitness of `dotnet` to find the corresponding `cl.exe`
 
 1) Navigate to the root directory and run `dotnet build`
 
