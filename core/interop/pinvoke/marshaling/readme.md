@@ -16,7 +16,7 @@ This project demonstrates different ways to marshal arguments to native function
 
 ## Prerequisites
 
-* [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download) (at least Preview 6)
+* [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download)
 
 * C++ compiler
   * Windows: `cl.exe`
