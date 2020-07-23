@@ -14,13 +14,14 @@ description: "A .NET application that shows how to implement IDynamicInterfaceCa
 
 The [`IDynamicInterfaceCastable` API](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.idynamicinterfacecastable) was introduced in .NET 5 as a way for creating a .NET class that supports interfaces which are not in its metadata.
 
-This sample provides an implementation of `IDynamicInterfaceCastable` that projects a native object as implementing different known managed interfaces. It uses COM conventions (e.g. `QueryInterface`) for interacting with the native object, but does not require the actual COM system.
+This sample provides an implementation of `IDynamicInterfaceCastable` that projects a native object as implementing different known managed interfaces. It uses COM conventions (such as `QueryInterface`) for interacting with the native object, but does not require the actual COM system.
 
-Note: The sample uses `Marshal` APIs as part of interacting with the native library. The introduction of [C# function pointers](https://github.com/dotnet/csharplang/blob/994c41586e07e38fb6b30902b1715b4025d80c52/proposals/function-pointers.md) will allow that interaction to occur in a more performant manner.
+> [!NOTE]
+> The sample uses `Marshal` APIs as part of interacting with the native library. The introduction of [C# function pointers](https://github.com/dotnet/csharplang/blob/994c41586e07e38fb6b30902b1715b4025d80c52/proposals/function-pointers.md) will allow that interaction to occur in a more performant manner.
 
 ## Prerequisites
 
-* [.NET Core 5.0 SDK](https://dotnet.microsoft.com/download) Preview 7 or later
+* [.NET 5.0 SDK](https://dotnet.microsoft.com/download) Preview 7 or later
 
 * C++ compiler
   * Windows: `cl.exe`
@@ -35,7 +36,7 @@ Note: The sample uses `Marshal` APIs as part of interacting with the native libr
     * The C++ compiler (`cl.exe` or `g++`) and `dotnet` must be the same bitness (32-bit versus 64-bit).
       * On Windows, the sample is set up to use the bitness of `dotnet` to find the corresponding `cl.exe`
 
-1) Navigate to the root directory and run `dotnet build`
+1) Navigate to the root directory.
 
 1) Run the sample. Do one of the following:
 
