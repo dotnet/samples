@@ -21,13 +21,13 @@ This project demonstrates different ways to marshal arguments to native function
 * C++ compiler
   * Windows: `cl.exe`
     * See [installation instructions](https://docs.microsoft.com/cpp/build/building-on-the-command-line#download-and-install-the-tools).
-  * Linux/OSX: `g++`
+  * Linux/macOS: `g++`
 
 ## Build and Run
 
 1) In order to build and run, all prerequisites must be installed. The following are also required:
 
-    * On Linux/OSX, the C++ compiler (`g++`) must be on the path.
+    * On Linux/macOS, the C++ compiler (`g++`) must be on the path.
     * The C++ compiler (`cl.exe` or `g++`) and `dotnet` must be the same bitness (32-bit versus 64-bit).
       * On Windows, the sample is set up to use the bitness of `dotnet` to find the corresponding `cl.exe`
 
