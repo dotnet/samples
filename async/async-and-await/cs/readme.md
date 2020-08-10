@@ -5,7 +5,7 @@ products:
 - dotnet-core
 - windows
 page_type: sample
-name: "Async Sample: Asynchronous Programming with Async and Await in C#"
+name: "Async Sample: Asynchronous programming with async and await in C#"
 urlFragment: "async-and-await-cs"
 description: "A .NET Core WPF application that contains the example method from Asynchronous Progamming with Async and Await in C#."
 ---
@@ -21,26 +21,19 @@ The code for the *MainWindow.xaml.cs* file from this sample is included in the a
 
 ## Sample prerequisites
 
-This sample is written in C# and targets .NET Core 3.0 running on Windows. It requires the [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+This sample is written in C# and targets .NET Core 3.1 running on Windows. It requires the [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1).
 
 ## Building the sample
 
 To download and run the sample, follow these steps:
 
 1. Download and unzip the sample.
-
 2. In Visual Studio (2019 or later):
-
     1. On the menu bar, choose **File** > **Open** > **Project/Solution**.
-
-    2. Navigate to the folder that holds the unzipped sample code, and open the c# project (.csproj) file.
-
+    2. Navigate to the folder that holds the unzipped sample code, and open the C# project (.csproj) file.
     3. Choose the <kbd>F5</kbd> key to run with debugging, or <kbd>Ctrl</kbd>+<kbd>F5</kbd> keys to run the project without debugging.
-
 3. From the command line:
-
    1. Navigate to the folder that holds the unzipped sample code.
-
    2. At the command line, type `dotnet run`.
 
 ## More information
