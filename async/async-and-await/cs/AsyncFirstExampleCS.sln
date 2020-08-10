@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30330.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerialAsyncExample", "before\SerialAsyncExample.csproj", "{CD82B189-7EAA-4A48-93B4-4D1427BD009B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerialAsyncExample", "SerialAsyncExample\SerialAsyncExample.csproj", "{CD82B189-7EAA-4A48-93B4-4D1427BD009B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParallelAsyncExample", "after\ParallelAsyncExample.csproj", "{B4E217C7-2FDE-41E1-9823-3B94A8014DA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParallelAsyncExample", "ParallelAsyncExample\ParallelAsyncExample.csproj", "{B4E217C7-2FDE-41E1-9823-3B94A8014DA0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncExample", "SyncExample\SyncExample.csproj", "{93689CC8-47CE-4232-B06C-B17740A8780B}"
 EndProject
