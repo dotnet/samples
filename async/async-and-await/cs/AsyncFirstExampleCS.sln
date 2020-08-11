@@ -7,7 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerialAsyncExample", "Seria
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParallelAsyncExample", "ParallelAsyncExample\ParallelAsyncExample.csproj", "{B4E217C7-2FDE-41E1-9823-3B94A8014DA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncExample", "SyncExample\SyncExample.csproj", "{93689CC8-47CE-4232-B06C-B17740A8780B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyncExample", "SyncExample\SyncExample.csproj", "{93689CC8-47CE-4232-B06C-B17740A8780B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4501F99E-B14C-41D2-8FF0-08516A46B91F}"
+	ProjectSection(SolutionItems) = preProject
+		readme.md = readme.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
