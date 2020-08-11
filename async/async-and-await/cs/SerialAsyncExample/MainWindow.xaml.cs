@@ -23,8 +23,8 @@ namespace SerialAsyncExample
 
         async void OnStartButtonClick(object sender, RoutedEventArgs e)
         {
-            _resultsTextBox.Clear();
             _startButton.IsEnabled = false;
+            _resultsTextBox.Clear();
 
             await SumPageSizesAsync();
 

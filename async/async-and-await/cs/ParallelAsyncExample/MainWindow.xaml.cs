@@ -25,8 +25,8 @@ namespace ParallelAsyncExample
 
         async void OnStartButtonClick(object sender, RoutedEventArgs e)
         {
-            _resultsTextBox.Clear();
             _startButton.IsEnabled = false;
+            _resultsTextBox.Clear();
 
             await SumPageSizesAsync();
             await UpdateResultText($"\nControl returned to {nameof(OnStartButtonClick)}.");
@@ -61,13 +61,8 @@ namespace ParallelAsyncExample
             return byteArray.Length;
         }
 
-        Task DisplayResults(string url, byte[] content)
-        {
-            int bytes = content.Length;
-            var displayURL = url.Replace("https://", "");
-
-            return UpdateResultText($"{displayURL,-60} {bytes,10:#,#}\n");
-        }
+        Task DisplayResults(string url, byte[] content) =>
+            UpdateResultText($"{url,-60} {content.Length,10:#,#}\n");
 
         Task UpdateResultText(string text) =>
             Dispatcher.BeginInvoke(
