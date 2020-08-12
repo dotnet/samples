@@ -9,9 +9,9 @@ namespace SerialAsyncExample
 {
     public partial class MainWindow : Window
     {
-        readonly HttpClient _client = new HttpClient { MaxResponseContentBufferSize = 1_000_000 };
+        private readonly HttpClient _client = new HttpClient { MaxResponseContentBufferSize = 1_000_000 };
 
-        readonly IEnumerable<string> _urlList = new string[]
+        private readonly IEnumerable<string> _urlList = new string[]
         {
             "https://docs.microsoft.com",
             "https://docs.microsoft.com/azure",
@@ -21,7 +21,7 @@ namespace SerialAsyncExample
             "https://docs.microsoft.com/windows"
         };
 
-        async void OnStartButtonClick(object sender, RoutedEventArgs e)
+        private async void OnStartButtonClick(object sender, RoutedEventArgs e)
         {
             _startButton.IsEnabled = false;
             _resultsTextBox.Clear();
@@ -32,10 +32,9 @@ namespace SerialAsyncExample
             _startButton.IsEnabled = true;
         }
 
-        async Task SumPageSizesAsync()
+        private async Task SumPageSizesAsync()
         {
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
+            var stopwatch = Stopwatch.StartNew();
 
             int total = 0;
             foreach (string url in _urlList)
@@ -49,7 +48,7 @@ namespace SerialAsyncExample
             _resultsTextBox.Text += $"\nElapsed time:          {stopwatch.Elapsed}\n";
         }
 
-        async Task<int> ProcessUrlAsync(string url, HttpClient client)
+        private async Task<int> ProcessUrlAsync(string url, HttpClient client)
         {
             byte[] content = await client.GetByteArrayAsync(url);
             DisplayResults(url, content);
@@ -57,9 +56,9 @@ namespace SerialAsyncExample
             return content.Length;
         }
 
-        void DisplayResults(string url, byte[] content) =>
+        private void DisplayResults(string url, byte[] content) =>
             _resultsTextBox.Text += $"{url,-60} {content.Length,10:#,#}\n";
 
-        protected override void OnClosed(EventArgs e) => _client?.Dispose();
+        protected override void OnClosed(EventArgs e) => _client.Dispose();
     }
 }

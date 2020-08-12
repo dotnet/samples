@@ -2,7 +2,7 @@
 languages:
 - csharp
 products:
-- dotnet-core
+- dotnet
 - windows
 page_type: sample
 name: "Async Sample: Asynchronous programming with async and await in C#"
@@ -11,7 +11,7 @@ description: "A .NET 5 WPF application that contains the example method from Asy
 ---
 # Asynchronous programming with async and await in C\#
 
-This sample is a WPF application written in C# that contains the example method from [Task asynchronous programming model](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/async/task-asynchronous-programming-model). The article gives an overview of asynchronous programming, including when to use it and how to write an async method. This sample contains an async function that is used as an illustration.
+This sample is a WPF application written in C# from the [Asynchronous programming with async and await in C# tutorial](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await). The article gives an overview of asynchronous programming, including when to use it and how to write an async method. This sample contains an async function that is used as an illustration.
 
 [async](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/async) and [await](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/await) provide all the advantages of traditional asynchronous programming, but with much less effort from the developer. The compiler does the difficult work that the developer used to do, yet the code retains a logical structure that resembles synchronous code.
 
@@ -39,3 +39,4 @@ To download and run the sample, follow these steps:
 ## More information
 
 - <https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/async/>
+- <https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await>

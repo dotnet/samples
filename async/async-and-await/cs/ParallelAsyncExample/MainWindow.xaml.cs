@@ -11,9 +11,9 @@ namespace ParallelAsyncExample
 {
     public partial class MainWindow : Window
     {
-        readonly HttpClient _client = new HttpClient { MaxResponseContentBufferSize = 1_000_000 };
+        private readonly HttpClient _client = new HttpClient { MaxResponseContentBufferSize = 1_000_000 };
 
-        readonly IEnumerable<string> _urlList = new string[]
+        private readonly IEnumerable<string> _urlList = new string[]
         {
             "https://docs.microsoft.com",
             "https://docs.microsoft.com/azure",
@@ -33,18 +33,18 @@ namespace ParallelAsyncExample
             "https://docs.microsoft.com/system-center",
             "https://docs.microsoft.com/graph",
             "https://docs.microsoft.com/education",
-            "https://docs.microsoft.com/gaming",
+            "https://docs.microsoft.com/gaming"
         };
 
-        void OnStartButtonClick(object sender, RoutedEventArgs e)
+        private void OnStartButtonClick(object sender, RoutedEventArgs e)
         {
             _startButton.IsEnabled = false;
             _resultsTextBox.Clear();
 
-            Task.Run(StartSumPageSizesAsync);
+            Task.Run(() => StartSumPageSizesAsync());
         }
 
-        async Task StartSumPageSizesAsync()
+        private async Task StartSumPageSizesAsync()
         {
             await SumPageSizesAsync();
             await Dispatcher.BeginInvoke(() =>
@@ -54,10 +54,9 @@ namespace ParallelAsyncExample
             });
         }
 
-        async Task SumPageSizesAsync()
+        private async Task SumPageSizesAsync()
         {
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
+            var stopwatch = Stopwatch.StartNew();
 
             IEnumerable<Task<int>> downloadTasksQuery =
                 from url in _urlList
@@ -77,7 +76,7 @@ namespace ParallelAsyncExample
             });
         }
 
-        async Task<int> ProcessUrlAsync(string url, HttpClient client)
+        private async Task<int> ProcessUrlAsync(string url, HttpClient client)
         {
             byte[] byteArray = await client.GetByteArrayAsync(url);
             await DisplayResultsAsync(url, byteArray);
@@ -85,11 +84,11 @@ namespace ParallelAsyncExample
             return byteArray.Length;
         }
 
-        Task DisplayResultsAsync(string url, byte[] content) =>
+        private Task DisplayResultsAsync(string url, byte[] content) =>
             Dispatcher.BeginInvoke(() =>
                 _resultsTextBox.Text += $"{url,-60} {content.Length,10:#,#}\n")
                       .Task;
 
-        protected override void OnClosed(EventArgs e) => _client?.Dispose();
+        protected override void OnClosed(EventArgs e) => _client.Dispose();
     }
 }

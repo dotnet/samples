@@ -3,14 +3,13 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace SyncExample
 {
     public partial class MainWindow : Window
     {
-        readonly IEnumerable<string> _urlList = new string[]
+        private readonly IEnumerable<string> _urlList = new string[]
         {
             "https://docs.microsoft.com",
             "https://docs.microsoft.com/azure",
@@ -20,7 +19,7 @@ namespace SyncExample
             "https://docs.microsoft.com/windows"
         };
 
-        void OnStartButtonClick(object sender, RoutedEventArgs e)
+        private void OnStartButtonClick(object sender, RoutedEventArgs e)
         {
             _resultsTextBox.Clear();
 
@@ -29,10 +28,9 @@ namespace SyncExample
             _resultsTextBox.Text += $"\nControl returned to {nameof(OnStartButtonClick)}.";
         }
 
-        void SumPageSizes()
+        private void SumPageSizes()
         {
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
+            var stopwatch = Stopwatch.StartNew();
 
             int total = _urlList.Select(url => ProcessUrl(url)).Sum();
 
@@ -41,7 +39,7 @@ namespace SyncExample
             _resultsTextBox.Text += $"\nElapsed time:          {stopwatch.Elapsed}\n";
         }
 
-        int ProcessUrl(string url)
+        private int ProcessUrl(string url)
         {
             using var memoryStream = new MemoryStream();
             var webReq = (HttpWebRequest)WebRequest.Create(url);
@@ -56,7 +54,7 @@ namespace SyncExample
             return content.Length;
         }
 
-        void DisplayResults(string url, byte[] content) =>
+        private void DisplayResults(string url, byte[] content) =>
             _resultsTextBox.Text += $"{url,-60} {content.Length,10:#,#}\n";
     }
 }

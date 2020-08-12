@@ -1,9 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
-    <RootNamespace>AsyncFirstExampleVB</RootNamespace>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>SyncExample</RootNamespace>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
