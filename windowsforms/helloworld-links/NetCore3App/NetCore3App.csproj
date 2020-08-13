@@ -12,8 +12,4 @@
     <Compile Include="..\FullFxApp\*.cs" />
   </ItemGroup>
 
-  <ItemGroup>
-    <!-- <FrameworkReference Include="Microsoft.DesktopUI" /> -->
-  </ItemGroup>
-
 </Project>
