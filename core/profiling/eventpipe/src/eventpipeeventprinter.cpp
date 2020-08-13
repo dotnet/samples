@@ -256,7 +256,7 @@ bool EventPipeEventPrinter::PrintType(EventPipeDataDescriptor type,
 
         case EventPipeTypeCode::String:
         {
-            WCHAR *data = ReadFromBuffer<WCHAR *>(eventData, cbEventData, offset);
+            WCHAR *data = ReadWideStringFromBuffer(eventData, cbEventData, offset);
             PrintIndentLevel(indentLevel);
             wprintf(L"type String value=\"%s\"\n", data);
         }

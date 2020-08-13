@@ -72,8 +72,7 @@ T ReadFromBuffer(LPCBYTE eventData, ULONG cbEventData, ULONG *offset)
     return data;
 }
 
-template<>
-WCHAR *ReadFromBuffer(LPCBYTE eventData, ULONG cbEventData, ULONG *offset);
+WCHAR *ReadWideStringFromBuffer(LPCBYTE eventData, ULONG cbEventData, ULONG *offset);
 
 // Reads a metadata blob according to the EventPipe file format
 class EventPipeMetadataReader

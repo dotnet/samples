@@ -25,7 +25,6 @@ CorProfiler::CorProfiler() :
     _provider(),
     _allTypesEvent(),
     _providerNameCache(),
-    _cacheLock(),
     _metadataCache(),
     _refCount(0)
 {
@@ -58,8 +57,14 @@ HRESULT STDMETHODCALLTYPE CorProfiler::Initialize(IUnknown *pICorProfilerInfoUnk
         return hr;
     }
     
-    // Write an event
-    if (FAILED(hr = DefineEvent()) || FAILED(hr = WriteEvent()))
+    // Define our event
+    if (FAILED(hr = DefineEvent()))
+    {
+        return hr;
+    }
+
+    // Write it to any listeners that have enabled our provider
+    if (FAILED(hr = WriteEvent()))
     {
         return hr;
     }
@@ -73,6 +78,8 @@ HRESULT STDMETHODCALLTYPE CorProfiler::Initialize(IUnknown *pICorProfilerInfoUnk
     return S_OK;
 }
 
+// For the purposes of this sample we create an event that has all the built-in types
+// to demonstrate how to serialize them.
 HRESULT CorProfiler::DefineEvent()
 {
     HRESULT hr = S_OK;
@@ -84,21 +91,22 @@ HRESULT CorProfiler::DefineEvent()
 
     // Create a param descriptor for every type
     COR_PRF_EVENTPIPE_PARAM_DESC allTypesParams[] = {
-        { COR_PRF_EVENTPIPE_BOOLEAN,  0, WCHAR("Boolean") },
-        { COR_PRF_EVENTPIPE_CHAR,     0, WCHAR("Char") },
-        { COR_PRF_EVENTPIPE_SBYTE,    0, WCHAR("SByte") },
-        { COR_PRF_EVENTPIPE_BYTE,     0, WCHAR("Byte") },
-        { COR_PRF_EVENTPIPE_INT16,    0, WCHAR("Int16") },
-        { COR_PRF_EVENTPIPE_UINT16,   0, WCHAR("UInt16") },
-        { COR_PRF_EVENTPIPE_INT32,    0, WCHAR("Int32") },
-        { COR_PRF_EVENTPIPE_UINT32,   0, WCHAR("UInt32") },
-        { COR_PRF_EVENTPIPE_INT64,    0, WCHAR("Int64") },
-        { COR_PRF_EVENTPIPE_UINT64,   0, WCHAR("UInt64") },
-        { COR_PRF_EVENTPIPE_SINGLE,   0, WCHAR("Single") },
-        { COR_PRF_EVENTPIPE_DOUBLE,   0, WCHAR("Double") },
-        { COR_PRF_EVENTPIPE_GUID,     0, WCHAR("Guid") },
-        { COR_PRF_EVENTPIPE_STRING,   0, WCHAR("String") },
-        { COR_PRF_EVENTPIPE_DATETIME, 0, WCHAR("DateTime") }
+        { COR_PRF_EVENTPIPE_BOOLEAN,  0,                          WCHAR("Boolean") },
+        { COR_PRF_EVENTPIPE_CHAR,     0,                          WCHAR("Char") },
+        { COR_PRF_EVENTPIPE_SBYTE,    0,                          WCHAR("SByte") },
+        { COR_PRF_EVENTPIPE_BYTE,     0,                          WCHAR("Byte") },
+        { COR_PRF_EVENTPIPE_INT16,    0,                          WCHAR("Int16") },
+        { COR_PRF_EVENTPIPE_UINT16,   0,                          WCHAR("UInt16") },
+        { COR_PRF_EVENTPIPE_INT32,    0,                          WCHAR("Int32") },
+        { COR_PRF_EVENTPIPE_UINT32,   0,                          WCHAR("UInt32") },
+        { COR_PRF_EVENTPIPE_INT64,    0,                          WCHAR("Int64") },
+        { COR_PRF_EVENTPIPE_UINT64,   0,                          WCHAR("UInt64") },
+        { COR_PRF_EVENTPIPE_SINGLE,   0,                          WCHAR("Single") },
+        { COR_PRF_EVENTPIPE_DOUBLE,   0,                          WCHAR("Double") },
+        { COR_PRF_EVENTPIPE_GUID,     0,                          WCHAR("Guid") },
+        { COR_PRF_EVENTPIPE_STRING,   0,                          WCHAR("String") },
+        { COR_PRF_EVENTPIPE_DATETIME, 0,                          WCHAR("DateTime") },
+        { COR_PRF_EVENTPIPE_ARRAY,    COR_PRF_EVENTPIPE_INT32,    WCHAR("IntArray")}
     };
 
     const size_t allTypesParamsCount = sizeof(allTypesParams) / sizeof(allTypesParams[0]);
@@ -109,7 +117,7 @@ HRESULT CorProfiler::DefineEvent()
             0,                              // Keywords
             1,                              // Version
             COR_PRF_EVENTPIPE_LOGALWAYS,    // Level
-            12,                              // opcode
+            12,                             // opcode
             true,                           // Needs stack
             allTypesParamsCount,            // size of params
             allTypesParams,                 // Param descriptors
@@ -124,11 +132,14 @@ HRESULT CorProfiler::DefineEvent()
     return S_OK;
 }
 
+// This method will write a single event with static data to demonstrate how to serialize the
+// different types that EventPipe can handle. In a real world application the data would likely
+// be dynamic, but the serialization step would be the same.
 HRESULT CorProfiler::WriteEvent()
 {
     printf("Writing AllTypesEvent\n");
 
-    COR_PRF_EVENT_DATA eventData[15];
+    COR_PRF_EVENT_DATA eventData[16];
 
     // { COR_PRF_EVENTPIPE_BOOLEAN, WCHAR("Boolean") }
     BOOL b = TRUE;
@@ -191,6 +202,24 @@ HRESULT CorProfiler::WriteEvent()
     uint64_t dateTime = 132243707160000000ULL;
     eventData[14].ptr = reinterpret_cast<UINT64>(&dateTime);
     eventData[14].size = sizeof(uint64_t);
+    
+    // EventPipe also supports arbitrary length arrays of built in types. Array types
+    // are length prefixed.
+
+    // { COR_PRF_EVENTPIPE_FLAG_ARRAY_TYPE, COR_PRF_EVENTPIPE_INT32, WCHAR("IntArray")}
+    constexpr INT32 arraySize = 2 + (100 * sizeof(INT32));
+    BYTE dataSource[arraySize];
+    size_t offset = 0;
+    // Write the array length, this can change for each call to EventPipeWriteEvent
+    WriteToBuffer<UINT16>(dataSource, arraySize, &offset, 100);
+
+    for (int i = 0; i < 100; ++i)
+    {
+        WriteToBuffer<INT32>(dataSource, arraySize, &offset, 100 - i);
+    }
+
+    eventData[15].ptr = reinterpret_cast<UINT64>(&dataSource[0]);
+    eventData[15].size = arraySize;
 
     HRESULT hr = _pCorProfilerInfo12->EventPipeWriteEvent(
                     _allTypesEvent,
@@ -234,457 +263,10 @@ HRESULT STDMETHODCALLTYPE CorProfiler::Shutdown()
     return S_OK;
 }
 
-HRESULT STDMETHODCALLTYPE CorProfiler::AppDomainCreationStarted(AppDomainID appDomainId)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::AppDomainCreationFinished(AppDomainID appDomainId, HRESULT hrStatus)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::AppDomainShutdownStarted(AppDomainID appDomainId)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::AppDomainShutdownFinished(AppDomainID appDomainId, HRESULT hrStatus)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::AssemblyLoadStarted(AssemblyID assemblyId)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::AssemblyLoadFinished(AssemblyID assemblyId, HRESULT hrStatus)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::AssemblyUnloadStarted(AssemblyID assemblyId)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::AssemblyUnloadFinished(AssemblyID assemblyId, HRESULT hrStatus)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ModuleLoadStarted(ModuleID moduleId)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ModuleLoadFinished(ModuleID moduleId, HRESULT hrStatus)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ModuleUnloadStarted(ModuleID moduleId)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ModuleUnloadFinished(ModuleID moduleId, HRESULT hrStatus)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ModuleAttachedToAssembly(ModuleID moduleId, AssemblyID AssemblyId)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ClassLoadStarted(ClassID classId)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ClassLoadFinished(ClassID classId, HRESULT hrStatus)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ClassUnloadStarted(ClassID classId)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ClassUnloadFinished(ClassID classId, HRESULT hrStatus)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::FunctionUnloadStarted(FunctionID functionId)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::JITCompilationStarted(FunctionID functionId, BOOL fIsSafeToBlock)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::JITCompilationFinished(FunctionID functionId, HRESULT hrStatus, BOOL fIsSafeToBlock)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::JITCachedFunctionSearchStarted(FunctionID functionId, BOOL *pbUseCachedFunction)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::JITCachedFunctionSearchFinished(FunctionID functionId, COR_PRF_JIT_CACHE result)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::JITFunctionPitched(FunctionID functionId)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::JITInlining(FunctionID callerId, FunctionID calleeId, BOOL *pfShouldInline)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ThreadCreated(ThreadID threadId)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ThreadDestroyed(ThreadID threadId)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ThreadAssignedToOSThread(ThreadID managedThreadId, DWORD osThreadId)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::RemotingClientInvocationStarted()
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::RemotingClientSendingMessage(GUID *pCookie, BOOL fIsAsync)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::RemotingClientReceivingReply(GUID *pCookie, BOOL fIsAsync)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::RemotingClientInvocationFinished()
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::RemotingServerReceivingMessage(GUID *pCookie, BOOL fIsAsync)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::RemotingServerInvocationStarted()
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::RemotingServerInvocationReturned()
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::RemotingServerSendingReply(GUID *pCookie, BOOL fIsAsync)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::UnmanagedToManagedTransition(FunctionID functionId, COR_PRF_TRANSITION_REASON reason)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ManagedToUnmanagedTransition(FunctionID functionId, COR_PRF_TRANSITION_REASON reason)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::RuntimeSuspendStarted(COR_PRF_SUSPEND_REASON suspendReason)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::RuntimeSuspendFinished()
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::RuntimeSuspendAborted()
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::RuntimeResumeStarted()
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::RuntimeResumeFinished()
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::RuntimeThreadSuspended(ThreadID threadId)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::RuntimeThreadResumed(ThreadID threadId)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::MovedReferences(ULONG cMovedObjectIDRanges, ObjectID oldObjectIDRangeStart[], ObjectID newObjectIDRangeStart[], ULONG cObjectIDRangeLength[])
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ObjectAllocated(ObjectID objectId, ClassID classId)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ObjectsAllocatedByClass(ULONG cClassCount, ClassID classIds[], ULONG cObjects[])
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ObjectReferences(ObjectID objectId, ClassID classId, ULONG cObjectRefs, ObjectID objectRefIds[])
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::RootReferences(ULONG cRootRefs, ObjectID rootRefIds[])
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ExceptionThrown(ObjectID thrownObjectId)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ExceptionSearchFunctionEnter(FunctionID functionId)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ExceptionSearchFunctionLeave()
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ExceptionSearchFilterEnter(FunctionID functionId)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ExceptionSearchFilterLeave()
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ExceptionSearchCatcherFound(FunctionID functionId)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ExceptionOSHandlerEnter(UINT_PTR __unused)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ExceptionOSHandlerLeave(UINT_PTR __unused)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ExceptionUnwindFunctionEnter(FunctionID functionId)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ExceptionUnwindFunctionLeave()
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ExceptionUnwindFinallyEnter(FunctionID functionId)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ExceptionUnwindFinallyLeave()
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ExceptionCatcherEnter(FunctionID functionId, ObjectID objectId)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ExceptionCatcherLeave()
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::COMClassicVTableCreated(ClassID wrappedClassId, REFGUID implementedIID, void *pVTable, ULONG cSlots)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::COMClassicVTableDestroyed(ClassID wrappedClassId, REFGUID implementedIID, void *pVTable)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ExceptionCLRCatcherFound()
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ExceptionCLRCatcherExecute()
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ThreadNameChanged(ThreadID threadId, ULONG cchName, WCHAR name[])
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::GarbageCollectionStarted(int cGenerations, BOOL generationCollected[], COR_PRF_GC_REASON reason)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::SurvivingReferences(ULONG cSurvivingObjectIDRanges, ObjectID objectIDRangeStart[], ULONG cObjectIDRangeLength[])
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::GarbageCollectionFinished()
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::FinalizeableObjectQueued(DWORD finalizerFlags, ObjectID objectID)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::RootReferences2(ULONG cRootRefs, ObjectID rootRefIds[], COR_PRF_GC_ROOT_KIND rootKinds[], COR_PRF_GC_ROOT_FLAGS rootFlags[], UINT_PTR rootIds[])
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::HandleCreated(GCHandleID handleId, ObjectID initialObjectId)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::HandleDestroyed(GCHandleID handleId)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::InitializeForAttach(IUnknown *_pCorProfilerInfo12Unk, void *pvClientData, UINT cbClientData)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ProfilerAttachComplete()
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ProfilerDetachSucceeded()
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ReJITCompilationStarted(FunctionID functionId, ReJITID rejitId, BOOL fIsSafeToBlock)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::GetReJITParameters(ModuleID moduleId, mdMethodDef methodId, ICorProfilerFunctionControl *pFunctionControl)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ReJITCompilationFinished(FunctionID functionId, ReJITID rejitId, HRESULT hrStatus, BOOL fIsSafeToBlock)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ReJITError(ModuleID moduleId, mdMethodDef methodId, FunctionID functionId, HRESULT hrStatus)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::MovedReferences2(ULONG cMovedObjectIDRanges, ObjectID oldObjectIDRangeStart[], ObjectID newObjectIDRangeStart[], SIZE_T cObjectIDRangeLength[])
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::SurvivingReferences2(ULONG cSurvivingObjectIDRanges, ObjectID objectIDRangeStart[], SIZE_T cObjectIDRangeLength[])
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ConditionalWeakTableElementReferences(ULONG cRootRefs, ObjectID keyRefIds[], ObjectID valueRefIds[], GCHandleID rootIds[])
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::GetAssemblyReferences(const WCHAR *wszAssemblyPath, ICorProfilerAssemblyReferenceProvider *pAsmRefProvider)
-{
-    printf("GetAssemblyReferences\n");
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::ModuleInMemorySymbolsUpdated(ModuleID moduleId)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::DynamicMethodJITCompilationStarted(FunctionID functionId, BOOL fIsSafeToBlock, LPCBYTE ilHeader, ULONG cbILHeader)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::DynamicMethodJITCompilationFinished(FunctionID functionId, HRESULT hrStatus, BOOL fIsSafeToBlock)
-{
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CorProfiler::DynamicMethodUnloaded(FunctionID functionId)
-{
-    return S_OK;
-}
-
+// EventPipeEventDelivered is how the profiler receives EventPipe events for a session. it is called synchronously 
+// on the thread that generates the event. It will block the runtime's execution until it returns
+// so be careful not to start any long running operations. This method can (and will) be called 
+// concurrently from multiple threads.
 HRESULT STDMETHODCALLTYPE CorProfiler::EventPipeEventDelivered(
     EVENTPIPE_PROVIDER provider,
     DWORD eventId,
@@ -715,6 +297,9 @@ HRESULT STDMETHODCALLTYPE CorProfiler::EventPipeEventDelivered(
     return S_OK;
 }
 
+// This method is called synchronously from the provider creator's thread. Just like
+// EventPipeEventDelivered above, any long running operations will block the runtime from continuing.
+// This method will be called before any events are fired from the provider.
 HRESULT CorProfiler::EventPipeProviderCreated(EVENTPIPE_PROVIDER provider)
 {
     String name = GetOrAddProviderName(provider);
@@ -734,8 +319,6 @@ HRESULT CorProfiler::EventPipeProviderCreated(EVENTPIPE_PROVIDER provider)
 
 String CorProfiler::GetOrAddProviderName(EVENTPIPE_PROVIDER provider)
 {
-    lock_guard<mutex> guard(_cacheLock);
-
     auto it = _providerNameCache.find(provider);
     if (it == _providerNameCache.end())
     {
@@ -751,7 +334,7 @@ String CorProfiler::GetOrAddProviderName(EVENTPIPE_PROVIDER provider)
             return WCHAR("GetProviderInfo failed");
         }
 
-        _providerNameCache.insert({provider, String(nameBuffer)});
+        _providerNameCache.insertNew(provider, String(nameBuffer));
 
         it = _providerNameCache.find(provider);
         assert(it != _providerNameCache.end());
@@ -762,16 +345,12 @@ String CorProfiler::GetOrAddProviderName(EVENTPIPE_PROVIDER provider)
 
 EventPipeMetadataInstance CorProfiler::GetOrAddMetadata(LPCBYTE pMetadata, ULONG cbMetadata)
 {
-    // TODO: holding the lock while parsing metdata is not the best plan. Metadata parsing
-    // is kind of slow and could cause perf issues.
-    lock_guard<mutex> guard(_cacheLock);
-
     auto it = _metadataCache.find(pMetadata);
     if (it == _metadataCache.end())
     {
         EventPipeMetadataReader reader;
         EventPipeMetadataInstance parsedMetadata = reader.Parse(pMetadata, cbMetadata);
-        _metadataCache.insert({pMetadata, parsedMetadata});
+        _metadataCache.insertNew(pMetadata, parsedMetadata);
 
         it = _metadataCache.find(pMetadata);
         assert(it != _metadataCache.end());

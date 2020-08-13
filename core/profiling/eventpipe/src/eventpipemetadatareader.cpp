@@ -7,10 +7,8 @@
 using std::vector;
 using std::shared_ptr;
 
-// TODO: this is kind of ugly and nonintuitive, it's reading a 16 byte, null terminated
-// string. It's a weird overload though.
-template<>
-WCHAR *ReadFromBuffer(LPCBYTE eventData, ULONG cbEventData, ULONG *offset)
+// This reads a 16 bit, null terminated string from the buffer.
+WCHAR *ReadWideStringFromBuffer(LPCBYTE eventData, ULONG cbEventData, ULONG *offset)
 {
     WCHAR *start = (WCHAR *)(eventData + *offset);
     size_t length = wcslen(start);
@@ -60,14 +58,14 @@ EventPipeDataDescriptor EventPipeMetadataReader::ParseField(LPCBYTE pMetadata, U
     {
         UINT32 paramMetadataLength = ReadFromBuffer<UINT32>(pMetadata, cbMetadata, offset);
         UINT32 paramEndLabel = paramMetadataLength + *offset - 4;// TODO: unused, should check it
-        name = ReadFromBuffer<WCHAR *>(pMetadata, cbMetadata, offset);
+        name = ReadWideStringFromBuffer(pMetadata, cbMetadata, offset);
     }
 
     EventPipeDataDescriptor descriptor = ParseType(pMetadata, cbMetadata, offset, v2);
 
     if (!v2)
     {
-        name = ReadFromBuffer<WCHAR *>(pMetadata, cbMetadata, offset);
+        name = ReadWideStringFromBuffer(pMetadata, cbMetadata, offset);
     }
 
     descriptor.name = name;
@@ -85,7 +83,7 @@ EventPipeMetadataInstance EventPipeMetadataReader::Parse(LPCBYTE pMetadata, ULON
 
     ULONG offset = 0;
     metadata.id = ReadFromBuffer<UINT32>(pMetadata, cbMetadata, &offset);
-    metadata.name = ReadFromBuffer<WCHAR *>(pMetadata, cbMetadata, &offset);
+    metadata.name = ReadWideStringFromBuffer(pMetadata, cbMetadata, &offset);
     metadata.keywords = ReadFromBuffer<INT64>(pMetadata, cbMetadata, &offset);
     metadata.version = ReadFromBuffer<UINT32>(pMetadata, cbMetadata, &offset);
     metadata.level = ReadFromBuffer<UINT32>(pMetadata, cbMetadata, &offset);
