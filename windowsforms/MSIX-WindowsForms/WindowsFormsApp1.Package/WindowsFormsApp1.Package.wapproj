@@ -38,7 +38,6 @@
     <TargetPlatformVersion>10.0.17763.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
-    <PackageCertificateKeyFile>WindowsFormsApp1.Package_TemporaryKey.pfx</PackageCertificateKeyFile>
     <GenerateAppInstallerFile>false</GenerateAppInstallerFile>
     <AppxAutoIncrementPackageRevision>false</AppxAutoIncrementPackageRevision>    
     <EntryPointProjectUniqueName>..\CoreWinFormsApp1\CoreWinFormsApp1.csproj</EntryPointProjectUniqueName>
@@ -65,7 +64,6 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="WindowsFormsApp1.Package_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\*" />
