@@ -15,7 +15,7 @@ EventPipeEventPrinter::EventPipeEventPrinter()
 
 LPCWCH EventPipeEventPrinter::TypeCodeToString(EventPipeTypeCode typeCode)
 {
-    switch(typeCode)
+    switch (typeCode)
     {
         case EventPipeTypeCode::Object:
             return WCHAR("Object");
@@ -155,7 +155,7 @@ bool EventPipeEventPrinter::PrintType(EventPipeDataDescriptor type,
                                       ULONG cbEventData,
                                       ULONG *offset)
 {
-    switch(type.type)
+    switch (type.type)
     {
         case EventPipeTypeCode::Boolean:
         {

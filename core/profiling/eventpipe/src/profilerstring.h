@@ -138,7 +138,7 @@ public:
 
     String& operator=(const String& other)
     {
-        if(this != &other)
+        if (this != &other)
         {
             if (other.buffer != nullptr)
             {
