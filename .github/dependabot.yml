@@ -4,325 +4,414 @@ updates:
 - package-ecosystem: nuget
   directory: "/azure/sdk-identity-resources-storage" # AzureIdentityStorageExample.csproj
   schedule:
-    interval: daily
+    interval: "weekly"
+    day: "sunday"
   open-pull-requests-limit: 10
 - package-ecosystem: nuget
   directory: "/csharp/expression-trees" # expression-trees.csproj
   schedule:
-    interval: daily
+    interval: "weekly"
+    day: "sunday"
   open-pull-requests-limit: 10
 - package-ecosystem: nuget
   directory: "/core/assembly/MetadataLoadContext" # MetadataLoadContextSample.csproj
   schedule:
-    interval: daily
+    interval: "weekly"
+    day: "sunday"
   open-pull-requests-limit: 10
 - package-ecosystem: nuget
   directory: "/core/diagnostics/DiagnosticScenarios" # DiagnosticScenarios.csproj
   schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/csharp/getting-started/console-webapiclient" # webapiclient.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/csharp/parallel/ParallelExtensionsExtras" # ParallelExtensionsExtras.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/csharp/roslyn-sdk/SemanticQuickStart" # SemanticQuickStart.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/csharp/safe-efficient-code/benchmark" # benchmark.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/csharp/unit-testing/MSTest.Project" # MSTest.Project.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/csharp/unit-testing/NUnit.TestProject" # NUnit.Project.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/csharp/unit-testing/XUnit.TestProject" # XUnit.Project.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/csharp/unit-testing-best-practices/after" # unit-testing-best-practices-after.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/csharp/unit-testing-best-practices/before" # unit-testing-best-practices-before.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/csharp/unit-testing-code-coverage/XUnit.Coverlet.Collector" # XUnit.Coverlet.Collector.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/csharp/unit-testing-code-coverage/XUnit.Coverlet.MSBuild" # XUnit.Coverlet.MSBuild.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/machine-learning/tutorials/GitHubIssueClassification" # GitHubIssueClassification.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/machine-learning/tutorials/IrisFlowerClustering" # IrisFlowerClustering.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/machine-learning/tutorials/MovieRecommendation" # MovieRecommendation.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/machine-learning/tutorials/ProductSalesAnomalyDetection" # ProductSalesAnomalyDetection.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/machine-learning/tutorials/SentimentAnalysis" # SentimentAnalysis.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/machine-learning/tutorials/TaxiFarePrediction" # TaxiFarePrediction.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/machine-learning/tutorials/TextClassificationTF" # TextClassificationTF.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/machine-learning/tutorials/TransferLearningTF" # TransferLearningTF.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/mef/simple-calculator/vb" # SimpleCalculator2.vbproj
-  schedule:
-    interval: daily
+    interval: "weekly"
+    day: "sunday"
   open-pull-requests-limit: 10
 - package-ecosystem: nuget
   directory: "/windowsforms/datagridview/CSWinFormDataGridView" # CSWinFormDataGridView.csproj
   schedule:
-    interval: daily
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/mef/simple-calculator/vb" # SimpleCalculator2.vbproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/csharp/safe-efficient-code/benchmark" # benchmark.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/csharp/parallel/ParallelExtensionsExtras" # ParallelExtensionsExtras.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/csharp/unit-testing-code-coverage/XUnit.Coverlet.MSBuild" # XUnit.Coverlet.MSBuild.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/csharp/unit-testing-code-coverage/XUnit.Coverlet.Collector" # XUnit.Coverlet.Collector.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/csharp/unit-testing-best-practices/before" # unit-testing-best-practices-before.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/csharp/unit-testing-best-practices/after" # unit-testing-best-practices-after.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/csharp/getting-started/console-webapiclient" # webapiclient.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/csharp/unit-testing/NUnit.TestProject" # NUnit.Project.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/csharp/unit-testing/MSTest.Project" # MSTest.Project.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/csharp/unit-testing/XUnit.TestProject" # XUnit.Project.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/csharp/roslyn-sdk/SemanticQuickStart" # SemanticQuickStart.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/machine-learning/tutorials/MovieRecommendation" # MovieRecommendation.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/machine-learning/tutorials/TransferLearningTF" # TransferLearningTF.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/machine-learning/tutorials/TaxiFarePrediction" # TaxiFarePrediction.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/machine-learning/tutorials/GitHubIssueClassification" # GitHubIssueClassification.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/machine-learning/tutorials/TextClassificationTF" # TextClassificationTF.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/machine-learning/tutorials/IrisFlowerClustering" # IrisFlowerClustering.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/machine-learning/tutorials/SentimentAnalysis" # SentimentAnalysis.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/machine-learning/tutorials/ProductSalesAnomalyDetection" # ProductSalesAnomalyDetection.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
   open-pull-requests-limit: 10
 - package-ecosystem: nuget
   directory: "/core/encoding/cyrillic-to-latin/cs" # CyrillicToLatin.csproj
   schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/core/extensions/AppWithPlugin/FrenchPlugin" # FrenchPlugin.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/core/extensions/AppWithPlugin/JsonPlugin" # JsonPlugin.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/core/extensions/AppWithPlugin/OldJsonPlugin" # OldJsonPlugin.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/core/extensions/AppWithPlugin/UVPlugin" # UVPlugin.csproj
-  schedule:
-    interval: daily
+    interval: "weekly"
+    day: "sunday"
   open-pull-requests-limit: 10
 - package-ecosystem: nuget
   directory: "/core/extensions/AppWithPlugin/XcopyablePlugin" # XcopyablePlugin.csproj
   schedule:
-    interval: daily
+    interval: "weekly"
+    day: "sunday"
   open-pull-requests-limit: 10
 - package-ecosystem: nuget
-  directory: "/core/getting-started/golden/library" # library.csproj
+  directory: "/core/extensions/AppWithPlugin/FrenchPlugin" # FrenchPlugin.csproj
   schedule:
-    interval: daily
+    interval: "weekly"
+    day: "sunday"
   open-pull-requests-limit: 10
 - package-ecosystem: nuget
-  directory: "/core/getting-started/golden/test-library" # test-library.csproj
+  directory: "/core/extensions/AppWithPlugin/JsonPlugin" # JsonPlugin.csproj
   schedule:
-    interval: daily
+    interval: "weekly"
+    day: "sunday"
   open-pull-requests-limit: 10
 - package-ecosystem: nuget
-  directory: "/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests" # PrimeService.Tests.csproj
+  directory: "/core/extensions/AppWithPlugin/OldJsonPlugin" # OldJsonPlugin.csproj
   schedule:
-    interval: daily
+    interval: "weekly"
+    day: "sunday"
   open-pull-requests-limit: 10
 - package-ecosystem: nuget
-  directory: "/core/getting-started/unit-testing-using-mstest/PrimeService.Tests" # PrimeService.Tests.csproj
+  directory: "/core/extensions/AppWithPlugin/UVPlugin" # UVPlugin.csproj
   schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/core/getting-started/unit-testing-using-nunit/PrimeService.Tests" # PrimeService.Tests.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/core/getting-started/unit-testing-vb-dotnet-test/PrimeService.Tests" # PrimeService.Tests.vbproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/core/getting-started/unit-testing-vb-mstest/PrimeService.Tests" # PrimeService.Tests.vbproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests" # PrimeService.Tests.vbproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/core/getting-started/unit-testing-with-fsharp/MathService.Tests" # MathService.Tests.fsproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/core/getting-started/unit-testing-with-fsharp-mstest/MathService.Tests" # MathService.Tests.fsproj
-  schedule:
-    interval: daily
+    interval: "weekly"
+    day: "sunday"
   open-pull-requests-limit: 10
 - package-ecosystem: nuget
   directory: "/core/getting-started/unit-testing-with-fsharp-nunit/MathService.Tests" # MathService.Tests.fsproj
   schedule:
-    interval: daily
+    interval: "weekly"
+    day: "sunday"
   open-pull-requests-limit: 10
 - package-ecosystem: nuget
-  directory: "/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree" # HelloSyntaxTree.csproj
+  directory: "/core/getting-started/unit-testing-with-fsharp-mstest/MathService.Tests" # MathService.Tests.fsproj
   schedule:
-    interval: daily
+    interval: "weekly"
+    day: "sunday"
   open-pull-requests-limit: 10
 - package-ecosystem: nuget
-  directory: "/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker" # SyntaxWalker.csproj
+  directory: "/core/getting-started/unit-testing-with-fsharp/MathService.Tests" # MathService.Tests.fsproj
   schedule:
-    interval: daily
+    interval: "weekly"
+    day: "sunday"
   open-pull-requests-limit: 10
 - package-ecosystem: nuget
-  directory: "/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS" # ConstructionCS.csproj
+  directory: "/core/getting-started/unit-testing-using-mstest/PrimeService.Tests" # PrimeService.Tests.csproj
   schedule:
-    interval: daily
+    interval: "weekly"
+    day: "sunday"
   open-pull-requests-limit: 10
 - package-ecosystem: nuget
-  directory: "/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS" # TransformationCS.csproj
+  directory: "/core/getting-started/golden/test-library" # test-library.csproj
   schedule:
-    interval: daily
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/core/getting-started/golden/library" # library.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests" # PrimeService.Tests.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/core/getting-started/unit-testing-using-nunit/PrimeService.Tests" # PrimeService.Tests.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests" # PrimeService.Tests.vbproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/core/getting-started/unit-testing-vb-dotnet-test/PrimeService.Tests" # PrimeService.Tests.vbproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/core/getting-started/unit-testing-vb-mstest/PrimeService.Tests" # PrimeService.Tests.vbproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/async/async-and-await/vb/SerialAsyncExample" # SerialAsyncExample.vbproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
   open-pull-requests-limit: 10
 - package-ecosystem: nuget
   directory: "/mef/simple-calculator/vb/MefCalculator" # MefCalculator.vbproj
   schedule:
-    interval: daily
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS" # TransformationCS.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS" # ConstructionCS.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker" # SyntaxWalker.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree" # HelloSyntaxTree.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
   open-pull-requests-limit: 10
 - package-ecosystem: nuget
   directory: "/core/console-apps/NewTypesMsBuild/test/NewTypesTests" # NewTypesTests.csproj
   schedule:
-    interval: daily
+    interval: "weekly"
+    day: "sunday"
   open-pull-requests-limit: 10
 - package-ecosystem: nuget
-  directory: "/core/getting-started/golden/src/library" # library.csproj
+  directory: "/core/interop/IDynamicInterfaceCastable/src/NativeLib" # NativeLib.csproj
   schedule:
-    interval: daily
+    interval: "weekly"
+    day: "sunday"
   open-pull-requests-limit: 10
 - package-ecosystem: nuget
   directory: "/core/getting-started/golden/test/test-library" # test-library.csproj
   schedule:
-    interval: daily
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/core/getting-started/golden/src/library" # library.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
   open-pull-requests-limit: 10
 - package-ecosystem: nuget
   directory: "/core/tutorials/using-on-mac-vs-full-solution/WordCounter/TestLibrary" # TestLibrary.csproj
   schedule:
-    interval: daily
+    interval: "weekly"
+    day: "sunday"
   open-pull-requests-limit: 10
 - package-ecosystem: nuget
-  directory: "/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst" # MakeConst.csproj
+  directory: "/framework/libraries/migrate-library-csproj-keep-existing/tests/Car.Tests.Net45" # Car.Tests.Net45.csproj
   schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test" # MakeConst.Test.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader" # SimpleFeedReader.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader.Tests" # SimpleFeedReader.Tests.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader" # SimpleFeedReader.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader.Tests" # SimpleFeedReader.Tests.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/framework/libraries/frameworks-library/src/Library" # Library.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/framework/libraries/migrate-library-csproj/src/Car" # Car.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/framework/libraries/migrate-library-csproj/tests/Car.Tests" # Car.Tests.csproj
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: nuget
-  directory: "/framework/libraries/migrate-library-csproj-keep-existing/src/Car" # Car.csproj
-  schedule:
-    interval: daily
+    interval: "weekly"
+    day: "sunday"
   open-pull-requests-limit: 10
 - package-ecosystem: nuget
   directory: "/framework/libraries/migrate-library-csproj-keep-existing/tests/Car.Tests" # Car.Tests.csproj
   schedule:
-    interval: daily
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/framework/libraries/migrate-library-csproj-keep-existing/src/Car" # Car.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/framework/libraries/migrate-library-csproj-keep-existing/src/Car.Net45" # Car.Net45.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/framework/libraries/frameworks-library/src/Library" # Library.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/framework/libraries/migrate-library-csproj/tests/Car.Tests" # Car.Tests.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/framework/libraries/migrate-library-csproj/src/Car" # Car.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
   open-pull-requests-limit: 10
 - package-ecosystem: nuget
   directory: "/framework/libraries/net40-library/src/Library" # Library.csproj
   schedule:
-    interval: daily
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader.Tests" # SimpleFeedReader.Tests.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader" # SimpleFeedReader.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader.Tests" # SimpleFeedReader.Tests.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader" # SimpleFeedReader.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test" # MakeConst.Test.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+  open-pull-requests-limit: 10
+- package-ecosystem: nuget
+  directory: "/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst" # MakeConst.csproj
+  schedule:
+    interval: "weekly"
+    day: "sunday"
   open-pull-requests-limit: 10
 - package-ecosystem: nuget
   directory: "/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport" # IssuePRreport.csproj
   schedule:
-    interval: daily
+    interval: "weekly"
+    day: "sunday"
   open-pull-requests-limit: 10
 - package-ecosystem: nuget
   directory: "/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport" # IssuePRreport.csproj
   schedule:
-    interval: daily
+    interval: "weekly"
+    day: "sunday"
   open-pull-requests-limit: 10
