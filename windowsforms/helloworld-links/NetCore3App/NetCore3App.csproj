@@ -1,18 +1,15 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
     <AssemblyName>HelloWorld</AssemblyName>
     <RootNamespace>HelloWorld</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Include="..\FullFxApp\*.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <FrameworkReference Include="Microsoft.DesktopUI" />
   </ItemGroup>
 
 </Project>
