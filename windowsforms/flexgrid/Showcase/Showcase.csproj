@@ -1,0 +1,85 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <Company>GrapeCity, Inc.</Company>
+    <Copyright>(c) GrapeCity, Inc..  All rights reserved.</Copyright>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+    <EnableDefaultNoneItems>false</EnableDefaultNoneItems>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="App.ico" />
+    <None Remove="Resources\Black.png" />
+    <None Remove="Resources\Columns.png" />
+    <None Remove="Resources\ConditionalFormating.png" />
+    <None Remove="Resources\Csv.png" />
+    <None Remove="Resources\DownRed.png" />
+    <None Remove="Resources\Excel.png" />
+    <None Remove="Resources\Filter.png" />
+    <None Remove="Resources\Germany.png" />
+    <None Remove="Resources\Green.png" />
+    <None Remove="Resources\Japan.png" />
+    <None Remove="Resources\Red.png" />
+    <None Remove="Resources\star1.png" />
+    <None Remove="Resources\star2.png" />
+    <None Remove="Resources\star3.png" />
+    <None Remove="Resources\star4.png" />
+    <None Remove="Resources\star5.png" />
+    <None Remove="Resources\UK.png" />
+    <None Remove="Resources\UpGreen.png" />
+    <None Remove="Resources\US.png" />
+    <None Remove="Resources\White.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="App.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="C1.Win" Version="[5.0.20202.440-beta,)" />
+    <PackageReference Include="C1.Win.FlexGrid" Version="[5.0.20202.440-beta,)" />
+    <PackageReference Include="C1.Win.Ribbon" Version="[5.0.20202.440-beta,)" />
+    <PackageReference Include="C1.Win.RulesManager" Version="[5.0.20202.440-beta,)" />
+    <PackageReference Include="C1.Win.SuperTooltip" Version="[5.0.20202.440-beta,)" />
+    <PackageReference Include="C1.Win.Themes" Version="[5.0.20202.440-beta,)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="CustomRowDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Greenwich.c1themez">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
