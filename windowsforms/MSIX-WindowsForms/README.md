@@ -30,7 +30,7 @@ In the .wapproj file modify the `ProjectReference` element:
 
 ```xml
 <ItemGroup>
-  <ProjectReference Include="..\CoreWinFormsApp1\CoreWinFormsApp1.csproj" SkipGetTargetFrameworkProperties="true" Properties="RuntimeIdentifier=win-x86;SelfContained=true" />
+  <ProjectReference Include="..\CoreWinFormsApp1\CoreWinFormsApp1.csproj" SkipGetTargetFrameworkProperties="true" Properties="RuntimeIdentifier=win-x64;SelfContained=true" />
 </ItemGroup>
 ```
 
