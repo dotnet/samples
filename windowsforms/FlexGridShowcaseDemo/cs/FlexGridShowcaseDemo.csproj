@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <Company>GrapeCity, Inc.</Company>
+    <Copyright>(c) GrapeCity, Inc..  All rights reserved.</Copyright>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+    <EnableDefaultNoneItems>false</EnableDefaultNoneItems>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="App.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="C1.Win" Version="[5.0.20202.439-beta,)" />
+    <PackageReference Include="C1.Win.FlexGrid" Version="[5.0.20202.439-beta,)" />
+    <PackageReference Include="C1.Win.Ribbon" Version="[5.0.20202.439-beta,)" />
+    <PackageReference Include="C1.Win.RulesManager" Version="[5.0.20202.439-beta,)" />
+    <PackageReference Include="C1.Win.SuperTooltip" Version="[5.0.20202.439-beta,)" />
+    <PackageReference Include="C1.Win.Themes" Version="[5.0.20202.439-beta,)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="CustomRowDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Greenwich.c1themez">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
