@@ -24,11 +24,11 @@ namespace FlexGridShowcaseDemo
             var row = bs.Current as DataRowView;
 
             // Formatting text
-            var title = (from s in row.Row.Table.Columns.Cast<DataColumn>() select s)
+            var columnTitles = (from s in row.Row.Table.Columns.Cast<DataColumn>() select s)
                 .Where(x => x.ColumnName != "Name")
                 .Select(x => x.ColumnName);
 
-            var details = title
+            var details = columnTitles
                 .Select(x => string.Format("{0}: {1}", x, row[x]))
                 .ToArray();
 
