@@ -43,7 +43,7 @@
             this._ribbonTextBoxSearch = new C1.Win.Ribbon.RibbonTextBox();
             this._ribbonButtonFilter = new C1.Win.Ribbon.RibbonButton();
             this._ribbonSeparatorGroup = new C1.Win.Ribbon.RibbonSeparator();
-            this._ribbonMenuFormating = new C1.Win.Ribbon.RibbonMenu();
+            this._ribbonMenuFormatting = new C1.Win.Ribbon.RibbonMenu();
             this._ribbonMenuColumns = new C1.Win.Ribbon.RibbonMenu();
             this._ribbonGroupGroup = new C1.Win.Ribbon.RibbonGroup();
             this._ribbonCheckBoxGroupByCountry = new C1.Win.Ribbon.RibbonCheckBox();
@@ -116,7 +116,7 @@
             this._ribbonGroupData.Items.Add(this._ribbonSeparatorData);
             this._ribbonGroupData.Items.Add(this._ribbonToolBarSearch);
             this._ribbonGroupData.Items.Add(this._ribbonSeparatorGroup);
-            this._ribbonGroupData.Items.Add(this._ribbonMenuFormating);
+            this._ribbonGroupData.Items.Add(this._ribbonMenuFormatting);
             this._ribbonGroupData.Items.Add(this._ribbonMenuColumns);
             this._ribbonGroupData.Name = "_ribbonGroupData";
             this._ribbonGroupData.Text = "Data";
@@ -126,7 +126,7 @@
             this._ribbonComboBoxDataSize.DropDownStyle = C1.Win.Ribbon.RibbonComboBoxStyle.DropDownList;
             this._ribbonComboBoxDataSize.Label = "Data Size:";
             this._ribbonComboBoxDataSize.MaxLength = 300;
-            this._ribbonComboBoxDataSize.Name = "_listDataSize";
+            this._ribbonComboBoxDataSize.Name = "_ribbonComboBoxDataSize";
             this._ribbonComboBoxDataSize.TextAreaWidth = 120;
             this._ribbonComboBoxDataSize.SelectedIndexChanged += new System.EventHandler(this._ribbonComboBoxDataSize_SelectedIndexChanged);
             // 
@@ -156,10 +156,10 @@
             // 
             this._ribbonSeparatorGroup.Name = "_ribbonSeparatorGroup";
             // 
-            // _ribbonMenuFormating
+            // _ribbonMenuFormatting
             // 
-            this._ribbonMenuFormating.Name = "_ribbonMenuFormating";
-            this._ribbonMenuFormating.Text = "Conditional Formating";
+            this._ribbonMenuFormatting.Name = "_ribbonMenuFormatting";
+            this._ribbonMenuFormatting.Text = "Conditional Formatting";
             // 
             // _ribbonMenuColumns
             // 
@@ -251,7 +251,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "C1FlexGrid: Showcase";
             this._themeController.SetTheme(this, "Office2016Green");
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this._ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._themeController)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._flexGrid)).EndInit();
@@ -273,7 +273,7 @@
         private C1.Win.Ribbon.RibbonTopToolBar _ribbonTopToolBar;
         private C1.Win.Ribbon.RibbonComboBox _ribbonComboBoxDataSize;
         private C1.Win.Ribbon.RibbonSeparator _ribbonSeparatorData;
-        private C1.Win.Ribbon.RibbonMenu _ribbonMenuFormating;
+        private C1.Win.Ribbon.RibbonMenu _ribbonMenuFormatting;
         private C1.Win.Ribbon.RibbonMenu _ribbonMenuColumns;
         private C1.Win.Ribbon.RibbonCheckBox _ribbonCheckBoxGroupByCountry;
         private C1.Win.Ribbon.RibbonCheckBox _ribbonCheckBoxGroupByProduct;

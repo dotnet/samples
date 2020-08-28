@@ -21,10 +21,10 @@ namespace FlexGridShowcaseDemo
     {
         private const string _customThemeName = "Greenwich";
         private const int _footerTextPadding = 4;
-        private DataSet _ds = new DataSet();
+        private DataSet _dataSet = new DataSet();
         private C1RulesManager _rulesManager = new C1RulesManager();
         private IEnumerable<IRule> _rules = Enumerable.Empty<IRule>();
-        private Random _rnd = new Random();
+        private static Random _rnd = new Random();
 
         #region Initialization
 
@@ -33,7 +33,7 @@ namespace FlexGridShowcaseDemo
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
             FillData();
 
@@ -45,24 +45,25 @@ namespace FlexGridShowcaseDemo
             // Data sizes
             var dataSizes = new List<string>() { "10 Rows, 12 Columns", "50 Rows, 12 Columns", "100 Rows, 12 Columns", "1000 Rows, 12 Columns", "5000 Rows, 12 Columns" };
             foreach (var item in dataSizes)
+            {
                 _ribbonComboBoxDataSize.Items.Add(item);
+            }
 
             // Columns visible
             _ribbonMenuColumns.Items.Clear();
-            (from s in _flexGrid.Cols.Cast<Column>() select s)
+            var columnRibbonToggleButtons = (from s in _flexGrid.Cols.Cast<Column>() select s)
                 .Where(x => !string.IsNullOrEmpty(x.Name))
                 .Select(x => new RibbonToggleButton()
                 {
                     Text = x.Caption,
                     Pressed = x.Visible
-                })
-                .ToList()
-                .ForEach(x =>
-                {
-                    x.PressedButtonChanged += new EventHandler(_lstColumns_PressedChanged);
-                    _ribbonMenuColumns.Items.Add(x);
                 });
 
+            foreach (var columnRibbonToggleButton in columnRibbonToggleButtons)
+            {
+                columnRibbonToggleButton.PressedButtonChanged += ColumnRibbonToggleButton_PressedButtonChanged;
+                _ribbonMenuColumns.Items.Add(columnRibbonToggleButton);
+            }
 
             _ribbonComboBoxDataSize.SelectedIndex = 2;
 
@@ -89,13 +90,13 @@ namespace FlexGridShowcaseDemo
             Red
         };
 
-        private void BuildRows(int countRows, DataTable dt)
+        private void BuildRows(int rowCount, DataTable dataTable)
         {
             var startPeriod = new DateTime(2020, 01, 25, 8, 29, 0);
             _flexGrid.BeginUpdate();
 
             // Related data
-            var products = (from s in _ds.Tables["Products"].Rows.Cast<DataRow>() select s)
+            var products = (from s in _dataSet.Tables["Products"].Rows.Cast<DataRow>() select s)
                     .Select(x => x["Name"].ToString())
                     .ToArray();
 
@@ -107,12 +108,21 @@ namespace FlexGridShowcaseDemo
                     .Cast<DrawColors>()
                     .ToArray();
 
-            // Creating rows
-            var data = Enumerable.Range(1, countRows)
-                    .Select(x => new object[]
-                    { 
+            dataTable.Clear();
+
+            var dataRows = dataTable.Rows;
+            for (var rowIndex = 0; rowIndex < rowCount; rowIndex++)
+            {
+                // Fill history data
+                var historyData = new int[12];
+                for (var i = 0; i < historyData.Length; i++)
+                {
+                    historyData[i] = _rnd.Next(0, 50);
+                };
+
+                dataRows.Add(
                     // ID
-                    x,
+                    rowIndex + 1,
                     // Product
                     products[_rnd.Next(products.Length)],
                     // Country
@@ -122,25 +132,23 @@ namespace FlexGridShowcaseDemo
                     // Price
                     _rnd.NextDouble() * 100 * _rnd.Next(100),
                     // Change
-                    _rnd.NextDouble() * 10 * _rnd.Next(100) * (_rnd.Next(1,3) == 1 ? (-1) : 1),
+                    _rnd.NextDouble() * 10 * _rnd.Next(100) * (_rnd.Next(1, 3) == 1 ? (-1) : 1),
                     // History
-                    Enumerable.Range(0, 12).Select(y => _rnd.Next(0,50)).ToArray(),
+                    historyData,
                     // Discount
                     _rnd.NextDouble(),
-                    // Raiting
-                    _rnd.Next(0,5),
+                    // Rating
+                    _rnd.Next(0, 5),
                     // Active
-                    (_rnd.Next(1,3) == 1 ? false : true),
+                    (_rnd.Next(1, 3) == 1 ? false : true),
                     // Date
                     startPeriod.AddDays(_rnd.Next(60))
                         .AddHours(_rnd.Next(60))
                         .AddMinutes(_rnd.Next(60))
-                    });
+                    );
+            }
 
-            dt.Clear();
-            data.ToList().ForEach(x => dt.Rows.Add(x));
-
-            _ds.AcceptChanges();
+            _dataSet.AcceptChanges();
             _flexGrid.EndUpdate();
         }
 
@@ -152,39 +160,52 @@ namespace FlexGridShowcaseDemo
             };
 
             // Products table
-            var dt = new DataTable("Products");
-            var columns = new List<string>() { "Name", "Size", "Weight", "Quantity", "Description" }
-                        .Select(x => new DataColumn() { ColumnName = x, DataType = typeof(string) });
-            dt.Columns.AddRange(columns.ToArray());
+            var productsDataTable = new DataTable("Products");
+            
+            var productsColumns = productsDataTable.Columns;
+
+            // Add columns
+            productsColumns.Add("Name");
+            productsColumns.Add("Size", typeof(float));
+            productsColumns.Add("Weight", typeof(float));
+            productsColumns.Add("Quantity", typeof(uint));
+            productsColumns.Add("Description");
+
+            var productsRows = productsDataTable.Rows;
 
             // Add rows
-            dt.Rows.Add(new object[] { "Gadget", "120", "900", "2", descriptions[_rnd.Next(descriptions.Count - 1)] });
-            dt.Rows.Add(new object[] { "Widget", "20", "20", "25", descriptions[_rnd.Next(descriptions.Count - 1)] });
-            dt.Rows.Add(new object[] { "Doohickey", "74", "90", "100", descriptions[_rnd.Next(descriptions.Count - 1)] });
-            _ds.Tables.Add(dt);
+            productsRows.Add("Gadget", 120f, 900f, 2, descriptions[_rnd.Next(descriptions.Count - 1)]);
+            productsRows.Add("Widget", 20f, 20f, 25, descriptions[_rnd.Next(descriptions.Count - 1)]);
+            productsRows.Add("Doohickey", 74f, 90f, 100, descriptions[_rnd.Next(descriptions.Count - 1)]);
+
+            var tables = _dataSet.Tables;
+            tables.Add(productsDataTable);
 
             // Data table
-            dt = new DataTable("Data");
-            dt.Columns.Add("ID", typeof(int));
+            var dataDataTable = new DataTable("Data");
 
-            dt.Columns.Add("Product", typeof(string));
-            dt.Columns.Add("Country", typeof(Countries));
-            dt.Columns.Add("Color", typeof(DrawColors));
-            dt.Columns.Add("Price", typeof(decimal));
-            dt.Columns.Add("Change", typeof(decimal));
-            dt.Columns.Add("History", typeof(object));
-            dt.Columns.Add("Discount", typeof(decimal));
-            dt.Columns.Add("Rating", typeof(int));
-            dt.Columns.Add("Active", typeof(bool));
-            dt.Columns.Add("Date", typeof(DateTime));
+            var dataColumns = dataDataTable.Columns;
 
-            _ds.Tables.Add(dt);
+            // Add columns
+            dataColumns.Add("ID", typeof(int));
+            dataColumns.Add("Product");
+            dataColumns.Add("Country", typeof(Countries));
+            dataColumns.Add("Color", typeof(DrawColors));
+            dataColumns.Add("Price", typeof(decimal));
+            dataColumns.Add("Change", typeof(decimal));
+            dataColumns.Add("History", typeof(int[]));
+            dataColumns.Add("Discount", typeof(decimal));
+            dataColumns.Add("Rating", typeof(int));
+            dataColumns.Add("Active", typeof(bool));
+            dataColumns.Add("Date", typeof(DateTime));
+
+            tables.Add(dataDataTable);
 
             // Creating relation between products and data
-            _ds.Relations.Add("Producs_Data",
-                    _ds.Tables["Products"].Columns["Name"], _ds.Tables["Data"].Columns["Product"]);
+            _dataSet.Relations.Add("Products_Data",
+                    productsColumns["Name"], dataColumns["Product"]);
 
-            _flexGrid.DataSource = _ds;
+            _flexGrid.DataSource = _dataSet;
             _flexGrid.DataMember = "Data";
         }
 
@@ -218,9 +239,9 @@ namespace FlexGridShowcaseDemo
 
         private void InitImages()
         {
-            // ConditionalFormating
-            var image = new C1.Framework.C1BitmapIcon("ConditionalFormating", new Size(20, 20), Color.Transparent, LoadImage("ConditionalFormating"));
-            _ribbonMenuFormating.IconSet.Add(image);
+            // ConditionalFormatting
+            var image = new C1.Framework.C1BitmapIcon("ConditionalFormatting", new Size(20, 20), Color.Transparent, LoadImage("ConditionalFormatting"));
+            _ribbonMenuFormatting.IconSet.Add(image);
 
             // Columns
             image = new C1.Framework.C1BitmapIcon("Columns", new Size(20, 20), Color.Transparent, LoadImage("Columns"));
@@ -235,20 +256,24 @@ namespace FlexGridShowcaseDemo
         }
         private void InitGroups()
         {
-            var props = new List<string>();
+            var propertyNames = new List<string>();
             if (_ribbonCheckBoxGroupByCountry.Checked)
-                props.Add("Country");
+            {
+                propertyNames.Add("Country");
+            }
             if (_ribbonCheckBoxGroupByProduct.Checked)
-                props.Add("Product");
+            {
+                propertyNames.Add("Product");
+            }
 
             // Clear condition filters
-            if (_flexGrid.GroupDescriptions != null && props.Count == 0)
+            if (_flexGrid.GroupDescriptions != null && propertyNames.Count == 0)
             {
                 _flexGrid.GroupDescriptions = null;
                 return;
             }
 
-            var groups = props
+            var groups = propertyNames
                     .Select(x => new GroupDescription(x, ListSortDirection.Ascending))
                     .ToList();
             _flexGrid.GroupDescriptions = groups;
@@ -256,120 +281,137 @@ namespace FlexGridShowcaseDemo
 
         private void InitFlexGrid()
         {
+            // setup flexgrid
             _flexGrid.AllowFiltering = true;
+            _flexGrid.AllowFiltering = true;
+            _flexGrid.AllowMerging = AllowMergingEnum.Nodes;
+            _flexGrid.HideGroupedColumns = true;
             _flexGrid.ShowErrors = true;
 
-            _flexGrid.Cols[0].Width = 22;
+            var columns = _flexGrid.Cols;
 
-            // build data map
-            var flagsHt = new Hashtable();
-            Enum.GetValues(typeof(Countries))
-             .Cast<Countries>()
-             .ToList()
-             .ForEach(x =>
-             {
-                 flagsHt.Add(x, LoadImage(x.ToString()));
-             });
+            // setup flexgrid columns
+            columns[0].Width = 22;
 
-            // assign ImageMap to countries column
-            _flexGrid.Cols["Country"].ImageMap = flagsHt;
-            _flexGrid.Cols["Country"].ImageAndText = true;
+            var idColumn = columns["ID"];
+            idColumn.Width = 50;
+            idColumn.AllowEditing = false;
 
-            var colorsHt = new Hashtable();
-            Enum.GetValues(typeof(DrawColors))
-                .Cast<DrawColors>()
-                .ToList()
-                .ForEach(x =>
-                {
-                    colorsHt.Add(x, LoadImage(x.ToString()));
-                });
+            // setup combo list
+            var products = (from s in _dataSet.Tables["Products"].Rows.Cast<DataRow>() select s)
+                .Select(x => x["Name"].ToString());
+            columns["Product"].ComboList = string.Join("|", products);
 
-            _flexGrid.Cols["Color"].ImageMap = colorsHt;
-            _flexGrid.Cols["Color"].ImageAndText = true;
+            // build image map for countries
+            var flagImageMap = new Dictionary<Countries, Image>();
+            foreach (Countries country in Enum.GetValues(typeof(Countries)))
+            {
+                flagImageMap.Add(country, LoadImage(country.ToString()));
+            }
 
-            // Formatting columns
-            _flexGrid.Cols["ID"].Width = 50;
-            _flexGrid.Cols["ID"].AllowEditing = false;
-            _flexGrid.Cols["Date"].Format = "g";
-            _flexGrid.Cols["Price"].Format = "C2";
-            _flexGrid.Cols["Price"].TextAlign = TextAlignEnum.RightCenter;
+            var countryColumn = columns["Country"];
 
-            // Add validator
-            _flexGrid.Cols["Price"].EditorValidation.Add(new RequiredRule());
-            _flexGrid.Cols["Price"].EditorValidation.Add(new RangeRule()
+            // assign image map to country column
+            countryColumn.ImageMap = flagImageMap;
+            countryColumn.ImageAndText = true;
+
+            // build image map for colors
+            var colorImageMap = new Dictionary<DrawColors, Image>();
+            foreach (DrawColors color in Enum.GetValues(typeof(DrawColors)))
+            {
+                colorImageMap.Add(color, LoadImage(color.ToString()));
+            }
+
+            var colorColumn = columns["Color"];
+
+            // assign image map to color column
+            colorColumn.ImageMap = colorImageMap;
+            colorColumn.ImageAndText = true;
+
+            var priceColumn = columns["Price"];
+            priceColumn.Format = "C2";
+            priceColumn.TextAlign = TextAlignEnum.RightCenter;
+            priceColumn.Width = 80;
+
+            var priceEditorValidation = _flexGrid.Cols["Price"].EditorValidation;
+
+            // add validation rules
+            priceEditorValidation.Add(new RequiredRule());
+            priceEditorValidation.Add(new RangeRule()
             {
                 Minimum = decimal.Zero,
                 Maximum = decimal.MaxValue,
                 ErrorMessage = "Price cannot be negative"
             });
 
+            var changeColumn = columns["Change"];
+            changeColumn.Format = "C2";
+            changeColumn.TextAlign = TextAlignEnum.RightCenter;
 
-            _flexGrid.Cols["Change"].Format = "C2";
-            _flexGrid.Cols["Change"].TextAlign = TextAlignEnum.RightCenter;
-            _flexGrid.Cols["Discount"].Format = "p0";
-            _flexGrid.Cols["Discount"].AllowEditing = false;
-            _flexGrid.Cols["Discount"].Width = 80;
-            _flexGrid.Cols["Rating"].ImageAndText = false;
-            _flexGrid.Cols["Rating"].AllowEditing = false;
-            _flexGrid.Cols["Price"].Width = 80;
+            var historyColumn = columns["History"];
+            historyColumn.AllowEditing = false;
 
-            // For the history column initialize sparkline
-            _flexGrid.Cols["History"].ShowSparkline = true;
-            _flexGrid.Cols["History"].Sparkline.ShowLow = true;
-            _flexGrid.Cols["History"].Sparkline.ShowHigh = true;
-            _flexGrid.Cols["History"].AllowEditing = false;
+            // setup sparkline for history column 
+            historyColumn.ShowSparkline = true;
 
-            _flexGrid.Cols["Active"].Width = 60;
+            var historySparkline = historyColumn.Sparkline;
+            historySparkline.ShowLow = true;
+            historySparkline.ShowHigh = true;
 
-            // Init combobox list
-            var productList = (from s in _ds.Tables["Products"].Rows.Cast<DataRow>() select s)
-                .Select(x => x["Name"].ToString())
-                .ToArray();
-            var list = string.Join("|", productList);
-            _flexGrid.Cols["Product"].ComboList = list;
+            var discountColumn = columns["Discount"];
+            discountColumn.Format = "p0";
+            discountColumn.AllowEditing = false;
+            discountColumn.Width = 80;
 
+            var ratingColumn = columns["Rating"];
+            ratingColumn.ImageAndText = false;
+            ratingColumn.AllowEditing = false;
 
-            // Creating footers
+            columns["Active"].Width = 60;
+
+            var dateColumn = columns["Date"];
+            dateColumn.Format = "g";
+
+            // creating footers
             var footerDescription = new FooterDescription();
 
-            // Price agg
-            var aggFooterPriceAvg = new AggregateDefinition();
-            aggFooterPriceAvg.Aggregate = AggregateEnum.Average;
-            aggFooterPriceAvg.Caption = "Average price: ${0:N2}";
-            aggFooterPriceAvg.PropertyName = "Price";
+            // price aggregate
+            var priceAggregateDefinition = new AggregateDefinition();
+            priceAggregateDefinition.Aggregate = AggregateEnum.Average;
+            priceAggregateDefinition.Caption = "Average price: ${0:N2}";
+            priceAggregateDefinition.PropertyName = "Price";
 
-            // Discount agg
-            var aggFooterDiscoutAvg = new AggregateDefinition();
-            aggFooterDiscoutAvg.Aggregate = AggregateEnum.Average;
-            aggFooterDiscoutAvg.Caption = "Average discount: {0:P}";
-            aggFooterDiscoutAvg.PropertyName = "Discount";
+            // discount aggregate
+            var discountAggregateDefinition = new AggregateDefinition();
+            discountAggregateDefinition.Aggregate = AggregateEnum.Average;
+            discountAggregateDefinition.Caption = "Average discount: {0:P}";
+            discountAggregateDefinition.PropertyName = "Discount";
 
-            footerDescription.Aggregates.Add(aggFooterPriceAvg);
-            footerDescription.Aggregates.Add(aggFooterDiscoutAvg);
+            var aggregates = footerDescription.Aggregates;
+            aggregates.Add(priceAggregateDefinition);
+            aggregates.Add(discountAggregateDefinition);
 
-            // Add footers
-            _flexGrid.Footers.Descriptions.Add(footerDescription);
-            _flexGrid.Footers.Fixed = true;
+            // add footers
+            var footers = _flexGrid.Footers;
+            footers.Descriptions.Add(footerDescription);
+            footers.Fixed = true;
 
-            // Set details
+            // set details
             _flexGrid.RowDetailProvider = (g, r) => new CustomRowDetail();
 
-            // Other properties
-            _flexGrid.HideGroupedColumns = true;
-            _flexGrid.AllowFiltering = true;
-            _flexGrid.AllowMerging = AllowMergingEnum.Nodes;
+            // add red style
+            var redStyle = _flexGrid.Styles.Add("Red");
+            redStyle.ImageAlign = ImageAlignEnum.LeftCenter;
+            redStyle.ForeColor = Color.Red;
 
-            // Add styles (Red, Green and Rating)
-            var style = _flexGrid.Styles.Add("Red");
-            style.ImageAlign = ImageAlignEnum.LeftCenter;
-            style.ForeColor = Color.Red;
+            // add green style
+            var greenStyle = _flexGrid.Styles.Add("Green");
+            greenStyle.ImageAlign = ImageAlignEnum.LeftCenter;
+            greenStyle.ForeColor = Color.Green;
 
-            style = _flexGrid.Styles.Add("Green");
-            style.ImageAlign = ImageAlignEnum.LeftCenter;
-            style.ForeColor = Color.Green;
-
-            style = _flexGrid.Styles.Add("Rating");
-            style.ImageAlign = ImageAlignEnum.RightCenter;
+            // add rating style
+            var ratingStyle = _flexGrid.Styles.Add("Rating");
+            ratingStyle.ImageAlign = ImageAlignEnum.RightCenter;
         }
 
         private void InitRules()
@@ -382,7 +424,7 @@ namespace FlexGridShowcaseDemo
                     { "Discount < 30%", "= [Discount] < 0.3" }
                 };
 
-            // Creating rules
+            // creating rules
             _rules = rulesDict.Keys
                 .Select(x => new C1.Win.RulesManager.Rule()
                 {
@@ -396,20 +438,19 @@ namespace FlexGridShowcaseDemo
                     }
                 });
 
-            // Add menu items
-            rulesDict.Keys
+            // add menu items
+            var ruleRibbonToggleButtons = rulesDict.Keys
                 .Select(x => new RibbonToggleButton()
                 {
                     Text = x,
                     Pressed = false
-                })
-                .ToList()
-                .ForEach(x =>
-                {
-                    x.PressedButtonChanged += new EventHandler(_lstFormating_PressedChanged);
-                    _ribbonMenuFormating.Items.Add(x);
                 });
 
+            foreach (var ruleRibbonToggleButton in ruleRibbonToggleButtons)
+            {
+                ruleRibbonToggleButton.PressedButtonChanged += RuleRibbonToggleButton_PressedButtonChanged;
+                _ribbonMenuFormatting.Items.Add(ruleRibbonToggleButton);
+            }
         }
 
         #endregion
@@ -418,21 +459,21 @@ namespace FlexGridShowcaseDemo
 
         private void InitThemes()
         {
-            // Register custom theme
+            // register custom theme
             var customThemePath = Path.Combine(Directory.GetCurrentDirectory(), _customThemeName + ".c1themez");
             if (File.Exists(customThemePath))
             {
                 C1ThemeController.RegisterTheme(customThemePath);
             }
 
-            // Load themes into ribbon combo box
+            // load themes into ribbon combo box
             var themes = C1ThemeController.GetThemes().Where(x => x == _customThemeName || x.Contains("Office2016") || x.Contains("Material"));
             foreach (var theme in themes)
             {
                 _ribbonComboBoxThemes.Items.Add(theme);
             }
 
-            // Set default theme
+            // set default theme
             var customThemeIndex = _ribbonComboBoxThemes.Items.IndexOf(_customThemeName);
             if (customThemeIndex > -1)
             {
@@ -473,7 +514,7 @@ namespace FlexGridShowcaseDemo
                 }
             }
 
-            // custom paint cells for raiting
+            // custom paint cells for rating column
             if (_flexGrid[e.Row, e.Col] is int && columnName == "Rating")
             {
                 var value = (int)_flexGrid[e.Row, e.Col];
@@ -497,7 +538,9 @@ namespace FlexGridShowcaseDemo
                 }
 
                 var footerCellTextWidth = TextRenderer.MeasureText(footerCellValue.ToString(), _flexGrid.Styles.Footer.Font).Width;
-                _flexGrid.Cols[columnIndex].Width = Math.Max(footerCellTextWidth + _footerTextPadding, _flexGrid.Cols[columnIndex].Width);
+
+                var column = _flexGrid.Cols[columnIndex];
+                column.Width = Math.Max(footerCellTextWidth + _footerTextPadding, column.Width);
             }
         }
 
@@ -517,32 +560,32 @@ namespace FlexGridShowcaseDemo
 
         private void _ribbonComboBoxDataSize_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var dt = _ds.Tables["Data"];
+            var dataDataTable = _dataSet.Tables["Data"];
             switch (_ribbonComboBoxDataSize.SelectedIndex)
             {
                 case 0:
                     {
-                        BuildRows(10, dt);
+                        BuildRows(10, dataDataTable);
                         break;
                     }
                 case 1:
                     {
-                        BuildRows(50, dt);
+                        BuildRows(50, dataDataTable);
                         break;
                     }
                 case 2:
                     {
-                        BuildRows(100, dt);
+                        BuildRows(100, dataDataTable);
                         break;
                     }
                 case 3:
                     {
-                        BuildRows(1000, dt);
+                        BuildRows(1000, dataDataTable);
                         break;
                     }
                 case 4:
                     {
-                        BuildRows(5000, dt);
+                        BuildRows(5000, dataDataTable);
                         break;
                     }
             }
@@ -550,7 +593,7 @@ namespace FlexGridShowcaseDemo
 
         private void _ribbonComboBoxThemes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Change theme
+            // change theme
             var themeName = _ribbonComboBoxThemes.Text;
             _themeController.Theme = themeName;
         }
@@ -560,14 +603,16 @@ namespace FlexGridShowcaseDemo
             _flexGrid.ApplySearch(_ribbonTextBoxSearch.Text, true, true);
         }
 
-        private void _lstColumns_PressedChanged(object sender, EventArgs e)
+        private void ColumnRibbonToggleButton_PressedButtonChanged(object sender, EventArgs e)
         {
-            var preseedColumn = sender as RibbonToggleButton;
-            if (preseedColumn != null)
-                _flexGrid.Cols[preseedColumn.Text].Visible = preseedColumn.Pressed;
+            var pressedRibbonToggleButton = sender as RibbonToggleButton;
+            if (pressedRibbonToggleButton != null)
+            {
+                _flexGrid.Cols[pressedRibbonToggleButton.Text].Visible = pressedRibbonToggleButton.Pressed;
+            }
         }
 
-        private void _lstFormating_PressedChanged(object sender, EventArgs e)
+        private void RuleRibbonToggleButton_PressedButtonChanged(object sender, EventArgs e)
         {
             var pressedRule = sender as RibbonToggleButton;
             if (pressedRule != null)
@@ -578,12 +623,17 @@ namespace FlexGridShowcaseDemo
                 var newRule = _rules.Where(x => x.Name == ruleName).FirstOrDefault();
                 newRule.AppliesTo.Add(new FieldRange(new string[] { "Product", "Country", "Color", "Discount" }));
 
-                var existsRule = _rulesManager.Rules.Where(x => x.Name == ruleName).FirstOrDefault();
+                var appliedRules = _rulesManager.Rules;
+                var existingRule = appliedRules.Where(x => x.Name == ruleName).FirstOrDefault();
 
-                if (!pressed && _rulesManager.Rules.Contains(existsRule))
-                    _rulesManager.Rules.Remove(existsRule);
-                if (pressed && existsRule == null)
-                    _rulesManager.Rules.Add(newRule);
+                if (!pressed && appliedRules.Contains(existingRule))
+                {
+                    appliedRules.Remove(existingRule);
+                }
+                if (pressed && existingRule == null)
+                {
+                    appliedRules.Add(newRule);
+                }
             }
         }
 
@@ -610,19 +660,19 @@ namespace FlexGridShowcaseDemo
 
             _flexGrid.Styles.Footer.TextAlign = TextAlignEnum.RightCenter;
 
-            var cols = _flexGrid.Cols;
-            if (cols == null)
+            var columns = _flexGrid.Cols;
+            if (columns == null)
             {
                 return;
             }
 
-            if (cols.Contains("Price"))
+            if (columns.Contains("Price"))
             {
-                UpdateFooterColumnWidth(cols["Price"].Index);
+                UpdateFooterColumnWidth(columns["Price"].Index);
             }
-            if (cols.Contains("Discount"))
+            if (columns.Contains("Discount"))
             {
-                UpdateFooterColumnWidth(cols["Discount"].Index);
+                UpdateFooterColumnWidth(columns["Discount"].Index);
             }
         }
 

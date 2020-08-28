@@ -93,9 +93,9 @@ namespace FlexGridShowcaseDemo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ConditionalFormating {
+        internal static System.Drawing.Bitmap ConditionalFormatting {
             get {
-                object obj = ResourceManager.GetObject("ConditionalFormating", resourceCulture);
+                object obj = ResourceManager.GetObject("ConditionalFormatting", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
