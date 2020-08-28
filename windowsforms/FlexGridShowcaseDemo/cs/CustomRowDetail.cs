@@ -19,19 +19,21 @@ namespace FlexGridShowcaseDemo
         /// <param name="rowIndex">Index of parent detail row.</param>
         void IC1FlexGridRowDetail.Setup(C1FlexGrid parentGrid, int rowIndex)
         {
-            var bs = new BindingSource(parentGrid.DataSource as DataSet, "Products");
-            bs.Position = parentGrid.Rows[rowIndex].DataIndex;
-            var row = bs.Current as DataRowView;
+            using (var bindingSource = new BindingSource(parentGrid.DataSource as DataSet, "Products"))
+            {
+                bindingSource.Position = parentGrid.Rows[rowIndex].DataIndex;
+                var row = bindingSource.Current as DataRowView;
 
-            // Formatting text
-            var columnTitles = (from s in row.Row.Table.Columns.Cast<DataColumn>() select s)
-                .Where(x => x.ColumnName != "Name")
-                .Select(x => x.ColumnName);
+                // Formatting text
+                var columnTitles = (from s in row.Row.Table.Columns.Cast<DataColumn>() select s)
+                    .Where(x => x.ColumnName != "Name")
+                    .Select(x => x.ColumnName);
 
-            var details = columnTitles
-                .Select(x => string.Format("{0}: {1}", x, row[x]));
+                var details = columnTitles
+                    .Select(x => string.Format("{0}: {1}", x, row[x]));
 
-            Text = string.Join(Environment.NewLine, details);
+                Text = string.Join(Environment.NewLine, details);
+            }
         }
 
         /// <summary>
