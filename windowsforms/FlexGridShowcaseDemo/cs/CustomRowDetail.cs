@@ -44,11 +44,11 @@ namespace FlexGridShowcaseDemo
         /// <param name="proposedSize">The proposed size for the detail control.</param>
         void IC1FlexGridRowDetail.UpdateSize(C1FlexGrid parentGrid, int rowIndex, Size proposedSize)
         {
-            var srSz = parentGrid.ScrollableRectangle.Size;
-            var sz = TextRenderer.MeasureText(Text, Font, srSz, TextFormatFlags.WordBreak);
-            sz.Width = Math.Max(sz.Width, srSz.Width);
+            var scrollableRectangleSize = parentGrid.ScrollableRectangle.Size;
+            var labelSize = TextRenderer.MeasureText(Text, Font, scrollableRectangleSize, TextFormatFlags.WordBreak);
+            labelSize.Width = Math.Max(labelSize.Width, scrollableRectangleSize.Width);
 
-            Size = sz;
+            Size = labelSize;
         }
 
         /// <summary>
