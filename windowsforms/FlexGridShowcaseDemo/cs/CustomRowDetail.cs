@@ -12,7 +12,6 @@ namespace FlexGridShowcaseDemo
     /// </summary>
     public class CustomRowDetail :  Label, IC1FlexGridRowDetail
     {
-
         /// <summary>
         /// Used to setup control before showing of it.
         /// </summary>
