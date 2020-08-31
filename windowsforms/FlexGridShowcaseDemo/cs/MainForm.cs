@@ -142,7 +142,7 @@ namespace FlexGridShowcaseDemo
                     // Price
                     s_rnd.NextDouble() * 100 * s_rnd.Next(100),
                     // Change
-                    s_rnd.NextDouble() * 10 * s_rnd.Next(100) * (s_rnd.Next(1, 3) == 1 ? (-1) : 1),
+                    s_rnd.NextDouble() * 10 * s_rnd.Next(100) * (s_rnd.NextDouble() >= 0.5 ? 1 : -1),
                     // History
                     historyData,
                     // Discount
@@ -150,7 +150,7 @@ namespace FlexGridShowcaseDemo
                     // Rating
                     s_rnd.Next(0, 5),
                     // Active
-                    (s_rnd.Next(1, 3) == 1 ? false : true),
+                    (s_rnd.NextDouble() >= 0.5),
                     // Date
                     startPeriod.AddDays(s_rnd.Next(60))
                         .AddHours(s_rnd.Next(60))
