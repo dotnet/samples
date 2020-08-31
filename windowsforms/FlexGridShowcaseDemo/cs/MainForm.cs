@@ -425,11 +425,11 @@ namespace FlexGridShowcaseDemo
         {
             _rulesManager.SetC1RulesManager(_flexGrid, _rulesManager);
             var rulesDict = new Dictionary<string, string>()
-                {
-                    { "Discount < 10%", "= [Discount] < 0.1" },
-                    { "Discount < 20%", "= [Discount] < 0.2" },
-                    { "Discount < 30%", "= [Discount] < 0.3" }
-                };
+            {
+                { "Discount < 10%", "= [Discount] < 0.1" },
+                { "Discount < 20%", "= [Discount] < 0.2" },
+                { "Discount < 30%", "= [Discount] < 0.3" }
+            };
 
             // creating rules
             _rules = rulesDict.Keys
