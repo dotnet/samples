@@ -184,9 +184,9 @@ namespace FlexGridShowcaseDemo
             var productsRows = productsDataTable.Rows;
 
             // Add rows
-            productsRows.Add("Gadget", 120f, 900f, 2, descriptions[s_rnd.Next(descriptions.Count - 1)]);
-            productsRows.Add("Widget", 20f, 20f, 25, descriptions[s_rnd.Next(descriptions.Count - 1)]);
-            productsRows.Add("Doohickey", 74f, 90f, 100, descriptions[s_rnd.Next(descriptions.Count - 1)]);
+            productsRows.Add("Gadget", 120f, 900f, 2, descriptions[s_rnd.Next(descriptions.Count)]);
+            productsRows.Add("Widget", 20f, 20f, 25, descriptions[s_rnd.Next(descriptions.Count)]);
+            productsRows.Add("Doohickey", 74f, 90f, 100, descriptions[s_rnd.Next(descriptions.Count)]);
 
             var tables = _dataSet.Tables;
             tables.Add(productsDataTable);
