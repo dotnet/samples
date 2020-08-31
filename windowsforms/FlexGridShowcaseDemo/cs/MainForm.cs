@@ -34,8 +34,10 @@ namespace FlexGridShowcaseDemo
             InitializeComponent();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        protected override void OnLoad(EventArgs e)
         {
+            base.OnLoad(e);
+
             FillData();
 
             InitImages();

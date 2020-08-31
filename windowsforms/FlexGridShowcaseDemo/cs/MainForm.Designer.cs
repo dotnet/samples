@@ -251,7 +251,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "C1FlexGrid: Showcase";
             this._themeController.SetTheme(this, "Office2016Green");
-            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this._ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._themeController)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._flexGrid)).EndInit();
