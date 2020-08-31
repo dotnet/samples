@@ -19,8 +19,9 @@ namespace FlexGridShowcaseDemo
 
     public partial class MainForm : C1RibbonForm 
     {
-        private const string _customThemeName = "Greenwich";
-        private const int _footerTextPadding = 4;
+        private const string CustomThemeName = "Greenwich";
+        private const int FooterTextPadding = 4;
+
         private DataSet _dataSet = new DataSet();
         private C1RulesManager _rulesManager = new C1RulesManager();
         private IEnumerable<IRule> _rules = Enumerable.Empty<IRule>();
@@ -467,21 +468,21 @@ namespace FlexGridShowcaseDemo
         private void InitThemes()
         {
             // register custom theme
-            var customThemePath = Path.Combine(Directory.GetCurrentDirectory(), _customThemeName + ".c1themez");
+            var customThemePath = Path.Combine(Directory.GetCurrentDirectory(), CustomThemeName + ".c1themez");
             if (File.Exists(customThemePath))
             {
                 C1ThemeController.RegisterTheme(customThemePath);
             }
 
             // load themes into ribbon combo box
-            var themes = C1ThemeController.GetThemes().Where(x => x == _customThemeName || x.Contains("Office2016") || x.Contains("Material"));
+            var themes = C1ThemeController.GetThemes().Where(x => x == CustomThemeName || x.Contains("Office2016") || x.Contains("Material"));
             foreach (var theme in themes)
             {
                 _ribbonComboBoxThemes.Items.Add(theme);
             }
 
             // set default theme
-            var customThemeIndex = _ribbonComboBoxThemes.Items.IndexOf(_customThemeName);
+            var customThemeIndex = _ribbonComboBoxThemes.Items.IndexOf(CustomThemeName);
             if (customThemeIndex > -1)
             {
                 _ribbonComboBoxThemes.SelectedIndex = customThemeIndex;
@@ -547,7 +548,7 @@ namespace FlexGridShowcaseDemo
                 var footerCellTextWidth = TextRenderer.MeasureText(footerCellValue.ToString(), _flexGrid.Styles.Footer.Font).Width;
 
                 var column = _flexGrid.Cols[columnIndex];
-                column.Width = Math.Max(footerCellTextWidth + _footerTextPadding, column.Width);
+                column.Width = Math.Max(footerCellTextWidth + FooterTextPadding, column.Width);
             }
         }
 
