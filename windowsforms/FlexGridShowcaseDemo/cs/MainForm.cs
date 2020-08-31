@@ -74,7 +74,7 @@ namespace FlexGridShowcaseDemo
 
         #region Fill Data
 
-        private enum Countries
+        private enum Country
         {
             Germany,
             UK,
@@ -100,8 +100,8 @@ namespace FlexGridShowcaseDemo
                     .Select(x => x["Name"].ToString())
                     .ToArray();
 
-            var countries = Enum.GetValues(typeof(Countries))
-                    .Cast<Countries>()
+            var countries = Enum.GetValues(typeof(Country))
+                    .Cast<Country>()
                     .ToArray();
 
             var colors = Enum.GetValues(typeof(DrawColors))
@@ -189,7 +189,7 @@ namespace FlexGridShowcaseDemo
             // Add columns
             dataColumns.Add("ID", typeof(int));
             dataColumns.Add("Product");
-            dataColumns.Add("Country", typeof(Countries));
+            dataColumns.Add("Country", typeof(Country));
             dataColumns.Add("Color", typeof(DrawColors));
             dataColumns.Add("Price", typeof(decimal));
             dataColumns.Add("Change", typeof(decimal));
@@ -303,8 +303,8 @@ namespace FlexGridShowcaseDemo
             columns["Product"].ComboList = string.Join("|", products);
 
             // build image map for countries
-            var flagImageMap = new Dictionary<Countries, Image>();
-            foreach (Countries country in Enum.GetValues(typeof(Countries)))
+            var flagImageMap = new Dictionary<Country, Image>();
+            foreach (Country country in Enum.GetValues(typeof(Country)))
             {
                 flagImageMap.Add(country, LoadImage(country.ToString()));
             }
