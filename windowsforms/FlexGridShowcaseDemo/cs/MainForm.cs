@@ -262,6 +262,7 @@ namespace FlexGridShowcaseDemo
             var appIcon = Properties.Resources.App;
             Icon = appIcon;
         }
+
         private void InitGroups()
         {
             var propertyNames = new List<string>();
