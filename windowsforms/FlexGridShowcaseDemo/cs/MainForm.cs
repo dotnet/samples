@@ -225,7 +225,7 @@ namespace FlexGridShowcaseDemo
                 var manager = new System.Resources.ResourceManager(resource, assembly);
                 if (manager != null)
                 {
-                    Bitmap bmp = (Bitmap)manager.GetObject(recourceName, CultureInfo.InvariantCulture);
+                    var bmp = (Bitmap)manager.GetObject(recourceName, CultureInfo.InvariantCulture);
                     return bmp;
                 }
             }
