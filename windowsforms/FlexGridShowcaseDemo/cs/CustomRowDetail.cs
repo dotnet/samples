@@ -30,7 +30,7 @@ namespace FlexGridShowcaseDemo
                     .Select(x => x.ColumnName);
 
                 var details = columnTitles
-                    .Select(x => string.Format("{0}: {1}", x, row[x]));
+                    .Select(x => $"{x}: {row[x]}");
 
                 Text = string.Join(Environment.NewLine, details);
             }
