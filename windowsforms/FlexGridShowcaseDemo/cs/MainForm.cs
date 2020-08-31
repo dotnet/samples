@@ -25,7 +25,7 @@ namespace FlexGridShowcaseDemo
         private DataSet _dataSet = new DataSet();
         private C1RulesManager _rulesManager = new C1RulesManager();
         private IEnumerable<IRule> _rules = Enumerable.Empty<IRule>();
-        private static Random _rnd = new Random();
+        private static Random s_rnd = new Random();
 
         #region Initialization
 
@@ -125,34 +125,34 @@ namespace FlexGridShowcaseDemo
                 var historyData = new int[12];
                 for (var i = 0; i < historyData.Length; i++)
                 {
-                    historyData[i] = _rnd.Next(0, 50);
+                    historyData[i] = s_rnd.Next(0, 50);
                 };
 
                 dataRows.Add(
                     // ID
                     rowIndex + 1,
                     // Product
-                    products[_rnd.Next(products.Length)],
+                    products[s_rnd.Next(products.Length)],
                     // Country
-                    countries[_rnd.Next(countries.Length)],
+                    countries[s_rnd.Next(countries.Length)],
                     // Color
-                    colors[_rnd.Next(colors.Length)],
+                    colors[s_rnd.Next(colors.Length)],
                     // Price
-                    _rnd.NextDouble() * 100 * _rnd.Next(100),
+                    s_rnd.NextDouble() * 100 * s_rnd.Next(100),
                     // Change
-                    _rnd.NextDouble() * 10 * _rnd.Next(100) * (_rnd.Next(1, 3) == 1 ? (-1) : 1),
+                    s_rnd.NextDouble() * 10 * s_rnd.Next(100) * (s_rnd.Next(1, 3) == 1 ? (-1) : 1),
                     // History
                     historyData,
                     // Discount
-                    _rnd.NextDouble(),
+                    s_rnd.NextDouble(),
                     // Rating
-                    _rnd.Next(0, 5),
+                    s_rnd.Next(0, 5),
                     // Active
-                    (_rnd.Next(1, 3) == 1 ? false : true),
+                    (s_rnd.Next(1, 3) == 1 ? false : true),
                     // Date
-                    startPeriod.AddDays(_rnd.Next(60))
-                        .AddHours(_rnd.Next(60))
-                        .AddMinutes(_rnd.Next(60))
+                    startPeriod.AddDays(s_rnd.Next(60))
+                        .AddHours(s_rnd.Next(60))
+                        .AddMinutes(s_rnd.Next(60))
                     );
             }
 
@@ -182,9 +182,9 @@ namespace FlexGridShowcaseDemo
             var productsRows = productsDataTable.Rows;
 
             // Add rows
-            productsRows.Add("Gadget", 120f, 900f, 2, descriptions[_rnd.Next(descriptions.Count - 1)]);
-            productsRows.Add("Widget", 20f, 20f, 25, descriptions[_rnd.Next(descriptions.Count - 1)]);
-            productsRows.Add("Doohickey", 74f, 90f, 100, descriptions[_rnd.Next(descriptions.Count - 1)]);
+            productsRows.Add("Gadget", 120f, 900f, 2, descriptions[s_rnd.Next(descriptions.Count - 1)]);
+            productsRows.Add("Widget", 20f, 20f, 25, descriptions[s_rnd.Next(descriptions.Count - 1)]);
+            productsRows.Add("Doohickey", 74f, 90f, 100, descriptions[s_rnd.Next(descriptions.Count - 1)]);
 
             var tables = _dataSet.Tables;
             tables.Add(productsDataTable);
@@ -441,7 +441,7 @@ namespace FlexGridShowcaseDemo
                     Expression = rulesDict[x],
                     Style = new ItemStyle()
                     {
-                        ForeColor = Color.FromArgb(_rnd.Next(255), _rnd.Next(255), _rnd.Next(255)),
+                        ForeColor = Color.FromArgb(s_rnd.Next(255), s_rnd.Next(255), s_rnd.Next(255)),
                         BorderColor = Color.DarkBlue,
                         FontStyle = FontStyle.Bold
                     }
