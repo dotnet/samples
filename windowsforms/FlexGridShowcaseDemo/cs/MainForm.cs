@@ -82,7 +82,7 @@ namespace FlexGridShowcaseDemo
             Japan
         };
 
-        private enum DrawColors
+        private enum DrawColor
         {
             Black,
             White,
@@ -104,8 +104,8 @@ namespace FlexGridShowcaseDemo
                     .Cast<Country>()
                     .ToArray();
 
-            var colors = Enum.GetValues(typeof(DrawColors))
-                    .Cast<DrawColors>()
+            var colors = Enum.GetValues(typeof(DrawColor))
+                    .Cast<DrawColor>()
                     .ToArray();
 
             dataTable.Clear();
@@ -190,7 +190,7 @@ namespace FlexGridShowcaseDemo
             dataColumns.Add("ID", typeof(int));
             dataColumns.Add("Product");
             dataColumns.Add("Country", typeof(Country));
-            dataColumns.Add("Color", typeof(DrawColors));
+            dataColumns.Add("Color", typeof(DrawColor));
             dataColumns.Add("Price", typeof(decimal));
             dataColumns.Add("Change", typeof(decimal));
             dataColumns.Add("History", typeof(int[]));
@@ -316,8 +316,8 @@ namespace FlexGridShowcaseDemo
             countryColumn.ImageAndText = true;
 
             // build image map for colors
-            var colorImageMap = new Dictionary<DrawColors, Image>();
-            foreach (DrawColors color in Enum.GetValues(typeof(DrawColors)))
+            var colorImageMap = new Dictionary<DrawColor, Image>();
+            foreach (DrawColor color in Enum.GetValues(typeof(DrawColor)))
             {
                 colorImageMap.Add(color, LoadImage(color.ToString()));
             }
