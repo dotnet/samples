@@ -522,12 +522,12 @@ namespace FlexGridShowcaseDemo
             }
 
             // custom paint cells for rating column
-            if (_flexGrid[e.Row, e.Col] is int intValue && columnName == "Rating")
+            if (columnName == "Rating" && _flexGrid[e.Row, e.Col] is int ratingValue)
             {
-                if (intValue > 0)
+                if (ratingValue > 0)
                 {
                     e.Style = _flexGrid.Styles["Rating"];
-                    e.Image = LoadImage($"star{intValue}");
+                    e.Image = LoadImage($"star{ratingValue}");
                 }
             }
         }
