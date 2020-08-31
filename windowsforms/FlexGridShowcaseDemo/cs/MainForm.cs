@@ -43,7 +43,14 @@ namespace FlexGridShowcaseDemo
             InitThemes();
 
             // Data sizes
-            var dataSizes = new List<string>() { "10 Rows, 12 Columns", "50 Rows, 12 Columns", "100 Rows, 12 Columns", "1000 Rows, 12 Columns", "5000 Rows, 12 Columns" };
+            var dataSizes = new List<string>()
+            {
+                "10 Rows, 12 Columns",
+                "50 Rows, 12 Columns",
+                "100 Rows, 12 Columns",
+                "1000 Rows, 12 Columns",
+                "5000 Rows, 12 Columns"
+            };
             foreach (var item in dataSizes)
             {
                 _ribbonComboBoxDataSize.Items.Add(item);
