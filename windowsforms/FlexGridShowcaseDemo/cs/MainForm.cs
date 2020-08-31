@@ -507,10 +507,9 @@ namespace FlexGridShowcaseDemo
             var columnName = _flexGrid.Cols[e.Col].Name;
 
             // custom paint cells for change column
-            if (_flexGrid[e.Row, e.Col] is decimal && columnName == "Change")
+            if (_flexGrid[e.Row, e.Col] is decimal decimalValue && columnName == "Change")
             {
-                var value = (decimal)_flexGrid[e.Row, e.Col];
-                if (value >= 0)
+                if (decimalValue >= 0)
                 {
                     e.Style = _flexGrid.Styles["Green"];
                     e.Image = LoadImage("UpGreen");
