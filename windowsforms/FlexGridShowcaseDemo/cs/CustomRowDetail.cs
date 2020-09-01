@@ -19,8 +19,7 @@ namespace FlexGridShowcaseDemo
         /// <param name="rowIndex">Index of parent detail row.</param>
         void IC1FlexGridRowDetail.Setup(C1FlexGrid parentGrid, int rowIndex)
         {
-            var dataSet = parentGrid?.DataSource as DataSet;
-            if (dataSet is null)
+            if (!(parentGrid?.DataSource is DataSet dataSet))
             {
                 return;
             }

@@ -635,35 +635,38 @@ namespace FlexGridShowcaseDemo
 
         private void ColumnRibbonToggleButton_PressedButtonChanged(object sender, EventArgs e)
         {
-            var pressedRibbonToggleButton = sender as RibbonToggleButton;
-            if (!(pressedRibbonToggleButton is null))
+            if (!(sender is RibbonToggleButton pressedRibbonToggleButton))
             {
-                _flexGrid.Cols[pressedRibbonToggleButton.Text].Visible = pressedRibbonToggleButton.Pressed;
+                return;
             }
+
+            _flexGrid.Cols[pressedRibbonToggleButton.Text].Visible = pressedRibbonToggleButton.Pressed;
+
         }
 
         private void RuleRibbonToggleButton_PressedButtonChanged(object sender, EventArgs e)
         {
-            var pressedRule = sender as RibbonToggleButton;
-            if (!(pressedRule is null))
+            if (!(sender is RibbonToggleButton pressedRule))
             {
-                var ruleName = pressedRule.Text;
-                var pressed = pressedRule.Pressed;
+                return;
+            }
 
-                var newRule = _rules.Where(x => x.Name == ruleName).FirstOrDefault();
-                newRule.AppliesTo.Add(new FieldRange(new string[] { "Product", "Country", "Color", "Discount" }));
+            var ruleName = pressedRule.Text;
+            var pressed = pressedRule.Pressed;
 
-                var appliedRules = _rulesManager.Rules;
-                var existingRule = appliedRules.Where(x => x.Name == ruleName).FirstOrDefault();
+            var newRule = _rules.Where(x => x.Name == ruleName).FirstOrDefault();
+            newRule.AppliesTo.Add(new FieldRange(new string[] { "Product", "Country", "Color", "Discount" }));
 
-                if (!pressed && appliedRules.Contains(existingRule))
-                {
-                    appliedRules.Remove(existingRule);
-                }
-                if (pressed && existingRule is null)
-                {
-                    appliedRules.Add(newRule);
-                }
+            var appliedRules = _rulesManager.Rules;
+            var existingRule = appliedRules.Where(x => x.Name == ruleName).FirstOrDefault();
+
+            if (!pressed && appliedRules.Contains(existingRule))
+            {
+                appliedRules.Remove(existingRule);
+            }
+            if (pressed && existingRule is null)
+            {
+                appliedRules.Add(newRule);
             }
         }
 
