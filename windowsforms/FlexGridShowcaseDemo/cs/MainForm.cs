@@ -232,7 +232,7 @@ namespace FlexGridShowcaseDemo
             var assembly = Assembly.GetExecutingAssembly();
 
             var manager = new ResourceManager(resource, assembly);
-            if (manager == null)
+            if (manager is null)
             {
                 return null;
             }
@@ -243,7 +243,7 @@ namespace FlexGridShowcaseDemo
         private C1BitmapIcon GetBitmapIcon(string name)
         {
             var image = LoadImage(name);
-            if (image == null)
+            if (image is null)
             {
                 return null;
             }
@@ -255,21 +255,21 @@ namespace FlexGridShowcaseDemo
         {
             // ConditionalFormatting
             var conditionalFormattingBitmapIcon = GetBitmapIcon("ConditionalFormatting");
-            if (conditionalFormattingBitmapIcon != null)
+            if (!(conditionalFormattingBitmapIcon is null))
             {
                 _ribbonMenuFormatting.IconSet.Add(conditionalFormattingBitmapIcon);
             }
 
             // Columns
             var columnsBitmapIcon = GetBitmapIcon("Columns");
-            if (columnsBitmapIcon != null)
+            if (!(columnsBitmapIcon is null))
             {
                 _ribbonMenuColumns.IconSet.Add(columnsBitmapIcon);
             }
 
             // Filter
             var filterBitmapIcon = GetBitmapIcon("Filter");
-            if (filterBitmapIcon != null)
+            if (!(filterBitmapIcon is null))
             {
                 _ribbonButtonFilter.IconSet.Add(filterBitmapIcon);
             }
@@ -291,7 +291,7 @@ namespace FlexGridShowcaseDemo
             }
 
             // Clear condition filters
-            if (_flexGrid.GroupDescriptions != null && propertyNames.Count == 0)
+            if (!(_flexGrid.GroupDescriptions is null) && propertyNames.Count == 0)
             {
                 _flexGrid.GroupDescriptions = null;
                 return;
@@ -558,7 +558,7 @@ namespace FlexGridShowcaseDemo
             if (_flexGrid.Footers.Descriptions.Count > 0)
             {
                 var footerCellValue = _flexGrid[lastRowIndex, columnIndex];
-                if (footerCellValue == null)
+                if (footerCellValue is null)
                 {
                     return;
                 }
@@ -632,7 +632,7 @@ namespace FlexGridShowcaseDemo
         private void ColumnRibbonToggleButton_PressedButtonChanged(object sender, EventArgs e)
         {
             var pressedRibbonToggleButton = sender as RibbonToggleButton;
-            if (pressedRibbonToggleButton != null)
+            if (!(pressedRibbonToggleButton is null))
             {
                 _flexGrid.Cols[pressedRibbonToggleButton.Text].Visible = pressedRibbonToggleButton.Pressed;
             }
@@ -641,7 +641,7 @@ namespace FlexGridShowcaseDemo
         private void RuleRibbonToggleButton_PressedButtonChanged(object sender, EventArgs e)
         {
             var pressedRule = sender as RibbonToggleButton;
-            if (pressedRule != null)
+            if (!(pressedRule is null))
             {
                 var ruleName = pressedRule.Text;
                 var pressed = pressedRule.Pressed;
@@ -656,7 +656,7 @@ namespace FlexGridShowcaseDemo
                 {
                     appliedRules.Remove(existingRule);
                 }
-                if (pressed && existingRule == null)
+                if (pressed && existingRule is null)
                 {
                     appliedRules.Add(newRule);
                 }
@@ -687,7 +687,7 @@ namespace FlexGridShowcaseDemo
             _flexGrid.Styles.Footer.TextAlign = TextAlignEnum.RightCenter;
 
             var columns = _flexGrid.Cols;
-            if (columns == null)
+            if (columns is null)
             {
                 return;
             }

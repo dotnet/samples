@@ -20,7 +20,7 @@ namespace FlexGridShowcaseDemo
         void IC1FlexGridRowDetail.Setup(C1FlexGrid parentGrid, int rowIndex)
         {
             var dataSet = parentGrid?.DataSource as DataSet;
-            if (dataSet == null)
+            if (dataSet is null)
             {
                 return;
             }
@@ -35,7 +35,7 @@ namespace FlexGridShowcaseDemo
             }
 
             var detailRow = childRows[0];
-            if (detailRow == null)
+            if (detailRow is null)
             {
                 return;
             }
