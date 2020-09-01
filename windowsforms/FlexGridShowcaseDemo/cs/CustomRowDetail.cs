@@ -1,16 +1,17 @@
-﻿using C1.Win.FlexGrid;
-using System;
+﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using C1.Win.FlexGrid;
 
 namespace FlexGridShowcaseDemo
 {
     /// <summary>
     /// Custom row detail class which shows label with notes about employee.
     /// </summary>
-    public class CustomRowDetail :  Label, IC1FlexGridRowDetail
+    public class CustomRowDetail : Label, IC1FlexGridRowDetail
     {
         /// <summary>
         /// Used to setup control before showing of it.
@@ -24,23 +25,23 @@ namespace FlexGridShowcaseDemo
                 return;
             }
 
-            var dataDataTable = dataSet.Tables["Data"];
-            var dataRow = dataDataTable.Rows[parentGrid.Rows[rowIndex].DataIndex];
+            DataTable dataDataTable = dataSet.Tables["Data"];
+            DataRow dataRow = dataDataTable.Rows[parentGrid.Rows[rowIndex].DataIndex];
 
-            var childRows = dataRow.GetChildRows("Products");
+            DataRow[] childRows = dataRow.GetChildRows("Products");
             if (childRows?.Length == 0)
             {
                 return;
             }
 
-            var detailRow = childRows[0];
+            DataRow detailRow = childRows[0];
             if (detailRow is null)
             {
                 return;
             }
 
             // Formatting text
-            var details = (from s in detailRow.Table.Columns.Cast<DataColumn>() select s)
+            IEnumerable<string> details = (from s in detailRow.Table.Columns.Cast<DataColumn>() select s)
                     .Where(x => x.ColumnName != "Name")
                     .Select(x => $"{x.ColumnName}: {detailRow[x.ColumnName]}");
 
@@ -55,8 +56,8 @@ namespace FlexGridShowcaseDemo
         /// <param name="proposedSize">The proposed size for the detail control.</param>
         void IC1FlexGridRowDetail.UpdateSize(C1FlexGrid parentGrid, int rowIndex, Size proposedSize)
         {
-            var scrollableRectangleSize = parentGrid.ScrollableRectangle.Size;
-            var labelSize = TextRenderer.MeasureText(Text, Font, scrollableRectangleSize, TextFormatFlags.WordBreak);
+            Size scrollableRectangleSize = parentGrid.ScrollableRectangle.Size;
+            Size labelSize = TextRenderer.MeasureText(Text, Font, scrollableRectangleSize, TextFormatFlags.WordBreak);
             labelSize.Width = Math.Max(labelSize.Width, scrollableRectangleSize.Width);
 
             Size = labelSize;

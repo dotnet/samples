@@ -1,11 +1,6 @@
-﻿using C1.Framework;
-using C1.Win.FlexGrid;
-using C1.Win.Themes;
-using C1.Win.Ribbon;
-using C1.Win.RulesManager;
-using System;
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -15,11 +10,17 @@ using System.Linq;
 using System.Reflection;
 using System.Resources;
 using System.Windows.Forms;
+using C1.Framework;
+using C1.Win.FlexGrid;
+using C1.Win.Ribbon;
+using C1.Win.RulesManager;
+using C1.Win.RulesManager.Model;
+using C1.Win.Themes;
 
 namespace FlexGridShowcaseDemo
 {
 
-    public partial class MainForm : C1RibbonForm 
+    public partial class MainForm : C1RibbonForm
     {
         private const string CustomThemeName = "Greenwich";
         private const int FooterTextPadding = 4;
@@ -56,14 +57,14 @@ namespace FlexGridShowcaseDemo
                 "1000 Rows, 12 Columns",
                 "5000 Rows, 12 Columns"
             };
-            foreach (var item in dataSizes)
+            foreach (string item in dataSizes)
             {
                 _ribbonComboBoxDataSize.Items.Add(item);
             }
 
             // Columns visible
             _ribbonMenuColumns.Items.Clear();
-            var columnRibbonToggleButtons = (from s in _flexGrid.Cols.Cast<Column>() select s)
+            IEnumerable<RibbonToggleButton> columnRibbonToggleButtons = (from s in _flexGrid.Cols.Cast<Column>() select s)
                 .Where(x => !string.IsNullOrEmpty(x.Name))
                 .Select(x => new RibbonToggleButton()
                 {
@@ -71,7 +72,7 @@ namespace FlexGridShowcaseDemo
                     Pressed = x.Visible
                 });
 
-            foreach (var columnRibbonToggleButton in columnRibbonToggleButtons)
+            foreach (RibbonToggleButton columnRibbonToggleButton in columnRibbonToggleButtons)
             {
                 columnRibbonToggleButton.PressedButtonChanged += ColumnRibbonToggleButton_PressedButtonChanged;
                 _ribbonMenuColumns.Items.Add(columnRibbonToggleButton);
@@ -108,21 +109,21 @@ namespace FlexGridShowcaseDemo
             _flexGrid.BeginUpdate();
 
             // Related data
-            var products = (from s in _dataSet.Tables["Products"].Rows.Cast<DataRow>() select s)
+            string[] products = (from s in _dataSet.Tables["Products"].Rows.Cast<DataRow>() select s)
                     .Select(x => x["Name"].ToString())
                     .ToArray();
 
-            var countries = Enum.GetValues(typeof(Country))
+            Country[] countries = Enum.GetValues(typeof(Country))
                     .Cast<Country>()
                     .ToArray();
 
-            var colors = Enum.GetValues(typeof(DrawColor))
+            DrawColor[] colors = Enum.GetValues(typeof(DrawColor))
                     .Cast<DrawColor>()
                     .ToArray();
 
             dataTable.Clear();
 
-            var dataRows = dataTable.Rows;
+            DataRowCollection dataRows = dataTable.Rows;
             for (var rowIndex = 0; rowIndex < rowCount; rowIndex++)
             {
                 // Fill history data
@@ -173,8 +174,8 @@ namespace FlexGridShowcaseDemo
 
             // Products table
             var productsDataTable = new DataTable("Products");
-            
-            var productsColumns = productsDataTable.Columns;
+
+            DataColumnCollection productsColumns = productsDataTable.Columns;
 
             // Add columns
             productsColumns.Add("Name");
@@ -183,20 +184,20 @@ namespace FlexGridShowcaseDemo
             productsColumns.Add("Quantity", typeof(uint));
             productsColumns.Add("Description");
 
-            var productsRows = productsDataTable.Rows;
+            DataRowCollection productsRows = productsDataTable.Rows;
 
             // Add rows
             productsRows.Add("Gadget", 120f, 900f, 2, descriptions[s_rnd.Next(descriptions.Count)]);
             productsRows.Add("Widget", 20f, 20f, 25, descriptions[s_rnd.Next(descriptions.Count)]);
             productsRows.Add("Doohickey", 74f, 90f, 100, descriptions[s_rnd.Next(descriptions.Count)]);
 
-            var tables = _dataSet.Tables;
+            DataTableCollection tables = _dataSet.Tables;
             tables.Add(productsDataTable);
 
             // Data table
             var dataDataTable = new DataTable("Data");
 
-            var dataColumns = dataDataTable.Columns;
+            DataColumnCollection dataColumns = dataDataTable.Columns;
 
             // Add columns
             dataColumns.Add("ID", typeof(int));
@@ -214,7 +215,7 @@ namespace FlexGridShowcaseDemo
             tables.Add(dataDataTable);
 
             // Creating relation between products and data
-            _dataSet.Relations.Add("Products", 
+            _dataSet.Relations.Add("Products",
                 dataColumns["Product"], productsColumns["Name"], false);
 
             _flexGrid.DataSource = _dataSet;
@@ -229,7 +230,7 @@ namespace FlexGridShowcaseDemo
         static Image LoadImage(string resourceName)
         {
             var resource = "FlexGridShowcaseDemo.Properties.Resources";
-            var assembly = Assembly.GetExecutingAssembly();
+            Assembly assembly = Assembly.GetExecutingAssembly();
 
             var manager = new ResourceManager(resource, assembly);
             if (manager is null)
@@ -242,7 +243,7 @@ namespace FlexGridShowcaseDemo
 
         private C1BitmapIcon GetBitmapIcon(string name)
         {
-            var image = LoadImage(name);
+            Image image = LoadImage(name);
             if (image is null)
             {
                 return null;
@@ -254,27 +255,27 @@ namespace FlexGridShowcaseDemo
         private void InitImages()
         {
             // ConditionalFormatting
-            var conditionalFormattingBitmapIcon = GetBitmapIcon("ConditionalFormatting");
+            C1BitmapIcon conditionalFormattingBitmapIcon = GetBitmapIcon("ConditionalFormatting");
             if (!(conditionalFormattingBitmapIcon is null))
             {
                 _ribbonMenuFormatting.IconSet.Add(conditionalFormattingBitmapIcon);
             }
 
             // Columns
-            var columnsBitmapIcon = GetBitmapIcon("Columns");
+            C1BitmapIcon columnsBitmapIcon = GetBitmapIcon("Columns");
             if (!(columnsBitmapIcon is null))
             {
                 _ribbonMenuColumns.IconSet.Add(columnsBitmapIcon);
             }
 
             // Filter
-            var filterBitmapIcon = GetBitmapIcon("Filter");
+            C1BitmapIcon filterBitmapIcon = GetBitmapIcon("Filter");
             if (!(filterBitmapIcon is null))
             {
                 _ribbonButtonFilter.IconSet.Add(filterBitmapIcon);
             }
 
-            var appIcon = Properties.Resources.App;
+            Icon appIcon = Properties.Resources.App;
             Icon = appIcon;
         }
 
@@ -312,17 +313,17 @@ namespace FlexGridShowcaseDemo
             _flexGrid.HideGroupedColumns = true;
             _flexGrid.ShowErrors = true;
 
-            var columns = _flexGrid.Cols;
+            ColumnCollection columns = _flexGrid.Cols;
 
             // setup flexgrid columns
             columns[0].Width = 22;
 
-            var idColumn = columns["ID"];
+            Column idColumn = columns["ID"];
             idColumn.Width = 50;
             idColumn.AllowEditing = false;
 
             // setup combo list
-            var products = (from s in _dataSet.Tables["Products"].Rows.Cast<DataRow>() select s)
+            IEnumerable<string> products = (from s in _dataSet.Tables["Products"].Rows.Cast<DataRow>() select s)
                 .Select(x => x["Name"].ToString());
             columns["Product"].ComboList = string.Join("|", products);
 
@@ -333,7 +334,7 @@ namespace FlexGridShowcaseDemo
                 flagImageMap.Add(country, LoadImage(country.ToString()));
             }
 
-            var countryColumn = columns["Country"];
+            Column countryColumn = columns["Country"];
 
             // assign image map to country column
             countryColumn.ImageMap = flagImageMap;
@@ -346,18 +347,18 @@ namespace FlexGridShowcaseDemo
                 colorImageMap.Add(color, LoadImage(color.ToString()));
             }
 
-            var colorColumn = columns["Color"];
+            Column colorColumn = columns["Color"];
 
             // assign image map to color column
             colorColumn.ImageMap = colorImageMap;
             colorColumn.ImageAndText = true;
 
-            var priceColumn = columns["Price"];
+            Column priceColumn = columns["Price"];
             priceColumn.Format = "C2";
             priceColumn.TextAlign = TextAlignEnum.RightCenter;
             priceColumn.Width = 80;
 
-            var priceEditorValidation = _flexGrid.Cols["Price"].EditorValidation;
+            ValidationRuleCollection priceEditorValidation = _flexGrid.Cols["Price"].EditorValidation;
 
             // add validation rules
             priceEditorValidation.Add(new RequiredRule());
@@ -368,32 +369,32 @@ namespace FlexGridShowcaseDemo
                 ErrorMessage = "Price cannot be negative"
             });
 
-            var changeColumn = columns["Change"];
+            Column changeColumn = columns["Change"];
             changeColumn.Format = "C2";
             changeColumn.TextAlign = TextAlignEnum.RightCenter;
 
-            var historyColumn = columns["History"];
+            Column historyColumn = columns["History"];
             historyColumn.AllowEditing = false;
 
             // setup sparkline for history column 
             historyColumn.ShowSparkline = true;
 
-            var historySparkline = historyColumn.Sparkline;
+            Sparkline historySparkline = historyColumn.Sparkline;
             historySparkline.ShowLow = true;
             historySparkline.ShowHigh = true;
 
-            var discountColumn = columns["Discount"];
+            Column discountColumn = columns["Discount"];
             discountColumn.Format = "p0";
             discountColumn.AllowEditing = false;
             discountColumn.Width = 80;
 
-            var ratingColumn = columns["Rating"];
+            Column ratingColumn = columns["Rating"];
             ratingColumn.ImageAndText = false;
             ratingColumn.AllowEditing = false;
 
             columns["Active"].Width = 60;
 
-            var dateColumn = columns["Date"];
+            Column dateColumn = columns["Date"];
             dateColumn.Format = "g";
 
             // creating footers
@@ -415,12 +416,12 @@ namespace FlexGridShowcaseDemo
                 PropertyName = "Discount"
             };
 
-            var aggregates = footerDescription.Aggregates;
+            ObservableCollection<AggregateDefinition> aggregates = footerDescription.Aggregates;
             aggregates.Add(priceAggregateDefinition);
             aggregates.Add(discountAggregateDefinition);
 
             // add footers
-            var footers = _flexGrid.Footers;
+            Footers footers = _flexGrid.Footers;
             footers.Descriptions.Add(footerDescription);
             footers.Fixed = true;
 
@@ -428,17 +429,17 @@ namespace FlexGridShowcaseDemo
             _flexGrid.RowDetailProvider = (g, r) => new CustomRowDetail();
 
             // add red style
-            var redStyle = _flexGrid.Styles.Add("Red");
+            CellStyle redStyle = _flexGrid.Styles.Add("Red");
             redStyle.ImageAlign = ImageAlignEnum.LeftCenter;
             redStyle.ForeColor = Color.Red;
 
             // add green style
-            var greenStyle = _flexGrid.Styles.Add("Green");
+            CellStyle greenStyle = _flexGrid.Styles.Add("Green");
             greenStyle.ImageAlign = ImageAlignEnum.LeftCenter;
             greenStyle.ForeColor = Color.Green;
 
             // add rating style
-            var ratingStyle = _flexGrid.Styles.Add("Rating");
+            CellStyle ratingStyle = _flexGrid.Styles.Add("Rating");
             ratingStyle.ImageAlign = ImageAlignEnum.RightCenter;
         }
 
@@ -467,14 +468,14 @@ namespace FlexGridShowcaseDemo
                 });
 
             // add menu items
-            var ruleRibbonToggleButtons = rulesDict.Keys
+            IEnumerable<RibbonToggleButton> ruleRibbonToggleButtons = rulesDict.Keys
                 .Select(x => new RibbonToggleButton()
                 {
                     Text = x,
                     Pressed = false
                 });
 
-            foreach (var ruleRibbonToggleButton in ruleRibbonToggleButtons)
+            foreach (RibbonToggleButton ruleRibbonToggleButton in ruleRibbonToggleButtons)
             {
                 ruleRibbonToggleButton.PressedButtonChanged += RuleRibbonToggleButton_PressedButtonChanged;
                 _ribbonMenuFormatting.Items.Add(ruleRibbonToggleButton);
@@ -488,14 +489,14 @@ namespace FlexGridShowcaseDemo
         private void InitThemes()
         {
             // register custom theme
-            var customThemePath = Path.Combine(Directory.GetCurrentDirectory(), CustomThemeName + ".c1themez");
+            string customThemePath = Path.Combine(Directory.GetCurrentDirectory(), CustomThemeName + ".c1themez");
             if (File.Exists(customThemePath))
             {
                 C1ThemeController.RegisterTheme(customThemePath);
             }
 
             // load themes into ribbon combo box
-            foreach (var theme in C1ThemeController.GetThemes())
+            foreach (string theme in C1ThemeController.GetThemes())
             {
                 if (!(theme == CustomThemeName || theme.Contains("Office2016") || theme.Contains("Material")))
                 {
@@ -506,7 +507,7 @@ namespace FlexGridShowcaseDemo
             }
 
             // set default theme
-            var customThemeIndex = _ribbonComboBoxThemes.Items.IndexOf(CustomThemeName);
+            int customThemeIndex = _ribbonComboBoxThemes.Items.IndexOf(CustomThemeName);
             if (customThemeIndex > -1)
             {
                 _ribbonComboBoxThemes.SelectedIndex = customThemeIndex;
@@ -519,7 +520,7 @@ namespace FlexGridShowcaseDemo
 
         private void _flexGrid_GridChanged(object sender, GridChangedEventArgs e)
         {
-            var lastRowIndex = _flexGrid.Rows.Count - 1;
+            int lastRowIndex = _flexGrid.Rows.Count - 1;
             if (e.GridChangedType == GridChangedTypeEnum.CellChanged && e.r1 == lastRowIndex)
             {
                 UpdateFooterColumnWidth(e.c1);
@@ -528,7 +529,7 @@ namespace FlexGridShowcaseDemo
 
         private void _flexGrid_OwnerDrawCell(object sender, OwnerDrawCellEventArgs e)
         {
-            var columnName = _flexGrid.Cols[e.Col].Name;
+            string columnName = _flexGrid.Cols[e.Col].Name;
 
             // custom paint cells for change column
             if (columnName == "Change" && _flexGrid[e.Row, e.Col] is decimal changeValue)
@@ -558,18 +559,18 @@ namespace FlexGridShowcaseDemo
 
         private void UpdateFooterColumnWidth(int columnIndex)
         {
-            var lastRowIndex = _flexGrid.Rows.Count - 1;
+            int lastRowIndex = _flexGrid.Rows.Count - 1;
             if (_flexGrid.Footers.Descriptions.Count > 0)
             {
-                var footerCellValue = _flexGrid[lastRowIndex, columnIndex];
+                object footerCellValue = _flexGrid[lastRowIndex, columnIndex];
                 if (footerCellValue is null)
                 {
                     return;
                 }
 
-                var footerCellTextWidth = TextRenderer.MeasureText(footerCellValue.ToString(), _flexGrid.Styles.Footer.Font).Width;
+                int footerCellTextWidth = TextRenderer.MeasureText(footerCellValue.ToString(), _flexGrid.Styles.Footer.Font).Width;
 
-                var column = _flexGrid.Cols[columnIndex];
+                Column column = _flexGrid.Cols[columnIndex];
                 column.Width = Math.Max(footerCellTextWidth + FooterTextPadding, column.Width);
             }
         }
@@ -590,7 +591,7 @@ namespace FlexGridShowcaseDemo
 
         private void _ribbonComboBoxDataSize_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var dataDataTable = _dataSet.Tables["Data"];
+            DataTable dataDataTable = _dataSet.Tables["Data"];
             switch (_ribbonComboBoxDataSize.SelectedIndex)
             {
                 case 0:
@@ -624,7 +625,7 @@ namespace FlexGridShowcaseDemo
         private void _ribbonComboBoxThemes_SelectedIndexChanged(object sender, EventArgs e)
         {
             // change theme
-            var themeName = _ribbonComboBoxThemes.Text;
+            string themeName = _ribbonComboBoxThemes.Text;
             _themeController.Theme = themeName;
         }
 
@@ -651,14 +652,14 @@ namespace FlexGridShowcaseDemo
                 return;
             }
 
-            var ruleName = pressedRule.Text;
-            var pressed = pressedRule.Pressed;
+            string ruleName = pressedRule.Text;
+            bool pressed = pressedRule.Pressed;
 
-            var newRule = _rules.Where(x => x.Name == ruleName).FirstOrDefault();
+            IRule newRule = _rules.Where(x => x.Name == ruleName).FirstOrDefault();
             newRule.AppliesTo.Add(new FieldRange(new string[] { "Product", "Country", "Color", "Discount" }));
 
-            var appliedRules = _rulesManager.Rules;
-            var existingRule = appliedRules.Where(x => x.Name == ruleName).FirstOrDefault();
+            RuleCollection appliedRules = _rulesManager.Rules;
+            IRule existingRule = appliedRules.Where(x => x.Name == ruleName).FirstOrDefault();
 
             if (!pressed && appliedRules.Contains(existingRule))
             {
@@ -693,7 +694,7 @@ namespace FlexGridShowcaseDemo
 
             _flexGrid.Styles.Footer.TextAlign = TextAlignEnum.RightCenter;
 
-            var columns = _flexGrid.Cols;
+            ColumnCollection columns = _flexGrid.Cols;
             if (columns is null)
             {
                 return;
