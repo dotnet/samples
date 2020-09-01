@@ -1,4 +1,5 @@
-﻿using C1.Win.FlexGrid;
+﻿using C1.Framework;
+using C1.Win.FlexGrid;
 using C1.Win.Themes;
 using C1.Win.Ribbon;
 using C1.Win.RulesManager;
@@ -12,6 +13,7 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Resources;
 using System.Windows.Forms;
 
 namespace FlexGridShowcaseDemo
@@ -223,43 +225,53 @@ namespace FlexGridShowcaseDemo
 
         #region Init FlexGrid
 
-        static Image LoadImage(string recourceName)
+        static Image LoadImage(string resourceName)
         {
-            // load the picture
-            Image img = null;
-            try
-            {
-                var resource = "FlexGridShowcaseDemo.Properties.Resources";
-                var assembly = Assembly.GetExecutingAssembly();
+            var resource = "FlexGridShowcaseDemo.Properties.Resources";
+            var assembly = Assembly.GetExecutingAssembly();
 
-                var manager = new System.Resources.ResourceManager(resource, assembly);
-                if (manager != null)
-                {
-                    var bmp = (Bitmap)manager.GetObject(recourceName, CultureInfo.InvariantCulture);
-                    return bmp;
-                }
-            }
-            catch (Exception)
+            var manager = new ResourceManager(resource, assembly);
+            if (manager == null)
             {
+                return null;
             }
 
-            // return what we got
-            return img;
+            return manager.GetObject(resourceName, CultureInfo.InvariantCulture) as Image;
+        }
+
+        private C1BitmapIcon GetBitmapIcon(string name)
+        {
+            var image = LoadImage(name);
+            if (image == null)
+            {
+                return null;
+            }
+
+            return new C1BitmapIcon(name, new Size(20, 20), Color.Transparent, image);
         }
 
         private void InitImages()
         {
             // ConditionalFormatting
-            var image = new C1.Framework.C1BitmapIcon("ConditionalFormatting", new Size(20, 20), Color.Transparent, LoadImage("ConditionalFormatting"));
-            _ribbonMenuFormatting.IconSet.Add(image);
+            var conditionalFormattingBitmapIcon = GetBitmapIcon("ConditionalFormatting");
+            if (conditionalFormattingBitmapIcon != null)
+            {
+                _ribbonMenuFormatting.IconSet.Add(conditionalFormattingBitmapIcon);
+            }
 
             // Columns
-            image = new C1.Framework.C1BitmapIcon("Columns", new Size(20, 20), Color.Transparent, LoadImage("Columns"));
-            _ribbonMenuColumns.IconSet.Add(image);
+            var columnsBitmapIcon = GetBitmapIcon("Columns");
+            if (columnsBitmapIcon != null)
+            {
+                _ribbonMenuColumns.IconSet.Add(columnsBitmapIcon);
+            }
 
             // Filter
-            image = new C1.Framework.C1BitmapIcon("Filter", new Size(20, 20), Color.Transparent, LoadImage("Filter"));
-            _ribbonButtonFilter.IconSet.Add(image);
+            var filterBitmapIcon = GetBitmapIcon("Filter");
+            if (filterBitmapIcon != null)
+            {
+                _ribbonButtonFilter.IconSet.Add(filterBitmapIcon);
+            }
 
             var appIcon = Properties.Resources.App;
             Icon = appIcon;
