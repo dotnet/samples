@@ -6,6 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <!-- Add a project reference to MyLibrary without referencing the actual binary.
+         This will build the MyLibrary project and copy its output assembly to the
+         output directory of this project. -->
     <ProjectReference Include="../MyLibrary/MyLibrary.csproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <OutputItemType>Content</OutputItemType>

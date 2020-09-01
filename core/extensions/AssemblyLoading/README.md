@@ -39,13 +39,13 @@ The following hooks into the [managed assembly loading algorithm](https://docs.m
 
          Successfully loaded assembly:
          - Assembly: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-         - ALC: "Default" System.Runtime.Loader.DefaultAssemblyLoadContext #0
+         - Load context: "Default" System.Runtime.Loader.DefaultAssemblyLoadContext #0
 
          === Loading 'MyLibrary' ===
 
          AssemblyLoadContext.Resolving event handler
          - Name: MyLibrary, Culture=neutral, PublicKeyToken=null;
-         - ALC: "Default" System.Runtime.Loader.DefaultAssemblyLoadContext #0
+         - Load context: "Default" System.Runtime.Loader.DefaultAssemblyLoadContext #0
 
          AppDomain.AssemblyResolve event handler
          - Name: MyLibrary, Culture=neutral, PublicKeyToken=null
@@ -62,27 +62,27 @@ The following hooks into the [managed assembly loading algorithm](https://docs.m
 
          AssemblyLoadContext.Load
          - Name: System.Xml, Culture=neutral, PublicKeyToken=null
-         - ALC: "CustomALC" AssemblyLoading.Program+CustomALC #0
+         - Load context: "CustomALC" AssemblyLoading.Program+CustomALC #0
 
          Successfully loaded assembly:
          - Assembly: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-         - ALC: "Default" System.Runtime.Loader.DefaultAssemblyLoadContext #1
+         - Load context: "Default" System.Runtime.Loader.DefaultAssemblyLoadContext #1
 
          === Loading 'MyLibrary' ===
 
          AssemblyLoadContext.Load
          - Name: MyLibrary, Culture=neutral, PublicKeyToken=null
-         - ALC: "CustomALC" AssemblyLoading.Program+CustomALC #0
+         - Load context: "CustomALC" AssemblyLoading.Program+CustomALC #0
 
          AssemblyLoadContext.Resolving event handler
          - Name: MyLibrary, Culture=neutral, PublicKeyToken=null;
-         - ALC: "Default" System.Runtime.Loader.DefaultAssemblyLoadContext #1
+         - Load context: "Default" System.Runtime.Loader.DefaultAssemblyLoadContext #1
 
          AssemblyLoadContext.Resolving event handler
          - Name: MyLibrary, Culture=neutral, PublicKeyToken=null;
-         - ALC: "CustomALC" AssemblyLoading.Program+CustomALC #0
+         - Load context: "CustomALC" AssemblyLoading.Program+CustomALC #0
 
          Successfully loaded assembly:
          - Assembly: MyLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-         - ALC: "CustomALC" AssemblyLoading.Program+CustomALC #0
+         - Load context: "CustomALC" AssemblyLoading.Program+CustomALC #0
          ```

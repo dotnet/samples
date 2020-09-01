@@ -64,7 +64,7 @@ If not specified, the library will fail to load.");
                 Console.WriteLine($@"
 AssemblyLoadContext.Load
   - Name: {assemblyName}
-  - ALC: {this}");
+  - Load context: {this}");
 
                 if (Program.successfulExtensionPoint != Usage.AssemblyLoadContextLoad || libraryName != assemblyName.Name)
                     return null;
@@ -74,7 +74,7 @@ AssemblyLoadContext.Load
         }
 
         static void Main(string[] args)
-        {            
+        {
             if (args.Length >= 1 && args[0] == "/d")
             {
                 Console.WriteLine("Waiting for any key...");
@@ -88,7 +88,7 @@ AssemblyLoadContext.Load
                 return;
             }
 
-            alc = args[0] switch 
+            alc = args[0] switch
             {
                 Usage.DefaultContext => AssemblyLoadContext.Default,
                 Usage.CustomContext => new CustomALC(),
@@ -107,12 +107,12 @@ AssemblyLoadContext.Load
                     Usage.Print();
                     return;
                 }
-                
+
                 successfulExtensionPoint = args[1];
             }
 
             var assemblyToLoad = new AssemblyName(libraryName);
-            
+
             alc.Resolving += OnAssemblyLoadContextResolving;
             AppDomain.CurrentDomain.AssemblyResolve += OnAppDomainAssemblyResolve;
             if (alc != AssemblyLoadContext.Default)
@@ -156,7 +156,7 @@ Successfully loaded assembly:
             Console.WriteLine($@"
 AssemblyLoadContext.Resolving event handler
   - Name: {assemblyName};
-  - ALC: {context}");
+  - Load context: {context}");
 
             if (!((successfulExtensionPoint == Usage.AssemblyLoadContextResolving && context == alc)
                     || (successfulExtensionPoint == Usage.AssemblyLoadContextResolvingDefault && context == AssemblyLoadContext.Default))
