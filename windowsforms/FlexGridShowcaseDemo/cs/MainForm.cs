@@ -24,10 +24,10 @@ namespace FlexGridShowcaseDemo
         private const string CustomThemeName = "Greenwich";
         private const int FooterTextPadding = 4;
 
-        private DataSet _dataSet = new DataSet();
-        private C1RulesManager _rulesManager = new C1RulesManager();
-        private IEnumerable<IRule> _rules = Enumerable.Empty<IRule>();
-        private static Random s_rnd = new Random();
+        private readonly DataSet _dataSet = new DataSet();
+        private readonly C1RulesManager _rulesManager = new C1RulesManager();
+        private IEnumerable<IRule> _rules;
+        private static readonly Random s_rnd = new Random();
 
         #region Initialization
 
