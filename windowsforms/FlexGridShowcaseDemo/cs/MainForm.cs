@@ -400,16 +400,20 @@ namespace FlexGridShowcaseDemo
             var footerDescription = new FooterDescription();
 
             // price aggregate
-            var priceAggregateDefinition = new AggregateDefinition();
-            priceAggregateDefinition.Aggregate = AggregateEnum.Average;
-            priceAggregateDefinition.Caption = "Average price: ${0:N2}";
-            priceAggregateDefinition.PropertyName = "Price";
+            var priceAggregateDefinition = new AggregateDefinition()
+            {
+                Aggregate = AggregateEnum.Average,
+                Caption = "Average price: ${0:N2}",
+                PropertyName = "Price"
+            };
 
             // discount aggregate
-            var discountAggregateDefinition = new AggregateDefinition();
-            discountAggregateDefinition.Aggregate = AggregateEnum.Average;
-            discountAggregateDefinition.Caption = "Average discount: {0:P}";
-            discountAggregateDefinition.PropertyName = "Discount";
+            var discountAggregateDefinition = new AggregateDefinition
+            {
+                Aggregate = AggregateEnum.Average,
+                Caption = "Average discount: {0:P}",
+                PropertyName = "Discount"
+            };
 
             var aggregates = footerDescription.Aggregates;
             aggregates.Add(priceAggregateDefinition);
