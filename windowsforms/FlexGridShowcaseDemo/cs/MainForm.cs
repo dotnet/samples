@@ -219,6 +219,7 @@ namespace FlexGridShowcaseDemo
 
             _flexGrid.DataSource = _dataSet;
             _flexGrid.DataMember = "Data";
+            _flexGrid.Cols.Remove("Products");
         }
 
         #endregion
