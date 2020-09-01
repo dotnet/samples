@@ -41,12 +41,9 @@ namespace FlexGridShowcaseDemo
             }
 
             // Formatting text
-            var columnTitles = (from s in detailRow.Table.Columns.Cast<DataColumn>() select s)
-                .Where(x => x.ColumnName != "Name")
-                .Select(x => x.ColumnName);
-
-            var details = columnTitles
-                .Select(x => $"{x}: {detailRow[x]}");
+            var details = (from s in detailRow.Table.Columns.Cast<DataColumn>() select s)
+                    .Where(x => x.ColumnName != "Name")
+                    .Select(x => $"{x.ColumnName}: {detailRow[x.ColumnName]}");
 
             Text = string.Join(Environment.NewLine, details);
         }
