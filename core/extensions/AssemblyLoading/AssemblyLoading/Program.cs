@@ -49,7 +49,7 @@ If not specified, the library will fail to load.");
     class Program
     {
         private const string libraryName = "MyLibrary";
-        private static string libraryPath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), $"{libraryName}.dll");
+        private static string libraryPath = Path.Combine(AppContext.BaseDirectory, $"{libraryName}.dll");
 
         private static AssemblyLoadContext alc;
         private static string successfulExtensionPoint;
@@ -66,7 +66,7 @@ AssemblyLoadContext.Load
   - Name: {assemblyName}
   - ALC: {this}");
 
-                if (Program.successfulExtensionPoint != Usage.AssemblyLoadContextLoad || !libraryName.Equals(assemblyName.Name))
+                if (Program.successfulExtensionPoint != Usage.AssemblyLoadContextLoad || libraryName != assemblyName.Name)
                     return null;
 
                 return LoadFromAssemblyPath(Program.libraryPath);
@@ -148,7 +148,7 @@ AssemblyLoadContext.Load
             Console.WriteLine($@"
 Successfully loaded assembly:
   - Assembly: {asm}
-  - ALC: {AssemblyLoadContext.GetLoadContext(asm)}");
+  - Load context: {AssemblyLoadContext.GetLoadContext(asm)}");
         }
 
         private static Assembly OnAssemblyLoadContextResolving(AssemblyLoadContext context, AssemblyName assemblyName)
