@@ -212,8 +212,8 @@ namespace FlexGridShowcaseDemo
             tables.Add(dataDataTable);
 
             // Creating relation between products and data
-            _dataSet.Relations.Add("Products_Data",
-                    productsColumns["Name"], dataColumns["Product"]);
+            _dataSet.Relations.Add("Products", 
+                dataColumns["Product"], productsColumns["Name"], false);
 
             _flexGrid.DataSource = _dataSet;
             _flexGrid.DataMember = "Data";

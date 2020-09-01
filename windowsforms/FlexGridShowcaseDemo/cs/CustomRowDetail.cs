@@ -19,21 +19,36 @@ namespace FlexGridShowcaseDemo
         /// <param name="rowIndex">Index of parent detail row.</param>
         void IC1FlexGridRowDetail.Setup(C1FlexGrid parentGrid, int rowIndex)
         {
-            using (var bindingSource = new BindingSource(parentGrid.DataSource as DataSet, "Products"))
+            var dataSet = parentGrid?.DataSource as DataSet;
+            if (dataSet == null)
             {
-                bindingSource.Position = parentGrid.Rows[rowIndex].DataIndex;
-                var row = bindingSource.Current as DataRowView;
-
-                // Formatting text
-                var columnTitles = (from s in row.Row.Table.Columns.Cast<DataColumn>() select s)
-                    .Where(x => x.ColumnName != "Name")
-                    .Select(x => x.ColumnName);
-
-                var details = columnTitles
-                    .Select(x => $"{x}: {row[x]}");
-
-                Text = string.Join(Environment.NewLine, details);
+                return;
             }
+
+            var dataDataTable = dataSet.Tables["Data"];
+            var dataRow = dataDataTable.Rows[parentGrid.Rows[rowIndex].DataIndex];
+
+            var childRows = dataRow.GetChildRows("Products");
+            if (childRows == null || childRows.Length == 0)
+            {
+                return;
+            }
+
+            var detailRow = childRows[0];
+            if (detailRow == null)
+            {
+                return;
+            }
+
+            // Formatting text
+            var columnTitles = (from s in detailRow.Table.Columns.Cast<DataColumn>() select s)
+                .Where(x => x.ColumnName != "Name")
+                .Select(x => x.ColumnName);
+
+            var details = columnTitles
+                .Select(x => $"{x}: {detailRow[x]}");
+
+            Text = string.Join(Environment.NewLine, details);
         }
 
         /// <summary>
