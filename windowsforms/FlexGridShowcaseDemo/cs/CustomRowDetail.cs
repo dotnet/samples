@@ -29,7 +29,7 @@ namespace FlexGridShowcaseDemo
             var dataRow = dataDataTable.Rows[parentGrid.Rows[rowIndex].DataIndex];
 
             var childRows = dataRow.GetChildRows("Products");
-            if (childRows == null || childRows.Length == 0)
+            if (childRows?.Length == 0)
             {
                 return;
             }
