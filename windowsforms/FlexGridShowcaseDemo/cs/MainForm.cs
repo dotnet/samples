@@ -491,9 +491,13 @@ namespace FlexGridShowcaseDemo
             }
 
             // load themes into ribbon combo box
-            var themes = C1ThemeController.GetThemes().Where(x => x == CustomThemeName || x.Contains("Office2016") || x.Contains("Material"));
-            foreach (var theme in themes)
+            foreach (var theme in C1ThemeController.GetThemes())
             {
+                if (!(theme == CustomThemeName || theme.Contains("Office2016") || theme.Contains("Material")))
+                {
+                    continue;
+                }
+
                 _ribbonComboBoxThemes.Items.Add(theme);
             }
 
