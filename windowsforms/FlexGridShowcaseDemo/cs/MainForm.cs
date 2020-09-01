@@ -496,7 +496,7 @@ namespace FlexGridShowcaseDemo
 
         #region FlexGrid Events
 
-        private void _flex_GridChanged(object sender, GridChangedEventArgs e)
+        private void _flexGrid_GridChanged(object sender, GridChangedEventArgs e)
         {
             var lastRowIndex = _flexGrid.Rows.Count - 1;
             if (e.GridChangedType == GridChangedTypeEnum.CellChanged && e.r1 == lastRowIndex)
@@ -505,7 +505,7 @@ namespace FlexGridShowcaseDemo
             }
         }
 
-        private void _flex_OwnerDrawCell(object sender, OwnerDrawCellEventArgs e)
+        private void _flexGrid_OwnerDrawCell(object sender, OwnerDrawCellEventArgs e)
         {
             var columnName = _flexGrid.Cols[e.Col].Name;
 

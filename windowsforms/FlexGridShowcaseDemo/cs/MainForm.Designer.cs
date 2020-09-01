@@ -220,8 +220,8 @@
             this._flexGrid.TabIndex = 1;
             this._themeController.SetTheme(this._flexGrid, "(default)");
             this._flexGrid.Tree.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this._flexGrid.GridChanged += new C1.Win.FlexGrid.GridChangedEventHandler(this._flex_GridChanged);
-            this._flexGrid.OwnerDrawCell += new C1.Win.FlexGrid.OwnerDrawCellEventHandler(this._flex_OwnerDrawCell);
+            this._flexGrid.GridChanged += new C1.Win.FlexGrid.GridChangedEventHandler(this._flexGrid_GridChanged);
+            this._flexGrid.OwnerDrawCell += new C1.Win.FlexGrid.OwnerDrawCellEventHandler(this._flexGrid_OwnerDrawCell);
             // 
             // _tooltip
             // 
