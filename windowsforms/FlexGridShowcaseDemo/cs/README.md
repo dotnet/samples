@@ -15,7 +15,7 @@ description: ".NET 5.0 Windows Forms application that demonstrates how to use Gr
 
 This sample is a .NET 5.0 Windows Forms application that demonstrates how to use GrapeCity [`FlexGrid`](https://www.grapecity.com/componentone/docs/win/online-flexgrid/overview.html).
 
-The sample shows different operations with mentioned controls:
+The sample shows different operations with `FlexGrid`:
 
 * Search
 * Formatting
@@ -24,6 +24,20 @@ The sample shows different operations with mentioned controls:
 ![Screenshot with applied conditional formatting](../images/screenshot1.png)
 
 ![Screenshot with grouped data](../images/screenshot2.png)
+
+There are several GrapeCity packages used in the sample:
+
+* [`FlexGrid`](https://www.nuget.org/packages/C1.Win.FlexGrid/5.0.20202.439-beta)
+* [`Ribbon`](https://www.nuget.org/packages/C1.Win.Ribbon/5.0.20202.439-beta)
+* [`RulesManager`](https://www.nuget.org/packages/C1.Win.RulesManager/5.0.20202.439-beta)
+* [`SuperTooltip`](https://www.nuget.org/packages/C1.Win.SuperTooltip/5.0.20202.439-beta)
+* [`Themes`](https://www.nuget.org/packages/C1.Win.Themes/5.0.20202.439-beta)
+
+Mentioned controls and packages require a valid license for runtime testing and distribution.
+
+Also there is 30-day trial for evaluation purposes.
+
+For more licensing information visit [www.grapecity.com/componentone/licensing](https://www.grapecity.com/componentone/licensing).
 
 ## Sample prerequisites
 
