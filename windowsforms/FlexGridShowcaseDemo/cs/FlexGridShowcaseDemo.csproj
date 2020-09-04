@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <Company>GrapeCity, Inc.</Company>
+    <Copyright>(c) GrapeCity, Inc..  All rights reserved.</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="App.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="C1.Win" Version="[5.0.20202.439-beta,)" />
+    <PackageReference Include="C1.Win.FlexGrid" Version="[5.0.20202.439-beta,)" />
+    <PackageReference Include="C1.Win.Ribbon" Version="[5.0.20202.439-beta,)" />
+    <PackageReference Include="C1.Win.RulesManager" Version="[5.0.20202.439-beta,)" />
+    <PackageReference Include="C1.Win.SuperTooltip" Version="[5.0.20202.439-beta,)" />
+    <PackageReference Include="C1.Win.Themes" Version="[5.0.20202.439-beta,)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Greenwich.c1themez">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  
+</Project>
