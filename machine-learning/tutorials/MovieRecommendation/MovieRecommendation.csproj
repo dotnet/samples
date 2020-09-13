@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.ML" Version="1.5.1" />
-    <PackageReference Include="Microsoft.ML.Recommender" Version="0.17.1" />
+    <PackageReference Include="Microsoft.ML.Recommender" Version="0.17.2" />
   </ItemGroup>
 
   <ItemGroup>
