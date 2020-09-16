@@ -1,9 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <OutputType>exe</OutputType>
     <DefineConstants Condition="'$(OS)' == 'Windows_NT'">$(DefineConstants);WINDOWS</DefineConstants>
+
+    <!-- On most platforms, the .NET SDK uses UseAppHost=true by default. The exception is notarized
+         versions for macOS Catalina. This demo uses a custom command for 'dotnet run' (see build.proj)
+         which assumes that the the apphost is created, so we explicitly set UseAppHost=true here -->
+    <UseAppHost>true</UseAppHost>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,10 +17,13 @@
     </ProjectReference>
   </ItemGroup>
 
-  <Target Name="SetupForDemo" AfterTargets="Build">
+  <ItemGroup>
+    <Clean Include="$(BinRoot)/$(Configuration)/$(TargetName).*" />
+  </ItemGroup>
 
+  <Target Name="SetupForDemo" AfterTargets="Build">
     <ItemGroup>
-      <AllOutputs Include="$(OutputPath)MarshalingSample.*" />
+      <AllOutputs Include="$(OutputPath)$(TargetName).*" />
     </ItemGroup>
 
     <!-- Copy the project outputs to the bin directory -->
