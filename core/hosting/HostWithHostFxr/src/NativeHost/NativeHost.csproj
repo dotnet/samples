@@ -35,7 +35,8 @@
 
   <!-- Properties for MSVCFindCompilerPaths -->
   <PropertyGroup Condition="$([MSBuild]::IsOsPlatform('Windows'))">
-    <MSVCPlatform>$(NativePlatform)</MSVCPlatform>
+    <MSVCPlatform>x64</MSVCPlatform>
+    <MSVCPlatform Condition="$(NETCoreSDKRuntimeIdentifier.Contains('x86'))">x86</MSVCPlatform>
   </PropertyGroup>
 
   <ItemGroup>
@@ -48,8 +49,8 @@
     <PackageReference Include="CompilerPaths"
                       Version="[1.0.2, )"
                       Condition="$([MSBuild]::IsOsPlatform('Windows'))" />
-  </ItemGroup>
-  
+  </ItemGroup>  
+
     <!-- Targets to build the native project. The output goes directly to the bin directory -->
   <Target Name="PrepareForNativeBuild">
     <PropertyGroup>
