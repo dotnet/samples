@@ -1,0 +1,7 @@
+// Microsoft Visual C++ generated resource script.
+//
+
+//
+#include "winres.h"
+
+1 TYPELIB SERVER_CONTRACT_TLB_NAME
