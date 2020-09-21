@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{197efa7e-92f1-44ed-9ccd-e32ecc7c9d74}</ProjectGuid>
+    <RootNamespace>ServerContract</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType Condition="'$(EmbedTypeLibrary)' == 'true'">DynamicLibrary</ConfigurationType>
+    <ConfigurationType Condition="'$(EmbedTypeLibrary)' != 'true'">Utility</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <Import Project="..\Contract\Server.Contract.props" />
+  <ItemGroup>
+    <Midl Include="Contract.idl">
+      <OutputDirectory>$(ContractOutputDirectory)</OutputDirectory>
+      <TypeLibraryName>$(TypeLibraryPath)</TypeLibraryName>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup Condition="'$(EmbedTypeLibrary)' == 'true'">
+    <ResourceCompile Include="Server.TypeLib.rc">
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(ContractOutputDirectory)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);SERVER_CONTRACT_TLB_NAME=$(TypeLibraryName)</PreprocessorDefinitions>
+      <LinkCompiled>false</LinkCompiled>
+      <ResourceOutputFileName>$(TypeLibraryCompiledResourcePath)</ResourceOutputFileName>
+    </ResourceCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>
