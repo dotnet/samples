@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <RootNamespace>SimpleCalculator2</RootNamespace>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
     <StartupObject>SimpleCalculator2.Program</StartupObject>
   </PropertyGroup>
