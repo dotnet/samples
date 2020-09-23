@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.Net.Http;
@@ -123,12 +123,14 @@ namespace ReaderSample
                 int dataLength = await stream.ReadAsync(buffer.AsMemory(leftOver, buffer.Length - leftOver));
                 int dataSize = dataLength + leftOver;
                 bool isFinalBlock = dataSize == 0;
-                (state, partialCount, partialTotalCount) = PartialCountUniversityOf(buffer.AsSpan(0, dataSize), isFinalBlock, ref foundName, state);
+                long bytesConsumed = 0;
+
+                (bytesConsumed, partialCount, partialTotalCount) = PartialCountUniversityOf(buffer.AsSpan(0, dataSize), isFinalBlock, ref foundName, ref state);
 
                 // Based on your scenario and input data, you may need to grow your buffer here
                 // It's possible that leftOver == dataSize (if a JSON token is too large)
                 // so you need to resize and read more than 1_024 bytes.
-                leftOver = dataSize - (int)state.BytesConsumed;
+                leftOver = dataSize - (int)bytesConsumed;
                 if (leftOver != 0)
                 {
                     buffer.AsSpan(dataSize - leftOver, leftOver).CopyTo(buffer);
@@ -146,7 +148,7 @@ namespace ReaderSample
             return (count, total);
         }
 
-        public static (JsonReaderState state, int count, int total) PartialCountUniversityOf(ReadOnlySpan<byte> dataUtf8, bool isFinalBlock, ref bool foundName, JsonReaderState state)
+        public static (long bytesConsumed, int count, int total) PartialCountUniversityOf(ReadOnlySpan<byte> dataUtf8, bool isFinalBlock, ref bool foundName, ref JsonReaderState state)
         {
             int count = 0;
             int total = 0;
@@ -178,7 +180,8 @@ namespace ReaderSample
                 }
             }
 
-            return (json.CurrentState, count, total);
+            state = json.CurrentState;
+            return (json.BytesConsumed, count, total);
         }
     }
 }
