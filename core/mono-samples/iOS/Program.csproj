@@ -25,7 +25,7 @@
     <Message Text="Packaged ID: %(RuntimePack.PackageDirectory)" Importance="high" />
   </Target>
 
-  <Import Project="$(RepoTasksDir)mobile.tasks\AotCompilerTask\MonoAOTCompiler.props" />
+  <Import Project="..\mobile.tasks\AotCompilerTask\MonoAOTCompiler.props" />
   <UsingTask TaskName="AppleAppBuilderTask"
              AssemblyFile="$(ArtifactsBinDir)AppleAppBuilder\$(Configuration)\$(NetCoreAppCurrent)\AppleAppBuilder.dll" />
 

@@ -4,7 +4,7 @@ USE_LLVM=True
 
 all: run
 
-TOOLS_DIR=../../../../../tools-local/tasks/mobile.tasks
+TOOLS_DIR=../mobile.tasks
 appbuilder:
 	dotnet build -c Release $(TOOLS_DIR)/AppleAppBuilder/AppleAppBuilder.csproj
 
