@@ -6,7 +6,7 @@ all: run
 
 TOOLS_DIR=../mobile.tasks
 appbuilder:
-	dotnet build -c Release $(TOOLS_DIR)/AppleAppBuilder/AppleAppBuilder.csproj
+	dotnet build -c Debug $(TOOLS_DIR)/AppleAppBuilder/AppleAppBuilder.csproj
 
 runtimepack:
 	../../../../.././build.sh Mono+Libs -os iOS -arch $(MONO_ARCH) -c $(MONO_CONFIG)
