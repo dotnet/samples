@@ -5,9 +5,8 @@
     <DebugType>Portable</DebugType>
     <TargetFramework>net5.0</TargetFramework>
     <TargetOS>iOS</TargetOS>
-    <MicrosoftNetCoreAppRuntimePackDir>$(ArtifactsBinDir)microsoft.netcore.app.runtime.ios-$(TargetArchitecture)/$(Configuration)/runtimes/ios-$(TargetArchitecture)/</MicrosoftNetCoreAppRuntimePackDir>
     <EnableTargetingPackDownload>false</EnableTargetingPackDownload>
-    <RuntimeIdentifier>ios-$(TargetArchitecture)</RuntimeIdentifier>
+    <RuntimeIdentifier>ios-x64</RuntimeIdentifier>
     <PublishTrimmed>true</PublishTrimmed>
     <_TrimmerDefaultAction>link</_TrimmerDefaultAction>
     <Optimized Condition="'$(Configuration)' == 'Release'">True</Optimized>
