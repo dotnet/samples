@@ -18,7 +18,7 @@
   <UsingTask TaskName="AppleAppBuilderTask"
              AssemblyFile="..\mobile.tasks\AppleAppBuilder\bin\$(Configuration)\$(TargetFramework)\AppleAppBuilder.dll" />
 
-  <Target Name="BuildAppBundle" AfterTargets="CopyFilesToPublishDirectory">
+  <Target Name="BuildAppBundle" AfterTargets="CopyFilesToPublishDirectory;Publish">
     <PropertyGroup>
       <AppDir>$(MSBuildThisFileDirectory)$(PublishDir)\app</AppDir>
       <IosSimulator Condition="'$(TargetArchitecture)' == 'x64' or '$(TargetArchitecture)' == 'x86'">iPhone 11</IosSimulator>
@@ -37,7 +37,7 @@
     <AppleAppBuilderTask
         Arch="$(TargetArchitecture)"
         ProjectName="HelloiOS"
-        MonoRuntimeHeaders="$(MicrosoftNetCoreAppRuntimePackDir)native/include/mono-2.0"
+        MonoRuntimeHeaders="$(OutputPath)"
         Assemblies="@(BundleAssemblies)"
         MainLibraryFileName="Program.dll"
         GenerateXcodeProject="True"
