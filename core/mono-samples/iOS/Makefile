@@ -2,7 +2,7 @@ MONO_CONFIG=Debug
 MONO_ARCH=x64
 USE_LLVM=True
 
-all: runtimepack run
+all: run
 
 TOOLS_DIR=../../../../../tools-local/tasks/mobile.tasks
 appbuilder:
