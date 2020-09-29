@@ -48,17 +48,6 @@
       </AotInputAssemblies>
     </ItemGroup>
 
-    <MonoAOTCompiler
-        Condition="'$(IosSimulator)' == '' or '$(UseAotForSimulator)' == 'true'"
-        CompilerBinaryPath="$(MicrosoftNetCoreAppRuntimePackDir)native\cross\mono-aot-cross"
-        Mode="Full"
-        OutputType="AsmOnly"
-        Assemblies="@(AotInputAssemblies)"
-        UseLLVM="$(UseLLVM)"
-        LLVMPath="$(MicrosoftNetCoreAppRuntimePackDir)native\cross">
-        <Output TaskParameter="CompiledAssemblies" ItemName="BundleAssemblies" />
-    </MonoAOTCompiler>
-
     <AppleAppBuilderTask
         Arch="$(TargetArchitecture)"
         ProjectName="HelloiOS"
