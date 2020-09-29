@@ -5,7 +5,7 @@
     <DebugType>Portable</DebugType>
     <TargetFramework>net5.0</TargetFramework>
     <TargetOS>iOS</TargetOS>
-    <MicrosoftNetCoreAppRuntimePackDir>$(ArtifactsBinDir)microsoft.netcore.app.runtime.ios-$(TargetArchitecture)\$(Configuration)\runtimes\ios-$(TargetArchitecture)\</MicrosoftNetCoreAppRuntimePackDir>
+    <MicrosoftNetCoreAppRuntimePackDir>$(ArtifactsBinDir)microsoft.netcore.app.runtime.ios-$(TargetArchitecture)/$(Configuration)/runtimes/ios-$(TargetArchitecture)/</MicrosoftNetCoreAppRuntimePackDir>
     <EnableTargetingPackDownload>false</EnableTargetingPackDownload>
     <RuntimeIdentifier>ios-$(TargetArchitecture)</RuntimeIdentifier>
     <PublishTrimmed>true</PublishTrimmed>
@@ -48,7 +48,7 @@
     <AppleAppBuilderTask
         Arch="$(TargetArchitecture)"
         ProjectName="HelloiOS"
-        MonoRuntimeHeaders="$(MicrosoftNetCoreAppRuntimePackDir)native\include\mono-2.0"
+        MonoRuntimeHeaders="$(MicrosoftNetCoreAppRuntimePackDir)native/include/mono-2.0"
         Assemblies="@(BundleAssemblies)"
         MainLibraryFileName="Program.dll"
         GenerateXcodeProject="True"
