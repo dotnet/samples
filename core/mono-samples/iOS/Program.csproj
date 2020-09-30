@@ -1,54 +1,49 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <OutputPath>bin</OutputPath>
-    <DebugType>Portable</DebugType>
     <TargetFramework>net5.0</TargetFramework>
-    <TargetOS>iOS</TargetOS>
-    <EnableTargetingPackDownload>false</EnableTargetingPackDownload>
     <RuntimeIdentifier>ios-x64</RuntimeIdentifier>
-    <PublishTrimmed>true</PublishTrimmed>
-    <_TrimmerDefaultAction>link</_TrimmerDefaultAction>
-    <Optimized Condition="'$(Configuration)' == 'Release'">True</Optimized>
-    <InvariantGlobalization>true</InvariantGlobalization> <!-- workaround for https://github.com/dotnet/runtime/issues/41866 -->
-    <RunAnalyzers>false</RunAnalyzers>
+    <OutputType>Exe</OutputType>
   </PropertyGroup>
 
-  <Import Project="..\mobile.tasks\AotCompilerTask\MonoAOTCompiler.props" />
   <UsingTask TaskName="AppleAppBuilderTask"
              AssemblyFile="..\mobile.tasks\AppleAppBuilder\bin\$(Configuration)\$(TargetFramework)\AppleAppBuilder.dll" />
 
+  <Target Name="DisplayMessages" AfterTargets="ResolveFrameworkReferences;Publish">
+    <Message Importance="high" Text="ResolvedRuntimePack = @(ResolvedRuntimePack)" />
+    <Message Importance="high" Text="ResolvedRuntimePack.PackageDirectory = %(ResolvedRuntimePack.PackageDirectory)" />
+    <Message Importance="high" Text="$(MSBuildThisFileDirectory)$(PublishDir)" />
+    <Message Importance="high" Text="$(TargetArchitecture)" />
+  </Target>
+
   <Target Name="BuildAppBundle" AfterTargets="CopyFilesToPublishDirectory;Publish">
     <PropertyGroup>
-      <AppDir>$(MSBuildThisFileDirectory)$(PublishDir)\app</AppDir>
+      <AppDir>$(MSBuildThisFileDirectory)$(PublishDir)</AppDir>
       <IosSimulator Condition="'$(TargetArchitecture)' == 'x64' or '$(TargetArchitecture)' == 'x86'">iPhone 11</IosSimulator>
+      <Optimized Condition="'$(Configuration)' == 'Release'">True</Optimized>
     </PropertyGroup>
 
-    <RemoveDir Directories="$(AppDir)" />
-
     <ItemGroup>
-      <BundleAssemblies Include="$(MSBuildThisFileDirectory)$(PublishDir)\*.dll" />
-      <AotInputAssemblies Include="$(MSBuildThisFileDirectory)$(PublishDir)\*.dll">
-        <AotArguments>@(MonoAOTCompilerDefaultAotArguments, ';')</AotArguments>
-        <ProcessArguments>@(MonoAOTCompilerDefaultProcessArguments, ';')</ProcessArguments>
-      </AotInputAssemblies>
+      <BundleAssemblies Include="$(AppDir)\*.dll" />
     </ItemGroup>
 
     <AppleAppBuilderTask
-        Arch="$(TargetArchitecture)"
-        ProjectName="HelloiOS"
-        MonoRuntimeHeaders="$(OutputPath)"
-        Assemblies="@(BundleAssemblies)"
-        MainLibraryFileName="Program.dll"
-        GenerateXcodeProject="True"
-        BuildAppBundle="True"
-        DevTeamProvisioning="$(DevTeamProvisioning)"
-        OutputDirectory="$(AppDir)"
-        Optimized="$(Optimized)"
-        UseAotForSimulator="$(UseAotForSimulator)"
-        AppDir="$(MSBuildThisFileDirectory)$(PublishDir)">
-        <Output TaskParameter="AppBundlePath" PropertyName="AppBundlePath" />
-        <Output TaskParameter="XcodeProjectPath" PropertyName="XcodeProjectPath" />
+      ProjectName="HelloiOS"
+      AppDir="$(MSBuildThisFileDirectory)$(PublishDir)"
+      MonoRuntimeHeaders="%(ResolvedRuntimePack.PackageDirectory)\runtimes\ios-x64\native\include\mono-2.0"
+      MainLibraryFileName="$(MSBuildThisFileName).dll"
+      Assemblies="@(BundleAssemblies)"
+      OutputDirectory="$(AppDir)\app"
+      Optimized="$(Optimized)"
+      Arch="x64"
+      DevTeamProvisioning="$(DevTeamProvisioning)"
+      BuildAppBundle="True"
+      GenerateXcodeProject="True"
+      ExcludeFromAppDir="@(ExcludeFromAppDir)"
+      NativeMainSource="$(NativeMainSource)"
+      UseConsoleUITemplate="$(UseConsoleUITemplate)"
+      UseAotForSimulator="$(UseAotForSimulator)">
+      <Output TaskParameter="AppBundlePath" PropertyName="AppBundlePath" />
+      <Output TaskParameter="XcodeProjectPath" PropertyName="XcodeProjectPath" />
     </AppleAppBuilderTask>
 
     <Message Importance="High" Text="Xcode: $(XcodeProjectPath)"/>
