@@ -5,19 +5,20 @@
     <OutputType>Exe</OutputType>
   </PropertyGroup>
 
-  <UsingTask TaskName="AppleAppBuilderTask"
-             AssemblyFile="..\mobile.tasks\AppleAppBuilder\bin\$(Configuration)\$(TargetFramework)\AppleAppBuilder.dll" />
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Runtime.iOS.Sample.Mono" Version="1.0.0" />
+  </ItemGroup>
 
-  <Target Name="DisplayMessages" AfterTargets="ResolveFrameworkReferences;Publish">
-    <Message Importance="high" Text="ResolvedRuntimePack = @(ResolvedRuntimePack)" />
-    <Message Importance="high" Text="ResolvedRuntimePack.PackageDirectory = %(ResolvedRuntimePack.PackageDirectory)" />
-    <Message Importance="high" Text="$(MSBuildThisFileDirectory)$(PublishDir)" />
-    <Message Importance="high" Text="$(TargetArchitecture)" />
+  <Target Name="DisplayMessages" AfterTargets="Restore">
+    <Message Importance="high" Text="$(NuGetPackageRoot)microsoft.net.runtime.ios.sample.mono/1.0.0/lib/net5.0" />
   </Target>
 
-  <Target Name="BuildAppBundle" AfterTargets="CopyFilesToPublishDirectory;Publish">
+  <UsingTask TaskName="AppleAppBuilderTask"
+             AssemblyFile="$(NuGetPackageRoot)microsoft.net.runtime.ios.sample.mono/1.0.0/lib/net5.0/AppleAppBuilder.dll" />
+  <Target Name="BuildAppBundle" AfterTargets="CopyFilesToPublishDirectory;Publish;BuildAppleAppBuilder">
     <PropertyGroup>
       <AppDir>$(MSBuildThisFileDirectory)$(PublishDir)</AppDir>
+      <TargetArchitecture>x64</TargetArchitecture>
       <IosSimulator Condition="'$(TargetArchitecture)' == 'x64' or '$(TargetArchitecture)' == 'x86'">iPhone 11</IosSimulator>
       <Optimized Condition="'$(Configuration)' == 'Release'">True</Optimized>
     </PropertyGroup>
