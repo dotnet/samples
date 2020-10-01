@@ -9,12 +9,9 @@
     <PackageReference Include="Microsoft.NET.Runtime.iOS.Sample.Mono" Version="1.0.0" />
   </ItemGroup>
 
-  <Target Name="DisplayMessages" AfterTargets="Restore">
-    <Message Importance="high" Text="$(NuGetPackageRoot)microsoft.net.runtime.ios.sample.mono/1.0.0/lib/net5.0" />
-  </Target>
-
   <UsingTask TaskName="AppleAppBuilderTask"
              AssemblyFile="$(NuGetPackageRoot)microsoft.net.runtime.ios.sample.mono/1.0.0/lib/net5.0/AppleAppBuilder.dll" />
+
   <Target Name="BuildAppBundle" AfterTargets="CopyFilesToPublishDirectory;Publish;BuildAppleAppBuilder">
     <PropertyGroup>
       <AppDir>$(MSBuildThisFileDirectory)$(PublishDir)</AppDir>
