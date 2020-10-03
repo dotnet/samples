@@ -1,6 +1,6 @@
 # .NET Core Hosting Sample
 
-This project demonstrates a way for a native process to host .NET Core using the `nethost` and `hostfxr` libraries. Documentation on the `nethost` and `hostfxr` APIs can be found [here](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/native-hosting.md).
+This project demonstrates a way for a native process to host .NET Core using the `nethost` and `hostfxr` libraries. Documentation on the `nethost` and `hostfxr` APIs can be found [here](https://github.com/dotnet/runtime/blob/master/docs/design/features/native-hosting.md).
 
 ## Key Features
 
@@ -23,7 +23,7 @@ Additional comments are contained in source and project files.
 
 ## Build and Run
 
-1) In order to build and run, all prerequisites must be installed. The following are also required:
+1. In order to build and run, all prerequisites must be installed. The following are also required:
 
     * On Linux/macOS, the C++ compiler (`g++`) must be on the path.
     * The C++ compiler (`cl.exe` or `g++`) and `dotnet` must be the same bitness (32-bit versus 64-bit).
