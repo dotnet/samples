@@ -31,6 +31,7 @@
 
     <NativePlatform>$([System.Runtime.InteropServices.RuntimeInformation]::ProcessArchitecture)</NativePlatform>
     <NativeObjDir>$(MSBuildThisFileDirectory)obj/$(Configuration)/$(NativePlatform)/</NativeObjDir>
+    <NativeHostDirectory>$(MSBuildThisFileDirectory)</NativeHostDirectory>
   </PropertyGroup>
 
   <!-- Properties for MSVCFindCompilerPaths -->
@@ -77,7 +78,7 @@
           DependsOnTargets="PrepareForNativeBuild"
           Condition="$([MSBuild]::IsOsPlatform('Linux')) OR $([MSBuild]::IsOsPlatform('OSX'))">
     <PropertyGroup>
-      <IncPaths>-Iinc -I&quot;$(NetHostDir)&quot;</IncPaths>
+      <IncPaths>-I$(NativeHostDirectory)inc -I&quot;$(NetHostDir)&quot;</IncPaths>
       <CompilerArgs>-g</CompilerArgs>
     </PropertyGroup>
     <PropertyGroup Condition="$([MSBuild]::IsOsPlatform('Linux'))">
