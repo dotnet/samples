@@ -23,12 +23,11 @@ Additional comments are contained in source and project files.
 
 ## Build and Run
 
-1. In order to build and run, all prerequisites must be installed. The following are also required:
+1) In order to build and run, all prerequisites must be installed. The following are also required:
 
-    * The C++ compiler (`cl.exe` or `g++`) must be on the path.
-      * On Windows, a [Developer Command Prompt for Visual Studio](https://docs.microsoft.com/cpp/build/building-on-the-command-line#developer_command_prompt_shortcuts) should be used.
-    * The C++ compiler (`cl.exe` or `g++`) and `dotnet` must be the same bitness (32-bit or 64-bit).
-      * On Windows, the default developer command prompt for VS uses the 32-bit compilers, but `dotnet` is typically 64-bit by default. Make sure to select the "x64 Native Tools Command Prompt for VS 2019" (or 2017).
+    * On Linux/macOS, the C++ compiler (`g++`) must be on the path.
+    * The C++ compiler (`cl.exe` or `g++`) and `dotnet` must be the same bitness (32-bit versus 64-bit).
+      * On Windows, the sample is set up to use the bitness of `dotnet` to find the corresponding `cl.exe`
 
 1. Navigate to the root directory.
 
@@ -41,7 +40,7 @@ Additional comments are contained in source and project files.
 
 The expected output will come from the `DotNetLib` class library and include the arguments passed to the managed library from the host:
 
-```
+```console
 Hello, world! from Lib [count: 1]
 -- message: from host!
 -- number: 0
@@ -60,5 +59,5 @@ Note: The way the sample is built is relatively complicated. The goal is that it
 
 ## Visual Studio support
 
-The `src\HostWithHostFxr.sln` solution file can be used to open the sample in Visual Studio 2019. In order to be able to build from Visual Studio, though, it has to be started from the correct developer environment. From the developer environment console, start it with `devenv src\HostWithHostFxr.sln`. With that, the solution can be built. To run it, set the startup project to `build/NativeHost`.
+The `src\HostWithHostFxr.sln` solution file can be used to open the sample in Visual Studio 2019. To run the sample, set the startup project to `build/NativeHost`.
 Note that with mixed mode debugging (that is, a debugger that can see both native and managed code at the same time), there's a known limitation where no breakpoints will be hit before the runtime starts. So it is not possible to debug the parts of the sample before (and including) the call to `load_assembly_and_get_function_pointer` like that. To debug those, start the process from a native-only debugger.
