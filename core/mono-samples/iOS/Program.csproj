@@ -6,11 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Runtime.iOS.Sample.Mono" Version="1.0.0" />
+    <PackageReference Include="Microsoft.NET.Runtime.iOS.Sample.Mono" Version="6.0.0-dev" />
   </ItemGroup>
 
   <UsingTask TaskName="AppleAppBuilderTask"
-             AssemblyFile="$(NuGetPackageRoot)microsoft.net.runtime.ios.sample.mono/1.0.0/lib/net5.0/AppleAppBuilder.dll" />
+             AssemblyFile="$(NuGetPackageRoot)microsoft.net.runtime.ios.sample.mono/6.0.0-dev/tools/net5.0/AppleAppBuilder.dll" />
 
   <Target Name="BuildAppBundle" AfterTargets="CopyFilesToPublishDirectory;Publish;BuildAppleAppBuilder">
     <PropertyGroup>
