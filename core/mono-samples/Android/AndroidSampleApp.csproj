@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk" DefaultTargets="BuildApp">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RuntimeIdentifier>android-x64</RuntimeIdentifier>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Runtime.Android.Sample.Mono" Version="6.0.0-dev" GeneratePathProperty="true" />
+  </ItemGroup>
+
+  <UsingTask TaskName="AndroidAppBuilderTask"
+             AssemblyFile="$(PkgMicrosoft_NET_Runtime_Android_Sample_Mono)\tools\net6.0\AndroidAppBuilder.dll"/>
+
+  <Target Name="BuildApp" AfterTargets="Publish">
+    <PropertyGroup>
+      <OutputPath>$(ProjectDir)$(PublishDir)</OutputPath>
+      <ApkDir>$(OutputPath)apk\</ApkDir>
+      <AdbTool>$(ANDROID_SDK_ROOT)\platform-tools\adb</AdbTool>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <AndroidRuntimePack Include="@(ResolvedRuntimePack)" Exclude="Microsoft.AspNetCore.App.Runtime.linux-x64" />
+      <AssemblySearchPaths Include="$(OutputPath)" />
+      <AssemblySearchPaths Include="%(AndroidRuntimePack.PackageDirectory)/runtimes/android-x64/native" />
+      <AssemblySearchPaths Include="%(AndroidRuntimePack.PackageDirectory)/runtimes/android-x64/lib/net5.0" />
+    </ItemGroup>
+
+    <RemoveDir Directories="$(ApkDir)" />
+
+    <AndroidAppBuilderTask
+      SourceDir="$(OutputPath)"
+      AssemblySearchPaths="@(AssemblySearchPaths)"
+      MonoRuntimeHeaders="%(AndroidRuntimePack.PackageDirectory)\runtimes\android-x64\native\include\mono-2.0"
+      MainLibraryFileName="$(AssemblyName).dll"
+      Abi="x86_64"
+      ProjectName="HelloAndroid"
+      OutputDir="$(ApkDir)"
+      StripDebugSymbols="True">
+      <Output TaskParameter="ApkBundlePath" PropertyName="ApkBundlePath" />
+      <Output TaskParameter="ApkPackageId" PropertyName="ApkPackageId" />
+    </AndroidAppBuilderTask>
+
+    <Exec Command="$(AdbTool) kill-server"/>
+    <Exec Command="$(AdbTool) start-server"/>
+    <Exec Command="$(AdbTool) logcat -c" ContinueOnError="WarnAndContinue" />
+    <Message Importance="High" Text="Uninstalling apk (ignore errors if any):"/>
+    <Exec Command="$(AdbTool) uninstall net.dot.HelloAndroid" ContinueOnError="WarnAndContinue" />
+    <Exec Command="$(AdbTool) install $(ApkDir)/bin/HelloAndroid.apk" />
+    <Exec Command="$(AdbTool) shell am instrument -w net.dot.HelloAndroid/net.dot.MonoRunner" />
+    <Exec Command="$(AdbTool) logcat -d -s DOTNET" />
+  </Target>
+</Project>
