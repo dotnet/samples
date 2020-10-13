@@ -26,19 +26,16 @@
 
     <AppleAppBuilderTask
       ProjectName="HelloiOS"
-      AppDir="$(MSBuildThisFileDirectory)$(PublishDir)"
+      AppDir="$(AppDir)"
       MonoRuntimeHeaders="%(ResolvedRuntimePack.PackageDirectory)\runtimes\ios-x64\native\include\mono-2.0"
       MainLibraryFileName="$(MSBuildThisFileName).dll"
       Assemblies="@(BundleAssemblies)"
       OutputDirectory="$(AppDir)\app"
       Optimized="$(Optimized)"
-      Arch="x64"
-      DevTeamProvisioning="$(DevTeamProvisioning)"
+      Arch="$(TargetArchitecture)"
       BuildAppBundle="True"
       GenerateXcodeProject="True"
-      ExcludeFromAppDir="@(ExcludeFromAppDir)"
-      NativeMainSource="$(NativeMainSource)"
-      UseConsoleUITemplate="$(UseConsoleUITemplate)"
+      NativeMainSource="$(MSBuildThisFileDirectory)main.m"
       UseAotForSimulator="$(UseAotForSimulator)">
       <Output TaskParameter="AppBundlePath" PropertyName="AppBundlePath" />
       <Output TaskParameter="XcodeProjectPath" PropertyName="XcodeProjectPath" />
@@ -46,11 +43,13 @@
 
     <Message Importance="High" Text="Xcode: $(XcodeProjectPath)"/>
     <Message Importance="High" Text="App:   $(AppBundlePath)"/>
-
+    <Message Importance="High" Text="Restarting device"/>
     <Exec Condition="'$(IosSimulator)' != ''" Command="xcrun simctl shutdown &quot;$(IosSimulator)&quot;" ContinueOnError="WarnAndContinue" />
     <Exec Condition="'$(IosSimulator)' != ''" Command="xcrun simctl boot &quot;$(IosSimulator)&quot;" />
     <Exec Condition="'$(IosSimulator)' != ''" Command="open -a Simulator" />
+    <Message Importance="High" Text="Installing application"/>
     <Exec Condition="'$(IosSimulator)' != ''" Command="xcrun simctl install &quot;$(IosSimulator)&quot; $(AppBundlePath)" />
+    <Message Importance="High" Text="Launching application"/>
     <Exec Condition="'$(IosSimulator)' != ''" Command="xcrun simctl launch --console booted net.dot.HelloiOS" />
   </Target>
 </Project>
