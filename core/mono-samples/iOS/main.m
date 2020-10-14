@@ -27,6 +27,7 @@ UILabel *counter;
 UITextField *textField;
 NSString *name = @"iOS";
 void (*incrementHandlerPtr)(void);
+void (*greetHandlerPtr)(NSString*);
 
 @implementation ViewController
 
@@ -60,7 +61,7 @@ void (*incrementHandlerPtr)(void);
     [counter setTranslatesAutoresizingMaskIntoConstraints:NO];
     counter.textColor = [UIColor greenColor];
     counter.font = [UIFont boldSystemFontOfSize: 20];
-    counter.numberOfLines = 2;
+    counter.numberOfLines = 1;
     counter.textAlignment = NSTextAlignmentCenter;
     counter.text = @"counter";
     [self.view addSubview:counter];
@@ -124,7 +125,7 @@ void (*incrementHandlerPtr)(void);
     textField = [[UITextField alloc] init];
     [textField setTranslatesAutoresizingMaskIntoConstraints:NO];
     textField.textColor = [UIColor greenColor];
-    textField.BackgroundColor = [UIColor darkGrayColor];
+    textField.backgroundColor = [UIColor darkGrayColor];
     textField.font = [UIFont boldSystemFontOfSize: 15];
     textField.textAlignment = NSTextAlignmentCenter;
     textField.placeholder = @"Your name";
@@ -153,7 +154,7 @@ void (*incrementHandlerPtr)(void);
 
     UIButton *enterName = [UIButton buttonWithType:UIButtonTypeInfoDark];
     [enterName setTranslatesAutoresizingMaskIntoConstraints:NO];
-    // [enterName addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [enterName addTarget:self action:@selector(greetName:) forControlEvents:UIControlEventTouchUpInside];
     [enterName setTitle:@"Enter" forState:UIControlStateNormal];
     [enterName setExclusiveTouch:YES];
     [self.view addSubview:enterName];
@@ -188,6 +189,11 @@ void (*incrementHandlerPtr)(void);
     if (incrementHandlerPtr)
         incrementHandlerPtr();
 }
+-(void) greetName:(UIButton*)sender
+{
+    if (greetHandlerPtr)
+        greetHandlerPtr(textField.text);
+}
 
 @end
 
@@ -209,14 +215,21 @@ ios_set_text (const char* value)
 }
 
 // called from C# sample
-// void
-// ios_greet_name (const char* value)
-// {
-//     NSString* nsstr = [NSString stringWithUTF8String:strdup(value)];
-//     dispatch_async(dispatch_get_main_queue(), ^{
-//         name = nsstr;
-//     });
-// }
+void
+ios_register_name_greet (void* ptr)
+{
+    greetHandlerPtr = ptr;
+}
+
+// called from C# sample
+void
+ios_greet_name (const char* value)
+{
+    NSString* nsstr = [NSString stringWithUTF8String:strdup(value)];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        name = nsstr;
+    });
+}
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {

@@ -19,17 +19,17 @@ public static class Program
     [DllImport("__Internal")]
     private extern static void ios_set_text(string value);
 
-    // [DllImport("__Internal")]
-    // private extern static void ios_greet_name(string value);
+    [DllImport("__Internal")]
+    private extern static void ios_greet_name(string value);
 
     [DllImport("__Internal")]
     private extern static void ios_register_counter_increment(Action action);
 
-    // [DllImport("__Internal")]
-    // private extern static void ios_register_name_greet(Action action);
+    [DllImport("__Internal")]
+    private extern static void ios_register_name_greet(Action<string> action);
 
     private static Action incrementHandler = null;
-    // private static Action nameHandler = null;
+    private static Action<string> nameHandler = null;
 
     private static int counter = 1;
 
@@ -40,18 +40,18 @@ public static class Program
         ios_set_text("Clicked " + counter++ + " times!");
     }
 
-    // [MonoPInvokeCallback(typeof(Action))]
-    // private static void GreetName()
-    // {
-    //     ios_greet_name("Mitch");
-    // }
+    [MonoPInvokeCallback(typeof(Action<string>))]
+    private static void GreetName(string name)
+    {
+        ios_greet_name(name);
+    }
 
     public static async Task Main(string[] args)
     {
         // Register a managed callback (will be called by UIButton, see main.m)
         // Also, keep the handler alive so GC won't collect it.
         ios_register_counter_increment(incrementHandler = IncrementCounter);
-        // ios_register_name_greet(nameHandler = GreetName);
+        ios_register_name_greet(nameHandler = GreetName);
 
         const string msg = "Hello World!";
         for (int i = 0; i < msg.Length; i++)
