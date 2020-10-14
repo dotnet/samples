@@ -23,45 +23,179 @@
 @end
 
 UILabel *label;
-void (*clickHandlerPtr)(void);
+UILabel *counter;
+UITextField *textField;
+NSString *name = @"iOS";
+void (*incrementHandlerPtr)(void);
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    label = [[UILabel alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    label = [[UILabel alloc] init];
+    [label setTranslatesAutoresizingMaskIntoConstraints:NO];
     label.textColor = [UIColor greenColor];
-    label.font = [UIFont boldSystemFontOfSize: 30];
-    label.numberOfLines = 2;
+    label.font = [UIFont boldSystemFontOfSize: 20];
+    label.numberOfLines = 3;
     label.textAlignment = NSTextAlignmentCenter;
-    label.text = @"Hello, wire me up!\n(dllimport ios_set_text)";
+    label.text = [NSString stringWithFormat:@"%@%@%@", @"Hello ", name, @"!\nRunning on mono runtime\nUsing C#"];
     [self.view addSubview:label];
+    [label addConstraint:[NSLayoutConstraint constraintWithItem:label
+                                             attribute:NSLayoutAttributeWidth
+                                             relatedBy:NSLayoutRelationEqual
+                                             toItem:nil
+                                             attribute:NSLayoutAttributeNotAnAttribute
+                                             multiplier:1
+                                             constant:300]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:label
+                                                 attribute:NSLayoutAttributeCenterX
+                                                 relatedBy:NSLayoutRelationEqual
+                                                 toItem:self.view
+                                                 attribute:NSLayoutAttributeCenterX
+                                                 multiplier:1
+                                                 constant:0]];                                         
+
+    counter = [[UILabel alloc] init];
+    [counter setTranslatesAutoresizingMaskIntoConstraints:NO];
+    counter.textColor = [UIColor greenColor];
+    counter.font = [UIFont boldSystemFontOfSize: 20];
+    counter.numberOfLines = 2;
+    counter.textAlignment = NSTextAlignmentCenter;
+    counter.text = @"counter";
+    [self.view addSubview:counter];
+    [counter addConstraint:[NSLayoutConstraint constraintWithItem:counter
+                                               attribute:NSLayoutAttributeWidth
+                                               relatedBy:NSLayoutRelationEqual
+                                               toItem:nil
+                                               attribute:NSLayoutAttributeNotAnAttribute
+                                               multiplier:1
+                                               constant:300]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:counter
+                                                 attribute:NSLayoutAttributeTop
+                                                 relatedBy:NSLayoutRelationEqual
+                                                 toItem:label
+                                                 attribute:NSLayoutAttributeBottom
+                                                 multiplier:1
+                                                 constant:50]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:counter
+                                                 attribute:NSLayoutAttributeCenterX
+                                                 relatedBy:NSLayoutRelationEqual
+                                                 toItem:self.view
+                                                 attribute:NSLayoutAttributeCenterX
+                                                 multiplier:1
+                                                 constant:0]];                                             
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeInfoDark];
-    [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
-    [button setFrame:CGRectMake(50, 300, 200, 50)];
-    [button setTitle:@"Click me (wire me up)" forState:UIControlStateNormal];
+    [button setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [button addTarget:self action:@selector(incrementCounter:) forControlEvents:UIControlEventTouchUpInside];
+    [button setTitle:@"Click me" forState:UIControlStateNormal];
     [button setExclusiveTouch:YES];
     [self.view addSubview:button];
+    [button addConstraint:[NSLayoutConstraint constraintWithItem:button
+                                              attribute:NSLayoutAttributeWidth
+                                              relatedBy:NSLayoutRelationEqual
+                                              toItem:nil
+                                              attribute:NSLayoutAttributeNotAnAttribute
+                                              multiplier:1
+                                              constant:200]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:button
+                                                 attribute:NSLayoutAttributeTop
+                                                 relatedBy:NSLayoutRelationEqual
+                                                 toItem:counter
+                                                 attribute:NSLayoutAttributeBottom
+                                                 multiplier:1
+                                                 constant:10]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:button
+                                                 attribute:NSLayoutAttributeCenterX
+                                                 relatedBy:NSLayoutRelationEqual
+                                                 toItem:counter
+                                                 attribute:NSLayoutAttributeCenterX
+                                                 multiplier:1
+                                                 constant:0]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:button
+                                                 attribute:NSLayoutAttributeCenterX
+                                                 relatedBy:NSLayoutRelationEqual
+                                                 toItem:self.view
+                                                 attribute:NSLayoutAttributeCenterX
+                                                 multiplier:1
+                                                 constant:0]];                                             
+
+    textField = [[UITextField alloc] init];
+    [textField setTranslatesAutoresizingMaskIntoConstraints:NO];
+    textField.textColor = [UIColor greenColor];
+    textField.BackgroundColor = [UIColor darkGrayColor];
+    textField.font = [UIFont boldSystemFontOfSize: 15];
+    textField.textAlignment = NSTextAlignmentCenter;
+    textField.placeholder = @"Your name";
+    [self.view addSubview:textField];
+    [textField addConstraint:[NSLayoutConstraint constraintWithItem:textField
+                                                 attribute:NSLayoutAttributeWidth
+                                                 relatedBy:NSLayoutRelationEqual
+                                                 toItem:nil
+                                                 attribute:NSLayoutAttributeNotAnAttribute
+                                                 multiplier:1
+                                                 constant:125]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:textField
+                                                 attribute:NSLayoutAttributeTop
+                                                 relatedBy:NSLayoutRelationEqual
+                                                 toItem:button
+                                                 attribute:NSLayoutAttributeBottom
+                                                 multiplier:1
+                                                 constant:50]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:textField
+                                                 attribute:NSLayoutAttributeCenterX
+                                                 relatedBy:NSLayoutRelationEqual
+                                                 toItem:self.view
+                                                 attribute:NSLayoutAttributeCenterX
+                                                 multiplier:1
+                                                 constant:0]];
+
+    UIButton *enterName = [UIButton buttonWithType:UIButtonTypeInfoDark];
+    [enterName setTranslatesAutoresizingMaskIntoConstraints:NO];
+    // [enterName addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [enterName setTitle:@"Enter" forState:UIControlStateNormal];
+    [enterName setExclusiveTouch:YES];
+    [self.view addSubview:enterName];
+    [enterName addConstraint:[NSLayoutConstraint constraintWithItem:enterName
+                                                 attribute:NSLayoutAttributeWidth
+                                                 relatedBy:NSLayoutRelationEqual
+                                                 toItem:nil
+                                                 attribute:NSLayoutAttributeNotAnAttribute
+                                                 multiplier:1
+                                                 constant:200]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:enterName
+                                                 attribute:NSLayoutAttributeTop
+                                                 relatedBy:NSLayoutRelationEqual
+                                                 toItem:textField
+                                                 attribute:NSLayoutAttributeBottom
+                                                 multiplier:1
+                                                 constant:10]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:enterName
+                                                 attribute:NSLayoutAttributeCenterX
+                                                 relatedBy:NSLayoutRelationEqual
+                                                 toItem:textField
+                                                 attribute:NSLayoutAttributeCenterX
+                                                 multiplier:1
+                                                 constant:0]];
 
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         mono_ios_runtime_init ();
     });
 }
--(void) buttonClicked:(UIButton*)sender
+-(void) incrementCounter:(UIButton*)sender
 {
-    if (clickHandlerPtr)
-        clickHandlerPtr();
+    if (incrementHandlerPtr)
+        incrementHandlerPtr();
 }
 
 @end
 
 // called from C# sample
 void
-ios_register_button_click (void* ptr)
+ios_register_counter_increment (void* ptr)
 {
-    clickHandlerPtr = ptr;
+    incrementHandlerPtr = ptr;
 }
 
 // called from C# sample
@@ -70,9 +204,19 @@ ios_set_text (const char* value)
 {
     NSString* nsstr = [NSString stringWithUTF8String:strdup(value)];
     dispatch_async(dispatch_get_main_queue(), ^{
-        label.text = nsstr;
+        counter.text = nsstr;
     });
 }
+
+// called from C# sample
+// void
+// ios_greet_name (const char* value)
+// {
+//     NSString* nsstr = [NSString stringWithUTF8String:strdup(value)];
+//     dispatch_async(dispatch_get_main_queue(), ^{
+//         name = nsstr;
+//     });
+// }
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
