@@ -25,7 +25,6 @@
 UILabel *label;
 UILabel *counter;
 UITextField *textField;
-NSString *name = @"iOS";
 void (*incrementHandlerPtr)(void);
 void (*greetHandlerPtr)(NSString*);
 
@@ -40,7 +39,7 @@ void (*greetHandlerPtr)(NSString*);
     label.font = [UIFont boldSystemFontOfSize: 20];
     label.numberOfLines = 3;
     label.textAlignment = NSTextAlignmentCenter;
-    label.text = [NSString stringWithFormat:@"%@%@%@", @"Hello ", name, @"!\nRunning on mono runtime\nUsing C#"];
+    label.text = @"Hello iOS!\nRunning on mono runtime\nUsing C#";
     [self.view addSubview:label];
     [label addConstraint:[NSLayoutConstraint constraintWithItem:label
                                              attribute:NSLayoutAttributeWidth
@@ -192,7 +191,7 @@ void (*greetHandlerPtr)(NSString*);
 -(void) greetName:(UIButton*)sender
 {
     if (greetHandlerPtr)
-        greetHandlerPtr(textField.text);
+        greetHandlerPtr(strdup ([textField.text UTF8String]));
 }
 
 @end
@@ -227,7 +226,7 @@ ios_greet_name (const char* value)
 {
     NSString* nsstr = [NSString stringWithUTF8String:strdup(value)];
     dispatch_async(dispatch_get_main_queue(), ^{
-        name = nsstr;
+        label.text = [NSString stringWithFormat:@"%@%@%@", @"Hello ", nsstr, @"!\nRunning on mono runtime\nUsing C#"];
     });
 }
 
