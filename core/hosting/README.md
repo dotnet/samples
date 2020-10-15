@@ -2,7 +2,7 @@
 
 This folder contains sample code demonstrating how to host managed .NET Core code in a native process. These hosts bypass the usual `dotnet` host and launch managed code directly.
 
-There are three samples demonstrating three different hosting interfaces for .NET Core.
+There are two samples demonstrating two different hosting interfaces for .NET Core.
 
 1. The [HostWithHostFxr](HostWithHostFxr) folder demonstrates how to host the .NET Core runtime using the `nethost` and `hostfxr` libraries' APIs. These APIs were introduced in .NET Core 3.0 and are the recommended method of hosting .NET Core 3.0 and above. These entry points handle the complexity of finding and setting up the runtime for initialization. This host demonstrates calling from native code into a static managed method and passing it a message to display.
 1. The [HostWithCoreClrHost](HostWithCoreClrHost) folder demonstrates how to host the .NET Core runtime using the newer `coreclrhost.h` API. This API is the preferred method of hosting .NET Core 2.2 and below. This host demonstrates calling from native code into a static managed method and supplying a function pointer for the managed code to use to call back into the host.
