@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <UsingTask TaskName="AppleAppBuilderTask"
-             AssemblyFile="$(NuGetPackageRoot)microsoft.net.runtime.ios.sample.mono/6.0.0-dev/tools/net5.0/AppleAppBuilder.dll" />
+             AssemblyFile="$(NuGetPackageRoot)microsoft.net.runtime.ios.sample.mono/6.0.0-dev/tools/net6.0/AppleAppBuilder.dll" />
 
   <Target Name="BuildAppBundle" AfterTargets="CopyFilesToPublishDirectory;Publish;BuildAppleAppBuilder">
     <PropertyGroup>
