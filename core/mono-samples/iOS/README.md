@@ -13,15 +13,17 @@ urlFragment: "mono-ios-csharp"
 
 In this sample, the mono runtime is used to invoke objective-c unmanaged code (main.m) from the C# managed side (Program.cs) and vice versa. With the sample running, you can enter your name and click the corresponding button to modify the greeting message as well as clicking a button to increment a counter.
 
-NOTE: The purpose of this sample is to demonstrate the concept of building an iOS application on top of the mono runtime. The mono runtime headers should be supplied through the build process.
+[!NOTE]
+The purpose of this sample is to demonstrate the concept of building an iOS application on top of the mono runtime. The mono runtime headers should be supplied through the build process.
 
 ## Sample Prerequisites
 
 To run the sample for iOS, Xcode and an iOS simulator is needed. 
-- Xcode: Any version should work with this sample (download Xcode at https://developer.apple.com/xcode/)
-- iOS simulator: Minimal version iOS 8.0
+- Xcode: Any version should work with this sample (download Xcode at https://developer.apple.com/xcode/).
+- iOS simulator 8.0 or greater.
 
-NOTE: Modify `IosSimulator` under target `BuildAppBundle` from `iPhone 11` to your simulator's device name.
+[!NOTE]
+Modify `IosSimulator` under target `BuildAppBundle` from `iPhone 11` to your simulator's device name.
 
 ## Building the sample
 
