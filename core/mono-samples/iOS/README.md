@@ -1,25 +1,28 @@
 ---
 languages:
-- c#
+- csharp
 products:
-- dotnet
-- iOS
-- mono runtime
+- dotnet-core
 page_type: sample
 name: "iOS Sample: Simple greeting and counter (C#)"
 description: "An iOS application that contains an example of embedding the mono runtime to invoke unmanaged code with C#."
+urlFragment: "mono-ios-csharp"
 ---
 
 # iOS Sample: Simple greeting and counter (C#)
 
 In this sample, the mono runtime is used to invoke objective-c unmanaged code (main.m) from the C# managed side (Program.cs) and vice versa. With the sample running, you can enter your name and click the corresponding button to modify the greeting message as well as clicking a button to increment a counter.
 
-NOTE: The purpose of this sample is to demonstrate the concept of building an iOS application on top of the mono runtime.
+NOTE: The purpose of this sample is to demonstrate the concept of building an iOS application on top of the mono runtime. The mono runtime headers should be supplied through the build process.
 
-## Requirements
+## Sample Prerequisites
 
-To run the sample for iOS you will need a recent version of XCode installed (e.g. 11.3 or higher).
+To run the sample for iOS, Xcode and an iOS simulator is needed. 
+- Xcode: Any version should work with this sample (download Xcode at https://developer.apple.com/xcode/)
+- iOS simulator: Minimal version iOS 8.0
+
+NOTE: Modify `IosSimulator` under target `BuildAppBundle` from `iPhone 11` to your simulator's device name.
 
 ## Building the sample
 
-To build the sample from the command line, run `dotnet publish`.
+The source code includes an MSBuild project file for C# (a _.csproj_ file) that targets .NET 5.0. After downloading the _.zip_ file, be sure to have the iOS simulator open and modify `iPhone 11` in `Program.csproj` to the simulator's name. To run the sample, open the command line and navigate to the downloaded folder and run `dotnet publish`.
