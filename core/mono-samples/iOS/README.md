@@ -18,7 +18,8 @@ The purpose of this sample is to demonstrate the concept of building an iOS appl
 
 ## Sample Prerequisites
 
-To run the sample for iOS, Xcode and an iOS simulator is needed. 
+To run the sample for iOS, Xcode and an iOS simulator is needed.
+
 - Xcode: Any version should work with this sample (download Xcode at <https://developer.apple.com/xcode/>).
 - iOS simulator 8.0 or greater.
 
