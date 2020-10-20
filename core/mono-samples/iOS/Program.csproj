@@ -12,7 +12,7 @@
   <UsingTask TaskName="AppleAppBuilderTask"
              AssemblyFile="$(PkgMicrosoft_NET_Runtime_iOS_Sample_Mono)\tools\net6.0\AppleAppBuilder.dll" />
 
-  <Target Name="BuildAppBundle" AfterTargets="CopyFilesToPublishDirectory;Publish;BuildAppleAppBuilder">
+  <Target Name="BuildAppBundle" AfterTargets="Publish">
     <PropertyGroup>
       <AppDir>$(MSBuildThisFileDirectory)$(PublishDir)</AppDir>
       <TargetArchitecture>x64</TargetArchitecture>
