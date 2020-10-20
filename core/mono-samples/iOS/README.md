@@ -22,6 +22,7 @@ This sample will only run on macOS as it requires Xcode and an iOS simulator.
 
 - Xcode: Any version should work with this sample (download Xcode at <https://developer.apple.com/xcode/>).
 - iOS simulator 8.0 or greater.
+- Daily master build of the dotnet sdk (<https://github.com/dotnet/installer>).
 
 [!NOTE]
 Modify `IosSimulator` under target `BuildAppBundle` from `iPhone 11` to your simulator's device name.
