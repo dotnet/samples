@@ -27,7 +27,7 @@
     <AppleAppBuilderTask
       ProjectName="HelloiOS"
       AppDir="$(AppDir)"
-      MonoRuntimeHeaders="%(ResolvedRuntimePack.PackageDirectory)\runtimes\ios-x64\native\include\mono-2.0"
+      MonoRuntimeHeaders="%(ResolvedRuntimePack.PackageDirectory)\runtimes\$(RuntimeIdentifier)\native\include\mono-2.0"
       MainLibraryFileName="$(MSBuildThisFileName).dll"
       Assemblies="@(BundleAssemblies)"
       OutputDirectory="$(AppDir)\app"
