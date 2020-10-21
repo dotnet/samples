@@ -1,0 +1,7 @@
+{
+  "sdk": {
+    "version": "6.0.100-alpha",
+    "rollForward": "major",
+    "allowPrerelease": true
+  }
+}
