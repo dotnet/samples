@@ -48,8 +48,6 @@ jobs:
     - name: Setup .NET SDK 6 Preview
       if: ${{ env.DOTNET_DO_INSTALL == 'true' }}
       run: |
-        echo "Downloading dotnet-install.ps1"
-        Invoke-WebRequest https://raw.githubusercontent.com/dotnet/install-scripts/master/src/dotnet-install.ps1 -OutFile dotnet-install.ps1
         echo "Installing dotnet version ${{ env.DOTNET_INSTALLER_CHANNEL }}"
         .\dotnet-install.ps1 -InstallDir "c:\program files\dotnet" -Version 6.0.100-alpha.1.20529.2
       
