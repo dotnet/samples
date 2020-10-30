@@ -1,14 +1,27 @@
 #include <jni.h>
 
 char *(*incrementHandlerPtr)(void);
+char *(*greetHandlerPtr)(const char *);
 
 JNIEXPORT jstring JNICALL
-Java_net_dot_MainActivity_sayHello(
+Java_net_dot_MainActivity_incrementCounter(
         JNIEnv* env,
         jobject thisObject) {
     char *s = "Hello";
     if (incrementHandlerPtr)
         s = incrementHandlerPtr();
+    return (*env) -> NewStringUTF(env, s);
+}
+
+JNIEXPORT jstring JNICALL
+Java_net_dot_MainActivity_greetName(
+        JNIEnv* env,
+        jobject thisObject,
+        jstring string) {
+    char *s = "Hello Android!\nRunning on mono runtime\nUsing C#";
+    const char *name = (*env)->GetStringUTFChars(env, string, NULL);
+    if (greetHandlerPtr)
+        s = greetHandlerPtr(name);
     return (*env) -> NewStringUTF(env, s);
 }
 
@@ -36,6 +49,12 @@ void
 androidRegisterCounterIncrement (void* ptr)
 {
     incrementHandlerPtr = ptr;
+}
+
+void
+androidRegisterNameGreet (void* ptr)
+{
+    greetHandlerPtr = ptr;
 }
 
 int myNum() {

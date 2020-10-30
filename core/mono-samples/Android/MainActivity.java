@@ -62,7 +62,7 @@ public class MainActivity extends Activity
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                clickCounter.setText(sayHello());
+                clickCounter.setText(incrementCounter());
             }
         });
         RelativeLayout.LayoutParams buttonParams =
@@ -85,6 +85,12 @@ public class MainActivity extends Activity
         Button enterName = new Button(this);
         enterName.setId(5);
         enterName.setText("Enter");
+        enterName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                welcomeMsg.setText(greetName(textField.getText().toString()));
+            }
+        });
         RelativeLayout.LayoutParams enterNameParams =
                                     new RelativeLayout.LayoutParams(
                                         RelativeLayout.LayoutParams.WRAP_CONTENT,
@@ -111,5 +117,7 @@ public class MainActivity extends Activity
         }, 1000);
     }
 
-    public native String sayHello();
+    public native String incrementCounter();
+
+    public native String greetName(String text);
 }
