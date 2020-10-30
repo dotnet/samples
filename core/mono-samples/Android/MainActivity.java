@@ -16,6 +16,17 @@ import android.graphics.Color;
 
 public class MainActivity extends Activity
 {
+    static
+    {
+        System.loadLibrary("native-lib");
+    }
+
+    // Called from JNI
+    public static int getNum()
+    {
+        return 42;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
