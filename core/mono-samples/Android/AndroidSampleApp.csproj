@@ -6,11 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Runtime.Android.Sample.Mono" Version="6.0.0-dev" GeneratePathProperty="true" />
+    <PackageReference Include="Microsoft.NET.Runtime.Android.Sample.Mono" Version="6.0.0-*" GeneratePathProperty="true" />
   </ItemGroup>
 
   <Target Name="BuildNativeLib" BeforeTargets="Publish">
-    <Exec Command="cmake -DCMAKE_TOOLCHAIN_FILE=$(ANDROID_NDK_ROOT)\build/cmake/android.toolchain.cmake -DANDROID_ABI=x86_64 -DANDROID_STL=none -DANDROID_NATIVE_API_LEVEL=21 -B monodroid -DCMAKE_BUILD_TYPE=MinSizeRel -DCMAKE_C_FLAGS=%22-s -Wno-unused-command-line-argument%22" />
+    <Exec Command="cmake -DCMAKE_TOOLCHAIN_FILE=$(ANDROID_NDK_ROOT)/build/cmake/android.toolchain.cmake -DANDROID_ABI=x86_64 -DANDROID_STL=none -DANDROID_NATIVE_API_LEVEL=21 -B monodroid -DCMAKE_BUILD_TYPE=MinSizeRel -DCMAKE_C_FLAGS=%22-s -Wno-unused-command-line-argument%22" />
     <Exec Command="cmake --build monodroid --config MinSizeRel" />
 
     <ItemGroup>
@@ -46,6 +46,7 @@
       ProjectName="HelloAndroid"
       OutputDir="$(ApkDir)"
       StripDebugSymbols="True"
+      KeyStorePath="$(HOME)/.android/"
       NativeMainSource="$(MSBuildThisFileDirectory)MainActivity.java">
       <Output TaskParameter="ApkBundlePath" PropertyName="ApkBundlePath" />
       <Output TaskParameter="ApkPackageId" PropertyName="ApkPackageId" />
@@ -54,8 +55,6 @@
     <Exec Command="$(AdbTool) kill-server"/>
     <Exec Command="$(AdbTool) start-server"/>
     <Exec Command="$(AdbTool) logcat -c" ContinueOnError="WarnAndContinue" />
-    <Message Importance="High" Text="Uninstalling apk (ignore errors if any):"/>
-    <Exec Command="$(AdbTool) uninstall net.dot.HelloAndroid" ContinueOnError="WarnAndContinue" />
     <Exec Command="$(AdbTool) install $(ApkDir)/bin/HelloAndroid.apk" />
     <Exec Command="$(AdbTool) shell am start -n net.dot.HelloAndroid/net.dot.MainActivity" />
   </Target>

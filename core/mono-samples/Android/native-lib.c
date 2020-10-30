@@ -1,12 +1,16 @@
 #include <jni.h>
 
-// JNIEXPORT jstring JNICALL
-// android_greet_name(
-//         JNIEnv* env,
-//         jobject /* this */) {
-//     const char *s = "Hello from C";
-//     return s;
-// }
+char *(*incrementHandlerPtr)(void);
+
+JNIEXPORT jstring JNICALL
+Java_net_dot_MainActivity_sayHello(
+        JNIEnv* env,
+        jobject thisObject) {
+    char *s = "Hello";
+    if (incrementHandlerPtr)
+        s = incrementHandlerPtr();
+    return (*env) -> NewStringUTF(env, s);
+}
 
 static JavaVM *gJvm;
 
@@ -26,6 +30,12 @@ static JNIEnv* GetJniEnv()
         return env;
     (*gJvm)->AttachCurrentThread(gJvm, &env, NULL);
     return env;
+}
+
+void
+androidRegisterCounterIncrement (void* ptr)
+{
+    incrementHandlerPtr = ptr;
 }
 
 int myNum() {

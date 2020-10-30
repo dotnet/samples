@@ -62,7 +62,7 @@ public class MainActivity extends Activity
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openNewActivity();
+                clickCounter.setText(sayHello());
             }
         });
         RelativeLayout.LayoutParams buttonParams =
@@ -111,8 +111,5 @@ public class MainActivity extends Activity
         }, 1000);
     }
 
-    public void openNewActivity()
-    {
-        clickCounter.setText("Hello");
-    }
+    public native String sayHello();
 }

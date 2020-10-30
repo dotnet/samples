@@ -11,8 +11,19 @@ public static class AndroidSampleApp
     [DllImport("native-lib")]
     private extern static int myNum();
 
+    [DllImport("native-lib")]
+    private extern static void androidRegisterCounterIncrement(Func<string> del);
+    private static int counter = 1;
+
+    // Called by native code, see native-lib.c
+    private static string IncrementCounter()
+    {
+        return $"Clicked {counter++} times!";
+    }
+
     public static int Main(string[] args)
     {
+        androidRegisterCounterIncrement(IncrementCounter);
         Console.WriteLine("Hello, Android!"); // logcat
         return myNum();
     }
