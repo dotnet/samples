@@ -9,6 +9,19 @@
     <PackageReference Include="Microsoft.NET.Runtime.Android.Sample.Mono" Version="6.0.0-dev" GeneratePathProperty="true" />
   </ItemGroup>
 
+  <Target Name="BuildNativeLib" BeforeTargets="Publish">
+    <Exec Command="cmake -DCMAKE_TOOLCHAIN_FILE=$(ANDROID_NDK_ROOT)\build/cmake/android.toolchain.cmake -DANDROID_ABI=x86_64 -DANDROID_STL=none -DANDROID_NATIVE_API_LEVEL=21 -B monodroid -DCMAKE_BUILD_TYPE=MinSizeRel -DCMAKE_C_FLAGS=%22-s -Wno-unused-command-line-argument%22" />
+    <Exec Command="cmake --build monodroid --config MinSizeRel" />
+
+    <ItemGroup>
+      <NativeLibFiles Include="$(MSBuildThisFileDirectory)monodroid/libnative-lib.so" />
+    </ItemGroup>
+
+    <Copy SourceFiles="@(NativeLibFiles)" DestinationFolder="$(ProjectDir)$(PublishDir)" />
+
+    <RemoveDir Directories="$(MSBuildThisFileDirectory)monodroid" />
+  </Target>
+
   <UsingTask TaskName="AndroidAppBuilderTask"
              AssemblyFile="$(PkgMicrosoft_NET_Runtime_Android_Sample_Mono)\tools\net6.0\AndroidAppBuilder.dll"/>
 
@@ -26,6 +39,7 @@
     <RemoveDir Directories="$(ApkDir)" />
 
     <AndroidAppBuilderTask
+      RuntimeIdentifier="android-x64"
       SourceDir="$(OutputPath)"
       MonoRuntimeHeaders="%(AndroidRuntimePack.PackageDirectory)\runtimes\android-x64\native\include\mono-2.0"
       MainLibraryFileName="$(AssemblyName).dll"
