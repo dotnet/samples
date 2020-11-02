@@ -29,4 +29,4 @@ Modify `IosSimulator` under target `BuildAppBundle` from `iPhone 11` to your sim
 
 ## Building the sample
 
-The source code includes an MSBuild project file for C# (a _.csproj_ file) that targets .NET 5.0. After downloading the _.zip_ file, be sure to have the iOS simulator open and modify `iPhone 11` in `Program.csproj` to the simulator's name. To run the sample, open the command line, navigate to the downloaded folder, and run `dotnet publish`.
+The source code includes an MSBuild project file for C# (a _.csproj_ file) that targets .NET 6.0. After downloading the _.zip_ file, be sure to have the iOS simulator open and modify `iPhone 11` in `Program.csproj` to the simulator's name. To run the sample, open the command line, navigate to the downloaded folder, and run `dotnet publish`.
