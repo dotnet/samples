@@ -6,13 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 
-// it's not part of the BCL but runtime needs it for native-to-managed callbacks in AOT
-// To be replaced with NativeCallableAttribute
-public class MonoPInvokeCallbackAttribute : Attribute
-{
-    public MonoPInvokeCallbackAttribute(Type delegateType) { }
-}
-
 public static class Program
 {
     // Defined in main.m
@@ -28,19 +21,14 @@ public static class Program
     [DllImport("__Internal")]
     private extern static void ios_register_name_greet(Action<string> action);
 
-    private static Action incrementHandler = null;
-    private static Action<string> nameHandler = null;
-
     private static int counter = 1;
 
     // Called by native code, see main.m
-    [MonoPInvokeCallback(typeof(Action))]
     private static void IncrementCounter()
     {
-        ios_set_text("Clicked " + counter++ + " times!");
+        ios_set_text($"Clicked {counter++} times!");
     }
 
-    [MonoPInvokeCallback(typeof(Action<string>))]
     private static void GreetName(string name)
     {
         ios_greet_name(name);
@@ -50,8 +38,8 @@ public static class Program
     {
         // Register a managed callback (will be called by UIButton, see main.m)
         // Also, keep the handler alive so GC won't collect it.
-        ios_register_counter_increment(incrementHandler = IncrementCounter);
-        ios_register_name_greet(nameHandler = GreetName);
+        ios_register_counter_increment(IncrementCounter);
+        ios_register_name_greet(GreetName);
 
         const string msg = "Hello World!";
         for (int i = 0; i < msg.Length; i++)
