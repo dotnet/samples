@@ -1,7 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <RuntimeIdentifier>ios-x64</RuntimeIdentifier>
+    <TargetArchitecture>x64</TargetArchitecture>
+    <RuntimeIdentifier>ios-$(TargetArchitecture)</RuntimeIdentifier>
     <OutputType>Exe</OutputType>
   </PropertyGroup>
 
@@ -15,7 +16,6 @@
   <Target Name="BuildAppBundle" AfterTargets="Publish">
     <PropertyGroup>
       <AppDir>$(MSBuildThisFileDirectory)$(PublishDir)</AppDir>
-      <TargetArchitecture>x64</TargetArchitecture>
       <IosSimulator Condition="'$(TargetArchitecture)' == 'x64' or '$(TargetArchitecture)' == 'x86'">iPhone 11</IosSimulator>
       <Optimized Condition="'$(Configuration)' == 'Release'">True</Optimized>
     </PropertyGroup>
