@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk" DefaultTargets="BuildApp">
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <TargetArchitecture>x64</TargetArchitecture>
     <RuntimeIdentifier>android-$(TargetArchitecture)</RuntimeIdentifier>
     <OutputType>Exe</OutputType>
