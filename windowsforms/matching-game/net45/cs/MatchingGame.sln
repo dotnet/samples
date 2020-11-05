@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28315.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatchingGame", "MatchingGame\MatchingGame.csproj", "{33E7C299-4ABD-4224-9335-3BC70512A1B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatchingGame.Logic", "MatchingGame.Logic\MatchingGame.Logic.csproj", "{36B3E6E2-A9AE-4924-89AE-7F0120CE08BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{33E7C299-4ABD-4224-9335-3BC70512A1B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33E7C299-4ABD-4224-9335-3BC70512A1B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33E7C299-4ABD-4224-9335-3BC70512A1B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33E7C299-4ABD-4224-9335-3BC70512A1B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36B3E6E2-A9AE-4924-89AE-7F0120CE08BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36B3E6E2-A9AE-4924-89AE-7F0120CE08BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36B3E6E2-A9AE-4924-89AE-7F0120CE08BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36B3E6E2-A9AE-4924-89AE-7F0120CE08BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {05ADB75A-BD25-4A85-A755-12F03E55B8B4}
+	EndGlobalSection
+EndGlobal

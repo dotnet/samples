@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("MatchingGame")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft Corp.")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("MatchingGame")]
-[assembly: AssemblyCopyright("Copyright © Microsoft Corp. 2014")]
+[assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("5cc1f991-0c7e-477b-8c57-2a555c206a12")]
+[assembly: Guid("33e7c299-4abd-4224-9335-3bc70512a1b3")]
 
 // Version information for an assembly consists of the following four values:
 //
