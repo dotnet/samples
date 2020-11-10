@@ -1,0 +1,12 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Parallel Asynchronous Example" Height="400" Width="600" MinHeight="300" MinWidth="500">
+    <Grid>
+        <Button x:Name="_startButton" Content="Start" HorizontalAlignment="Center"
+                Margin="0,10,0,0" VerticalAlignment="Top" Width="75" Height="24" Click="OnStartButtonClick" />
+        <TextBox x:Name="_resultsTextBox" TextWrapping="Wrap"
+                 FontFamily="Consolas" VerticalScrollBarVisibility="Visible"
+                 Margin="0,45,0,0" />
+    </Grid>
+</Window>

@@ -1,0 +1,23 @@
+<Project>
+  <PropertyGroup>
+    <ContractOutputDirectory>$(MSBuildThisFileDirectory)bin\$(Configuration)</ContractOutputDirectory>
+    <TypeLibraryName>Server.Contract.tlb</TypeLibraryName>
+    <TypeLibraryPath>$(ContractOutputDirectory)\$(TypeLibraryName)</TypeLibraryPath>
+    <TypeLibraryCompiledResourcePath>$(ContractOutputDirectory)\Server.TypeLib.res</TypeLibraryCompiledResourcePath>
+  </PropertyGroup>
+
+  <!-- Embed the type library as a resource -->
+  <PropertyGroup Condition="'$(EmbedTypeLibrary)' == 'true'">
+    <DefineConstants>$(DefineConstants);EMBEDDED_TYPE_LIBRARY</DefineConstants>
+    <Win32Resource>$(TypeLibraryCompiledResourcePath)</Win32Resource>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(MSBuildProjectExtension)' == '.csproj'">
+    <!-- Used in lieu of a Primary Interop Assembly (PIA) -->
+    <Compile Include="../Contract/*.cs" />
+    <Content Include="$(TypeLibraryPath)" Condition="'$(EmbedTypeLibrary)' != 'true'">
+      <Visible>false</Visible>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

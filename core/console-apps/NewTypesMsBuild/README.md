@@ -14,7 +14,7 @@ To build and run the sample, change to the *src/NewTypes* directory and execute 
 dotnet run
 ```
 
-`dotnet restore` ([see note](#dotnet-restore-note)) restores the dependencies of the sample. `dotnet run` builds the sample and runs the output executable. It implicitly runs `dotnet restore` to restore the dependencies of the sample. If you're using .NET Core 1.0 or .NET Core 1.1 instead of .NET Core 2.0 or a later version, you have to run `dotnet restore` yourself.
+`dotnet run` builds the sample and runs the output executable. It implicitly runs `dotnet restore` ([see note](#dotnet-restore-note)) to restore the dependencies of the sample. If you're using .NET Core 1.0 or .NET Core 1.1 instead of .NET Core 2.0 or a later version, you have to run `dotnet restore` yourself.
 
 To run the tests, change to the *test/NewTypesTests* directory and execute the following two commands:
 

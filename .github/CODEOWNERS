@@ -18,10 +18,10 @@
 /csharp/**  @BillWagner
 
 # ML.NET samples:
-/machine-learning/**  @natke
+/machine-learning/**  @luisquintanilla
 
 # WPF folders:
-/wpf/**   @thraka
+/wpf/**   @adegeo
 
 # Windows forms areas:
-/windowsforms/** @thraka
+/windowsforms/** @adegeo @dotnet/dotnet-winforms
