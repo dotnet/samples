@@ -4,6 +4,10 @@
     <TargetArchitecture>x64</TargetArchitecture>
     <RuntimeIdentifier>android-$(TargetArchitecture)</RuntimeIdentifier>
     <OutputType>Exe</OutputType>
+    <PublishTrimmed>True</PublishTrimmed>
+    <TrimMode>link</TrimMode>
+    <Configuration>Release</Configuration>
+    <OutputPath>$(ProjectDir)$(PublishDir)</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -24,17 +28,16 @@
       <NativeLibFiles Include="$(MSBuildThisFileDirectory)monodroid/libnative-lib.so" />
     </ItemGroup>
 
-    <Copy SourceFiles="@(NativeLibFiles)" DestinationFolder="$(ProjectDir)$(PublishDir)" />
+    <Copy SourceFiles="@(NativeLibFiles)" DestinationFolder="$(OutputPath)" />
 
     <RemoveDir Directories="$(MSBuildThisFileDirectory)monodroid" />
   </Target>
 
   <UsingTask TaskName="AndroidAppBuilderTask"
-             AssemblyFile="$(PkgMicrosoft_NET_Runtime_Android_Sample_Mono)\tools\net6.0\AndroidAppBuilder.dll"/>
+             AssemblyFile="$(PkgMicrosoft_NET_Runtime_Android_Sample_Mono)\tools\net6.0\AndroidAppBuilder.dll" />
 
   <Target Name="BuildApp" AfterTargets="Publish">
     <PropertyGroup>
-      <OutputPath>$(ProjectDir)$(PublishDir)</OutputPath>
       <ApkDir>$(OutputPath)apk\</ApkDir>
       <AdbTool>$(ANDROID_SDK_ROOT)\platform-tools\adb</AdbTool>
     </PropertyGroup>
@@ -59,8 +62,8 @@
       <Output TaskParameter="ApkPackageId" PropertyName="ApkPackageId" />
     </AndroidAppBuilderTask>
 
-    <Exec Command="$(AdbTool) kill-server"/>
-    <Exec Command="$(AdbTool) start-server"/>
+    <Exec Command="$(AdbTool) kill-server" />
+    <Exec Command="$(AdbTool) start-server" />
     <Exec Command="$(AdbTool) logcat -c" ContinueOnError="WarnAndContinue" />
     <Exec Command="$(AdbTool) install $(ApkDir)/bin/HelloAndroid.apk" />
     <Exec Command="$(AdbTool) shell am start -n net.dot.HelloAndroid/net.dot.MainActivity" />
