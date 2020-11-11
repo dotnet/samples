@@ -6,7 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 
-public static class Program
+public static class iOSSampleApp
 {
     // Defined in main.m
     [DllImport("__Internal")]
