@@ -207,8 +207,14 @@ _dependentPackages/
 
 # Ionide
 .ionide/
+**/.inoide
 
 # Fake
 .fake/
+
+# Machine Learning Tutorial models
+machine-learning/tutorials/**/model.zip
+machine-learning/tutorials/**/IrisClusteringModel.zip
+machine-learning/tutorials/**/MovieRecommenderModel.zip
 
 /azure/sdk-identity-resources-storage/Properties/launchSettings.json
