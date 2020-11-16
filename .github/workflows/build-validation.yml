@@ -75,20 +75,3 @@ jobs:
     - name: Report status
       run: |
         ./.github/workflows/dependencies/Out-GithubActionStatus.ps1
-
-  build-mono:
-    runs-on: macos-latest
-    steps:
-    - uses: actions/checkout@a81bbbf8298c0fa03ea29cdc473d45769f953675 #@v2
-    - name: Setup .NET SDK 6
-      if: ${{ env.DOTNET_DO_INSTALL == 'true' }}
-      run: |
-        echo "Downloading dotnet-install.sh"
-        curl https://raw.githubusercontent.com/dotnet/install-scripts/master/src/dotnet-install.sh --output dotnet-install.sh
-        echo "Installing dotnet version ${{ env.DOTNET_INSTALLER_CHANNEL }}"
-        chmod +x ./dotnet-install.sh
-        ./dotnet-install.sh -InstallDir ~/.dotnet -Version 6.0.100-alpha.1.20531.2
-    - name: Publish mono iOS sample
-      run: |
-        cd ./core/mono-samples/iOS
-        dotnet publish /p:RunOnCI=True
