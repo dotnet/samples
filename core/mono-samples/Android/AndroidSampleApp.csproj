@@ -61,7 +61,9 @@
       <Output TaskParameter="ApkBundlePath" PropertyName="ApkBundlePath" />
       <Output TaskParameter="ApkPackageId" PropertyName="ApkPackageId" />
     </AndroidAppBuilderTask>
+  </Target>
 
+  <Target Name="LaunchApp" AfterTargets="BuildApp" Condition="'$(RunOnCI)' == ''">
     <Exec Command="$(AdbTool) kill-server" />
     <Exec Command="$(AdbTool) start-server" />
     <Exec Command="$(AdbTool) logcat -c" ContinueOnError="WarnAndContinue" />
