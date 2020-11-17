@@ -35,4 +35,4 @@ jobs:
     - name: Publish mono iOS sample
       run: |
         cd ./core/mono-samples/iOS
-        dotnet publish /p:RunOnCI=True
+        dotnet publish /p:RunningOnCI=True
