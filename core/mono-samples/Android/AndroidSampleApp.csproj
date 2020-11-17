@@ -63,7 +63,7 @@
     </AndroidAppBuilderTask>
   </Target>
 
-  <Target Name="LaunchApp" AfterTargets="BuildApp" Condition="'$(RunOnCI)' == ''">
+  <Target Name="LaunchApp" AfterTargets="BuildApp" Condition="'$(RunningOnCI)' == ''">
     <Exec Command="$(AdbTool) kill-server" />
     <Exec Command="$(AdbTool) start-server" />
     <Exec Command="$(AdbTool) logcat -c" ContinueOnError="WarnAndContinue" />
