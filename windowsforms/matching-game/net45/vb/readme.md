@@ -1,17 +1,17 @@
 ---
 languages:
-- csharp
+- vb
 products:
 - dotnet-framework
 - windows-forms
 page_type: sample
-name: "Matching Game Sample (.NET Framework C#)"
-urlFragment: "matching-game-net45-csharp"
+name: "Matching Game Sample (.NET Framework Visual Basic)"
+urlFragment: "matching-game-net45-vb"
 description: "A simple matching game "
 ---
 # Matching game
 
-This sample demonstrates a simple memory game where you try to match tiles in the fewest amount of moves possible. This sample was used as the basis of a migration tutorial, so a [.NET 5 version of the sample](https://github.com/dotnet/samples/tree/master/windowsforms/matching-game/net5-windows/cs) is available.
+This sample demonstrates a simple memory game where you try to match tiles in the fewest amount of moves possible. This sample was used as the basis of a migration tutorial, so a [.NET 5 version of the sample](https://github.com/dotnet/samples/tree/master/windowsforms/matching-game/net5-windows/vb) is available.
 
 ## Prerequisites
 
