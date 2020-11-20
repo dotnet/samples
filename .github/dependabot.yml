@@ -26,6 +26,9 @@ updates:
       interval: "weekly"
       day: "wednesday"
     open-pull-requests-limit: 5
+    ignore:
+     - dependency-name: "Microsoft.AspNetCore.Mvc.NewtonsoftJson"
+       versions: ["5.*"]
   - package-ecosystem: "nuget"
     directory: "/core/mono-samples/iOS" #iOSSampleApp.csproj
     schedule:
