@@ -11,16 +11,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MatchingGame.Logic\MatchingGame.Logic.csproj">
-      <Project>{36b3e6e2-a9ae-4924-89ae-7f0120ce08bd}</Project>
-      <Name>MatchingGame.Logic</Name>
-    </ProjectReference>
+    <ProjectReference Include="..\MatchingGame.Logic\MatchingGame.Logic.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MetroFramework">
       <Version>1.2.0.3</Version>
     </PackageReference>
-    <PackageReference Include="Microsoft.Windows.Compatibility" Version="5.0.0-rc.2.20475.5" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="5.0.0" />
   </ItemGroup>
   
   <ItemGroup>

@@ -7,6 +7,7 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <RootNamespace>MatchingGame.Logic</RootNamespace>
     <AssemblyName>MatchingGame.Logic</AssemblyName>
+    <MyType>WindowsForms</MyType>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -43,17 +44,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="My Project\Application.myapp">
-      <Generator>MyApplicationCodeGenerator</Generator>
-      <LastGenOutput>Application.Designer.vb</LastGenOutput>
-    </None>
-    <PackageReference Include="Microsoft.Windows.Compatibility" Version="5.0.0" />
-    <Compile Update="My Project\Application.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Application.myapp</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
   </ItemGroup>
-  
 
 </Project>
