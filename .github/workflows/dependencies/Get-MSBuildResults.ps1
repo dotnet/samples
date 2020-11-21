@@ -129,11 +129,16 @@ foreach ($item in $workingSet) {
                 
         $data = $item.Split('|')
 
+        if ($data[1].Contains("mono-samples")){
+            Write-Host "Found mono-sample project, Skipping."
+            $counter++
+            Continue
+        }
         # Project found, build it
-        if ([int]$data[0] -eq 0) {
+        elseif ([int]$data[0] -eq 0) {
             $projectFile = Resolve-Path "$RepoRootDir\$($data[2])"
             $configFile = [System.IO.Path]::Combine([System.IO.Path]::GetDirectoryName($projectFile), "snippets.5000.json")
-            
+
             # Create the default build command
             "dotnet build `"$projectFile`"" | Out-File ".\run.bat"
 

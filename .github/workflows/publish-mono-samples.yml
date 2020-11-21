@@ -1,0 +1,38 @@
+name: Publish Mono Samples
+
+on:
+  pull_request:
+    paths:
+      - "core/mono-samples/**.c"
+      - "core/mono-samples/**.config"
+      - "core/mono-samples/**.cs"
+      - "core/mono-samples/**.csproj"
+      - "core/mono-samples/**.html"
+      - "core/mono-samples/**.java"
+      - "core/mono-samples/**.js"
+      - "core/mono-samples/**.m"
+      - "core/mono-samples/**.py"
+      - "core/mono-samples/**.txt"
+    branches: [ master ]
+
+env:
+  DOTNET_INSTALLER_CHANNEL: '6.0.100-alpha.1.20531.2'
+  DOTNET_DO_INSTALL: 'true'
+
+jobs:
+  build-mono:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@a81bbbf8298c0fa03ea29cdc473d45769f953675 #@v2
+    - name: Setup .NET SDK 6
+      if: ${{ env.DOTNET_DO_INSTALL == 'true' }}
+      run: |
+        echo "Downloading dotnet-install.sh"
+        curl https://raw.githubusercontent.com/dotnet/install-scripts/master/src/dotnet-install.sh --output dotnet-install.sh
+        echo "Installing dotnet version ${{ env.DOTNET_INSTALLER_CHANNEL }}"
+        chmod +x ./dotnet-install.sh
+        ./dotnet-install.sh -InstallDir ~/.dotnet -Version ${{ env.DOTNET_INSTALLER_CHANNEL }}
+    - name: Publish mono iOS sample
+      run: |
+        cd ./core/mono-samples/iOS
+        dotnet publish /p:RunningOnCI=True
