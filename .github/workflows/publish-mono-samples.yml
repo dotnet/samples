@@ -36,7 +36,10 @@ jobs:
       run: |
         cd ./core/mono-samples/iOS
         dotnet publish /p:RunningOnCI=True
-    - name: Publish mono Android sample
+    - name: Publish mono wasm sample
+      run: |
+        cd ./core/mono-samples/wasm
+        dotnet publish /p:RunningOnCI=True    - name: Publish mono Android sample
       run: |
         cd ./core/mono-samples/Android
         export ANDROID_SDK_ROOT=${HOME}/Library/Android/sdk
