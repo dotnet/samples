@@ -20,9 +20,9 @@ In this sample, the mono runtime is used to invoke javascript unmanaged code (in
 
 This sample will only run on macOS.
 
-- Python 2 or 3
 - Working browser
 - .NET sdk 6.0.100-alpha.1.20531.2 (Installation instructions in parent directory).
+- dotnet-serve (<https://github.com/natemcmaster/dotnet-serve>)
 
 To install a specific version of the dotnet sdk, download the latest stable version of the dotnet-install script:
 
@@ -43,4 +43,4 @@ Install version .NET version **6.0.100-alpha.1.20531.2**:
 
 ## Building the sample
 
-The source code includes an MSBuild project file for C# (a _.csproj_ file) that targets .NET 6.0. After downloading the _.zip_ file, publish the sample by opening the command line, navigating to the downloaded folder, and run `dotnet publish`. To run the sample, navigate to the publish directory `<sample_folder>/bin/<configuration>/<TargetFramework>/browser-wasm/publish/` (e.g. `<sample_folder>/bin/Release/net6.0/browser-wasmpublish`), run `python server.py`, and open `<http://localhost:8000/>` on your browser.
+The source code includes an MSBuild project file for C# (a _.csproj_ file) that targets .NET 6.0. After downloading the _.zip_ file, run the sample by opening the command line, navigating to the downloaded folder, and run `dotnet publish`.
