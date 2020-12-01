@@ -34,6 +34,14 @@ namespace DotNetLib
             PrintLibArgs(libArgs);
         }
 
+#if NET5_0
+        [UnmanagedCallersOnly]
+        public static void CustomEntryPointUnmanaged(LibArgs libArgs)
+        {
+            CustomEntryPoint(libArgs);
+        }
+#endif
+
         private static void PrintLibArgs(LibArgs libArgs)
         {
             string message = RuntimeInformation.IsOSPlatform(OSPlatform.Windows)
