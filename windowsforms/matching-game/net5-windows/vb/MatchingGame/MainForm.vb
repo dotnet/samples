@@ -29,7 +29,7 @@ Public Class MainForm
         Next
     End Sub
 
-    Private Sub label_Click(sender As Object, e As EventArgs) Handles label16.Click, label15.Click, label9.Click, label8.Click, label7.Click, label6.Click, label5.Click, label4.Click, label3.Click, label2.Click, label14.Click, label13.Click, label12.Click, label11.Click, label10.Click, label1.Click
+    Private Sub label_Click(sender As Object, e As EventArgs) Handles label1.Click, label2.Click, label3.Click, label4.Click, label5.Click, label6.Click, label7.Click, label8.Click, label9.Click, label10.Click, label11.Click, label12.Click, label13.Click, label14.Click, label15.Click, label16.Click
         If closeCardTimer.Enabled Then Return
 
         If TypeOf sender Is Label Then
