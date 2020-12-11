@@ -59,7 +59,7 @@ Public NotInheritable Class Game
 
     Public Function OpenCard(w As Integer, h As Integer) As Integer
         If _turnCards.Count > 1 Then
-            Throw New InvalidOperationException("Cannot open more than two cards")
+            Throw New InvalidOperationException("Cannot open more than two cards.")
         End If
 
         Dim cardIndex = GetIndex(w, h)
