@@ -87,8 +87,8 @@ namespace MatchingGame.Logic
 
         public bool IsOpen(int w, int h)
         {
-            var v = GetIndex(w, h);
-            return _openCards[v];
+            var cardIndex = GetIndex(w, h);
+            return _openCards[cardIndex];
         }
 
         public bool CompleteTurn()

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30704.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MatchingGame", "MatchingGame\MatchingGame.vbproj", "{54B5099F-7AA8-499E-9C82-60DD644F2E43}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MatchingGame.Logic", "MatchingGame.Logic\MatchingGame.Logic.vbproj", "{BB5B085E-E5A6-4B0C-AF3A-7872CEB1CD61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54B5099F-7AA8-499E-9C82-60DD644F2E43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54B5099F-7AA8-499E-9C82-60DD644F2E43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54B5099F-7AA8-499E-9C82-60DD644F2E43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54B5099F-7AA8-499E-9C82-60DD644F2E43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB5B085E-E5A6-4B0C-AF3A-7872CEB1CD61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB5B085E-E5A6-4B0C-AF3A-7872CEB1CD61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB5B085E-E5A6-4B0C-AF3A-7872CEB1CD61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB5B085E-E5A6-4B0C-AF3A-7872CEB1CD61}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B2A1ECC6-E3E4-4502-AE90-B1D520BD5399}
+	EndGlobalSection
+EndGlobal

@@ -5,7 +5,7 @@ products:
 - dotnet-framework
 - windows-forms
 page_type: sample
-name: "Matching Game Sample (.NET Framework)"
+name: "Matching Game Sample (.NET Framework C#)"
 urlFragment: "matching-game-net45-csharp"
 description: "A simple matching game "
 ---
