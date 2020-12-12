@@ -12,7 +12,7 @@ description: ".NET 5.0 Windows Forms application that demonstrates how to use Ta
 
 # Task Dialog Demo
 
-This sample is a .NET 5.0 Windows Forms application that demonstrates how to use [`Task Dialog`](https://docs.microsoft.com/en-us/windows/win32/controls/task-dialogs-overview).
+This sample is a .NET 5.0 Windows Forms application that demonstrates how to use [`Task Dialog`](https://docs.microsoft.com/dotnet/api/system.windows.forms.taskdialog).
 
 ![Screenshot](../images/screenshot.jpg)
 
