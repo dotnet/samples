@@ -2,17 +2,17 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using MetroFramework.Forms;
 
 namespace MatchingGame
 {
-    public partial class MainForm : Form
+    public partial class MainForm : MetroForm
     {
         private Game _game;
 
         public MainForm()
         {
             InitializeComponent();
-            StartNewGame();
         }
 
         private void StartNewGame()
@@ -72,13 +72,6 @@ namespace MatchingGame
             }
         }
 
-        private void closeCardTimer_Tick(object sender, EventArgs e)
-        {
-            closeCardTimer.Stop();
-            _game.CloseCards();
-            UpdateCards();
-        }
-
         private void CheckForWinner()
         {
             if (!_game.IsComplete())
@@ -97,6 +90,18 @@ namespace MatchingGame
                 text = $"You set a new best with only {currentScore} turns!";
 
             MessageBox.Show(text, "Congratulations!");
+            StartNewGame();
+        }
+
+        private void closeCardTimer_Tick(object sender, EventArgs e)
+        {
+            closeCardTimer.Stop();
+            _game.CloseCards();
+            UpdateCards();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
             StartNewGame();
         }
     }
