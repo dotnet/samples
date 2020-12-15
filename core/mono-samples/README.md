@@ -4,19 +4,19 @@ This folder contains sample code demonstrating how to build mobile (iOS, Android
 
 ## Prerequisites
 
-.NET SDK version 6.0.100-alpha.1.20531.2 is needed to run these samples. To install a specific version of the dotnet sdk, download the latest stable version of the dotnet-install script:
+.NET SDK version 6.0.100-alpha.1.20567.4 is needed to run these samples. To install a specific version of the dotnet sdk, download the latest stable version of the dotnet-install script:
 
 - Bash (Linux/macOS): <https://dot.net/v1/dotnet-install.sh>
 - PowerShell (Windows): <https://dot.net/v1/dotnet-install.ps1>
 
-Install version .NET version **6.0.100-alpha.1.20531.2**:
+Install version .NET version **6.0.100-alpha.1.20567.4**:
 
 ```bash
-./dotnet-install.sh --version 6.0.100-alpha.1.20531.2
+./dotnet-install.sh --version 6.0.100-alpha.1.20567.4
 ```
 
 ```powershell
-./dotnet-install.ps1 -Version 6.0.100-alpha.1.20531.2
+./dotnet-install.ps1 -Version 6.0.100-alpha.1.20567.4
 ```
 
 For more information, see [dotnet-install script reference](https://docs.microsoft.com/dotnet/core/tools/dotnet-install-script)
