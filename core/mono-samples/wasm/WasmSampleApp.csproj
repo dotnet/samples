@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <UsingTask TaskName="WasmAppBuilder"
-             AssemblyFile="$(PkgMicrosoft_NET_Runtime_wasm_Sample_Mono)\tools\$(TargetFramework)\WasmAppBuilder.dll"/>
+             AssemblyFile="$(PkgMicrosoft_NET_Runtime_wasm_Sample_Mono)\tools\net5.0\WasmAppBuilder.dll"/>
 
   <Target Name="BuildApp" AfterTargets="Publish">
     <ItemGroup>
@@ -31,6 +31,6 @@
   </Target>
 
   <Target Name="LaunchApp" AfterTargets="BuildApp" Condition="'$(RunningOnCI)' == ''">
-    <Exec Command="dotnet serve -o -d $(PublishDir)" />
+    <Exec Command="dotnet serve -o --directory $(PublishDir)" />
   </Target>
 </Project>
