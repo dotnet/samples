@@ -36,7 +36,7 @@ Install version .NET version **6.0.100-alpha.1.20623.5**:
 
 ## Building the sample
 
-The source code includes an MSBuild project file for C# (a _.csproj_ file) that targets .NET 6.0. After downloading the _.zip_ file, run the sample by opening the command line, navigating to the downloaded folder, and run `dotnet publish`. 
+The source code includes an MSBuild project file for C# (a _.csproj_ file) that targets .NET 6.0. After downloading the _.zip_ file, run the sample by opening the command line, navigating to the downloaded folder, and run `dotnet publish`.
 
 > [!NOTE]
 > Before running `dotnet publish`s in succession, remove both the `bin/` and `obj/` folders. Otherwise, `System.IO.IOException: The process cannot access the file ... because it is being used by another process.` may result.
