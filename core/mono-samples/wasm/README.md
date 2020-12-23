@@ -21,26 +21,22 @@ In this sample, the mono runtime is used to invoke javascript unmanaged code (in
 This sample will only run on macOS.
 
 - Working browser
-- .NET sdk 6.0.100-alpha.1.20531.2 (Installation instructions in parent directory).
+- .NET sdk 6.0.100-alpha.1.20623.5.
 - dotnet-serve (<https://github.com/natemcmaster/dotnet-serve>)
 
 To install a specific version of the dotnet sdk, download the latest stable version of the dotnet-install script:
 
-- Bash (Linux/macOS): <https://dot.net/v1/dotnet-install.sh>
-- PowerShell (Windows): <https://dot.net/v1/dotnet-install.ps1>
+- Bash: <https://dot.net/v1/dotnet-install.sh>
 
-Install version .NET version **6.0.100-alpha.1.20531.2**:
+Install version .NET version **6.0.100-alpha.1.20623.5**:
 
 ```bash
-./dotnet-install.sh --version 6.0.100-alpha.1.20531.2
+./dotnet-install.sh --version 6.0.100-alpha.1.20623.5
 ```
-
-```powershell
-./dotnet-install.ps1 -Version 6.0.100-alpha.1.20531.2
-```
-
-> [!NOTE]
 
 ## Building the sample
 
-The source code includes an MSBuild project file for C# (a _.csproj_ file) that targets .NET 6.0. After downloading the _.zip_ file, run the sample by opening the command line, navigating to the downloaded folder, and run `dotnet publish`.
+The source code includes an MSBuild project file for C# (a _.csproj_ file) that targets .NET 6.0. After downloading the _.zip_ file, run the sample by opening the command line, navigating to the downloaded folder, and run `dotnet publish`. 
+
+> [!NOTE]
+> Before running `dotnet publish`s in succession, remove both the `bin/` and `obj/` folders. Otherwise, `System.IO.IOException: The process cannot access the file ... because it is being used by another process.` may result.

@@ -22,21 +22,16 @@ This sample will only run on macOS as it requires Xcode and an iOS simulator.
 
 - Xcode: Any version should work with this sample (download Xcode at <https://developer.apple.com/xcode/>).
 - iOS simulator 8.0 or greater.
-- .NET sdk 6.0.100-alpha.1.20623.5 (Installation instructions in parent directory).
+- .NET sdk 6.0.100-alpha.1.20623.5.
 
 To install a specific version of the dotnet sdk, download the latest stable version of the dotnet-install script:
 
-- Bash (Linux/macOS): <https://dot.net/v1/dotnet-install.sh>
-- PowerShell (Windows): <https://dot.net/v1/dotnet-install.ps1>
+- Bash: <https://dot.net/v1/dotnet-install.sh>
 
 Install version .NET version **6.0.100-alpha.1.20623.5**:
 
 ```bash
 ./dotnet-install.sh --version 6.0.100-alpha.1.20623.5
-```
-
-```powershell
-./dotnet-install.ps1 -Version 6.0.100-alpha.1.20623.5
 ```
 
 > [!NOTE]
