@@ -21,17 +21,17 @@ In this sample, the mono runtime is used to invoke javascript unmanaged code (in
 This sample will only run on macOS.
 
 - Working browser
-- .NET sdk 6.0.100-alpha.1.20623.5.
+- .NET sdk 6.0.100-alpha.1.20628.2.
 - dotnet-serve (<https://github.com/natemcmaster/dotnet-serve>)
 
 To install a specific version of the dotnet sdk, download the latest stable version of the dotnet-install script:
 
 - Bash: <https://dot.net/v1/dotnet-install.sh>
 
-Install version .NET version **6.0.100-alpha.1.20623.5**:
+Install version .NET version **6.0.100-alpha.1.20628.2**:
 
 ```bash
-./dotnet-install.sh --version 6.0.100-alpha.1.20623.5
+./dotnet-install.sh --version 6.0.100-alpha.1.20628.2
 ```
 
 ## Building the sample

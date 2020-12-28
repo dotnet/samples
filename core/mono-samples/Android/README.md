@@ -22,16 +22,16 @@ When running an activity in a non-UI thread, `FindClass` in `native-lib.c` will 
 
 - ANDROID_NDK & ANDROID_SDK (<https://github.com/dotnet/runtime/blob/master/docs/workflow/testing/libraries/testing-android.md> right under `Testing Libraries on Android`).
 - Android simulator API 21 or greater.
-- Dotnet sdk 6.0.100-alpha.1.20623.5.
+- Dotnet sdk 6.0.100-alpha.1.20628.2.
 
 To install a specific version of the dotnet sdk, download the latest stable version of the dotnet-install script:
 
 - Bash: <https://dot.net/v1/dotnet-install.sh>
 
-Install version .NET version **6.0.100-alpha.1.20623.5**:
+Install version .NET version **6.0.100-alpha.1.20628.2**:
 
 ```bash
-./dotnet-install.sh --version 6.0.100-alpha.1.20623.5
+./dotnet-install.sh --version 6.0.100-alpha.1.20628.2
 ```
 
 ## Building the sample

@@ -22,16 +22,16 @@ This sample will only run on macOS as it requires Xcode and an iOS simulator.
 
 - Xcode: Any version should work with this sample (download Xcode at <https://developer.apple.com/xcode/>).
 - iOS simulator 8.0 or greater.
-- .NET sdk 6.0.100-alpha.1.20623.5.
+- .NET sdk 6.0.100-alpha.1.20628.2.
 
 To install a specific version of the dotnet sdk, download the latest stable version of the dotnet-install script:
 
 - Bash: <https://dot.net/v1/dotnet-install.sh>
 
-Install version .NET version **6.0.100-alpha.1.20623.5**:
+Install version .NET version **6.0.100-alpha.1.20628.2**:
 
 ```bash
-./dotnet-install.sh --version 6.0.100-alpha.1.20623.5
+./dotnet-install.sh --version 6.0.100-alpha.1.20628.2
 ```
 
 > [!NOTE]
@@ -40,3 +40,6 @@ Install version .NET version **6.0.100-alpha.1.20623.5**:
 ## Building the sample
 
 The source code includes an MSBuild project file for C# (a _.csproj_ file) that targets .NET 6.0. After downloading the _.zip_ file, be sure to have the iOS simulator open and modify `iPhone 11` in `iOSSampleApp.csproj` to the simulator's name. To run the sample, open the command line, navigate to the downloaded folder, and run `dotnet publish`.
+
+> [!NOTE]
+> The on screen keyboard for the device can be minimized by enabling `Connect Hardware Keyboard` under `Keyboard` in the `I/O` section of the simulator's toolbar and toggling `Toggle Software Keyboard` in that same location.

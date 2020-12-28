@@ -16,7 +16,7 @@ on:
     branches: [ master ]
 
 env:
-  DOTNET_INSTALLER_CHANNEL: '6.0.100-alpha.1.20623.5'
+  DOTNET_INSTALLER_CHANNEL: '6.0.100-alpha.1.20628.2'
   DOTNET_DO_INSTALL: 'true'
 
 jobs:
