@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk" DefaultTargets="BuildApp">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RuntimeIdentifier>browser-wasm</RuntimeIdentifier>
+    <OutputType>Exe</OutputType>
+    <PublishTrimmed>True</PublishTrimmed>
+    <TrimMode>CopyUsed</TrimMode>
+    <Configuration>Release</Configuration>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Runtime.wasm.Sample.Mono" Version="$(BundledNETCoreAppPackageVersion)" GeneratePathProperty="true" />
+  </ItemGroup>
+
+  <UsingTask TaskName="WasmAppBuilder"
+             AssemblyFile="$(PkgMicrosoft_NET_Runtime_wasm_Sample_Mono)\tools\net5.0\WasmAppBuilder.dll"/>
+
+  <Target Name="BuildApp" AfterTargets="Publish">
+    <ItemGroup>
+      <wasmAssemblies Include="$(PublishDir)\**\*.dll" />
+    </ItemGroup>
+
+    <Message Importance="High" Text="@(wasmAssemblies)" />
+    <WasmAppBuilder
+      AppDir="$(PublishDir)"
+      Assemblies="@(wasmAssemblies)"
+      MicrosoftNetCoreAppRuntimePackDir="%(ResolvedRuntimePack.PackageDirectory)\runtimes\$(RuntimeIdentifier)"
+      MainAssembly="$(PublishDir)$(AssemblyName).dll"
+      MainJS="runtime.js"/>
+    <Copy SourceFiles="index.html" DestinationFolder="$(PublishDir)" />
+  </Target>
+
+  <Target Name="LaunchApp" AfterTargets="BuildApp" Condition="'$(RunningOnCI)' == ''">
+    <Exec Command="dotnet serve -o --directory $(PublishDir)" />
+  </Target>
+</Project>
