@@ -4,7 +4,7 @@
     <TargetArchitecture>x64</TargetArchitecture>
     <RuntimeIdentifier>android-$(TargetArchitecture)</RuntimeIdentifier>
     <OutputType>Exe</OutputType>
-    <PublishTrimmed>True</PublishTrimmed>
+    <PublishTrimmed>true</PublishTrimmed>
     <TrimMode>link</TrimMode>
     <Configuration>Release</Configuration>
     <OutputPath>$(MSBuildThisFileDirectory)bin/$(Configuration)/$(TargetFramework)/$(RuntimeIdentifier)/publish</OutputPath>
@@ -34,7 +34,7 @@
   </Target>
 
   <UsingTask TaskName="AndroidAppBuilderTask"
-             AssemblyFile="$(PkgMicrosoft_NET_Runtime_Android_Sample_Mono)\tools\net6.0\AndroidAppBuilder.dll" />
+             AssemblyFile="$(PkgMicrosoft_NET_Runtime_Android_Sample_Mono)\tools\net5.0\AndroidAppBuilder.dll" />
 
   <Target Name="BuildApp" AfterTargets="Publish">
     <PropertyGroup>

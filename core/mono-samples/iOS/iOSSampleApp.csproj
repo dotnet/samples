@@ -1,10 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <TargetOS>iOS</TargetOS>
     <TargetFramework>net6.0</TargetFramework>
     <TargetArchitecture>x64</TargetArchitecture>
     <RuntimeIdentifier>ios-$(TargetArchitecture)</RuntimeIdentifier>
     <OutputType>Exe</OutputType>
-    <PublishTrimmed>True</PublishTrimmed>
+    <PublishTrimmed>true</PublishTrimmed>
     <TrimMode>link</TrimMode>
     <Configuration>Release</Configuration>
   </PropertyGroup>
@@ -14,7 +15,7 @@
   </ItemGroup>
 
   <UsingTask TaskName="AppleAppBuilderTask"
-             AssemblyFile="$(PkgMicrosoft_NET_Runtime_iOS_Sample_Mono)\tools\net6.0\AppleAppBuilder.dll" />
+             AssemblyFile="$(PkgMicrosoft_NET_Runtime_iOS_Sample_Mono)\tools\net5.0\AppleAppBuilder.dll" />
 
   <Target Name="BuildAppBundle" AfterTargets="Publish">
     <PropertyGroup>
@@ -28,6 +29,7 @@
     </ItemGroup>
 
     <AppleAppBuilderTask
+      TargetOS="$(TargetOS)"
       ProjectName="HelloiOS"
       AppDir="$(AppDir)"
       MonoRuntimeHeaders="%(ResolvedRuntimePack.PackageDirectory)\runtimes\$(RuntimeIdentifier)\native\include\mono-2.0"
