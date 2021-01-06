@@ -15,8 +15,8 @@
 
   <ItemGroup>
     <None Include="assets/*/*">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>    
-    </None>      
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

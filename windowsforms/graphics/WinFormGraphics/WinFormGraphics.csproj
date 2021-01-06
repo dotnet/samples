@@ -4,11 +4,9 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
-    <RootNamespace>WinFormGraphics</RootNamespace>
-    <AssemblyName>WinFormGraphics</AssemblyName>
 
     <!-- Don't automatically generate assembly info attributes
-      found in AssemblyInfo.cs. This property is useful for 
+      found in AssemblyInfo.cs. This property is useful for
       applications ported from NetFx, which may have used
       AssemblyInfo.cs -->
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
@@ -19,7 +17,7 @@
         directory or descendant directories will be included.
         Optionally, they can be updated as demonstrated here
         so that dependent files will appear as expected in
-        Visual Studio's solution explorer. -->  
+        Visual Studio's solution explorer. -->
     <Compile Update="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>

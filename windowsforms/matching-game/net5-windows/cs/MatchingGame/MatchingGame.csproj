@@ -5,21 +5,17 @@
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-
-    <RootNamespace>MatchingGame</RootNamespace>
-    <AssemblyName>MatchingGame</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\MatchingGame.Logic\MatchingGame.Logic.csproj" />
   </ItemGroup>
+
   <ItemGroup>
-    <PackageReference Include="MetroFramework">
-      <Version>1.2.0.3</Version>
-    </PackageReference>
+    <PackageReference Include="MetroFramework" Version="1.2.0.3" />
     <PackageReference Include="Microsoft.Windows.Compatibility" Version="5.0.0" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Compile Update="Properties\Settings.Designer.cs">
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
