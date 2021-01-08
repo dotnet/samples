@@ -21,12 +21,12 @@ namespace AppWithPlugin
 
                 string[] pluginPaths = new string[]
                 {
-                    @"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll",
-                    @"JsonPlugin\bin\Debug\netcoreapp3.0\JsonPlugin.dll",
-                    @"XcopyablePlugin\bin\Debug\netcoreapp3.0\XcopyablePlugin.dll",
-                    @"OldJsonPlugin\bin\Debug\netcoreapp2.1\OldJsonPlugin.dll",
-                    @"FrenchPlugin\bin\Debug\netcoreapp2.1\FrenchPlugin.dll",
-                    @"UVPlugin\bin\Debug\netcoreapp2.1\UVPlugin.dll",
+                    @"HelloPlugin\bin\Debug\netcoreapp3.1\HelloPlugin.dll",
+                    @"JsonPlugin\bin\Debug\netcoreapp3.1\JsonPlugin.dll",
+                    @"XcopyablePlugin\bin\Debug\netcoreapp3.1\XcopyablePlugin.dll",
+                    @"OldJsonPlugin\bin\Debug\netcoreapp3.1\OldJsonPlugin.dll",
+                    @"FrenchPlugin\bin\Debug\netcoreapp3.1\FrenchPlugin.dll",
+                    @"UVPlugin\bin\Debug\netcoreapp3.1\UVPlugin.dll",
                 };
 
                 IEnumerable<ICommand> commands = pluginPaths.SelectMany(pluginPath =>
