@@ -79,7 +79,7 @@ New Point(120, 200)}
                 e.Graphics.DrawCurve(p, ps)
 
                 ' Specify a collection of points for the curve.
-                Dim ps2 As New Point() { _
+                Dim ps2 As Point() = New Point() {
 New Point(150, 250),
 New Point(190, 300),
 New Point(230, 200)}
