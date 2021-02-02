@@ -1,6 +1,6 @@
 # MSIX Windows Forms Core Application
 
-This sample shows how to use the Windows Packaging Project to package a WinForms application running on .NET Core 3.0.
+This sample shows how to use the Windows Packaging Project to package a WinForms application running on .NET Core 3.1.
 
 ## Pre-requisites
 
