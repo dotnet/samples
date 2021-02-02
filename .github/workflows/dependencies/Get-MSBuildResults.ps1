@@ -31,9 +31,9 @@
     None
 
 .NOTES
-    Version:        1.3
+    Version:        1.4
     Author:         adegeo@microsoft.com
-    Creation Date:  07/02/2020
+    Creation Date:  12/11/2020
     Purpose/Change: Add support for config file. Select distinct on project files.
 #>
 
@@ -129,11 +129,16 @@ foreach ($item in $workingSet) {
                 
         $data = $item.Split('|')
 
+        if ($data[1].Contains("mono-samples")){
+            Write-Host "Found mono-sample project, Skipping."
+            $counter++
+            Continue
+        }
         # Project found, build it
-        if ([int]$data[0] -eq 0) {
+        elseif ([int]$data[0] -eq 0) {
             $projectFile = Resolve-Path "$RepoRootDir\$($data[2])"
             $configFile = [System.IO.Path]::Combine([System.IO.Path]::GetDirectoryName($projectFile), "snippets.5000.json")
-            
+
             # Create the default build command
             "dotnet build `"$projectFile`"" | Out-File ".\run.bat"
 
@@ -148,8 +153,22 @@ foreach ($item in $workingSet) {
 
                     # Create the visual studio build command
                     "CALL `"C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\Tools\VsDevCmd.bat`"`n" +
+                    "nuget.exe restore `"$projectFile`"`n" +
                     "msbuild.exe `"$projectFile`" -restore:True" `
                     | Out-File ".\run.bat"
+                }
+                elseif ($settings.host -eq "custom") {
+                  Write-Host "- Using custom build host: $($settings.command)"
+
+                  $ExecutionContext.InvokeCommand.ExpandString($settings.command) | Out-File ".\run.bat"
+                }
+                elseif ($settings.host -eq "dotnet") {
+                  Write-Host "- Using dotnet build host"
+
+                  "dotnet build `"$projectFile`"" | Out-File ".\run.bat"
+                }
+                else {
+                  throw "snippets.5000.json file isn't valid."
                 }
             }
 

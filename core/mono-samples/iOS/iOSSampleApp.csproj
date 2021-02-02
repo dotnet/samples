@@ -1,0 +1,61 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetOS>iOS</TargetOS>
+    <TargetFramework>net6.0</TargetFramework>
+    <TargetArchitecture>x64</TargetArchitecture>
+    <RuntimeIdentifier>ios-$(TargetArchitecture)</RuntimeIdentifier>
+    <OutputType>Exe</OutputType>
+    <PublishTrimmed>true</PublishTrimmed>
+    <TrimMode>link</TrimMode>
+    <Configuration>Release</Configuration>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Runtime.iOS.Sample.Mono" Version="$(BundledNETCoreAppPackageVersion)" GeneratePathProperty="true" />
+  </ItemGroup>
+
+  <UsingTask TaskName="AppleAppBuilderTask"
+             AssemblyFile="$(PkgMicrosoft_NET_Runtime_iOS_Sample_Mono)\tools\net5.0\AppleAppBuilder.dll" />
+
+  <Target Name="BuildAppBundle" AfterTargets="Publish">
+    <PropertyGroup>
+      <AppDir>$(MSBuildThisFileDirectory)$(PublishDir)</AppDir>
+      <IosSimulator Condition="'$(TargetArchitecture)' == 'x64' or '$(TargetArchitecture)' == 'x86'">iPhone 11</IosSimulator>
+      <Optimized Condition="'$(Configuration)' == 'Release'">True</Optimized>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <BundleAssemblies Include="$(AppDir)\*.dll" />
+    </ItemGroup>
+
+    <AppleAppBuilderTask
+      TargetOS="$(TargetOS)"
+      ProjectName="HelloiOS"
+      AppDir="$(AppDir)"
+      MonoRuntimeHeaders="%(ResolvedRuntimePack.PackageDirectory)\runtimes\$(RuntimeIdentifier)\native\include\mono-2.0"
+      MainLibraryFileName="$(MSBuildThisFileName).dll"
+      Assemblies="@(BundleAssemblies)"
+      OutputDirectory="$(AppDir)\app"
+      Optimized="$(Optimized)"
+      Arch="$(TargetArchitecture)"
+      BuildAppBundle="True"
+      GenerateXcodeProject="True"
+      NativeMainSource="$(MSBuildThisFileDirectory)main.m">
+      <Output TaskParameter="AppBundlePath" PropertyName="AppBundlePath" />
+      <Output TaskParameter="XcodeProjectPath" PropertyName="XcodeProjectPath" />
+    </AppleAppBuilderTask>
+  </Target>
+
+  <Target Name="LaunchApp" AfterTargets="BuildAppBundle" Condition="'$(RunningOnCI)' == ''">
+    <Message Importance="High" Text="Xcode: $(XcodeProjectPath)" />
+    <Message Importance="High" Text="App:   $(AppBundlePath)" />
+    <Message Importance="High" Text="Restarting device" />
+    <Exec Condition="'$(IosSimulator)' != ''" Command="xcrun simctl shutdown &quot;$(IosSimulator)&quot;" ContinueOnError="WarnAndContinue" />
+    <Exec Condition="'$(IosSimulator)' != ''" Command="xcrun simctl boot &quot;$(IosSimulator)&quot;" />
+    <Exec Condition="'$(IosSimulator)' != ''" Command="open -a Simulator" />
+    <Message Importance="High" Text="Installing application" />
+    <Exec Condition="'$(IosSimulator)' != ''" Command="xcrun simctl install &quot;$(IosSimulator)&quot; $(AppBundlePath)" />
+    <Message Importance="High" Text="Launching application" />
+    <Exec Condition="'$(IosSimulator)' != ''" Command="xcrun simctl launch --console booted net.dot.HelloiOS" />
+  </Target>
+</Project>

@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+
+    <RootNamespace>MatchingGame.Logic</RootNamespace>
+    <AssemblyName>MatchingGame.Logic</AssemblyName>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,73 @@
+<Project Sdk="Microsoft.NET.Sdk" DefaultTargets="BuildApp">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <TargetArchitecture>x64</TargetArchitecture>
+    <RuntimeIdentifier>android-$(TargetArchitecture)</RuntimeIdentifier>
+    <OutputType>Exe</OutputType>
+    <PublishTrimmed>true</PublishTrimmed>
+    <TrimMode>link</TrimMode>
+    <Configuration>Release</Configuration>
+    <OutputPath>$(MSBuildThisFileDirectory)bin/$(Configuration)/$(TargetFramework)/$(RuntimeIdentifier)/publish</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Runtime.Android.Sample.Mono" Version="$(BundledNETCoreAppPackageVersion)" GeneratePathProperty="true" />
+  </ItemGroup>
+
+  <Target Name="BuildNativeLib" BeforeTargets="Publish">
+    <PropertyGroup>
+      <abi Condition="'$(TargetArchitecture)' == x64">x86_64</abi>
+      <abi Condition="'$(TargetArchitecture)' == x86">x86</abi>
+      <abi Condition="'$(TargetArchitecture)' == arm">armeabi-v7a</abi>
+      <abi Condition="'$(TargetArchitecture)' == arm64">arm64-v8a</abi>
+    </PropertyGroup>
+    <Exec Command="cmake -DCMAKE_TOOLCHAIN_FILE=$(ANDROID_NDK_ROOT)/build/cmake/android.toolchain.cmake -DANDROID_ABI=$(abi) -DANDROID_STL=none -DANDROID_NATIVE_API_LEVEL=21 -B monodroid -DCMAKE_BUILD_TYPE=MinSizeRel -DCMAKE_C_FLAGS=%22-s -Wno-unused-command-line-argument%22" />
+    <Exec Command="cmake --build monodroid --config MinSizeRel" />
+
+    <ItemGroup>
+      <NativeLibFiles Include="$(MSBuildThisFileDirectory)monodroid/libnative-lib.so" />
+    </ItemGroup>
+
+    <Copy SourceFiles="@(NativeLibFiles)" DestinationFolder="$(OutputPath)" />
+
+    <RemoveDir Directories="$(MSBuildThisFileDirectory)monodroid" />
+  </Target>
+
+  <UsingTask TaskName="AndroidAppBuilderTask"
+             AssemblyFile="$(PkgMicrosoft_NET_Runtime_Android_Sample_Mono)\tools\net5.0\AndroidAppBuilder.dll" />
+
+  <Target Name="BuildApp" AfterTargets="Publish">
+    <PropertyGroup>
+      <ApkDir>$(OutputPath)apk\</ApkDir>
+      <AdbTool>$(ANDROID_SDK_ROOT)\platform-tools\adb</AdbTool>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <AndroidRuntimePack Include="@(ResolvedRuntimePack)" Exclude="Microsoft.AspNetCore.App.Runtime.linux-$(TargetArchitecture)" />
+    </ItemGroup>
+
+    <RemoveDir Directories="$(ApkDir)" />
+
+    <AndroidAppBuilderTask
+      RuntimeIdentifier="$(RuntimeIdentifier)"
+      SourceDir="$(OutputPath)"
+      MonoRuntimeHeaders="%(AndroidRuntimePack.PackageDirectory)\runtimes\$(RuntimeIdentifier)\native\include\mono-2.0"
+      MainLibraryFileName="$(AssemblyName).dll"
+      ProjectName="HelloAndroid"
+      OutputDir="$(ApkDir)"
+      StripDebugSymbols="True"
+      KeyStorePath="$(HOME)/.android/"
+      NativeMainSource="$(MSBuildThisFileDirectory)MainActivity.java">
+      <Output TaskParameter="ApkBundlePath" PropertyName="ApkBundlePath" />
+      <Output TaskParameter="ApkPackageId" PropertyName="ApkPackageId" />
+    </AndroidAppBuilderTask>
+  </Target>
+
+  <Target Name="LaunchApp" AfterTargets="BuildApp" Condition="'$(RunningOnCI)' == ''">
+    <Exec Command="$(AdbTool) kill-server" />
+    <Exec Command="$(AdbTool) start-server" />
+    <Exec Command="$(AdbTool) logcat -c" ContinueOnError="WarnAndContinue" />
+    <Exec Command="$(AdbTool) install $(ApkDir)/bin/HelloAndroid.apk" />
+    <Exec Command="$(AdbTool) shell am start -n net.dot.HelloAndroid/net.dot.MainActivity" />
+  </Target>
+</Project>

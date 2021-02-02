@@ -6,7 +6,7 @@ With [.NET Core 3.1](https://github.com/dotnet/core-sdk#installers-and-binaries)
 
 If you're new to .NET Core, here are a few resources to help you understand the advantages of .NET Core for building Windows applications:
 
-* [Blog: .NET Core 3 and Support for Windows Desktop Applications](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/net-core-3-and-support-for-windows-desktop-applications/)
+* [Blog: .NET Core 3 and Support for Windows Desktop Applications](https://devblogs.microsoft.com/dotnet/net-core-3-and-support-for-windows-desktop-applications/)
 * [Video: Modernizing Desktop Apps on Windows 10 with .NET Core 3.0 and much more](https://channel9.msdn.com/events/Build/2018/BRK3501?term=scott%20hunter&pubDate=year&lang-en=true)
 
 ## Quality disclaimer
@@ -34,7 +34,7 @@ Install the latest [.NET Core 3.1 SDK released or daily build](https://aka.ms/ne
 
 ### Analyzing your application's for .NET Core 3.1 readiness
 
-If you want to first understand your existing applications readiness for targeting .NET Core 3.1 or later, you can run the .NET Portability Analyzer using the download link and instructions [here](https://blogs.msdn.microsoft.com/dotnet/2018/08/08/are-your-windows-forms-and-wpf-applications-ready-for-net-core-3-0/). This will produce a report that shows you API compatibility for each assembly that your application depends on.
+If you want to first understand your existing applications readiness for targeting .NET Core 3.1 or later, you can run the .NET Portability Analyzer using the download link and instructions [here](https://devblogs.microsoft.com/dotnet/are-your-windows-forms-and-wpf-applications-ready-for-net-core-3-0/). This will produce a report that shows you API compatibility for each assembly that your application depends on.
 
 ### Creating new .NET Core 3.1 or later WinForms applications
 
