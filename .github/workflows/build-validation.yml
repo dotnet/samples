@@ -16,6 +16,7 @@ on:
       - "**.csproj"
       - "**.vbproj"
       - "**.fsproj"
+      - "**.sln"
       - "**global.json"
       - "**snippets.5000.json"
     branches: [ master ]
