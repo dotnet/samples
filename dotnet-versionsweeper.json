@@ -1,0 +1,12 @@
+{
+    "ignore": [
+        "**/frameworks-library/**/*.csproj",
+        "**/migrate-library/**/*.csproj",
+        "**/migrate-library-csproj/**/*.csproj",
+        "**/migrate-library-csproj-keep-existing/**/*.csproj",
+        "**/net40-library/**/*.csproj",
+        "**/net45-compat-library/**/*.csproj",
+        "**/windowsforms/matching-game/net45/**/*.csproj",
+        "**/windowsforms/matching-game/net45/**/*.vbproj"
+    ]
+}
