@@ -16,11 +16,11 @@ Demonstrates how to consume Office Primary Interop Assemblies (PIA) with .NET Co
 Build and Run
 -------------
 
-To build and run the sample, the project must be loaded in Visual Studio 2019. Build support for `COMReference` elements is not supported in the `dotnet` tool for the Preview 1 release, but the scenario is demoable from within Visual Studio 2017.
+To build and run the sample, the project must be loaded in Visual Studio 2019. Build support for `COMReference` elements is not supported in the `dotnet` tool for the Preview 1 release, but the scenario is demoable from within Visual Studio 2019.
 
 1) Install .NET Core 3.1.
 
-1) Load `ExcelDemo.csproj` in Visual Studio 2017.
+1) Load `ExcelDemo.csproj` in Visual Studio 2019.
     - Double click on `ExcelDemo.csproj` in File Explorer.
 
     or
