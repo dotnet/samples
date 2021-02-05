@@ -83,11 +83,11 @@
     </PropertyGroup>
     <PropertyGroup Condition="$([MSBuild]::IsOsPlatform('Linux'))">
       <PreprocessorDefines>-D LINUX</PreprocessorDefines>
-      <LinkArgs>-ldl -lnethost -L&quot;$(NetHostDir)&quot; -Wl,-rpath,'$ORIGIN',--disable-new-dtags</LinkArgs>
+      <LinkArgs>-ldl -lnethost -lpthread -L&quot;$(NetHostDir)&quot; -Wl,-rpath,'$ORIGIN',--disable-new-dtags</LinkArgs>
     </PropertyGroup>
     <PropertyGroup Condition="$([MSBuild]::IsOsPlatform('OSX'))">
       <PreprocessorDefines>-D OSX</PreprocessorDefines>
-      <LinkArgs>-ldl -lnethost -L&quot;$(NetHostDir)&quot; -Wl,-rpath,'@loader_path'</LinkArgs>
+      <LinkArgs>-ldl -lnethost -lpthread -L&quot;$(NetHostDir)&quot; -Wl,-rpath,'@loader_path'</LinkArgs>
     </PropertyGroup>
 
     <Exec Command="g++ $(SourceFiles) $(IncPaths) $(PreprocessorDefines) -std=c++11 -o &quot;$(NativeOutputFilePath)&quot; $(CompilerArgs) $(LinkArgs)"
