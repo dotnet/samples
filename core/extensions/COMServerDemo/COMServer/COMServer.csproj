@@ -15,7 +15,7 @@
         In a RegFree COM scenario, the following file must also be deployed:
             COMServer.X.manifest
     -->
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
 
     <!-- Indicate the assembly is providing a COM server -->
     <EnableComHosting>True</EnableComHosting>

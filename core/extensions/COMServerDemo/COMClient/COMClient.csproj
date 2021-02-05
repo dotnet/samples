@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
 
     <!-- The application manifest is only needed for RegFree COM scenarios -->
     <ApplicationManifest Condition="'$(RegFree)' == 'True'">COMClient.manifest</ApplicationManifest>
