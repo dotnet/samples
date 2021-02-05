@@ -11,3 +11,4 @@ indent_size = 2
 # C# files
 [*.cs]
 dotnet_analyzer_diagnostic.category-Security.severity = error
+dotnet_analyzer_diagnostic.category-Naming.severity = error
