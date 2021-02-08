@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFrameworks>netcoreapp3.0;net472</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.1;net48</TargetFrameworks>
     <ApplicationManifest>app.netcoreserver.manifest</ApplicationManifest>
     <ApplicationManifest Condition="'$(NetFXServer)' == 'true'">app.netfxserver.manifest</ApplicationManifest>
   </PropertyGroup>
