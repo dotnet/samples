@@ -4,7 +4,6 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>mixins_with_interfaces</RootNamespace>
-    <EnableNETAnalyzers>true</EnableNETAnalyzers>
   </PropertyGroup>
 
 </Project>

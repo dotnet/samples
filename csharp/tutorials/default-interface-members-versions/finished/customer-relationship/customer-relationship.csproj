@@ -5,7 +5,6 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>customer_relationship</RootNamespace>
     <LangVersion>8.0</LangVersion>
-    <EnableNETAnalyzers>true</EnableNETAnalyzers>
   </PropertyGroup>
 
 </Project>

@@ -5,7 +5,6 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>csharp6_finished</RootNamespace>
     <LangVersion>6</LangVersion>
-    <EnableNETAnalyzers>true</EnableNETAnalyzers>
   </PropertyGroup>
 
 </Project>
