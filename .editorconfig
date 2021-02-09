@@ -20,7 +20,6 @@ charset = utf-8-bom
 
 # Code quality analyzers
 dotnet_analyzer_diagnostic.category-Security.severity = error
-dotnet_analyzer_diagnostic.category-Naming.severity = error
 dotnet_code_quality.ca1802.api_surface = private, internal
 
 # Miscellaneous style rules
