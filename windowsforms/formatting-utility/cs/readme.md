@@ -16,11 +16,11 @@ The .NET Formating Utility (Formatter.exe) is a .NET Core Windows Forms applicat
 
 ## Sample prerequisites
 
-This sample is written in C# and targets .NET Core 3.0 running on Windows. It requires the [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+This sample is written in C# and targets .NET Core 5.0 running on Windows. It requires the [.NET Core 5.0 SDK](https://dotnet.microsoft.com/download/dotnet-core/5.0).
 
 ## Building the sample
 
-The source code includes an MSBuild project file for C# (a .csproj file) that targets .NET Core 3.0. After you download the .zip file containing the example code, create a directory and Download the sample code files to your computer. To build the example:
+The source code includes an MSBuild project file for C# (a .csproj file) that targets .NET Core 5.0. After you download the .zip file containing the example code, create a directory and Download the sample code files to your computer. To build the example:
 
 1. Download the .zip file containing.
 
