@@ -16,11 +16,11 @@ This sample solution includes a class library that is unit tested by two xUnit t
 
 ## Sample prerequisites
 
-This sample is written in C# and targets .NET Core 3.1. It requires the [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1).
+This sample is written in C# and targets .NET 5.0. It requires the [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0).
 
 ## Building the sample
 
-The source code includes an MSBuild project file for C# (a *.csproj* file) that targets .NET Core 3.1. After you download the *.zip* file containing the example code, create a directory and select **Download ZIP** to download the sample code files to your computer. To build the example:
+The source code includes an MSBuild project file for C# (a *.csproj* file) that targets .NET 5.0. After you download the *.zip* file containing the example code, create a directory and select **Download ZIP** to download the sample code files to your computer. To build the example:
 
 1. Download the *.zip* file containing.
 1. Create the directory to which you want to copy the files.
