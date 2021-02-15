@@ -83,7 +83,7 @@ namespace Host
 #else
             string configName = "Release";
 #endif
-            string pluginFullPath = Path.Combine(currentAssemblyDirectory, $"..\\..\\..\\..\\Plugin\\bin\\{configName}\\netcoreapp3.0\\Plugin.dll");
+            string pluginFullPath = Path.Combine(currentAssemblyDirectory, $"..\\..\\..\\..\\Plugin\\bin\\{configName}\\netcoreapp3.1\\Plugin.dll");
             ExecuteAndUnload(pluginFullPath, out hostAlcWeakRef);
 
             // Poll and run GC until the AssemblyLoadContext is unloaded.
