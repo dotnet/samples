@@ -1,7 +1,7 @@
 `ComWrappers` API Demo
 ================
 
-The [`ComWrappers` API](https://github.com/dotnet/runtime/issues/1845) was introduced in .NET 5.0 Preview 4 to help users build custom COM interop scenarios.
+The [`ComWrappers` API](https://github.com/dotnet/runtime/issues/1845) was introduced in .NET 5.0 to help users build custom COM interop scenarios.
 
 Key Features
 ------------
@@ -15,7 +15,7 @@ This is already fully supported by the built-in COM interop system, but this dem
 Build and Run
 -------------
 
-1) Install .NET Core 5.0 Preview 4 or later.
+1) Install .NET Core 5.0 or later.
 
 1) Load `ComWrappersIDispatch.csproj` in Visual Studio 2019 or build from the command line.
     - Double click on `ComWrappersIDispatch.csproj` in File Explorer.
