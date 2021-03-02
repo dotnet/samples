@@ -45,7 +45,7 @@ namespace MakeConst
             }
 
             TypeSyntax variableTypeName = localDeclaration.Declaration.Type;
-            ITypeSymbol variableType = context.SemanticModel.GetTypeInfo(variableTypeName).ConvertedType;
+            ITypeSymbol variableType = context.SemanticModel.GetTypeInfo(variableTypeName, context.CancellationToken).ConvertedType;
 
             // Ensure that all variables in the local declaration have initializers that
             // are assigned with constant values.
@@ -57,7 +57,7 @@ namespace MakeConst
                     return;
                 }
 
-                Optional<object> constantValue = context.SemanticModel.GetConstantValue(initializer.Value);
+                Optional<object> constantValue = context.SemanticModel.GetConstantValue(initializer.Value, context.CancellationToken);
                 if (!constantValue.HasValue)
                 {
                     return;
@@ -96,7 +96,7 @@ namespace MakeConst
             {
                 // Retrieve the local symbol for each variable in the local declaration
                 // and ensure that it is not written outside of the data flow analysis region.
-                ISymbol variableSymbol = context.SemanticModel.GetDeclaredSymbol(variable);
+                ISymbol variableSymbol = context.SemanticModel.GetDeclaredSymbol(variable, context.CancellationToken);
                 if (dataFlowAnalysis.WrittenOutside.Contains(variableSymbol))
                 {
                     return;
