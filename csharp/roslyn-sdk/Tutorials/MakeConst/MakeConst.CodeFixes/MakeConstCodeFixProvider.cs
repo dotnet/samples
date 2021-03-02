@@ -20,10 +20,6 @@ namespace MakeConst
     [ExportCodeFixProvider(LanguageNames.CSharp, Name = nameof(MakeConstCodeFixProvider)), Shared]
     public class MakeConstCodeFixProvider : CodeFixProvider
     {
-        // <SnippetCodeFixTitle>
-        private const string title = "Make constant";
-        // </SnippetCodeFixTitle>
-
         public sealed override ImmutableArray<string> FixableDiagnosticIds
         {
             get { return ImmutableArray.Create(MakeConstAnalyzer.DiagnosticId); }
@@ -44,24 +40,21 @@ namespace MakeConst
             var diagnosticSpan = diagnostic.Location.SourceSpan;
 
             // Find the type declaration identified by the diagnostic.
-            // <SnippetFindDeclarationNode>
             var declaration = root.FindToken(diagnosticSpan.Start).Parent.AncestorsAndSelf().OfType<LocalDeclarationStatementSyntax>().First();
-            // </SnippetFindDeclarationNode>
 
-            // <SnippetRegisterCodeFix>
             // Register a code action that will invoke the fix.
             context.RegisterCodeFix(
                 CodeAction.Create(
-                    title: title,
+                    title: CodeFixResources.CodeFixTitle,
                     createChangedDocument: c => MakeConstAsync(context.Document, declaration, c),
-                    equivalenceKey: title),
+                    equivalenceKey: nameof(CodeFixResources.CodeFixTitle)),
                 diagnostic);
-            // </SnippetRegisterCodeFix>
         }
 
-        private async Task<Document> MakeConstAsync(Document document, LocalDeclarationStatementSyntax localDeclaration, CancellationToken cancellationToken)
+        private async Task<Document> MakeConstAsync(Document document,
+            LocalDeclarationStatementSyntax localDeclaration,
+            CancellationToken cancellationToken)
         {
-            // <SnippetCreateConstToken>
             // Remove the leading trivia from the local declaration.
             var firstToken = localDeclaration.GetFirstToken();
             var leadingTrivia = firstToken.LeadingTrivia;
@@ -70,12 +63,10 @@ namespace MakeConst
 
             // Create a const token with the leading trivia.
             var constToken = SyntaxFactory.Token(leadingTrivia, SyntaxKind.ConstKeyword, SyntaxFactory.TriviaList(SyntaxFactory.ElasticMarker));
-            // </SnippetCreateConstToken>
 
             // Insert the const token into the modifiers list, creating a new modifiers list.
             var newModifiers = trimmedLocal.Modifiers.Insert(0, constToken);
 
-            //<SnippetReplaceVar>
             // If the type of the declaration is 'var', create a new type name
             // for the inferred type.
             var variableDeclaration = localDeclaration.Declaration;
@@ -112,21 +103,16 @@ namespace MakeConst
             // Produce the new local declaration.
             var newLocal = trimmedLocal.WithModifiers(newModifiers)
                                        .WithDeclaration(variableDeclaration);
-            //</SnippetReplaceVar>
 
-            // <SnippetFormatLocal>
             // Add an annotation to format the new local declaration.
             var formattedLocal = newLocal.WithAdditionalAnnotations(Formatter.Annotation);
-            // </SnippetFormatLocal>
 
-            // <SnippetReplaceDocument>
             // Replace the old local declaration with the new local declaration.
             var oldRoot = await document.GetSyntaxRootAsync(cancellationToken);
             var newRoot = oldRoot.ReplaceNode(localDeclaration, formattedLocal);
 
             // Return document with transformed tree.
             return document.WithSyntaxRoot(newRoot);
-            // </SnippetReplaceDocument>
         }
     }
 }
