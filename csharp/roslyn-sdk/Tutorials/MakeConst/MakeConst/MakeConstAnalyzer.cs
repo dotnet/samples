@@ -90,13 +90,13 @@ namespace MakeConst
             }
 
             // Perform data flow analysis on the local declaration.
-            var dataFlowAnalysis = context.SemanticModel.AnalyzeDataFlow(localDeclaration);
+            DataFlowAnalysis dataFlowAnalysis = context.SemanticModel.AnalyzeDataFlow(localDeclaration);
 
             foreach (VariableDeclaratorSyntax variable in localDeclaration.Declaration.Variables)
             {
                 // Retrieve the local symbol for each variable in the local declaration
                 // and ensure that it is not written outside of the data flow analysis region.
-                var variableSymbol = context.SemanticModel.GetDeclaredSymbol(variable);
+                ISymbol variableSymbol = context.SemanticModel.GetDeclaredSymbol(variable);
                 if (dataFlowAnalysis.WrittenOutside.Contains(variableSymbol))
                 {
                     return;
