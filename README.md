@@ -1,6 +1,6 @@
 # .NET Samples
 
-![Markdownlint](https://github.com/dotnet/samples/workflows/Markdownlint/badge.svg)
+![Markdownlint](https://github.com/dotnet/samples/workflows/Markdownlint/badge.svg) [![Snippets 5000](https://github.com/dotnet/samples/actions/workflows/build-validation.yml/badge.svg)](https://github.com/dotnet/samples/actions/workflows/build-validation.yml) [![target supported version](https://github.com/dotnet/samples/actions/workflows/version-sweep.yml/badge.svg)](https://github.com/dotnet/samples/actions/workflows/version-sweep.yml)
 
 This repo contains all the sample code that is part of any topic under
 the .NET documentation. There are several different projects that
