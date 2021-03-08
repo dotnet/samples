@@ -1,0 +1,34 @@
+name: '.NET code metric analyzer'
+description: 'A Github action that maintains a CODE_METRICS.md file, reporting cylcomatic complexity, maintainability index, etc.'
+branding:
+  icon: sliders
+  color: purple
+inputs:
+  owner:
+    description: 'The owner of the repo. Assign from github.repository_owner. Example, "dotnet".'
+    required: true
+  name:
+    description: 'The repository name. Example, "samples".'
+    required: true
+  branch:
+    description: 'The branch name. Assign from github.ref. Example, "main".'
+    required: true
+  dir:
+    description: 'The root directory to work from.'
+    required: false
+    default: '/github/workspace'
+outputs:
+  summary-message:
+    description: 'A detailed summary of all the projects that were flagged.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+  - '-o'
+  - ${{ inputs.owner }}
+  - '-n'
+  - ${{ inputs.name }}
+  - '-b'
+  - ${{ inputs.branch }}
+  - '-d'
+  - ${{ inputs.dir }}
