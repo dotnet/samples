@@ -1,6 +1,6 @@
 # .NET Core Hosting Sample
 
-This project demonstrates a way for a native process to host .NET Core using the `nethost` and `hostfxr` libraries. Documentation on the `nethost` and `hostfxr` APIs can be found [here](https://github.com/dotnet/runtime/blob/master/docs/design/features/native-hosting.md).
+This project demonstrates a way for a native process to host .NET Core using the `nethost` and `hostfxr` libraries. Documentation on the `nethost` and `hostfxr` APIs can be found [here](https://github.com/dotnet/runtime/blob/main/docs/design/features/native-hosting.md).
 
 ## Key Features
 
@@ -9,7 +9,7 @@ Demonstrates how to locate and initialize .NET Core 3.0 from a non-.NET Core pro
 The `nethost` header and library are part of the `Microsoft.NETCore.DotNetAppHost` package and are also installed as a runtime pack by the .NET Core SDK. The library should be deployed alongside the host. This sample uses the files installed with the .NET Core SDK.  
 *Note: The `Microsoft.NETCore.DotNetAppHost` package is a [metapackage](https://docs.microsoft.com/dotnet/core/packages#metapackages) that doesn't actually contain the files. It only references RID-specific packages that contain the files. For example, the package with the actual files for `linux-x64` is `runtime.linux-x64.Microsoft.NETCore.DotNetAppHost`.*
 
-The `coreclr_delegates.h` and `hostfxr.h` files are copied from the [dotnet/runtime](https://github.com/dotnet/runtime) repo - [coreclr_delegates.h](https://github.com/dotnet/runtime/blob/master/src/installer/corehost/cli/coreclr_delegates.h) and [hostfxr.h](https://github.com/dotnet/runtime/blob/master/src/installer/corehost/cli/hostfxr.h).
+The `coreclr_delegates.h` and `hostfxr.h` files are copied from the [dotnet/runtime](https://github.com/dotnet/runtime) repo - [coreclr_delegates.h](https://github.com/dotnet/runtime/blob/main/src/installer/corehost/cli/coreclr_delegates.h) and [hostfxr.h](https://github.com/dotnet/runtime/blob/main/src/installer/corehost/cli/hostfxr.h).
 
 Additional comments are contained in source and project files.
 

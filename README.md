@@ -50,7 +50,7 @@ If you wish to add a code sample:
 
 1. Your sample **must be part of a buildable project**. Where possible, the projects should build on all platforms supported by .NET Core. Exceptions to this are samples that demonstrate a platform-specific feature or platform-specific tool.
 
-2. Your sample should conform to the [runtime coding style](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/coding-style.md) to maintain consistency.
+2. Your sample should conform to the [runtime coding style](https://github.com/dotnet/runtime/blob/main/docs/coding-guidelines/coding-style.md) to maintain consistency.
 
     - Additionally, we prefer the use of `static` methods rather than instance methods when demonstrating something that doesn't require instantiating a new object.
 

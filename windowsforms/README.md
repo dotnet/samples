@@ -103,7 +103,7 @@ Visual Studio does not yet support designers and custom tools for .NET Core desk
 .NET Core has its own implementation of `System.ServiceModel` with some differences:
 
 * It's available as NuGet packages (also included in the Windows Compatiblity Pack).
-* There are [unsupported features](https://github.com/dotnet/wcf/blob/master/release-notes/SupportedFeatures-v2.1.0.md) that you should review.
+* There are [unsupported features](https://github.com/dotnet/wcf/blob/main/release-notes/SupportedFeatures-v2.1.0.md) that you should review.
 * The binding and endpoint address must be specified in the service client constructor. Otherwise, if you reuse the ServiceReference created by Visual Studio, you may get the following error: `System.PlatformNotSupportedException: 'Configuration files are not supported.'`
 
 ## Filing issues and getting help
