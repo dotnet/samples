@@ -96,7 +96,7 @@ Visual Studio does not yet support designers and custom tools for .NET desktop d
 .NET Core has its own implementation of `System.ServiceModel` with some differences:
 
 * It's available as NuGet packages (also included in the Windows Compatiblity Pack)
-* Review if your application uses some of the [unsupported features](https://github.com/dotnet/wcf/blob/master/release-notes/SupportedFeatures-v2.1.0.md).
+* Review if your application uses some of the [unsupported features](https://github.com/dotnet/wcf/blob/main/release-notes/SupportedFeatures-v2.1.0.md).
 * If you want to reuse the ServiceReference created by Visual Studio you might get the error `System.PlatformNotSupportedException: 'Configuration files are not supported.'`. This error requires a code change to specify the binding and endpoint address in the service client constructor.
 
 ## Filing Issues and Getting Help

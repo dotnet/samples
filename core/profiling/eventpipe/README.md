@@ -12,7 +12,7 @@ To write EventPipe events, you first create a provider, then define events on th
 
 ## Reading events
 
-When EventPipe events are written, they are emitted according to the [file format specification](https://github.com/microsoft/perfview/blob/master/src/TraceEvent/EventPipe/EventPipeFormat.md). The spec is designed to be efficient for both streaming and writing to a file for processing at a later date.
+When EventPipe events are written, they are emitted according to the [file format specification](https://github.com/microsoft/perfview/blob/main/src/TraceEvent/EventPipe/EventPipeFormat.md). The spec is designed to be efficient for both streaming and writing to a file for processing at a later date.
 
 The EventPipe reading APIs allow you to create an in-process streaming session to receive events. You create a session by passing in the providers that you wish to receive events from, along with the keywords and level for each provider. Providers are identified by name.
 

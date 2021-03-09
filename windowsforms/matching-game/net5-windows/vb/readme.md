@@ -12,7 +12,7 @@ description: "A simple matching game "
 ---
 # Matching game
 
-This sample demonstrates a simple memory game where you try to match tiles in the fewest amount of moves possible. This sample was migrated from the [.NET Framework version](https://github.com/dotnet/samples/tree/master/windowsforms/matching-game/net45/vb).
+This sample demonstrates a simple memory game where you try to match tiles in the fewest amount of moves possible. This sample was migrated from the [.NET Framework version](https://github.com/dotnet/samples/tree/main/windowsforms/matching-game/net45/vb).
 
 ## Prerequisites
 

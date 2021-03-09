@@ -2,7 +2,7 @@
 
 This is a basic Visio demo sample in .NET Core. It is designed to work with .NET Core 3.1. It is based on the Excel Demo sample found here:
 
-- [https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo)
+- [https://github.com/dotnet/samples/tree/main/core/extensions/ExcelDemo](https://github.com/dotnet/samples/tree/main/core/extensions/ExcelDemo)
 
 ## Key Features
 

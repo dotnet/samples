@@ -20,7 +20,7 @@ When running an activity in a non-UI thread, `FindClass` in `native-lib.c` will 
 
 ## Sample Prerequisites
 
-- ANDROID_NDK & ANDROID_SDK (<https://github.com/dotnet/runtime/blob/master/docs/workflow/testing/libraries/testing-android.md> right under `Testing Libraries on Android`).
+- ANDROID_NDK & ANDROID_SDK (<https://github.com/dotnet/runtime/blob/main/docs/workflow/testing/libraries/testing-android.md> right under `Testing Libraries on Android`).
 - Android simulator API 21 or greater.
 - Dotnet sdk 6.0.100-alpha.1.20628.2.
 
