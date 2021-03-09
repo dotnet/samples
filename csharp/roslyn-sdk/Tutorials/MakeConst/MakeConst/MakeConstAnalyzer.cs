@@ -28,38 +28,36 @@ namespace MakeConst
 
         public override void Initialize(AnalysisContext context)
         {
-            // See https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Analyzer%20Actions%20Semantics.md for more information
-            // <SnippetRegisterNodeAction>
-            context.ConfigureGeneratedCodeAnalysis(GeneratedCodeAnalysisFlags.Analyze | GeneratedCodeAnalysisFlags.None);
+             // See https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Analyzer%20Actions%20Semantics.md for more information
+            context.ConfigureGeneratedCodeAnalysis(GeneratedCodeAnalysisFlags.None);
             context.EnableConcurrentExecution();
             context.RegisterSyntaxNodeAction(AnalyzeNode, SyntaxKind.LocalDeclarationStatement);
-            // </SnippetRegisterNodeAction>
         }
 
         private void AnalyzeNode(SyntaxNodeAnalysisContext context)
         {
             var localDeclaration = (LocalDeclarationStatementSyntax)context.Node;
 
-            // does not have const
+            // make sure the declaration isn't already const:
             if (localDeclaration.Modifiers.Any(SyntaxKind.ConstKeyword))
             {
                 return;
             }
 
-            var variableTypeName = localDeclaration.Declaration.Type;
-            var variableType = context.SemanticModel.GetTypeInfo(variableTypeName).ConvertedType;
+            TypeSyntax variableTypeName = localDeclaration.Declaration.Type;
+            ITypeSymbol variableType = context.SemanticModel.GetTypeInfo(variableTypeName, context.CancellationToken).ConvertedType;
 
             // Ensure that all variables in the local declaration have initializers that
             // are assigned with constant values.
-            foreach (var variable in localDeclaration.Declaration.Variables)
+            foreach (VariableDeclaratorSyntax variable in localDeclaration.Declaration.Variables)
             {
-                var initializer = variable.Initializer;
+                EqualsValueClauseSyntax initializer = variable.Initializer;
                 if (initializer == null)
                 {
                     return;
                 }
 
-                var constantValue = context.SemanticModel.GetConstantValue(initializer.Value);
+                Optional<object> constantValue = context.SemanticModel.GetConstantValue(initializer.Value, context.CancellationToken);
                 if (!constantValue.HasValue)
                 {
                     return;
@@ -67,7 +65,7 @@ namespace MakeConst
 
                 // Ensure that the initializer value can be converted to the type of the
                 // local declaration without a user-defined conversion.
-                var conversion = context.SemanticModel.ClassifyConversion(initializer.Value, variableType);
+                Conversion conversion = context.SemanticModel.ClassifyConversion(initializer.Value, variableType);
                 if (!conversion.Exists || conversion.IsUserDefined)
                 {
                     return;
@@ -92,13 +90,13 @@ namespace MakeConst
             }
 
             // Perform data flow analysis on the local declaration.
-            var dataFlowAnalysis = context.SemanticModel.AnalyzeDataFlow(localDeclaration);
+            DataFlowAnalysis dataFlowAnalysis = context.SemanticModel.AnalyzeDataFlow(localDeclaration);
 
-            foreach (var variable in localDeclaration.Declaration.Variables)
+            foreach (VariableDeclaratorSyntax variable in localDeclaration.Declaration.Variables)
             {
                 // Retrieve the local symbol for each variable in the local declaration
                 // and ensure that it is not written outside of the data flow analysis region.
-                var variableSymbol = context.SemanticModel.GetDeclaredSymbol(variable);
+                ISymbol variableSymbol = context.SemanticModel.GetDeclaredSymbol(variable, context.CancellationToken);
                 if (dataFlowAnalysis.WrittenOutside.Contains(variableSymbol))
                 {
                     return;
