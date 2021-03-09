@@ -20,6 +20,12 @@ on:
       - "**global.json"
       - "**snippets.5000.json"
     branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'The reason for running the workflow'
+        required: true
+        default: 'Force a snippets build'
 
 env:
   DOTNET_INSTALLER_CHANNEL: 'release/5.0.1xx'
