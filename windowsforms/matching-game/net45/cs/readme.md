@@ -11,7 +11,7 @@ description: "A simple matching game "
 ---
 # Matching game
 
-This sample demonstrates a simple memory game where you try to match tiles in the fewest amount of moves possible. This sample was used as the basis of a migration tutorial, so a [.NET 5 version of the sample](https://github.com/dotnet/samples/tree/master/windowsforms/matching-game/net5-windows/cs) is available.
+This sample demonstrates a simple memory game where you try to match tiles in the fewest amount of moves possible. This sample was used as the basis of a migration tutorial, so a [.NET 5 version of the sample](https://github.com/dotnet/samples/tree/main/windowsforms/matching-game/net5-windows/cs) is available.
 
 ## Prerequisites
 

@@ -22,7 +22,7 @@ This sample will only run on macOS.
 
 - Working browser
 - .NET sdk 6.0.100-alpha.1.20628.2.
-- dotnet-serve (<https://github.com/natemcmaster/dotnet-serve>)
+- dotnet-serve (<https://github.com/natemcmain/dotnet-serve>)
 
 To install a specific version of the dotnet sdk, download the latest stable version of the dotnet-install script:
 
