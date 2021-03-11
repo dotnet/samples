@@ -1,4 +1,7 @@
-class Person
+namespace TestSnippet
 {
-    public string Name { get; set; }
+    class Person
+    {
+        public string Name { get; set; }
+    }    
 }
