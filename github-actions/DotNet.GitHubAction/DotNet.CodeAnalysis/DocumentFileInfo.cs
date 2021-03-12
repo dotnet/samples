@@ -2,6 +2,8 @@
 
 namespace DotNet.CodeAnalysis
 {
+    /// Borrowed and inspired by:
+    /// https://github.com/dotnet/roslyn/blob/main/src/Workspaces/Core/MSBuild/MSBuild/ProjectFile/DocumentFileInfo.cs
     /// <summary>
     /// Represents a source file that is part of a project file.
     /// </summary>

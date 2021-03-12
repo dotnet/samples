@@ -2,6 +2,8 @@
 
 namespace DotNet.CodeAnalysis
 {
+    /// Internals inspired/borrowed from:
+    /// https://github.com/dotnet/roslyn/blob/main/src/Workspaces/Core/MSBuild/MSBuild/ProjectFile/ProjectFileReference.cs
     internal sealed record ProjectFileReference(
         /// <summary>
         /// The path on disk to the other project file. 

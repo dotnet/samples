@@ -8,6 +8,8 @@ using System.Linq;
 
 namespace DotNet.CodeAnalysis
 {
+    /// Internals borrowed from:
+    /// https://github.com/dotnet/roslyn/blob/main/src/Compilers/Core/Portable/FileSystem/PathUtilities.cs
     // Contains path parsing utilities.
     // We need our own because System.IO.Path is insufficient for our purposes
     // For example we need to be able to work with invalid paths or paths containing wildcards

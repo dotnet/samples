@@ -22,6 +22,8 @@ using MSBProjectIntance = Microsoft.Build.Execution.ProjectInstance;
 
 namespace DotNet.CodeAnalysis
 {
+    /// Inspired by:
+    /// https://github.com/dotnet/roslyn/blob/main/src/Workspaces/Core/MSBuild/MSBuild/MSBuildWorkspace.cs
     public class ProjectWorkspace : IDisposable
     {
         BuildManager _buildManager = BuildManager.DefaultBuildManager;

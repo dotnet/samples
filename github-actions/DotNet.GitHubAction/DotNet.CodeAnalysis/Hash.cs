@@ -5,6 +5,8 @@ using Microsoft.CodeAnalysis;
 
 namespace DotNet.CodeAnalysis
 {
+    /// Internals borrowed from:
+    /// https://github.com/dotnet/roslyn/blob/main/src/Compilers/Core/Portable/InternalUtilities/Hash.cs
     internal static class Hash
     {
         /// <summary>

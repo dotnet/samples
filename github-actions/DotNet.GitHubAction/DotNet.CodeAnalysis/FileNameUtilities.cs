@@ -2,6 +2,8 @@
 
 namespace DotNet.CodeAnalysis
 {
+    /// Internals borrowed from:
+    /// https://github.com/dotnet/roslyn/blob/main/src/Compilers/Core/Portable/InternalUtilities/FileNameUtilities.cs
     /// <summary>
     /// Implements a few file name utilities that are needed by the compiler.
     /// In general the compiler is not supposed to understand the format of the paths.

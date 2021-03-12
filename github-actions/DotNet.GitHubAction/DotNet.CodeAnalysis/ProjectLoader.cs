@@ -5,6 +5,8 @@ using ProjectRootElement = Microsoft.Build.Construction.ProjectRootElement;
 
 namespace DotNet.CodeAnalysis
 {
+    /// Inspired by:
+    /// https://github.com/dotnet/roslyn/blob/main/src/Workspaces/Core/MSBuild/MSBuild/MSBuildProjectLoader.cs
     public class ProjectLoader
     {
         static readonly XmlReaderSettings s_xmlReaderSettings = new()

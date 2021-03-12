@@ -1,5 +1,7 @@
 ﻿namespace DotNet.CodeAnalysis
 {
+    /// Internals borrowed from:
+    /// https://github.com/dotnet/roslyn/blob/main/src/Compilers/Core/Portable/FileSystem/PathKind.cs
     internal enum PathKind
     {
         /// <summary>

@@ -3,6 +3,8 @@ using System.IO;
 
 namespace DotNet.CodeAnalysis
 {
+    /// Internals borrowed from:
+    /// https://github.com/dotnet/roslyn/blob/main/src/Compilers/Core/Portable/InternalUtilities/PlatformInformation.cs
     /// <summary>
     /// This class provides simple properties for determining whether the current platform is Windows or Unix-based.
     /// We intentionally do not use System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(...) because

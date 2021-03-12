@@ -4,6 +4,8 @@ using System.IO;
 
 namespace DotNet.CodeAnalysis
 {
+    /// Internals borrowed from:
+    /// https://github.com/dotnet/roslyn/blob/main/src/Compilers/Core/Portable/FileSystem/FileUtilities.cs
     internal static class FileUtilities
     {
         /// <summary>

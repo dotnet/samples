@@ -2,6 +2,8 @@
 
 namespace DotNet.CodeAnalysis
 {
+    /// Internals borrowed from:
+    /// https://github.com/dotnet/roslyn/blob/main/src/Workspaces/Core/MSBuild/MSBuild/ProjectFile/ProjectFileInfo.cs
     /// <summary>
     /// Provides information about a project that has been loaded from disk and
     /// built with MSBuild. If the project is multi-targeting, this represents

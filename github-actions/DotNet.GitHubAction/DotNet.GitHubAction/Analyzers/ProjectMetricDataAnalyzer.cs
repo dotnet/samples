@@ -1,9 +1,9 @@
-﻿using System.IO;
+﻿using System.Collections.Immutable;
+using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
-using Microsoft.CodeAnalysis.CodeMetrics;
 using DotNet.CodeAnalysis;
-using System.Collections.Immutable;
+using Microsoft.CodeAnalysis.CodeMetrics;
 using Microsoft.Extensions.Logging;
 
 namespace DotNet.GitHubAction.Analyzers
