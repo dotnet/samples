@@ -280,7 +280,7 @@ config.ps1
 **/IISApplications
 
 # VS debug support files
-#launchSettings.json
+launchSettings.json
 
 # Snapcraft files
 .snapcraft

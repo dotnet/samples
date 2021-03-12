@@ -20,8 +20,4 @@
     <ProjectReference Include="..\DotNet.CodeAnalysis\DotNet.CodeAnalysis.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Properties\" />
-  </ItemGroup>
-
 </Project>
