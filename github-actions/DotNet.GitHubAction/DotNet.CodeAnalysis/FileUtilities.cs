@@ -82,9 +82,7 @@ namespace DotNet.CodeAnalysis
         }
 
         internal static string? ResolveRelativePath(string? path, string? baseDirectory)
-        {
-            return ResolveRelativePath(path, null, baseDirectory);
-        }
+            => ResolveRelativePath(path, null, baseDirectory);
 
         internal static string? ResolveRelativePath(string? path, string? basePath, string? baseDirectory)
         {
