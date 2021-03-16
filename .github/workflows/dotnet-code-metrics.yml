@@ -1,0 +1,25 @@
+name: '.NET code metrics'
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: .NET code metrics
+      id: dotnet-code-metrics
+      uses: dotnet/samples/github-actions/DotNet.GitHubAction@main
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        owner: ${{ github.repository_owner }}
+        name: ${{ github.repository }}
+        branch: ${{ github.ref }}
+        dir: ${{ './github-actions/DotNet.GitHubAction' }}
+        
