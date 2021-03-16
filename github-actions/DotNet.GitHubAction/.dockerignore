@@ -1,0 +1,4 @@
+# See: https://docs.docker.com/engine/examples/dotnetcore/#method-1
+
+bin/
+obj/
