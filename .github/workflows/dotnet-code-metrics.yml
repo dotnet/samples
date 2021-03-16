@@ -3,6 +3,12 @@ name: '.NET code metrics'
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'The reason for running the workflow'
+        required: true
+        default: 'Manual run'
 
 jobs:
   build:
@@ -11,6 +17,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+
+    - name: 'Print manual run reason'
+      if: ${{ github.event_name == 'workflow_dispatch' }}
+      run: |
+        echo 'Reason: ${{ github.event.inputs.reason }}'
 
     - name: .NET code metrics
       id: dotnet-code-metrics
