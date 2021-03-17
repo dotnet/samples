@@ -4,7 +4,8 @@ on:
   push:
     branches: [ main ]
     paths:
-    - 'github-actions/DotNet.GitHubAction/**'
+    - 'github-actions/DotNet.GitHubAction/**'               # run on all changes to this dir
+    - '!github-actions/DotNet.GitHubAction/CODE_METRICS.md' # ignore this file
   workflow_dispatch:
     inputs:
       reason:
