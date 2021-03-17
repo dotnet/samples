@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
     paths:
-    - './github-actions/DotNet.GitHubAction/**'
+    - 'github-actions/DotNet.GitHubAction/**'
   workflow_dispatch:
     inputs:
       reason:
@@ -40,5 +40,6 @@ jobs:
       uses: peter-evans/create-pull-request@v3.4.1
       if: ${{ steps.dotnet-code-metrics.outputs.updated-metrics }} == 'true'
       with:
-        title: 'Update CODE_METRICS.md'
+        title: '${{ steps.dotnet-code-metrics.outputs.summary-title }}'
         body: '${{ steps.dotnet-code-metrics.outputs.summary-details }}'
+        commit-message: '.NET code metrics, automated pull request.'

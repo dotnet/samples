@@ -18,7 +18,9 @@ inputs:
     required: false
     default: '/github/workspace'
 outputs:
-  summary-message:
+  summary-title:
+    description: 'The title of the code metrics action.'
+  summary-details:
     description: 'A detailed summary of all the projects that were flagged.'
   updated-metrics:
     description: 'A boolean value, indicating whether or not the CODE_METRICS.md was updated as a result of running this action.'
