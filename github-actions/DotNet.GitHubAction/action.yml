@@ -14,7 +14,10 @@ inputs:
     description: 'The branch name. Assign from github.ref. Example, "refs/heads/main".'
     required: true
   dir:
-    description: 'The root directory to work from. Examples, "path/to/code".'
+    description: 'The root directory to work from. Example, "path/to/code".'
+    required: true
+  workspace:
+    description: 'The workspace directory. Example, "${{ github.workspace }}"'
     required: false
     default: '/github/workspace'
 outputs:
@@ -36,3 +39,5 @@ runs:
   - ${{ inputs.branch }}
   - '-d'
   - ${{ inputs.dir }}
+  - '-w'
+  - ${{ inputs.workspace }}
