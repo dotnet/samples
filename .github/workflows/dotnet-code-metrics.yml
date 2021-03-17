@@ -3,6 +3,8 @@ name: '.NET code metrics'
 on:
   push:
     branches: [ main ]
+    paths:
+    - './github-actions/DotNet.GitHubAction/**'
   workflow_dispatch:
     inputs:
       reason:
@@ -38,4 +40,4 @@ jobs:
       uses: peter-evans/create-pull-request@v3.4.1
       with:
         title: 'Update CODE_METRICS.md'
-        body: '${{ steps.dotnet-code-metrics.outputs.summary-details }}'        
+        body: '${{ steps.dotnet-code-metrics.outputs.summary-details }}'

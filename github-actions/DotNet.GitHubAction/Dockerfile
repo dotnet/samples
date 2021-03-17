@@ -14,5 +14,5 @@ LABEL com.github.actions.description="A Github action that maintains a CODE_METR
 LABEL com.github.actions.icon="sliders"
 LABEL com.github.actions.color="purple"
 
-COPY /out /app
-ENTRYPOINT [ "dotnet", "./app/DotNet.GitHubAction.dll" ]
+COPY /out .
+ENTRYPOINT [ "dotnet", "/DotNet.GitHubAction.dll" ]
