@@ -18,6 +18,8 @@ inputs:
     required: false
     default: '/github/workspace'
 outputs:
+  summary-title:
+    description: 'The title of the code metrics action.'
   summary-message:
     description: 'A detailed summary of all the projects that were flagged.'
   updated-metrics:
