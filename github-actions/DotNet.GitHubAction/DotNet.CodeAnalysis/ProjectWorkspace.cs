@@ -385,7 +385,7 @@ namespace DotNet.CodeAnalysis
                 outputFilePath,
                 outputRefFilePath,
                 defaultNamespace,
-                targetFramework,
+                targetFramework ?? "<unknown>",
                 commandLineArgs,
                 docs,
                 additionalDocs,
