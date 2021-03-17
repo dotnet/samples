@@ -68,8 +68,13 @@ static async Task StartAnalysisAsync(ActionInputs inputs, IHost host)
         logger.LogInformation(
             $"{(fileExists ? "Updating" : "Creating")} {fileName} markdown file with latest code metric data.");
 
-        summary.Append(
+        summary.AppendLine(
             title = $"{(fileExists ? "Updated" : "Created")} {fileName} file, analyzed metrics for {metricData.Count} projects.");
+
+        foreach (var (path, _) in metricData)
+        {
+            summary.AppendLine($"Analyzed: '{path}'");
+        }
 
         await File.WriteAllTextAsync(
             fullPath,
@@ -86,7 +91,7 @@ static async Task StartAnalysisAsync(ActionInputs inputs, IHost host)
     // https://docs.github.com/actions/reference/workflow-commands-for-github-actions#setting-an-output-parameter
     Console.WriteLine($"::set-output name=updated-metrics::{updatedMetrics}");
     Console.WriteLine($"::set-output name=summary-title::{title}");
-    Console.WriteLine($"::set-output name=summary-message::{summary}");
+    Console.WriteLine($"::set-output name=summary-details::{summary}");
 
     Environment.Exit(0);
 }
