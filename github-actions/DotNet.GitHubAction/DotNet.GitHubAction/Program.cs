@@ -73,7 +73,7 @@ static async Task StartAnalysisAsync(ActionInputs inputs, IHost host)
 
         foreach (var (path, _) in metricData)
         {
-            summary.AppendLine($"Analyzed: '{path}'");
+            summary.AppendLine($"- *{path}*");
         }
 
         await File.WriteAllTextAsync(
