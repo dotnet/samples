@@ -154,7 +154,7 @@ namespace DotNet.CodeAnalysis
                         return null;
                     }
 
-                    return PathUtilities.CombinePathsUnchecked(baseRoot, path.Substring(1));
+                    return PathUtilities.CombinePathsUnchecked(baseRoot, path?.Substring(1));
 
                 case PathKind.RelativeToDriveDirectory:
                     // drive relative paths not supported, can't resolve:
