@@ -1,3 +1,6 @@
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+
 # Code Metrics
 
 This file is dynamically maintained by a bot, *please do not* edit this by hand. It represents various [code metrics](https://aka.ms/dotnet/code-metrics), such as cyclomatic complexity, maintainability index, and so on.
@@ -563,8 +566,8 @@ The *DotNet.GitHubAction.csproj* project file contains:
 
 - 4 namespaces.
 - 6 named types.
-- 501 total lines of source code.
-- Approximately 216 lines of executable code.
+- 513 total lines of source code.
+- Approximately 220 lines of executable code.
 - The highest cyclomatic complexity is 7 :heavy_check_mark:.
 
 <details>
@@ -701,8 +704,8 @@ The `DotNet.GitHubAction.Analyzers` namespace contains 1 named types.
 The `DotNet.GitHubAction.Extensions` namespace contains 3 named types.
 
 - 3 named types.
-- 292 total lines of source code.
-- Approximately 88 lines of executable code.
+- 304 total lines of source code.
+- Approximately 92 lines of executable code.
 - The highest cyclomatic complexity is 5 :heavy_check_mark:.
 
 <details>
@@ -739,24 +742,26 @@ The `DotNet.GitHubAction.Extensions` namespace contains 3 named types.
 </summary>
 <br>
 
-- The `CodeMetricsReportExtensions` contains 11 members.
-- 234 total lines of source code.
-- Approximately 73 lines of executable code.
+- The `CodeMetricsReportExtensions` contains 13 members.
+- 246 total lines of source code.
+- Approximately 77 lines of executable code.
 - The highest cyclomatic complexity is 5 :heavy_check_mark:.
 
 | Member kind | Line number | Maintainability index | Cyclomatic complexity | Depth of inheritance | Class coupling | Lines of source / executable code |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| Method | [16](../blob/main/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L16 "string CodeMetricsReportExtensions.ToMarkDownBody(Dictionary<string, CodeAnalysisMetricData> metricData, string rootDirectory, string branch)") | 46 | 5 :heavy_check_mark: | 0 | 13 | 93 / 33 |
-| Method | [110](../blob/main/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L110 "void CodeMetricsReportExtensions.AppendMetricDefinitions(MarkdownDocument document)") | 66 | 2 :heavy_check_mark: | 0 | 5 | 24 / 7 |
-| Method | [135](../blob/main/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L135 "void CodeMetricsReportExtensions.AppendMaintainedByBotMessage(MarkdownDocument document)") | 98 | 1 :heavy_check_mark: | 0 | 3 | 3 / 1 |
-| Method | [139](../blob/main/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L139 "string CodeMetricsReportExtensions.DisplayName(ISymbol symbol)") | 69 | 2 :heavy_check_mark: | 0 | 3 | 15 / 7 |
-| Method | [155](../blob/main/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L155 "string CodeMetricsReportExtensions.ToDisplayName(CodeAnalysisMetricData metric)") | 100 | 1 :heavy_check_mark: | 0 | 2 | 14 / 1 |
-| Method | [170](../blob/main/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L170 "MarkdownTableRow CodeMetricsReportExtensions.ToTableRowFrom(CodeAnalysisMetricData metric, Func<CodeAnalysisMetricData, string> toDisplayName, string rootDirectory, string branch)") | 65 | 1 :heavy_check_mark: | 0 | 5 | 24 / 8 |
-| Method | [195](../blob/main/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L195 "(string elementId, string displayName, string anchorLink, (int highestComplexity, string emoji)) CodeMetricsReportExtensions.ToIdAndAnchorPair(CodeAnalysisMetricData metric)") | 71 | 1 :heavy_check_mark: | 0 | 5 | 10 / 5 |
-| Method | [206](../blob/main/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L206 "IMarkdownDocument CodeMetricsReportExtensions.OpenCollapsibleSection(IMarkdownDocument document, string elementId, string symbolName, string highestComplexity)") | 91 | 1 :heavy_check_mark: | 0 | 2 | 9 / 1 |
-| Method | [216](../blob/main/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L216 "string CodeMetricsReportExtensions.PrepareElementId(string value)") | 88 | 1 :heavy_check_mark: | 0 | 1 | 8 / 1 |
-| Method | [225](../blob/main/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L225 "IMarkdownDocument CodeMetricsReportExtensions.CloseCollapsibleSection(IMarkdownDocument document)") | 98 | 1 :heavy_check_mark: | 0 | 2 | 2 / 1 |
-| Method | [228](../blob/main/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L228 "string CodeMetricsReportExtensions.ToLineNumberUrl(ISymbol symbol, string symbolDisplayName, string rootDirectory, string branch)") | 65 | 3 :heavy_check_mark: | 0 | 2 | 19 / 8 |
+| Method | [16](../blob/main/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L16 "string CodeMetricsReportExtensions.ToMarkDownBody(Dictionary<string, CodeAnalysisMetricData> metricData, string rootDirectory, string branch)") | 46 | 5 :heavy_check_mark: | 0 | 13 | 96 / 35 |
+| Method | [113](../blob/main/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L113 "void CodeMetricsReportExtensions.AppendMetricDefinitions(MarkdownDocument document)") | 66 | 2 :heavy_check_mark: | 0 | 5 | 24 / 7 |
+| Method | [138](../blob/main/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L138 "void CodeMetricsReportExtensions.AppendMaintainedByBotMessage(MarkdownDocument document)") | 98 | 1 :heavy_check_mark: | 0 | 3 | 3 / 1 |
+| Method | [142](../blob/main/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L142 "string CodeMetricsReportExtensions.DisplayName(ISymbol symbol)") | 69 | 2 :heavy_check_mark: | 0 | 3 | 15 / 7 |
+| Method | [158](../blob/main/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L158 "string CodeMetricsReportExtensions.ToDisplayName(CodeAnalysisMetricData metric)") | 100 | 1 :heavy_check_mark: | 0 | 2 | 14 / 1 |
+| Method | [173](../blob/main/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L173 "MarkdownTableRow CodeMetricsReportExtensions.ToTableRowFrom(CodeAnalysisMetricData metric, Func<CodeAnalysisMetricData, string> toDisplayName, string rootDirectory, string branch)") | 65 | 1 :heavy_check_mark: | 0 | 5 | 24 / 8 |
+| Method | [198](../blob/main/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L198 "(string elementId, string displayName, string anchorLink, (int highestComplexity, string emoji)) CodeMetricsReportExtensions.ToIdAndAnchorPair(CodeAnalysisMetricData metric)") | 71 | 1 :heavy_check_mark: | 0 | 5 | 10 / 5 |
+| Method | [209](../blob/main/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L209 "IMarkdownDocument CodeMetricsReportExtensions.OpenCollapsibleSection(IMarkdownDocument document, string elementId, string symbolName, string highestComplexity)") | 91 | 1 :heavy_check_mark: | 0 | 2 | 9 / 1 |
+| Method | [219](../blob/main/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L219 "string CodeMetricsReportExtensions.PrepareElementId(string value)") | 88 | 1 :heavy_check_mark: | 0 | 1 | 8 / 1 |
+| Method | [228](../blob/main/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L228 "IMarkdownDocument CodeMetricsReportExtensions.CloseCollapsibleSection(IMarkdownDocument document)") | 98 | 1 :heavy_check_mark: | 0 | 2 | 2 / 1 |
+| Method | [231](../blob/main/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L231 "IMarkdownDocument CodeMetricsReportExtensions.DisableMarkdownLinterAndCaptureConfig(IMarkdownDocument document)") | 98 | 1 :heavy_check_mark: | 0 | 2 | 4 / 1 |
+| Method | [236](../blob/main/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L236 "IMarkdownDocument CodeMetricsReportExtensions.RestoreMarkdownLinter(IMarkdownDocument document)") | 98 | 1 :heavy_check_mark: | 0 | 2 | 3 / 1 |
+| Method | [240](../blob/main/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L240 "string CodeMetricsReportExtensions.ToLineNumberUrl(ISymbol symbol, string symbolDisplayName, string rootDirectory, string branch)") | 65 | 3 :heavy_check_mark: | 0 | 2 | 19 / 8 |
 
 <a href="#dotnet-githubaction-extensions">:top: back to DotNet.GitHubAction.Extensions</a>
 
@@ -797,3 +802,5 @@ The `DotNet.GitHubAction.Extensions` namespace contains 3 named types.
   - **Lines of executable code**: Approximates the lines of executable code. Lower values are better.
 
 *This file is maintained by a bot.*
+
+<!-- markdownlint-restore -->
