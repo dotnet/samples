@@ -29,7 +29,7 @@ jobs:
       id: dotnet-code-metrics
       uses: dotnet/samples/github-actions/DotNet.GitHubAction@main
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GREETINGS: 'Hello, .NET developers!' # ${{ secrets.GITHUB_TOKEN }}
       with:
         owner: ${{ github.repository_owner }}
         name: ${{ github.repository }}
@@ -38,6 +38,7 @@ jobs:
       
     - name: Create pull request
       uses: peter-evans/create-pull-request@v3.4.1
+      if: ${{ steps.dotnet-code-metrics.outputs.updated-metrics }} == 'true'
       with:
         title: 'Update CODE_METRICS.md'
         body: '${{ steps.dotnet-code-metrics.outputs.summary-details }}'

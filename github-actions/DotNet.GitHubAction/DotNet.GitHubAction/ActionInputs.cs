@@ -10,10 +10,10 @@ namespace DotNet.GitHubAction
 
         public ActionInputs()
         {
-            var token = Environment.GetEnvironmentVariable("GITHUB_TOKEN");
-            if (token is { Length: > 0 })
+            var greetings = Environment.GetEnvironmentVariable("GREETINGS");
+            if (greetings is { Length: > 0 })
             {
-                Token = token;
+                Console.WriteLine(greetings);
             }
         }
 
@@ -40,13 +40,7 @@ namespace DotNet.GitHubAction
             set => ParseAndAssign(value, str => _branchName = str);
         }
 
-        [Option('t', "token",
-            HelpText = "The GitHub personal-access token (PAT), or the token from GitHub action context. " +
-            "Assign from `github.token`." +
-            "Override with env var named `GITHUB_TOKEN`.`")]
-        public string Token { get; set; } = null!;
-
-        [Option('d', "dir",
+         [Option('d', "dir",
             Required = true,
             HelpText = "The root directory to start recursive searching from. Assign from `github.workspace`.")]
         public string Directory { get; set; } = null!;
