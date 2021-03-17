@@ -19,6 +19,8 @@ namespace DotNet.GitHubAction.Extensions
         {
             MarkdownDocument document = new();
 
+            DisableMarkdownLinterAndCaptureConfig(document);
+
             document.AppendHeader("Code Metrics", 1);
 
             document.AppendParagraph(
@@ -103,6 +105,7 @@ namespace DotNet.GitHubAction.Extensions
 
             AppendMetricDefinitions(document);
             AppendMaintainedByBotMessage(document);
+            RestoreMarkdownLinter(document);
 
             return document.ToString();
         }
@@ -224,6 +227,15 @@ namespace DotNet.GitHubAction.Extensions
 
         static IMarkdownDocument CloseCollapsibleSection(IMarkdownDocument document) =>
             document.AppendParagraph("</details>");
+
+        static IMarkdownDocument DisableMarkdownLinterAndCaptureConfig(
+            IMarkdownDocument document) =>
+            document.AppendParagraph(@"<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->");
+
+        static IMarkdownDocument RestoreMarkdownLinter(
+            IMarkdownDocument document) =>
+            document.AppendParagraph(@"<!-- markdownlint-restore -->);
 
         static string ToLineNumberUrl(ISymbol symbol, string symbolDisplayName, string rootDirectory, string branch)
         {
