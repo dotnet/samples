@@ -235,7 +235,7 @@ namespace DotNet.GitHubAction.Extensions
 
         static IMarkdownDocument RestoreMarkdownLinter(
             IMarkdownDocument document) =>
-            document.AppendParagraph(@"<!-- markdownlint-restore -->);
+            document.AppendParagraph(@"<!-- markdownlint-restore -->");
 
         static string ToLineNumberUrl(ISymbol symbol, string symbolDisplayName, string rootDirectory, string branch)
         {
