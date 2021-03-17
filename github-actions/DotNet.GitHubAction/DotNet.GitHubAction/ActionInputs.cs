@@ -40,10 +40,15 @@ namespace DotNet.GitHubAction
             set => ParseAndAssign(value, str => _branchName = str);
         }
 
-         [Option('d', "dir",
+        [Option('d', "dir",
             Required = true,
-            HelpText = "The root directory to start recursive searching from. Assign from `github.workspace`.")]
+            HelpText = "The root directory to start recursive searching from.")]
         public string Directory { get; set; } = null!;
+
+        [Option('w', "workspace",
+            Required = true,
+            HelpText = "The workspace directory, or repository root directory.")]
+        public string WorkspaceDirectory { get; set; } = null!;
 
         static void ParseAndAssign(string? value, Action<string> assign)
         {

@@ -78,7 +78,7 @@ static async Task StartAnalysisAsync(ActionInputs inputs, IHost host)
 
         await File.WriteAllTextAsync(
             fullPath,
-            metricData.ToMarkDownBody(inputs.Directory, inputs.Branch),
+            metricData.ToMarkDownBody(inputs),
             tokenSource.Token);
 
         updatedMetrics = true;
