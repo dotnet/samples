@@ -55,6 +55,7 @@ static async Task StartAnalysisAsync(ActionInputs inputs, IHost host)
         }
     }
 
+    var updatedMetrics = false;
     StringBuilder summary = new();
     if (metricData is { Count: > 0 })
     {
@@ -73,6 +74,8 @@ static async Task StartAnalysisAsync(ActionInputs inputs, IHost host)
             fullPath,
             metricData.ToMarkDownBody(inputs.Directory, inputs.Branch),
             tokenSource.Token);
+
+        updatedMetrics = true;
     }
     else
     {
@@ -80,6 +83,7 @@ static async Task StartAnalysisAsync(ActionInputs inputs, IHost host)
     }
 
     // https://docs.github.com/actions/reference/workflow-commands-for-github-actions#setting-an-output-parameter
+    Console.WriteLine($"::set-output name=updated-metrics::{updatedMetrics}");
     Console.WriteLine($"::set-output name=summary-message::{summary}");
 
     Environment.Exit(0);

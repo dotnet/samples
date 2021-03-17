@@ -11,15 +11,17 @@ inputs:
     description: 'The repository name. Example, "samples".'
     required: true
   branch:
-    description: 'The branch name. Assign from github.ref. Example, "main".'
+    description: 'The branch name. Assign from github.ref. Example, "refs/heads/main".'
     required: true
   dir:
-    description: 'The root directory to work from.'
+    description: 'The root directory to work from. Examples, "path/to/code".'
     required: false
     default: '/github/workspace'
 outputs:
   summary-message:
     description: 'A detailed summary of all the projects that were flagged.'
+  updated-metrics:
+    description: 'A boolean value, indicating whether or not the CODE_METRICS.md was updated as a result of running this action.'
 runs:
   using: 'docker'
   image: 'Dockerfile'
