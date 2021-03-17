@@ -8,6 +8,15 @@ namespace DotNet.GitHubAction
         string _repositoryName = null!;
         string _branchName = null!;
 
+        public ActionInputs()
+        {
+            var token = Environment.GetEnvironmentVariable("GITHUB_TOKEN");
+            if (token is { Length: > 0 })
+            {
+                Token = token;
+            }
+        }
+
         [Option('o', "owner",
             Required = true,
             HelpText = "The owner, for example: \"dotnet\". Assign from `github.repository_owner`.")]
