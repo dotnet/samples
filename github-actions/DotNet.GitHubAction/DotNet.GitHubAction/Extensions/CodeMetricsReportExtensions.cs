@@ -19,58 +19,62 @@ namespace DotNet.GitHubAction.Extensions
         {
             MarkdownDocument document = new();
 
+            DisableMarkdownLinterAndCaptureConfig(document);
+
             document.AppendHeader("Code Metrics", 1);
+
+            document.AppendParagraph(
+                $"This file is dynamically maintained by a bot, *please do not* edit this by hand. It represents various [code metrics](https://aka.ms/dotnet/code-metrics), such as cyclomatic complexity, maintainability index, and so on.");
 
             foreach ((string filePath, CodeAnalysisMetricData assemblyMetric) in metricData)
             {
-                var (assemblyId, assemblyDisplayName, assemblyLink) = ToIdAndAnchorPair(assemblyMetric);
+                var (assemblyId, assemblyDisplayName, assemblyLink, assemblyHighestComplexity) =
+                    ToIdAndAnchorPair(assemblyMetric);
 
                 document.AppendParagraph($"<div id='{assemblyId}'></div>");
-                document.AppendHeader($"{assemblyDisplayName}", 2);
+                document.AppendHeader($"{assemblyDisplayName} {assemblyHighestComplexity.emoji}", 2);
 
                 document.AppendParagraph(
                     $"The *{Path.GetFileName(filePath)}* project file contains:");
 
-                var assemblyHighestComplexity =
-                    assemblyMetric.FindHighestCyclomaticComplexity();
+                static string FormatComplexity((int complexity, string emoji) highestComplexity) =>
+                    $"{highestComplexity.complexity} {highestComplexity.emoji}";
 
                 document.AppendList(
                     new MarkdownTextListItem($"{assemblyMetric.CountNamespaces():#,0} namespaces."),
                     new MarkdownTextListItem($"{assemblyMetric.CountNamedTypes():#,0} named types."),
                     new MarkdownTextListItem($"{assemblyMetric.SourceLines:#,0} total lines of source code."),
                     new MarkdownTextListItem($"Approximately {assemblyMetric.ExecutableLines:#,0} lines of executable code."),
-                    new MarkdownTextListItem($"The highest cyclomatic complexity is {assemblyHighestComplexity}."));
+                    new MarkdownTextListItem($"The highest cyclomatic complexity is {FormatComplexity(assemblyHighestComplexity)}."));
 
                 foreach (var namespaceMetric
                     in assemblyMetric.Children.Where(child => child.Symbol.Kind == SymbolKind.Namespace))
                 {
-                    var (namespaceId, namespaceSymbolName, namespaceLink) = ToIdAndAnchorPair(namespaceMetric);
-
-                    OpenCollapsibleSection(document, namespaceId, namespaceSymbolName);
+                    var (namespaceId, namespaceSymbolName, namespaceLink, namespaceHighestComplexity) =
+                        ToIdAndAnchorPair(namespaceMetric);
+                    OpenCollapsibleSection(
+                        document, namespaceId, namespaceSymbolName, namespaceHighestComplexity.emoji);
 
                     document.AppendParagraph(
                         $"The `{namespaceSymbolName}` namespace contains {namespaceMetric.Children.Length} named types.");
 
-                    var namespaceHighestComplexity =
-                        namespaceMetric.FindHighestCyclomaticComplexity();
                     document.AppendList(
                         new MarkdownTextListItem($"{namespaceMetric.CountNamedTypes():#,0} named types."),
                         new MarkdownTextListItem($"{namespaceMetric.SourceLines:#,0} total lines of source code."),
                         new MarkdownTextListItem($"Approximately {namespaceMetric.ExecutableLines:#,0} lines of executable code."),
-                        new MarkdownTextListItem($"The highest cyclomatic complexity is {namespaceHighestComplexity}."));
+                        new MarkdownTextListItem($"The highest cyclomatic complexity is {FormatComplexity(namespaceHighestComplexity)}."));
 
                     foreach (var classMetric in namespaceMetric.Children)
                     {
-                        var (classId, classSymbolName, classLink) = ToIdAndAnchorPair(classMetric);
-                        OpenCollapsibleSection(document, classId, classSymbolName);
+                        var (classId, classSymbolName, classLink, namedTypeHighestComplexity) = ToIdAndAnchorPair(classMetric);
+                        OpenCollapsibleSection(
+                            document, classId, classSymbolName, namedTypeHighestComplexity.emoji);
 
-                        var namedTypeHighestComplexity =
-                            classMetric.FindHighestCyclomaticComplexity();
                         document.AppendList(
                             new MarkdownTextListItem($"The `{classSymbolName}` contains {classMetric.Children.Length} members."),
                             new MarkdownTextListItem($"{classMetric.SourceLines:#,0} total lines of source code."),
                             new MarkdownTextListItem($"Approximately {classMetric.ExecutableLines:#,0} lines of executable code."),
-                            new MarkdownTextListItem($"The highest cyclomatic complexity is {namedTypeHighestComplexity}."));
+                            new MarkdownTextListItem($"The highest cyclomatic complexity is {FormatComplexity(namedTypeHighestComplexity)}."));
                         
                         MarkdownTableHeader tableHeader = new(
                             new("Member kind", MarkdownTableTextAlignment.Center),
@@ -101,6 +105,7 @@ namespace DotNet.GitHubAction.Extensions
 
             AppendMetricDefinitions(document);
             AppendMaintainedByBotMessage(document);
+            RestoreMarkdownLinter(document);
 
             return document.ToString();
         }
@@ -190,22 +195,23 @@ namespace DotNet.GitHubAction.Extensions
                 linesOfCode);
         }
 
-        static (string elementId, string displayName, string anchorLink) ToIdAndAnchorPair(
+        static (string elementId, string displayName, string anchorLink, (int highestComplexity, string emoji)) ToIdAndAnchorPair(
             CodeAnalysisMetricData metric)
         {
             var displayName = ToDisplayName(metric);
             var id = PrepareElementId(displayName);
+            var highestComplexity = metric.FindHighestCyclomaticComplexity();
             var anchorLink = $"<a href=\"#{id}\">:top: back to {HttpUtility.HtmlEncode(displayName)}</a>";
 
-            return (id, displayName, anchorLink);
+            return (id, displayName, anchorLink, highestComplexity);
         }
 
         static IMarkdownDocument OpenCollapsibleSection(
-            IMarkdownDocument document, string elementId, string symbolName) =>
+            IMarkdownDocument document, string elementId, string symbolName, string highestComplexity) =>
             document.AppendParagraph($@"<details>
 <summary>
   <strong id=""{PrepareElementId(elementId)}"">
-    {HttpUtility.HtmlEncode(symbolName)}
+    {HttpUtility.HtmlEncode(symbolName)} {highestComplexity}
   </strong>
 </summary>
 <br>");
@@ -221,6 +227,15 @@ namespace DotNet.GitHubAction.Extensions
 
         static IMarkdownDocument CloseCollapsibleSection(IMarkdownDocument document) =>
             document.AppendParagraph("</details>");
+
+        static IMarkdownDocument DisableMarkdownLinterAndCaptureConfig(
+            IMarkdownDocument document) =>
+            document.AppendParagraph(@"<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->");
+
+        static IMarkdownDocument RestoreMarkdownLinter(
+            IMarkdownDocument document) =>
+            document.AppendParagraph(@"<!-- markdownlint-restore -->");
 
         static string ToLineNumberUrl(ISymbol symbol, string symbolDisplayName, string rootDirectory, string branch)
         {

@@ -29,7 +29,8 @@ namespace DotNet.GitHubAction.Extensions
                 .Flatten(child => child.Children)
                 .Count(child => child.Symbol.Kind == kind);
 
-        internal static string FindHighestCyclomaticComplexity(this CodeAnalysisMetricData metric) =>
+        internal static (int Complexity, string Emoji) FindHighestCyclomaticComplexity(
+            this CodeAnalysisMetricData metric) =>
             metric.Children
                 .Flatten(child => child.Children)
                 .Where(child =>
@@ -38,7 +39,7 @@ namespace DotNet.GitHubAction.Extensions
                     and not SymbolKind.NamedType)
                 .Select(m => (Metric: m, m.CyclomaticComplexity))
                 .OrderByDescending(_ => _.CyclomaticComplexity)
-                .Select(_ => $"{_.CyclomaticComplexity} {_.Metric.ToCyclomaticComplexityEmoji()}")
+                .Select(_ => (_.CyclomaticComplexity, _.Metric.ToCyclomaticComplexityEmoji()))
                 .First();
 
         static IEnumerable<TSource> Flatten<TSource>(
