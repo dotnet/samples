@@ -17,7 +17,7 @@ inputs:
     description: 'The root directory to work from. Example, "path/to/code".'
     required: true
   workspace:
-    description: 'The workspace directory. Example, "${{ github.workspace }}"'
+    description: 'The workspace directory.'
     required: false
     default: '/github/workspace'
 outputs:
