@@ -15,7 +15,7 @@ namespace DotNet.GitHubAction.Extensions
     {
         internal static string ToMarkDownBody(
             this Dictionary<string, CodeAnalysisMetricData> metricData,
-            string rootDirectory, string branch)
+            ActionInputs actionInputs)
         {
             MarkdownDocument document = new();
 
@@ -88,7 +88,7 @@ namespace DotNet.GitHubAction.Extensions
                         List<MarkdownTableRow> rows = new();
                         foreach (var memberMetric in classMetric.Children)
                         {
-                            rows.Add(ToTableRowFrom(memberMetric, ToDisplayName, rootDirectory, branch));
+                            rows.Add(ToTableRowFrom(memberMetric, ToDisplayName, actionInputs));
                         }
 
                         document.AppendTable(tableHeader, rows);
@@ -173,10 +173,9 @@ namespace DotNet.GitHubAction.Extensions
         static MarkdownTableRow ToTableRowFrom(
             CodeAnalysisMetricData metric,
             Func<CodeAnalysisMetricData, string> toDisplayName,
-            string rootDirectory,
-            string branch)
+            ActionInputs actionInputs)
         {
-            var lineNumberUrl = ToLineNumberUrl(metric.Symbol, toDisplayName(metric), rootDirectory, branch);
+            var lineNumberUrl = ToLineNumberUrl(metric.Symbol, toDisplayName(metric), actionInputs);
             var maintainability = metric.MaintainabilityIndex.ToString(CultureInfo.InvariantCulture);
             var cyclomaticComplexity = metric.CyclomaticComplexity.ToString(CultureInfo.InvariantCulture);
             var complexityCell = $"{cyclomaticComplexity} {metric.ToCyclomaticComplexityEmoji()}";
@@ -237,7 +236,8 @@ namespace DotNet.GitHubAction.Extensions
             IMarkdownDocument document) =>
             document.AppendParagraph(@"<!-- markdownlint-restore -->");
 
-        static string ToLineNumberUrl(ISymbol symbol, string symbolDisplayName, string rootDirectory, string branch)
+        static string ToLineNumberUrl(
+            ISymbol symbol, string symbolDisplayName, ActionInputs actionInputs)
         {
             var location = symbol.Locations.First();
             var lineNumber = location.GetLineSpan().StartLinePosition.Line + 1;
@@ -246,10 +246,11 @@ namespace DotNet.GitHubAction.Extensions
             {
                 var fullPath = location.SourceTree?.FilePath;
                 var relativePath =
-                    Path.GetRelativePath(rootDirectory, fullPath!)
+                    Path.GetRelativePath(actionInputs.WorkspaceDirectory, fullPath!)
                         .Replace("\\", "/");
                 var lineNumberFileReference =
-                    Uri.EscapeUriString($"../blob/{branch}/{relativePath}#L{lineNumber}");
+                    Uri.EscapeUriString(
+                        $"https://github.com/{actionInputs.Owner}/{actionInputs.Name}/blob/{actionInputs.Branch}/{relativePath}#L{lineNumber}");
 
                 return $"[{lineNumber:#,0}]({lineNumberFileReference} \"{symbolDisplayName}\")";
             }
