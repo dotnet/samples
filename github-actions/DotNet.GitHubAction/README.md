@@ -6,9 +6,6 @@ products:
 - dotnet
 - github
 page_type: sample
-extendedZipContent:
-  - path: ./
-    target: DotNet.GitHubAction
 name: "GitHub Actions with .NET"
 urlFragment: "create-dotnet-github-action"
 description: "A .NET 5 console application that contains the example from Create a GitHub Action with .NET tutorial."
