@@ -17,7 +17,7 @@ This sample is a console application written in C# from the [Create a GitHub Act
 
 ## Sample prerequisites
 
-This sample is written in C# and targets .NET 5. It requires the [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0).
+This sample is written in C# and targets .NET 5. It requires the [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0) or later.
 
 ## Building the sample
 
