@@ -6,6 +6,9 @@ products:
 - dotnet
 - github
 page_type: sample
+extendedZipContent:
+- path: null
+  target: null
 name: "GitHub Actions with .NET"
 urlFragment: "create-dotnet-github-action"
 description: "A .NET 5 console application that contains the example from Create a GitHub Action with .NET tutorial."
@@ -30,7 +33,7 @@ To download and run the sample, follow these steps:
     3. Choose the <kbd>F5</kbd> key to run with debugging, or <kbd>Ctrl</kbd>+<kbd>F5</kbd> keys to run the project without debugging.
 3. From the command line:
    1. Navigate to the folder that holds the unzipped sample code.
-   2. At the command line, type `dotnet run`.
+   2. At the command line, type [`dotnet run`](https://docs.microsoft.com/dotnet/core/tools/dotnet-run).
 
 ## More information
 
