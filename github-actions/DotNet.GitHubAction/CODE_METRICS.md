@@ -5,6 +5,241 @@
 
 This file is dynamically maintained by a bot, *please do not* edit this by hand. It represents various [code metrics](https://aka.ms/dotnet/code-metrics), such as cyclomatic complexity, maintainability index, and so on.
 
+<div id='dotnet-githubaction'></div>
+
+## DotNet.GitHubAction :heavy_check_mark:
+
+The *DotNet.GitHubAction.csproj* project file contains:
+
+- 4 namespaces.
+- 6 named types.
+- 519 total lines of source code.
+- Approximately 223 lines of executable code.
+- The highest cyclomatic complexity is 7 :heavy_check_mark:.
+
+<details>
+<summary>
+  <strong id="global+namespace">
+    &lt;global namespace&gt; :heavy_check_mark:
+  </strong>
+</summary>
+<br>
+
+The `<global namespace>` namespace contains 1 named types.
+
+- 1 named types.
+- 112 total lines of source code.
+- Approximately 92 lines of executable code.
+- The highest cyclomatic complexity is 7 :heavy_check_mark:.
+
+<details>
+<summary>
+  <strong id="program$">
+    &lt;Program&gt;$ :heavy_check_mark:
+  </strong>
+</summary>
+<br>
+
+- The `<Program>$` contains 1 members.
+- 112 total lines of source code.
+- Approximately 92 lines of executable code.
+- The highest cyclomatic complexity is 7 :heavy_check_mark:.
+
+| Member kind | Line number | Maintainability index | Cyclomatic complexity | Depth of inheritance | Class coupling | Lines of source / executable code |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| Method | [1](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Program.cs#L1 "<top-level-statements-entry-point>") | 43 | 7 :heavy_check_mark: | 0 | 19 | 112 / 46 |
+
+<a href="#global+namespace">:top: back to &lt;global namespace&gt;</a>
+
+</details>
+
+</details>
+
+<details>
+<summary>
+  <strong id="dotnet-githubaction">
+    DotNet.GitHubAction :heavy_check_mark:
+  </strong>
+</summary>
+<br>
+
+The `DotNet.GitHubAction` namespace contains 1 named types.
+
+- 1 named types.
+- 58 total lines of source code.
+- Approximately 26 lines of executable code.
+- The highest cyclomatic complexity is 3 :heavy_check_mark:.
+
+<details>
+<summary>
+  <strong id="actioninputs">
+    ActionInputs :heavy_check_mark:
+  </strong>
+</summary>
+<br>
+
+- The `ActionInputs` contains 9 members.
+- 55 total lines of source code.
+- Approximately 26 lines of executable code.
+- The highest cyclomatic complexity is 3 :heavy_check_mark:.
+
+| Member kind | Line number | Maintainability index | Cyclomatic complexity | Depth of inheritance | Class coupling | Lines of source / executable code |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| Field | [8](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/ActionInputs.cs#L8 "string ActionInputs._repositoryName") | 93 | 0 :heavy_check_mark: | 0 | 0 | 1 / 1 |
+| Field | [9](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/ActionInputs.cs#L9 "string ActionInputs._branchName") | 93 | 0 :heavy_check_mark: | 0 | 0 | 1 / 1 |
+| Method | [11](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/ActionInputs.cs#L11 "ActionInputs.ActionInputs()") | 82 | 2 :heavy_check_mark: | 0 | 1 | 8 / 3 |
+| Property | [23](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/ActionInputs.cs#L23 "string ActionInputs.Owner") | 100 | 2 :heavy_check_mark: | 0 | 2 | 4 / 3 |
+| Property | [28](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/ActionInputs.cs#L28 "string ActionInputs.Name") | 93 | 2 :heavy_check_mark: | 0 | 2 | 8 / 5 |
+| Property | [37](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/ActionInputs.cs#L37 "string ActionInputs.Branch") | 93 | 2 :heavy_check_mark: | 0 | 2 | 8 / 5 |
+| Property | [46](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/ActionInputs.cs#L46 "string ActionInputs.Directory") | 100 | 2 :heavy_check_mark: | 0 | 2 | 4 / 3 |
+| Property | [51](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/ActionInputs.cs#L51 "string ActionInputs.WorkspaceDirectory") | 100 | 2 :heavy_check_mark: | 0 | 2 | 4 / 3 |
+| Method | [53](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/ActionInputs.cs#L53 "void ActionInputs.ParseAndAssign(string? value, Action<string> assign)") | 82 | 3 :heavy_check_mark: | 0 | 4 | 7 / 2 |
+
+<a href="#dotnet-githubaction">:top: back to DotNet.GitHubAction</a>
+
+</details>
+
+</details>
+
+<details>
+<summary>
+  <strong id="dotnet-githubaction-analyzers">
+    DotNet.GitHubAction.Analyzers :heavy_check_mark:
+  </strong>
+</summary>
+<br>
+
+The `DotNet.GitHubAction.Analyzers` namespace contains 1 named types.
+
+- 1 named types.
+- 44 total lines of source code.
+- Approximately 13 lines of executable code.
+- The highest cyclomatic complexity is 3 :heavy_check_mark:.
+
+<details>
+<summary>
+  <strong id="projectmetricdataanalyzer">
+    ProjectMetricDataAnalyzer :heavy_check_mark:
+  </strong>
+</summary>
+<br>
+
+- The `ProjectMetricDataAnalyzer` contains 3 members.
+- 41 total lines of source code.
+- Approximately 13 lines of executable code.
+- The highest cyclomatic complexity is 3 :heavy_check_mark:.
+
+| Member kind | Line number | Maintainability index | Cyclomatic complexity | Depth of inheritance | Class coupling | Lines of source / executable code |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| Field | [13](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Analyzers/ProjectMetricDataAnalyzer.cs#L13 "ILogger<ProjectMetricDataAnalyzer> ProjectMetricDataAnalyzer._logger") | 100 | 0 :heavy_check_mark: | 0 | 1 | 1 / 0 |
+| Method | [15](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Analyzers/ProjectMetricDataAnalyzer.cs#L15 "ProjectMetricDataAnalyzer.ProjectMetricDataAnalyzer(ILogger<ProjectMetricDataAnalyzer> logger)") | 96 | 1 :heavy_check_mark: | 0 | 1 | 1 / 1 |
+| Method | [17](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Analyzers/ProjectMetricDataAnalyzer.cs#L17 "Task<ImmutableArray<(string, CodeAnalysisMetricData)>> ProjectMetricDataAnalyzer.AnalyzeAsync(ProjectWorkspace workspace, string path, CancellationToken cancellation)") | 61 | 3 :heavy_check_mark: | 0 | 10 | 34 / 12 |
+
+<a href="#dotnet-githubaction-analyzers">:top: back to DotNet.GitHubAction.Analyzers</a>
+
+</details>
+
+</details>
+
+<details>
+<summary>
+  <strong id="dotnet-githubaction-extensions">
+    DotNet.GitHubAction.Extensions :heavy_check_mark:
+  </strong>
+</summary>
+<br>
+
+The `DotNet.GitHubAction.Extensions` namespace contains 3 named types.
+
+- 3 named types.
+- 305 total lines of source code.
+- Approximately 92 lines of executable code.
+- The highest cyclomatic complexity is 5 :heavy_check_mark:.
+
+<details>
+<summary>
+  <strong id="codeanalysismetricdataextensions">
+    CodeAnalysisMetricDataExtensions :heavy_check_mark:
+  </strong>
+</summary>
+<br>
+
+- The `CodeAnalysisMetricDataExtensions` contains 6 members.
+- 42 total lines of source code.
+- Approximately 14 lines of executable code.
+- The highest cyclomatic complexity is 1 :heavy_check_mark:.
+
+| Member kind | Line number | Maintainability index | Cyclomatic complexity | Depth of inheritance | Class coupling | Lines of source / executable code |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| Method | [11](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeAnalysisMetricDataExtensions.cs#L11 "string CodeAnalysisMetricDataExtensions.ToCyclomaticComplexityEmoji(CodeAnalysisMetricData metric)") | 88 | 1 :heavy_check_mark: | 0 | 2 | 9 / 1 |
+| Method | [21](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeAnalysisMetricDataExtensions.cs#L21 "int CodeAnalysisMetricDataExtensions.CountNamespaces(CodeAnalysisMetricData metric)") | 100 | 1 :heavy_check_mark: | 0 | 2 | 2 / 1 |
+| Method | [24](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeAnalysisMetricDataExtensions.cs#L24 "int CodeAnalysisMetricDataExtensions.CountNamedTypes(CodeAnalysisMetricData metric)") | 100 | 1 :heavy_check_mark: | 0 | 2 | 2 / 1 |
+| Method | [27](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeAnalysisMetricDataExtensions.cs#L27 "int CodeAnalysisMetricDataExtensions.CountKind(CodeAnalysisMetricData metric, SymbolKind kind)") | 82 | 1 :heavy_check_mark: | 0 | 4 | 4 / 3 |
+| Method | [32](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeAnalysisMetricDataExtensions.cs#L32 "(int Complexity, string Emoji) CodeAnalysisMetricDataExtensions.FindHighestCyclomaticComplexity(CodeAnalysisMetricData metric)") | 73 | 1 :heavy_check_mark: | 0 | 4 | 12 / 6 |
+| Method | [45](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeAnalysisMetricDataExtensions.cs#L45 "IEnumerable<TSource> CodeAnalysisMetricDataExtensions.Flatten<TSource>(IEnumerable<TSource> parent, Func<TSource, IEnumerable<TSource>> childSelector)") | 87 | 1 :heavy_check_mark: | 0 | 3 | 5 / 2 |
+
+<a href="#dotnet-githubaction-extensions">:top: back to DotNet.GitHubAction.Extensions</a>
+
+</details>
+
+<details>
+<summary>
+  <strong id="codemetricsreportextensions">
+    CodeMetricsReportExtensions :heavy_check_mark:
+  </strong>
+</summary>
+<br>
+
+- The `CodeMetricsReportExtensions` contains 13 members.
+- 247 total lines of source code.
+- Approximately 77 lines of executable code.
+- The highest cyclomatic complexity is 5 :heavy_check_mark:.
+
+| Member kind | Line number | Maintainability index | Cyclomatic complexity | Depth of inheritance | Class coupling | Lines of source / executable code |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| Method | [16](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L16 "string CodeMetricsReportExtensions.ToMarkDownBody(Dictionary<string, CodeAnalysisMetricData> metricData, ActionInputs actionInputs)") | 46 | 5 :heavy_check_mark: | 0 | 14 | 96 / 35 |
+| Method | [113](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L113 "void CodeMetricsReportExtensions.AppendMetricDefinitions(MarkdownDocument document)") | 66 | 2 :heavy_check_mark: | 0 | 5 | 24 / 7 |
+| Method | [138](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L138 "void CodeMetricsReportExtensions.AppendMaintainedByBotMessage(MarkdownDocument document)") | 98 | 1 :heavy_check_mark: | 0 | 3 | 3 / 1 |
+| Method | [142](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L142 "string CodeMetricsReportExtensions.DisplayName(ISymbol symbol)") | 69 | 2 :heavy_check_mark: | 0 | 3 | 15 / 7 |
+| Method | [158](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L158 "string CodeMetricsReportExtensions.ToDisplayName(CodeAnalysisMetricData metric)") | 100 | 1 :heavy_check_mark: | 0 | 2 | 14 / 1 |
+| Method | [173](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L173 "MarkdownTableRow CodeMetricsReportExtensions.ToTableRowFrom(CodeAnalysisMetricData metric, Func<CodeAnalysisMetricData, string> toDisplayName, ActionInputs actionInputs)") | 65 | 1 :heavy_check_mark: | 0 | 6 | 23 / 8 |
+| Method | [197](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L197 "(string elementId, string displayName, string anchorLink, (int highestComplexity, string emoji)) CodeMetricsReportExtensions.ToIdAndAnchorPair(CodeAnalysisMetricData metric)") | 71 | 1 :heavy_check_mark: | 0 | 5 | 10 / 5 |
+| Method | [208](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L208 "IMarkdownDocument CodeMetricsReportExtensions.OpenCollapsibleSection(IMarkdownDocument document, string elementId, string symbolName, string highestComplexity)") | 91 | 1 :heavy_check_mark: | 0 | 2 | 9 / 1 |
+| Method | [218](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L218 "string CodeMetricsReportExtensions.PrepareElementId(string value)") | 88 | 1 :heavy_check_mark: | 0 | 1 | 8 / 1 |
+| Method | [227](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L227 "IMarkdownDocument CodeMetricsReportExtensions.CloseCollapsibleSection(IMarkdownDocument document)") | 98 | 1 :heavy_check_mark: | 0 | 2 | 2 / 1 |
+| Method | [230](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L230 "IMarkdownDocument CodeMetricsReportExtensions.DisableMarkdownLinterAndCaptureConfig(IMarkdownDocument document)") | 98 | 1 :heavy_check_mark: | 0 | 2 | 4 / 1 |
+| Method | [235](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L235 "IMarkdownDocument CodeMetricsReportExtensions.RestoreMarkdownLinter(IMarkdownDocument document)") | 98 | 1 :heavy_check_mark: | 0 | 2 | 3 / 1 |
+| Method | [239](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L239 "string CodeMetricsReportExtensions.ToLineNumberUrl(ISymbol symbol, string symbolDisplayName, ActionInputs actionInputs)") | 64 | 3 :heavy_check_mark: | 0 | 3 | 21 / 8 |
+
+<a href="#dotnet-githubaction-extensions">:top: back to DotNet.GitHubAction.Extensions</a>
+
+</details>
+
+<details>
+<summary>
+  <strong id="servicecollectionextensions">
+    ServiceCollectionExtensions :heavy_check_mark:
+  </strong>
+</summary>
+<br>
+
+- The `ServiceCollectionExtensions` contains 1 members.
+- 7 total lines of source code.
+- Approximately 1 lines of executable code.
+- The highest cyclomatic complexity is 1 :heavy_check_mark:.
+
+| Member kind | Line number | Maintainability index | Cyclomatic complexity | Depth of inheritance | Class coupling | Lines of source / executable code |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| Method | [9](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/ServiceCollectionExtensions.cs#L9 "IServiceCollection ServiceCollectionExtensions.AddGitHubActionServices(IServiceCollection services)") | 100 | 1 :heavy_check_mark: | 0 | 2 | 4 / 1 |
+
+<a href="#dotnet-githubaction-extensions">:top: back to DotNet.GitHubAction.Extensions</a>
+
+</details>
+
+</details>
+
+<a href="#dotnet-githubaction">:top: back to DotNet.GitHubAction</a>
+
 <div id='dotnet-codeanalysis'></div>
 
 ## DotNet.CodeAnalysis :feelsgood:
@@ -557,241 +792,6 @@ The `DotNet.CodeAnalysis.VisualBasic` namespace contains 1 named types.
 </details>
 
 <a href="#dotnet-codeanalysis">:top: back to DotNet.CodeAnalysis</a>
-
-<div id='dotnet-githubaction'></div>
-
-## DotNet.GitHubAction :heavy_check_mark:
-
-The *DotNet.GitHubAction.csproj* project file contains:
-
-- 4 namespaces.
-- 6 named types.
-- 519 total lines of source code.
-- Approximately 223 lines of executable code.
-- The highest cyclomatic complexity is 7 :heavy_check_mark:.
-
-<details>
-<summary>
-  <strong id="global+namespace">
-    &lt;global namespace&gt; :heavy_check_mark:
-  </strong>
-</summary>
-<br>
-
-The `<global namespace>` namespace contains 1 named types.
-
-- 1 named types.
-- 112 total lines of source code.
-- Approximately 92 lines of executable code.
-- The highest cyclomatic complexity is 7 :heavy_check_mark:.
-
-<details>
-<summary>
-  <strong id="program$">
-    &lt;Program&gt;$ :heavy_check_mark:
-  </strong>
-</summary>
-<br>
-
-- The `<Program>$` contains 1 members.
-- 112 total lines of source code.
-- Approximately 92 lines of executable code.
-- The highest cyclomatic complexity is 7 :heavy_check_mark:.
-
-| Member kind | Line number | Maintainability index | Cyclomatic complexity | Depth of inheritance | Class coupling | Lines of source / executable code |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| Method | [1](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Program.cs#L1 "<top-level-statements-entry-point>") | 43 | 7 :heavy_check_mark: | 0 | 19 | 112 / 46 |
-
-<a href="#global+namespace">:top: back to &lt;global namespace&gt;</a>
-
-</details>
-
-</details>
-
-<details>
-<summary>
-  <strong id="dotnet-githubaction">
-    DotNet.GitHubAction :heavy_check_mark:
-  </strong>
-</summary>
-<br>
-
-The `DotNet.GitHubAction` namespace contains 1 named types.
-
-- 1 named types.
-- 58 total lines of source code.
-- Approximately 26 lines of executable code.
-- The highest cyclomatic complexity is 3 :heavy_check_mark:.
-
-<details>
-<summary>
-  <strong id="actioninputs">
-    ActionInputs :heavy_check_mark:
-  </strong>
-</summary>
-<br>
-
-- The `ActionInputs` contains 9 members.
-- 55 total lines of source code.
-- Approximately 26 lines of executable code.
-- The highest cyclomatic complexity is 3 :heavy_check_mark:.
-
-| Member kind | Line number | Maintainability index | Cyclomatic complexity | Depth of inheritance | Class coupling | Lines of source / executable code |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| Field | [8](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/ActionInputs.cs#L8 "string ActionInputs._repositoryName") | 93 | 0 :heavy_check_mark: | 0 | 0 | 1 / 1 |
-| Field | [9](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/ActionInputs.cs#L9 "string ActionInputs._branchName") | 93 | 0 :heavy_check_mark: | 0 | 0 | 1 / 1 |
-| Method | [11](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/ActionInputs.cs#L11 "ActionInputs.ActionInputs()") | 82 | 2 :heavy_check_mark: | 0 | 1 | 8 / 3 |
-| Property | [23](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/ActionInputs.cs#L23 "string ActionInputs.Owner") | 100 | 2 :heavy_check_mark: | 0 | 2 | 4 / 3 |
-| Property | [28](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/ActionInputs.cs#L28 "string ActionInputs.Name") | 93 | 2 :heavy_check_mark: | 0 | 2 | 8 / 5 |
-| Property | [37](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/ActionInputs.cs#L37 "string ActionInputs.Branch") | 93 | 2 :heavy_check_mark: | 0 | 2 | 8 / 5 |
-| Property | [46](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/ActionInputs.cs#L46 "string ActionInputs.Directory") | 100 | 2 :heavy_check_mark: | 0 | 2 | 4 / 3 |
-| Property | [51](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/ActionInputs.cs#L51 "string ActionInputs.WorkspaceDirectory") | 100 | 2 :heavy_check_mark: | 0 | 2 | 4 / 3 |
-| Method | [53](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/ActionInputs.cs#L53 "void ActionInputs.ParseAndAssign(string? value, Action<string> assign)") | 82 | 3 :heavy_check_mark: | 0 | 4 | 7 / 2 |
-
-<a href="#dotnet-githubaction">:top: back to DotNet.GitHubAction</a>
-
-</details>
-
-</details>
-
-<details>
-<summary>
-  <strong id="dotnet-githubaction-analyzers">
-    DotNet.GitHubAction.Analyzers :heavy_check_mark:
-  </strong>
-</summary>
-<br>
-
-The `DotNet.GitHubAction.Analyzers` namespace contains 1 named types.
-
-- 1 named types.
-- 44 total lines of source code.
-- Approximately 13 lines of executable code.
-- The highest cyclomatic complexity is 3 :heavy_check_mark:.
-
-<details>
-<summary>
-  <strong id="projectmetricdataanalyzer">
-    ProjectMetricDataAnalyzer :heavy_check_mark:
-  </strong>
-</summary>
-<br>
-
-- The `ProjectMetricDataAnalyzer` contains 3 members.
-- 41 total lines of source code.
-- Approximately 13 lines of executable code.
-- The highest cyclomatic complexity is 3 :heavy_check_mark:.
-
-| Member kind | Line number | Maintainability index | Cyclomatic complexity | Depth of inheritance | Class coupling | Lines of source / executable code |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| Field | [13](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Analyzers/ProjectMetricDataAnalyzer.cs#L13 "ILogger<ProjectMetricDataAnalyzer> ProjectMetricDataAnalyzer._logger") | 100 | 0 :heavy_check_mark: | 0 | 1 | 1 / 0 |
-| Method | [15](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Analyzers/ProjectMetricDataAnalyzer.cs#L15 "ProjectMetricDataAnalyzer.ProjectMetricDataAnalyzer(ILogger<ProjectMetricDataAnalyzer> logger)") | 96 | 1 :heavy_check_mark: | 0 | 1 | 1 / 1 |
-| Method | [17](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Analyzers/ProjectMetricDataAnalyzer.cs#L17 "Task<ImmutableArray<(string, CodeAnalysisMetricData)>> ProjectMetricDataAnalyzer.AnalyzeAsync(ProjectWorkspace workspace, string path, CancellationToken cancellation)") | 61 | 3 :heavy_check_mark: | 0 | 10 | 34 / 12 |
-
-<a href="#dotnet-githubaction-analyzers">:top: back to DotNet.GitHubAction.Analyzers</a>
-
-</details>
-
-</details>
-
-<details>
-<summary>
-  <strong id="dotnet-githubaction-extensions">
-    DotNet.GitHubAction.Extensions :heavy_check_mark:
-  </strong>
-</summary>
-<br>
-
-The `DotNet.GitHubAction.Extensions` namespace contains 3 named types.
-
-- 3 named types.
-- 305 total lines of source code.
-- Approximately 92 lines of executable code.
-- The highest cyclomatic complexity is 5 :heavy_check_mark:.
-
-<details>
-<summary>
-  <strong id="codeanalysismetricdataextensions">
-    CodeAnalysisMetricDataExtensions :heavy_check_mark:
-  </strong>
-</summary>
-<br>
-
-- The `CodeAnalysisMetricDataExtensions` contains 6 members.
-- 42 total lines of source code.
-- Approximately 14 lines of executable code.
-- The highest cyclomatic complexity is 1 :heavy_check_mark:.
-
-| Member kind | Line number | Maintainability index | Cyclomatic complexity | Depth of inheritance | Class coupling | Lines of source / executable code |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| Method | [11](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeAnalysisMetricDataExtensions.cs#L11 "string CodeAnalysisMetricDataExtensions.ToCyclomaticComplexityEmoji(CodeAnalysisMetricData metric)") | 88 | 1 :heavy_check_mark: | 0 | 2 | 9 / 1 |
-| Method | [21](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeAnalysisMetricDataExtensions.cs#L21 "int CodeAnalysisMetricDataExtensions.CountNamespaces(CodeAnalysisMetricData metric)") | 100 | 1 :heavy_check_mark: | 0 | 2 | 2 / 1 |
-| Method | [24](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeAnalysisMetricDataExtensions.cs#L24 "int CodeAnalysisMetricDataExtensions.CountNamedTypes(CodeAnalysisMetricData metric)") | 100 | 1 :heavy_check_mark: | 0 | 2 | 2 / 1 |
-| Method | [27](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeAnalysisMetricDataExtensions.cs#L27 "int CodeAnalysisMetricDataExtensions.CountKind(CodeAnalysisMetricData metric, SymbolKind kind)") | 82 | 1 :heavy_check_mark: | 0 | 4 | 4 / 3 |
-| Method | [32](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeAnalysisMetricDataExtensions.cs#L32 "(int Complexity, string Emoji) CodeAnalysisMetricDataExtensions.FindHighestCyclomaticComplexity(CodeAnalysisMetricData metric)") | 73 | 1 :heavy_check_mark: | 0 | 4 | 12 / 6 |
-| Method | [45](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeAnalysisMetricDataExtensions.cs#L45 "IEnumerable<TSource> CodeAnalysisMetricDataExtensions.Flatten<TSource>(IEnumerable<TSource> parent, Func<TSource, IEnumerable<TSource>> childSelector)") | 87 | 1 :heavy_check_mark: | 0 | 3 | 5 / 2 |
-
-<a href="#dotnet-githubaction-extensions">:top: back to DotNet.GitHubAction.Extensions</a>
-
-</details>
-
-<details>
-<summary>
-  <strong id="codemetricsreportextensions">
-    CodeMetricsReportExtensions :heavy_check_mark:
-  </strong>
-</summary>
-<br>
-
-- The `CodeMetricsReportExtensions` contains 13 members.
-- 247 total lines of source code.
-- Approximately 77 lines of executable code.
-- The highest cyclomatic complexity is 5 :heavy_check_mark:.
-
-| Member kind | Line number | Maintainability index | Cyclomatic complexity | Depth of inheritance | Class coupling | Lines of source / executable code |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| Method | [16](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L16 "string CodeMetricsReportExtensions.ToMarkDownBody(Dictionary<string, CodeAnalysisMetricData> metricData, ActionInputs actionInputs)") | 46 | 5 :heavy_check_mark: | 0 | 14 | 96 / 35 |
-| Method | [113](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L113 "void CodeMetricsReportExtensions.AppendMetricDefinitions(MarkdownDocument document)") | 66 | 2 :heavy_check_mark: | 0 | 5 | 24 / 7 |
-| Method | [138](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L138 "void CodeMetricsReportExtensions.AppendMaintainedByBotMessage(MarkdownDocument document)") | 98 | 1 :heavy_check_mark: | 0 | 3 | 3 / 1 |
-| Method | [142](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L142 "string CodeMetricsReportExtensions.DisplayName(ISymbol symbol)") | 69 | 2 :heavy_check_mark: | 0 | 3 | 15 / 7 |
-| Method | [158](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L158 "string CodeMetricsReportExtensions.ToDisplayName(CodeAnalysisMetricData metric)") | 100 | 1 :heavy_check_mark: | 0 | 2 | 14 / 1 |
-| Method | [173](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L173 "MarkdownTableRow CodeMetricsReportExtensions.ToTableRowFrom(CodeAnalysisMetricData metric, Func<CodeAnalysisMetricData, string> toDisplayName, ActionInputs actionInputs)") | 65 | 1 :heavy_check_mark: | 0 | 6 | 23 / 8 |
-| Method | [197](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L197 "(string elementId, string displayName, string anchorLink, (int highestComplexity, string emoji)) CodeMetricsReportExtensions.ToIdAndAnchorPair(CodeAnalysisMetricData metric)") | 71 | 1 :heavy_check_mark: | 0 | 5 | 10 / 5 |
-| Method | [208](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L208 "IMarkdownDocument CodeMetricsReportExtensions.OpenCollapsibleSection(IMarkdownDocument document, string elementId, string symbolName, string highestComplexity)") | 91 | 1 :heavy_check_mark: | 0 | 2 | 9 / 1 |
-| Method | [218](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L218 "string CodeMetricsReportExtensions.PrepareElementId(string value)") | 88 | 1 :heavy_check_mark: | 0 | 1 | 8 / 1 |
-| Method | [227](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L227 "IMarkdownDocument CodeMetricsReportExtensions.CloseCollapsibleSection(IMarkdownDocument document)") | 98 | 1 :heavy_check_mark: | 0 | 2 | 2 / 1 |
-| Method | [230](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L230 "IMarkdownDocument CodeMetricsReportExtensions.DisableMarkdownLinterAndCaptureConfig(IMarkdownDocument document)") | 98 | 1 :heavy_check_mark: | 0 | 2 | 4 / 1 |
-| Method | [235](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L235 "IMarkdownDocument CodeMetricsReportExtensions.RestoreMarkdownLinter(IMarkdownDocument document)") | 98 | 1 :heavy_check_mark: | 0 | 2 | 3 / 1 |
-| Method | [239](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/CodeMetricsReportExtensions.cs#L239 "string CodeMetricsReportExtensions.ToLineNumberUrl(ISymbol symbol, string symbolDisplayName, ActionInputs actionInputs)") | 64 | 3 :heavy_check_mark: | 0 | 3 | 21 / 8 |
-
-<a href="#dotnet-githubaction-extensions">:top: back to DotNet.GitHubAction.Extensions</a>
-
-</details>
-
-<details>
-<summary>
-  <strong id="servicecollectionextensions">
-    ServiceCollectionExtensions :heavy_check_mark:
-  </strong>
-</summary>
-<br>
-
-- The `ServiceCollectionExtensions` contains 1 members.
-- 7 total lines of source code.
-- Approximately 1 lines of executable code.
-- The highest cyclomatic complexity is 1 :heavy_check_mark:.
-
-| Member kind | Line number | Maintainability index | Cyclomatic complexity | Depth of inheritance | Class coupling | Lines of source / executable code |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| Method | [9](https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Extensions/ServiceCollectionExtensions.cs#L9 "IServiceCollection ServiceCollectionExtensions.AddGitHubActionServices(IServiceCollection services)") | 100 | 1 :heavy_check_mark: | 0 | 2 | 4 / 1 |
-
-<a href="#dotnet-githubaction-extensions">:top: back to DotNet.GitHubAction.Extensions</a>
-
-</details>
-
-</details>
-
-<a href="#dotnet-githubaction">:top: back to DotNet.GitHubAction</a>
 
 ## Metric definitions
 
