@@ -27,7 +27,7 @@
     <PackageReference Include="Azure.Identity" Version="1.3.0" />
     <PackageReference Include="Azure.ResourceManager.Resources" Version="1.0.0-preview.1" />
     <PackageReference Include="Azure.ResourceManager.Storage" Version="1.0.0-preview.1" />
-    <PackageReference Include="Azure.Storage.Blobs" Version="12.8.0" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.8.1" />
   </ItemGroup>
 
 </Project>
