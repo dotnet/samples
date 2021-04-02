@@ -8,16 +8,22 @@ export async function checkStatus(token: string) {
   const owner = github.context.repo.owner;
   const repo = github.context.repo.repo;
 
-  //console.log('context.ref is: ${github.context.ref}');
+  const ref = github.context.ref
+  console.log({ ref })
+  
+  const { data: pullCommits } = await octokit.repos.listCommits({
+    owner: owner,
+    repo: repo,
+    pull_number: ref
+  });
 
-  //const { data: pullCommits } = await octokit.repos.listCommits({
-  //  owner: owner,
-  //  repo: repo,
-  //  pull_number: github.context.ref
-  //});
-
-  //const sha: string = pullCommits[0].sha;
-  const sha = process.env['GITHUB_SHA'] || null;
+  const prSha: string = pullCommits[0].sha;
+  const sha = process.env['GITHUB_SHA'] || null;  
+  
+  console.log({ owner })
+  console.log({ repo });
+  console.log({ sha });
+  console.log({ prSha });
 
   if (sha) {
 
@@ -34,9 +40,11 @@ export async function checkStatus(token: string) {
 
       // Get the most recent status.
       for (let status of statuses) {
-        if (status.context == 'OpenPublishing.Build') {
+        let context = status.context;
+        console.log({ context });
+        if (context == 'OpenPublishing.Build') {
           buildStatus = status;
-          debug("Found OPS status check.")
+          console.log("Found OPS status check.")
           break;
         }
       }
@@ -56,6 +64,8 @@ export async function checkStatus(token: string) {
     if (buildStatus != null && buildStatus.state == 'success') {
       if (buildStatus.description == 'Validation status: warnings') {
         // Build has warnings, so add a new commit status with state=failure.
+        console.log('Found build warnings.');
+        
         return await octokit.repos.createCommitStatus({
           owner: owner,
           repo: repo,
