@@ -90,7 +90,7 @@ function checkStatus(token) {
                 repo: repo,
                 pull_number: prNumber
             });
-            const sha = pullCommits[0].sha;
+            const sha = pullCommits[length - 1].sha;
             console.log({ sha });
             let buildStatus;
             // Get the completed build status.
