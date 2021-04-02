@@ -18,7 +18,6 @@ jobs:
     runs-on: ubuntu-latest
     name: Checks the OpenPublishing.Build status check for build warnings
     steps:
-    - uses: actions/checkout@v1
     - uses: dotnet/samples/.github/actions/status-checker@main
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}

@@ -26,6 +26,7 @@ function run() {
             const token = core.getInput('repo-token');
             // Wait 60 seconds before checking status check result.
             yield wait_1.wait(60000);
+            console.log('Waited 60 seconds.');
             yield status_checker_1.checkStatus(token);
         }
         catch (error) {
@@ -81,14 +82,19 @@ function checkStatus(token) {
         const octokit = github.getOctokit(token);
         const owner = github.context.repo.owner;
         const repo = github.context.repo.repo;
-        //console.log('context.ref is: ${github.context.ref}');
-        //const { data: pullCommits } = await octokit.repos.listCommits({
-        //  owner: owner,
-        //  repo: repo,
-        //  pull_number: github.context.ref
-        //});
-        //const sha: string = pullCommits[0].sha;
+        const ref = github.context.ref;
+        console.log({ ref });
+        const { data: pullCommits } = yield octokit.repos.listCommits({
+            owner: owner,
+            repo: repo,
+            pull_number: ref
+        });
+        const prSha = pullCommits[0].sha;
         const sha = process.env['GITHUB_SHA'] || null;
+        console.log({ owner });
+        console.log({ repo });
+        console.log({ sha });
+        console.log({ prSha });
         if (sha) {
             let buildStatus;
             // Get the completed build status.
@@ -100,9 +106,11 @@ function checkStatus(token) {
                 });
                 // Get the most recent status.
                 for (let status of statuses) {
-                    if (status.context == 'OpenPublishing.Build') {
+                    let context = status.context;
+                    console.log({ context });
+                    if (context == 'OpenPublishing.Build') {
                         buildStatus = status;
-                        core_1.debug("Found OPS status check.");
+                        console.log("Found OPS status check.");
                         break;
                     }
                 }
@@ -120,6 +128,7 @@ function checkStatus(token) {
             if (buildStatus != null && buildStatus.state == 'success') {
                 if (buildStatus.description == 'Validation status: warnings') {
                     // Build has warnings, so add a new commit status with state=failure.
+                    console.log('Found build warnings.');
                     return yield octokit.repos.createCommitStatus({
                         owner: owner,
                         repo: repo,
