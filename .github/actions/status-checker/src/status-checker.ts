@@ -7,23 +7,17 @@ export async function checkStatus(token: string) {
   const octokit = github.getOctokit(token);
   const owner = github.context.repo.owner;
   const repo = github.context.repo.repo;
-
-  const ref = github.context.ref
-  console.log({ ref })
+  const prNumber = github.context.payload.pull_request?.number;
+  console.log({ prNumber });
   
-  const { data: pullCommits } = await octokit.repos.listCommits({
+  const { data: pullCommits } = await octokit.rest.pulls.listCommits({
     owner: owner,
     repo: repo,
-    pull_number: ref
+    pull_number: prNumber
   });
 
-  const prSha: string = pullCommits[0].sha;
-  const sha = process.env['GITHUB_SHA'] || null;  
-  
-  console.log({ owner })
-  console.log({ repo });
+  const sha: string = pullCommits[0].sha;
   console.log({ sha });
-  console.log({ prSha });
 
   if (sha) {
 

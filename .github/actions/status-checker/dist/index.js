@@ -78,23 +78,20 @@ const core_1 = __webpack_require__(186);
 const github = __importStar(__webpack_require__(438));
 const wait_1 = __webpack_require__(817);
 function checkStatus(token) {
+    var _a;
     return __awaiter(this, void 0, void 0, function* () {
         const octokit = github.getOctokit(token);
         const owner = github.context.repo.owner;
         const repo = github.context.repo.repo;
-        const ref = github.context.ref;
-        console.log({ ref });
-        const { data: pullCommits } = yield octokit.repos.listCommits({
+        const prNumber = (_a = github.context.payload.pull_request) === null || _a === void 0 ? void 0 : _a.number;
+        console.log({ prNumber });
+        const { data: pullCommits } = yield octokit.rest.pulls.listCommits({
             owner: owner,
             repo: repo,
-            pull_number: ref
+            pull_number: prNumber
         });
-        const prSha = pullCommits[0].sha;
-        const sha = process.env['GITHUB_SHA'] || null;
-        console.log({ owner });
-        console.log({ repo });
+        const sha = pullCommits[0].sha;
         console.log({ sha });
-        console.log({ prSha });
         if (sha) {
             let buildStatus;
             // Get the completed build status.
