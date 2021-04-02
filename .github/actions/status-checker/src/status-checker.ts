@@ -7,19 +7,19 @@ export async function checkStatus(token: string) {
   const octokit = github.getOctokit(token);
   const owner = github.context.repo.owner;
   const repo = github.context.repo.repo;
-  const prNumber = github.context.payload.pull_request?.number;
+  const prNumber = github.context.payload.pull_request?.number || null;
   console.log({ prNumber });
-  
-  const { data: pullCommits } = await octokit.rest.pulls.listCommits({
-    owner: owner,
-    repo: repo,
-    pull_number: prNumber
-  });
 
-  const sha: string = pullCommits[0].sha;
-  console.log({ sha });
+  if (prNumber) {
 
-  if (sha) {
+    const { data: pullCommits } = await octokit.rest.pulls.listCommits({
+      owner: owner,
+      repo: repo,
+      pull_number: prNumber
+    });
+
+    const sha: string = pullCommits[0].sha;
+    console.log({ sha });
 
     let buildStatus: any;
 
@@ -34,23 +34,21 @@ export async function checkStatus(token: string) {
 
       // Get the most recent status.
       for (let status of statuses) {
-        let context = status.context;
-        console.log({ context });
-        if (context == 'OpenPublishing.Build') {
+        if (status.context == 'OpenPublishing.Build') {
           buildStatus = status;
-          console.log("Found OPS status check.")
           break;
         }
       }
 
       if (buildStatus != null && buildStatus.state == 'pending') {
+        console.log("Found OPS status check but it's still pending.")
         // Sleep for 10 seconds.
         await wait(10000);
-        debug("State is still pending.");
         continue;
       }
       else {
         // Status is no longer pending.
+        console.log("OPS status check is no longer in pending state.")
         break;
       }
     }
@@ -59,7 +57,7 @@ export async function checkStatus(token: string) {
       if (buildStatus.description == 'Validation status: warnings') {
         // Build has warnings, so add a new commit status with state=failure.
         console.log('Found build warnings.');
-        
+
         return await octokit.repos.createCommitStatus({
           owner: owner,
           repo: repo,
@@ -89,7 +87,7 @@ export async function checkStatus(token: string) {
       return null;
     }
   } else {
-    console.log("Unable to get GITHUB_SHA from the environment.");
+    console.log("Unable to get pull request number from context payload.");
     return null;
   }
 }

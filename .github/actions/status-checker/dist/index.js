@@ -74,7 +74,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.checkStatus = void 0;
-const core_1 = __webpack_require__(186);
 const github = __importStar(__webpack_require__(438));
 const wait_1 = __webpack_require__(817);
 function checkStatus(token) {
@@ -83,16 +82,16 @@ function checkStatus(token) {
         const octokit = github.getOctokit(token);
         const owner = github.context.repo.owner;
         const repo = github.context.repo.repo;
-        const prNumber = (_a = github.context.payload.pull_request) === null || _a === void 0 ? void 0 : _a.number;
+        const prNumber = ((_a = github.context.payload.pull_request) === null || _a === void 0 ? void 0 : _a.number) || null;
         console.log({ prNumber });
-        const { data: pullCommits } = yield octokit.rest.pulls.listCommits({
-            owner: owner,
-            repo: repo,
-            pull_number: prNumber
-        });
-        const sha = pullCommits[0].sha;
-        console.log({ sha });
-        if (sha) {
+        if (prNumber) {
+            const { data: pullCommits } = yield octokit.rest.pulls.listCommits({
+                owner: owner,
+                repo: repo,
+                pull_number: prNumber
+            });
+            const sha = pullCommits[0].sha;
+            console.log({ sha });
             let buildStatus;
             // Get the completed build status.
             for (let i = 0; i < 360; i += 10) {
@@ -103,22 +102,20 @@ function checkStatus(token) {
                 });
                 // Get the most recent status.
                 for (let status of statuses) {
-                    let context = status.context;
-                    console.log({ context });
-                    if (context == 'OpenPublishing.Build') {
+                    if (status.context == 'OpenPublishing.Build') {
                         buildStatus = status;
-                        console.log("Found OPS status check.");
                         break;
                     }
                 }
                 if (buildStatus != null && buildStatus.state == 'pending') {
+                    console.log("Found OPS status check but it's still pending.");
                     // Sleep for 10 seconds.
                     yield wait_1.wait(10000);
-                    core_1.debug("State is still pending.");
                     continue;
                 }
                 else {
                     // Status is no longer pending.
+                    console.log("OPS status check is no longer in pending state.");
                     break;
                 }
             }
@@ -154,7 +151,7 @@ function checkStatus(token) {
             }
         }
         else {
-            console.log("Unable to get GITHUB_SHA from the environment.");
+            console.log("Unable to get pull request number from context payload.");
             return null;
         }
     });
