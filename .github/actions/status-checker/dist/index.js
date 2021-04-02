@@ -85,7 +85,7 @@ function checkStatus(token) {
         const prNumber = ((_a = github.context.payload.pull_request) === null || _a === void 0 ? void 0 : _a.number) || null;
         console.log({ prNumber });
         if (prNumber) {
-            const { data: pullCommits } = yield octokit.rest.pulls.listCommits({
+            const { data: pullCommits } = yield octokit.pulls.listCommits({
                 owner: owner,
                 repo: repo,
                 pull_number: prNumber

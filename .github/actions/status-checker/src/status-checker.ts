@@ -12,7 +12,7 @@ export async function checkStatus(token: string) {
 
   if (prNumber) {
 
-    const { data: pullCommits } = await octokit.rest.pulls.listCommits({
+    const { data: pullCommits } = await octokit.pulls.listCommits({
       owner: owner,
       repo: repo,
       pull_number: prNumber
