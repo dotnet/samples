@@ -18,7 +18,7 @@ export async function checkStatus(token: string) {
       pull_number: prNumber
     });
 
-    const sha: string = pullCommits[length - 1].sha;
+    const sha: string = pullCommits[pullCommits.length - 1].sha;
     console.log({ sha });
 
     let buildStatus: any;
