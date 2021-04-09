@@ -24,7 +24,8 @@ export async function checkStatus(token: string) {
     let buildStatus: any;
 
     // Get the completed build status.
-    for (let i = 0; i < 360; i += 10) {
+    // Timeout after 10 minutes.
+    for (let i = 0; i < 600; i += 10) {
 
       const { data: statuses } = await octokit.repos.listCommitStatusesForRef({
         owner: owner,
@@ -40,16 +41,18 @@ export async function checkStatus(token: string) {
         }
       }
 
-      if (buildStatus != null && buildStatus.state == 'pending') {
-        console.log("Found OPS status check but it's still pending.")
-        // Sleep for 10 seconds.
-        await wait(10000);
-        continue;
-      }
-      else {
-        // Status is no longer pending.
-        console.log("OPS status check is no longer in pending state.")
-        break;
+      if (buildStatus != null) {
+        if (buildStatus.state == 'pending') {
+          console.log("Found OPS status check but it's still pending.")
+          // Sleep for 10 seconds.
+          await wait(10000);
+          continue;
+        }
+        else {
+          // Status is no longer pending.
+          console.log("OPS status check has completed.")
+          break;
+        }
       }
     }
 
@@ -74,11 +77,10 @@ export async function checkStatus(token: string) {
       }
     }
     else {
-
       if (buildStatus == null)
         console.log("Could not find the OpenPublishing.Build status check.");
       else {
-        // Build status is error, so merging will be blocked anyway.
+        // Build status is error/failure, so merging will be blocked anyway.
         // We don't need to add another status check.
         console.log("OpenPublishing.Build status is either failure or error.");
       }
