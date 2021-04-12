@@ -26,7 +26,8 @@ namespace DotNet.GitHubAction.Extensions
             document.AppendParagraph(
                 $"This file is dynamically maintained by a bot, *please do not* edit this by hand. It represents various [code metrics](https://aka.ms/dotnet/code-metrics), such as cyclomatic complexity, maintainability index, and so on.");
 
-            foreach ((string filePath, CodeAnalysisMetricData assemblyMetric) in metricData)
+            foreach ((string filePath, CodeAnalysisMetricData assemblyMetric)
+                in metricData.OrderBy(md => md.Key))
             {
                 var (assemblyId, assemblyDisplayName, assemblyLink, assemblyHighestComplexity) =
                     ToIdAndAnchorPair(assemblyMetric);
@@ -48,7 +49,8 @@ namespace DotNet.GitHubAction.Extensions
                     new MarkdownTextListItem($"The highest cyclomatic complexity is {FormatComplexity(assemblyHighestComplexity)}."));
 
                 foreach (var namespaceMetric
-                    in assemblyMetric.Children.Where(child => child.Symbol.Kind == SymbolKind.Namespace))
+                    in assemblyMetric.Children.Where(child => child.Symbol.Kind == SymbolKind.Namespace)
+                    .OrderBy(md => md.Symbol.Name))
                 {
                     var (namespaceId, namespaceSymbolName, namespaceLink, namespaceHighestComplexity) =
                         ToIdAndAnchorPair(namespaceMetric);
@@ -64,7 +66,8 @@ namespace DotNet.GitHubAction.Extensions
                         new MarkdownTextListItem($"Approximately {namespaceMetric.ExecutableLines:#,0} lines of executable code."),
                         new MarkdownTextListItem($"The highest cyclomatic complexity is {FormatComplexity(namespaceHighestComplexity)}."));
 
-                    foreach (var classMetric in namespaceMetric.Children)
+                    foreach (var classMetric in namespaceMetric.Children
+                        .OrderBy(md => md.Symbol.Name))
                     {
                         var (classId, classSymbolName, classLink, namedTypeHighestComplexity) = ToIdAndAnchorPair(classMetric);
                         OpenCollapsibleSection(
@@ -86,7 +89,7 @@ namespace DotNet.GitHubAction.Extensions
                             new("Lines of source / executable code", MarkdownTableTextAlignment.Center));
 
                         List<MarkdownTableRow> rows = new();
-                        foreach (var memberMetric in classMetric.Children)
+                        foreach (var memberMetric in classMetric.Children.OrderBy(md => md.Symbol.Name))
                         {
                             rows.Add(ToTableRowFrom(memberMetric, ToDisplayName, actionInputs));
                         }
@@ -239,7 +242,12 @@ namespace DotNet.GitHubAction.Extensions
         static string ToLineNumberUrl(
             ISymbol symbol, string symbolDisplayName, ActionInputs actionInputs)
         {
-            var location = symbol.Locations.First();
+            var location = symbol.Locations.FirstOrDefault();
+            if (location is null)
+            {
+                return "N/A";
+            }
+
             var lineNumber = location.GetLineSpan().StartLinePosition.Line + 1;
 
             if (location.SourceTree is { FilePath: { Length: > 0 } })
