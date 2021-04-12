@@ -205,7 +205,7 @@ namespace DotNet.GitHubAction.Extensions
             var highestComplexity = metric.FindHighestCyclomaticComplexity();
             var anchorLink = $"<a href=\"#{id}\">:top: back to {HttpUtility.HtmlEncode(displayName)}</a>";
 
-            return (id, displayName, anchorLink, highestComplexity);
+            return (id, displayName, anchorLink, (highestComplexity.Complexity, highestComplexity.Emoji ?? ":question:"));
         }
 
         static IMarkdownDocument OpenCollapsibleSection(
