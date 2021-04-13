@@ -40,7 +40,7 @@ namespace DotNet.GitHubAction.Extensions
                 .Select(m => (Metric: m, m.CyclomaticComplexity))
                 .OrderByDescending(_ => _.CyclomaticComplexity)
                 .Select(_ => (_.CyclomaticComplexity, _.Metric.ToCyclomaticComplexityEmoji()))
-                .First();
+                .FirstOrDefault();
 
         static IEnumerable<TSource> Flatten<TSource>(
             this IEnumerable<TSource> parent, Func<TSource, IEnumerable<TSource>> childSelector) =>
