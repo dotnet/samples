@@ -7,18 +7,23 @@ export async function checkStatus(token: string) {
   const octokit = github.getOctokit(token);
   const owner = github.context.repo.owner;
   const repo = github.context.repo.repo;
-  const prNumber = github.context.payload.pull_request?.number || null;
-  console.log({ prNumber });
 
-  if (prNumber) {
+  if (github.context.eventName === 'pull_request' && github.context.payload?.action) {
+    const prNumber = github.context.payload.number;
+    console.log({ prNumber });
 
-    const { data: pullCommits } = await octokit.pulls.listCommits({
-      owner: owner,
-      repo: repo,
-      pull_number: prNumber
-    });
+    let sha;
+    if (github.context.payload.action === 'synchronize') {
+      sha = github.context.payload.after;
+    }
+    else if (['opened', 'reopened'].includes(github.context.payload.action)) {
+      sha = github.context.payload.pull_request?.head.sha
+    }
+    else {
+      console.log('Unexpected payload action.');
+      return;
+    }
 
-    const sha: string = pullCommits[pullCommits.length - 1].sha;
     console.log({ sha });
 
     let buildStatus: any;
@@ -73,7 +78,7 @@ export async function checkStatus(token: string) {
       else {
         console.log("OpenPublishing.Build status check did not have warnings.");
         // Don't create a new status check.
-        return null;
+        return;
       }
     }
     else {
@@ -86,10 +91,10 @@ export async function checkStatus(token: string) {
       }
 
       // Don't create a new status check.
-      return null;
+      return;
     }
   } else {
-    console.log("Unable to get pull request number from context payload.");
-    return null;
+    console.log("Event is not a pull request or payload action is undefined.");
+    return;
   }
 }
