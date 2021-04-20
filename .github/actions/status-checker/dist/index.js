@@ -77,24 +77,30 @@ exports.checkStatus = void 0;
 const github = __importStar(__webpack_require__(438));
 const wait_1 = __webpack_require__(817);
 function checkStatus(token) {
-    var _a;
+    var _a, _b;
     return __awaiter(this, void 0, void 0, function* () {
         const octokit = github.getOctokit(token);
         const owner = github.context.repo.owner;
         const repo = github.context.repo.repo;
-        const prNumber = ((_a = github.context.payload.pull_request) === null || _a === void 0 ? void 0 : _a.number) || null;
-        console.log({ prNumber });
-        if (prNumber) {
-            const { data: pullCommits } = yield octokit.pulls.listCommits({
-                owner: owner,
-                repo: repo,
-                pull_number: prNumber
-            });
-            const sha = pullCommits[pullCommits.length - 1].sha;
+        if (github.context.eventName === 'pull_request' && ((_a = github.context.payload) === null || _a === void 0 ? void 0 : _a.action)) {
+            const prNumber = github.context.payload.number;
+            console.log({ prNumber });
+            let sha;
+            if (github.context.payload.action === 'synchronize') {
+                sha = github.context.payload.after;
+            }
+            else if (['opened', 'reopened'].includes(github.context.payload.action)) {
+                sha = (_b = github.context.payload.pull_request) === null || _b === void 0 ? void 0 : _b.head.sha;
+            }
+            else {
+                console.log('Unexpected payload action.');
+                return;
+            }
             console.log({ sha });
             let buildStatus;
             // Get the completed build status.
-            for (let i = 0; i < 360; i += 10) {
+            // Timeout after 10 minutes.
+            for (let i = 0; i < 600; i += 10) {
                 const { data: statuses } = yield octokit.repos.listCommitStatusesForRef({
                     owner: owner,
                     repo: repo,
@@ -107,16 +113,18 @@ function checkStatus(token) {
                         break;
                     }
                 }
-                if (buildStatus != null && buildStatus.state == 'pending') {
-                    console.log("Found OPS status check but it's still pending.");
-                    // Sleep for 10 seconds.
-                    yield wait_1.wait(10000);
-                    continue;
-                }
-                else {
-                    // Status is no longer pending.
-                    console.log("OPS status check is no longer in pending state.");
-                    break;
+                if (buildStatus != null) {
+                    if (buildStatus.state == 'pending') {
+                        console.log("Found OPS status check but it's still pending.");
+                        // Sleep for 10 seconds.
+                        yield wait_1.wait(10000);
+                        continue;
+                    }
+                    else {
+                        // Status is no longer pending.
+                        console.log("OPS status check has completed.");
+                        break;
+                    }
                 }
             }
             if (buildStatus != null && buildStatus.state == 'success') {
@@ -135,24 +143,24 @@ function checkStatus(token) {
                 else {
                     console.log("OpenPublishing.Build status check did not have warnings.");
                     // Don't create a new status check.
-                    return null;
+                    return;
                 }
             }
             else {
                 if (buildStatus == null)
                     console.log("Could not find the OpenPublishing.Build status check.");
                 else {
-                    // Build status is error, so merging will be blocked anyway.
+                    // Build status is error/failure, so merging will be blocked anyway.
                     // We don't need to add another status check.
                     console.log("OpenPublishing.Build status is either failure or error.");
                 }
                 // Don't create a new status check.
-                return null;
+                return;
             }
         }
         else {
-            console.log("Unable to get pull request number from context payload.");
-            return null;
+            console.log("Event is not a pull request or payload action is undefined.");
+            return;
         }
     });
 }
