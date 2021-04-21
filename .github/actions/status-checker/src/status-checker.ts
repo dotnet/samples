@@ -7,17 +7,18 @@ export async function checkStatus(token: string) {
   const octokit = github.getOctokit(token);
   const owner = github.context.repo.owner;
   const repo = github.context.repo.repo;
+  const payload = github.context.payload;
 
-  if (github.context.eventName === 'pull_request_target' && github.context.payload?.action) {
-    const prNumber = github.context.payload.number;
+  if (['pull_request', 'pull_request_target'].includes(github.context.eventName) && payload?.action) {
+    const prNumber = payload.number;
     console.log({ prNumber });
 
     let sha;
-    if (github.context.payload.action === 'synchronize') {
-      sha = github.context.payload.after;
+    if (payload.action === 'synchronize') {
+      sha = payload.after;
     }
-    else if (['opened', 'reopened'].includes(github.context.payload.action)) {
-      sha = github.context.payload.pull_request?.head.sha
+    else if (['opened', 'reopened'].includes(payload.action)) {
+      sha = payload.pull_request?.head.sha
     }
     else {
       console.log('Unexpected payload action.');

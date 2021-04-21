@@ -77,20 +77,21 @@ exports.checkStatus = void 0;
 const github = __importStar(__webpack_require__(438));
 const wait_1 = __webpack_require__(817);
 function checkStatus(token) {
-    var _a, _b;
+    var _a;
     return __awaiter(this, void 0, void 0, function* () {
         const octokit = github.getOctokit(token);
         const owner = github.context.repo.owner;
         const repo = github.context.repo.repo;
-        if (github.context.eventName === 'pull_request_target' && ((_a = github.context.payload) === null || _a === void 0 ? void 0 : _a.action)) {
-            const prNumber = github.context.payload.number;
+        const payload = github.context.payload;
+        if (['pull_request', 'pull_request_target'].includes(github.context.eventName) && (payload === null || payload === void 0 ? void 0 : payload.action)) {
+            const prNumber = payload.number;
             console.log({ prNumber });
             let sha;
-            if (github.context.payload.action === 'synchronize') {
-                sha = github.context.payload.after;
+            if (payload.action === 'synchronize') {
+                sha = payload.after;
             }
-            else if (['opened', 'reopened'].includes(github.context.payload.action)) {
-                sha = (_b = github.context.payload.pull_request) === null || _b === void 0 ? void 0 : _b.head.sha;
+            else if (['opened', 'reopened'].includes(payload.action)) {
+                sha = (_a = payload.pull_request) === null || _a === void 0 ? void 0 : _a.head.sha;
             }
             else {
                 console.log('Unexpected payload action.');
