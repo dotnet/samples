@@ -86,18 +86,8 @@ function checkStatus(token) {
         if (['pull_request', 'pull_request_target'].includes(github.context.eventName) && (payload === null || payload === void 0 ? void 0 : payload.action)) {
             const prNumber = payload.number;
             console.log({ prNumber });
-            let sha;
-            if (payload.action === 'synchronize') {
-                sha = payload.after;
-            }
-            else if (['opened', 'reopened'].includes(payload.action)) {
-                sha = (_a = payload.pull_request) === null || _a === void 0 ? void 0 : _a.head.sha;
-            }
-            else {
-                console.log('Unexpected payload action.');
-                return;
-            }
-            console.log({ sha });
+            const commit = (_a = payload.pull_request) === null || _a === void 0 ? void 0 : _a.head.sha;
+            console.log({ commit });
             let buildStatus;
             // Get the completed build status.
             // Timeout after 10 minutes.
@@ -105,7 +95,7 @@ function checkStatus(token) {
                 const { data: statuses } = yield octokit.repos.listCommitStatusesForRef({
                     owner: owner,
                     repo: repo,
-                    ref: sha
+                    ref: commit
                 });
                 // Get the most recent status.
                 for (let status of statuses) {
@@ -135,7 +125,7 @@ function checkStatus(token) {
                     return yield octokit.repos.createCommitStatus({
                         owner: owner,
                         repo: repo,
-                        sha: sha,
+                        sha: commit,
                         state: 'failure',
                         context: 'Check for build warnings',
                         description: 'Please fix build warnings before merging.',

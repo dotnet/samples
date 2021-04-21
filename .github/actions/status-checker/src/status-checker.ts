@@ -13,19 +13,8 @@ export async function checkStatus(token: string) {
     const prNumber = payload.number;
     console.log({ prNumber });
 
-    let sha;
-    if (payload.action === 'synchronize') {
-      sha = payload.after;
-    }
-    else if (['opened', 'reopened'].includes(payload.action)) {
-      sha = payload.pull_request?.head.sha
-    }
-    else {
-      console.log('Unexpected payload action.');
-      return;
-    }
-
-    console.log({ sha });
+    const commit = payload.pull_request?.head.sha;
+    console.log({ commit });
 
     let buildStatus: any;
 
@@ -36,7 +25,7 @@ export async function checkStatus(token: string) {
       const { data: statuses } = await octokit.repos.listCommitStatusesForRef({
         owner: owner,
         repo: repo,
-        ref: sha
+        ref: commit
       });
 
       // Get the most recent status.
@@ -70,7 +59,7 @@ export async function checkStatus(token: string) {
         return await octokit.repos.createCommitStatus({
           owner: owner,
           repo: repo,
-          sha: sha,
+          sha: commit,
           state: 'failure',
           context: 'Check for build warnings',
           description: 'Please fix build warnings before merging.',
