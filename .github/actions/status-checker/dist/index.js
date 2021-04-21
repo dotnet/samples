@@ -82,7 +82,7 @@ function checkStatus(token) {
         const octokit = github.getOctokit(token);
         const owner = github.context.repo.owner;
         const repo = github.context.repo.repo;
-        if (github.context.eventName === 'pull_request' && ((_a = github.context.payload) === null || _a === void 0 ? void 0 : _a.action)) {
+        if (github.context.eventName === 'pull_request_target' && ((_a = github.context.payload) === null || _a === void 0 ? void 0 : _a.action)) {
             const prNumber = github.context.payload.number;
             console.log({ prNumber });
             let sha;
