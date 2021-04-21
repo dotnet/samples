@@ -77,26 +77,17 @@ exports.checkStatus = void 0;
 const github = __importStar(__webpack_require__(438));
 const wait_1 = __webpack_require__(817);
 function checkStatus(token) {
-    var _a, _b;
+    var _a;
     return __awaiter(this, void 0, void 0, function* () {
         const octokit = github.getOctokit(token);
         const owner = github.context.repo.owner;
         const repo = github.context.repo.repo;
-        if (github.context.eventName === 'pull_request_target' && ((_a = github.context.payload) === null || _a === void 0 ? void 0 : _a.action)) {
-            const prNumber = github.context.payload.number;
+        const payload = github.context.payload;
+        if (['pull_request', 'pull_request_target'].includes(github.context.eventName) && (payload === null || payload === void 0 ? void 0 : payload.action)) {
+            const prNumber = payload.number;
             console.log({ prNumber });
-            let sha;
-            if (github.context.payload.action === 'synchronize') {
-                sha = github.context.payload.after;
-            }
-            else if (['opened', 'reopened'].includes(github.context.payload.action)) {
-                sha = (_b = github.context.payload.pull_request) === null || _b === void 0 ? void 0 : _b.head.sha;
-            }
-            else {
-                console.log('Unexpected payload action.');
-                return;
-            }
-            console.log({ sha });
+            const commit = (_a = payload.pull_request) === null || _a === void 0 ? void 0 : _a.head.sha;
+            console.log({ commit });
             let buildStatus;
             // Get the completed build status.
             // Timeout after 10 minutes.
@@ -104,7 +95,7 @@ function checkStatus(token) {
                 const { data: statuses } = yield octokit.repos.listCommitStatusesForRef({
                     owner: owner,
                     repo: repo,
-                    ref: sha
+                    ref: commit
                 });
                 // Get the most recent status.
                 for (let status of statuses) {
@@ -134,7 +125,7 @@ function checkStatus(token) {
                     return yield octokit.repos.createCommitStatus({
                         owner: owner,
                         repo: repo,
-                        sha: sha,
+                        sha: commit,
                         state: 'failure',
                         context: 'Check for build warnings',
                         description: 'Please fix build warnings before merging.',
