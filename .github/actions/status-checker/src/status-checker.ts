@@ -7,24 +7,14 @@ export async function checkStatus(token: string) {
   const octokit = github.getOctokit(token);
   const owner = github.context.repo.owner;
   const repo = github.context.repo.repo;
+  const payload = github.context.payload;
 
-  if (github.context.eventName === 'pull_request' && github.context.payload?.action) {
-    const prNumber = github.context.payload.number;
+  if (['pull_request', 'pull_request_target'].includes(github.context.eventName) && payload?.action) {
+    const prNumber = payload.number;
     console.log({ prNumber });
 
-    let sha;
-    if (github.context.payload.action === 'synchronize') {
-      sha = github.context.payload.after;
-    }
-    else if (['opened', 'reopened'].includes(github.context.payload.action)) {
-      sha = github.context.payload.pull_request?.head.sha
-    }
-    else {
-      console.log('Unexpected payload action.');
-      return;
-    }
-
-    console.log({ sha });
+    const commit = payload.pull_request?.head.sha;
+    console.log({ commit });
 
     let buildStatus: any;
 
@@ -35,7 +25,7 @@ export async function checkStatus(token: string) {
       const { data: statuses } = await octokit.repos.listCommitStatusesForRef({
         owner: owner,
         repo: repo,
-        ref: sha
+        ref: commit
       });
 
       // Get the most recent status.
@@ -69,7 +59,7 @@ export async function checkStatus(token: string) {
         return await octokit.repos.createCommitStatus({
           owner: owner,
           repo: repo,
-          sha: sha,
+          sha: commit,
           state: 'failure',
           context: 'Check for build warnings',
           description: 'Please fix build warnings before merging.',
