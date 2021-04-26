@@ -193,7 +193,6 @@ updates:
     open-pull-requests-limit: 5
     ignore:
      - dependency-name: "Newtonsoft.Json"
-       versions: ["12.*"]
   - package-ecosystem: "nuget"
     directory: "/core/extensions/AppWithPlugin/UVPlugin" #UVPlugin.csproj
     schedule:
