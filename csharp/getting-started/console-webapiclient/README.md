@@ -22,7 +22,7 @@ This sample demonstrates making HTTP requests to a web server, using `async` and
 
 To build and run the sample, type the following command:
 
-```
+```dotnetcli
 dotnet run
 ```
 
