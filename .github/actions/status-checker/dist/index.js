@@ -101,9 +101,27 @@ function checkStatus(token) {
                     break;
                 }
             }
+            // Loop and wait if there's no OPS build status yet.
+            // (This is unusual.)
+            for (let i = 0; i < 30 && buildStatus == null; i++) {
+                // Sleep for 10 seconds.
+                yield wait_1.wait(10000);
+                const { data: statuses } = yield octokit.repos.listCommitStatusesForRef({
+                    owner: owner,
+                    repo: repo,
+                    ref: commit
+                });
+                // Get the most recent OPS status.
+                for (let status of statuses) {
+                    if (status.context == 'OpenPublishing.Build') {
+                        buildStatus = status;
+                        break;
+                    }
+                }
+            }
             // Didn't find OPS status. This is bad.
             if (buildStatus == null) {
-                throw new Error('Did not find OPS status check.');
+                throw new Error('Did not find OPS status check. Please close/reopen the pull request.');
             }
             // Check state of OPS status check.
             while (buildStatus.state == 'pending') {

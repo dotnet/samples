@@ -17,7 +17,7 @@ export async function checkStatus(token: string) {
     console.log({ commit });
 
     let buildStatus: any;
-    
+
     const { data: statuses } = await octokit.repos.listCommitStatusesForRef({
       owner: owner,
       repo: repo,
@@ -31,27 +31,48 @@ export async function checkStatus(token: string) {
         break;
       }
     }
-    
-    // Didn't find OPS status. This is bad.
-    if (buildStatus == null)
-    {
-      throw new Error('Did not find OPS status check.')
-    }
-    
-    // Check state of OPS status check.
-    while (buildStatus.state == 'pending') {
-      console.log("Found OPS status check in pending state.")
-      
+
+    // Loop and wait if there's no OPS build status yet.
+    // (This is unusual.)
+    for (let i = 0; i < 30 && buildStatus == null; i++) {
+
       // Sleep for 10 seconds.
       await wait(10000);
       
+      const { data: statuses } = await octokit.repos.listCommitStatusesForRef({
+        owner: owner,
+        repo: repo,
+        ref: commit
+      });
+  
+      // Get the most recent OPS status.
+      for (let status of statuses) {
+        if (status.context == 'OpenPublishing.Build') {
+          buildStatus = status;
+          break;
+        }
+      }
+    }
+
+    // Didn't find OPS status. This is bad.
+    if (buildStatus == null) {
+      throw new Error('Did not find OPS status check. Please close/reopen the pull request.')
+    }
+
+    // Check state of OPS status check.
+    while (buildStatus.state == 'pending') {
+      console.log("Found OPS status check in pending state.")
+
+      // Sleep for 10 seconds.
+      await wait(10000);
+
       // Get latest OPS status.
       const { data: statuses } = await octokit.repos.listCommitStatusesForRef({
         owner: owner,
         repo: repo,
         ref: commit
       });
-      
+
       buildStatus = null;
       for (let status of statuses) {
         if (status.context == 'OpenPublishing.Build') {
@@ -59,15 +80,14 @@ export async function checkStatus(token: string) {
           break;
         }
       }
-      
+
       // This should never happen since if nothing else,
       // we'll find the OPS status we found initially.
-      if (buildStatus == null)
-      {
+      if (buildStatus == null) {
         throw new Error('Did not find OPS status check.')
       }
     }
-    
+
     // Status is no longer pending.
     console.log("OPS status check has completed.")
 
