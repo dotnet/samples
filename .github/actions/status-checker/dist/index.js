@@ -89,36 +89,49 @@ function checkStatus(token) {
             const commit = (_a = payload.pull_request) === null || _a === void 0 ? void 0 : _a.head.sha;
             console.log({ commit });
             let buildStatus;
-            // Get the completed build status.
-            // Timeout after 10 minutes.
-            for (let i = 0; i < 600; i += 10) {
+            const { data: statuses } = yield octokit.repos.listCommitStatusesForRef({
+                owner: owner,
+                repo: repo,
+                ref: commit
+            });
+            // Get the most recent OPS status.
+            for (let status of statuses) {
+                if (status.context == 'OpenPublishing.Build') {
+                    buildStatus = status;
+                    break;
+                }
+            }
+            // Didn't find OPS status. This is bad.
+            if (buildStatus == null) {
+                throw new Error('Did not find OPS status check.');
+            }
+            // Check state of OPS status check.
+            while (buildStatus.state == 'pending') {
+                console.log("Found OPS status check in pending state.");
+                // Sleep for 10 seconds.
+                yield wait_1.wait(10000);
+                // Get latest OPS status.
                 const { data: statuses } = yield octokit.repos.listCommitStatusesForRef({
                     owner: owner,
                     repo: repo,
                     ref: commit
                 });
-                // Get the most recent status.
+                buildStatus = null;
                 for (let status of statuses) {
                     if (status.context == 'OpenPublishing.Build') {
                         buildStatus = status;
                         break;
                     }
                 }
-                if (buildStatus != null) {
-                    if (buildStatus.state == 'pending') {
-                        console.log("Found OPS status check but it's still pending.");
-                        // Sleep for 10 seconds.
-                        yield wait_1.wait(10000);
-                        continue;
-                    }
-                    else {
-                        // Status is no longer pending.
-                        console.log("OPS status check has completed.");
-                        break;
-                    }
+                // This should never happen since if nothing else,
+                // we'll find the OPS status we found initially.
+                if (buildStatus == null) {
+                    throw new Error('Did not find OPS status check.');
                 }
             }
-            if (buildStatus != null && buildStatus.state == 'success') {
+            // Status is no longer pending.
+            console.log("OPS status check has completed.");
+            if (buildStatus.state == 'success') {
                 if (buildStatus.description == 'Validation status: warnings') {
                     // Build has warnings, so add a new commit status with state=failure.
                     console.log('Found build warnings.');
@@ -138,13 +151,9 @@ function checkStatus(token) {
                 }
             }
             else {
-                if (buildStatus == null)
-                    console.log("Could not find the OpenPublishing.Build status check.");
-                else {
-                    // Build status is error/failure, so merging will be blocked anyway.
-                    // We don't need to add another status check.
-                    console.log("OpenPublishing.Build status is either failure or error.");
-                }
+                // Build status is error/failure, so merging will be blocked anyway.
+                // We don't need to add another status check.
+                console.log("OpenPublishing.Build status is either failure or error.");
                 // Don't create a new status check.
                 return;
             }
