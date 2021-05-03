@@ -124,7 +124,7 @@ function checkStatus(token) {
             }
             // Didn't find OPS status. This is bad.
             if (buildStatus == null) {
-                throw new Error("Did not find OPS status check after waiting for " + loops * 10 / 60 + " minutes. If it shows 'Expected — Waiting for status to be reported', please close/reopen the pull request to trigger a build.");
+                throw new Error("Did not find OPS status check after waiting for " + loops * 10 / 60 + " minutes. If it shows 'Expected — Waiting for status to be reported', close and reopen the pull request to trigger a build.");
             }
             // Check state of OPS status check.
             while (buildStatus.state == 'pending') {
