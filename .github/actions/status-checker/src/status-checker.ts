@@ -28,13 +28,15 @@ export async function checkStatus(token: string) {
     for (let status of statuses) {
       if (status.context == 'OpenPublishing.Build') {
         buildStatus = status;
+        console.log("Found OPS status check.");
         break;
       }
     }
 
     // Loop and wait if there's no OPS build status yet.
     // (This is unusual.)
-    for (let i = 0; i < 30 && buildStatus == null; i++) {
+    const loops = 30;
+    for (let i = 0; i < loops && buildStatus == null; i++) {
 
       // Sleep for 10 seconds.
       await wait(10000);
@@ -49,6 +51,7 @@ export async function checkStatus(token: string) {
       for (let status of statuses) {
         if (status.context == 'OpenPublishing.Build') {
           buildStatus = status;
+          console.log("Found OPS status check.");
           break;
         }
       }
@@ -56,12 +59,12 @@ export async function checkStatus(token: string) {
 
     // Didn't find OPS status. This is bad.
     if (buildStatus == null) {
-      throw new Error('Did not find OPS status check. Please close/reopen the pull request.')
+      throw new Error("Did not find OPS status check after waiting for " + loops*10/60 + "minutes. If it shows 'Expected — Waiting for status to be reported', please close/reopen the pull request to trigger a build.")
     }
 
     // Check state of OPS status check.
     while (buildStatus.state == 'pending') {
-      console.log("Found OPS status check in pending state.")
+      console.log("OPS status check is still pending; sleeping for 10 seconds.")
 
       // Sleep for 10 seconds.
       await wait(10000);
@@ -106,7 +109,7 @@ export async function checkStatus(token: string) {
         })
       }
       else {
-        console.log("OpenPublishing.Build status check did not have warnings.");
+        console.log("OpenPublishing.Build status check does not have warnings.");
         // Don't create a new status check.
         return;
       }
