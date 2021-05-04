@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_JsonSerialization", "CS_JsonSerialization\CS_JsonSerialization.csproj", "{AA4B57FD-58B0-410A-BD73-9975C1C30739}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA4B57FD-58B0-410A-BD73-9975C1C30739}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA4B57FD-58B0-410A-BD73-9975C1C30739}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA4B57FD-58B0-410A-BD73-9975C1C30739}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA4B57FD-58B0-410A-BD73-9975C1C30739}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE6FB448-DA11-4392-97EA-D2ABB6936730}
+	EndGlobalSection
+EndGlobal
