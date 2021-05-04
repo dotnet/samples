@@ -1,0 +1,43 @@
+//Task4
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test12
+{
+    class Employee2
+    {
+            public int EmpID { get; set; }
+
+            public string EmpNm { get; set; }
+
+            public string EmpAdd { get; set; }
+
+            public string EmpCity { get; set; }
+
+            public string EmpDept { get; set; }
+
+            public float EmpSal { get; set; }
+
+            public Employee2(int id, string nm, string add, string city, string dept, float sal)
+            {
+                this.EmpID = id;
+                this.EmpNm = nm;
+                this.EmpAdd = add;
+                this.EmpCity = city;
+                this.EmpDept = dept;
+                this.EmpSal = sal;
+
+                Console.WriteLine($"ID is : {id}");
+                Console.WriteLine($"Name is : {nm}");
+                Console.WriteLine($"Address is : {add}");
+                Console.WriteLine($"City is : {city}");
+                Console.WriteLine($"Department is : {dept}");
+                Console.WriteLine($"Salary is : {sal}");
+            }
+        }
+    }
+

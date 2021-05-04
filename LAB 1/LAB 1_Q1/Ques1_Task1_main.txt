@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Test12;
+
+namespace Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*Lab1:Ques1->Task1*/
+            new Employee(102, "James", "Hinjewadi", "Pune", "Analyst", 9000);
+            Console.ReadKey();
+        }
+    }
+}

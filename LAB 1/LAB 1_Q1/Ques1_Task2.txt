@@ -1,0 +1,45 @@
+//Task2
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test12
+{
+    class Employee1
+    {
+            public Employee1()
+            {
+
+                Console.WriteLine("Enter Employee ID : ");
+                int id = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Enter Name : ");
+                string nm = Console.ReadLine();
+
+                Console.WriteLine("Enter Address : ");
+                string add = Console.ReadLine();
+
+                Console.WriteLine("Enter City : ");
+                string city = Console.ReadLine();
+
+                Console.WriteLine("Enter Department : ");
+                string dept = Console.ReadLine();
+
+                Console.WriteLine("Enter Salary : ");
+                int sal = int.Parse(Console.ReadLine());
+
+                Console.WriteLine($"ID is : {id}");
+                Console.WriteLine($"Name is : {nm}");
+                Console.WriteLine($"Address is : {add}");
+                Console.WriteLine($"City is : {city}");
+                Console.WriteLine($"Department is : {dept}");
+                Console.WriteLine($"Salary is : {sal}");
+            }
+        }
+    }
+
+
+

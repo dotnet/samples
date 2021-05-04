@@ -1,0 +1,38 @@
+//Task1
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test12
+{
+    public class Employee
+    {
+            public int EmpID;
+            public string EmpNm;
+            public string EmpAdd;
+            public string EmpCity;
+            public string EmpDept;
+            public double EmpSal;
+
+            public Employee(int id, string nm, string add, string city, string dept, double sal)
+            {
+                this.EmpID = id;
+                this.EmpNm = nm;
+                this.EmpAdd = add;
+                this.EmpCity = city;
+                this.EmpDept = dept;
+                this.EmpSal = sal;
+
+                Console.WriteLine($"ID is : {id}");
+                Console.WriteLine($"Name is : {nm}");
+                Console.WriteLine($"Address is : {add}");
+                Console.WriteLine($"City is : {city}");
+                Console.WriteLine($"Department is : {dept}");
+                Console.WriteLine($"Salary is : {sal}");
+            }
+        }
+    }
+
