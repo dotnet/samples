@@ -8,7 +8,10 @@ products:
 page_type: sample
 name: "Matching Game Sample (.NET 5 C#)"
 urlFragment: "matching-game-net-csharp"
-description: "A simple matching game "
+description: "A simple matching game written for Windows Forms"
+extendedZipContent:
+- path: null
+- target: null
 ---
 # Matching game
 

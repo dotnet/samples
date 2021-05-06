@@ -9,6 +9,9 @@ page_type: sample
 name: "Matching Game Sample (.NET 5 Visual Basic)"
 urlFragment: "matching-game-net-vb"
 description: "A simple matching game "
+extendedZipContent:
+- path: null
+- target: null
 ---
 # Matching game
 
