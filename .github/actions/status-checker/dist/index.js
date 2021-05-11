@@ -74,6 +74,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.checkStatus = void 0;
+const core = __importStar(__webpack_require__(186));
 const github = __importStar(__webpack_require__(438));
 const wait_1 = __webpack_require__(817);
 function checkStatus(token) {
@@ -124,7 +125,7 @@ function checkStatus(token) {
             }
             // Didn't find OPS status. This is bad.
             if (buildStatus == null) {
-                throw new Error("Did not find OPS status check after waiting for " + loops * 10 / 60 + " minutes. If it shows 'Expected — Waiting for status to be reported', close and reopen the pull request to trigger a build.");
+                core.setFailed("Did not find OPS status check after waiting for " + loops * 10 / 60 + " minutes. If it shows 'Expected — Waiting for status to be reported', close and reopen the pull request to trigger a build.");
             }
             // Check state of OPS status check.
             while (buildStatus.state == 'pending') {
@@ -154,33 +155,30 @@ function checkStatus(token) {
             console.log("OPS status check has completed.");
             if (buildStatus.state == 'success') {
                 if (buildStatus.description == 'Validation status: warnings') {
-                    // Build has warnings, so add a new commit status with state=failure.
                     console.log('Found build warnings.');
-                    return yield octokit.repos.createCommitStatus({
-                        owner: owner,
-                        repo: repo,
-                        sha: commit,
-                        state: 'failure',
-                        context: 'Check for build warnings',
-                        description: 'Please fix build warnings before merging.',
-                    });
+                    core.setFailed('Please fix build warnings before merging.');
+                    // return await octokit.repos.createCommitStatus({
+                    //   owner: owner,
+                    //   repo: repo,
+                    //   sha: commit,
+                    //   state: 'failure',
+                    //   context: 'Check for build warnings',
+                    //   description: 'Please fix build warnings before merging.',
+                    // })
                 }
                 else {
                     console.log("OpenPublishing.Build status check does not have warnings.");
-                    // Don't create a new status check.
                     return;
                 }
             }
             else {
-                // Build status is error/failure, so merging will be blocked anyway.
-                // We don't need to add another status check.
-                console.log("OpenPublishing.Build status is either failure or error.");
-                // Don't create a new status check.
+                // Build status is error/failure.
+                core.setFailed('OpenPublishing.Build status is either failure or error.');
                 return;
             }
         }
         else {
-            console.log("Event is not a pull request or payload action is undefined.");
+            core.setFailed('Event is not a pull request or payload action is undefined.');
             return;
         }
     });
