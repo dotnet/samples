@@ -2,9 +2,7 @@
 
 This action checks for Open Publishing Build system build warnings.:rocket:
 
-Whether or not there are build warnings, you'll see a status check for this action in your pull request. If it passes, it means it ran without error. If it fails, it means there's a bug in this action :)
-
-If there *are* OPS build warnings, this action adds *an additional, failing* status check to the pull request. This lets you more easily identify build warnings at a glance.
+Whether or not there are build warnings, you'll see a status check for this action in your pull request. If it passes, it means it ran without error and there are not build warnings or errors. If it fails, it means there are build warnings or errors, or there's a bug in this action.
 
 ## Usage
 
