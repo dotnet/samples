@@ -6,6 +6,7 @@ namespace OutOfProcCOM
 {
     [ComVisible(true)]
     [Guid(Contract.Constants.ServerClass)]
+    [ComDefaultInterface(typeof(IServer))]
     public sealed class ExeServer : IServer
     {
         double IServer.ComputePi()
