@@ -8,6 +8,7 @@ namespace OutOfProcCOM
 {
     [ComVisible(true)]
     [Guid(Contract.Constants.ServerClass)]
+    [ComDefaultInterface(typeof(IServer))]
     public sealed class DllServer : IServer
     {
         double IServer.ComputePi()
