@@ -3,7 +3,6 @@ using System.Runtime.InteropServices;
 
 [ComVisible(true)]
 [Guid(Contract.Constants.ServerInterface)]
-[InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
 public interface IServer
 {
     /// <summary>
