@@ -155,7 +155,7 @@ function checkStatus(token) {
             console.log("OPS status check has completed.");
             if (buildStatus.state == 'success') {
                 if (buildStatus.description == 'Validation status: warnings') {
-                    core.setFailed("Please fix OPS build warnings before merging. To see the warnings, click 'Details' next to the OpenPublishing.build status check at the bottom on your pull request.");
+                    core.setFailed("Please fix OPS build warnings before merging. To see the warnings, click 'Details' next to the OpenPublishing.build status check at the bottom of your pull request.");
                 }
                 else {
                     console.log("OpenPublishing.Build status check does not have warnings.");
