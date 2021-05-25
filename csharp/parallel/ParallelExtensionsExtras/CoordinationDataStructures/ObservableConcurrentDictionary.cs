@@ -50,6 +50,7 @@ namespace System.Collections.Concurrent
             {
                 collectionHandler?.Invoke(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
                 propertyHandler?.Invoke(this, new PropertyChangedEventArgs("Count"));
+                propertyHandler?.Invoke(this, new PropertyChangedEventArgs("Item[]"));
                 propertyHandler?.Invoke(this, new PropertyChangedEventArgs(nameof(Keys)));
                 propertyHandler?.Invoke(this, new PropertyChangedEventArgs(nameof(Values)));
             }, null);
