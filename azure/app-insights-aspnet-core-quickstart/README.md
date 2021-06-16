@@ -27,7 +27,7 @@ Thanks!
 This sample ASP.NET Core application was created with `dotnet new razor`. After that, the following changes were made:
 
 * The Application Insights SDK was added to the project with `dotnet add package Microsoft.ApplicationInsights.AspNetCore --version 2.17.0`.
-* A configuration value for `ApplicationInsights.InstrumentationKey` was added to *appsettings.json*.
+* A configuration value for `ApplicationInsights:InstrumentationKey` was added to *appsettings.json*.
 * `services.AddApplicationInsightsTelemetry();` was added to the `ConfigureServices` method of *Startup.cs*.
 * `@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet` was added to *Pages/_ViewImports.cshtml*.
 * `@Html.Raw(JavaScriptSnippet.FullScript)` was added to the `<head>` element in *Pages/Shared/_Layout.cshtml*.
@@ -39,13 +39,12 @@ This sample ASP.NET Core application was created with `dotnet new razor`. After 
 
 ## Prepare to run the sample
 
-Add replace the placeholder InstumentationKey in *appsettings.json* with your actual InstumentationKey.
+Replace the placeholder `ApplicationInsights:InstrumentationKey` value in *appsettings.json* with your actual instrumentation key.
 
 ## Run the sample
 
 ```dotnetcli
-dotnet build
 dotnet run
 ```
 
-As you use the app, telemetry will be ingested to Application Insights within a few minutes. You can verify the connection using Live metrics.
+As you use the app, telemetry will be ingested to Application Insights within a few minutes. You can verify the connection using Live Metrics.
