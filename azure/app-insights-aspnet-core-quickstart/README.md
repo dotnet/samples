@@ -26,6 +26,7 @@ Thanks!
 
 This sample ASP.NET Core application was created with `dotnet new razor`. After that, the following changes were made:
 
+* The Application Insights SDK was added to the project with `dotnet add package Microsoft.ApplicationInsights.AspNetCore --version 2.17.0`.
 * A configuration value for `ApplicationInsights.InstrumentationKey` was added to *appsettings.json*.
 * `services.AddApplicationInsightsTelemetry();` was added to the `ConfigureServices` method of *Startup.cs*.
 * `@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet` was added to *Pages/_ViewImports.cshtml*.
