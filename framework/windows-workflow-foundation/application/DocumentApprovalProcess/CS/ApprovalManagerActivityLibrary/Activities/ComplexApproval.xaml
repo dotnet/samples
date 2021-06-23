@@ -1,0 +1,39 @@
+﻿<Activity mc:Ignorable="sap" x:Class="Microsoft.Samples.DocumentApprovalProcess.ApprovalManagerActivityLibrary.ComplexApproval" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:msda="clr-namespace:Microsoft.Samples.DocumentApprovalProcess.ApprovalMessageContractLibrary;assembly=ApprovalMessageContractLibrary" xmlns:msda1="clr-namespace:Microsoft.Samples.DocumentApprovalProcess.ApprovalManagerActivityLibrary;assembly=ApprovalManagerActivityLibrary" xmlns:msda2="clr-namespace:Microsoft.Samples.DocumentApprovalProcess.ApprovalMessageContractLibrary;assembly=ApprovalMessageContractLibrary, Version=1.0.3506.19942, Culture=neutral, PublicKeyToken=null" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:s1="clr-namespace:System;assembly=System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:s2="clr-namespace:System;assembly=System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:s3="clr-namespace:System;assembly=System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:s4="clr-namespace:System;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sad="clr-namespace:System.Activities.Debugger;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Request" Type="InArgument(msda:ApprovalRequest)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+    <x:Property Name="Context" Type="InArgument(msda:User)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+    <x:Property Name="Response" Type="OutArgument(msda:ApprovalResponse)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+  </x:Members>
+  <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+  <Sequence DisplayName="ComplexApproval" sap:VirtualizedContainerService.HintSize="498,389.553333333333">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="msda:ApprovalResponse" Name="SubResponse" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, s:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <msda1:QuorumApproval ApproverType="[&quot;UserType2&quot;]" Context="[Context]" sap:VirtualizedContainerService.HintSize="464,22" Request="[Request]" RequiredApprovals="[1]" Response="[SubResponse]" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" TotalApprovers="[2]" />
+    <If Condition="[SubResponse.Approved]" sap:VirtualizedContainerService.HintSize="464,201.553333333333">
+      <If.Then>
+        <msda1:SingleApproval ApproverType="[&quot;UserType3&quot;]" Context="[Context]" sap:VirtualizedContainerService.HintSize="219.5,100" Request="[Request]" Response="[Response]" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" />
+      </If.Then>
+      <If.Else>
+        <msda1:CreateResponse Approved="[False]" sap:VirtualizedContainerService.HintSize="219.5,100" Request="[Request]" Response="[Response]" />
+      </If.Else>
+    </If>
+  </Sequence>
+</Activity>

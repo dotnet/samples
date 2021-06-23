@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Microsoft.Samples.ContosoHR" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Microsoft.Samples.ContosoHR" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:18564/ResumeRequestService.xamlx?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="JobPosting">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HiringRequestInfo" nillable="true" type="tns:HiringRequestInfo" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JobPosting" nillable="true" type="tns:JobPosting" />
+  <xs:complexType name="HiringRequestInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DepartmentId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="PositionId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequesterId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorkflowInstanceId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HiringRequestInfo" nillable="true" type="tns:HiringRequestInfo" />
+  <xs:complexType name="JobPostingResume">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CandidateMail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CandidateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JobPosting" nillable="true" type="tns:JobPosting" />
+      <xs:element minOccurs="0" name="ResumeeDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ResumeeText" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JobPostingResume" nillable="true" type="tns:JobPostingResume" />
+</xs:schema>

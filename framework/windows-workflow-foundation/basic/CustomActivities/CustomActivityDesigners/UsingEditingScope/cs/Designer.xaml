@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) Microsoft Corporation.  All rights reserved. -->
+<Window x:Class="Microsoft.Samples.Activities.Designer.UsingEditingScope.Designer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window1" Height="600" Width="900">
+    <Grid Name="ApplicationGrid" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <Button Click="BeginEdit_Click">Open Editing Scope</Button>
+            <Button Click="EndEditing_Click" IsEnabled="False" Name="CloseButton">Close Editing Scope</Button>
+            <Button Click="RevertEditing_Click" IsEnabled="False" Name="RevertButton">Revert Editing Scope</Button>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontWeight="Bold">Stack Depth:</TextBlock>
+                <TextBlock Text="{Binding Path=EditingScopes.Count}"/>
+            </StackPanel>            
+        </StackPanel>
+        
+    </Grid>
+</Window>

@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApprovalManager", "ApprovalManager\ApprovalManager.csproj", "{15A2EF21-62EF-4FDA-9C30-59015BCDF57B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApprovalManagerActivityLibrary", "ApprovalManagerActivityLibrary\ApprovalManagerActivityLibrary.csproj", "{5D4255F1-F5A9-45F0-ACD2-6ED894606F53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApprovalMessageContractLibrary", "ApprovalMessageContractLibrary\ApprovalMessageContractLibrary.csproj", "{15B3E0D2-6217-493A-A690-158C497F5318}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackingLibrary", "TrackingLibrary\TrackingLibrary.csproj", "{8019FEEA-BC18-4883-AC3C-C370425D6B60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApprovalClient", "ApprovalClient\ApprovalClient.csproj", "{80CA71E5-25B3-45B5-9006-7EFF290C97B7}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = DocumentApprovalProcess2.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15A2EF21-62EF-4FDA-9C30-59015BCDF57B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15A2EF21-62EF-4FDA-9C30-59015BCDF57B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15A2EF21-62EF-4FDA-9C30-59015BCDF57B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15A2EF21-62EF-4FDA-9C30-59015BCDF57B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D4255F1-F5A9-45F0-ACD2-6ED894606F53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D4255F1-F5A9-45F0-ACD2-6ED894606F53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D4255F1-F5A9-45F0-ACD2-6ED894606F53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D4255F1-F5A9-45F0-ACD2-6ED894606F53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8019FEEA-BC18-4883-AC3C-C370425D6B60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8019FEEA-BC18-4883-AC3C-C370425D6B60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8019FEEA-BC18-4883-AC3C-C370425D6B60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8019FEEA-BC18-4883-AC3C-C370425D6B60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80CA71E5-25B3-45B5-9006-7EFF290C97B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80CA71E5-25B3-45B5-9006-7EFF290C97B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80CA71E5-25B3-45B5-9006-7EFF290C97B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80CA71E5-25B3-45B5-9006-7EFF290C97B7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

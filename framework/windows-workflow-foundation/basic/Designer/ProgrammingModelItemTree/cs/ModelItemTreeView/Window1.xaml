@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) Microsoft Corporation.  All rights reserved. -->
+<Window x:Class="Microsoft.Samples.Activities.Designer.ProgrammingModelItemTree.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sapm="clr-namespace:System.Activities.Presentation.Model;assembly=System.Activities.Presentation"
+        xmlns:local="clr-namespace:Microsoft.Samples.Activities.Designer.ProgrammingModelItemTree"
+        Title="Window1" Height="600" Width="600">
+    <Window.Resources>
+        <local:ModelPropertyValueConverter x:Key="ModelPropertyValueConverter"/>
+        <HierarchicalDataTemplate DataType="{x:Type sapm:ModelItem}" ItemsSource="{Binding Path=Properties}">
+            <StackPanel>
+                <StackPanel.ToolTip>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock FontStyle="Italic" Text="Type:"/>
+                        <TextBlock FontWeight="Bold" Text="{Binding Path=ItemType}"/>
+                    </StackPanel>
+                </StackPanel.ToolTip>
+                <TextBlock Text="{Binding}"/>
+            </StackPanel>
+        </HierarchicalDataTemplate>
+        <HierarchicalDataTemplate DataType="{x:Type sapm:ModelProperty}" ItemsSource="{Binding Path=Value, Converter={StaticResource ModelPropertyValueConverter}}">
+            <StackPanel><StackPanel.ToolTip>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock FontStyle="Italic" Text="Property Type: "/>
+                        <TextBlock FontWeight="Bold" Text="{Binding Path=PropertyType}"/>
+                    </StackPanel>
+                </StackPanel.ToolTip>
+                <TextBlock Text="{Binding Path=Name}"/>
+            </StackPanel>
+        </HierarchicalDataTemplate>
+    </Window.Resources>
+    <Grid Name="windowGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <StackPanel Orientation="Horizontal">
+                <Button Click="Button_Click">Load WF</Button>
+                <Button Click="Button_Click_1" Name="ChangeButton" IsEnabled="False">Change Model Item Tree</Button>
+            </StackPanel>
+            <TreeView Name="treeView1" SelectedItemChanged="treeView1_SelectedItemChanged" >
+                <TreeViewItem Header="Workflow" ItemsSource="{Binding}" />
+            </TreeView>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,52 @@
+﻿<!-- Copyright (c) Microsoft Corporation.  All rights reserved. -->
+<Window x:Class="Microsoft.Samples.DocumentApprovalProcess.ApprovalClient.Main"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Main" Height="767" Width="422">
+    <Grid Background="{x:Null}" Height="736">
+        <GroupBox Header="Service Connection" Margin="24,29,0,0" Name="groupBox1" Height="164" VerticalAlignment="Top" HorizontalAlignment="Left" Width="358">
+            <Grid Width="342">
+                <Button Height="23" HorizontalAlignment="Left" Margin="6,14,0,0" Name="discover" VerticalAlignment="Top" Width="114" Click="discover_Click">Discover</Button>
+                <Label Margin="138,43,0,0" Name="label1" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Width="86">Name</Label>
+                <Label Height="28" Margin="138,0,0,36" Name="label2" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="86">Type</Label>
+                <TextBox Margin="138,62,0,61" Name="name" HorizontalAlignment="Left" Width="126" IsEnabled="False" />
+                <Button Height="23" Margin="16,0,0,32" Name="disconnect" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="79" Click="disconnect_Click" IsEnabled="False" Content="Unsubscribe"></Button>
+                <Button Margin="16,60.723,0,61" Name="connect" Click="connect_Click" IsEnabled="False" HorizontalAlignment="Left" Width="79" Content="Subscribe"></Button>
+                <ComboBox Height="23" Margin="138,0,84,24" Name="userType" VerticalAlignment="Bottom" SelectedIndex="0" IsEnabled="False">
+                    <ComboBoxItem Content="UserType1" />
+                    <ComboBoxItem Content="UserType2" />
+                    <ComboBoxItem Content="UserType3" />
+                </ComboBox>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Approval Process" Margin="24,208,0,0" Name="groupBox2" HorizontalAlignment="Left" Width="358" Height="242" VerticalAlignment="Top">
+            <Grid Width="338">
+                <TextBox HorizontalAlignment="Left" Margin="14,0,0,51" Name="document" Width="168" Height="46" VerticalAlignment="Bottom" IsEnabled="False" />
+                <TextBox HorizontalAlignment="Left" Margin="14,0,0,118" Name="docName" Width="168" Height="25" VerticalAlignment="Bottom" IsEnabled="False" />
+                <Label Height="28" HorizontalAlignment="Left" Margin="14,17,0,0" Name="label3" VerticalAlignment="Top" Width="120">Approval Type</Label>
+                <Label Margin="14,55,0,0" Name="label4" Height="27.723" HorizontalAlignment="Left" VerticalAlignment="Top" Width="121">Document Name</Label>
+                <Label Margin="14,100.723333333333,0,94" Name="label5" HorizontalAlignment="Left" Width="119">Document</Label>
+                <Button Height="23" HorizontalAlignment="Left" Margin="14,0,0,22" Name="requestApproval" VerticalAlignment="Bottom" Width="168" IsEnabled="False" Click="requestApproval_Click">Request Approval</Button>
+                <ListBox HorizontalAlignment="Right" Margin="0,35,8,0" Name="PendingList" Width="136" Height="60" VerticalAlignment="Top" SelectionChanged="PendingList_SelectionChanged" />
+                <ListBox Height="79" HorizontalAlignment="Right" Margin="0,0,10,18" Name="ApprovedList" VerticalAlignment="Bottom" Width="135" />
+                <ComboBox Height="23" Margin="15,35,156,0" Name="approvalType" VerticalAlignment="Top" SelectedIndex="0" IsEnabled="False">
+                    <ComboBoxItem Content="Single UserType2 Approval" />
+                    <ComboBoxItem Content="Quorum UserType2 Approval" />
+                    <ComboBoxItem Content="UserType2 Quorum Then UserType3 Single Approval" />
+                </ComboBox>
+                <Button Content="Cancel Request" IsEnabled="False" Height="19" HorizontalAlignment="Left" Margin="194,101,0,0" Name="CancelRequest" VerticalAlignment="Top" Width="134" Click="CancelRequest_Click" />
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Document Review\Approval" Height="160" Margin="26,0,20,120" Name="groupBox3" VerticalAlignment="Bottom">
+            <Grid>
+                <ListBox Margin="4,6.00033333333326,0,8" Name="approvalList" HorizontalAlignment="Left" Width="119" IsEnabled="True" SelectionChanged="approvalList_SelectionChanged" />
+                <Button Height="23" Margin="136,0,155,17" Name="approve" VerticalAlignment="Bottom" IsEnabled="False" Click="approve_Click">Approve</Button>
+                <Button HorizontalAlignment="Right" Margin="0,0,87,17" Name="reject" Width="62" Height="22.723" VerticalAlignment="Bottom" IsEnabled="False" Click="reject_Click">Reject</Button>
+                <TextBox Height="23" Margin="134,7,16,0" Name="titleReview" VerticalAlignment="Top" IsEnabled="False" />
+                <TextBox Margin="136,36,16,46" Name="docReview" IsEnabled="False" />
+            </Grid>
+        </GroupBox>
+        <TextBox Height="87" Margin="24,0,26,12" Name="statusConsole" VerticalAlignment="Bottom" AcceptsReturn="True" IsReadOnly="True" TextWrapping="WrapWithOverflow" VerticalScrollBarVisibility="Visible" IsEnabled="True" />
+        <Label Content="Status Console" Height="28" HorizontalAlignment="Left" Margin="26,0,0,92" Name="label6" VerticalAlignment="Bottom" Width="120" />
+    </Grid>
+</Window>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) Microsoft Corporation.  All rights reserved. -->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:pres="clr-namespace:System.Activities.Presentation.PropertyEditing;assembly=System.Activities.Presentation"
+                    x:Class="Microsoft.Samples.Activities.Designer.PropertyGridExtensibility.EditorResources">
+
+    <DataTemplate x:Key="SliderControlTemplate">
+        <StackPanel>
+            <Slider Minimum="0" Maximum="100" Value="{Binding Path=Value, Mode=TwoWay}" />
+            <TextBox Text="{Binding Path=Value}" IsEnabled="false" />
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="FilePickerTemplate">
+        <StackPanel Orientation="Horizontal" >
+            <Label Content="{Binding Path=Value}" MaxWidth="80">
+                <Label.ToolTip>
+                    <TextBlock Text="{Binding Path=Value}"/>
+                </Label.ToolTip>
+            </Label>
+            
+            <pres:EditModeSwitchButton TargetEditMode="{x:Static pres:PropertyContainerEditMode.Dialog}"/>
+        </StackPanel>
+    </DataTemplate>
+
+</ResourceDictionary>

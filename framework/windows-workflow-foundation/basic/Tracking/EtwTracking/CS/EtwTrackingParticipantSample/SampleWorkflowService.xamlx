@@ -1,0 +1,39 @@
+﻿<!-- Copyright (c) Microsoft Corporation.  All rights reserved. -->
+<WorkflowService ConfigurationName="SampleWorkflowService" Name="SampleWorkflowService" mc:Ignorable="sad1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mv="clr-namespace:Microsoft.VisualBasic;assembly=System" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://tempuri.org/" xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:s1="clr-namespace:System;assembly=System" xmlns:s2="clr-namespace:System;assembly=System.Xml" xmlns:s3="clr-namespace:System;assembly=System.Core" xmlns:sad="clr-namespace:System.Activities.Debugger;assembly=System.Activities" xmlns:sad1="http://schemas.microsoft.com/netfx/2009/xaml/activities/design" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System" xmlns:scg1="clr-namespace:System.Collections.Generic;assembly=System.ServiceModel" xmlns:scg2="clr-namespace:System.Collections.Generic;assembly=System.Core" xmlns:scg3="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data.DataSetExtensions" xmlns:sl="clr-namespace:System.Linq;assembly=System.Core" xmlns:st="clr-namespace:System.Text;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <p1:Sequence DisplayName="Sample Workflow Service"
+sad1:VirtualizedContainerService.HintSize="303,457.8028125" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+    <p1:Sequence.Variables>
+      <p1:Variable x:TypeArguments="CorrelationHandle" Name="handle" />
+      <p1:Variable x:TypeArguments="x:Int32" Name="data" />
+    </p1:Sequence.Variables>
+    <sad1:WorkflowViewStateService.ViewState>
+      <scg3:Dictionary x:TypeArguments="x:String, s:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg3:Dictionary>
+    </sad1:WorkflowViewStateService.ViewState>
+    <Receive CorrelatesOn="{x:Null}" x:Name="__ReferenceID0" CanCreateInstance="True" DisplayName="ReceiveRequest" sad1:VirtualizedContainerService.HintSize="257,89.9209375" OperationName="GetData" ServiceContractName="p:SampleWorkflowServiceContract">
+      <Receive.CorrelationInitializers>
+        <RequestReplyCorrelationInitializer CorrelationHandle="[handle]" />
+      </Receive.CorrelationInitializers>
+      <Receive.KnownTypes>
+        <x:Type Type="x:Int32" />
+      </Receive.KnownTypes>
+      <ReceiveMessageContent DeclaredMessageType="x:Int32">
+        <p1:OutArgument x:TypeArguments="x:Int32">[data]</p1:OutArgument>
+      </ReceiveMessageContent>
+    </Receive>
+    <p1:Assign sad1:VirtualizedContainerService.HintSize="257,59.9609375">
+      <p1:Assign.To>
+        <p1:OutArgument x:TypeArguments="x:Int32">[data]</p1:OutArgument>
+      </p1:Assign.To>
+      <p1:Assign.Value>
+        <p1:InArgument x:TypeArguments="x:Int32">[System.Convert.ToInt32(1 / data)]</p1:InArgument>
+      </p1:Assign.Value>
+    </p1:Assign>
+    <SendReply Request="{x:Reference __ReferenceID0}" DisplayName="SendResponse" sad1:VirtualizedContainerService.HintSize="257,89.9209375">
+      <SendMessageContent DeclaredMessageType="x:String">
+        <p1:InArgument x:TypeArguments="x:String">[data.ToString()]</p1:InArgument>
+      </SendMessageContent>
+    </SendReply>
+  </p1:Sequence>
+</WorkflowService>

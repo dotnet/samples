@@ -1,0 +1,36 @@
+﻿<sap:ActivityDesigner x:Class="Microsoft.Samples.DocumentApprovalProcess.ApprovalManagerActivityLibrary.Designers.TallyResponses"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="clr-namespace:System;assembly=mscorlib"
+    xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+    xmlns:local="clr-namespace:Microsoft.Samples.DocumentApprovalProcess.ApprovalMessageContractLibrary;assembly=ApprovalMessageContractLibrary"
+    xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+    xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation">
+    <sap:ActivityDesigner.Resources>
+        <ResourceDictionary x:Uid="ResourceDictionary_1">
+            <sapc:ArgumentToExpressionConverter x:Uid="sadv:ArgumentToExpressionConverter_1" x:Key="ArgumentToExpressionConverter" />
+        </ResourceDictionary>
+    </sap:ActivityDesigner.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Content="List of Responses:" />
+        <sapv:ExpressionTextBox  Grid.Row="1" 
+                                 OwnerActivity="{Binding Path=ModelItem}" 
+                                 Expression="{Binding Path=ModelItem.Request, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In }"
+                                 UseLocationExpression="False" />
+        <Label Grid.Row="2" Content="Final Tally:" />
+        <sapv:ExpressionTextBox  Grid.Row="3" 
+                                 OwnerActivity="{Binding Path=ModelItem}" 
+                                 Expression="{Binding Path=ModelItem.Approved, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=Out }"
+                                 ExpressionType="{x:Type s:Int32}"
+                                 UseLocationExpression="True" />
+    </Grid>
+</sap:ActivityDesigner>

@@ -1,0 +1,86 @@
+﻿/*  Copyright (c) Microsoft Corporation.  All rights reserved. */
+
+body
+{ 
+	font-family: Cambria, Arial, Helvetica, sans-serif;
+	font-size: small;
+ }
+
+input
+{	
+	font-family: cambria, Arial;
+	font-size: small;
+}
+
+.breadCrumbTable
+{ 
+	border-bottom: 1 px solid dimgray;
+	border-top: 1 px solid dimgray;
+	font-family: cambria;
+	font-size: small;
+	border-style: solid none solid none;
+	border-width: 1px;
+	border-color: dimgray;	
+ }
+ 
+
+.fieldName
+{
+	vertical-align: top;
+	background-color: #fafafa;	
+	font-family: cambria, Arial;
+	font-size: small;
+	border-bottom: 1px dashed gray;	
+	width: 150px
+}
+
+.inboxTitle
+{ 
+    font-weight: bold;
+    background-color: #003300;
+    color: #FFFFFF;
+ }
+
+.inboxTitleStartedByMe
+{ 
+    font-weight: bold;
+    background-color: #003300;
+    color: #FFFFFF;
+ }
+
+.inboxTitleFinished
+{ 
+    font-weight: bold;
+    background-color: #003300;
+    color: #FFFFFF;
+ }
+
+
+.inboxRow
+{
+}
+
+.menuTable
+{
+    background-color: whitesmoke;
+    border-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: dimgray;
+}
+
+.actionButton
+{
+    width: 150px
+}
+
+.actionButtonOK
+{
+    width: 150px;
+    color: #008000;
+}
+
+.actionButtonErr
+{
+    width: 150px;
+    color: #FF0000;
+}

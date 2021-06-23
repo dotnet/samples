@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3ea97187-e25b-4f86-877d-8f2d31bee251" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8732/contoso/InboxService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="1c8437d1-78d4-4aac-a6ed-623b73db3077" SourceId="1" SourceUrl="http://localhost:8732/contoso/InboxService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="b9e99f56-ffc7-4dfe-bfd2-8dc9102a3497" SourceId="1" SourceUrl="http://localhost:8732/contoso/InboxService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="1808892a-a0a1-4f88-9f5b-dbcbe62049e5" SourceId="1" SourceUrl="http://localhost:8732/contoso/InboxService/mex" />
+    <MetadataFile FileName="Microsoft.Samples.Inbox.xsd" MetadataType="Schema" ID="52545b84-e7d9-4987-9863-cbc17d93542b" SourceId="1" SourceUrl="http://localhost:8732/contoso/InboxService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
