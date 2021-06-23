@@ -1,7 +1,7 @@
 `ComWrappers` API Demo
 ================
 
-The [`ComWrappers` API](https://github.com/dotnet/runtime/issues/1845) was introduced in .NET 5.0 to help users build custom COM interop scenarios.
+The [`ComWrappers`](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.comwrappers) API was introduced in .NET 5.0 to help users build custom COM interop scenarios.
 
 Key Features
 ------------
