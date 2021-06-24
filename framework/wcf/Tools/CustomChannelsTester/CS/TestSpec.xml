@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestSpec xmlns="http://WCF/TestSpec" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+	<ServiceContract>
+		<!--3 options to select the Service Contracts for running the test
+    True
+    False
+    ExpandAll = Will Expand over both (true and false)
+    -->
+    <!--Specifies the OperationContract (IsOneWay) for the service-->
+    <IsOneWay>true</IsOneWay>
+    
+    <!--Specifies the OperationContract (AsyncPattern) for the service-->
+    <IsAsync>false</IsAsync>
+    
+    <!--Specifies the Behavior (SessionMode) for the service-->
+    <IsSession>false</IsSession>
+    
+    <!--Select true to test a CallBack Behavior for the service-->
+    <IsCallBack>false</IsCallBack>
+    
+	</ServiceContract>
+	<TestDetails>
+		<!--Name of the machine name on which the services will be located-->
+    <ServerMachineName>localhost</ServerMachineName>
+    
+    <!--Port on which the services will be listening-->
+    <ServerPortNumber>8000</ServerPortNumber>
+    
+		<!--URI for the callBack address for the CLient. The client will receive the messages from the server
+    on this address in case of a CallBack Contract-->
+    <ClientCallBackAddress/>	
+    
+		<!--Timeout for the server in Seconds. After starting the server will wait for this much time before 
+    shutting down. This is to ensure the client processing is done before the server shuts down-->
+    <ServerTimeout>120</ServerTimeout>
+    
+    <!--Timeout for the client in Seconds. The Client will wait for this much time before 
+    starting to connect to the server. This is to ensure the server is setup before the client connects to it-->
+    <ClientTimeout>30</ClientTimeout>
+    
+		<!--Number of clients connecting to the server-->
+    <NumberOfClients>1</NumberOfClients>
+    
+    <!--Number of messages each client will send to the server-->
+    <MessagesPerClient>5</MessagesPerClient>
+    
+	</TestDetails>
+</TestSpec>

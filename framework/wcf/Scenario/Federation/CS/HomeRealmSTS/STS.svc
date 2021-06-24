@@ -1,0 +1,1 @@
+﻿<%@ServiceHost language="c#" Factory="Microsoft.Samples.Federation.HomeRealmSTSHostFactory" %>

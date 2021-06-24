@@ -1,0 +1,2 @@
+<%@ServiceHost language="c#" Factory="Microsoft.Samples.MembershipAndRoleProvider.CalculatorServiceHostFactory" %>
+

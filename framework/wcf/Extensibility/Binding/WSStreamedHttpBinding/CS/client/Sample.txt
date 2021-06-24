@@ -1,0 +1,1 @@
+This sample file is used to demonstrate WSStreamedHttpBinding.

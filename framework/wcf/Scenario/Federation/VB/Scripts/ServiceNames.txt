@@ -1,0 +1,3 @@
+BookStoreService
+BookStoreSTS
+HomeRealmSTS

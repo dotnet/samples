@@ -1,0 +1,72 @@
+#pragma namespace ("\\\\.\\Root\\WMI")
+#pragma autorecover
+
+
+[dynamic, 
+ locale("MS\\0x409"),
+ Description("XML ETW Sample Provider"),
+ DisplayName("XmlStringProvider"),
+ Guid("{411a0819-c24b-428c-83e2-26b41091702e}")
+]
+class XmlStringProvider : EventTrace
+{
+};
+
+[dynamic, 
+ locale("MS\\0x409"),
+ Description("Xml string Event"),
+ DisplayName("XmlString"),
+ Guid("{dd21656a-7564-4769-90e2-f3434cc1fdf4}")
+]
+class XmlStringEvent : XmlStringProvider
+{
+};
+
+[dynamic, 
+ Description("Xml string trace") : amended,
+ DisplayName("XmlStringTrace"),
+ EventTypeName{"Trace", "Start", "Stop", "Suspend", "Resume"},
+ EventType{0,1,2,10,11}
+]
+class XmlTrace : XmlStringEvent
+{
+    [WmiDataId(1),
+     Description("Activity ID") : amended,
+     extension("Guid"),
+     ActivityID,
+     read]
+     object ActivityID; 
+
+    [WmiDataId(2),
+     Description("Trace Record") : amended,
+     StringTermination("NullTerminated"),
+     format("w"),
+     XMLFragment,
+     read]
+     string  TraceRecord;
+};
+
+[Dynamic,
+  Description("Activity Transfer Event") : amended,
+  EventType(5),
+  EventTypeName("Transfer"): amended,
+  locale("MS\\0x409")]
+class ActivityTransfer : XmlStringEvent
+{
+    [WmiDataId(1),
+     Description("Activity ID") : amended,
+     extension("Guid"),
+     ActivityID,
+     read]
+     object ActivityID; 
+
+    [WmiDataId(2),
+     Description("Related Activity ID") : amended,
+     extension("Guid"),
+     RelatedActivityID,
+     read]
+     object  RelatedActivityID; 
+};
+
+
+

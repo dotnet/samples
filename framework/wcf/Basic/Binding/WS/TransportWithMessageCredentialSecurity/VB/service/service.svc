@@ -1,0 +1,2 @@
+<%@ServiceHost language="vb" Debug="true" Service="Microsoft.Samples.TransportWithMessageCredentialSecurity.CalculatorService" %>
+

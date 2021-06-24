@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscoveryRouter", "DiscoveryRouter\DiscoveryRouter.csproj", "{6911C427-1359-42B5-9BDE-5C75343DA6E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{8C817E2C-871A-4043-BC56-493B5ACCB518}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{18BF4809-CCA1-4ABA-9F44-2CD885A3E8F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6911C427-1359-42B5-9BDE-5C75343DA6E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6911C427-1359-42B5-9BDE-5C75343DA6E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6911C427-1359-42B5-9BDE-5C75343DA6E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6911C427-1359-42B5-9BDE-5C75343DA6E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C817E2C-871A-4043-BC56-493B5ACCB518}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C817E2C-871A-4043-BC56-493B5ACCB518}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C817E2C-871A-4043-BC56-493B5ACCB518}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C817E2C-871A-4043-BC56-493B5ACCB518}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18BF4809-CCA1-4ABA-9F44-2CD885A3E8F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18BF4809-CCA1-4ABA-9F44-2CD885A3E8F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18BF4809-CCA1-4ABA-9F44-2CD885A3E8F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18BF4809-CCA1-4ABA-9F44-2CD885A3E8F8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

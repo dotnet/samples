@@ -1,0 +1,4 @@
+﻿<%@ServiceHost language="c#" Debug="true" Service="Microsoft.Samples.WSStreamedHttpBinding.StreamedEchoService" %>
+<%@Assembly Name="service" %>
+
+    

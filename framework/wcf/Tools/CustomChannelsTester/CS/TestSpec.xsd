@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ts="http://WCF/TestSpec" targetNamespace="http://WCF/TestSpec" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.1" id="Configuration">
+	<xs:element name="TestSpec" type="ts:TestSpec" msdata:IsDataSet="true">
+		<xs:annotation>
+			<xs:documentation>Test specification.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="TestSpec">
+		<xs:annotation>
+			<xs:documentation>Test Specification type definition.</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="ServiceContract">
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="IsOneWay" type="ts:Contract" minOccurs="0"/>
+						<xs:element name="IsAsync" type="ts:Contract" minOccurs="0"/>
+						<xs:element name="IsSession" type="ts:Contract" minOccurs="0"/>
+						<xs:element name="IsCallBack" type="ts:Contract" minOccurs="0"/>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="TestDetails">
+				<xs:annotation>
+					<xs:documentation>This is required to make sure that xsd.exe generates the code for all types of expansion details. Currently xsd.exe does not generate the code for the types that are not used in the schema by any element.
+            </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="ServerMachineName" type="ts:ServerMachineName">
+							<xs:annotation>
+								<xs:documentation>Machine name on which you will like the server to run</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ServerPortNumber" type="ts:ServerPortNumber">
+							<xs:annotation>
+								<xs:documentation>Port number for the service endpoint address</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ClientCallBackAddress" type="ts:ClientCallBackAddress" default="">
+							<xs:annotation>
+								<xs:documentation>CallBack address on which the client will receive the messages from the server</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ServerTimeout" type="ts:ServerTimeout" default="300">
+							<xs:annotation>
+								<xs:documentation>Duration (in sec) after which the server will close down</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ClientTimeout" type="ts:ClientTimeout" default="60">
+							<xs:annotation>
+								<xs:documentation>Duration (in sec )after the server has started the client will start</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="NumberOfClients" type="ts:NumberOfClients" default="1">
+							<xs:annotation>
+								<xs:documentation>Number of clients connecting to each service on the server</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="MessagesPerClient" type="ts:MessagesPerClient" default="1">
+							<xs:annotation>
+								<xs:documentation>Number of messages each client will send to the service</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="Contract">
+		<xs:simpleContent>
+			<xs:extension base="xs:boolean">
+				<xs:attribute name="ExpandAll" type="xs:boolean" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="ServerMachineName">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="ServerPortNumber">
+		<xs:restriction base="xs:integer"/>
+	</xs:simpleType>
+	<xs:simpleType name="ClientCallBackAddress">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="NumberOfClients">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="100"/>			
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="MessagesPerClient">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ServerTimeout">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="10000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ClientTimeout">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="10000"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
