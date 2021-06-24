@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1224c8fb-e4da-48df-8ae9-c0f0fc709893" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:19292/CreditCheckService.xamlx" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CreditCheckService.xsd" MetadataType="Schema" ID="7e9e1478-2110-4240-8e8a-bfa6737102f6" SourceId="1" SourceUrl="http://localhost:19292/CreditCheckService.xamlx?xsd=xsd0" />
+    <MetadataFile FileName="CreditCheckService.wsdl" MetadataType="Wsdl" ID="eefde691-0f45-465c-8f81-583b03eae53e" SourceId="1" SourceUrl="http://localhost:19292/CreditCheckService.xamlx?wsdl" />
+    <MetadataFile FileName="CreditCheckService.disco" MetadataType="Disco" ID="4c409e69-8c7d-45c6-89c9-ad72c3d3c6e5" SourceId="1" SourceUrl="http://localhost:19292/CreditCheckService.xamlx?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MySWIS" Class="InstancesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=MySWIS;Integrated Security=True" SettingsObjectName="SuspendedInstanceManagement.Properties.Settings" SettingsPropertyName="MySWISConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="[System.Activities.DurableInstancing].Instances" Member="Instances">
+    <Type Name="Instance">
+      <Column Name="InstanceId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PendingTimer" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastUpdatedTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ServiceDeploymentId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="SuspensionExceptionName" Type="System.String" DbType="NVarChar(450)" CanBeNull="true" />
+      <Column Name="SuspensionReason" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ActiveBookmarks" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CurrentMachine" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="LastMachine" Type="System.String" DbType="NVarChar(450)" CanBeNull="true" />
+      <Column Name="ExecutionStatus" Type="System.String" DbType="NVarChar(450)" CanBeNull="true" />
+      <Column Name="IsInitialized" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsSuspended" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsCompleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EncodingOption" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="ReadWritePrimitiveDataProperties" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="WriteOnlyPrimitiveDataProperties" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ReadWriteComplexDataProperties" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="WriteOnlyComplexDataProperties" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="[System.Activities.DurableInstancing].ServiceDeployments" Member="ServiceDeployments">
+    <Type Name="ServiceDeployment">
+      <Column Name="ServiceDeploymentId" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SiteName" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="RelativeServicePath" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="RelativeApplicationPath" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ServiceName" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ServiceNamespace" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

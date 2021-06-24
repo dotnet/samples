@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) Microsoft Corporation.  All rights reserved. -->
+<Activity x:Class="Microsoft.Samples.PickUsage.Sequence1" 
+          xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" 
+          xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+          xmlns:msp="clr-namespace:Microsoft.Samples.PickUsage;assembly=Pick" 
+          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Sequence>
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="name" />
+    </Sequence.Variables>
+    <WriteLine DisplayName="Prompt for name" Text="[&quot;What is your name? (You have 5 seconds to answer)&quot;]" />
+    <Pick>
+      <PickBranch>
+        <PickBranch.Trigger>
+          <msp:ReadString BookmarkName="[&quot;UserName&quot;]" DisplayName="Read input" Result="[name]" />
+        </PickBranch.Trigger>
+        <WriteLine DisplayName="Write name" Text="[&quot;Hello &quot; &amp; name]" />
+      </PickBranch>
+      <PickBranch>
+        <PickBranch.Trigger>
+          <Delay DisplayName="Set Delay" Duration="[System.TimeSpan.FromSeconds(5)]" />
+        </PickBranch.Trigger>
+        <WriteLine DisplayName="Write time is up" Text="[&quot;Time's up&quot;]" />
+      </PickBranch>
+    </Pick>
+  </Sequence>
+</Activity>

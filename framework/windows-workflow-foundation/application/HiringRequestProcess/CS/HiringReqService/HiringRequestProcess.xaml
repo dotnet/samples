@@ -1,0 +1,566 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Activity mc:Ignorable="sap" x:Class="Microsoft.Samples.HiringService.HiringRequestProcessServiceDefinition" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:hci="clr-namespace:HiringRequestService.Contoso.InboxService" xmlns:hcr="clr-namespace:HiringRequestService.Contoso.ResumeService;assembly=HiringRequestService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" xmlns:hcr1="clr-namespace:HiringRequestService.Contoso.ResumeService" xmlns:local="clr-namespace:HiringRequestService.Contoso.OrgService" xmlns:local1="clr-namespace:Microsoft.Samples.HiringService" xmlns:local2="clr-namespace:HiringRequestService.Contoso.OrgService.Activities" xmlns:local3="clr-namespace:HiringRequestService.Contoso.InboxService.Activities" xmlns:local4="clr-namespace:HiringRequestService.Contoso.ResumeService.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:msc="clr-namespace:Microsoft.Samples.ContosoHR;assembly=ContosoHR" xmlns:msr="clr-namespace:Microsoft.Samples.Resume;assembly=ResumeService" xmlns:mv="clr-namespace:Microsoft.VisualBasic;assembly=System" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:mvc="clr-namespace:Microsoft.VisualBasic.CompilerServices;assembly=Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:s1="clr-namespace:System;assembly=System" xmlns:s2="clr-namespace:System;assembly=System.Xml" xmlns:s3="clr-namespace:System;assembly=System.Core" xmlns:s4="clr-namespace:System;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sad="clr-namespace:System.Activities.Debugger;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System" xmlns:scg1="clr-namespace:System.Collections.Generic;assembly=System.ServiceModel" xmlns:scg2="clr-namespace:System.Collections.Generic;assembly=System.Core" xmlns:scg3="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:scg4="clr-namespace:System.Collections.Generic;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data.DataSetExtensions" xmlns:sl="clr-namespace:System.Linq;assembly=System.Core" xmlns:srs="clr-namespace:System.Runtime.Serialization;assembly=System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:ssx="clr-namespace:System.ServiceModel.XamlIntegration;assembly=System.ServiceModel" xmlns:st="clr-namespace:System.Text;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <CancellationScope sap:VirtualizedContainerService.HintSize="854,1186" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+    <CancellationScope.Variables>
+      <Variable x:TypeArguments="msc:HiringRequestInfo" Modifiers="Mapped" Name="hiringRequestInfo" />
+    </CancellationScope.Variables>
+    <Flowchart sap:VirtualizedContainerService.HintSize="818,977">
+      <Flowchart.Variables>
+        <Variable x:TypeArguments="x:String" Name="directManagerDecision" />
+        <Variable x:TypeArguments="x:String" Name="departmentManagerDecision" />
+        <Variable x:TypeArguments="x:Boolean" Name="hrManagersApproved" />
+        <Variable x:TypeArguments="p:CorrelationHandle" Name="processCorrelationHandle" />
+        <Variable x:TypeArguments="local:Employee" Name="requester" />
+      </Flowchart.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <av:Point x:Key="ShapeLocation">270,7.5</av:Point>
+          <av:Size x:Key="ShapeSize">60,75</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">330,45 410,45 410,99.02</av:PointCollection>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Double x:Key="Width">804</x:Double>
+          <x:Double x:Key="Height">941.02</x:Double>
+        </scg3:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Flowchart.StartNode>
+        <FlowStep x:Name="__ReferenceID18">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">310,99.02</av:Point>
+              <av:Size x:Key="ShapeSize">200,49</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">410,148.02 410,178.02 410,189.02</av:PointCollection>
+            </scg3:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Start process" sap:VirtualizedContainerService.HintSize="200,49">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg3:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <p:Receive CanCreateInstance="True" sap:VirtualizedContainerService.HintSize="255,86" OperationName="StartProcess" ServiceContractName="IHiringRequestService">
+              <p:Receive.CorrelationInitializers>
+                <p:QueryCorrelationInitializer CorrelationHandle="[processCorrelationHandle]">
+                  <p:XPathMessageQuery x:Key="key1">
+                    <p:XPathMessageQuery.Namespaces>
+                      <ssx:XPathMessageContextMarkup>
+                        <x:String x:Key="xg0">http://schemas.datacontract.org/2004/07/Microsoft.Samples.ContosoHR</x:String>
+                      </ssx:XPathMessageContextMarkup>
+                    </p:XPathMessageQuery.Namespaces>sm:body()/xg0:HiringRequestInfo/xg0:Id</p:XPathMessageQuery>                  
+                </p:QueryCorrelationInitializer>
+              </p:Receive.CorrelationInitializers>
+              <p:ReceiveMessageContent DeclaredMessageType="msc:HiringRequestInfo">
+                <OutArgument x:TypeArguments="msc:HiringRequestInfo">[hiringRequestInfo]</OutArgument>
+              </p:ReceiveMessageContent>
+            </p:Receive>            
+            <local1:InitializeHiringRequestInfo sap:VirtualizedContainerService.HintSize="255,22" HiringRequestInfo="[hiringRequestInfo]" HiringRequestInfoOut="[hiringRequestInfo]" />
+            <local2:GetEmployee DisplayName="Get Requester Employee Data" EndpointConfigurationName="WSHttpBinding_IOrgService" GetEmployeeResult="[requester]" sap:VirtualizedContainerService.HintSize="255,22" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" employeeId="[hiringRequestInfo.RequesterId]" />
+            <local1:SaveActionTrackingInfo Comment="{x:Null}" Action="Started" Employee="[requester]" sap:VirtualizedContainerService.HintSize="255,22" HiringRequestId="[hiringRequestInfo.Id.ToString]" State="Started" />
+          </Sequence>
+          <FlowStep.Next>
+            <FlowStep x:Name="__ReferenceID11">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">310,189.02</av:Point>
+                  <av:Size x:Key="ShapeSize">200,49</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">410,238.02 410,268.02 410,292.5</av:PointCollection>
+                </scg3:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Sequence DisplayName="Get Manager Approval" sap:VirtualizedContainerService.HintSize="200,49">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:String" Name="comment" />
+                  <Variable x:TypeArguments="x:String" Name="approverId" />
+                  <Variable x:TypeArguments="local:Employee" Name="approver" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg3:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <local3:Add DisplayName="Add to Manager Inbox" EndpointConfigurationName="WSHttpBinding_IInboxService" sap:VirtualizedContainerService.HintSize="255,22" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" requestCreatorId="[hiringRequestInfo.RequesterId]" requestId="[hiringRequestInfo.Id.ToString]" state="[HiringRequestProcessStates.WaitingForManagerApproval]" title="[hiringRequestInfo.Title]" userId="[requester.ManagerId]" />
+                <p:Receive CorrelatesWith="[processCorrelationHandle]" DisplayName="Receive Manager Approval" sap:VirtualizedContainerService.HintSize="255,86" OperationName="ReceiveManagerApproval" ServiceContractName="IHiringRequestService">
+                  <p:Receive.CorrelatesOn>
+                    <p:XPathMessageQuery x:Key="key1">
+                      <p:XPathMessageQuery.Namespaces>
+                        <ssx:XPathMessageContextMarkup>
+                          <x:String x:Key="xg0">http://schemas.microsoft.com/2003/10/Serialization/</x:String>
+                        </ssx:XPathMessageContextMarkup>
+                      </p:XPathMessageQuery.Namespaces>sm:body()/tempuri:ReceiveManagerApproval/tempuri:requestId</p:XPathMessageQuery>
+                  </p:Receive.CorrelatesOn>
+                  <p:ReceiveParametersContent>
+                    <OutArgument x:TypeArguments="x:String" x:Key="requestId" />
+                    <OutArgument x:TypeArguments="x:String" x:Key="approvalResult">[directManagerDecision]</OutArgument>
+                    <OutArgument x:TypeArguments="x:String" x:Key="comment">[comment]</OutArgument>
+                    <OutArgument x:TypeArguments="x:String" x:Key="employeeId">[approverId]</OutArgument>
+                  </p:ReceiveParametersContent>
+                </p:Receive>
+                <local2:GetEmployee DisplayName="Get Approver Employee Info" EndpointConfigurationName="WSHttpBinding_IOrgService" GetEmployeeResult="[approver]" sap:VirtualizedContainerService.HintSize="255,22" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" employeeId="[approverId]" />
+                <local1:SaveActionTrackingInfo Action="[directManagerDecision]" Comment="[comment]" Employee="[approver]" sap:VirtualizedContainerService.HintSize="255,22" HiringRequestId="[hiringRequestInfo.Id.ToString]" State="[HiringRequestProcessStates.WaitingForManagerApproval]" />
+                <local3:Remove DisplayName="Remove from Manager Inbox" EndpointConfigurationName="WSHttpBinding_IInboxService" sap:VirtualizedContainerService.HintSize="255,22" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" requestId="[hiringRequestInfo.Id.ToString]" userId="[approverId]" />
+              </Sequence>
+              <FlowStep.Next>
+                <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID14" Expression="[directManagerDecision]" sap:VirtualizedContainerService.HintSize="60,75">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">380,292.5</av:Point>
+                      <av:Size x:Key="ShapeSize">60,75</av:Size>
+                      <av:PointCollection x:Key="Default">445,330 475,330 560,330</av:PointCollection>
+                      <av:PointCollection x:Key="Case1Connector">445,330 475,330 560,330</av:PointCollection>
+                      <av:PointCollection x:Key="AcceptConnector">410,367.5 410,397.5 410,459.02</av:PointCollection>
+                      <av:PointCollection x:Key="RejectConnector">440,330 470,330 590,330</av:PointCollection>
+                      <av:PointCollection x:Key="ReviewConnector">380,330 350,330 230,330</av:PointCollection>
+                    </scg3:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <FlowStep x:Key="Accept" x:Name="__ReferenceID13">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:Point x:Key="ShapeLocation">310,459.02</av:Point>
+                        <av:Size x:Key="ShapeSize">200,49</av:Size>
+                        <av:PointCollection x:Key="ConnectorLocation">410,508.02 410,538.02 410,562.5</av:PointCollection>
+                      </scg3:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Sequence DisplayName="Get Dept Mgr Approval" sap:VirtualizedContainerService.HintSize="200,49">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="local:Department" Name="department" />
+                        <Variable x:TypeArguments="x:String" Name="comment" />
+                        <Variable x:TypeArguments="x:String" Name="approverId" />
+                        <Variable x:TypeArguments="local:Employee" Name="approver" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg3:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <local2:GetDepartment DisplayName="Get Department Data" EndpointConfigurationName="WSHttpBinding_IOrgService" GetDepartmentResult="[department]" sap:VirtualizedContainerService.HintSize="255,22" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" departmentId="[hiringRequestInfo.DepartmentId]" />
+                      <local3:Add DisplayName="Add to Dept. Owner Inbox" EndpointConfigurationName="WSHttpBinding_IInboxService" sap:VirtualizedContainerService.HintSize="255,22" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" requestCreatorId="[hiringRequestInfo.RequesterId]" requestId="[hiringRequestInfo.Id.ToString]" state="[HiringRequestProcessStates.WaitingForDepartmentOwnerApproval]" title="[hiringRequestInfo.Title]" userId="[department.OwnerId]" />
+                      <p:Receive CorrelatesWith="[processCorrelationHandle]" DisplayName="Receive approval" sap:VirtualizedContainerService.HintSize="255,86" OperationName="ReceiveDeptOwnerApproval" ServiceContractName="IHiringRequestService">
+                        <p:Receive.CorrelatesOn>
+                          <p:XPathMessageQuery x:Key="key1">
+                            <p:XPathMessageQuery.Namespaces>
+                              <ssx:XPathMessageContextMarkup>
+                                <x:String x:Key="xg0">http://schemas.microsoft.com/2003/10/Serialization/</x:String>
+                              </ssx:XPathMessageContextMarkup>
+                            </p:XPathMessageQuery.Namespaces>sm:body()/tempuri:ReceiveDeptOwnerApproval/tempuri:requestId</p:XPathMessageQuery>
+                        </p:Receive.CorrelatesOn>
+                        <p:ReceiveParametersContent>
+                          <OutArgument x:TypeArguments="x:String" x:Key="requestId" />
+                          <OutArgument x:TypeArguments="x:String" x:Key="deptOwnerDecision">[departmentManagerDecision]</OutArgument>
+                          <OutArgument x:TypeArguments="x:String" x:Key="comment">[comment]</OutArgument>
+                          <OutArgument x:TypeArguments="x:String" x:Key="employeeId">[approverId]</OutArgument>
+                        </p:ReceiveParametersContent>
+                      </p:Receive>
+                      <local2:GetEmployee DisplayName="Get Approver Employee Info" EndpointConfigurationName="WSHttpBinding_IOrgService" GetEmployeeResult="[approver]" sap:VirtualizedContainerService.HintSize="255,22" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" employeeId="[approverId]" />
+                      <local1:SaveActionTrackingInfo Action="[departmentManagerDecision]" Comment="[comment]" Employee="[approver]" sap:VirtualizedContainerService.HintSize="255,22" HiringRequestId="[hiringRequestInfo.Id.ToString]" State="[HiringRequestProcessStates.WaitingForDepartmentOwnerApproval]" />
+                      <local3:Remove DisplayName="Remove from Dept Owner Inbox" EndpointConfigurationName="WSHttpBinding_IInboxService" sap:VirtualizedContainerService.HintSize="255,22" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" requestId="[hiringRequestInfo.Id.ToString]" userId="[approverId]" />
+                    </Sequence>
+                    <FlowStep.Next>
+                      <FlowDecision x:Name="__ReferenceID15" Condition="[departmentManagerDecision = &quot;Accept&quot;]" sap:VirtualizedContainerService.HintSize="60,75">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">380,562.5</av:Point>
+                            <av:PointCollection x:Key="TrueConnector">380,600 280,600 280,698.52 310,698.52</av:PointCollection>
+                            <av:Size x:Key="ShapeSize">60,75</av:Size>
+                            <av:PointCollection x:Key="FalseConnector">440,600 560,600 560,330 590,330</av:PointCollection>
+                            <x:String x:Key="FalseLabel">Reject</x:String>
+                            <x:String x:Key="TrueLabel">Accept</x:String>
+                          </scg3:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <FlowDecision.True>
+                          <FlowStep x:Name="__ReferenceID16">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                                <av:Point x:Key="ShapeLocation">310,674.02</av:Point>
+                                <av:Size x:Key="ShapeSize">200,49</av:Size>
+                                <av:PointCollection x:Key="ConnectorLocation">410,723.02 410,753.02 410,782.5</av:PointCollection>
+                              </scg3:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Sequence DisplayName="2 HR mgrs OR CEO approval" sap:VirtualizedContainerService.HintSize="200,49">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="scg3:IList(local:Employee)" Name="listOfApprovers" />
+                                <Variable x:TypeArguments="x:Int32" Default="0" Name="approvedCount" />
+                                <Variable x:TypeArguments="local:Employee" Name="approver" />
+                                <Variable x:TypeArguments="x:String" Name="approverId" />
+                                <Variable x:TypeArguments="x:String" Name="comment" />
+                                <Variable x:TypeArguments="x:String" Name="decision" />
+                              </Sequence.Variables>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg3:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <local1:GetEmployeeByPositionType sap:VirtualizedContainerService.HintSize="786,22" PositionsToFindIds="[{&quot;CEO&quot;, &quot;HRMGR&quot;, &quot;RECMGR&quot;}]" Result="[listOfApprovers]" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" />
+                              <ParallelForEach x:TypeArguments="local:Employee" DisplayName="ParallelForEach&lt;Employee&gt;" sap:VirtualizedContainerService.HintSize="786,203" Values="[listOfApprovers]">
+                                <ActivityAction x:TypeArguments="local:Employee">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="local:Employee" Name="item" />
+                                  </ActivityAction.Argument>
+                                  <local3:Add DisplayName="Add to Inbox" EndpointConfigurationName="WSHttpBinding_IInboxService" sap:VirtualizedContainerService.HintSize="252,100" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" requestCreatorId="[hiringRequestInfo.RequesterId]" requestId="[hiringRequestInfo.Id.ToString]" state="[HiringRequestProcessStates.WaitingForHrManagersOrCeoApproval]" title="[hiringRequestInfo.Title]" userId="[item.Id]" />
+                                </ActivityAction>
+                              </ParallelForEach>
+                              <WriteLine sap:VirtualizedContainerService.HintSize="786,59" Text="[&quot;Waiting for HR Managers or CEO (&quot; &amp; hiringRequestInfo.Id.ToString &amp; &quot;)&quot;]" />
+                              <Flowchart sap:VirtualizedContainerService.HintSize="786,866">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    <av:Point x:Key="ShapeLocation">270,7.5</av:Point>
+                                    <av:Size x:Key="ShapeSize">60,75</av:Size>
+                                    <av:PointCollection x:Key="ConnectorLocation">330,45 435,45 435,91.7233333333333</av:PointCollection>
+                                    <x:Double x:Key="Width">772</x:Double>
+                                    <x:Double x:Key="Height">830</x:Double>
+                                  </scg3:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Flowchart.StartNode>
+                                  <FlowStep x:Name="__ReferenceID1">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <av:Point x:Key="ShapeLocation">307.5,91.7233333333333</av:Point>
+                                        <av:Size x:Key="ShapeSize">255,86</av:Size>
+                                        <av:PointCollection x:Key="ConnectorLocation">435,177.723333333333 435,207.723333333333 435,224</av:PointCollection>
+                                      </scg3:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <p:Receive CorrelatesWith="[processCorrelationHandle]" DisplayName="Receive Approval" sap:VirtualizedContainerService.HintSize="255,86" OperationName="ReceiveHrManagerApproval" ServiceContractName="IHiringRequestService">
+                                      <p:Receive.CorrelatesOn>
+                                        <p:XPathMessageQuery x:Key="key1">
+                                          <p:XPathMessageQuery.Namespaces>
+                                            <ssx:XPathMessageContextMarkup>
+                                              <x:String x:Key="xg0">http://schemas.microsoft.com/2003/10/Serialization/</x:String>
+                                            </ssx:XPathMessageContextMarkup>
+                                          </p:XPathMessageQuery.Namespaces>sm:body()/tempuri:ReceiveHrManagerApproval/tempuri:requestId</p:XPathMessageQuery>
+                                      </p:Receive.CorrelatesOn>
+                                      <p:ReceiveParametersContent>
+                                        <OutArgument x:TypeArguments="x:String" x:Key="requestId" />
+                                        <OutArgument x:TypeArguments="x:String" x:Key="decision">[decision]</OutArgument>
+                                        <OutArgument x:TypeArguments="x:String" x:Key="comment">[comment]</OutArgument>
+                                        <OutArgument x:TypeArguments="x:String" x:Key="employeeId">[approverId]</OutArgument>
+                                      </p:ReceiveParametersContent>
+                                    </p:Receive>
+                                    <FlowStep.Next>
+                                      <FlowStep x:Name="__ReferenceID2">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <av:Point x:Key="ShapeLocation">335,224</av:Point>
+                                            <av:Size x:Key="ShapeSize">200,22</av:Size>
+                                            <av:PointCollection x:Key="ConnectorLocation">435,246 435,274</av:PointCollection>
+                                          </scg3:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <local3:Remove DisplayName="Remove from approver Inbox" EndpointConfigurationName="WSHttpBinding_IInboxService" sap:VirtualizedContainerService.HintSize="200,22" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" requestId="[hiringRequestInfo.Id.ToString]" userId="[approverId]" />
+                                        <FlowStep.Next>
+                                          <FlowStep x:Name="__ReferenceID3">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <av:Point x:Key="ShapeLocation">335,274</av:Point>
+                                                <av:Size x:Key="ShapeSize">200,22</av:Size>
+                                                <av:PointCollection x:Key="ConnectorLocation">435,296 435,326 435,334</av:PointCollection>
+                                              </scg3:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <local2:GetEmployee DisplayName="Get Approver Information" EndpointConfigurationName="WSHttpBinding_IOrgService" GetEmployeeResult="[approver]" sap:VirtualizedContainerService.HintSize="200,22" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" employeeId="[approverId]" />
+                                            <FlowStep.Next>
+                                              <FlowStep x:Name="__ReferenceID4">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <av:Point x:Key="ShapeLocation">335,334</av:Point>
+                                                    <av:Size x:Key="ShapeSize">200,22</av:Size>
+                                                    <av:PointCollection x:Key="ConnectorLocation">435,356 435,386 435,397.5</av:PointCollection>
+                                                  </scg3:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <local1:SaveActionTrackingInfo Action="[decision]" Comment="[comment]" Employee="[approver]" sap:VirtualizedContainerService.HintSize="200,22" HiringRequestId="[hiringRequestInfo.Id.ToString]" State="[HiringRequestProcessStates.WaitingForHrManagersOrCeoApproval]" />
+                                                <FlowStep.Next>
+                                                  <FlowDecision x:Name="__ReferenceID5" Condition="[decision = &quot;Accept&quot;]" sap:VirtualizedContainerService.HintSize="60,75">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <av:Point x:Key="ShapeLocation">405,397.5</av:Point>
+                                                        <av:Size x:Key="ShapeSize">60,75</av:Size>
+                                                        <av:PointCollection x:Key="FalseConnector">465,435 600,435 600,521.5</av:PointCollection>
+                                                        <av:PointCollection x:Key="TrueConnector">405,435 245,435 245,487.5</av:PointCollection>
+                                                        <x:String x:Key="FalseLabel">Rejected</x:String>
+                                                        <x:String x:Key="TrueLabel">Approved</x:String>
+                                                      </scg3:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <FlowDecision.True>
+                                                      <FlowDecision x:Name="__ReferenceID6" Condition="[approver.Position.Id = &quot;CEO&quot;]" sap:VirtualizedContainerService.HintSize="60,75">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <av:Point x:Key="ShapeLocation">215,487.5</av:Point>
+                                                            <av:Size x:Key="ShapeSize">60,75</av:Size>
+                                                            <av:PointCollection x:Key="TrueConnector">215,525 125,525 125,751.5</av:PointCollection>
+                                                            <av:PointCollection x:Key="FalseConnector">275,525 395,525 395,611.5</av:PointCollection>
+                                                            <x:String x:Key="FalseLabel">HR Manager</x:String>
+                                                            <x:String x:Key="TrueLabel">CEO</x:String>
+                                                          </scg3:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <FlowDecision.True>
+                                                          <FlowStep x:Name="__ReferenceID0">
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <av:Point x:Key="ShapeLocation">3.99833333333333,751.5</av:Point>
+                                                                <av:Size x:Key="ShapeSize">242,57</av:Size>
+                                                              </scg3:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                            <Assign sap:VirtualizedContainerService.HintSize="242,57">
+                                                              <Assign.To>
+                                                                <OutArgument x:TypeArguments="x:Boolean">[hrManagersApproved]</OutArgument>
+                                                              </Assign.To>
+                                                              <Assign.Value>
+                                                                <InArgument x:TypeArguments="x:Boolean">[True]</InArgument>
+                                                              </Assign.Value>
+                                                            </Assign>
+                                                          </FlowStep>
+                                                        </FlowDecision.True>
+                                                        <FlowDecision.False>
+                                                          <FlowStep x:Name="__ReferenceID8">
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <av:Point x:Key="ShapeLocation">273.998333333333,611.5</av:Point>
+                                                                <av:Size x:Key="ShapeSize">242,57</av:Size>
+                                                                <av:PointCollection x:Key="ConnectorLocation">394.998333333333,669.5 394.998333333333,699.5 395,699.5 395,742.5</av:PointCollection>
+                                                              </scg3:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                            <Assign DisplayName="Increment the Approved Count" sap:VirtualizedContainerService.HintSize="242,57">
+                                                              <Assign.To>
+                                                                <OutArgument x:TypeArguments="x:Int32">[approvedCount]</OutArgument>
+                                                              </Assign.To>
+                                                              <Assign.Value>
+                                                                <InArgument x:TypeArguments="x:Int32">[approvedCount + 1]</InArgument>
+                                                              </Assign.Value>
+                                                            </Assign>
+                                                            <FlowStep.Next>
+                                                              <FlowDecision x:Name="__ReferenceID9" Condition="[approvedCount = 2]" sap:VirtualizedContainerService.HintSize="60,75" True="{x:Reference __ReferenceID0}" False="{x:Reference __ReferenceID1}">
+                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                  <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                    <av:Point x:Key="ShapeLocation">365,742.5</av:Point>
+                                                                    <av:Size x:Key="ShapeSize">60,75</av:Size>
+                                                                    <av:PointCollection x:Key="FalseConnector">425,780 742,780 742,134.723333333333 562.5,134.723333333333</av:PointCollection>
+                                                                    <av:PointCollection x:Key="TrueConnector">365,780 335,780 246.001666666667,780</av:PointCollection>
+                                                                  </scg3:Dictionary>
+                                                                </sap:WorkflowViewStateService.ViewState>
+                                                              </FlowDecision>
+                                                            </FlowStep.Next>
+                                                          </FlowStep>
+                                                        </FlowDecision.False>
+                                                      </FlowDecision>
+                                                    </FlowDecision.True>
+                                                    <FlowDecision.False>
+                                                      <FlowStep x:Name="__ReferenceID7">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <av:Point x:Key="ShapeLocation">478.998333333333,521.5</av:Point>
+                                                            <av:Size x:Key="ShapeSize">242,57</av:Size>
+                                                          </scg3:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <Assign sap:VirtualizedContainerService.HintSize="242,57">
+                                                          <Assign.To>
+                                                            <OutArgument x:TypeArguments="x:Boolean">[hrManagersApproved]</OutArgument>
+                                                          </Assign.To>
+                                                          <Assign.Value>
+                                                            <InArgument x:TypeArguments="x:Boolean">[False]</InArgument>
+                                                          </Assign.Value>
+                                                        </Assign>
+                                                      </FlowStep>
+                                                    </FlowDecision.False>
+                                                  </FlowDecision>
+                                                </FlowStep.Next>
+                                              </FlowStep>
+                                            </FlowStep.Next>
+                                          </FlowStep>
+                                        </FlowStep.Next>
+                                      </FlowStep>
+                                    </FlowStep.Next>
+                                  </FlowStep>
+                                </Flowchart.StartNode>
+                                <x:Reference>__ReferenceID1</x:Reference>
+                                <x:Reference>__ReferenceID2</x:Reference>
+                                <x:Reference>__ReferenceID3</x:Reference>
+                                <x:Reference>__ReferenceID4</x:Reference>
+                                <x:Reference>__ReferenceID5</x:Reference>
+                                <x:Reference>__ReferenceID6</x:Reference>
+                                <x:Reference>__ReferenceID7</x:Reference>
+                                <x:Reference>__ReferenceID0</x:Reference>
+                                <x:Reference>__ReferenceID8</x:Reference>
+                                <x:Reference>__ReferenceID9</x:Reference>
+                              </Flowchart>
+                            </Sequence>
+                            <FlowStep.Next>
+                              <FlowDecision x:Name="__ReferenceID17" Condition="[hrManagersApproved]" sap:VirtualizedContainerService.HintSize="60,75">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <av:Point x:Key="ShapeLocation">380,782.5</av:Point>
+                                    <av:PointCollection x:Key="FalseConnector">440,820 560,820 560,330 590,330</av:PointCollection>
+                                    <av:PointCollection x:Key="TrueConnector">380,820 285,820 285,913.52 315,913.52</av:PointCollection>
+                                    <av:Size x:Key="ShapeSize">60,75</av:Size>
+                                    <x:String x:Key="FalseLabel">Reject</x:String>
+                                    <x:String x:Key="TrueLabel">Accept</x:String>
+                                  </scg3:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <FlowDecision.True>
+                                  <FlowStep x:Name="__ReferenceID19">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <av:Point x:Key="ShapeLocation">315,889.02</av:Point>
+                                        <av:Size x:Key="ShapeSize">200,49</av:Size>
+                                      </scg3:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Parallel DisplayName="Update Systems" sap:VirtualizedContainerService.HintSize="200,49">
+                                      <Sequence sap:VirtualizedContainerService.HintSize="222,208">
+                                        <Sequence.Variables>
+                                          <Variable x:TypeArguments="msc:JobPosting" Name="jobPosting" />
+                                        </Sequence.Variables>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg3:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <local1:CreateJobPosting sap:VirtualizedContainerService.HintSize="200,22" HiringRequestInfo="[hiringRequestInfo]" Result="[jobPosting]" />
+                                        <local4:StartProcess DisplayName="Start ResumeRequest Process" EndpointConfigurationName="BasicHttpBinding_IJobPostingService" sap:VirtualizedContainerService.HintSize="200,22" JobPosting="[jobPosting]" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" />
+                                      </Sequence>
+                                      <local1:SaveActionTrackingInfo Comment="{x:Null}" Employee="{x:Null}" Action="Completed - Approved" sap:VirtualizedContainerService.HintSize="200,208" HiringRequestId="[hiringRequestInfo.Id.ToString]" State="Approved" />
+                                      <local3:Archive DisplayName="Archive Inbox" EndpointConfigurationName="WSHttpBinding_IInboxService" sap:VirtualizedContainerService.HintSize="200,208" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" requestCreatorId="[hiringRequestInfo.RequesterId]" requestId="[hiringRequestInfo.Id.ToString]" state="Accepted" title="[hiringRequestInfo.Title]" />
+                                      <local1:SaveHiringRequestInfo DisplayName="Update Hiring Request Info" sap:VirtualizedContainerService.HintSize="200,208" HiringRequestInfo="[hiringRequestInfo]" IsCancelled="False" IsCompleted="True" IsSuccess="True" />
+                                    </Parallel>
+                                  </FlowStep>
+                                </FlowDecision.True>
+                                <FlowDecision.False>
+                                  <FlowStep x:Name="__ReferenceID10">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <av:Point x:Key="ShapeLocation">590,305.5</av:Point>
+                                        <av:Size x:Key="ShapeSize">200,49</av:Size>
+                                      </scg3:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Parallel DisplayName="Rejected" sap:VirtualizedContainerService.HintSize="200,49">
+                                      <local1:SaveActionTrackingInfo Comment="{x:Null}" Employee="{x:Null}" Action="Completed - Rejected" DisplayName="SaveActionTrackingInfo" sap:VirtualizedContainerService.HintSize="200,40" HiringRequestId="[hiringRequestInfo.Id.ToString]" State="Rejected" />
+                                      <local3:Archive DisplayName="Archive Inbox" EndpointConfigurationName="WSHttpBinding_IInboxService" sap:VirtualizedContainerService.HintSize="200,40" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" requestCreatorId="[hiringRequestInfo.RequesterId]" requestId="[hiringRequestInfo.Id.ToString]" state="Rejected" title="[hiringRequestInfo.Title]" />
+                                      <local1:SaveHiringRequestInfo DisplayName="Update Hiring Request Info" sap:VirtualizedContainerService.HintSize="200,40" HiringRequestInfo="[hiringRequestInfo]" IsCancelled="False" IsCompleted="True" IsSuccess="False" />
+                                    </Parallel>
+                                  </FlowStep>
+                                </FlowDecision.False>
+                              </FlowDecision>
+                            </FlowStep.Next>
+                          </FlowStep>
+                        </FlowDecision.True>
+                        <FlowDecision.False>
+                          <x:Reference>__ReferenceID10</x:Reference>
+                        </FlowDecision.False>
+                      </FlowDecision>
+                    </FlowStep.Next>
+                  </FlowStep>
+                  <x:Reference>__ReferenceID10<x:Key>Reject</x:Key></x:Reference>
+                  <FlowStep x:Key="Review" x:Name="__ReferenceID12">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:Point x:Key="ShapeLocation">30,305.5</av:Point>
+                        <av:Size x:Key="ShapeSize">200,49</av:Size>
+                        <av:PointCollection x:Key="ConnectorLocation">130,305.5 130,213.52 310,213.52</av:PointCollection>
+                      </scg3:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Sequence DisplayName="Review" sap:VirtualizedContainerService.HintSize="200,49">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Name="newDescription" />
+                        <Variable x:TypeArguments="x:String" Name="comment" />
+                        <Variable x:TypeArguments="x:String" Name="approverId" />
+                        <Variable x:TypeArguments="local:Employee" Name="approver" />
+                        <Variable x:TypeArguments="x:String" Name="newDepartmentId" />
+                        <Variable x:TypeArguments="x:String" Name="newPositionId" />
+                        <Variable x:TypeArguments="x:String" Name="newTitle" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg3:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <local3:Add DisplayName="Add to Requester Inbox" EndpointConfigurationName="WSHttpBinding_IInboxService" sap:VirtualizedContainerService.HintSize="255,22" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" requestCreatorId="[hiringRequestInfo.RequesterId]" requestId="[hiringRequestInfo.Id.ToString]" state="[HiringRequestProcessStates.InReview]" title="[hiringRequestInfo.Title]" userId="[hiringRequestInfo.RequesterId]" />
+                      <p:Receive CorrelatesWith="[processCorrelationHandle]" sap:VirtualizedContainerService.HintSize="255,86" OperationName="CompleteReview" ServiceContractName="IHiringRequestService">
+                        <p:Receive.CorrelatesOn>
+                          <p:XPathMessageQuery x:Key="key1">
+                            <p:XPathMessageQuery.Namespaces>
+                              <ssx:XPathMessageContextMarkup>
+                                <x:String x:Key="xg0">http://schemas.microsoft.com/2003/10/Serialization/</x:String>
+                              </ssx:XPathMessageContextMarkup>
+                            </p:XPathMessageQuery.Namespaces>sm:body()/tempuri:CompleteReview/tempuri:requestId</p:XPathMessageQuery>
+                        </p:Receive.CorrelatesOn>
+                        <p:ReceiveParametersContent>
+                          <OutArgument x:TypeArguments="x:String" x:Key="requestId" />
+                          <OutArgument x:TypeArguments="x:String" x:Key="positionId">[newPositionId]</OutArgument>
+                          <OutArgument x:TypeArguments="x:String" x:Key="departmentId">[newDepartmentId]</OutArgument>
+                          <OutArgument x:TypeArguments="x:String" x:Key="description">[newDescription]</OutArgument>
+                          <OutArgument x:TypeArguments="x:String" x:Key="comment">[comment]</OutArgument>
+                          <OutArgument x:TypeArguments="x:String" x:Key="title">[newTitle]</OutArgument>
+                          <OutArgument x:TypeArguments="x:String" x:Key="employeeId">[approverId]</OutArgument>
+                        </p:ReceiveParametersContent>
+                      </p:Receive>
+                      <Sequence DisplayName="Update Hiring Request Data" sap:VirtualizedContainerService.HintSize="255,49">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg3:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign DisplayName="Update Description" sap:VirtualizedContainerService.HintSize="244.003333333333,59">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[hiringRequestInfo.Description]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[newDescription]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign DisplayName="Update Position" sap:VirtualizedContainerService.HintSize="244.003333333333,59">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[hiringRequestInfo.PositionId]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[newPositionId]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign DisplayName="Update Department" sap:VirtualizedContainerService.HintSize="244.003333333333,59">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[hiringRequestInfo.DepartmentId]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[newDepartmentId]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign DisplayName="Update Title" sap:VirtualizedContainerService.HintSize="244.003333333333,59">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[hiringRequestInfo.Title]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[newTitle]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <local1:SaveHiringRequestInfo IsCancelled="{x:Null}" IsCompleted="{x:Null}" IsSuccess="{x:Null}" sap:VirtualizedContainerService.HintSize="244.003333333333,24" HiringRequestInfo="[hiringRequestInfo]" />
+                      </Sequence>
+                      <local2:GetEmployee DisplayName="Get Approver Employee Info" EndpointConfigurationName="WSHttpBinding_IOrgService" GetEmployeeResult="[approver]" sap:VirtualizedContainerService.HintSize="255,22" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" employeeId="[approverId]" />
+                      <local1:SaveActionTrackingInfo Action="Review completed" Comment="[comment]" Employee="[approver]" sap:VirtualizedContainerService.HintSize="255,22" HiringRequestId="[hiringRequestInfo.Id.ToString]" State="[HiringRequestProcessStates.InReview]" />
+                      <local3:Remove DisplayName="Remove from Requester Inbox" EndpointConfigurationName="WSHttpBinding_IInboxService" sap:VirtualizedContainerService.HintSize="255,22" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" requestId="[hiringRequestInfo.Id.ToString]" userId="[approverId]" />
+                    </Sequence>
+                    <FlowStep.Next>
+                      <x:Reference>__ReferenceID11</x:Reference>
+                    </FlowStep.Next>
+                  </FlowStep>
+                </FlowSwitch>
+              </FlowStep.Next>
+            </FlowStep>
+          </FlowStep.Next>
+        </FlowStep>
+      </Flowchart.StartNode>
+      <x:Reference>__ReferenceID11</x:Reference>
+      <x:Reference>__ReferenceID12</x:Reference>
+      <x:Reference>__ReferenceID13</x:Reference>
+      <x:Reference>__ReferenceID14</x:Reference>
+      <x:Reference>__ReferenceID15</x:Reference>
+      <x:Reference>__ReferenceID16</x:Reference>
+      <x:Reference>__ReferenceID17</x:Reference>
+      <x:Reference>__ReferenceID18</x:Reference>
+      <x:Reference>__ReferenceID19</x:Reference>
+      <x:Reference>__ReferenceID10</x:Reference>
+    </Flowchart>
+    <CancellationScope.CancellationHandler>
+      <Parallel DisplayName="Update Systems" sap:VirtualizedContainerService.HintSize="818,86">
+        <local1:SaveActionTrackingInfo Comment="{x:Null}" Employee="{x:Null}" Action="Cancelled" sap:VirtualizedContainerService.HintSize="200,40" HiringRequestId="[hiringRequestInfo.Id.ToString]" State="Cancelled" />
+        <local3:Archive DisplayName="Archive Inbox" EndpointConfigurationName="WSHttpBinding_IInboxService" sap:VirtualizedContainerService.HintSize="200,40" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" requestCreatorId="[hiringRequestInfo.RequesterId]" requestId="[hiringRequestInfo.Id.ToString]" state="Cancelled" title="[hiringRequestInfo.Title]" />
+        <local1:SaveHiringRequestInfo DisplayName="Update Hiring Request Info" sap:VirtualizedContainerService.HintSize="200,40" HiringRequestInfo="[hiringRequestInfo]" IsCancelled="True" IsCompleted="True" IsSuccess="False" />
+      </Parallel>
+    </CancellationScope.CancellationHandler>
+  </CancellationScope>
+</Activity>

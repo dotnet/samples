@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) Microsoft Corporation.  All rights reserved. -->
+<w:Sequence xmlns:w="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+            xmlns:c="clr-namespace:System;assembly=mscorlib"
+            xmlns:s="clr-namespace:Microsoft.Samples.WPFWFIntegration;assembly=library"
+            xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml'
+            xmlns:x2='http://schemas.microsoft.com/netfx/2008/xaml'
+            xmlns:x3='clr-namespace:System.Windows;assembly=PresentationCore'
+            xmlns:x4='clr-namespace:System.Windows;assembly=WindowsBase'>
+  <w:Sequence.Variables>
+    <w:Variable Name="firstName" x:TypeArguments="c:String" Default="First" />
+    <w:Variable Name="lastName" x:TypeArguments="c:String" Default="Last" />
+  </w:Sequence.Variables>
+  <w:Sequence.Activities>
+    <s:ShowWindow>
+      <Window xmlns='http://schemas.microsoft.com/winfx/2006/xaml/presentation'
+        x:Name='theWindow' Title='WPF and WF' Width='350' Height='200' >
+        <Grid MinWidth='200'>
+          <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+          </Grid.ColumnDefinitions>
+          <Label>First Name</Label>
+          <Label Grid.Row='1'>Last Name</Label>
+          <TextBox Text='{Binding firstName, UpdateSourceTrigger=PropertyChanged}' Grid.Column='1' />
+          <TextBox Text='{Binding lastName, UpdateSourceTrigger=PropertyChanged}' Grid.Row='1' Grid.Column='1' />
+          <Button Content='Close' Grid.Row='3' Grid.ColumnSpan='2' >
+            <Button.Click>
+              <s:DelegateActivity>
+                  <s:CloseWindow Window='[theWindow]' />
+              </s:DelegateActivity>
+            </Button.Click>
+          </Button>
+        </Grid>
+      </Window>
+    </s:ShowWindow>
+    <w:WriteLine Text='["Hello " + firstName + " " + lastName]' />
+  </w:Sequence.Activities>
+</w:Sequence>

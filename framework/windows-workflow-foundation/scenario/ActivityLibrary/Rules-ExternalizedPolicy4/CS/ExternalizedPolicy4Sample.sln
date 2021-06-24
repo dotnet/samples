@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImperativeCodeClientSample", "ImperativeCodeClient\ImperativeCodeClientSample.csproj", "{A93C20F4-531B-4712-946E-19149393A5CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignerClientSample", "DesignerClientSample\DesignerClientSample.csproj", "{0D17B463-5641-473B-84A8-A39B294058F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalizedPolicy4", "ExternalizedPolicy4\ExternalizedPolicy4.csproj", "{F15BDD34-585A-4AF4-BB6C-D14D639E9766}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A93C20F4-531B-4712-946E-19149393A5CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A93C20F4-531B-4712-946E-19149393A5CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A93C20F4-531B-4712-946E-19149393A5CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A93C20F4-531B-4712-946E-19149393A5CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D17B463-5641-473B-84A8-A39B294058F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D17B463-5641-473B-84A8-A39B294058F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D17B463-5641-473B-84A8-A39B294058F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D17B463-5641-473B-84A8-A39B294058F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F15BDD34-585A-4AF4-BB6C-D14D639E9766}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F15BDD34-585A-4AF4-BB6C-D14D639E9766}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F15BDD34-585A-4AF4-BB6C-D14D639E9766}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F15BDD34-585A-4AF4-BB6C-D14D639E9766}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Activity mc:Ignorable="sap" x:Class="Microsoft.Samples.PromotionalDiscountWorkflow" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:s1="clr-namespace:System;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" xmlns:sad="clr-namespace:System.Activities.Debugger;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="promoCode" Type="InArgument(x:String)" />
+    <x:Property Name="numberOfKids" Type="InArgument(x:Int32)" />
+    <x:Property Name="discount" Type="OutArgument(x:Double)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+  <Flowchart sap:VirtualizedContainerService.HintSize="1100.00166666667,636">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, s:Object">
+        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+        <av:Point x:Key="ShapeLocation">270,7.5</av:Point>
+        <av:Size x:Key="ShapeSize">60,75</av:Size>
+        <av:PointCollection x:Key="ConnectorLocation">330,45 540,45 540,107.5</av:PointCollection>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart.StartNode>
+      <x:Reference>__ReferenceID0</x:Reference>
+    </Flowchart.StartNode>
+    <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID0" Expression="[promoCode]" sap:VirtualizedContainerService.HintSize="60,75">
+      <FlowSwitch.Default>
+        <FlowStep x:Name="__ReferenceID5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, s:Object">
+              <av:Point x:Key="ShapeLocation">843.998333333333,286.5</av:Point>
+              <av:Size x:Key="ShapeSize">242.003333333333,57</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">965,343.5 965,510 655.17,510</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="242.003333333333,57">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Double">[discount]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Double">[0.0R]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <FlowStep.Next>
+            <x:Reference>__ReferenceID2</x:Reference>
+          </FlowStep.Next>
+        </FlowStep>
+      </FlowSwitch.Default>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, s:Object">
+          <av:Point x:Key="ShapeLocation">510,107.5</av:Point>
+          <av:Size x:Key="ShapeSize">60,75</av:Size>
+          <av:PointCollection x:Key="Default">570,145 965,145 965,286.5</av:PointCollection>
+          <av:PointCollection x:Key="SingleConnector">570,163.75 685,163.75 685,286.5</av:PointCollection>
+          <av:PointCollection x:Key="MNKConnector">510,163.75 410,163.75 410,286.5</av:PointCollection>
+          <av:PointCollection x:Key="MWKConnector">510,145 155,145 155,285.361666666667</av:PointCollection>
+          <av:PointCollection x:Key="Case1Connector">570,163.75 685,163.75 685,286.5</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <FlowStep x:Name="__ReferenceID1">
+        <x:Key>
+          <x:String>MWK</x:String>
+        </x:Key>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, s:Object">
+            <av:Point x:Key="ShapeLocation">55,285.361666666667</av:Point>
+            <av:Size x:Key="ShapeSize">200,49.2766666666667</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">155,334.638333333333 155,510 444.83,510</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <TryCatch sap:VirtualizedContainerService.HintSize="200,49.2766666666667">
+          <TryCatch.Try>
+            <If Condition="[numberOfKids = 0]">
+              <If.Then>
+                <Throw Exception="[New System.DivideByZeroException ()]" />
+              </If.Then>
+              <If.Else>
+                <Assign>
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Double">[discount]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Double">[15 + (1 - 1 / numberOfKids) * 10]</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </If.Else>
+            </If>
+          </TryCatch.Try>
+          <TryCatch.Catches>
+            <Catch x:TypeArguments="s:DivideByZeroException">
+              <ActivityAction x:TypeArguments="s:DivideByZeroException">
+                <Sequence>
+                  <WriteLine Text="[&quot;DivideByZeroException: Promo code is MWK - but number of kids = 0&quot;]" />
+                  <Assign>
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Double">[discount]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Double">[0.0R]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </ActivityAction>
+            </Catch>
+          </TryCatch.Catches>
+        </TryCatch>
+        <FlowStep.Next>
+          <FlowStep x:Name="__ReferenceID2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, s:Object">
+                <av:Point x:Key="ShapeLocation">444.83,480.361666666667</av:Point>
+                <av:Size x:Key="ShapeSize">210.34,59.2766666666667</av:Size>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <WriteLine sap:VirtualizedContainerService.HintSize="210.34,59.2766666666667" Text="[&quot;Discount calculated = &quot; &amp; discount]" />
+          </FlowStep>
+        </FlowStep.Next>
+      </FlowStep>
+      <FlowStep x:Name="__ReferenceID3">
+        <x:Key>
+          <x:String>MNK</x:String>
+        </x:Key>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, s:Object">
+            <av:Point x:Key="ShapeLocation">288.998333333333,286.5</av:Point>
+            <av:Size x:Key="ShapeSize">242.003333333333,57</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">410,343.5 410,373.5 550,373.5 550,480.361666666667</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Assign sap:VirtualizedContainerService.HintSize="242.003333333333,57">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:Double">[discount]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:Double">[15.0R]</InArgument>
+          </Assign.Value>
+        </Assign>
+        <FlowStep.Next>
+          <x:Reference>__ReferenceID2</x:Reference>
+        </FlowStep.Next>
+      </FlowStep>
+      <FlowStep x:Name="__ReferenceID4">
+        <x:Key>
+          <x:String>Single</x:String>
+        </x:Key>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, s:Object">
+            <av:Point x:Key="ShapeLocation">563.998333333333,286.5</av:Point>
+            <av:Size x:Key="ShapeSize">242.003333333333,57</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">685,343.5 685,373.5 550,373.5 550,480.361666666667</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Assign sap:VirtualizedContainerService.HintSize="242.003333333333,57">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:Double">[discount]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:Double">[10.0R]</InArgument>
+          </Assign.Value>
+        </Assign>
+        <FlowStep.Next>
+          <x:Reference>__ReferenceID2</x:Reference>
+        </FlowStep.Next>
+      </FlowStep>
+    </FlowSwitch>
+    <x:Reference>__ReferenceID5</x:Reference>
+    <x:Reference>__ReferenceID4</x:Reference>
+    <x:Reference>__ReferenceID3</x:Reference>
+    <x:Reference>__ReferenceID1</x:Reference>
+    <x:Reference>__ReferenceID2</x:Reference>
+  </Flowchart>
+</Activity>

@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Activity mc:Ignorable="sap" x:Class="Microsoft.Samples.WF.PurchaseProcess.PurchaseProcessWorkflow" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:local="clr-namespace:Microsoft.Samples.WF.PurchaseProcess" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mswp="clr-namespace:Microsoft.Samples.WF.PurchaseProcess;assembly=Common" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sad="clr-namespace:System.Activities.Debugger;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Rfp" Type="InArgument(mswp:RequestForProposal)" />
+    <x:Property Name="Result" Type="OutArgument(mswp:VendorProposal)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence sap:VirtualizedContainerService.HintSize="538,1555" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="mswp:RequestForProposal" Modifiers="Mapped" Name="requestForProposal" />
+      <Variable x:TypeArguments="mswp:VendorProposal" Default="[New Microsoft.Samples.WF.PurchaseProcess.VendorProposal With {&#xA;        .Value = Double.MaxValue&#xA;}]" Name="bestProposal" />
+      <Variable x:TypeArguments="x:Double" Name="proposalAdjustedValue" />
+      <Variable x:TypeArguments="x:Double" Name="tmpValue" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign DisplayName="Assign Rpf argument to a variable" sap:VirtualizedContainerService.HintSize="516,57">
+      <Assign.To>
+        <OutArgument x:TypeArguments="mswp:RequestForProposal">[requestForProposal]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="mswp:RequestForProposal">[Rfp]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ParallelForEach x:TypeArguments="mswp:Vendor" DisplayName="Get Vendors Proposals" sap:VirtualizedContainerService.HintSize="516,416" Values="[Rfp.InvitedVendors]">
+      <ActivityAction x:TypeArguments="mswp:Vendor">
+        <ActivityAction.Argument>
+          <DelegateInArgument x:TypeArguments="mswp:Vendor" Name="invitedVendor" />
+        </ActivityAction.Argument>
+        <Sequence sap:VirtualizedContainerService.HintSize="252,313">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <local:WaitForVendorProposal sap:VirtualizedContainerService.HintSize="208,22" Result="[tmpValue]" VendorId="[invitedVendor.Id]" />
+          <InvokeMethod sap:VirtualizedContainerService.HintSize="208,127" MethodName="RegisterProposal">
+            <InvokeMethod.TargetObject>
+              <InArgument x:TypeArguments="mswp:RequestForProposal">[requestForProposal]</InArgument>
+            </InvokeMethod.TargetObject>
+            <InArgument x:TypeArguments="mswp:Vendor">[invitedVendor]</InArgument>
+            <InArgument x:TypeArguments="x:Double">[tmpValue]</InArgument>
+          </InvokeMethod>
+        </Sequence>
+      </ActivityAction>
+    </ParallelForEach>
+    <ForEach x:TypeArguments="mswp:VendorProposal" DisplayName="Select best proposal" sap:VirtualizedContainerService.HintSize="516,525" Values="[requestForProposal.VendorProposals.Values]">
+      <ActivityAction x:TypeArguments="mswp:VendorProposal">
+        <ActivityAction.Argument>
+          <DelegateInArgument x:TypeArguments="mswp:VendorProposal" Name="proposal" />
+        </ActivityAction.Argument>
+        <Sequence sap:VirtualizedContainerService.HintSize="486,422">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="464,57">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Double">[proposalAdjustedValue]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Double">[proposal.Value * (1 - (proposal.Vendor.Reliablity / 100))]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <If Condition="[proposalAdjustedValue &lt; bestProposal.Value]" DisplayName="Is adjusted value is the best" sap:VirtualizedContainerService.HintSize="464,201">
+            <If.Then>
+              <Assign sap:VirtualizedContainerService.HintSize="291,100">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="mswp:VendorProposal">[bestProposal]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="mswp:VendorProposal">[proposal]</InArgument>
+                </Assign.Value>
+              </Assign>
+            </If.Then>
+          </If>
+        </Sequence>
+      </ActivityAction>
+    </ForEach>
+    <Assign DisplayName="Set Completion Date" sap:VirtualizedContainerService.HintSize="516,57">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:DateTime">[requestForProposal.CompletionDate]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:DateTime">[Date.Now]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign DisplayName="Assign Best Proposal to RequestForProposal" sap:VirtualizedContainerService.HintSize="516,57">
+      <Assign.To>
+        <OutArgument x:TypeArguments="mswp:VendorProposal">[requestForProposal.BestProposal]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="mswp:VendorProposal">[bestProposal]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Persist sap:VirtualizedContainerService.HintSize="516,22" />
+    <Assign sap:VirtualizedContainerService.HintSize="516,57">
+      <Assign.To>
+        <OutArgument x:TypeArguments="mswp:VendorProposal">[Result]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="mswp:VendorProposal">[bestProposal]</InArgument>
+      </Assign.Value>
+    </Assign>
+  </Sequence>
+</Activity>

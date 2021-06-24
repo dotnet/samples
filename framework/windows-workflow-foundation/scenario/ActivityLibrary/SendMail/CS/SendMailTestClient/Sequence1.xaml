@@ -1,0 +1,22 @@
+﻿<Activity mc:Ignorable="sap" x:Class="Microsoft.Samples.Activities.Statements.Sequence1" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:msas="clr-namespace:Microsoft.Samples.Activities.Statements;assembly=SendMail" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:s1="clr-namespace:System;assembly=System" xmlns:sad="clr-namespace:System.Activities.Debugger;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:scg1="clr-namespace:System.Collections.Generic;assembly=System" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Sequence sap:VirtualizedContainerService.HintSize="314,330">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="snm:MailAddressCollection" Default="[New System.Net.Mail.MailAddressCollection()]" Name="toAddresses" />
+      <Variable x:TypeArguments="snm:MailAddress" Default="[New System.Net.Mail.MailAddress(&quot;john.doe@contoso.com&quot;)]" Name="fromAddress" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <AddToCollection x:TypeArguments="snm:MailAddress" Collection="[toAddresses]" DisplayName="AddToAddresses" sap:VirtualizedContainerService.HintSize="292,22" Item="[New System.Net.Mail.MailAddress(&quot;someone@contoso.com&quot;)]" />
+    <msas:SendMail Attachments="{x:Null}" Bcc="{x:Null}" BodyTemplateFilePath="{x:Null}" CC="{x:Null}" Password="{x:Null}" TestDropPath="{x:Null}" Tokens="{x:Null}" UserName="{x:Null}" Body="Hello. This is a test email." EnableSsl="False" From="[fromAddress]" sap:VirtualizedContainerService.HintSize="292,144" Host="localhost" Port="25" Subject="Test email" To="[toAddresses]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </msas:SendMail>
+  </Sequence>
+</Activity>
