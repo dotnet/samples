@@ -1,0 +1,44 @@
+﻿/*  Copyright (c) Microsoft Corporation.  All rights reserved. */
+
+body
+{ 
+	font-family: Cambria, Arial, Helvetica, sans-serif;
+	font-size: small;
+ }
+
+input
+{	
+	font-family: cambria, Arial;
+	font-size: small;
+}
+
+.breadCrumbTable
+{ 
+	border-bottom: 1 px solid dimgray;
+	border-top: 1 px solid dimgray;
+	font-family: cambria;
+	font-size: small;
+	border-style: solid none solid none;
+	border-width: 1px;
+	border-color: #666666;	
+ }
+
+.fieldName
+{
+	vertical-align: top;
+	background-color: #fafafa;	
+	font-family: cambria, Arial;
+	font-size: small;
+	border-bottom: 1px dashed gray;	
+	width: 150px
+}
+
+.inboxTitle
+{
+	font-weight: bold;
+	background-color: #CCCCCC;
+}
+
+.inboxRow
+{
+}

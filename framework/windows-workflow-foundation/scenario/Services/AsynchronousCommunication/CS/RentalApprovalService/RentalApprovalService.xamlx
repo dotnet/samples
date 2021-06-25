@@ -1,0 +1,117 @@
+﻿<WorkflowService ConfigurationName="RentalApprovalService" Name="RentalApprovalService" mc:Ignorable="sap" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mv="clr-namespace:Microsoft.VisualBasic;assembly=System" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:s1="clr-namespace:System;assembly=System" xmlns:s2="clr-namespace:System;assembly=System.Xml" xmlns:s3="clr-namespace:System;assembly=System.Core" xmlns:s4="clr-namespace:System;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities" xmlns:sad="clr-namespace:System.Activities.Debugger;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System" xmlns:scg1="clr-namespace:System.Collections.Generic;assembly=System.ServiceModel" xmlns:scg2="clr-namespace:System.Collections.Generic;assembly=System.Core" xmlns:scg3="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data.DataSetExtensions" xmlns:sl="clr-namespace:System.Linq;assembly=System.Core" xmlns:st="clr-namespace:System.Text;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <p:Sequence DisplayName="Sequential Service" sad:XamlDebuggerXmlReader.FileName=".\RentalApprovalService.xamlx" sap:VirtualizedContainerService.HintSize="804,1600.81067708333">
+      <p:Sequence.Variables>
+        <p:Variable x:TypeArguments="CorrelationHandle" Name="handle" />
+        <p:Variable x:TypeArguments="CorrelationHandle" Name="__handle1" />
+        <p:Variable x:TypeArguments="CorrelationHandle" Name="__handle2" />
+        <p:Variable x:TypeArguments="CorrelationHandle" Name="__handle3" />
+        <p:Variable x:TypeArguments="x:Int32" Name="credit" />
+        <p:Variable x:TypeArguments="x:Int32" Name="value" />
+        <p:Variable x:TypeArguments="x:Boolean" Name="approve" />
+        <p:Variable x:TypeArguments="x:Boolean" Name="approve2" />
+      </p:Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg3:Dictionary x:TypeArguments="x:String, s:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg3:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Receive x:Name="__ReferenceID0" CanCreateInstance="True" CorrelatesWith="[handle]" sap:VirtualizedContainerService.HintSize="758,85.5533333333333" OperationName="SendData" ServiceContractName="IRentalApprovalService">
+        <Receive.CorrelatesOn>
+          <MessageQuerySet />
+        </Receive.CorrelatesOn>
+        <ReceiveParametersContent>
+          <p:OutArgument x:TypeArguments="x:Int32" x:Key="credit">[credit]</p:OutArgument>
+          <p:OutArgument x:TypeArguments="x:Int32" x:Key="value">[value]</p:OutArgument>
+        </ReceiveParametersContent>
+      </Receive>
+      <Send x:Name="__ReferenceID1" CorrelatesWith="[handle]" EndpointConfigurationName="BasicHttpContextBinding_ICreditCheckService" sap:VirtualizedContainerService.HintSize="758,85.5533333333333" OperationName="ValidateCredit" ServiceContractName="ICreditCheckService">
+        <SendParametersContent>
+          <p:InArgument x:TypeArguments="x:Int32" x:Key="credit">[credit]</p:InArgument>
+        </SendParametersContent>
+      </Send>
+      <p:TryCatch sap:VirtualizedContainerService.HintSize="758,338.383333333333">
+        <p:TryCatch.Try>
+          <ReceiveReply Request="{x:Reference __ReferenceID1}" DisplayName="ReceiveReplyForSend" sap:VirtualizedContainerService.HintSize="400,100">
+            <ReceiveMessageContent DeclaredMessageType="x:Boolean">
+              <p:OutArgument x:TypeArguments="x:Boolean">[approve]</p:OutArgument>
+            </ReceiveMessageContent>
+          </ReceiveReply>
+        </p:TryCatch.Try>
+        <p:TryCatch.Catches>
+          <p:Catch x:TypeArguments="s:TimeoutException" sap:VirtualizedContainerService.HintSize="402,31.2766666666667">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg3:Dictionary x:TypeArguments="x:String, s:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              </scg3:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <p:ActivityAction x:TypeArguments="s:TimeoutException">
+              <p:ActivityAction.Argument>
+                <p:DelegateInArgument x:TypeArguments="s:TimeoutException" Name="exception" />
+              </p:ActivityAction.Argument>
+              <SendReply Request="{x:Reference __ReferenceID0}" DisplayName="SendReplyToReceive" sap:VirtualizedContainerService.HintSize="390,85.5533333333333">
+                <SendMessageContent>
+                  <p:InArgument x:TypeArguments="x:Boolean">[False]</p:InArgument>
+                </SendMessageContent>
+              </SendReply>
+            </p:ActivityAction>
+          </p:Catch>
+        </p:TryCatch.Catches>
+      </p:TryCatch>
+      <p:If Condition="[approve.Equals(True)]" sap:VirtualizedContainerService.HintSize="758,833.320677083333">
+        <p:If.Then>
+          <SendReply Request="{x:Reference __ReferenceID0}" DisplayName="SendReplyToReceive" sap:VirtualizedContainerService.HintSize="257,727.49">
+            <SendMessageContent>
+              <p:InArgument x:TypeArguments="x:Boolean">[approve]</p:InArgument>
+            </SendMessageContent>
+          </SendReply>
+        </p:If.Then>
+        <p:If.Else>
+          <p:Sequence sap:VirtualizedContainerService.HintSize="474,727.49">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg3:Dictionary x:TypeArguments="x:String, s:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg3:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Send x:Name="__ReferenceID2" EndpointConfigurationName="BasicHttpContextBinding_ICreditCheckService" sap:VirtualizedContainerService.HintSize="428,85.5533333333333" OperationName="ValidateValue" ServiceContractName="ICreditCheckService">
+              <SendParametersContent>
+                <p:InArgument x:TypeArguments="x:Int32" x:Key="value">[value]</p:InArgument>
+              </SendParametersContent>
+            </Send>
+            <p:TryCatch sap:VirtualizedContainerService.HintSize="428,338.383333333333">
+              <p:TryCatch.Try>
+                <ReceiveReply Request="{x:Reference __ReferenceID2}" DisplayName="ReceiveReplyForSend" sap:VirtualizedContainerService.HintSize="400,100">
+                  <ReceiveMessageContent DeclaredMessageType="x:Boolean">
+                    <p:OutArgument x:TypeArguments="x:Boolean">[approve2]</p:OutArgument>
+                  </ReceiveMessageContent>
+                </ReceiveReply>
+              </p:TryCatch.Try>
+              <p:TryCatch.Catches>
+                <p:Catch x:TypeArguments="s:TimeoutException" sap:VirtualizedContainerService.HintSize="402,31.2766666666667">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg3:Dictionary x:TypeArguments="x:String, s:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    </scg3:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <p:ActivityAction x:TypeArguments="s:TimeoutException">
+                    <p:ActivityAction.Argument>
+                      <p:DelegateInArgument x:TypeArguments="s:TimeoutException" Name="exception" />
+                    </p:ActivityAction.Argument>
+                    <SendReply Request="{x:Reference __ReferenceID0}" DisplayName="SendReplyToReceive" sap:VirtualizedContainerService.HintSize="390,85.5533333333333">
+                      <SendMessageContent>
+                        <p:InArgument x:TypeArguments="x:Boolean">[False]</p:InArgument>
+                      </SendMessageContent>
+                    </SendReply>
+                  </p:ActivityAction>
+                </p:Catch>
+              </p:TryCatch.Catches>
+            </p:TryCatch>
+            <SendReply Request="{x:Reference __ReferenceID0}" DisplayName="SendReplyToReceive" sap:VirtualizedContainerService.HintSize="428,85.5533333333333">
+              <SendMessageContent>
+                <p:InArgument x:TypeArguments="x:Boolean">[approve2]</p:InArgument>
+              </SendMessageContent>
+            </SendReply>
+          </p:Sequence>
+        </p:If.Else>
+      </p:If>
+    </p:Sequence>
+</WorkflowService>

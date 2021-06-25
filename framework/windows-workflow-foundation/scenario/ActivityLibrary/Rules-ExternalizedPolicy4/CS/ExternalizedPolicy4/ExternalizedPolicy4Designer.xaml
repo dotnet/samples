@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<sad:ActivityDesigner x:Class="Microsoft.Samples.Activities.Rules.ExternalizedPolicy4Designer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Microsoft.Samples.Activities.Rules"
+    xmlns:sad="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+    xmlns:sadc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
+    xmlns:sadv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+    Collapsible="false">
+
+    <sad:ActivityDesigner.Resources>
+        <sadc:ArgumentToExpressionConverter x:Uid="sadv:ArgumentToExpressionConverter_1" x:Key="argumentToExpressionConverter" />
+    </sad:ActivityDesigner.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition x:Uid="RowDefinition_1" />
+            <RowDefinition x:Uid="RowDefinition_2" />
+            <RowDefinition x:Uid="RowDefinition_3" />
+            <RowDefinition x:Uid="RowDefinition_4" />
+            <RowDefinition x:Uid="RowDefinition_5" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Uid="ColumnDefinition_1" Width="*"  />
+            <ColumnDefinition x:Uid="ColumnDefinition_2" Width="3*" />
+        </Grid.ColumnDefinitions>
+        
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Margin="5, 5">Rules File Path</TextBlock>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" Margin="5, 5">RuleSet Name</TextBlock>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" Margin="5, 5">Target Object</TextBlock>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0" Margin="5, 5">Result Object</TextBlock>
+
+        <TextBox 
+            Text="{Binding Path=ModelItem.RulesFilePath, Mode=TwoWay}" 
+            ToolTip="Location of the rules file" Grid.Column="1" Margin="5,5" HorizontalAlignment="Left" Width="100" />
+        <TextBox 
+            Text="{Binding Path=ModelItem.RuleSetName, Mode=TwoWay}" 
+            ToolTip="Name of RuleSet to invoke" 
+            Grid.Row="1" Grid.Column="1" Margin="5, 5"/>
+        <sadv:ExpressionTextBox 
+            Expression="{Binding Path=ModelItem.TargetObject, Mode=TwoWay, Converter={StaticResource argumentToExpressionConverter}, ConverterParameter=In}" 
+            OwnerActivity="{Binding Path=ModelItem}"               
+            ToolTip="The target object to invoke the rules against" 
+            MaxLines="1"
+            Grid.Row="2" Grid.Column="1" Margin="5, 5" />
+        <sadv:ExpressionTextBox 
+            Expression="{Binding Path=ModelItem.ResultObject, Mode=TwoWay, Converter={StaticResource argumentToExpressionConverter}, ConverterParameter=Out}" 
+            OwnerActivity="{Binding Path=ModelItem}"                        
+            ToolTip="The result object to update" 
+            UseLocationExpression="True"
+            MaxLines="1"
+            Grid.Row="3" Grid.Column="1" Margin="5, 5" />
+        
+        <Button Content="View RuleSet" Name="viewRuleSetButton" Click="viewRuleSetButton_Click" Grid.Row="4" Grid.Column="1" Margin="5, 5"/>
+        <Button Content="..." Name="fileBrowseButton" Click="fileBrowseButton_Click" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" Margin="5, 5" />
+    </Grid>
+</sad:ActivityDesigner>

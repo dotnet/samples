@@ -1,0 +1,96 @@
+﻿<!-- Copyright (c) Microsoft Corporation. All rights reserved-->
+    
+    <sap:ActivityDesigner x:Class="Microsoft.Samples.ExpressionTextBoxSample.MultiAssignDesigner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="clr-namespace:System;assembly=mscorlib"
+    xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation" 
+    xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
+>
+
+    <sap:ActivityDesigner.Resources>
+        <ResourceDictionary>
+            <sapc:ArgumentToExpressionConverter x:Key="ArgumentToExpressionConverter" />
+        </ResourceDictionary>
+    </sap:ActivityDesigner.Resources>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <!-- Demonstrates the binding of an expression to an out argument named To1.
+             The custom value converter ArgumentToExpressionConverter is used to bind to the argument.
+             The UseLocationExpression attribute specifies that the expression provided is a location expression,
+             (a valid VB identifier), as expected in the left hand side of an assignment statement.
+         -->
+        
+        <sapv:ExpressionTextBox 
+          HintText="To"
+          Expression="{Binding Path=ModelItem.To1, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=Out }"
+          ExpressionType="s:String"
+          OwnerActivity="{Binding Path=ModelItem}"
+          UseLocationExpression="True"
+          Width="110"
+          Margin="0,5"
+          Grid.Row="0"
+          Grid.Column="0"
+          MaxLines="1" />
+        
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="=" Grid.Row ="0" Grid.Column="1"/>
+        
+         <!-- Demonstrates the binding of an expression to an in argument Value1.
+             ArgumentToExpressionConverter is used again, but this time the ConverterParameter is set to In.
+             This expression evaluates to a value, as expected on the right hand side of an assignment statement.
+             The ExpressionTextBox uses value expressions by default so there is no need to specify this in an attribute.
+         -->
+        
+        <sapv:ExpressionTextBox 
+        Expression="{Binding Path=ModelItem.Value1, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In }"
+        ExpressionType="s:String"
+        HintText="Enter a string"
+        OwnerActivity="{Binding Path=ModelItem}"
+        Width="110"
+        Margin="0,5"
+        Grid.Row="0"
+        Grid.Column="2"
+        MaxLines="1" />
+
+        <!-- another out argument -->
+        
+        <sapv:ExpressionTextBox 
+          HintText="To"
+          Expression="{Binding Path=ModelItem.To2, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=Out }"
+          ExpressionType="s:String"
+          OwnerActivity="{Binding Path=ModelItem}"
+          UseLocationExpression="True"
+          Width="110"
+          Margin="0,5"
+          Grid.Row="1"
+          Grid.Column="0"
+          MaxLines="1" />
+
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="=" Grid.Row ="1" Grid.Column="1"/>
+
+        <!-- another in argument -->
+        
+        <sapv:ExpressionTextBox 
+        Expression="{Binding Path=ModelItem.Value2, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In }"
+        ExpressionType="s:String"
+        HintText="Enter a string"
+        OwnerActivity="{Binding Path=ModelItem}"
+        Width="110"
+        Margin="0,5"
+        Grid.Row="1"
+        Grid.Column="2"
+        MaxLines="1" />
+    </Grid>
+</sap:ActivityDesigner>

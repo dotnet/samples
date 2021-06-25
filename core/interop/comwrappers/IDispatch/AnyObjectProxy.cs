@@ -10,7 +10,7 @@ using System.Runtime.InteropServices.ComTypes;
 public class AnyObjectProxy : ComWrappersImpl.IDispatch,
     ICustomQueryInterface /* WORKAROUND for WinForms WebBrowser control API */
 {
-    private static Lazy<ComWrappers> g_ComWrappers = new Lazy<ComWrappers>(() => new ComWrappersImpl(), true);
+    private static ComWrappers g_ComWrappers = new ComWrappersImpl();
 
     private const int DISP_E_UNKNOWNNAME = unchecked((int)0x80020006);
 
@@ -38,7 +38,9 @@ public class AnyObjectProxy : ComWrappersImpl.IDispatch,
             this.nameToDispId[mi.Name] = dispIdNext++;
         }
 
-        this.wrapperPtr = g_ComWrappers.Value.GetOrCreateComInterfaceForObject(this, CreateComInterfaceFlags.None);
+        // The return pointer is to the IUnknown interface implementation. A QueryInterface() to
+        // the appropriate interface prior to passing to unmanaged code should be done in most circumstances.
+        this.wrapperPtr = g_ComWrappers.GetOrCreateComInterfaceForObject(this, CreateComInterfaceFlags.None);
     }
 
     ~AnyObjectProxy()
@@ -152,7 +154,7 @@ public class AnyObjectProxy : ComWrappersImpl.IDispatch,
         // Return the ComWrappers IDispatch implementation
         // instead of the one provided by the runtime.
         if (!this.inGetInterface
-            && iid == typeof(ComWrappersImpl.IDispatch).GUID)
+            && iid == ComWrappersImpl.IDispatch.IID)
         {
             try
             {

@@ -1,0 +1,12 @@
+﻿<!-- Copyright (c) Microsoft Corporation.  All rights reserved. -->
+   <Window x:Class="Microsoft.Samples.LoadFromXAML.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Dynamic Activity Sample" Height="540" Width="597">
+    <Grid>
+        <ComboBox Height="24" Name="comboBox1" VerticalAlignment="Top" Margin="12,12,12,0" SelectionChanged="comboBox1_SelectionChanged"></ComboBox>
+        <TextBox Margin="14,54,12,205" Name="txtXaml" AcceptsReturn="True" AutoWordSelection="True"></TextBox>
+        <Button Height="40" HorizontalAlignment="Left" Margin="14,0,0,153" Name="button1" VerticalAlignment="Bottom" Width="104" Click="button1_Click">Execute</Button>
+        <TextBox Height="132" Margin="13,0,14,12" Name="txtResults" VerticalAlignment="Bottom" Background="#FF0A0900" Foreground="#FF00FA00">&lt;Results of Execution&gt;</TextBox>
+    </Grid>
+</Window>

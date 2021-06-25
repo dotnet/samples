@@ -1,0 +1,20 @@
+﻿<Activity x:Class="HiringRequestService.Contoso.ResumeService.Activities.ReceiveJobPostingData" this:ReceiveJobPostingData.EndpointConfigurationName="BasicHttpBinding_IJobPostingService" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:hcr="clr-namespace:HiringRequestService.Contoso.ResumeService;assembly=HiringRequestService, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" xmlns:hcr1="clr-namespace:HiringRequestService.Contoso.ResumeService;assembly=HiringRequestService" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://tempuri.org/" xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel" xmlns:this="clr-namespace:HiringRequestService.Contoso.ResumeService.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="EndpointConfigurationName" Type="x:String" />
+    <x:Property Name="id" Type="InArgument(x:String)" />
+    <x:Property Name="title" Type="InArgument(x:String)" />
+    <x:Property Name="description" Type="InArgument(x:String)" />
+    <x:Property Name="timeOut" Type="InArgument(x:Int32)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+  <Sequence>
+    <p1:Send Action="http://tempuri.org/IJobPostingService/ReceiveJobPostingData" OperationName="ReceiveJobPostingData" ServiceContractName="p:IJobPostingService">
+      <p1:Send.EndpointConfigurationName>
+        <PropertyReference x:TypeArguments="x:String" PropertyName="EndpointConfigurationName" />
+      </p1:Send.EndpointConfigurationName>
+      <p1:SendMessageContent>
+        <InArgument x:TypeArguments="hcr1:ReceiveJobPostingData">[New HiringRequestService.Contoso.ResumeService.ReceiveJobPostingData() With { .id = id, .title = title, .description = description, .timeOut = timeOut }]</InArgument>
+      </p1:SendMessageContent>
+    </p1:Send>
+  </Sequence>
+</Activity>

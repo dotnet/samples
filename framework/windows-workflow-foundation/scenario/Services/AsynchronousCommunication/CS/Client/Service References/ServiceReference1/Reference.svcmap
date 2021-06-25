@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2c512455-a2f0-4c59-a3e3-c5e1fe3d297e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:25039/RentalApprovalService.xamlx" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RentalApprovalService.xsd" MetadataType="Schema" ID="37022ffd-c526-4805-9c00-b0568fe939eb" SourceId="1" SourceUrl="http://localhost:25039/RentalApprovalService.xamlx?xsd=xsd1" />
+    <MetadataFile FileName="RentalApprovalService.disco" MetadataType="Disco" ID="a1c78944-7bd1-4e64-b180-3efb024488db" SourceId="1" SourceUrl="http://localhost:25039/RentalApprovalService.xamlx?disco" />
+    <MetadataFile FileName="RentalApprovalService1.xsd" MetadataType="Schema" ID="1ec30f79-a21c-49b7-a9ba-845253ef6a3b" SourceId="1" SourceUrl="http://localhost:25039/RentalApprovalService.xamlx?xsd=xsd0" />
+    <MetadataFile FileName="RentalApprovalService.wsdl" MetadataType="Wsdl" ID="044fb4c8-da83-41cd-a128-381e2dfd9c96" SourceId="1" SourceUrl="http://localhost:25039/RentalApprovalService.xamlx?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

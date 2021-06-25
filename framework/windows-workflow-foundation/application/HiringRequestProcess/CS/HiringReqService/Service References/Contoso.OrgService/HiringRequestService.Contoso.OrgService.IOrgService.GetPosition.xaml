@@ -1,0 +1,54 @@
+﻿<Activity x:Class="HiringRequestService.Contoso.OrgService.Activities.GetPosition" this:GetPosition.EndpointConfigurationName="WSHttpBinding_IOrgService" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:hco="clr-namespace:HiringRequestService.Contoso.OrgService;assembly=HiringRequestService" xmlns:hco1="clr-namespace:HiringRequestService.Contoso.OrgService;assembly=HiringRequestService, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://tempuri.org/" xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel" xmlns:srs="clr-namespace:System.Runtime.Serialization;assembly=System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:this="clr-namespace:HiringRequestService.Contoso.OrgService.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="EndpointConfigurationName" Type="x:String" />
+    <x:Property Name="positionId" Type="InArgument(x:String)" />
+    <x:Property Name="GetPositionResult" Type="OutArgument(hco:Position)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+  <Sequence>
+    <Sequence.Variables>
+      <x:Reference>__ReferenceID1</x:Reference>
+      <x:Reference>__ReferenceID2</x:Reference>
+    </Sequence.Variables>
+    <p1:Send x:Name="__ReferenceID0" Action="http://tempuri.org/IOrgService/GetPosition" OperationName="GetPosition" ServiceContractName="p:IOrgService">
+      <p1:Send.CorrelationInitializers>
+        <p1:RequestReplyCorrelationInitializer>
+          <p1:RequestReplyCorrelationInitializer.CorrelationHandle>
+            <InArgument x:TypeArguments="p1:CorrelationHandle">
+              <VariableValue x:TypeArguments="p1:CorrelationHandle">
+                <VariableValue.Variable>
+                  <Variable x:TypeArguments="p1:CorrelationHandle" x:Name="__ReferenceID2" />
+                </VariableValue.Variable>
+              </VariableValue>
+            </InArgument>
+          </p1:RequestReplyCorrelationInitializer.CorrelationHandle>
+        </p1:RequestReplyCorrelationInitializer>
+      </p1:Send.CorrelationInitializers>
+      <p1:Send.EndpointConfigurationName>
+        <PropertyReference x:TypeArguments="x:String" PropertyName="EndpointConfigurationName" />
+      </p1:Send.EndpointConfigurationName>
+      <p1:SendMessageContent>
+        <InArgument x:TypeArguments="hco:GetPositionRequest">[New HiringRequestService.Contoso.OrgService.GetPositionRequest() With { .positionId = positionId }]</InArgument>
+      </p1:SendMessageContent>
+    </p1:Send>
+    <p1:ReceiveReply Request="{x:Reference __ReferenceID0}" Action="http://tempuri.org/IOrgService/GetPositionResponse">
+      <p1:ReceiveMessageContent>
+        <OutArgument x:TypeArguments="hco:GetPositionResponse">
+          <VariableReference x:TypeArguments="hco:GetPositionResponse">
+            <VariableReference.Variable>
+              <Variable x:TypeArguments="hco:GetPositionResponse" x:Name="__ReferenceID1" Name="tempResult" />
+            </VariableReference.Variable>
+          </VariableReference>
+        </OutArgument>
+      </p1:ReceiveMessageContent>
+    </p1:ReceiveReply>
+    <Assign>
+      <Assign.To>
+        <OutArgument x:TypeArguments="hco:Position">[GetPositionResult]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="hco:Position">[tempResult.GetPositionResult]</InArgument>
+      </Assign.Value>
+    </Assign>
+  </Sequence>
+</Activity>
