@@ -1,0 +1,15 @@
+﻿<Activity mc:Ignorable="sap" x:Class="Microsoft.Samples.Activities.Statements.Sequence1" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:msas="clr-namespace:Microsoft.Samples.Activities.Statements;assembly=Microsoft.Samples.Activities.Statements.GetWorkflowInstanceId" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=System" xmlns:s1="clr-namespace:System;assembly=System.Core" xmlns:s2="clr-namespace:System;assembly=System.ServiceModel" xmlns:s3="clr-namespace:System;assembly=mscorlib" xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities" xmlns:sad="clr-namespace:System.Activities.Debugger;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Sequence sap:VirtualizedContainerService.HintSize="233,344" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="s3:Guid" Name="instanceId" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <WriteLine sap:VirtualizedContainerService.HintSize="211,59" Text="Workflow is executing" />
+    <msas:GetWorkflowInstanceId sap:VirtualizedContainerService.HintSize="211,22" Result="[instanceId]" />
+    <WriteLine sap:VirtualizedContainerService.HintSize="211,59" Text="[&quot;The InstanceId is: &quot; + instanceId.ToString()]" />
+  </Sequence>
+</Activity>

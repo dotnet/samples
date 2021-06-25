@@ -1,0 +1,35 @@
+﻿<!-- Copyright (c) Microsoft Corporation.  All rights reserved. -->
+<WorkflowService mc:Ignorable="sap" ConfigurationName="StockPriceService" Name="StockPriceService" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mstw="clr-namespace:Microsoft.Samples.SqlTracking.WFStockPriceApplication;assembly=WFStockPriceApplication" xmlns:mv="clr-namespace:Microsoft.VisualBasic;assembly=System" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:p1="http://tempuri.org/" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:s1="clr-namespace:System;assembly=System" xmlns:s2="clr-namespace:System;assembly=System.Xml" xmlns:s3="clr-namespace:System;assembly=System.Core" xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" xmlns:sad="clr-namespace:System.Activities.Debugger;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System" xmlns:scg1="clr-namespace:System.Collections.Generic;assembly=System.ServiceModel" xmlns:scg2="clr-namespace:System.Collections.Generic;assembly=System.Core" xmlns:scg3="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data.DataSetExtensions" xmlns:sl="clr-namespace:System.Linq;assembly=System.Core" xmlns:st="clr-namespace:System.Text;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <p:Sequence DisplayName="StockPriceService" sap:VirtualizedContainerService.HintSize="303,429.84">
+    <p:Sequence.Variables>
+      <p:Variable x:TypeArguments="CorrelationHandle" Name="handle" />
+      <p:Variable x:TypeArguments="x:String" Name="symbol" />
+      <p:Variable x:TypeArguments="x:Double" Name="result" />
+    </p:Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg3:Dictionary x:TypeArguments="x:String, s:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg3:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Receive x:Name="__ReferenceID0" CanCreateInstance="True" DisplayName="ReceiveRequest" sap:VirtualizedContainerService.HintSize="257,93.92" OperationName="GetStockPrice" ServiceContractName="p1:IStockPriceService">
+      <Receive.CorrelatesOn>
+        <MessageQuerySet />
+      </Receive.CorrelatesOn>
+      <Receive.CorrelationInitializers>
+        <RequestReplyCorrelationInitializer CorrelationHandle="[handle]" />
+      </Receive.CorrelationInitializers>
+      <Receive.KnownTypes>
+        <x:Type Type="x:Int32" />
+      </Receive.KnownTypes>
+      <ReceiveMessageContent>
+        <p:OutArgument x:TypeArguments="x:String" xml:space="preserve">[symbol]</p:OutArgument>
+      </ReceiveMessageContent>
+    </Receive>
+    <mstw:GetStockPrice sap:VirtualizedContainerService.HintSize="257,24" StockSymbol="[symbol]" Value="[result]" />
+    <SendReply Request="{x:Reference __ReferenceID0}" DisplayName="SendResponse" sap:VirtualizedContainerService.HintSize="257,93.92">
+      <SendMessageContent>
+        <p:InArgument x:TypeArguments="x:Double">[result]</p:InArgument>
+      </SendMessageContent>
+    </SendReply>
+  </p:Sequence>
+</WorkflowService>

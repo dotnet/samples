@@ -1,0 +1,40 @@
+﻿<!-- Copyright (c) Microsoft Coporation. All rights reserved. -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title>Mail template</title>        
+        <style type="text/css">
+        body
+        {
+        	font-family: Calibri, Verdana, Arial;
+        }
+                
+        a:visited { color: Blue; }
+        a:active { color: Blue; }
+        a:hover { color: Red; }
+        
+        .footer
+        {
+        	font-size: x-small;
+        	color: Gray; 
+        }
+        </style>
+	</head>
+	<body>
+	    <h1>Sample template</h1>
+        Hello @name! This is a sample template for sending mails using SendMail activity.
+        <br />
+        <br />
+        <b>SendMail</b> activity allows users to send emails using SMTP in <b>WF</b> programs
+        <br />
+        <br />
+        Supported features:
+        <ul>
+            <li>Send SMTP mail</li>
+            <li>HTML templates</li>
+            <li>Test mode</li>
+            <li>Runtime token replacement</li>
+        </ul>
+        <div class="footer">Mail sent @date from @server.</div>
+	</body>
+</html>

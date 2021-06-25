@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Workflow", "workflow\Workflow.csproj", "{57EB7E96-F198-4469-AAB6-F556072BFC71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "library\Library.csproj", "{DC8E22BE-424F-4F96-96CF-F5679A11F50E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57EB7E96-F198-4469-AAB6-F556072BFC71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57EB7E96-F198-4469-AAB6-F556072BFC71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57EB7E96-F198-4469-AAB6-F556072BFC71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57EB7E96-F198-4469-AAB6-F556072BFC71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC8E22BE-424F-4F96-96CF-F5679A11F50E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC8E22BE-424F-4F96-96CF-F5679A11F50E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC8E22BE-424F-4F96-96CF-F5679A11F50E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC8E22BE-424F-4F96-96CF-F5679A11F50E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

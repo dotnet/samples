@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="274d0831-aab0-4a10-803a-849ca69d2c81" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:18564/ResumeRequestService.xamlx" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ResumeRequestService.xsd" MetadataType="Schema" ID="2e45c9cb-2829-4ef0-90e5-ed794a368a72" SourceId="1" SourceUrl="http://localhost:18564/ResumeRequestService.xamlx?xsd=xsd2" />
+    <MetadataFile FileName="ResumeRequestService1.xsd" MetadataType="Schema" ID="4fa0f5be-3ea1-45b6-953a-d7855e3f67a6" SourceId="1" SourceUrl="http://localhost:18564/ResumeRequestService.xamlx?xsd=xsd1" />
+    <MetadataFile FileName="ResumeRequestService.wsdl" MetadataType="Wsdl" ID="d222a121-e942-4135-bffb-596582d45932" SourceId="1" SourceUrl="http://localhost:18564/ResumeRequestService.xamlx?wsdl" />
+    <MetadataFile FileName="ResumeRequestService2.xsd" MetadataType="Schema" ID="9cdae5db-d6f5-4661-81d8-1ed2a510c6b3" SourceId="1" SourceUrl="http://localhost:18564/ResumeRequestService.xamlx?xsd=xsd0" />
+    <MetadataFile FileName="ResumeRequestService.disco" MetadataType="Disco" ID="1027b787-04c4-4252-9aef-7de9b0a5b1ac" SourceId="1" SourceUrl="http://localhost:18564/ResumeRequestService.xamlx?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

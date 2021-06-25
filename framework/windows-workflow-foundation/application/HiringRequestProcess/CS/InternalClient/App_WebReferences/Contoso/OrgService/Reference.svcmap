@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e6dd688c-ab1b-41d1-aad5-23f8aacb2f7c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8732/Contoso/OrgService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="038afb2c-c7ec-4b34-a2a3-c84ac584927c" SourceId="1" SourceUrl="http://localhost:8732/Contoso/OrgService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="5bb24ca8-1301-4836-91a0-2e78e617c926" SourceId="1" SourceUrl="http://localhost:8732/Contoso/OrgService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="a7b0ed47-70d2-4ac5-94b7-a3c6b34633c2" SourceId="1" SourceUrl="http://localhost:8732/Contoso/OrgService/mex" />
+    <MetadataFile FileName="Microsoft.Samples.Organization.xsd" MetadataType="Schema" ID="8ce9391b-6b7b-4e0f-8ac0-5163e9623707" SourceId="1" SourceUrl="http://localhost:8732/Contoso/OrgService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

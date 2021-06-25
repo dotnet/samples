@@ -1,0 +1,23 @@
+﻿<!-- Copyright (c) Microsoft Corporation.  All rights reserved. -->
+<UserControl x:Class="Microsoft.Samples.VisualWorkflowTracking.WorkflowDesignerHost"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             MinHeight="300" MinWidth="300">
+
+    <Grid>
+        <Grid Name="OuterGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0"  Name="RehostGrid" />         
+            <Grid Grid.Column="1" Name="TrackingRecord">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.2*" />
+                    <RowDefinition Height="4*" />
+                </Grid.RowDefinitions>
+            </Grid>
+        </Grid>
+            
+    </Grid>
+</UserControl>

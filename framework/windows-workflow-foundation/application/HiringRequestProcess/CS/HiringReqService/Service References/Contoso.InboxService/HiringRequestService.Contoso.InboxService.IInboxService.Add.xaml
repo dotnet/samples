@@ -1,0 +1,49 @@
+﻿<Activity x:Class="HiringRequestService.Contoso.InboxService.Activities.Add" this:Add.EndpointConfigurationName="WSHttpBinding_IInboxService" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:hci="clr-namespace:HiringRequestService.Contoso.InboxService;assembly=HiringRequestService, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" xmlns:hci1="clr-namespace:HiringRequestService.Contoso.InboxService;assembly=HiringRequestService" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://tempuri.org/" xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel" xmlns:this="clr-namespace:HiringRequestService.Contoso.InboxService.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="EndpointConfigurationName" Type="x:String" />
+    <x:Property Name="requestId" Type="InArgument(x:String)" />
+    <x:Property Name="title" Type="InArgument(x:String)" />
+    <x:Property Name="state" Type="InArgument(x:String)" />
+    <x:Property Name="requestCreatorId" Type="InArgument(x:String)" />
+    <x:Property Name="userId" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+  <Sequence>
+    <Sequence.Variables>
+      <x:Reference>__ReferenceID1</x:Reference>
+      <x:Reference>__ReferenceID2</x:Reference>
+    </Sequence.Variables>
+    <p1:Send x:Name="__ReferenceID0" Action="http://tempuri.org/IInboxService/Add" OperationName="Add" ServiceContractName="p:IInboxService">
+      <p1:Send.CorrelationInitializers>
+        <p1:RequestReplyCorrelationInitializer>
+          <p1:RequestReplyCorrelationInitializer.CorrelationHandle>
+            <InArgument x:TypeArguments="p1:CorrelationHandle">
+              <VariableValue x:TypeArguments="p1:CorrelationHandle">
+                <VariableValue.Variable>
+                  <Variable x:TypeArguments="p1:CorrelationHandle" x:Name="__ReferenceID2" />
+                </VariableValue.Variable>
+              </VariableValue>
+            </InArgument>
+          </p1:RequestReplyCorrelationInitializer.CorrelationHandle>
+        </p1:RequestReplyCorrelationInitializer>
+      </p1:Send.CorrelationInitializers>
+      <p1:Send.EndpointConfigurationName>
+        <PropertyReference x:TypeArguments="x:String" PropertyName="EndpointConfigurationName" />
+      </p1:Send.EndpointConfigurationName>
+      <p1:SendMessageContent>
+        <InArgument x:TypeArguments="hci1:AddRequest">[New HiringRequestService.Contoso.InboxService.AddRequest() With { .requestId = requestId, .title = title, .state = state, .requestCreatorId = requestCreatorId, .userId = userId }]</InArgument>
+      </p1:SendMessageContent>
+    </p1:Send>
+    <p1:ReceiveReply Request="{x:Reference __ReferenceID0}" Action="http://tempuri.org/IInboxService/AddResponse">
+      <p1:ReceiveMessageContent>
+        <OutArgument x:TypeArguments="hci1:AddResponse">
+          <VariableReference x:TypeArguments="hci1:AddResponse">
+            <VariableReference.Variable>
+              <Variable x:TypeArguments="hci1:AddResponse" x:Name="__ReferenceID1" Name="tempResult" />
+            </VariableReference.Variable>
+          </VariableReference>
+        </OutArgument>
+      </p1:ReceiveMessageContent>
+    </p1:ReceiveReply>
+  </Sequence>
+</Activity>

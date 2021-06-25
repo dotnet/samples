@@ -1,0 +1,46 @@
+﻿<sad:ActivityDesigner x:Class="Microsoft.Samples.DocumentApprovalProcess.ApprovalManagerActivityLibrary.Designers.SelectUsersDesigner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="clr-namespace:System;assembly=mscorlib"
+    xmlns:sad="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+    xmlns:sadc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
+    xmlns:sadv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation">
+    <sad:ActivityDesigner.Resources>
+        <ResourceDictionary x:Uid="ResourceDictionary_1">
+            <sadc:ArgumentToExpressionConverter x:Uid="sadv:ArgumentToExpressionConverter_1" x:Key="ArgumentToExpressionConverter" />
+        </ResourceDictionary>
+    </sad:ActivityDesigner.Resources>
+
+    <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+        <Label Grid.Row="0" Content="User to exclude from selection:" />
+        <sadv:ExpressionTextBox  Grid.Row="1" 
+                                 OwnerActivity="{Binding Path=ModelItem}" 
+                                 Expression="{Binding Path=ModelItem.UserContext, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In }"
+                                 UseLocationExpression="False" />
+        <Label Grid.Row="2" Content="Type of user to select:" />
+        <sadv:ExpressionTextBox  Grid.Row="3" 
+                                 OwnerActivity="{Binding Path=ModelItem}" 
+                                 Expression="{Binding Path=ModelItem.UserType, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In }"
+                                 UseLocationExpression="False" />
+        <Label Grid.Row="4" Content="Number of users to select:" />
+        <sadv:ExpressionTextBox  Grid.Row="5"
+                                 OwnerActivity="{Binding Path=ModelItem}" 
+                                 Expression="{Binding Path=ModelItem.SelectXUsers, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In }"
+                                 UseLocationExpression="False" ExpressionType="{x:Type s:Int32}"/>
+        <Label Grid.Row="6" Content="Assign results to:" />
+        <sadv:ExpressionTextBox  Grid.Row="7" 
+                                 OwnerActivity="{Binding Path=ModelItem}" 
+                                 Expression="{Binding Path=ModelItem.SelectedUsers, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=Out }"
+                                 UseLocationExpression="True" />
+    </Grid>
+</sad:ActivityDesigner>

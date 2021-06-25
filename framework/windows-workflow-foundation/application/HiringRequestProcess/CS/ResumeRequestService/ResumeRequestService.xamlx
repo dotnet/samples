@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<WorkflowService mc:Ignorable="sap" ConfigurationName="ResumeRequestService" Name="ResumeRequestService" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ms="clr-namespace:Microsoft.Samples.ContosoHR;assembly=ContosoHR" xmlns:msr="clr-namespace:Microsoft.Samples.ResumeRequest;assembly=ResumeRequestService" xmlns:mv="clr-namespace:Microsoft.VisualBasic;assembly=System" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:s1="clr-namespace:System;assembly=System" xmlns:s2="clr-namespace:System;assembly=System.Xml" xmlns:s3="clr-namespace:System;assembly=System.Core" xmlns:s4="clr-namespace:System;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sad="clr-namespace:System.Activities.Debugger;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System" xmlns:scg1="clr-namespace:System.Collections.Generic;assembly=System.ServiceModel" xmlns:scg2="clr-namespace:System.Collections.Generic;assembly=System.Core" xmlns:scg3="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data.DataSetExtensions" xmlns:sl="clr-namespace:System.Linq;assembly=System.Core" xmlns:ssx="clr-namespace:System.ServiceModel.XamlIntegration;assembly=System.ServiceModel" xmlns:st="clr-namespace:System.Text;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <p:Sequence DisplayName="Sequential Service" sap:VirtualizedContainerService.HintSize="1045,1311" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+    <p:Sequence.Variables>
+      <p:Variable x:TypeArguments="CorrelationHandle" Name="handle" />
+      <p:Variable x:TypeArguments="x:Int32" Name="data" />
+      <p:Variable x:TypeArguments="x:Boolean" Name="finished" />
+      <p:Variable x:TypeArguments="CorrelationHandle" Name="processCorrelationHandle" />
+      <p:Variable x:TypeArguments="ms:JobPosting" Name="jobPosting" />
+      <p:Variable x:TypeArguments="x:Int32" Default="1" Name="timeOut" />
+      <p:Variable x:TypeArguments="x:String" Name="newDescription" />
+      <p:Variable x:TypeArguments="x:String" Name="newTitle" />
+    </p:Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg3:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Receive CanCreateInstance="True" DisplayName="Start the process" sap:VirtualizedContainerService.HintSize="1023,86" OperationName="StartProcess" ServiceContractName="IJobPostingService">
+      <Receive.CorrelationInitializers>
+        <QueryCorrelationInitializer CorrelationHandle="[processCorrelationHandle]">
+          <XPathMessageQuery x:Key="key1">
+            <XPathMessageQuery.Namespaces>
+              <ssx:XPathMessageContextMarkup>
+                <x:String x:Key="xg0">http://schemas.datacontract.org/2004/07/Microsoft.Samples.ContosoHR</x:String>
+              </ssx:XPathMessageContextMarkup>
+            </XPathMessageQuery.Namespaces>sm:body()/xg0:JobPosting/xg0:Id</XPathMessageQuery>
+        </QueryCorrelationInitializer>
+      </Receive.CorrelationInitializers>
+      <ReceiveMessageContent DeclaredMessageType="ms:JobPosting">
+        <p:OutArgument x:TypeArguments="ms:JobPosting">[jobPosting]</p:OutArgument>
+      </ReceiveMessageContent>
+    </Receive>
+    <msr:SaveJobPosting DisplayName="Create the Job Posting" sap:VirtualizedContainerService.HintSize="1023,22" JobPosting="[jobPosting]" State="WaitingData" />
+    <Receive CorrelatesWith="[processCorrelationHandle]" sap:VirtualizedContainerService.HintSize="1023,86" OperationName="ReceiveJobPostingData" ServiceContractName="IJobPostingService">
+      <Receive.CorrelatesOn>
+        <XPathMessageQuery x:Key="key1">
+          <XPathMessageQuery.Namespaces>
+            <ssx:XPathMessageContextMarkup>
+              <x:String x:Key="xgSc">http://tempuri.org/</x:String>
+            </ssx:XPathMessageContextMarkup>
+          </XPathMessageQuery.Namespaces>sm:body()/xgSc:ReceiveJobPostingData/xgSc:id</XPathMessageQuery>
+      </Receive.CorrelatesOn>
+      <ReceiveParametersContent>
+        <p:OutArgument x:TypeArguments="x:String" x:Key="id" />
+        <p:OutArgument x:TypeArguments="x:String" x:Key="title">[newTitle]</p:OutArgument>
+        <p:OutArgument x:TypeArguments="x:String" x:Key="description">[newDescription]</p:OutArgument>
+        <p:OutArgument x:TypeArguments="x:Int32" x:Key="timeOut">[timeOut]</p:OutArgument>
+      </ReceiveParametersContent>
+    </Receive>
+    <p:Sequence DisplayName="Update JobPosting Data" sap:VirtualizedContainerService.HintSize="1023,49">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg3:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <p:Assign sap:VirtualizedContainerService.HintSize="242,57">
+        <p:Assign.To>
+          <p:OutArgument x:TypeArguments="x:String">[jobPosting.Title]</p:OutArgument>
+        </p:Assign.To>
+        <p:Assign.Value>
+          <p:InArgument x:TypeArguments="x:String">[newTitle]</p:InArgument>
+        </p:Assign.Value>
+      </p:Assign>
+      <p:Assign sap:VirtualizedContainerService.HintSize="242,57">
+        <p:Assign.To>
+          <p:OutArgument x:TypeArguments="x:String">[jobPosting.Description]</p:OutArgument>
+        </p:Assign.To>
+        <p:Assign.Value>
+          <p:InArgument x:TypeArguments="x:String">[newDescription]</p:InArgument>
+        </p:Assign.Value>
+      </p:Assign>
+      <p:Assign sap:VirtualizedContainerService.HintSize="242,57">
+        <p:Assign.To>
+          <p:OutArgument x:TypeArguments="x:String">[jobPosting.Status]</p:OutArgument>
+        </p:Assign.To>
+        <p:Assign.Value>
+          <p:InArgument x:TypeArguments="x:String">Receiving Resumes</p:InArgument>
+        </p:Assign.Value>
+      </p:Assign>
+    </p:Sequence>
+    <msr:SaveJobPosting DisplayName="Update the Job Posting" sap:VirtualizedContainerService.HintSize="1023,22" JobPosting="[jobPosting]" />
+    <p:While sap:VirtualizedContainerService.HintSize="1023,660">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg3:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <p:While.Condition>[Not finished]</p:While.Condition>
+      <p:Pick sap:VirtualizedContainerService.HintSize="997,549">
+        <p:PickBranch DisplayName="Receive Resume" sap:VirtualizedContainerService.HintSize="288,503">
+          <p:PickBranch.Variables>
+            <p:Variable x:TypeArguments="ms:JobPostingResume" Name="NewResume" />
+          </p:PickBranch.Variables>
+          <p:PickBranch.Trigger>
+            <Receive CorrelatesWith="[processCorrelationHandle]" sap:VirtualizedContainerService.HintSize="258,100" OperationName="ReceiveResume" ServiceContractName="IJobPostingService">
+              <Receive.CorrelatesOn>
+                <XPathMessageQuery x:Key="key1">
+                  <XPathMessageQuery.Namespaces>
+                    <ssx:XPathMessageContextMarkup>
+                      <x:String x:Key="xg0">http://schemas.datacontract.org/2004/07/Microsoft.Samples.ContosoHR</x:String>
+                    </ssx:XPathMessageContextMarkup>
+                  </XPathMessageQuery.Namespaces>sm:body()/xg0:JobPostingResume/xg0:JobPosting/xg0:Id</XPathMessageQuery>
+              </Receive.CorrelatesOn>
+              <ReceiveMessageContent DeclaredMessageType="ms:JobPostingResume">
+                <p:OutArgument x:TypeArguments="ms:JobPostingResume">[NewResume]</p:OutArgument>
+              </ReceiveMessageContent>
+            </Receive>
+          </p:PickBranch.Trigger>
+          <p:TransactionScope sap:VirtualizedContainerService.HintSize="258,289">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg3:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <p:Sequence sap:VirtualizedContainerService.HintSize="222,208">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg3:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <msr:IncremementResumesCount sap:VirtualizedContainerService.HintSize="200,22" JobPostingId="[jobPosting.Id]" />
+              <msr:PostResume sap:VirtualizedContainerService.HintSize="200,22" Resume="[NewResume]" />
+            </p:Sequence>
+          </p:TransactionScope>
+        </p:PickBranch>
+        <p:PickBranch DisplayName="Stop Receiving Resumes" sap:VirtualizedContainerService.HintSize="285,503">
+          <p:PickBranch.Trigger>
+            <Receive CorrelatesWith="[processCorrelationHandle]" sap:VirtualizedContainerService.HintSize="255,100" OperationName="StopProcess" ServiceContractName="IJobPostingService">
+              <Receive.CorrelatesOn>
+                <XPathMessageQuery x:Key="key1">
+                  <XPathMessageQuery.Namespaces>
+                    <ssx:XPathMessageContextMarkup>
+                      <x:String x:Key="xgSc">http://tempuri.org/</x:String>
+                    </ssx:XPathMessageContextMarkup>
+                  </XPathMessageQuery.Namespaces>sm:body()/xgSc:StopProcess/xgSc:id</XPathMessageQuery>
+              </Receive.CorrelatesOn>
+              <ReceiveParametersContent>
+                <p:OutArgument x:TypeArguments="x:String" x:Key="id" />
+              </ReceiveParametersContent>
+            </Receive>
+          </p:PickBranch.Trigger>
+          <p:Sequence sap:VirtualizedContainerService.HintSize="255,100">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg3:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <p:Assign sap:VirtualizedContainerService.HintSize="242,57">
+              <p:Assign.To>
+                <p:OutArgument x:TypeArguments="x:Boolean">[finished]</p:OutArgument>
+              </p:Assign.To>
+              <p:Assign.Value>
+                <p:InArgument x:TypeArguments="x:Boolean">True</p:InArgument>
+              </p:Assign.Value>
+            </p:Assign>
+            <p:Assign sap:VirtualizedContainerService.HintSize="242,57">
+              <p:Assign.To>
+                <p:OutArgument x:TypeArguments="x:String">[jobPosting.Status]</p:OutArgument>
+              </p:Assign.To>
+              <p:Assign.Value>
+                <p:InArgument x:TypeArguments="x:String">Closed</p:InArgument>
+              </p:Assign.Value>
+            </p:Assign>
+          </p:Sequence>
+        </p:PickBranch>
+        <p:PickBranch sap:VirtualizedContainerService.HintSize="230,503">
+          <p:PickBranch.Trigger>
+            <p:Delay Duration="[TimeSpan.FromMinutes(timeOut)]" sap:VirtualizedContainerService.HintSize="200,100" />
+          </p:PickBranch.Trigger>
+          <p:Sequence sap:VirtualizedContainerService.HintSize="200,100">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg3:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <p:Assign sap:VirtualizedContainerService.HintSize="242,57">
+              <p:Assign.To>
+                <p:OutArgument x:TypeArguments="x:Boolean">[finished]</p:OutArgument>
+              </p:Assign.To>
+              <p:Assign.Value>
+                <p:InArgument x:TypeArguments="x:Boolean">True</p:InArgument>
+              </p:Assign.Value>
+            </p:Assign>
+            <p:Assign sap:VirtualizedContainerService.HintSize="242,57">
+              <p:Assign.To>
+                <p:OutArgument x:TypeArguments="x:String">[jobPosting.Description]</p:OutArgument>
+              </p:Assign.To>
+              <p:Assign.Value>
+                <p:InArgument x:TypeArguments="x:String">["** TimeOut Expired ** " + jobPosting.Description]</p:InArgument>
+              </p:Assign.Value>
+            </p:Assign>
+            <p:Assign sap:VirtualizedContainerService.HintSize="242,57">
+              <p:Assign.To>
+                <p:OutArgument x:TypeArguments="x:String">[jobPosting.Status]</p:OutArgument>
+              </p:Assign.To>
+              <p:Assign.Value>
+                <p:InArgument x:TypeArguments="x:String">Closed</p:InArgument>
+              </p:Assign.Value>
+            </p:Assign>
+          </p:Sequence>
+        </p:PickBranch>
+      </p:Pick>
+    </p:While>
+    <msr:SaveJobPosting DisplayName="Update Job Posting State" sap:VirtualizedContainerService.HintSize="1023,22" JobPosting="[jobPosting]" />
+  </p:Sequence>
+</WorkflowService>

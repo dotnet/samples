@@ -1,0 +1,80 @@
+﻿<Activity mc:Ignorable="sap" x:Class="Microsoft.Samples.DocumentApprovalProcess.ApprovalManagerActivityLibrary.QuorumApproval" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:msda="clr-namespace:Microsoft.Samples.DocumentApprovalProcess.ApprovalMessageContractLibrary;assembly=ApprovalMessageContractLibrary" xmlns:msda1="clr-namespace:Microsoft.Samples.DocumentApprovalProcess.ApprovalManagerActivityLibrary;assembly=ApprovalManagerActivityLibrary" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:s1="clr-namespace:System;assembly=System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:s2="clr-namespace:System;assembly=System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:s3="clr-namespace:System;assembly=System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:s4="clr-namespace:System;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sad="clr-namespace:System.Activities.Debugger;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Request" Type="InArgument(msda:ApprovalRequest)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+    <x:Property Name="Context" Type="InArgument(msda:User)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+    <x:Property Name="Response" Type="OutArgument(msda:ApprovalResponse)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+    <x:Property Name="ApproverType" Type="InArgument(x:String)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+    <x:Property Name="TotalApprovers" Type="InArgument(x:Int32)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+    <x:Property Name="RequiredApprovals" Type="InArgument(x:Int32)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+  </x:Members>
+  <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+  <Sequence sap:VirtualizedContainerService.HintSize="757,1113.49">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:List(msda:User)" Name="Approvers" />
+      <Variable x:TypeArguments="scg:List(msda1:UserWithIndex)" Name="IndexApprovers" />
+      <Variable x:TypeArguments="scg:List(msda:ApprovalResponse)" Default="[New List(Of Microsoft.Samples.DocumentApprovalProcess.ApprovalMessageContractLibrary.ApprovalResponse)]" Name="AResponses" />
+      <Variable x:TypeArguments="scg:List(msda:ApprovalResponse)" Default="[New List(Of Microsoft.Samples.DocumentApprovalProcess.ApprovalMessageContractLibrary.ApprovalResponse)]" Name="RResponses" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, s:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <msda1:SelectUsers DBConnectionString="{x:Null}" sap:VirtualizedContainerService.HintSize="723,213.106666666667" SelectXUsers="[TotalApprovers]" SelectedUsers="[Approvers]" UserContext="[Context]" UserType="[ApproverType]" />
+    <If Condition="[Approvers.Count &lt; RequiredApprovals]" sap:VirtualizedContainerService.HintSize="723,734.383333333333">
+      <If.Then>
+        <msda1:CreateResponse Approved="[False]" sap:VirtualizedContainerService.HintSize="200,632.83" Request="[Request]" Response="[Response]" />
+      </If.Then>
+      <If.Else>
+        <Sequence sap:VirtualizedContainerService.HintSize="498,632.83">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, s:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <msda1:UserListToUserWithIndexList sap:VirtualizedContainerService.HintSize="464,22" UserList="[Approvers]" UserListWithIndex="[IndexApprovers]" />
+          <ParallelForEach x:TypeArguments="msda1:UserWithIndex" sap:VirtualizedContainerService.HintSize="464,203.276666666667" Values="[IndexApprovers]">
+            <ActivityAction x:TypeArguments="msda1:UserWithIndex">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="msda1:UserWithIndex" Name="item" />
+              </ActivityAction.Argument>
+              <msda1:RequestApprovalInParallel AResponses="[AResponses]" ApproverWithIndex="[item]" sap:VirtualizedContainerService.HintSize="252.093333333333,100" RResponses="[RResponses]" Request="[New Microsoft.Samples.DocumentApprovalProcess.ApprovalMessageContractLibrary.ApprovalRequest(Request, item.Index)]" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" />
+            </ActivityAction>
+          </ParallelForEach>
+          <If Condition="[AResponses.Count &gt;= RequiredApprovals]" sap:VirtualizedContainerService.HintSize="464,201.553333333333">
+            <If.Then>
+              <msda1:CreateResponse Approved="[True]" sap:VirtualizedContainerService.HintSize="219.5,100" Request="[Request]" Response="[Response]" />
+            </If.Then>
+            <If.Else>
+              <msda1:CreateResponse Approved="[False]" sap:VirtualizedContainerService.HintSize="219.5,100" Request="[Request]" Response="[Response]" />
+            </If.Else>
+          </If>
+        </Sequence>
+      </If.Else>
+    </If>
+  </Sequence>
+</Activity>

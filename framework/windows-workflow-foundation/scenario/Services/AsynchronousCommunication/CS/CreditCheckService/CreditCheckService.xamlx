@@ -1,0 +1,72 @@
+﻿<WorkflowService ConfigurationName="CreditCheckService" Name="CreditCheckService" mc:Ignorable="sap" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel" xmlns:c="clr-namespace:Microsoft.Samples.CreditCheckService;assembly=CreditCheckService" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mv="clr-namespace:Microsoft.VisualBasic;assembly=System" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:s1="clr-namespace:System;assembly=System" xmlns:s2="clr-namespace:System;assembly=System.Xml" xmlns:s3="clr-namespace:System;assembly=System.Core" xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities" xmlns:sa1="clr-namespace:System.Activities;assembly=System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" xmlns:sad="clr-namespace:System.Activities.Debugger;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System" xmlns:scg1="clr-namespace:System.Collections.Generic;assembly=System.ServiceModel" xmlns:scg2="clr-namespace:System.Collections.Generic;assembly=System.Core" xmlns:scg3="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data.DataSetExtensions" xmlns:sl="clr-namespace:System.Linq;assembly=System.Core" xmlns:st="clr-namespace:System.Text;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <p:Sequence DisplayName="Sequential Service" sad:XamlDebuggerXmlReader.FileName=".\CreditCheckService.xamlx" sap:VirtualizedContainerService.HintSize="882,678.106666666667">
+      <p:Sequence.Variables>
+        <p:Variable x:TypeArguments="CorrelationHandle" Name="handle" />
+        <p:Variable x:TypeArguments="CorrelationHandle" Name="__handle1" />
+        <p:Variable x:TypeArguments="CorrelationHandle" Name="__handle2" />
+        <p:Variable x:TypeArguments="CorrelationHandle" Name="__handle3" />
+        <p:Variable x:TypeArguments="x:Int32" Name="credit" />
+        <p:Variable x:TypeArguments="x:Int32" Name="value" />
+        <p:Variable x:TypeArguments="x:Boolean" Name="approve" />
+        <p:Variable x:TypeArguments="CorrelationHandle" Name="__handle4" />
+        <p:Variable x:TypeArguments="CorrelationHandle" Name="__handle5" />
+      </p:Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg3:Dictionary x:TypeArguments="x:String, s:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg3:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <p:Pick sap:VirtualizedContainerService.HintSize="836,540.106666666667">
+        <p:PickBranch DisplayName="Branch1" sap:VirtualizedContainerService.HintSize="335,482.106666666667" Trigger="{x:Reference __ReferenceID0}">
+          <p:Sequence sap:VirtualizedContainerService.HintSize="303,287.553333333333">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg3:Dictionary x:TypeArguments="x:String, s:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg3:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <c:CreditValidation Approve="[approve]" Credit="[credit]" sap:VirtualizedContainerService.HintSize="257,24" />
+            <SendReply DisplayName="SendReplyToReceive" sap:VirtualizedContainerService.HintSize="257,85.5533333333333">
+              <SendReply.Request>
+                <Receive x:Name="__ReferenceID0" CanCreateInstance="True" CorrelatesWith="[handle]" sap:VirtualizedContainerService.HintSize="303,100" OperationName="ValidateCredit" ServiceContractName="ICreditCheckService">
+                  <Receive.CorrelatesOn>
+                    <MessageQuerySet />
+                  </Receive.CorrelatesOn>
+                  <ReceiveMessageContent DeclaredMessageType="x:Int32">
+                    <p:OutArgument x:TypeArguments="x:Int32">[credit]</p:OutArgument>
+                  </ReceiveMessageContent>
+                </Receive>
+              </SendReply.Request>
+              <SendMessageContent DeclaredMessageType="x:Boolean">
+                <p:InArgument x:TypeArguments="x:Boolean">[approve]</p:InArgument>
+              </SendMessageContent>
+            </SendReply>
+          </p:Sequence>
+        </p:PickBranch>
+        <p:PickBranch DisplayName="Branch2" sap:VirtualizedContainerService.HintSize="335,482.106666666667" Trigger="{x:Reference __ReferenceID1}">
+          <p:Sequence sap:VirtualizedContainerService.HintSize="303,287.553333333333">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg3:Dictionary x:TypeArguments="x:String, s:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg3:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <c:ValueValidation Approve="[approve]" sap:VirtualizedContainerService.HintSize="257,24" Value="[value]" />
+            <SendReply DisplayName="SendReplyToReceive" sap:VirtualizedContainerService.HintSize="257,85.5533333333333">
+              <SendReply.Request>
+                <Receive x:Name="__ReferenceID1" CanCreateInstance="True" CorrelatesWith="[handle]" sap:VirtualizedContainerService.HintSize="303,100" OperationName="ValidateValue" ServiceContractName="ICreditCheckService">
+                  <Receive.CorrelatesOn>
+                    <MessageQuerySet />
+                  </Receive.CorrelatesOn>
+                  <ReceiveMessageContent DeclaredMessageType="x:Int32">
+                    <p:OutArgument x:TypeArguments="x:Int32">[value]</p:OutArgument>
+                  </ReceiveMessageContent>
+                </Receive>
+              </SendReply.Request>
+              <SendMessageContent DeclaredMessageType="x:Boolean">
+                <p:InArgument x:TypeArguments="x:Boolean">[approve]</p:InArgument>
+              </SendMessageContent>
+            </SendReply>
+          </p:Sequence>
+        </p:PickBranch>
+      </p:Pick>
+    </p:Sequence>
+</WorkflowService>

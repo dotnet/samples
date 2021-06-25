@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeTestClient", "CodeTestClient\CodeTestClient.csproj", "{A0F58D15-78B9-4E1D-A392-94B62D4A1B60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Samples.Activities.Data.DbActivities", "DbActivities\Microsoft.Samples.Activities.Data.DbActivities.csproj", "{D468001F-656B-4370-8AB1-2F770E61B20A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D468001F-656B-4370-8AB1-2F770E61B20A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D468001F-656B-4370-8AB1-2F770E61B20A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D468001F-656B-4370-8AB1-2F770E61B20A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D468001F-656B-4370-8AB1-2F770E61B20A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0F58D15-78B9-4E1D-A392-94B62D4A1B60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0F58D15-78B9-4E1D-A392-94B62D4A1B60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0F58D15-78B9-4E1D-A392-94B62D4A1B60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0F58D15-78B9-4E1D-A392-94B62D4A1B60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
