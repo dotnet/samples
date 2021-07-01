@@ -1,0 +1,78 @@
+﻿@page
+@model BuggyAmb.Pages.Problem.IndexModel
+<script>
+    $(document).ready(function () {
+        $("#LoadingImage").hide();
+    });
+
+    $(document).on("click", "a", function (event) {
+        var pathname = this.pathname;
+        var innerText = this.innerText;
+        var href = this.href;
+
+        if (pathname.startsWith("/Problem/") || pathname.startsWith("/Crash")) {
+            event.preventDefault();
+            $("#LoadingImage").show();
+            $("#Content").css({ 'opacity': 0.3 });
+            $("#Content").css('user-select', 'none');
+            $("#ContentTitle").html("<h3>" + innerText + "</h3>");
+            $("#Content").load(href, function (response, status, xhr) {
+                if (status == "error") {
+                    var msg = "An unhandled error occured when processing " + href + ".<br />";
+                    $("#Content").html(msg + " " + xhr.status + " " + xhr.statusText);
+                }
+                $("#Content").css('user-select', 'auto')
+                $("#Content").css({ 'opacity': 1 });
+                $("#LoadingImage").hide();
+            });
+        }
+    });
+
+</script>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div style="width:180px; float:left;">
+
+    <a asp-area="" asp-page="/Problem/Expected">Expected Results</a>
+    <br />
+    <a asp-area="" asp-page="/Problem/Slow">Slow</a>
+    <br />
+    <a asp-area="" asp-page="/Problem/Slow2">Slow 2</a>
+    <br />
+    <a asp-area="" asp-page="/Problem/HandledException">Handled Exception</a>
+    <br />
+    <a asp-area="" asp-page="/Problem/UnhandledException">Unhandled Exception</a>
+    <br />
+    <a asp-area="" asp-page="/Problem/Crash">Crash 1</a>
+    <br />
+    <a asp-area="" asp-page="/Problem/Crash2">Crash 2</a>
+    <br />
+    <a asp-area="" asp-page="/Problem/AreYouThere?">Not Found</a>
+    <br />
+    <b><a asp-area="" asp-page="/Problem/LoadGenerator">Load Generator</a></b>
+
+</div>
+
+
+
+<div id="contentPlaceHolder" style="float:left;">
+
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <span id="ContentTitle" style="vertical-align: middle"></span>
+                </td>
+                <td>
+                    <span id="LoadingImage">
+                        <img src="~/images/loading.gif" style="width: 32px; height: 32px; margin-left: 5px; vertical-align: middle;" /><br />
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="Content" style="max-width: 800px;"></div>
+</div>
