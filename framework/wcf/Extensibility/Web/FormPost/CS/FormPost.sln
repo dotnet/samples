@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormPost", "FormPost.csproj", "{A9543019-4664-4083-94D3-11FE47E02882}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlFormProcessing", "HtmlFormProcessing\HtmlFormProcessing.csproj", "{9FFD6F1A-E3AC-405B-AB18-7AB9382BEA7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9543019-4664-4083-94D3-11FE47E02882}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9543019-4664-4083-94D3-11FE47E02882}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9543019-4664-4083-94D3-11FE47E02882}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9543019-4664-4083-94D3-11FE47E02882}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FFD6F1A-E3AC-405B-AB18-7AB9382BEA7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FFD6F1A-E3AC-405B-AB18-7AB9382BEA7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FFD6F1A-E3AC-405B-AB18-7AB9382BEA7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FFD6F1A-E3AC-405B-AB18-7AB9382BEA7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

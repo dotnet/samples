@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "client", "client\", "{5A30DAD7-80A5-4462-89CF-6C76496378B7}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/client"
+		Debug.AspNetCompiler.PhysicalPath = "client\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\client\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "true"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/client"
+		Release.AspNetCompiler.PhysicalPath = "client\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\client\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "true"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "40810"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "service", "service\service.csproj", "{CDD7B00A-5A65-4350-8088-2D0C83DE32D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A30DAD7-80A5-4462-89CF-6C76496378B7}.Debug|.NET.ActiveCfg = Debug|.NET
+		{5A30DAD7-80A5-4462-89CF-6C76496378B7}.Debug|.NET.Build.0 = Debug|.NET
+		{5A30DAD7-80A5-4462-89CF-6C76496378B7}.Debug|Any CPU.ActiveCfg = Debug|.NET
+		{5A30DAD7-80A5-4462-89CF-6C76496378B7}.Debug|Mixed Platforms.ActiveCfg = Debug|.NET
+		{5A30DAD7-80A5-4462-89CF-6C76496378B7}.Debug|Mixed Platforms.Build.0 = Debug|.NET
+		{5A30DAD7-80A5-4462-89CF-6C76496378B7}.Release|.NET.ActiveCfg = Debug|.NET
+		{5A30DAD7-80A5-4462-89CF-6C76496378B7}.Release|.NET.Build.0 = Debug|.NET
+		{5A30DAD7-80A5-4462-89CF-6C76496378B7}.Release|Any CPU.ActiveCfg = Debug|.NET
+		{5A30DAD7-80A5-4462-89CF-6C76496378B7}.Release|Mixed Platforms.ActiveCfg = Debug|.NET
+		{5A30DAD7-80A5-4462-89CF-6C76496378B7}.Release|Mixed Platforms.Build.0 = Debug|.NET
+		{CDD7B00A-5A65-4350-8088-2D0C83DE32D1}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{CDD7B00A-5A65-4350-8088-2D0C83DE32D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDD7B00A-5A65-4350-8088-2D0C83DE32D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDD7B00A-5A65-4350-8088-2D0C83DE32D1}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CDD7B00A-5A65-4350-8088-2D0C83DE32D1}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{CDD7B00A-5A65-4350-8088-2D0C83DE32D1}.Release|.NET.ActiveCfg = Release|Any CPU
+		{CDD7B00A-5A65-4350-8088-2D0C83DE32D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDD7B00A-5A65-4350-8088-2D0C83DE32D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDD7B00A-5A65-4350-8088-2D0C83DE32D1}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{CDD7B00A-5A65-4350-8088-2D0C83DE32D1}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

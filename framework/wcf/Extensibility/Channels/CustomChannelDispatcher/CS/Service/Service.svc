@@ -1,0 +1,1 @@
+<%@ServiceHost language = "c#" debug="true" Factory="Microsoft.Samples.CustomChannelDispatcher.CustomServiceHostFactory" %>

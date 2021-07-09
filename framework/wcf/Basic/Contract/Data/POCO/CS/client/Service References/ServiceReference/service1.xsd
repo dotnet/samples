@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Microsoft.Samples.POCO" elementFormDefault="qualified" targetNamespace="http://Microsoft.Samples.POCO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/servicemodelsamples/service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Samples.POCO" />
+  <xs:element name="Add">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Microsoft.Samples.POCO" minOccurs="0" name="n1" nillable="true" type="q1:ComplexNumber" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Microsoft.Samples.POCO" minOccurs="0" name="n2" nillable="true" type="q2:ComplexNumber" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Microsoft.Samples.POCO" minOccurs="0" name="AddResult" nillable="true" type="q3:ComplexNumber" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Subtract">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Microsoft.Samples.POCO" minOccurs="0" name="n1" nillable="true" type="q4:ComplexNumber" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Microsoft.Samples.POCO" minOccurs="0" name="n2" nillable="true" type="q5:ComplexNumber" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubtractResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Microsoft.Samples.POCO" minOccurs="0" name="SubtractResult" nillable="true" type="q6:ComplexNumber" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Multiply">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Microsoft.Samples.POCO" minOccurs="0" name="n1" nillable="true" type="q7:ComplexNumber" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Microsoft.Samples.POCO" minOccurs="0" name="n2" nillable="true" type="q8:ComplexNumber" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MultiplyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Microsoft.Samples.POCO" minOccurs="0" name="MultiplyResult" nillable="true" type="q9:ComplexNumber" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Divide">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Microsoft.Samples.POCO" minOccurs="0" name="n1" nillable="true" type="q10:ComplexNumber" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Microsoft.Samples.POCO" minOccurs="0" name="n2" nillable="true" type="q11:ComplexNumber" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DivideResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Microsoft.Samples.POCO" minOccurs="0" name="DivideResult" nillable="true" type="q12:ComplexNumber" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

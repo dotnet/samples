@@ -1,0 +1,16 @@
+﻿<#@ template language="C#" #>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Customer Form</title>
+  </head>
+  <body>
+    <form action="<#= this.PostUri #>" method="POST">
+      Name: <input name="Name" type="text" /><br />
+      Address: <input name="Address" type="text" /><br />
+      <input name="SubmitCustomer" type="submit" value="submit" />
+    </form>
+  </body>
+</html>
+
+<#+  public string PostUri { get; set; } #>

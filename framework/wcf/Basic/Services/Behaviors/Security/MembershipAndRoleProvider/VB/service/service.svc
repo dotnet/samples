@@ -1,0 +1,2 @@
+<%@ServiceHost language="vb" Factory="Microsoft.Samples.MembershipAndRoleProvider.CalculatorServiceHostFactory" %>
+

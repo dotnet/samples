@@ -1,0 +1,1 @@
+%windir%\system32\inetsrv\appcmd.exe delete app /app.name:"Default Web Site/servicemodelsamples"

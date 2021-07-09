@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{97E8A065-31ED-4506-B3A4-6B2E2ED5B124}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GZipEncoder", "GZipEncoder\GZipEncoder.csproj", "{3EB736C4-62EA-4887-B040-948B13EF29B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{9746FE53-56C5-4ED5-9214-D93F457A0560}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97E8A065-31ED-4506-B3A4-6B2E2ED5B124}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97E8A065-31ED-4506-B3A4-6B2E2ED5B124}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97E8A065-31ED-4506-B3A4-6B2E2ED5B124}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97E8A065-31ED-4506-B3A4-6B2E2ED5B124}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EB736C4-62EA-4887-B040-948B13EF29B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EB736C4-62EA-4887-B040-948B13EF29B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EB736C4-62EA-4887-B040-948B13EF29B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EB736C4-62EA-4887-B040-948B13EF29B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9746FE53-56C5-4ED5-9214-D93F457A0560}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9746FE53-56C5-4ED5-9214-D93F457A0560}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9746FE53-56C5-4ED5-9214-D93F457A0560}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9746FE53-56C5-4ED5-9214-D93F457A0560}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
