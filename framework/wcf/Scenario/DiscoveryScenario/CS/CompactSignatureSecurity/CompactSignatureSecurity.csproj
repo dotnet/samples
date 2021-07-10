@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20815</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DB189E70-01C6-4926-AD9B-32B88E74899F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Samples.Discovery</RootNamespace>
+    <AssemblyName>CompactSignatureSecurity</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Discovery" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AsyncResult.cs" />
+    <Compile Include="CertificateHelper.cs" />
+    <Compile Include="CompactSignatureHeader.cs" />
+    <Compile Include="CompactSignatureSecurityException.cs" />
+    <Compile Include="Configuration\ConfigurationStrings.cs" />
+    <Compile Include="Configuration\UdpSecureAnnouncementEndpointElement.cs" />
+    <Compile Include="Configuration\UdpSecureAnnouncementEndpointCollectionElement.cs" />
+    <Compile Include="ProtocolSettings.cs" />
+    <Compile Include="HashStream.cs" />
+    <Compile Include="ProtocolStrings.cs" />
+    <Compile Include="ReceivedCertificatesStoreSettings.cs" />
+    <Compile Include="Configuration\ReceivedCertificatesStoreSettingsElement.cs" />
+    <Compile Include="ReceivedCompactSignatureHeader.cs" />
+    <Compile Include="SecurityIdGenerator.cs" />
+    <Compile Include="SendCompactSignatureHeader.cs" />
+    <Compile Include="SignatureProcessor.cs" />
+    <Compile Include="SignedMessage.cs" />
+    <Compile Include="SigningCertificateSettings.cs" />
+    <Compile Include="Configuration\SigningCertificateSettingsElement.cs" />
+    <Compile Include="UdpSecureAnnouncementEndpoint.cs" />
+    <Compile Include="UdpSecureDiscoveryEndpoint.cs" />
+    <Compile Include="Configuration\UdpSecureDiscoveryEndpointCollectionElement.cs" />
+    <Compile Include="Configuration\UdpSecureDiscoveryEndpointElement.cs" />
+    <Compile Include="Utility.cs" />
+    <Compile Include="CompactSignatureSecurityBindingElement.cs" />
+    <Compile Include="CompactSignatureSecurityDuplexChannel.cs" />
+    <Compile Include="CompactSignatureSecurityChannelFactory.cs" />
+    <Compile Include="CompactSignatureSecurityChannelListener.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

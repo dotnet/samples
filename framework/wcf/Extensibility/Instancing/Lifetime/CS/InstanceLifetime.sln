@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{141A9C5A-0610-4F1B-BDD5-1EAF8416850E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensions", "Extensions\Extensions.csproj", "{286B7623-BDB9-409A-8489-A3D3FCEFEED4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{E08400D5-2EE3-4798-A8E5-C0C2C1882E90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{141A9C5A-0610-4F1B-BDD5-1EAF8416850E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{141A9C5A-0610-4F1B-BDD5-1EAF8416850E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{141A9C5A-0610-4F1B-BDD5-1EAF8416850E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{141A9C5A-0610-4F1B-BDD5-1EAF8416850E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{286B7623-BDB9-409A-8489-A3D3FCEFEED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{286B7623-BDB9-409A-8489-A3D3FCEFEED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{286B7623-BDB9-409A-8489-A3D3FCEFEED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{286B7623-BDB9-409A-8489-A3D3FCEFEED4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E08400D5-2EE3-4798-A8E5-C0C2C1882E90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E08400D5-2EE3-4798-A8E5-C0C2C1882E90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E08400D5-2EE3-4798-A8E5-C0C2C1882E90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E08400D5-2EE3-4798-A8E5-C0C2C1882E90}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

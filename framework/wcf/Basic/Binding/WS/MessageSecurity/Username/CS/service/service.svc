@@ -1,0 +1,2 @@
+<%@ServiceHost language="c#" Debug="true" Service="Microsoft.Samples.UserName.CalculatorService" %>
+

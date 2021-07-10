@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" targetNamespace="http://Microsoft.ServiceModel.Samples" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://Microsoft.ServiceModel.Samples">
+  <xs:element name="Hello">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="greeting" nillable="true" type="tns:Greeting"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Greeting">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="text" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Greeting" nillable="true" type="tns:Greeting"/>
+  <xs:element name="HelloResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HelloResult" nillable="true" type="tns:GreetingResponse"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GreetingResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="text" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GreetingResponse" nillable="true" type="tns:GreetingResponse"/>
+</xs:schema>

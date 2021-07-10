@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStoreClient", "BookStoreClient\BookStoreClient.csproj", "{679328F3-0BFE-4144-963F-2B052AD2D642}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6DD2CA1E-3FDE-4CBA-9A7B-ED0624A03238} = {6DD2CA1E-3FDE-4CBA-9A7B-ED0624A03238}
+		{B22E58A4-A415-4D85-A7C2-9636E6413A3F} = {B22E58A4-A415-4D85-A7C2-9636E6413A3F}
+		{18B2A3EC-94D3-406E-8823-C1C8054BA469} = {18B2A3EC-94D3-406E-8823-C1C8054BA469}
+		{3D879B25-E8E3-4ADF-9004-2F9B5C8FA960} = {3D879B25-E8E3-4ADF-9004-2F9B5C8FA960}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStoreService", "BookStoreService\BookStoreService.csproj", "{18B2A3EC-94D3-406E-8823-C1C8054BA469}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B22E58A4-A415-4D85-A7C2-9636E6413A3F} = {B22E58A4-A415-4D85-A7C2-9636E6413A3F}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStoreSTS", "BookStoreSTS\BookStoreSTS.csproj", "{3D879B25-E8E3-4ADF-9004-2F9B5C8FA960}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B22E58A4-A415-4D85-A7C2-9636E6413A3F} = {B22E58A4-A415-4D85-A7C2-9636E6413A3F}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeRealmSTS", "HomeRealmSTS\HomeRealmSTS.csproj", "{6DD2CA1E-3FDE-4CBA-9A7B-ED0624A03238}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B22E58A4-A415-4D85-A7C2-9636E6413A3F} = {B22E58A4-A415-4D85-A7C2-9636E6413A3F}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{B22E58A4-A415-4D85-A7C2-9636E6413A3F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{679328F3-0BFE-4144-963F-2B052AD2D642}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{679328F3-0BFE-4144-963F-2B052AD2D642}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{679328F3-0BFE-4144-963F-2B052AD2D642}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{679328F3-0BFE-4144-963F-2B052AD2D642}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18B2A3EC-94D3-406E-8823-C1C8054BA469}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18B2A3EC-94D3-406E-8823-C1C8054BA469}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18B2A3EC-94D3-406E-8823-C1C8054BA469}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18B2A3EC-94D3-406E-8823-C1C8054BA469}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D879B25-E8E3-4ADF-9004-2F9B5C8FA960}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D879B25-E8E3-4ADF-9004-2F9B5C8FA960}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D879B25-E8E3-4ADF-9004-2F9B5C8FA960}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D879B25-E8E3-4ADF-9004-2F9B5C8FA960}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DD2CA1E-3FDE-4CBA-9A7B-ED0624A03238}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DD2CA1E-3FDE-4CBA-9A7B-ED0624A03238}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DD2CA1E-3FDE-4CBA-9A7B-ED0624A03238}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DD2CA1E-3FDE-4CBA-9A7B-ED0624A03238}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B22E58A4-A415-4D85-A7C2-9636E6413A3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B22E58A4-A415-4D85-A7C2-9636E6413A3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B22E58A4-A415-4D85-A7C2-9636E6413A3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B22E58A4-A415-4D85-A7C2-9636E6413A3F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

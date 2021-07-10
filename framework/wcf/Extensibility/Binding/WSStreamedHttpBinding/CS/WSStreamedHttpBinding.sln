@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "client", "client\client.csproj", "{9CD329D5-0514-42C3-B1EC-D8C7B1CDB7B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSStreamedHttpBinding", "WSStreamedHttpBinding\WSStreamedHttpBinding.csproj", "{638585AD-3091-426F-A2ED-689C22143649}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "service", "service\service.csproj", "{B82D45D6-660C-4B78-B41F-4A0F81DBD8AC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CD329D5-0514-42C3-B1EC-D8C7B1CDB7B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CD329D5-0514-42C3-B1EC-D8C7B1CDB7B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CD329D5-0514-42C3-B1EC-D8C7B1CDB7B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CD329D5-0514-42C3-B1EC-D8C7B1CDB7B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{638585AD-3091-426F-A2ED-689C22143649}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{638585AD-3091-426F-A2ED-689C22143649}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{638585AD-3091-426F-A2ED-689C22143649}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{638585AD-3091-426F-A2ED-689C22143649}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B82D45D6-660C-4B78-B41F-4A0F81DBD8AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B82D45D6-660C-4B78-B41F-4A0F81DBD8AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B82D45D6-660C-4B78-B41F-4A0F81DBD8AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B82D45D6-660C-4B78-B41F-4A0F81DBD8AC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

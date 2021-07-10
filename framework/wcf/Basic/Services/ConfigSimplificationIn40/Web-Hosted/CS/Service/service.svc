@@ -1,0 +1,1 @@
+<%@ServiceHost language="c#" Debug="true" Service="Microsoft.Samples.GettingStarted.CalculatorService" %>

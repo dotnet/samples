@@ -1,0 +1,2 @@
+<%@ServiceHost language="c#" Debug="true" Factory="Microsoft.Samples.CustomToken.EchoServiceHostFactory" %>
+

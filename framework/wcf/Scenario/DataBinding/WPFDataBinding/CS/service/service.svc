@@ -1,0 +1,2 @@
+<%@ServiceHost Language="CS" Service="Microsoft.Samples.DataBinding.AlbumService" %>
+

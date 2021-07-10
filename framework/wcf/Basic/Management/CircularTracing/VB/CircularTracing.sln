@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "client", "client\client.vbproj", "{2883E991-334D-48C9-AD28-506A8CCFCCE8}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "service", "service\service.vbproj", "{D852DCD6-8383-4947-AD90-980D444A5943}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TraceListener", "CircularTraceListener\TraceListener.vbproj", "{60E6343D-0269-41CA-A81A-268F549B543E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2883E991-334D-48C9-AD28-506A8CCFCCE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2883E991-334D-48C9-AD28-506A8CCFCCE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2883E991-334D-48C9-AD28-506A8CCFCCE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2883E991-334D-48C9-AD28-506A8CCFCCE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D852DCD6-8383-4947-AD90-980D444A5943}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D852DCD6-8383-4947-AD90-980D444A5943}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D852DCD6-8383-4947-AD90-980D444A5943}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D852DCD6-8383-4947-AD90-980D444A5943}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60E6343D-0269-41CA-A81A-268F549B543E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60E6343D-0269-41CA-A81A-268F549B543E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60E6343D-0269-41CA-A81A-268F549B543E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60E6343D-0269-41CA-A81A-268F549B543E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
