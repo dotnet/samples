@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Microsoft.Samples.ExtendedProtection.GetKey" CodeBehind="GetKey.svc.cs" %>

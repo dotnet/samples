@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>XML AJAX Service Client Page</title>
+
+    <script type="text/javascript">
+    // <![CDATA[
+
+    // This function creates an asynchronous call to the service
+    function makeCall(operation){
+        
+        // Create HTTP request
+        var xmlHttp;
+        try {
+            xmlHttp = new XMLHttpRequest();
+        } catch (e) {
+            try {
+                xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+            } catch (e) {
+                try {
+                    xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+                } catch (e) {
+                    alert("This sample only works in browsers with AJAX support"); 
+                    return false;
+                }
+            }
+        }
+
+        // Create result handler 
+        xmlHttp.onreadystatechange=function(){
+            if(xmlHttp.readyState == 4){
+                document.getElementById("result").value = xmlHttp.responseText;
+            }
+        }
+     
+        // Build the operation URL
+        var url = "service.svc/";
+        url = url + operation;
+
+        // Build the body of the JSON message
+        var body = '{"n1":';
+        body = body + document.getElementById("num1").value + ',"n2":';
+        body = body + document.getElementById("num2").value + '}';
+        
+        // Send the HTTP request
+        xmlHttp.open("POST", url, true);
+        xmlHttp.setRequestHeader("Content-type", "application/json");
+        xmlHttp.send(body);
+
+    }
+
+    // ]]>
+    </script>
+</head>
+<body>
+    <h1>
+        XML AJAX Service Client Page</h1>
+    <p>
+        First Number:
+        <input type="text" id="num1" /></p>
+    <p>
+        Second Number:
+        <input type="text" id="num2" /></p>
+    <input id="btnDoMathJson" type="button" onclick="return makeCall('DoMathJson');" value="Perform calculation (return JSON)" />
+    <input id="btnDoMathXml" type="button" onclick="return makeCall('DoMathXml');" value="Perform calculation (return XML)" />
+    <p>
+        Result:</p>
+    <textarea id="result" cols="50" rows="8"></textarea>
+</body>
+</html>

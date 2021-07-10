@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e8fef460-e426-45b1-aa04-7af9d61bbe0b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/ServiceModelSamples/service.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="ebabcbaf-25d8-4a36-bb94-3984e638f31a" SourceId="1" SourceUrl="http://localhost/servicemodelsamples/service.svc?xsd=xsd2" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="64cbd7f8-1ee8-46b5-ba28-79425f39ecc5" SourceId="1" SourceUrl="http://localhost/servicemodelsamples/service.svc?xsd=xsd0" />
+    <MetadataFile FileName="service.disco" MetadataType="Disco" ID="570c2426-e59a-4b04-8d4c-4ad21c78fc90" SourceId="1" SourceUrl="http://localhost/servicemodelsamples/service.svc?disco" />
+    <MetadataFile FileName="DataContractCalculatorService.wsdl" MetadataType="Wsdl" ID="e7ec93be-3390-4329-8bb8-15c01718c38e" SourceId="1" SourceUrl="http://localhost/servicemodelsamples/service.svc?wsdl" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="e79e8942-5c93-472a-86e3-88c6f7113f9f" SourceId="1" SourceUrl="http://localhost/servicemodelsamples/service.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="756aba75-5cf5-483a-bbb8-6e04648cd644" SourceId="1" SourceUrl="http://localhost/servicemodelsamples/service.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

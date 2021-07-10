@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "client", "client\client.vbproj", "{CA14F9C8-3D60-4024-8699-3817947A2455}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "service", "service\service.vbproj", "{2905BB74-D24F-4045-8E5E-B6142214C611}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA14F9C8-3D60-4024-8699-3817947A2455}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA14F9C8-3D60-4024-8699-3817947A2455}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA14F9C8-3D60-4024-8699-3817947A2455}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA14F9C8-3D60-4024-8699-3817947A2455}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2905BB74-D24F-4045-8E5E-B6142214C611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2905BB74-D24F-4045-8E5E-B6142214C611}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2905BB74-D24F-4045-8E5E-B6142214C611}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2905BB74-D24F-4045-8E5E-B6142214C611}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

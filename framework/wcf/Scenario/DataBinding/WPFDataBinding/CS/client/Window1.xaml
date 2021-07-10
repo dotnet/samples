@@ -1,0 +1,81 @@
+﻿<?Mapping XmlNamespace="local" ClrNamespace="Microsoft.Samples.DataBinding"?>
+<Window x:Class="Microsoft.Samples.DataBinding.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:l="clr-namespace:Microsoft.Samples.DataBinding" 
+    Title="WPF Client using a WCF Service with Data Binding" Width="652">
+
+  <Window.Resources>
+    <l:TextLen2Bool x:Key="enableConv" />
+  </Window.Resources>
+
+  <Grid Name="gridPanel">
+    <Grid.Resources>
+      <DataTemplate x:Key="AlbumStyle">
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="260" />
+            <ColumnDefinition Width="60" />
+          </Grid.ColumnDefinitions>
+          <TextBlock Grid.Column="0" Text="{Binding Path=Title}" />
+          <TextBlock Grid.Column="1" Text="{Binding Path=Tracks.Count}" HorizontalAlignment="Right" />
+        </Grid>
+      </DataTemplate>
+
+      <DataTemplate x:Key="TrackStyle">
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="160" />
+            <ColumnDefinition Width="40" />
+          </Grid.ColumnDefinitions>
+          <TextBlock Grid.Column="0" Text="{Binding Path=Name}" />
+          <TextBlock Grid.Column="1" Text="{Binding Path=Duration}" HorizontalAlignment="Right" />
+        </Grid>
+      </DataTemplate>
+
+    </Grid.Resources>
+
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="350" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="40" />
+    </Grid.RowDefinitions>
+
+    <DockPanel Grid.Column="0" Grid.Row="0">
+      <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Height="40">
+		  <TextBlock Text="Number of albums=" /> 
+		  <TextBlock HorizontalAlignment="Right" Text="{Binding Path=Count}" />
+      </StackPanel>
+      <ListBox 
+          ItemTemplate="{StaticResource AlbumStyle}" ItemsSource="{Binding }" IsSynchronizedWithCurrentItem="true" />
+    </DockPanel>
+
+    <Grid Grid.Column="1" Grid.Row="0" Name="details">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="160" />
+        <ColumnDefinition Width="100" />
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+      <RowDefinition Height="20" />
+      <RowDefinition Height="20" />
+      <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+
+      <TextBlock Grid.Row="0" Grid.Column="0">Title:</TextBlock>
+      <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Path=Title}" />
+      <TextBlock Grid.Row="1" Grid.Column="0">Price:</TextBlock>
+      <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Path=Price}" />
+      <ListBox Grid.Row="2" Grid.ColumnSpan="2" ItemTemplate="{StaticResource TrackStyle}"
+          ItemsSource="{Binding Path=Tracks}" IsSynchronizedWithCurrentItem="true"/>
+    </Grid>
+
+    <StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Height="30" Orientation="Horizontal">
+      <Button Click="OnAddNew" IsEnabled="{Binding Path=Text, ElementName=newAlbumName, Converter={StaticResource enableConv}}">Add new album</Button>
+      <TextBox Name="newAlbumName"  Width="100" />
+    </StackPanel>
+
+  </Grid>
+</Window>

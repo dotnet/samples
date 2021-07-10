@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EtwAnalyticTraceSample", "EtwAnalyticTraceSample\EtwAnalyticTraceSample.csproj", "{4C0F94B5-0FAB-4943-AE1C-D85DA1055EDD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C0F94B5-0FAB-4943-AE1C-D85DA1055EDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C0F94B5-0FAB-4943-AE1C-D85DA1055EDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C0F94B5-0FAB-4943-AE1C-D85DA1055EDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C0F94B5-0FAB-4943-AE1C-D85DA1055EDD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

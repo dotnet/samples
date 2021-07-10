@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorClient", "Client\CalculatorClient.csproj", "{CCF6FB93-36BE-4126-8964-504FC6D61867}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorService", "Service\CalculatorService.csproj", "{32650726-4A12-41BE-A558-74844841E962}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CCF6FB93-36BE-4126-8964-504FC6D61867}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCF6FB93-36BE-4126-8964-504FC6D61867}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCF6FB93-36BE-4126-8964-504FC6D61867}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCF6FB93-36BE-4126-8964-504FC6D61867}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32650726-4A12-41BE-A558-74844841E962}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32650726-4A12-41BE-A558-74844841E962}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32650726-4A12-41BE-A558-74844841E962}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32650726-4A12-41BE-A558-74844841E962}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,2 @@
+<%@ServiceHost language="C#" Debug="true" Service="Microsoft.Samples.PostAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>
+

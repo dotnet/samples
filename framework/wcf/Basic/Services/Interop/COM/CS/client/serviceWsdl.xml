@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions name="CalculatorService" targetNamespace="http://Microsoft.ServiceModel.Samples" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://Microsoft.ServiceModel.Samples" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+  <wsp:Policy wsu:Id="WSHttpBinding_ICalculator_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SymmetricBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:ProtectionToken>
+              <wsp:Policy>
+                <sp:SecureConversationToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                  <wsp:Policy>
+                    <sp:RequireDerivedKeys/>
+                    <sp:BootstrapPolicy>
+                      <wsp:Policy>
+                        <sp:SignedParts>
+                          <sp:Body/>
+                          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+                          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+                          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+                          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+                        </sp:SignedParts>
+                        <sp:EncryptedParts>
+                          <sp:Body/>
+                        </sp:EncryptedParts>
+                        <sp:SymmetricBinding>
+                          <wsp:Policy>
+                            <sp:ProtectionToken>
+                              <wsp:Policy>
+                                <sp:SpnegoContextToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                                  <wsp:Policy>
+                                    <sp:RequireDerivedKeys/>
+                                  </wsp:Policy>
+                                </sp:SpnegoContextToken>
+                              </wsp:Policy>
+                            </sp:ProtectionToken>
+                            <sp:AlgorithmSuite>
+                              <wsp:Policy>
+                                <sp:Basic256/>
+                              </wsp:Policy>
+                            </sp:AlgorithmSuite>
+                            <sp:Layout>
+                              <wsp:Policy>
+                                <sp:Strict/>
+                              </wsp:Policy>
+                            </sp:Layout>
+                            <sp:IncludeTimestamp/>
+                            <sp:EncryptSignature/>
+                            <sp:OnlySignEntireHeadersAndBody/>
+                          </wsp:Policy>
+                        </sp:SymmetricBinding>
+                        <sp:Wss11>
+                          <wsp:Policy>
+                            <sp:MustSupportRefKeyIdentifier/>
+                            <sp:MustSupportRefIssuerSerial/>
+                            <sp:MustSupportRefThumbprint/>
+                            <sp:MustSupportRefEncryptedKey/>
+                          </wsp:Policy>
+                        </sp:Wss11>
+                        <sp:Trust10>
+                          <wsp:Policy>
+                            <sp:MustSupportIssuedTokens/>
+                            <sp:RequireClientEntropy/>
+                            <sp:RequireServerEntropy/>
+                          </wsp:Policy>
+                        </sp:Trust10>
+                      </wsp:Policy>
+                    </sp:BootstrapPolicy>
+                  </wsp:Policy>
+                </sp:SecureConversationToken>
+              </wsp:Policy>
+            </sp:ProtectionToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256/>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict/>
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:IncludeTimestamp/>
+            <sp:EncryptSignature/>
+            <sp:OnlySignEntireHeadersAndBody/>
+          </wsp:Policy>
+        </sp:SymmetricBinding>
+        <sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:MustSupportRefKeyIdentifier/>
+            <sp:MustSupportRefIssuerSerial/>
+            <sp:MustSupportRefThumbprint/>
+            <sp:MustSupportRefEncryptedKey/>
+          </wsp:Policy>
+        </sp:Wss11>
+        <sp:Trust10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:MustSupportIssuedTokens/>
+            <sp:RequireClientEntropy/>
+            <sp:RequireServerEntropy/>
+          </wsp:Policy>
+        </sp:Trust10>
+        <wsaw:UsingAddressing/>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ICalculator_Add_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ICalculator_Add_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ICalculator_Subtract_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ICalculator_Subtract_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ICalculator_Multiply_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ICalculator_Multiply_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ICalculator_Divide_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ICalculator_Divide_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://Microsoft.ServiceModel.Samples/Imports">
+      <xsd:import schemaLocation="http://localhost/ServiceModelSamples/service.svc?xsd=xsd0" namespace="http://Microsoft.ServiceModel.Samples"/>
+      <xsd:import schemaLocation="http://localhost/ServiceModelSamples/service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICalculator_Add_InputMessage">
+    <wsdl:part name="parameters" element="tns:Add"/>
+  </wsdl:message>
+  <wsdl:message name="ICalculator_Add_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ICalculator_Subtract_InputMessage">
+    <wsdl:part name="parameters" element="tns:Subtract"/>
+  </wsdl:message>
+  <wsdl:message name="ICalculator_Subtract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubtractResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ICalculator_Multiply_InputMessage">
+    <wsdl:part name="parameters" element="tns:Multiply"/>
+  </wsdl:message>
+  <wsdl:message name="ICalculator_Multiply_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MultiplyResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ICalculator_Divide_InputMessage">
+    <wsdl:part name="parameters" element="tns:Divide"/>
+  </wsdl:message>
+  <wsdl:message name="ICalculator_Divide_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DivideResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ICalculator">
+    <wsdl:operation name="Add">
+      <wsdl:input wsaw:Action="http://Microsoft.ServiceModel.Samples/ICalculator/Add" message="tns:ICalculator_Add_InputMessage"/>
+      <wsdl:output wsaw:Action="http://Microsoft.ServiceModel.Samples/ICalculator/AddResponse" message="tns:ICalculator_Add_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="Subtract">
+      <wsdl:input wsaw:Action="http://Microsoft.ServiceModel.Samples/ICalculator/Subtract" message="tns:ICalculator_Subtract_InputMessage"/>
+      <wsdl:output wsaw:Action="http://Microsoft.ServiceModel.Samples/ICalculator/SubtractResponse" message="tns:ICalculator_Subtract_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="Multiply">
+      <wsdl:input wsaw:Action="http://Microsoft.ServiceModel.Samples/ICalculator/Multiply" message="tns:ICalculator_Multiply_InputMessage"/>
+      <wsdl:output wsaw:Action="http://Microsoft.ServiceModel.Samples/ICalculator/MultiplyResponse" message="tns:ICalculator_Multiply_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="Divide">
+      <wsdl:input wsaw:Action="http://Microsoft.ServiceModel.Samples/ICalculator/Divide" message="tns:ICalculator_Divide_InputMessage"/>
+      <wsdl:output wsaw:Action="http://Microsoft.ServiceModel.Samples/ICalculator/DivideResponse" message="tns:ICalculator_Divide_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_ICalculator" type="tns:ICalculator">
+    <wsp:PolicyReference URI="#WSHttpBinding_ICalculator_policy"/>
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="Add">
+      <soap12:operation soapAction="http://Microsoft.ServiceModel.Samples/ICalculator/Add" style="document"/>
+      <wsdl:input>
+        <wsp:PolicyReference URI="#WSHttpBinding_ICalculator_Add_Input_policy"/>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsp:PolicyReference URI="#WSHttpBinding_ICalculator_Add_output_policy"/>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Subtract">
+      <soap12:operation soapAction="http://Microsoft.ServiceModel.Samples/ICalculator/Subtract" style="document"/>
+      <wsdl:input>
+        <wsp:PolicyReference URI="#WSHttpBinding_ICalculator_Subtract_Input_policy"/>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsp:PolicyReference URI="#WSHttpBinding_ICalculator_Subtract_output_policy"/>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Multiply">
+      <soap12:operation soapAction="http://Microsoft.ServiceModel.Samples/ICalculator/Multiply" style="document"/>
+      <wsdl:input>
+        <wsp:PolicyReference URI="#WSHttpBinding_ICalculator_Multiply_Input_policy"/>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsp:PolicyReference URI="#WSHttpBinding_ICalculator_Multiply_output_policy"/>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Divide">
+      <soap12:operation soapAction="http://Microsoft.ServiceModel.Samples/ICalculator/Divide" style="document"/>
+      <wsdl:input>
+        <wsp:PolicyReference URI="#WSHttpBinding_ICalculator_Divide_Input_policy"/>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsp:PolicyReference URI="#WSHttpBinding_ICalculator_Divide_output_policy"/>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CalculatorService">
+    <wsdl:port name="WSHttpBinding_ICalculator" binding="tns:WSHttpBinding_ICalculator">
+      <soap12:address location="http://localhost/ServiceModelSamples/service.svc"/>
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost/ServiceModelSamples/service.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

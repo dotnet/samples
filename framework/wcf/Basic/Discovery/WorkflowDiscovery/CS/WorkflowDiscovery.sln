@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkflowService", "WorkflowService\WorkflowService.csproj", "{829015B6-C687-4056-B2CA-DEBC64B70240}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkflowClient", "WorkflowClient\WorkflowClient.csproj", "{2B85A5E1-113F-4A7E-ADE8-578CED21602A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{829015B6-C687-4056-B2CA-DEBC64B70240}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{829015B6-C687-4056-B2CA-DEBC64B70240}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{829015B6-C687-4056-B2CA-DEBC64B70240}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{829015B6-C687-4056-B2CA-DEBC64B70240}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B85A5E1-113F-4A7E-ADE8-578CED21602A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B85A5E1-113F-4A7E-ADE8-578CED21602A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B85A5E1-113F-4A7E-ADE8-578CED21602A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B85A5E1-113F-4A7E-ADE8-578CED21602A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

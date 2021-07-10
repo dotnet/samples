@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="Microsoft.Samples.ObjectReferences" elementFormDefault="qualified" targetNamespace="Microsoft.Samples.ObjectReferences" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/servicemodelsamples/service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Samples.ObjectReferences" />
+  <xs:element name="GetPeopleInNetwork">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Microsoft.Samples.ObjectReferences" minOccurs="0" name="p" nillable="true" type="q1:Person" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPeopleInNetworkResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Microsoft.Samples.ObjectReferences" minOccurs="0" name="GetPeopleInNetworkResult" nillable="true" type="q2:ArrayOfPerson" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMutualFriends">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Microsoft.Samples.ObjectReferences" minOccurs="0" name="p" nillable="true" type="q3:Person" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMutualFriendsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Microsoft.Samples.ObjectReferences" minOccurs="0" name="GetMutualFriendsResult" nillable="true" type="q4:ArrayOfPerson" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommonFriends">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Microsoft.Samples.ObjectReferences" minOccurs="0" name="p" nillable="true" type="q5:ArrayOfPerson" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommonFriendsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Microsoft.Samples.ObjectReferences" minOccurs="0" name="GetCommonFriendsResult" nillable="true" type="q6:ArrayOfPerson" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

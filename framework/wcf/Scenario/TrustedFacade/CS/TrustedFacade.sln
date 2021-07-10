@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacadeService", "FacadeService\FacadeService.csproj", "{F0D42A09-93B8-4ED1-A3BB-05BAB632E376}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{317CA326-EFB3-4A35-A1DE-D073B4E8DD53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackendService", "BackendService\BackendService.csproj", "{FD3C52F1-586A-47EC-A1D0-8CBFA615CBD6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F0D42A09-93B8-4ED1-A3BB-05BAB632E376}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0D42A09-93B8-4ED1-A3BB-05BAB632E376}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0D42A09-93B8-4ED1-A3BB-05BAB632E376}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0D42A09-93B8-4ED1-A3BB-05BAB632E376}.Release|Any CPU.Build.0 = Release|Any CPU
+		{317CA326-EFB3-4A35-A1DE-D073B4E8DD53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{317CA326-EFB3-4A35-A1DE-D073B4E8DD53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{317CA326-EFB3-4A35-A1DE-D073B4E8DD53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{317CA326-EFB3-4A35-A1DE-D073B4E8DD53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD3C52F1-586A-47EC-A1D0-8CBFA615CBD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD3C52F1-586A-47EC-A1D0-8CBFA615CBD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD3C52F1-586A-47EC-A1D0-8CBFA615CBD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD3C52F1-586A-47EC-A1D0-8CBFA615CBD6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
