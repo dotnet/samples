@@ -4,9 +4,6 @@ languages:
 products:
 - dotnet
 page_type: sample
-extendedZipContent:
-- path: null
-  target: null
 name: "Logging in .NET"
 urlFragment: "csharp-logging-fundamentals"
 description: "Several .NET 5 console applications that contain sample source code for interacting with ILogger, and various logging providers."
