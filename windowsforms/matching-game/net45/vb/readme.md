@@ -2,7 +2,7 @@
 languages:
 - vb
 products:
-- dotnet-framework
+- dotnet
 - windows-forms
 page_type: sample
 name: "Matching Game Sample (.NET Framework Visual Basic)"
