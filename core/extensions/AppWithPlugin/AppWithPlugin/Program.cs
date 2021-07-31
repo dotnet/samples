@@ -79,7 +79,7 @@ namespace AppWithPlugin
             string pluginLocation = Path.GetFullPath(Path.Combine(root, relativePath.Replace('\\', Path.DirectorySeparatorChar)));
             Console.WriteLine($"Loading commands from: {pluginLocation}");
             PluginLoadContext loadContext = new PluginLoadContext(pluginLocation);
-            return loadContext.LoadFromAssemblyName(new AssemblyName(Path.GetFileNameWithoutExtension(pluginLocation)));
+            return loadContext.LoadFromAssemblyName(AssemblyName.GetAssemblyName(pluginLocation));
         }
 
         static IEnumerable<ICommand> CreateCommands(Assembly assembly)
