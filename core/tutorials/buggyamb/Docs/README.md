@@ -1,7 +1,7 @@
-<h1>Installation instructions</h1>
+# Installation instructions
 
-* <a href="windows_installation_instructions.md">Windows Installation Instructions</a>
-* <a href="linux_installation_instructions.md">Linux Installation Instructions</a>
+* [Windows Installation Instructions](windows_installation_instructions.md)
+* [Linux Installation Instructions](linux_installation_instructions.md)
+* [Learn what BuggyAmb is.](quick_tour.md)
 
-All releases will be here: https://github.com/ahmetmithat/buggyamb/releases/
         

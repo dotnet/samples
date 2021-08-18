@@ -1,6 +1,6 @@
-<h1>Experimental "Load Generator"</h1>
+# Experimental "Load Generator"
 
-"Load Generator" is nothing but some jQuery scripts that can send multiple requests to  different scenarios explained in the <a href="quick_tour.md">quick tour</a>:
+"Load Generator" is nothing but some jQuery scripts that can send multiple requests to  different scenarios explained in the [quick tour](quick_tour.md):
 
 ![BuggyAmb Load Generator](Images/load_generator.png)
 
@@ -8,15 +8,15 @@ It is not a rocket science, just select the page/scenario from list and tell how
 
 ![BuggyAmb Load Generator](Images/load_generator_in_action.png)
 
-Screenshot above tells me that there are two requests for <code>/Problem/NotFound</code> page, one is ended up with HTTP 200 and the other one is ended up with HTTP 404. There are two requests for <code>/Problem/Slow</code> and <code>/Problem/Expected</code> pages and both are ended up with HTTP 200 and the slow one took 8 seconds while the expected one took under 1 second. The request for <code>/Problem/Slow3</code> is still not responded. Note that the <code>Status</code> column is the status of Ajax request on client side, it is either success if the HTTP status code is HTTP 200 or error if the HTTP status code is other than HTTP 200 (e.g.: HTTP 404, HTTP 500). The actual response code is in the <code>Response Status</code> column.
+Screenshot above tells me that there are two requests for ```/Problem/NotFound``` page, one is ended up with HTTP 200 and the other one is ended up with HTTP 404. There are two requests for ```/Problem/Slow``` and ```/Problem/Expected``` pages and both are ended up with HTTP 200 and the slow one took 8 seconds while the expected one took under 1 second. The request for ```/Problem/Slow3``` is still not responded. Note that the ```Status``` column is the status of Ajax request on client side, it is either success if the HTTP status code is HTTP 200 or error if the HTTP status code is other than HTTP 200 (e.g.: HTTP 404, HTTP 500). The actual response code is in the ```Response Status``` column.
 
-><b>Important:</b> Elapsed Time is the server time + client time. Remember the 6 concurrent Ajax request limit, if you have more than 6 requests still running in the list then the rest will be waiting on the browser's queue for making the actual call. Elapsed Time also counts those seconds / minutes spent in the browser queue while waiting for an available Ajax connection. It may be a good idea to show the time spent on client side queue in another column in the next release of BuggyAmb.
+>**Important:** Elapsed Time is the server time + client time. Remember the 6 concurrent Ajax request limit, if you have more than 6 requests still running in the list then the rest will be waiting on the browser's queue for making the actual call. Elapsed Time also counts those seconds / minutes spent in the browser queue while waiting for an available Ajax connection. It may be a good idea to show the time spent on client side queue in another column in the next release of BuggyAmb.
 
 >>If, for some reason, you need more requests to test a scenario then there are workarounds: you can open an inPrivate browsing session and can have 6 more concurrent requests. Similarly, you can open one another vendor's browser to have another 6 concurrent request power.
 
-<h2>Sample Usage Scenarios</h2>
+## Sample Usage Scenarios
 
-<h3>Sending bulk requests to one single page</h3>
+### Sending bulk requests to one single page
 
 I often do this to reproduce the problem for the first slow scenario. If you make one request to the first slow scenario then you will see the page loads around 6-7 seconds or sometimes even faster where there are lots of CPU resources. In this kind of situations, where the response times are higher than expected but not long enough for capturing data for troubleshooting (e.g.: capturing multiple dumps with some intervals), it may be difficult to start troubleshooting. So we may want to have a larger window to capture data if it is possible. Of course this may not be possible for some real-world scenarios. However, we can do this "cheat" with BuggyAmb.
 
@@ -38,11 +38,11 @@ The first six requests seen in the table are sent first and then four of them ar
 
 This will give me a lot of time for collecting data.
 
-<b>Again:</b>
+**Again:**
 
 >If, for some reason, you need more requests to test a scenario then there are workarounds: you can open an inPrivate browsing session and can have 6 more concurrent requests. Similarly, you can open one another vendor's browser to have another 6 concurrent request power.
 
-<h3>Testing multiple scenarios at the same time</h3>
+### Testing multiple scenarios at the same time
 
 You may want to mix different scenarios by sending different requests to different parts of BuggyAmb. Below shows that there are five requests to different scenarios and one ended up with HTTP 500 after ~3 minutes while the others were done with HTTP 200 although the response times were high again:
 
@@ -54,14 +54,14 @@ Note that I opened an inPrivate browsing session and already sent some mixed req
 
 >If you look at the things from brighter side then you can take this limitation to test something else: you can push the limits and then try to find out how much time is spent on the client side and how much time is spent on the server side. You may practice your client side troubleshooting skills while you analyze this. For example, you can send 30 requests to different slow scenarios and nmaybe to the other pages as well and then capture a network trace or collect HTTP trace using tools like Fiddler, HttpWatch or browsers' developer toolbars. By looking at those traces you can try to understand where is the slowness, is that on client side, or is that on server side? This would be a good practice as well because you may see similar scenarios in some real-world problems.
 
-<h3>Testing crash scenarios</h3>
+### Testing crash scenarios
 
-If you read the guidance for the crash scenarios in the <a href="quick_tour.md">quick tour</a>, you may remember that sometimes the crash issues are not visible to the end users. You can use the tool to observe the results of crash scenarios.
+If you read the guidance for the crash scenarios in the [quick tour](quick_tour.md), you may remember that sometimes the crash issues are not visible to the end users. You can use the tool to observe the results of crash scenarios.
 
-For example I made two requests to the third slow scenario and four requests to the first slow scenario <u>after I clicked the second crash scenario, <code>Crash 2</code></u> and here is the result:
+For example I made two requests to the third slow scenario and four requests to the first slow scenario after I clicked the second crash scenario, ```Crash 2``` and here is the result:
 
 ![BuggyAmb Load Generator](Images/load_generator_crash_symptoms.png)
 
-I got HTTP 503 - Sevice Unavailable error for one of my requests and there are other requests ended up with <code>error</code>. I am hosting BuggyAmb on IIS and I may get HTTP 503 if the application pool is disabled or some limits are achieved (e.g.: queue is full). Queue should not be full because there are not too many requests so it should be a crash symptom and I can confirm that in event logs. 
+I got HTTP 503 - Sevice Unavailable error for one of my requests and there are other requests ended up with ```error```. I am hosting BuggyAmb on IIS and I may get HTTP 503 if the application pool is disabled or some limits are achieved (e.g.: queue is full). Queue should not be full because there are not too many requests so it should be a crash symptom and I can confirm that in event logs. 
 
 This is how I monitor crash scenarios using Load Generator.

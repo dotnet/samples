@@ -1,13 +1,15 @@
-<h1>Linux Installation Instructions</h1>
+# Linux Installation Instructions
 
-* <a href="#net-core-version">.NET Core version</a>
-* <a href="#how-to-run-buggyamb">How to run BuggyAmb</a>
-    * <a href="#running-buggyamb-as-a-standalone-application-no-web-server-is-needed">Running BuggyAmb as a standalone application (no web server is needed)</a>
-    * <a href="#running-buggyamb-behind-a-web-server-nginx-apache)">Running BuggyAmb behind a web server (Nginx or Apache)</a>
+In this page, you will find the following information:
 
-<h2>.NET Core version</h2>
+* .NET Core version required to run BuggyAmb
+* How to run BuggyAmb
+    * Running BuggyAmb as a standalone application (no web server is needed)
+    * Running BuggyAmb behind Nginx web server
 
-BuggyAmb is an ASP.NET Core <b>framework-dependent</b> application so it means that the correct version of ASP.NET Core runtime should be installed on your machine.
+## .NET Core version
+
+BuggyAmb is an ASP.NET Core **framework-dependent** application so it means that the correct version of ASP.NET Core runtime should be installed on your machine.
 
 The main reason for not publishing BuggyAmb as a self-contained application is simple: the size of the package will be much higher than the framework-dependent one when it is deployed as self-contained application because the required .NET Core libraries will also be included in the deployment package. If you want to deploy BuggyAmb as a self-contained application then you can download the source code and publish like that.
 
@@ -23,64 +25,52 @@ I have installed the .NET Core 3.1 SDK on Ubuntu 18.04 by following the instruct
 sudo apt-get update;
 sudo apt-get install -y apt-transport-https &&
 sudo apt-get update &&
-sudo apt-get install -y <b>dotnet-sdk-3.1</b>
+sudo apt-get install -y **dotnet-sdk-3.1**
 ```
 
-And here is the ```dotnet --info``` output:
+## Downloading the BuggyAmb in Linux
 
-![Linux dotnet --info output](Images/linux_dotnet_info.png)
+Simply you can run the following **wget** command to download BuggyAmb bits on your Linux machine:
 
-<h2>Downloading the BuggyAmb in Linux</h2>
+```wget https://buggyambfiles.blob.core.windows.net/bin/buggyamb_v1.1.tar.gz```
 
-Simply you can run the following <b>wget</b> command to download BuggyAmb bits on your Linux machine:
-
-```wget https://github.com/ahmetmithat/buggyamb/releases/download/v1.1/buggyamb_v1.1.tar.gz```
-
-Note that the command above downloads the first release of BuggyAmb and actually as of now it is the only release available :smiley:
-
-After the BuggyAmb is downloaded you need to extract the tar.gz file. The file should be downloaded in the current folder you are in when running the <b>wget</b> command and now you need to use <b>tar</b> to extract the file. I chose extracting the all releases under <b>/var/buggyamb</b> directory so I use the following command to extract:
+After the BuggyAmb is downloaded you need to extract the tar.gz file. The file should be downloaded in the current folder you are in when running the **wget** command and now you need to use **tar** to extract the file. I chose extracting the all releases under **/var/buggyamb** directory so I use the following command to extract:
 
 ```
 sudo mkdir /var/buggyamb
 sudo tar -xf buggyamb_v1.1.tar.gz -C /var/buggyamb
 ```
 
-The <b>buggyamb_v1.1</b> folder should have been created under <b>/var/buggyamb</b>:
+The **buggyamb_v1.1** folder should have been created under **/var/buggyamb**.
 
-![Linux extract files](Images/linux_extract_files.png)
+## How to run BuggyAmb
 
-<h2>How to run BuggyAmb</h2>
-
-The first release of BuggyAmb runs over HTTP. If you need to configure it to run on HTTPS then you can download the source code and make the necessary changes based on your needs. 
+This release of BuggyAmb runs over HTTP. If you need to configure it to run on HTTPS then you can download the source code and make the necessary changes based on your needs. 
 
 You need to run BuggyAmb as a standalone application in Linux, there is no "in-process" hosting model for ASP.NET Core applications in Linux unlike what IIS offers when run on Windows.
 
 To run BuggyAmb on Linux:
 
-* Change directory to where BuggyAmb is extracted. In my case I change the directory to <b>/var/buggyamb/buggyamb_v1.1</b>
+* Change directory to where BuggyAmb is extracted. In my case I change the directory to **/var/buggyamb/buggyamb_v1.1**
 * And run the following command: ```dotnet BuggyAmb.dll```
 
-You should see that the application is listening on port 5000 for HTTP requests:
+You should see that the application is listening on port 5000 for HTTP requests.
 
-![Linux BuggyAmb running](Images/linux_dotnet_run.png)
-
-Now you can test if it works. Open a browser and make a request to BuggyAmb, you should see the BuggyAmb Welcome Page:
-
-![Linux BuggyAmb running](Images/browser_test_linux.png)
+Now you can test if it works. Open a browser and make a request to BuggyAmb, you should see the BuggyAmb Welcome Page.
 
 Needless to say, "buggyamb" hostname resolves the IP address of my Linux machine and the port 5000 is the port where BuggyAmb listens on.
 
->This should be enough to get started with troubleshooting. You can start playing around problem scenarios and troubleshoot it. For a quick guide for the problematic scenarios and some troubleshooting tips, you can visit the <a href="quick_tour.md">quick tour</a>.
+>This should be enough to get started with troubleshooting. You can start playing around problem scenarios and troubleshoot it. For a quick guide for the problematic scenarios and some troubleshooting tips, you can visit the [quick tour](quick_tour.md).
 
-<h2>Ensuring BuggyAmb runs always</h2>
+## Ensuring BuggyAmb runs always
 
 So far, if you are able to access the home page of BuggyAmb, then you are ready to start with troubleshooting. However if you restart the Linux machine or BuggyAmb crashes (and believe it is a buggy application and it crashes a lot), then you should start it manually by running the ```dotnet BuggyAmb.dll``` command. In a real world scenario you want applications to start automatically after a crash or reboot.
 
-If you host an ASP.NET Core application on IIS, either in-process or out-process, IIS manages the process startups. In Linux, you can use <b>systemd</b> to manage the same. As described in https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/linux-nginx?view=aspnetcore-3.1;
+If you host an ASP.NET Core application on IIS, either in-process or out-process, IIS manages the process startups. In Linux, you can use **systemd** to manage the same. As described in https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/linux-nginx?view=aspnetcore-3.1;
 
  >systemd is an init system that provides many powerful features for starting, stopping, and managing processes.
 
-<b>systemd</b> will use a service/unit file to manage an application. This is similar to the service concept in Windows and is called <b>daemons</b> in Linux world. The unit files are located in <b>/etc/systemd/system</b> directory.
+**systemd** will use a service/unit file to manage an application. This is similar to the service concept in Windows and is called **daemons** in Linux world. The unit files are located in **/etc/systemd/system** directory.
 
 Here is a sample Unit file that you can use:
 
@@ -103,7 +93,7 @@ Environment=ASPNETCORE_ENVIRONMENT=Production
 WantedBy=multi-user.targe
 ```
 
-Just create a <b>buggyamb.service</b> file in <b>/etc/systemd/system</b> directory, copy and paste the lines above in that file. You can use your favorite text editor, such as <b>nano</b> or <b>vi</b>, e.g.: ```sudo vi /etc/systemd/system/buggyamb.service```
+Just create a **buggyamb.service** file in **/etc/systemd/system** directory, copy and paste the lines above in that file. You can use your favorite text editor, such as **nano** or **vi**, e.g.: ```sudo vi /etc/systemd/system/buggyamb.service```
 
 Once you create the unit file, reload the daemon configurations so the system knows about this service:
 
@@ -121,17 +111,15 @@ Now check if the service is started:
 
 ```sudo systemctl status buggyamb```
 
-You should see the service is <b>active (running)</b>:
+You should see the service is **active (running)**.
 
-![Linux BuggyAmb service status](Images/linux_systemctl_status_buggyamb.png)
+The process ID is an important information here because you will need that PID when you trobleshoot BuggyAmb application. You can get the same process ID using other tools like **top** or **htop** easily.
 
-The process ID is an important information here because you will need that PID when you trobleshoot BuggyAmb application. You can get the same process ID using other tools like <b>top</b> or <b>htop</b> easily.
-
->If you are having problem with running the service, please make sure the unit file is correct. You should update <b>WorkingDirectory</b> and <b>ExecStart</b> parameters accordingly if you run the BuggyAmb in a directory other than <b>/var/buggyamb/buggyamb_v1.1</b>. If those are correct but it still does not correct than you may want to check the "journal" logs by running this command: <b>sudo journalctl -fu buggyamb.service</b>
+>If you are having problem with running the service, please make sure the unit file is correct. You should update **WorkingDirectory** and **ExecStart** parameters accordingly if you run the BuggyAmb in a directory other than **/var/buggyamb/buggyamb_v1.1**. If those are correct but it still does not correct than you may want to check the "journal" logs by running this command: **sudo journalctl -fu buggyamb.service**
 
 Now BuggyAmb is ready to restart if it crashes or if the machine is rebooted.
 
-<h2>Getting rid of port 5000 - running BuggyAmb behind Nginx</h2>
+## Getting rid of port 5000 - running BuggyAmb behind Nginx
 
 If you are not like "enough, I am done!" yet, there are some other things to do if you want.
 
@@ -143,19 +131,17 @@ This article explains how you can configure Nginx as a reverse proxy server: htt
 
 Let's quickly go through the steps:
 
-<b>Installing Nginx</b>
+**Installing Nginx**
 
 Run the following command to install Nginx:
 
 ```sudo apt-get install nginx```
 
-After the installation is completed, make sure that the Nginx works correctly:
-
-![Linux BuggyAmb Nginx status](Images/linux_nginx_status.png)
+After the installation is completed, make sure that the Nginx works correctly. You can run ```sudo nginx -t``` command to check if the Nginx configuration is correct and also can run ```sudo systemctl status nginx``` command to see if the "service" is up and running - you should see **active (running)** output.
 
 > If it is not started you can try ```sudo systemctl start nginx``` or ```sudo service nginx start```. If you are still having trouble installing and running Nginx, please visit the official Nginx installation page: https://www.nginx.com/resources/wiki/start/topics/tutorials/install/
 
-<b>Configuring Nginx to route the requests to BuggyAmb</b>
+**Configuring Nginx to route the requests to BuggyAmb**
 
 Nginx is a powerful web server and can be configured to act as a reverse proxy. We can add a "server" block to the configuration file to just tell the Nginx to route the requests to the BuggyAmb application which runs on http://localhost:5000. Following sample routes the requests made to http://buggyamb to http://localhost:5000:
 
@@ -175,46 +161,26 @@ server {
     }
 }
 ```
- >Of course the <b>buggyamb</b> hostname should resolve to the IP address of the Linux machine on your client machine. You can simply add the <b>buggyamb</b> in the client's hosts file, or, if you have a DNS server you can update it there.
+ >Of course the **buggyamb** hostname should resolve to the IP address of the Linux machine on your client machine. You can simply add the **buggyamb** in the client's hosts file, or, if you have a DNS server you can update it there.
  
- Just open the ```/etc/nginx/sites-available/default``` file and add the server block above. After saving the changes, make sure that the Nginx configuration is correct by running ```sudo nginx -t``` command. You should see "configuration test is successfull" message: 
-
-![Linux BuggyAmb Nginx test](Images/linux_nginx_test.png)
+ Just open the ```/etc/nginx/sites-available/default``` file and add the server block above. After saving the changes, make sure that the Nginx configuration is correct by running ```sudo nginx -t``` command. You should see "configuration test is successfull" message.
 
 >If you are seeing an error then you probably made a mistake when adding the server block in previous step. Roll back from the configuration backup of Nginx and try again (what? you didn't take a backup before configuration change? You didn't take it because I didn't tell you take it? You are so brave, always take a backup before making an important change - luckily this should not be too difficult to fix :smiley:).
 
 Once the Nginx is configured correctly, let the Nginx to read the configuration changes by running ```sudo nginx -s reload``` command.
 
-<h2>Testing</h2> 
+**Testing** 
 
-You configured Nginx and it is time for a test. First test I'd recommend would be to make a connection test using <code>curl</code> directly on the Linux server. The goal with this test is to make sure that everything works fine locally.
+You configured Nginx and it is time for a test. First test I'd recommend would be to make a connection test using ```curl``` directly on the Linux server. The goal with this test is to make sure that everything works fine locally.
 
 >curl just makes an HTTP get request to the destination and it just shows the result in plain text. So it should show the HTML output of the response.
 
- The first thing you need to configure is the hosts file so the <b>buggyamb</b> hostname resolves to <b>127.0.0.1</b>. Add <b>buggyamb</b> in ```/etc/hosts``` file so it resolves to 127.0.0.1. You can use <b>vi</b> or <b>nano</b> again.
+ The first thing you need to configure is the hosts file so the **buggyamb** hostname resolves to **127.0.0.1**. Add **buggyamb** in ```/etc/hosts``` file so it resolves to 127.0.0.1. You can use **vi** or **nano** again.
 
-Then run ```curl localhost``` command. Nginx should get the request and show its welcome page because we configured Nginx to route the requests to BuggyAmb if only the hostname is <b>buggyamb</b> and this request is not made to <b>buggyamb</b>, it is made to <b>localhost</b>:
+Then run ```curl localhost``` command. Nginx should get the request and show its welcome page because we configured Nginx to route the requests to BuggyAmb if only the hostname is **buggyamb** and this request is not made to **buggyamb**, it is made to **localhost**.
 
-![Linux curl test](Images/linux_curl_test_localhost.png)
-
-Now run ```curl buggyamb``` command.  This time we make the request with <b>buggyamb</b> hostname so if Nginx is configured correctly, it should route the request to the BuggyAmb application running on port 5000. You should see the HTML of BuggyAmb Welcome Page:
-
-![Linux curl test](Images/linux_curl_test.png)
+Now run ```curl buggyamb``` command.  This time we make the request with **buggyamb** hostname so if Nginx is configured correctly, it should route the request to the BuggyAmb application running on port 5000. You should see the HTML of BuggyAmb Welcome Page.
 
 >All working? Good. If not working, I'd recommend you to go through the steps above once again, you may be missing something very simple. There are really great articles on the Internet, if you cannot solve it, search for the resolution. Good searcing skills are very useful when troubleshooting problems. If you still cannot find your answer feel free to ask your questions here in the comments, keep in mind that asking questions is one of the necessary steps for troubleshooting. Don't be shy to ask questions.
 
-If everything is working fine, then try to access BuggyAmb from your client machine. If you cannot get the page and instead you get "page cannot be displayed" or a similar error, it may be either a name resolution or a local firewall problem. I would recommend you to make sure <b>buggyamb</b> hostname is resolving to the IP address of your Linux machine first. If it is correct then go with the next step to configure local firewall to allow HTTP requests coming from remote machines.
-
-<h3>Configuring Linux firewall</h3>
-
-```iptables``` could be blocking the HTTP requests. Configuring iptables could be an easy task for most of the Linux admins but I am not a Linux expert and I found it a bit difficult, so, I prefer to use <a href="https://firewalld.org/">firewalld</a>. It makes it very easy to configure the local firewall with permanent rules. Steps are very easy:
-
-* Install firewalld: ```sudo apt install firewalld```
-* Add a permenant rule to allow all incoming HTTP requests: ```sudo firewall-cmd --zone=public --permanent --add-service=http```
-* Reload firewall configuration: ```sudo firewall-cmd --reload```
-
-After you configure the local firewall to allow incoming HTTP requests, try once again. Now you should be able to access the BuggyAmb hosted on Linux and running behind Nginx:
-
-![Linux browser test](Images/linux_browser_test_success.png)
-
-Congratulations. You are all done. Now you can start troubleshooting this buggy application.
+If everything is working fine, then try to access BuggyAmb from your client machine. If you cannot get the page and instead you get "page cannot be displayed" or a similar error, it may be either a name resolution or a local firewall problem. I would recommend you to make sure **buggyamb** hostname is resolving to the IP address of your Linux machine first. If it is correct then you should configure local firewall to allow HTTP requests coming from remote machines.

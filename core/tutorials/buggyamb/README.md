@@ -1,6 +1,6 @@
-<h1>What is BuggyAmb?</h1>
+# What is BuggyAmb?
 
-For a quick tour of the application please click here: <a href="Docs/quick_tour.md">Quick Tour</a>
+For a quick tour of the application please click here: [Quick Tour](Docs/quick_tour.md).
 
 BuggyAmb is just a very buggy ASP.NET Core Razor Pages based application. This application was intentionally created as a buggy application so it can be used as a learning resource to practice troubleshooting some sample problem scenarios:
 
@@ -8,42 +8,33 @@ BuggyAmb is just a very buggy ASP.NET Core Razor Pages based application. This a
 * High memory issues.
 * Crash issues and unexpected exceptions.
 
-Each release of BuggyAmb may have a different look and may include different scenarios to troubleshoot. Please check the release information for more details.
+## Installation Instructions
 
-All releases will be here: https://github.com/ahmetmithat/buggyamb/releases/
+* [Windows Installation Instructions](Docs/windows_installation_instructions.md)
+* [Linux Installation Instructions](Docs/linux_installation_instructions.md)
 
-* <a href="Docs/windows_installation_instructions.md">Windows Installation Instructions</a>
-* <a href="Docs/linux_installation_instructions.md">Linux Installation Instructions</a>
+For a quick tour of the application please visit [Quick Tour](Docs/quick_tour.md)
 
-For a quick tour of the application please click here: <a href="Docs/quick_tour.md">Quick Tour</a>
-
-<h2>Very speacial thanks to Tess Ferrandez</h2>
-
-Tess Ferrandez is a software engineer at Microsoft and when I started my support engineer career at Microsoft, I practiced her famous "BuggyBits" application and I took those great debugging labs to learn ASP.NET debugging on WinDbg.
-
-Some scenarios on the initial release of BuggyAmb is based on what Tess did with BuggyBits. I "borrowed" at least two scenarios and implemented it in BuggyAmb (also borrowed the name as well).
-
-You can follow Tess at https://github.com/TessFerrandez.
-
-<h1>Why? What is the goal of BuggyAmb?</h1>
+## Why? What is the goal of BuggyAmb?
 
 The goal of this application is NOT teaching you the best practices when writing ASP.NET Core applications, instead the goal is to help you get better at defining a problem, collecting data and performing some data analysis in debuggers.
 
 As a support engineer, I can confidently say that if you know how to collect the required data when you encounter a problem, you have the most important knowledge on the way to a solution. Collecting the right data at the right time is one of the most important steps to take to address a problem and solve it.
 
-<h2>A successfull troubleshooting session has the following characteristics:</h2>
+## A successfull troubleshooting session has the following characteristics:
 
-<h3>Identifying the issue</h3>
+### Identifying the issue
 
 If you cannot define the problem then you cannot know where to look. If you don't know where to look you cannot collect good data and as a result, you cannot solve the problem easily. Some problems seem complex but if you define it correctly you may narrow down it to a specific component.
 
 If you know how your application works then you can understand what is different when the problem happens and you can start defining the problem.
 
-<b>A bad definition:</b> it was running fast and now it is slow.
-<br/>
-<b>Good definition:</b> it was responding to this page under 1 seconds and when the problem happens it takes up to 60 seconds. At the same time CPU and memory usage also increases until the application is restarted.
+For example, "it was running fast and now it is slow." is a bad definition because it does not define any metric that you can measure. On the other hand, following is a better definition as we can talk about some metrics that we can use to define our problem:
 
-<h3>Collecting data</h3>
+```
+"It was responding to this page under 1 seconds and when the problem happens it takes up to 60 seconds. At the same time CPU and memory usage also increases until the application is restarted"
+```
+### Collecting data
 
 Once you identify the issue you need to collect the data. Most of the data collection may require to be done when the problem happens. 
 
@@ -51,7 +42,7 @@ If you can reproduce a problem then you are lucky and you can collect data at an
 
 So you need to know what kind of tools you have, how to use those tools in which scenario, etc...
 
-<h3>Data analysis</h3>
+### Data analysis
 
 Just like collecting data, there are great tools that you can use to analyse data and you need to know what kind of tools there are to analyze data.
 
@@ -59,7 +50,7 @@ Note that some data analysis can be done while capturing the data on the server,
 
 So you need to prepare your machine so you can use those tools when needed.
 
-<h3>Fixing the problem and avoiding it to happen again</h3>
+### Fixing the problem and avoiding it to happen again
 
 A good data analysis will give you the power to fix the problem and avoid it to happen. Root cause of some of the problems may be related with some external components that you cannot control but you can at least take some pre-cautions to handle the situation when that external component fails.
 
@@ -67,7 +58,7 @@ I also want to highlight the importance of documentation at this stage although 
 
 If you document it, most likely you are going to avoid the same problem because you will consolidate what you learn while you document it. You can also share your knowledge with the others if you document it and sharing is good.
 
-<h3>Measuring and Monitoring</h3>
+### Measuring and Monitoring
 
 This is last but not least and actually this should be done always, and I mean "always".
 
