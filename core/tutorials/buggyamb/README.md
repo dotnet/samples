@@ -1,3 +1,14 @@
+---
+languages:
+- csharp
+products:
+- dotnet-core
+page_type: sample
+name: "BuggyAmb debugging sample application"
+urlFragment: "buggyamb-debugging-sample-app"
+description: "A set of samples to teach production ASP.NET Core debugging for Windows and Linux."
+---
+
 # What is BuggyAmb?
 
 For a quick tour of the application please click here: [Quick Tour](Docs/quick_tour.md).
