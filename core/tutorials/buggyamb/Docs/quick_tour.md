@@ -151,11 +151,11 @@ And you will see this if you click the ```Unhandled Exception``` one:
 
 ### Random HTTP 404 and HTTP 500 errors
 
-If you click ```Not Found``` you will see this most of the times:
+If you click `Not Found` you will see this most of the times:
 
 ![BuggyAmb Unhandled Exception](Images/browser_problem_notfound_OK.png)
 
-However if you keep clicking the same link (or use "Load Generator" to send multiple requests to the ```Not Found``` page) you will see that it will respond with HTTP 404 or HTTP 500 erros intermittently:
+However if you keep clicking the same link (or use "Load Generator" to send multiple requests to the `Not Found` page) you will see that it will respond with HTTP 404 or HTTP 500 erros intermittently:
 
 ![BuggyAmb Unhandled Exception](Images/browser_problem_notfound_404.png)
 
@@ -163,7 +163,7 @@ However if you keep clicking the same link (or use "Load Generator" to send mult
 
 #### Handled Exception
 
-The ```Unhandled Exception``` error message seen in the browser is pretty obvious to give you a starting point:
+The `Unhandled Exception` error message seen in the browser is pretty obvious to give you a starting point:
 
 >An exception occured but it is handled: System.IO.DirectoryNotFoundException
 
@@ -173,17 +173,17 @@ This is a good approach and you may even able to see a call stack for the thread
 
 However, this may be difficult to find what you are looking for unless you use filters in Process Monitor and the call stack may not show the managed represantion - you may see the native side only.
 
-You can configure debuggers to capture 1st chance memory dumps if the tools support this. For example, you can use Debug Diagnostic on Windows and configure it to create a dump when a ```System.IO.DirectoryNotFoundException``` exception happens.
+You can configure debuggers to capture 1st chance memory dumps if the tools support this. For example, you can use Debug Diagnostic on Windows and configure it to create a dump when a `System.IO.DirectoryNotFoundException` exception happens.
 
 #### Unhandled Exception
 
-For the ```Handled Exception``` one, you may first "define" the problem: what is the exception thrown? Then you can use the same approach (creating a 1st chance rule on debugger) to capture dumps. To find the type of the exception thrown you may want to look at the event logs (especially the application event logs). If you cannot see any information, the next step would be to capture a debugger to the process and get the exception names without getting a memory dump. Debug Diagnostic tool on Windows is capable to generate a summary for the exceptions thrown in a process. You may try to use profilers to get the same information.
+For the `Handled Exception` one, you may first "define" the problem: what is the exception thrown? Then you can use the same approach (creating a 1st chance rule on debugger) to capture dumps. To find the type of the exception thrown you may want to look at the event logs (especially the application event logs). If you cannot see any information, the next step would be to capture a debugger to the process and get the exception names without getting a memory dump. Debug Diagnostic tool on Windows is capable to generate a summary for the exceptions thrown in a process. You may try to use profilers to get the same information.
 
 #### Random HTTP 404 and HTTP 500 errors
 
-The ```Not Found``` page randomly responds with HTTP 404 and HTTP 500. You may want to take action just like you do for the exceptions and check the event logs or attach a debugger.
+The `Not Found` page randomly responds with HTTP 404 and HTTP 500. You may want to take action just like you do for the exceptions and check the event logs or attach a debugger.
 
-If you are hosting BuggyAmb on IIS then you have a powerful tool: ```Failed Request Tracing (FREB)```. You may want to create a FREB rule and look at the report. Note that the FREB can be configured to create a memory dump when it is triggered.
+If you are hosting BuggyAmb on IIS then you have a powerful tool: `Failed Request Tracing (FREB)`. You may want to create a FREB rule and look at the report. Note that the FREB can be configured to create a memory dump when it is triggered.
 
 ## Experimental Load Generator
 
@@ -193,7 +193,7 @@ If you are hosting BuggyAmb on IIS then you have a powerful tool: ```Failed Requ
 
 But there is one thing:
 
->You can use this tool to send multiple requests to different pages of BuggyAmb but there is one important limitation: browsers can send maximum 6 concurrent Ajax requests to a unique endpoint in one session.
+> You can use this tool to send multiple requests to different pages of BuggyAmb but there is one important limitation: browsers can send maximum 6 concurrent Ajax requests to a unique endpoint in one session.
 
 However this tool is still quite useful for reproducing the scenarios because most of the times the problems are very easy to reproduce for BuggyAmb application. If, for some reason, you need more requests to test a scenario then there may be workarounds such as opening an inPrivate browsing session to have six more concurrent requests.
 

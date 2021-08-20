@@ -49,9 +49,10 @@ You may want to mix different scenarios by sending different requests to differe
 
 Note that I opened an inPrivate browsing session and already sent some mixed requests to slow scenarios before running the test above. As you can see things really get worse when the number of the requests increase.
 
->Once again, Load Generator is experimental. It may be buggy than the actual server side code so try to use it within the six request browser limit to avoid confusions around the "elapsed time" seen in the page - remember that the "elapsed time" is the sum of client side and server side time. Of course you are welcome to workaround this limit but make sure that you are also checking the server side logs to make a conclusion for what the actual server side processing time is.
-
->If you look at the things from brighter side then you can take this limitation to test something else: you can push the limits and then try to find out how much time is spent on the client side and how much time is spent on the server side. You may practice your client side troubleshooting skills while you analyze this. For example, you can send 30 requests to different slow scenarios and nmaybe to the other pages as well and then capture a network trace or collect HTTP trace using tools like Fiddler, HttpWatch or browsers' developer toolbars. By looking at those traces you can try to understand where is the slowness, is that on client side, or is that on server side? This would be a good practice as well because you may see similar scenarios in some real-world problems.
+> [!NOTE]
+> Load Generator is experimental. It may be buggy than the actual server side code so try to use it within the six request browser limit to avoid confusions around the "elapsed time" seen in the page - remember that the "elapsed time" is the sum of client side and server side time. Of course you are welcome to workaround this limit but make sure that you are also checking the server side logs to make a conclusion for what the actual server side processing time is.
+>
+> If you look at the things from brighter side then you can take this limitation to test something else: you can push the limits and then try to find out how much time is spent on the client side and how much time is spent on the server side. You may practice your client side troubleshooting skills while you analyze this. For example, you can send 30 requests to different slow scenarios and nmaybe to the other pages as well and then capture a network trace or collect HTTP trace using tools like Fiddler, HttpWatch or browsers' developer toolbars. By looking at those traces you can try to understand where is the slowness, is that on client side, or is that on server side? This would be a good practice as well because you may see similar scenarios in some real-world problems.
 
 ### Testing crash scenarios
 
@@ -61,6 +62,6 @@ For example I made two requests to the third slow scenario and four requests to 
 
 ![BuggyAmb Load Generator](Images/load_generator_crash_symptoms.png)
 
-I got HTTP 503 - Sevice Unavailable error for one of my requests and there are other requests ended up with ```error```. I am hosting BuggyAmb on IIS and I may get HTTP 503 if the application pool is disabled or some limits are achieved (e.g.: queue is full). Queue should not be full because there are not too many requests so it should be a crash symptom and I can confirm that in event logs. 
+I got HTTP 503 - Sevice Unavailable error for one of my requests and there are other requests ended up with ```error```. I am hosting BuggyAmb on IIS and I may get HTTP 503 if the application pool is disabled or some limits are achieved (e.g.: queue is full). Queue should not be full because there are not too many requests so it should be a crash symptom and I can confirm that in event logs.
 
 This is how I monitor crash scenarios using Load Generator.

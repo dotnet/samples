@@ -10,6 +10,7 @@ description: "A set of samples to teach production ASP.NET Core debugging for Wi
 ---
 
 # Welcome to BuggyAmb
+
 For a quick tour of the application please click here: [Quick Tour](Docs/quick_tour.md).
 
 BuggyAmb is just a very buggy ASP.NET Core Razor Pages based application. This application was intentionally created as a buggy application so it can be used as a learning resource to practice troubleshooting some sample problem scenarios:
