@@ -179,7 +179,7 @@ You can configure debuggers to capture 1st chance memory dumps if the tools supp
 
 For the `Handled Exception` one, you may first "define" the problem: what is the exception thrown? Then you can use the same approach (creating a 1st chance rule on debugger) to capture dumps. To find the type of the exception thrown you may want to look at the event logs (especially the application event logs). If you cannot see any information, the next step would be to capture a debugger to the process and get the exception names without getting a memory dump. Debug Diagnostic tool on Windows is capable to generate a summary for the exceptions thrown in a process. You may try to use profilers to get the same information.
 
-#### Random HTTP 404 and HTTP 500 errors
+#### HTTP 404/500
 
 The `Not Found` page randomly responds with HTTP 404 and HTTP 500. You may want to take action just like you do for the exceptions and check the event logs or attach a debugger.
 
