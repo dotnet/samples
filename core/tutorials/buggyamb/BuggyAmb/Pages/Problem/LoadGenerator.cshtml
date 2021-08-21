@@ -1,0 +1,182 @@
+﻿@page
+@model BuggyAmb.Pages.Problem.LoadGeneratorModel
+@{
+    Layout = null;
+}
+<script>
+    var totalrequests = 0;
+    var success = 0;
+    var error = 0;
+    var completed = 0;
+
+    /*
+    var urlList = [
+        "/Problem/Expected",
+        "/Problem/Slow",
+        "/Problem/Hang",
+        "/Problem/Crash",
+        "/Problem/HandledException",
+        "/Problem/UnhandledException",
+        "/Crash",
+        "/NotExist"
+    ];
+    */
+
+    var successList = [];
+    var errorList = [];
+    var requestList = [];
+
+    $("#startall").click(function () {
+        var url = $("#urllist").val();
+        var count = $("#threadcount").val();
+        var openDialog = false;
+
+        // alert(url);
+        if (url.startsWith("/Problem/FileUpload")) {
+            openDialog = true;
+        }
+
+        for (var i = 0; i < count; i++) {
+            MakeAsyncHttpCall(url, openDialog);
+        }
+    });
+
+    function MakeAsyncHttpCall(url, openDialog) {
+        var startTime = new Date($.now());
+        var sGuid = NewGuid();
+        var data = null;
+        var method = "GET";
+
+        $.ajax({
+            url: url,
+            cache: false,
+            beforeSend: function () {
+                totalrequests++;
+                requestList.push([sGuid, url, "0", "0", startTime, "0"]);
+                UpdateStatus(sGuid, url, "0", "0", startTime, "0");
+            },
+            success: function (result) {
+                success++;
+            },
+            error: function (xhr, status, errorThrown) {
+                error++;
+            },
+            complete: function (xhr, status) {
+                var endTime = new Date($.now());
+                completed++;
+                UpdateStatus(sGuid, url, status, xhr.status, startTime, endTime);
+            }
+        });
+
+        // UpdateStatus();
+    }
+
+    function UpdateStatus(sGuid, url, status, responseStatus, startTime, endTime) {
+
+        var found = false;
+
+        for (var i = 0; i < requestList.length; i++) {
+
+            request = requestList[i];
+
+            for (var j = 0; j < request.length; j++) {
+
+                //alert(request[j][0] + "\n\n" + sGuid);
+
+                if (requestList[i][0] == sGuid) {
+
+                    requestList[i][2] = status;
+                    requestList[i][3] = responseStatus;
+                    requestList[i][4] = startTime;
+                    requestList[i][5] = endTime;
+
+                    found = true;
+                    break;
+                }
+            }
+        }
+
+        if (!found) {
+            requestList.push([sGuid, url, status, responseStatus, startTime, endTime]);
+        }
+
+        $("#totalrequests").html(totalrequests);
+        $("#success").html(success);
+        $("#error").html(error);
+        $("#completed").html(completed);
+        $("#list").html(requestList);
+
+        // $("#errorlist").html(requestList.toString());
+
+        UpdateRequestTable();
+    }
+
+    function NewGuid() {
+        var sGuid = "";
+        for (var i = 0; i < 32; i++) {
+            sGuid += Math.floor(Math.random() * 0xF).toString(0xF);
+        }
+        return sGuid;
+    }
+
+    function UpdateRequestTable() {
+
+        var requestTableHtml = "<table cellpadding='4px;' border='1'><tr><td>URL</td><td>STATUS</td><td>RESPONSE STATUS</td><td>ELAPSED TIME (ms)</td></tr>";
+
+        for (var i = 0; i < requestList.length; i++) {
+
+            var url = requestList[i][1]
+            var status = requestList[i][2];
+            var responseStatus = requestList[i][3];
+            var startTime = requestList[i][4];
+            var endTime = requestList[i][5];
+            var diffTime = 0;
+            if (endTime > 0) {
+                diffTime = (Math.abs(endTime - startTime));
+            }
+
+            requestTableHtml += "<tr><td>" + url + "</td><td>" + status + "</td><td>" + responseStatus + "</td><td>" + diffTime + "</td></tr>";
+
+        }
+        requestTableHtml += "</table>";
+        $("#requestlist").html(requestTableHtml);
+
+    }
+
+</script>
+
+<div>
+
+    <select id="urllist">
+        <option value="/Problem/Expected" selected>Expected Results</option>
+        <option value="/Problem/Slow">Slow</option>
+        <option value="/Problem/Slow2">Slow 2</option>
+        <option value="/Problem/HandledException">Handled Exception</option>
+        <option value="/Problem/UnhandledException">Unhandled Exception</option>
+        <option value="/Problem/Crash">Crash 1</option>
+        <option value="/Problem/Crash2">Crash 2</option>
+        <option value="/Problem/AreYoThere?">Not Found</option>
+    </select>
+
+    <input type="number" id="threadcount" value="1" min="1" max="25" />
+
+    <button id="startall">Request Page</button>
+
+    <div id="status">
+        Total Requests: <span id="totalrequests"></span>
+        <br />
+        Completed: <span id="completed"></span>
+        <br />
+        Successfull: <span id="success"></span>
+        <br />
+        Error: <span id="error"></span>
+        <br />
+    </div>
+
+    <div id="requestlist"></div>
+
+    <br />
+
+    <div id="errorlist"></div>
+
+</div>
