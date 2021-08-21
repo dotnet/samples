@@ -1,0 +1,11 @@
+﻿@page
+@model BuggyAmb.Pages.Problem.SlowModel
+@{
+    Layout = null;
+}
+Elapsed Time in Server: @ViewData["ElapsedTime"]
+<div>
+    <p>
+        @Html.Raw(ViewData["ProductsTable"])
+    </p>
+</div>
