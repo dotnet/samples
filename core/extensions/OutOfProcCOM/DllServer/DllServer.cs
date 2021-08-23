@@ -26,7 +26,7 @@ namespace OutOfProcCOM
         }
 
 #if EMBEDDED_TYPE_LIBRARY
-        private static readonly string tlbPath = Assembly.GetExecutingAssembly().Location;
+        private static readonly string tlbPath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), $"{nameof(DllServer)}.comhost.dll");
 #else
         private static readonly string tlbPath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), Contract.Constants.TypeLibraryName);
 #endif
