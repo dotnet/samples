@@ -9,8 +9,17 @@
   <!-- Embed the type library as a resource -->
   <PropertyGroup Condition="'$(EmbedTypeLibrary)' == 'true'">
     <DefineConstants>$(DefineConstants);EMBEDDED_TYPE_LIBRARY</DefineConstants>
+  </PropertyGroup>
+
+  <!-- Explicitly embed the resource for executables -->
+  <PropertyGroup Condition="'$(EmbedTypeLibrary)' == 'true' and '$(OutputType)' == 'Exe'">
     <Win32Resource>$(TypeLibraryCompiledResourcePath)</Win32Resource>
   </PropertyGroup>
+
+  <!-- Use the SDK support for embedding a type library into comhost -->
+  <ItemGroup Condition="'$(EmbedTypeLibrary)' == 'true'">
+    <ComHostTypeLibrary Include="$(TypeLibraryPath)" />
+  </ItemGroup>
 
   <ItemGroup Condition="'$(MSBuildProjectExtension)' == '.csproj'">
     <!-- Used in lieu of a Primary Interop Assembly (PIA) -->
