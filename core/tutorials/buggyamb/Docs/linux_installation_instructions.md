@@ -17,9 +17,9 @@ Please check the release information to find out which .NET Core version is requ
 
 ```dotnet --info```
 
-If you don't have ASP.NET Core 3.1 runtime or SDK on your machine then you can find the installation instructions for different Linux distributions in [this page](https://docs.microsoft.com/dotnet/core/install/linux)
+If you don't have ASP.NET Core 3.1 runtime or SDK on your machine then you can find the installation instructions for different Linux distributions on [this page](/dotnet/core/install/linux).
 
-I have installed the .NET Core 3.1 SDK on Ubuntu 18.04 by following the instructions [here](https://docs.microsoft.com/dotnet/core/install/linux-ubuntu#1804) and replacing the dotnet-sdk-5.0 with dotnet-sdk-3.1:
+I have installed the .NET Core 3.1 SDK on Ubuntu 18.04 by following the instructions [here](/dotnet/core/install/linux-ubuntu#1804) and replacing dotnet-sdk-5.0 with dotnet-sdk-3.1:
 
 ```
 sudo apt-get update;
@@ -66,7 +66,7 @@ Needless to say, "buggyamb" hostname resolves the IP address of my Linux machine
 
 So far, if you are able to access the home page of BuggyAmb, then you are ready to start with troubleshooting. However if you restart the Linux machine or BuggyAmb crashes (and believe it is a buggy application and it crashes a lot), then you should start it manually by running the ```dotnet BuggyAmb.dll``` command. In a real world scenario you want applications to start automatically after a crash or reboot.
 
-If you host an ASP.NET Core application on IIS, either in-process or out-process, IIS manages the process startups. In Linux, you can use **systemd** to manage the same. As described [here](https://docs.microsoft.com/aspnet/core/host-and-deploy/linux-nginx?view=aspnetcore-3.1);
+If you host an ASP.NET Core application on IIS, either in-process or out-process, IIS manages the process startups. In Linux, you can use **systemd** to manage the same. As described [here](/aspnet/core/host-and-deploy/linux-nginx);
 
  >systemd is an init system that provides many powerful features for starting, stopping, and managing processes.
 
@@ -123,11 +123,11 @@ Now BuggyAmb is ready to restart if it crashes or if the machine is rebooted.
 
 If you are not like "enough, I am done!" yet, there are some other things to do if you want.
 
-Just like the previous "Ensuring BuggyAmb runs always" section, this one is not a requirement to get started, but...But, if you are like me you will probably want an environment as close to a real-world scenario as possible, and that port number at the hostname (:5000) will bother you: why not making requests like `http://buggybits/Problem` instead of `http://buggybits:5000/Problem`, right?
+Just like the previous "Ensuring BuggyAmb runs always" section, this one is not a requirement to get started. But, if you are like me, you will probably want an environment as close to a real-world scenario as possible, and that port number at the hostname (:5000) will bother you. Why not make requests like `http://buggybits/Problem` instead of `http://buggybits:5000/Problem`, right?
 
 The idea is very simple, Nginx will listen on port 80 and act as a reverse proxy server, and it will send the requests to the BuggyAmb application which listens on port 5000. So, our lovely clients won't have to remember that port number and instead they will just use the hostname. Lovely.
 
-[This article](https://docs.microsoft.com/aspnet/core/host-and-deploy/linux-nginx?view=aspnetcore-3.1) explains how you can configure Nginx as a reverse proxy server.
+[This article](/aspnet/core/host-and-deploy/linux-nginx) explains how you can configure Nginx as a reverse proxy server.
 
 Let's quickly go through the steps:
 

@@ -11,9 +11,9 @@ It is not a rocket science, just select the page/scenario from list and tell how
 Screenshot above tells me that there are two requests for ```/Problem/NotFound``` page, one is ended up with HTTP 200 and the other one is ended up with HTTP 404. There are two requests for ```/Problem/Slow``` and ```/Problem/Expected``` pages and both are ended up with HTTP 200 and the slow one took 8 seconds while the expected one took under 1 second. The request for ```/Problem/Slow3``` is still not responded. Note that the ```Status``` column is the status of Ajax request on client side, it is either success if the HTTP status code is HTTP 200 or error if the HTTP status code is other than HTTP 200 (e.g.: HTTP 404, HTTP 500). The actual response code is in the ```Response Status``` column.
 
 > [!IMPORTANT]
-> Elapsed Time is the server time + client time. Remember the 6 concurrent Ajax request limit, if you have more than 6 requests still running in the list then the rest will be waiting on the browser's queue for making the actual call. Elapsed Time also counts those seconds / minutes spent in the browser queue while waiting for an available Ajax connection. It may be a good idea to show the time spent on client side queue in another column in the next release of BuggyAmb.
+> Elapsed Time is the server time + client time. Remember the six concurrent Ajax request limit. If you have more than six requests still running in the list, then the rest will be waiting on the browser's queue for making the actual call. Elapsed Time also counts those seconds and minutes spent in the browser queue while waiting for an available Ajax connection. It may be a good idea to show the time spent on client side queue in another column in the next release of BuggyAmb.
 >
-> If, for some reason, you need more requests to test a scenario then there are workarounds: you can open an inPrivate browsing session and can have 6 more concurrent requests. Similarly, you can open one another vendor's browser to have another 6 concurrent request power.
+> If, for some reason, you need more requests to test a scenario then there are workarounds: you can open an inPrivate browsing session and can have six more concurrent requests. Similarly, you can open one another vendor's browser to have another six concurrent request power.
 
 ## Sample Usage Scenarios
 
@@ -62,6 +62,6 @@ For example I made two requests to the third slow scenario and four requests to 
 
 ![BuggyAmb Load Generator](Images/load_generator_crash_symptoms.png)
 
-I got HTTP 503 - Sevice Unavailable error for one of my requests and there are other requests ended up with ```error```. I am hosting BuggyAmb on IIS and I may get HTTP 503 if the application pool is disabled or some limits are achieved (e.g.: queue is full). Queue should not be full because there are not too many requests so it should be a crash symptom and I can confirm that in event logs.
+I got HTTP 503 - Sevice Unavailable error for one of my requests, and there are other requests that ended up with `error`. I am hosting BuggyAmb on IIS and I may get HTTP 503 if the application pool is disabled or some limits are achieved (for example, the queue is full). Queue should not be full because there are not too many requests, so it should be a crash symptom. I can confirm that in event logs.
 
 This is how I monitor crash scenarios using Load Generator.

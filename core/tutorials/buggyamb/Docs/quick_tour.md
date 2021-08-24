@@ -151,11 +151,11 @@ And you will see this if you click the ```Unhandled Exception``` one:
 
 ### Random HTTP 404 and HTTP 500 errors
 
-If you click `Not Found` you will see this most of the times:
+If you click `Not Found`, you'll see this most of the time:
 
 ![BuggyAmb Unhandled Exception](Images/browser_problem_notfound_OK.png)
 
-However if you keep clicking the same link (or use "Load Generator" to send multiple requests to the `Not Found` page) you will see that it will respond with HTTP 404 or HTTP 500 erros intermittently:
+However, if you keep clicking the same link (or use "Load Generator" to send multiple requests to the `Not Found` page), you will see that it will respond with HTTP 404 or HTTP 500 errors intermittently:
 
 ![BuggyAmb Unhandled Exception](Images/browser_problem_notfound_404.png)
 
