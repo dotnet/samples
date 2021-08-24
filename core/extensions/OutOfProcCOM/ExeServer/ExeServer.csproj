@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="..\Contract\Server.Contract.props" />
-
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <OutputType>Exe</OutputType>
   </PropertyGroup>
+
+  <Import Project="..\Contract\Server.Contract.props" />
 
   <ItemGroup>
     <ProjectReference Include="..\COMRegistration\COMRegistration.csproj" />
