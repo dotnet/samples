@@ -23,7 +23,6 @@ namespace AppWithPlugin
                 {
                     @"HelloPlugin\bin\Debug\net5\HelloPlugin.dll",
                     @"JsonPlugin\bin\Debug\net5\JsonPlugin.dll",
-                    @"XcopyablePlugin\bin\Debug\net5\XcopyablePlugin.dll",
                     @"OldJsonPlugin\bin\Debug\net5\OldJsonPlugin.dll",
                     @"FrenchPlugin\bin\Debug\net5\FrenchPlugin.dll",
                     @"UVPlugin\bin\Debug\net5\UVPlugin.dll",
