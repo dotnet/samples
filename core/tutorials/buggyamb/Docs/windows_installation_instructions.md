@@ -4,10 +4,10 @@ In this page, you will find the following information:
 
 * .NET Core version required to run BuggyAmb
 * How to run BuggyAmb
-    * Running BuggyAmb as a standalone application (no web server is needed)
-    * Hosting on Internet Information Services (IIS)
-        * Installing IIS<
-        * Creating BuggyAmb web site on IIS
+  * Running BuggyAmb as a standalone application (no web server is needed)
+  * Hosting on Internet Information Services (IIS)
+    * Installing IIS<
+    * Creating BuggyAmb web site on IIS
 
 ## .NET Core version
 
@@ -21,17 +21,19 @@ If you are going to host BuggyAmb on IIS then I recommended you to install the I
 
 You can run the following command on a command prompt to see which versions are installed on your machine:
 
-> dotnet --info
+```dotnetcli
+dotnet --info
+```
 
-To install .NET Core SDK, Runtime or IIS Hosting Bundle, visit https://dotnet.microsoft.com/download/dotnet-core/.
+To install .NET Core SDK, Runtime or IIS Hosting Bundle, get them [here](https://dotnet.microsoft.com/download/dotnet-core/).
 
-If you are using the first release of BuggyAmb then you need .NET Core 3.1: https://dotnet.microsoft.com/download/dotnet-core/3.1.
+If you are using the first release of BuggyAmb then you need [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1).
 
 Once again, please install IIS Hosting Bundle if you are going to host BuggyAmb on IIS.
 
 ## How to run BuggyAmb
 
-This release of BuggyAmb runs over HTTP. If you need to configure it to run on HTTPS then you can download the source code and make the necessary changes based on your needs. 
+This release of BuggyAmb runs over HTTP. If you need to configure it to run on HTTPS then you can download the source code and make the necessary changes based on your needs.
 
 You can run BuggyAmb as a standalone application or you can host it on IIS.
 
@@ -52,10 +54,10 @@ This is the easiest way to run BuggyAmb if you don't want to install IIS.
 
 Here are the instructions to run BuggyAmb as a standalone application:
 
-* Download the BuggyAmb here: https://buggyambfiles.blob.core.windows.net/bin/buggyamb_v1.1.zip
+* Download the BuggyAmb [here](https://buggyambfiles.blob.core.windows.net/bin/buggyamb_v1.1.zip)
 * Extract it to a folder.
 * Open a command prompt and change directory to the installation folder.
-* Run the BuggyAmb application by running ```dotnet BuggyAmb``` command. BuggyAmb application will run on Kestrel and listen for the HTTP requests on port 5000.
+* Run the BuggyAmb application by running `dotnet BuggyAmb` command. BuggyAmb application will run on Kestrel and listen for the HTTP requests on port 5000.
 
 Here is a screenshot showing it in action:
 
@@ -65,9 +67,9 @@ In this case BuggyAmb application will run in a dotnet.exe process:
 
 ![Tasklist](Images/tasklist.png)
 
-As an alternative, you can run as a standalone by just running ```BuggyAmb.exe``` on command prompt. If you run that way then the BuggyAmb will run in (surprise surprise) BuggyAmb.exe process and you would need to investigate that process.
+As an alternative, you can run as a standalone by just running `BuggyAmb.exe` on command prompt. If you run that way then the BuggyAmb will run in (surprise surprise) BuggyAmb.exe process and you would need to investigate that process.
 
-Once you run the BuggyAmb as a stand alone application, open a browser and test accessing to http://localhost:5000. You should see the following web site:
+Once you run the BuggyAmb as a stand alone application, open a browser and test accessing to `http://localhost:5000`. You should see the following web site:
 
 ![Browser test when it runs as standalone](Images/browser_test_standalone.png)
 
@@ -83,25 +85,25 @@ IIS is part of the Windows operating system and it can be installed at Control P
 
 If you are on a server SKU, such as Windows Server 2019, you can install the IIS by adding the web server role in Server Manager.
 
-After installation is completed you should be able to see the welcome page of IIS when you browse http://localhost/. If you don't see the welcome page then it means that something is  wrong and I'd recommend to check the steps again.
+After installation is completed you should be able to see the welcome page of IIS when you browse `http://localhost/`. If you don't see the welcome page then it means that something is  wrong and I'd recommend to check the steps again.
 
 ### Creating BuggyAmb web site on IIS
 
 Here are the instructions:
 
-* Download the BuggyAmb from this link: https://github.com/dotnet/samples/core/tutorials/buggyamb/dumps/buggyamb_v1.1.zip
-* Extract it to c:\inetpub\BuggyAmb folder.
-* Open IIS manager (```Start => Run => inetmgr```), right click on Sites and choose Add Website to create a new site. You can use similar settings as seen below:
+* [Download BuggyAmb](https://github.com/dotnet/samples/core/tutorials/buggyamb/dumps/buggyamb_v1.1.zip)
+* Extract it to `c:\inetpub\BuggyAmb` folder.
+* Open IIS manager (`Start => Run => inetmgr`), right click on Sites and choose Add Website to create a new site. You can use similar settings as seen below:
 
 ![IIS create a web site](Images/IIS_create_website.png)
 
-In the sample screenshot above, I create the "BuggyAmb" web site which uses an application pool with the same name. The key part above is the port number: 88. This web site will listen on port 88 for the incoming requests and you will browse http://localhost:88 to access the BuggyAmb application.
+In the sample screenshot above, I create the "BuggyAmb" web site which uses an application pool with the same name. The key part above is the port number: 88. This web site will listen on port 88 for the incoming requests and you will browse `http://localhost:88` to access the BuggyAmb application.
 
 If you want to use the default port 80 to avoid putting the port number when making requests, then you can stop the "Default Web Site" which is created when IIS is installed. If you are familiar with IIS configuration then you can keep the Default Web Site running and use a ```hostname``` when creating the BuggyAmb site, for example:
 
 ![IIS create a web site with host name](Images/IIS_create_website_with_hostname.png)
 
-In the case above, the requests made via http://buggyamb/ will be routed to this web site. Of course, buggyamb name should resolve the IP address of your machine and you can easily do so by editing the ```hosts``` file under ```C:\Windows\System32\drivers\etc``` folder:
+In the case above, the requests made via `http://buggyamb/` will be routed to this web site. Of course, buggyamb name should resolve the IP address of your machine and you can easily do so by editing the `hosts` file under `C:\Windows\System32\drivers\etc` folder:
 
 ![IIS create a web site with host name](Images/windows_hosts_file.png)
 
@@ -109,8 +111,8 @@ After clicking OK and creating the web site, you should see it in IIS manager:
 
 ![IIS BuggyAmb web site](Images/IIS_buggyamb_website.png)
 
-Once you create the web site you can test it by either cliking "Browse Website" link in IIS manager or opening a browser and browsing to http://buggyamb. You should see the following:
+Once you create the web site you can test it by either cliking "Browse Website" link in IIS manager or opening a browser and browsing to `http://buggyamb`. You should see the following:
 
 ![Browser test when it runs as standalone](Images/browser_test_iis.png)
 
-Note that if you do not configure hostname then you will access to the BuggyAmb web site via http://localhost:88 if you configure the  BuggyAmb web site to run on port 88, or via http://localhost if you stop the Default Web Site and configure the BuggyAmb web site to run on port 80.
+Note that if you do not configure hostname then you will access to the BuggyAmb web site via `http://localhost:88` if you configure the  BuggyAmb web site to run on port 88, or via `http://localhost` if you stop the Default Web Site and configure the BuggyAmb web site to run on port 80.
