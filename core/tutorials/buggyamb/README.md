@@ -9,7 +9,7 @@ urlFragment: "buggyamb-debugging-sample-app"
 description: "A set of samples to teach production ASP.NET Core debugging for Windows and Linux."
 ---
 
-# What is BuggyAmb?
+# Welcome to BuggyAmb
 
 For a quick tour of the application please click here: [Quick Tour](Docs/quick_tour.md).
 
@@ -26,13 +26,15 @@ BuggyAmb is just a very buggy ASP.NET Core Razor Pages based application. This a
 
 For a quick tour of the application please visit [Quick Tour](Docs/quick_tour.md)
 
-## Why? What is the goal of BuggyAmb?
+## Goal of BuggyAmb
 
 The goal of this application is NOT teaching you the best practices when writing ASP.NET Core applications, instead the goal is to help you get better at defining a problem, collecting data and performing some data analysis in debuggers.
 
 As a support engineer, I can confidently say that if you know how to collect the required data when you encounter a problem, you have the most important knowledge on the way to a solution. Collecting the right data at the right time is one of the most important steps to take to address a problem and solve it.
 
-## A successfull troubleshooting session has the following characteristics:
+## Best practices
+
+A successfull troubleshooting session has the following characteristics:
 
 ### Identifying the issue
 
@@ -42,12 +44,11 @@ If you know how your application works then you can understand what is different
 
 For example, "it was running fast and now it is slow." is a bad definition because it does not define any metric that you can measure. On the other hand, following is a better definition as we can talk about some metrics that we can use to define our problem:
 
-```
-"It was responding to this page under 1 seconds and when the problem happens it takes up to 60 seconds. At the same time CPU and memory usage also increases until the application is restarted"
-```
+> It was responding to this page under 1 seconds and when the problem happens it takes up to 60 seconds. At the same time CPU and memory usage also increases until the application is restarted.
+
 ### Collecting data
 
-Once you identify the issue you need to collect the data. Most of the data collection may require to be done when the problem happens. 
+Once you identify the issue you need to collect the data. Most of the data collection may require to be done when the problem happens.
 
 If you can reproduce a problem then you are lucky and you can collect data at any time you want but if you cannot reproduce the problem easily and if you miss the data collection then you may need to wait for the next occurence which may be a problem.
 
