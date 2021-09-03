@@ -1,6 +1,7 @@
 {
     "ignore": [
         "**/frameworks-library/**/*.csproj",
+        "**/whats-new-in-21/**/*.csproj",
         "**/migrate-library/**/*.csproj",
         "**/migrate-library-csproj/**/*.csproj",
         "**/migrate-library-csproj-keep-existing/**/*.csproj",
