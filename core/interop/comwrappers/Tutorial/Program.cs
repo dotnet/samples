@@ -24,14 +24,15 @@ namespace Tutorial
             Console.WriteLine($"Initial string: {value ?? "<null>"}");
 
             // Create a managed object wrapper for the Demo object.
-            IntPtr ccw = cw.GetOrCreateComInterfaceForObject(demo, CreateComInterfaceFlags.None);
+            // Note the returned COM interface will always be for IUnknown.
+            IntPtr ccwUnknown = cw.GetOrCreateComInterfaceForObject(demo, CreateComInterfaceFlags.None);
 
             // Create a native object wrapper for the managed object wrapper of the Demo object.
-            var rcw = cw.GetOrCreateObjectForComInstance(ccw, CreateObjectFlags.UniqueInstance);
+            var rcw = cw.GetOrCreateObjectForComInstance(ccwUnknown, CreateObjectFlags.UniqueInstance);
 
             // Release the managed object wrapper because the native object wrapper now manages
             // its lifetime. See the native wrapper implementation that will handle the final two releases.
-            int count = Marshal.Release(ccw);
+            int count = Marshal.Release(ccwUnknown);
             Debug.Assert(count == 2);
 
             var getter = (IDemoGetType)rcw;
@@ -96,7 +97,7 @@ namespace Tutorial
     /// MIDL_INTERFACE("30619FEA-E995-41EA-8C8B-9A610D32ADCB")
     /// IDemoStoreType : public IUnknown
     /// {
-    ///     HRESULT STDMETHODCALLTYPE StoreString(int len, _In_ wchar_t* str) = 0;
+    ///     HRESULT STDMETHODCALLTYPE StoreString(int len, _In_z_ const wchar_t* str) = 0;
     /// };
     /// </code>
     /// </remarks>
@@ -209,7 +210,7 @@ namespace Tutorial
 
         protected override unsafe ComInterfaceEntry* ComputeVtables(object obj, CreateComInterfaceFlags flags, out int count)
         {
-            Debug.Assert(flags.HasFlag(CreateComInterfaceFlags.None));
+            Debug.Assert(flags is CreateComInterfaceFlags.None);
 
             if (obj is DemoImpl)
             {
@@ -337,7 +338,7 @@ namespace Tutorial
                 hr = Marshal.QueryInterface(ptr, ref IDemoStoreType.IID_IDemoStoreType, out IntPtr IDemoStoreTypeInst);
                 if (hr != (int)HRESULT.S_OK)
                 {
-                    Marshal.Release(ptr);
+                    Marshal.Release(IDemoGetTypeInst);
                     return default;
                 }
 
