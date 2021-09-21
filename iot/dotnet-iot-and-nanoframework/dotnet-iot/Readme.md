@@ -1,6 +1,6 @@
-# Raspberry Pi with .NET Core IoT
+# Raspberry Pi with .NET IoT
 
-Raspberry Pi is one of the most popular boards and now .NET Core IoT can be used on top of Rasberian OS to enable the writing of managed code applications.
+Raspberry Pi is one of the most popular boards and now .NET IoT can be used on top of Rasberian OS to enable the writing of managed code applications.
 
 In this sample Raspberry Pi 2 will be used, you can use above Raspberry Pi 2. This sample application includes a scenario: Every 3 seconds application reads temperature value from BMP280 sensor and turns on LED after reading the value. Then this temperature value is pushed to IoT Hub with device name and after every successful push LED will blink and turn off. Data will be handled by IoT Hub message routing and will be pushed to blob storage to store.
 
@@ -8,11 +8,11 @@ In this sample Raspberry Pi 2 will be used, you can use above Raspberry Pi 2. Th
 
 ## Getting Started with nanoFramework
 
-* [Getting Started Guide for .NET Core IoT](https://docs.microsoft.com/en-us/dotnet/iot/)
-* [IoT with .NET Core Video Series](https://channel9.msdn.com/Series/IoT-101)
-* [List of suported devices/sensors by .NET Core IoT](https://github.com/dotnet/iot/blob/main/Documentation/README.md)
-* [.NET Core IoT Samples](https://github.com/dotnet/iot/blob/main/samples/README.md)
-* [Install .NET Core on Raspberry Pi](https://www.petecodes.co.uk/explorations-in-dot-net-core-3-0-for-raspberry-pi)
+* [Getting Started Guide for .NET IoT](https://docs.microsoft.com/en-us/dotnet/iot/)
+* [IoT with .NET Video Series](https://channel9.msdn.com/Series/IoT-101)
+* [List of suported devices/sensors by .NET IoT](https://github.com/dotnet/iot/blob/main/Documentation/README.md)
+* [.NET IoT Samples](https://github.com/dotnet/iot/blob/main/samples/README.md)
+* [Install .NET on Raspberry Pi](https://www.petecodes.co.uk/explorations-in-dot-net-core-3-0-for-raspberry-pi)
 
 ## Prerequisites
 
