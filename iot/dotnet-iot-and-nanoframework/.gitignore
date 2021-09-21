@@ -1,0 +1,5 @@
+**/bin/*
+**/obj/*
+**/packages/*
+**/.vs/*
+dotnet-iot/raspberry-pi.pfx
