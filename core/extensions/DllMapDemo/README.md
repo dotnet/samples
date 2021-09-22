@@ -1,3 +1,15 @@
+---
+languages:
+- csharp
+- cpp
+products:
+- dotnet-core
+page_type: sample
+name: "DllMap Demo"
+urlFragment: "dllmap-demo"
+description: "A sample that illustrates the use of NativeLibrary APIs to implement library name mappings"
+---
+
 # DllMap Demo
 
 This sample illustrates the use of NativeLibrary APIs to implement library name mappings similar to the [Mono](https://www.mono-project.com/) [Dllmap](https://www.mono-project.com/docs/advanced/pinvoke/dllmap/) feature.
