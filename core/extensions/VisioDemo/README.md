@@ -1,3 +1,15 @@
+---
+languages:
+- csharp
+products:
+- dotnet-core
+- windows
+page_type: sample
+name: "Visio Demo"
+urlFragment: "visio-demo"
+description: "A sample that demonstrates interoperation with Visio in .NET Core"
+---
+
 # Visio Demo
 
 This is a basic Visio demo sample in .NET Core. It is designed to work with .NET Core 3.1. It is based on the Excel Demo sample found here:
@@ -15,7 +27,9 @@ Demonstrates how to consume Office Primary Interop Assemblies (PIA) with .NET Co
 
 ## Build and Run
 
-To build and run the sample, the project must be loaded in Visual Studio 2019. Build support for `COMReference` elements is not supported in the `dotnet` tool for the Preview 2 release, but the scenario is demoable from within Visual Studio 2019.
+To build and run the sample, you could load it in Visual Studio 2019 or use MSBuild command line. Build support for `COMReference` elements is not supported in the `dotnet` tool for the Preview 2 release, but the scenario is demoable from within Visual Studio 2019.
+
+To build and run this sample using Visual Studio:
 
 1. Install .NET Core 3.1.
 
@@ -27,3 +41,16 @@ To build and run the sample, the project must be loaded in Visual Studio 2019. B
     - Open a Developer Command prompt and open with `devenv.exe VisioDemo.csproj`.
 
 1. Press <kbd>F5</kbd> to build and debug the project.
+
+To build and run this sample using MSBuild command line:
+
+1) Install .NET Core 3.1.
+
+1) Open a Developer Command prompt in the sample directory
+
+1) Enter the following commands
+
+```cmd
+msbuild -t:Restore;Build VisioDemo.csproj
+bin\Debug\netcoreapp3.1\VisioDemo.exe
+```
