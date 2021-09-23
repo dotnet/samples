@@ -1,3 +1,14 @@
+---
+languages:
+- csharp
+products:
+- dotnet-core
+page_type: sample
+name: "AppWithPlugin Demo"
+urlFragment: "appwithplugin-demo"
+description: "A sample that demonstrates creating an app with plugins in .NET"
+---
+
 # AppWithPlugin Demo
 
 This sample demonstrates how to create an app with a plugin architecture, using the `AssemblyDependencyResolver` type and a custom `AssemblyLoadContext` to help load plugins with assembly dependencies.

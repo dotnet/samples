@@ -1,3 +1,15 @@
+---
+languages:
+- csharp
+products:
+- dotnet-core
+- windows
+page_type: sample
+name: "COM Server Demo"
+urlFragment: "com-server-demo"
+description: "A basic example of a managed COM server in .NET Core"
+---
+
 # COM Server Demo
 
 This is a basic example of providing a managed COM server in .NET Core 3.1. Documentation on the inner workings of activation can be found [here](https://github.com/dotnet/core-setup/blob/main/Documentation/design-docs/COM-activation.md).
