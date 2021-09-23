@@ -136,7 +136,7 @@ You now have a root CA certificate. You can use it to sign device certificates. 
 
 6. Select **Generate Verification Code**. For more information, see [Prove Possession of a CA certificate](https://docs.microsoft.com/en-us/azure/iot-hub/tutorial-x509-prove-possession).
 
-![Certificate Azure IoT Hub CA](images/certificate-iot-hub-ca.png)
+    ![Certificate Azure IoT Hub CA](images/certificate-iot-hub-ca.png)
 
 7. Copy the verification code to the clipboard. You must set the verification code as the certificate subject. For example, if the verification code is BB0C656E69AF75E3FB3C8D922C1760C58C1DA5B05AAA9D0A, add that as the subject of your certificate as shown in step 9.
 
@@ -166,7 +166,7 @@ You now have a root CA certificate. You can use it to sign device certificates. 
 
     ```
 
-![Certificate Azure IoT Hub CA](images/certificate-iot-hub-ca-csr.png)
+    ![Certificate Azure IoT Hub CA](images/certificate-iot-hub-ca-csr.png)
 
 10. Create a certificate using the root CA configuration file and the CSR for the proof of possession certificate.
 
@@ -188,8 +188,7 @@ Navigate to your IoT Hub in the Azure portal and create a new IoT device identit
 
 1. Select **Save**.
 
-![Certificate Azure IoT Hub CA](images/create-a-device-ca-certificate.png)
-
+    ![Certificate Azure IoT Hub CA](images/create-a-device-ca-certificate.png)
 
 ## Step 9 - Create a client device certificate
 
