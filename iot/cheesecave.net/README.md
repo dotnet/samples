@@ -28,3 +28,8 @@ This sample console application provides an example that combines learnings from
 1. Deploy the app to your device as described in [Exercise: Deploy app to Raspberry Pi](https://docs.microsoft.com/learn/modules/create-iot-device-dotnet/5-deploy-app-raspberry-pi).
 1. Run the app as described in [Exercise: Test the app](https://docs.microsoft.com/learn/modules/create-iot-device-dotnet/6-test-raspberry-pi)
 
+You will be able to interact with the device in the Azure portal using **direct methods** and **device twins**. The *cheesecaveoperator* back-end app is optional.
+
+![A screenshot of the Azure portal showing a direct method being invoked](media/direct-method.png)
+
+![A screenshot of the Azure portal showing a device twin with temperature and humidity data](media/device-twin.png)
