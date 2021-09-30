@@ -46,7 +46,7 @@ name_opt                 = utf8,esc_ctrl,multiline,lname,align
 commonName               = "Test Root CA"
 
 [ca_default]
-home                     = ../rootca 
+home                     = ../rootca
 database                 = $home/db/index
 serial                   = $home/db/serial
 crlnumber                = $home/db/crlnumber
@@ -158,7 +158,7 @@ You now have a root CA certificate. You can use it to sign device certificates. 
       Organization Name (eg, company) [Default Company Ltd]:.
       Organizational Unit Name (eg, section) []:.
       Common Name (eg, your name or your server hostname) []:BB0C656E69AF75E3FB3C8D922C1760C58C1DA5B05AAA9D0A
-      Email Address []: 
+      Email Address []:
       Please enter the following 'extra' attributes
       to be sent with your certificate request
       A challenge password []:

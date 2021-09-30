@@ -173,7 +173,7 @@ There are two ways to publish your application to raspberry pi:
 1. We have [publish.bat](publish.bat) file to publish and push our compiled code to IoT device, make sure you provide your password and ip address of your Raspberry Pi
 
     ```bash
-    dotnet publish -r linux-arm /p:ShowLinkerSizeComparison=true 
+    dotnet publish -r linux-arm /p:ShowLinkerSizeComparison=true
     pushd .\bin\Debug\net5.0\linux-arm\publish
     pscp -pw 1234 -v -r .\* pi@192.168.1.147:DNSensorAzureIoTHub
     popd
@@ -184,7 +184,7 @@ There are two ways to publish your application to raspberry pi:
     On windows on your project root run below commands
 
     ```bash
-    dotnet publish -r linux-arm   
+    dotnet publish -r linux-arm
     cd .\bin\Debug\net5.0\linux-arm\
     scp publish\* pi@192.168.1.109:BlinkTutorial
     ```
