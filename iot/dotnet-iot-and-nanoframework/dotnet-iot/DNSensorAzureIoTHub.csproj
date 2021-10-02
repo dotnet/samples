@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <Platforms>AnyCPU;ARM32</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Iot.Device.Bindings" Version="1.5.0-prerelease.21212.1" />
+    <PackageReference Include="Microsoft.Azure.Devices.Client" Version="1.38.0" />
+    <PackageReference Include="System.Device.Gpio" Version="1.5.0-prerelease.21212.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="raspberry-pi.pfx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
