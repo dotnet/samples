@@ -409,7 +409,7 @@ namespace Tutorial
                 hr = Marshal.QueryInterface(ptr, ref IDemoStoreType.IID_IDemoStoreType, out IntPtr IDemoStoreTypeInst);
                 if (hr != (int)HRESULT.S_OK)
                 {
-                    Marshal.Release(ptr);
+                    Marshal.Release(IDemoGetTypeInst);
                     return default;
                 }
 
