@@ -44,18 +44,20 @@ Use the [Azure Cloud Shell](https://shell.azure.com) to create and get client se
     {
         "appId": "generated-app-ID",
         "displayName": "sample-app-name",
-        "name": "http://sample-app-name",
         "password": "random-password",
         "tenant": "tenant-ID"
     }
     ```
 
-    This creates a service principal. This is an identity for your app to use to perform Azure operations. The service principal is created with the *Contributor* role by default. 
-    
-    > [!NOTE]
-    > The `Contributor` role will not be implicitly assigned to Service Principals in future releases of the Azure CLI.  You will either need to use the `--role` argument in the above command or use the `az role assignment create --role <name>` command to explicitly assign a role to the Service Principal account
+    This creates a service principal. This is an identity for your app to use to perform Azure operations. 
 
-1. Assign the *Storage Blob Data Contributor* role to the new service principal. There are two ways to do this:
+2. Assign the *Contributor* role to the service principal so that it can create the necessary resources
+
+```azurecli
+az role assignment create --role "Contributor" --assignee <appId>
+```
+
+3. Assign the *Storage Blob Data Contributor* role to service principal. There are two ways to do this:
 
     a. Use the `appId` property from the output in the previous step.
 
@@ -70,7 +72,7 @@ Use the [Azure Cloud Shell](https://shell.azure.com) to create and get client se
     
     This will allow the service principal to perform blob data operations using Azure.Identity (as opposed to a connection string)
 
-1. Use the returned credentials from the first step to set the following environment variables.
+4. Use the returned credentials from the first step to set the following environment variables.
 
     |Variable name|Description|Value|
     |-|-|-|
@@ -80,7 +82,7 @@ Use the [Azure Cloud Shell](https://shell.azure.com) to create and get client se
 
     Azure.Identity reads these values from the environment at runtime to create a `DefaultAzureCredential` object.
 
-1. Get the account details of the subscription you want to use for this sample.
+5. Get the account details of the subscription you want to use for this sample.
 
     ```azurecli
     az account show
@@ -106,7 +108,7 @@ Use the [Azure Cloud Shell](https://shell.azure.com) to create and get client se
     }
     ```
 
-1. Set an environment variable named `AZURE_SUBSCRIPTION_ID` using the `id` property of the information retrieved in the previous step.
+6. Set an environment variable named `AZURE_SUBSCRIPTION_ID` using the `id` property of the information retrieved in the previous step.
 
 > [!NOTE]
 > Environment variables can be set in your operating system, or you can use a [*launchSettings.json* file](https://docs.microsoft.com/aspnet/core/fundamentals/environments?view=aspnetcore-3.1#lsj).
