@@ -51,7 +51,7 @@ Use the [Azure Cloud Shell](https://shell.azure.com) to create and get client se
 
     This creates a service principal. This is an identity for your app to use to perform Azure operations. 
 
-2. Assign the *Contributor* role to the service principal so that it can create the necessary resources
+1. Assign the *Contributor* role to the service principal so that it can create the necessary resources
 
 ```azurecli
 az role assignment create --role "Contributor" --assignee <appId>
