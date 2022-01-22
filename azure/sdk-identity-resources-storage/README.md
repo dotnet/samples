@@ -108,7 +108,7 @@ az role assignment create --role "Contributor" --assignee <appId>
     }
     ```
 
-6. Set an environment variable named `AZURE_SUBSCRIPTION_ID` using the `id` property of the information retrieved in the previous step.
+1. Set an environment variable named `AZURE_SUBSCRIPTION_ID` using the `id` property of the information retrieved in the previous step.
 
 > [!NOTE]
 > Environment variables can be set in your operating system, or you can use a [*launchSettings.json* file](https://docs.microsoft.com/aspnet/core/fundamentals/environments?view=aspnetcore-3.1#lsj).
