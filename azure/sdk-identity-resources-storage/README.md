@@ -72,7 +72,7 @@ az role assignment create --role "Contributor" --assignee <appId>
     
     This will allow the service principal to perform blob data operations using Azure.Identity (as opposed to a connection string)
 
-4. Use the returned credentials from the first step to set the following environment variables.
+1. Use the returned credentials from the first step to set the following environment variables.
 
     |Variable name|Description|Value|
     |-|-|-|
