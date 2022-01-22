@@ -64,6 +64,7 @@ az role assignment create --role "Contributor" --assignee <appId>
     ```azurecli
     az role assignment create --role "Storage Blob Data Contributor" --assignee <appId>
     ```
+
     b. Use the `objectId` of the Service Principal account
 
     ```azurecli
