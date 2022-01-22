@@ -82,7 +82,7 @@ az role assignment create --role "Contributor" --assignee <appId>
 
     Azure.Identity reads these values from the environment at runtime to create a `DefaultAzureCredential` object.
 
-5. Get the account details of the subscription you want to use for this sample.
+1. Get the account details of the subscription you want to use for this sample.
 
     ```azurecli
     az account show
