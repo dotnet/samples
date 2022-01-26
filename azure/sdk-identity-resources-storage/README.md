@@ -71,6 +71,7 @@ az role assignment create --role "Contributor" --assignee <appId>
     az ad sp show <appid>
     az az role assignment create --role 'Storage Blob Data Contributor' --assignee-object-id <objectid> --assignee-principal-type ServicePrincipal
     ```
+    
     This will allow the service principal to perform blob data operations using Azure.Identity (as opposed to a connection string)
 
 1. Use the returned credentials from the first step to set the following environment variables.
