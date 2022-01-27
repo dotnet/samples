@@ -2,7 +2,7 @@
 name: 'Snippets 5000'
 
 # Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the main branch
+# events on the main branch only.
 on:
   pull_request:
     branches: [ main ]
@@ -15,8 +15,8 @@ on:
         default: 'Force a snippets build'
 
 env:
-  DOTNET_INSTALLER_CHANNEL: 'release/5.0.1xx'
-  DOTNET_DO_INSTALL: 'false'
+  DOTNET_INSTALLER_CHANNEL: '6.0'
+  DOTNET_DO_INSTALL: 'true'
   EnableNuGetPackageRestore: 'True'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -25,6 +25,8 @@ jobs:
   build-samples:
     # The type of runner that the job will run on
     runs-on: windows-latest
+    permissions:
+        statuses: write
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -32,14 +34,19 @@ jobs:
     - uses: actions/checkout@a81bbbf8298c0fa03ea29cdc473d45769f953675 #@v2
 
     # Get the latest preview SDK (or sdk not installed by the runner)
-    - name: Setup .NET SDK 5
+    - name: Setup .NET SDK
       if: ${{ env.DOTNET_DO_INSTALL == 'true' }}
       run: |
         echo "Downloading dotnet-install.ps1"
         Invoke-WebRequest https://raw.githubusercontent.com/dotnet/install-scripts/master/src/dotnet-install.ps1 -OutFile dotnet-install.ps1
         echo "Installing dotnet version ${{ env.DOTNET_INSTALLER_CHANNEL }}"
         .\dotnet-install.ps1 -InstallDir "c:\program files\dotnet" -Channel "${{ env.DOTNET_INSTALLER_CHANNEL }}"
-      
+
+    # Print dotnet info
+    - name: Display .NET info
+      run: |
+        dotnet --info
+
     # Install locate projs global tool
     - name: Install LocateProjects tool
       run: |
@@ -49,7 +56,7 @@ jobs:
     - name: Locate projects for PR
       env:
         GitHubKey: ${{ secrets.GITHUB_TOKEN }}
-        LocateExts: ".cs;.vb;.fs;.cpp;.h;.xaml;.razor;.cshtml;.vbhtml;.csproj;.fsproj;.vbproj;.sln"
+        LocateExts: ".cs;.vb;.fs;.cpp;.h;.xaml;.razor;.cshtml;.vbhtml;.csproj;.fsproj;.vbproj;.vcxproj;.sln"
       run: |
         ./.github/workflows/dependencies/Get-MSBuildResults.ps1 "${{ github.workspace }}" -PullRequest ${{ github.event.number }} -RepoOwner ${{ github.repository_owner }} -RepoName ${{ github.event.repository.name }}
         
