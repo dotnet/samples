@@ -44,18 +44,32 @@ Use the [Azure Cloud Shell](https://shell.azure.com) to create and get client se
     {
         "appId": "generated-app-ID",
         "displayName": "sample-app-name",
-        "name": "http://sample-app-name",
         "password": "random-password",
         "tenant": "tenant-ID"
     }
     ```
 
-    This creates a service principal. This is an identity for your app to use to perform Azure operations. The service principal is created with the *Contributor* role by default.
+    This creates a service principal. This is an identity for your app to use to perform Azure operations.
 
-1. Assign the *Storage Blob Data Contributor* role to the new service principal. Use the URL in the `name` property from the output in the previous step, including `http://`.
+1. Assign the *Contributor* role to the service principal so that it can create the necessary resources
+
+```azurecli
+az role assignment create --role "Contributor" --assignee <appId>
+```
+
+1. Assign the *Storage Blob Data Contributor* role to service principal. There are two ways to do this:
+
+    a. Use the `appId` property from the output in the previous step.
 
     ```azurecli
-    az role assignment create --role "Storage Blob Data Contributor" --assignee <sample-app-name-url>
+    az role assignment create --role "Storage Blob Data Contributor" --assignee <appId>
+    ```
+
+    b. Use the `objectId` of the Service Principal account
+
+    ```azurecli
+    az ad sp show <appid>
+    az az role assignment create --role 'Storage Blob Data Contributor' --assignee-object-id <objectid> --assignee-principal-type ServicePrincipal
     ```
 
     This will allow the service principal to perform blob data operations using Azure.Identity (as opposed to a connection string)
