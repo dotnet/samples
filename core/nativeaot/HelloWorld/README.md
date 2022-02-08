@@ -2,7 +2,7 @@
 
 NativeAOT is an AOT-optimized .NET Core runtime. This document will guide you through compiling a .NET Core Console application with NativeAOT.
 
-_Please ensure that [pre-requisites](../../docs/using-nativeaot/prerequisites.md) are installed._
+_Please ensure that [pre-requisites](https://github.com/dotnet/runtime/blob/main/src/coreclr/nativeaot/docs/prerequisites.md) are installed._
 
 ## Create .NET Core Console project
 Open a new shell/command prompt window and run the following commands.
