@@ -99,4 +99,4 @@ The sample [source code](Class1.cs) demonstrates common techniques used to stay 
 
 ## References
 
-Real-world example of using CoreRT(previous incarnation of NativeAOT) and Rust: https://medium.com/@chyyran/calling-c-natively-from-rust-1f92c506289d
+Real-world example of using CoreRT (previous incarnation of NativeAOT) and Rust is [in this article](https://medium.com/@chyyran/calling-c-natively-from-rust-1f92c506289d).

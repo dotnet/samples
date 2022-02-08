@@ -5,7 +5,9 @@ NativeAOT is an AOT-optimized .NET Core runtime. This document will guide you th
 _Please ensure that [pre-requisites](https://github.com/dotnet/runtime/blob/main/src/coreclr/nativeaot/docs/prerequisites.md) are installed._
 
 ## Create .NET Core Console project
+
 Open a new shell/command prompt window and run the following commands.
+
 ```bash
 > dotnet new console -o HelloWorld
 > cd HelloWorld
@@ -14,6 +16,7 @@ Open a new shell/command prompt window and run the following commands.
 This will create a simple Hello World console app in `Program.cs` and associated project files.
 
 ## Add NativeAOT to your project
+
 To use NativeAOT with your project, you need to add a reference to the ILCompiler NuGet package that contains the NativeAOT ahead of time compiler and runtime.
 For the compiler to work, it first needs to be added to your project.
 
@@ -23,7 +26,7 @@ In your shell/command prompt navigate to the root directory of your project and 
 > dotnet new nugetconfig
 ```
 
-This will add a nuget.config file to your application. Open the file and in the ``<packageSources> `` element under ``<clear/>`` add the following:
+This will add a nuget.config file to your application. Open the file and in the ``<packageSources>`` element under ``<clear/>`` add the following:
 
 ```xml
 <add key="dotnet7" value="https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet7/nuget/v3/index.json" />
