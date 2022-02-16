@@ -17,6 +17,7 @@ static class CodeMetricsReportExtensions
         document.AppendParagraph(
             $"This file is dynamically maintained by a bot, *please do not* edit this by hand. It represents various [code metrics](https://aka.ms/dotnet/code-metrics), such as cyclomatic complexity, maintainability index, and so on.");
 
+        List<(string Id, string ClassName, string MermaidCode)> classDiagrams = new();
         foreach ((string filePath, CodeAnalysisMetricData assemblyMetric)
             in metricData.OrderBy(md => md.Key))
         {
@@ -86,8 +87,16 @@ static class CodeMetricsReportExtensions
                     }
 
                     document.AppendTable(tableHeader, rows);
-                    document.AppendParagraph($"**`{classSymbolName}` - click below to expand Mermaid class diagram**");
-                    document.AppendCode("mermaid", classMetric.ToMermaidClassDiagram(classSymbolName));
+
+                    if (classSymbolName is not "<Program>$")
+                    {
+                        var encodedName = HttpUtility.HtmlEncode(classSymbolName);
+                        var id = $"{encodedName}-class-diagram";
+                        var linkToClassDiagram = $"<a href=\"#{id}\">:link: to `{encodedName}` class diagram</a>";
+                        document.AppendParagraph(linkToClassDiagram);
+                        classDiagrams.Add((id, classSymbolName, classMetric.ToMermaidClassDiagram(classSymbolName)));
+                    }
+
                     document.AppendParagraph(namespaceLink); // Links back to the parent namespace in the MD doc
 
                     CloseCollapsibleSection(document);
@@ -100,6 +109,7 @@ static class CodeMetricsReportExtensions
         }
 
         AppendMetricDefinitions(document);
+        AppendMermaidClassDiagrams(document, classDiagrams);
         AppendMaintainedByBotMessage(document);
         RestoreMarkdownLinter(document);
 
@@ -129,6 +139,19 @@ static class CodeMetricsReportExtensions
         }
 
         document.AppendList(markdownList);
+    }
+
+    static void AppendMermaidClassDiagrams(
+        MarkdownDocument document, List<(string Id, string Class, string MermaidCode)> diagrams)
+    {
+        document.AppendHeader("Mermaid class diagrams", 2);
+
+        foreach (var (id, className, code) in diagrams)
+        {
+            document.AppendParagraph($"<div id=\"{id}\"></div>");
+            document.AppendHeader($"`{className}` class diagram", 5);
+            document.AppendCode("mermaid", code);
+        }
     }
 
     static void AppendMaintainedByBotMessage(MarkdownDocument document) =>
