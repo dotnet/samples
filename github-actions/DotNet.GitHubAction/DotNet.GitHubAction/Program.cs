@@ -1,23 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using CommandLine;
-using DotNet.CodeAnalysis;
-using DotNet.GitHubAction;
-using DotNet.GitHubAction.Analyzers;
-using DotNet.GitHubAction.Extensions;
-using Microsoft.CodeAnalysis.CodeMetrics;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.FileSystemGlobbing;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using static CommandLine.Parser;
-
-using IHost host = Host.CreateDefaultBuilder(args)
+﻿using IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices((_, services) => services.AddGitHubActionServices())
     .Build();
 
@@ -76,9 +57,10 @@ static async Task StartAnalysisAsync(ActionInputs inputs, IHost host)
             summary.AppendLine($"- *{path}*");
         }
 
+        var contents = metricData.ToMarkDownBody(inputs);
         await File.WriteAllTextAsync(
             fullPath,
-            metricData.ToMarkDownBody(inputs),
+            contents,
             tokenSource.Token);
 
         updatedMetrics = true;
