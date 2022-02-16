@@ -1,6 +1,4 @@
-﻿using System.Collections.Immutable;
-
-namespace DotNet.CodeAnalysis
+﻿namespace DotNet.CodeAnalysis
 {
     /// Internals borrowed from:
     /// https://github.com/dotnet/roslyn/blob/main/src/Workspaces/Core/MSBuild/MSBuild/ProjectFile/ProjectFileInfo.cs

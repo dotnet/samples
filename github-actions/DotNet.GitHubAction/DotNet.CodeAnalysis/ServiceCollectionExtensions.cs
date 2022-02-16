@@ -1,17 +1,13 @@
-﻿using Microsoft.Build.Locator;
-using Microsoft.Extensions.DependencyInjection;
+﻿namespace DotNet.CodeAnalysis;
 
-namespace DotNet.CodeAnalysis
+public static class ServiceCollectionExtensions
 {
-    public static class ServiceCollectionExtensions
+    public static IServiceCollection AddDotNetCodeAnalysisServices(
+        this IServiceCollection services)
     {
-        public static IServiceCollection AddDotNetCodeAnalysisServices(
-            this IServiceCollection services)
-        {
-            MSBuildLocator.RegisterDefaults();
+        MSBuildLocator.RegisterDefaults();
 
-            return services.AddSingleton<ProjectLoader>()
-                .AddSingleton<ProjectWorkspace>();
-        }
+        return services.AddSingleton<ProjectLoader>()
+            .AddSingleton<ProjectWorkspace>();
     }
 }

@@ -1,14 +1,12 @@
-﻿using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.VisualBasic;
+﻿using Microsoft.CodeAnalysis.VisualBasic;
 
-namespace DotNet.CodeAnalysis.VisualBasic
+namespace DotNet.CodeAnalysis.VisualBasic;
+
+static class VisualBasicDefaults
 {
-    static class VisualBasicDefaults
-    {
-        internal static VisualBasicCompilationOptions CompilationOptions { get; } =
-            new(OutputKind.ConsoleApplication, concurrentBuild: false);
+    internal static VisualBasicCompilationOptions CompilationOptions { get; } =
+        new(OutputKind.ConsoleApplication, concurrentBuild: false);
 
-        internal static VisualBasicCommandLineParser CommandLineParser { get; } =
-            VisualBasicCommandLineParser.Default;
-    }
+    internal static VisualBasicCommandLineParser CommandLineParser { get; } =
+        VisualBasicCommandLineParser.Default;
 }
