@@ -16,7 +16,7 @@ on:
 
 env:
   DOTNET_INSTALLER_CHANNEL: '6.0'
-  DOTNET_DO_INSTALL: 'true'
+  DOTNET_DO_INSTALL: 'false'
   EnableNuGetPackageRestore: 'True'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -24,7 +24,7 @@ jobs:
   # This workflow contains a single job called "build-samples"
   build-samples:
     # The type of runner that the job will run on
-    runs-on: windows-latest
+    runs-on: windows-2022
     permissions:
         statuses: write
 
