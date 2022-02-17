@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.Immutable;
-using Microsoft.CodeAnalysis;
-
-namespace DotNet.CodeAnalysis
+﻿namespace DotNet.CodeAnalysis
 {
     /// Internals borrowed from:
     /// https://github.com/dotnet/roslyn/blob/main/src/Compilers/Core/Portable/InternalUtilities/Hash.cs
