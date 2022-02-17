@@ -1,0 +1,16 @@
+﻿global using System.Collections.Immutable;
+global using System.Diagnostics.CodeAnalysis;
+global using System.Runtime.InteropServices;
+global using System.Text;
+global using System.Xml;
+global using DotNet.CodeAnalysis.CSharp;
+global using DotNet.CodeAnalysis.VisualBasic;
+global using Microsoft.Build.Evaluation;
+global using Microsoft.Build.Execution;
+global using Microsoft.Build.Framework;
+global using Microsoft.Build.Locator;
+global using Microsoft.CodeAnalysis;
+global using Microsoft.CodeAnalysis.Diagnostics;
+global using Microsoft.CodeAnalysis.Host;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Logging;

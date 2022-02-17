@@ -8,7 +8,7 @@ products:
 page_type: sample
 name: "GitHub Actions with .NET"
 urlFragment: "create-dotnet-github-action"
-description: "A .NET 5 console application that contains the example from Create a GitHub Action with .NET tutorial."
+description: "A .NET 6 console application that contains the example from Create a GitHub Action with .NET tutorial."
 ---
 
 # Create a GitHub Action with .NET
@@ -17,14 +17,14 @@ This sample is a console application written in C# from the [Create a GitHub Act
 
 ## Sample prerequisites
 
-This sample is written in C# and targets .NET 5. It requires the [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0) or later.
+This sample is written in C# and targets .NET 6. It requires the [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0) or later.
 
 ## Building the sample
 
 To download and run the sample, follow these steps:
 
 1. Download and unzip the sample.
-2. In Visual Studio (2019 or later):
+2. In Visual Studio (2022 or later):
     1. On the menu bar, choose **File** > **Open** > **Project/Solution**.
     2. Navigate to the folder that holds the unzipped sample code, and open the C# project (.csproj) file.
     3. Choose the <kbd>F5</kbd> key to run with debugging, or <kbd>Ctrl</kbd>+<kbd>F5</kbd> keys to run the project without debugging.
