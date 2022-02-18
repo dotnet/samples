@@ -31,10 +31,11 @@
     None
 
 .NOTES
-    Version:        1.4
+    Version:        1.5
     Author:         adegeo@microsoft.com
     Creation Date:  12/11/2020
-    Purpose/Change: Add support for config file. Select distinct on project files.
+    Update Date:    02/17/2022
+    Purpose/Change: Move to VS 2022.
 #>
 
 [CmdletBinding()]
@@ -152,7 +153,7 @@ foreach ($item in $workingSet) {
                     Write-Host "- Using visual studio as build host"
 
                     # Create the visual studio build command
-                    "CALL `"C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\Tools\VsDevCmd.bat`"`n" +
+                    "CALL `"C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\VsDevCmd.bat`"`n" +
                     "nuget.exe restore `"$projectFile`"`n" +
                     "msbuild.exe `"$projectFile`" -restore:True" `
                     | Out-File ".\run.bat"
