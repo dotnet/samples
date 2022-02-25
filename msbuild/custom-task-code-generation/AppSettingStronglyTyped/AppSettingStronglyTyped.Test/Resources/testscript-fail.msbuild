@@ -1,18 +1,18 @@
 ﻿<Project>
-	<UsingTask TaskName="AppSettingStronglyTyped.AppSettingStronglyTyped" AssemblyFile="..\AppSettingStronglyTyped.dll" />
+    <UsingTask TaskName="AppSettingStronglyTyped.AppSettingStronglyTyped" AssemblyFile="..\AppSettingStronglyTyped.dll" />
 
-	<PropertyGroup>
-		<SettingClass>MySettingFail</SettingClass>
-		<SettingNamespace>example</SettingNamespace>
-	</PropertyGroup>
+    <PropertyGroup>
+        <SettingClass>MySettingFail</SettingClass>
+        <SettingNamespace>example</SettingNamespace>
+    </PropertyGroup>
 
-	<ItemGroup>
-		<SettingFiles Include="error-prop.setting" />
-	</ItemGroup>
+    <ItemGroup>
+        <SettingFiles Include="error-prop.setting" />
+    </ItemGroup>
 
-	<Target Name="generateSettingClass">
-		<AppSettingStronglyTyped SettingClassName="$(SettingClass)" SettingNamespaceName="$(SettingNamespace)" SettingFiles="@(SettingFiles)">
-			<Output TaskParameter="ClassNameFile" PropertyName="SettingClassFileName" />
-		</AppSettingStronglyTyped>
-	</Target>
+    <Target Name="generateSettingClass">
+        <AppSettingStronglyTyped SettingClassName="$(SettingClass)" SettingNamespaceName="$(SettingNamespace)" SettingFiles="@(SettingFiles)">
+            <Output TaskParameter="ClassNameFile" PropertyName="SettingClassFileName" />
+        </AppSettingStronglyTyped>
+    </Target>
 </Project>

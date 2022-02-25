@@ -14,7 +14,7 @@ We are going to create a MSBuild custom task named AppSettingStronglyTyped. The 
 propertyName:type:defaultValue
 ```
 
-Then our code will generate a C# class with all the constants. :innocent: This is not useful at all, it is simple, the idea is help us to learn the mechanism.  
+Then our code will generate a C# class with all the constants. :innocent: This is not useful at all, it is simple, the idea is help us to learn the mechanism. 
 A problem should stop the build and give us enough information.
 
 ## Step 1, create the AppSettingStronglyTyped project
@@ -37,45 +37,45 @@ We need to include _Microsoft.Build.Utilities.Core_ NuGet package, and then crea
 We are going use three parameters:
 
 ```c#
-        //The name of the class which is going to be generated
-        [Required]
-        public string SettingClassName { get; set; }
+    //The name of the class which is going to be generated
+    [Required]
+    public string SettingClassName { get; set; }
 
-        //The name of the namespace where the class is going to be generated
-        [Required]
-        public string SettingNamespaceName { get; set; }
+    //The name of the namespace where the class is going to be generated
+    [Required]
+    public string SettingNamespaceName { get; set; }
 
-        //List of files which we need to read with the defined format: 'propertyName:type:defaultValue' per line
-        [Required]
-        public ITaskItem[] SettingFiles { get; set; }
+    //List of files which we need to read with the defined format: 'propertyName:type:defaultValue' per line
+    [Required]
+    public ITaskItem[] SettingFiles { get; set; }
 ```
 
-The task is going to process the _SettingFiles_ and generate a class 'SettingNamespaceName.SettingClassName'. The class will have a set of constants based on the text file's content.  
+The task is going to process the _SettingFiles_ and generate a class 'SettingNamespaceName.SettingClassName'. The class will have a set of constants based on the text file's content.
 The task output will be:
 
 ```c#
-        //The filename where the class was generated
-        [Output]
-        public string ClassNameFile { get; set; }
+    //The filename where the class was generated
+    [Output]
+    public string ClassNameFile { get; set; }
 ```
 
 We need to override the Execute method. The execute method returns true if the task was successful and false in other cases. Task implements ITask and provides default implementations of some ITask members and additionally, logging is easier. It is important the log to know what is going on. And even more important if we are going to return not succeed (false). On error, we should use Log.LogError.
 
 ```c#
-        public override bool Execute()
+    public override bool Execute()
+    {
+        //Read the input files and return a IDictionary<string, object> with the properties to be created.
+        //Any format error it will return not succeed and Log.LogError properly
+        var (success, settings) = ReadProjectSettingFiles();
+        if (!success)
         {
-            //Read the input files and return a IDictionary<string, object> with the properties to be created. 
-            //Any format error it will return not succeed and Log.LogError properly
-            var (success, settings) = ReadProjectSettingFiles();
-            if (!success)
-            {
-                return !Log.HasLoggedErrors;
-            }
-            //Create the class based on the Dictionary
-            success = CreateSettingClass(settings);
-
             return !Log.HasLoggedErrors;
         }
+        //Create the class based on the Dictionary
+        success = CreateSettingClass(settings);
+
+        return !Log.HasLoggedErrors;
+    }
 ```
 
 Then, the details are really not important for our purpose. You can copy from the source code and improve if you like.
@@ -107,12 +107,12 @@ We are going to generate a NuGet package, so first we need to add some basic inf
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-		<version>1.0.0</version>
-		<title>AppSettingStronglyTyped</title>
-		<authors>John Doe</authors>
-		<description>Generates a strongly typed setting class base on a txt file</description>
-		<tags>MyTags</tags>
-		<copyright>Copyright ©Microsoft Company 2022</copyright>
+        <version>1.0.0</version>
+        <title>AppSettingStronglyTyped</title>
+        <authors>John Doe</authors>
+        <description>Generates a strongly typed setting class base on a txt file</description>
+        <tags>MyTags</tags>
+        <copyright>Copyright ©Microsoft Company 2022</copyright>
   </PropertyGroup>
 
   <ItemGroup>
@@ -127,32 +127,32 @@ Then, the dependencies of your MSBuild task must be packaged inside the package,
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
 
-	<PropertyGroup>
-		<TargetFramework>netstandard2.0</TargetFramework>
-		<version>1.0.0</version>
-		<title>AppSettingStronglyTyped</title>
-		<authors>John Doe</authors>
-		<description>Generates a strongly typed setting class base on a txt file</description>
-		<tags>MyTags</tags>
-		<copyright>Copyright ©Microsoft Company 2022</copyright>
-		<!-- we need the assemblies bundled, so set this so we don't expose any dependencies to the outside world -->
-		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-		<TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
-		<DebugType>embedded</DebugType>
-		<IsPackable>true</IsPackable>
-	</PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <version>1.0.0</version>
+        <title>AppSettingStronglyTyped</title>
+        <authors>John Doe</authors>
+        <description>Generates a strongly typed setting class base on a txt file</description>
+        <tags>MyTags</tags>
+        <copyright>Copyright ©Microsoft Company 2022</copyright>
+        <!-- we need the assemblies bundled, so set this so we don't expose any dependencies to the outside world -->
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+        <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+        <DebugType>embedded</DebugType>
+        <IsPackable>true</IsPackable>
+    </PropertyGroup>
 
-	<ItemGroup>
-		<PackageReference Include="Microsoft.Build.Utilities.Core" Version="17.0.0" />
-	</ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Build.Utilities.Core" Version="17.0.0" />
+    </ItemGroup>
 
-	<Target Name="CopyProjectReferencesToPackage" DependsOnTargets="ResolveReferences">
-		<ItemGroup>
-			<!-- the dependencies of your MSBuild task must be packaged inside the package, they cannot be expressed as normal PackageReferences -->
+    <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="ResolveReferences">
+        <ItemGroup>
+            <!-- the dependencies of your MSBuild task must be packaged inside the package, they cannot be expressed as normal PackageReferences -->
 
-			<!--example: <BuildOutputInPackage Include="$(PkgFParsec)/lib/netstandard2.0/FParsecCS.dll" />-->
-		</ItemGroup>
-	</Target>
+            <!--example: <BuildOutputInPackage Include="$(PkgFParsec)/lib/netstandard2.0/FParsecCS.dll" />-->
+        </ItemGroup>
+    </Target>
 
 </Project>
 
@@ -168,13 +168,13 @@ In this next step we’ll wire up the task implementation in a .props and .targe
 First, we should modify the AppSettingStronglyTyped.csproj, adding
 
 ```xml
-	<ItemGroup>
-		<!-- these lines pack the build props/targets files to the `build` folder in the generated package.
+    <ItemGroup>
+        <!-- these lines pack the build props/targets files to the `build` folder in the generated package.
          by convention, the .NET SDK will look for build\<Package Id>.props and build\<Package Id>.targets
          for automatic inclusion in the build. -->
-		<Content Include="build\AppSettingStronglyTyped.props" PackagePath="build\" />
-		<Content Include="build\AppSettingStronglyTyped.targets" PackagePath="build\" />
-	</ItemGroup>
+        <Content Include="build\AppSettingStronglyTyped.props" PackagePath="build\" />
+        <Content Include="build\AppSettingStronglyTyped.targets" PackagePath="build\" />
+    </ItemGroup>
 ```
 
 Then we must create a _build_ folder and inside two text files: _AppSettingStronglyTyped.props_ and _AppSettingStronglyTyped.targets_.
@@ -186,27 +186,27 @@ _AppSettingStronglyTyped.props_ includes the task and define some prop with defa
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<!--defining properties interesting for my task-->
-	<PropertyGroup>
-		<!--default directory where the .dll was publich inside a NuGet package-->
-		<taskForldername>lib</taskForldername>
-		<taskFramework>netstandard2.0</taskFramework>
-		<!--The folder where the custom task will be present. It points to inside the NuGet package. -->
-		<CustomTasksFolder>$(MSBuildThisFileDirectory)..\$(taskForldername)\$(taskFramework)</CustomTasksFolder>
-		<!--Reference to the assembly which contains the MSBuild Task-->
-		<CustomTasksAssembly>$(CustomTasksFolder)\$(MSBuildThisFileName).dll</CustomTasksAssembly>
-	</PropertyGroup>
+    <!--defining properties interesting for my task-->
+    <PropertyGroup>
+        <!--default directory where the .dll was publich inside a NuGet package-->
+        <taskForldername>lib</taskForldername>
+        <taskFramework>netstandard2.0</taskFramework>
+        <!--The folder where the custom task will be present. It points to inside the NuGet package. -->
+        <CustomTasksFolder>$(MSBuildThisFileDirectory)..\$(taskForldername)\$(taskFramework)</CustomTasksFolder>
+        <!--Reference to the assembly which contains the MSBuild Task-->
+        <CustomTasksAssembly>$(CustomTasksFolder)\$(MSBuildThisFileName).dll</CustomTasksAssembly>
+    </PropertyGroup>
 
-	<!--Register our custom task-->
-	<UsingTask TaskName="$(MSBuildThisFileName).$(MSBuildThisFileName)" AssemblyFile="$(CustomTasksAssembly)"/>
+    <!--Register our custom task-->
+    <UsingTask TaskName="$(MSBuildThisFileName).$(MSBuildThisFileName)" AssemblyFile="$(CustomTasksAssembly)"/>
 
-	<!--Task parameters default values, this can be overridden-->
-	<PropertyGroup>
-		<RootFolder Condition="'$(RootFolder)' == ''">$(MSBuildProjectDirectory)</RootFolder>
-		<SettingClass Condition="'$(SettingClass)' == ''">MySetting</SettingClass>
-		<SettingNamespace Condition="'$(SettingNamespace)' == ''">example</SettingNamespace>
-		<SettingExtensionFile Condition="'$(SettingExtensionFile)' == ''">mysettings</SettingExtensionFile>
-	</PropertyGroup>
+    <!--Task parameters default values, this can be overridden-->
+    <PropertyGroup>
+        <RootFolder Condition="'$(RootFolder)' == ''">$(MSBuildProjectDirectory)</RootFolder>
+        <SettingClass Condition="'$(SettingClass)' == ''">MySetting</SettingClass>
+        <SettingNamespace Condition="'$(SettingNamespace)' == ''">example</SettingNamespace>
+        <SettingExtensionFile Condition="'$(SettingExtensionFile)' == ''">mysettings</SettingExtensionFile>
+    </PropertyGroup>
 </Project>
 ```
 
@@ -218,28 +218,28 @@ The _AppSettingStronglyTyped.props_ will be automatically included when the pack
 <?xml version="1.0" encoding="utf-8" ?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
-	<!--Defining all the text files input parameters-->
-	<ItemGroup>
-		<SettingFiles Include="$(RootFolder)\*.$(SettingExtensionFile)" />
-	</ItemGroup>
+    <!--Defining all the text files input parameters-->
+    <ItemGroup>
+        <SettingFiles Include="$(RootFolder)\*.$(SettingExtensionFile)" />
+    </ItemGroup>
 
-	<!--It is generated a target which is executed before the compilation-->
-	<Target Name="BeforeCompile" Inputs="@(SettingFiles)" Outputs="$(RootFolder)\$(SettingClass).generated.cs">
-		<!--Calling our custom task-->
-		<AppSettingStronglyTyped SettingClassName="$(SettingClass)" SettingNamespaceName="$(SettingNamespace)" SettingFiles="@(SettingFiles)">
-			<Output TaskParameter="ClassNameFile" PropertyName="SettingClassFileName" />
-		</AppSettingStronglyTyped>
-		<!--Our generated file is included to be compiled-->
-		<ItemGroup>
-			<Compile Remove="$(SettingClassFileName)" />
-			<Compile Include="$(SettingClassFileName)" />
-		</ItemGroup>
-	</Target>
+    <!--It is generated a target which is executed before the compilation-->
+    <Target Name="BeforeCompile" Inputs="@(SettingFiles)" Outputs="$(RootFolder)\$(SettingClass).generated.cs">
+        <!--Calling our custom task-->
+        <AppSettingStronglyTyped SettingClassName="$(SettingClass)" SettingNamespaceName="$(SettingNamespace)" SettingFiles="@(SettingFiles)">
+            <Output TaskParameter="ClassNameFile" PropertyName="SettingClassFileName" />
+        </AppSettingStronglyTyped>
+        <!--Our generated file is included to be compiled-->
+        <ItemGroup>
+            <Compile Remove="$(SettingClassFileName)" />
+            <Compile Include="$(SettingClassFileName)" />
+        </ItemGroup>
+    </Target>
 
-	<!--The generated file is deleted after a general clean. It will force the regeneration on rebuild-->
-	<Target Name="AfterClean">
-		<Delete Files="$(RootFolder)\$(SettingClass).generated.cs" />
-	</Target>
+    <!--The generated file is deleted after a general clean. It will force the regeneration on rebuild-->
+    <Target Name="AfterClean">
+        <Delete Files="$(RootFolder)\$(SettingClass).generated.cs" />
+    </Target>
 </Project>
 ```
 
@@ -284,9 +284,9 @@ Now, we are going to rebuild again and the magic should happen, the generated fi
 The class _MySetting_ is in the _example_ namespace, we are going to redefine to use our app namespace. Open csproj and add
 
 ```
-	<PropertyGroup>
-		<SettingNamespace>MSBuildConsoleExample</SettingNamespace>
-	</PropertyGroup>
+    <PropertyGroup>
+        <SettingNamespace>MSBuildConsoleExample</SettingNamespace>
+    </PropertyGroup>
 ```
 
 Now, we are going to rebuild again and the class is on _MSBuildConsoleExample_ namespace. In this way you can redefine the generated class name(SettingClass), the text extension files(SettingExtensionFile) to be use as input and the location (RootFolder) of them if you like.
@@ -306,7 +306,7 @@ _Note:_ It is a good practice include **PrivateAssets="All"** on the PackageRefe
 
 ```xml
 <ItemGroup>
-		<PackageReference Include="AppSettingStronglyTyped" Version="1.0.0" PrivateAssets="All"/>
+        <PackageReference Include="AppSettingStronglyTyped" Version="1.0.0" PrivateAssets="All"/>
 </ItemGroup>
 ```
 
@@ -336,34 +336,34 @@ For example (Note that the NuGet package is not referenced):
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
-	<UsingTask TaskName="AppSettingStronglyTyped.AppSettingStronglyTyped" AssemblyFile="..\..\AppSettingStronglyTyped\AppSettingStronglyTyped\bin\Debug\netstandard2.0\AppSettingStronglyTyped.dll"/>
+    <UsingTask TaskName="AppSettingStronglyTyped.AppSettingStronglyTyped" AssemblyFile="..\..\AppSettingStronglyTyped\AppSettingStronglyTyped\bin\Debug\netstandard2.0\AppSettingStronglyTyped.dll"/>
 
-	<PropertyGroup>
-		<OutputType>Exe</OutputType>
-		<TargetFramework>net6.0</TargetFramework>
-		<RootFolder>$(MSBuildProjectDirectory)</RootFolder>
-		<SettingClass>MySetting</SettingClass>
-		<SettingNamespace>MSBuildConsoleExample</SettingNamespace>
-		<SettingExtensionFile>mysettings</SettingExtensionFile>
-	</PropertyGroup>
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <RootFolder>$(MSBuildProjectDirectory)</RootFolder>
+        <SettingClass>MySetting</SettingClass>
+        <SettingNamespace>MSBuildConsoleExample</SettingNamespace>
+        <SettingExtensionFile>mysettings</SettingExtensionFile>
+    </PropertyGroup>
 
-	<ItemGroup>
-		<SettingFiles Include="$(RootFolder)\*.mysettings" />
-	</ItemGroup>
+    <ItemGroup>
+        <SettingFiles Include="$(RootFolder)\*.mysettings" />
+    </ItemGroup>
 
-	<Target Name="GenerateSetting" BeforeTargets="CoreCompile" Inputs="@(SettingFiles)" Outputs="$(RootFolder)\$(SettingClass).generated.cs">
-		<AppSettingStronglyTyped SettingClassName="$(SettingClass)" SettingNamespaceName="$(SettingNamespace)" SettingFiles="@(SettingFiles)">
-			<Output TaskParameter="ClassNameFile" PropertyName="SettingClassFileName" />
-		</AppSettingStronglyTyped>
-		<ItemGroup>
-			<Compile Remove="$(SettingClassFileName)" />
-			<Compile Include="$(SettingClassFileName)" />
-		</ItemGroup>
-	</Target>
+    <Target Name="GenerateSetting" BeforeTargets="CoreCompile" Inputs="@(SettingFiles)" Outputs="$(RootFolder)\$(SettingClass).generated.cs">
+        <AppSettingStronglyTyped SettingClassName="$(SettingClass)" SettingNamespaceName="$(SettingNamespace)" SettingFiles="@(SettingFiles)">
+            <Output TaskParameter="ClassNameFile" PropertyName="SettingClassFileName" />
+        </AppSettingStronglyTyped>
+        <ItemGroup>
+            <Compile Remove="$(SettingClassFileName)" />
+            <Compile Include="$(SettingClassFileName)" />
+        </ItemGroup>
+    </Target>
 
-	<Target Name="ForceReGenerateOnRebuild" AfterTargets="CoreClean">
-		<Delete Files="$(RootFolder)\$(SettingClass).generated.cs" />
-	</Target>
+    <Target Name="ForceReGenerateOnRebuild" AfterTargets="CoreClean">
+        <Delete Files="$(RootFolder)\$(SettingClass).generated.cs" />
+    </Target>
 </Project>
 ```
 

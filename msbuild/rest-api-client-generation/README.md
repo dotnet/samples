@@ -29,30 +29,30 @@ The complete code version is in this PetReaderExecTaskExample folder, you can do
   - First, we are going to add some props useful for our client generation
 
     ```xml
-    	<PropertyGroup>
-    		<PetOpenApiSpecLocation>petshop-openapi-spec.json</PetOpenApiSpecLocation>
-    		<PetClientClassName>PetShopRestClient</PetClientClassName>
-    		<PetClientNamespace>PetShopRestClient</PetClientNamespace>
-    		<PetClientOutputDirectory>PetShopRestClient</PetClientOutputDirectory>
-    	</PropertyGroup>
+        <PropertyGroup>
+            <PetOpenApiSpecLocation>petshop-openapi-spec.json</PetOpenApiSpecLocation>
+            <PetClientClassName>PetShopRestClient</PetClientClassName>
+            <PetClientNamespace>PetShopRestClient</PetClientNamespace>
+            <PetClientOutputDirectory>PetShopRestClient</PetClientOutputDirectory>
+        </PropertyGroup>
     ```
 
   - Please add the following targets:
 
     ```xml
     <Target Name="generatePetClient" BeforeTargets="CoreCompile" Inputs="$(PetOpenApiSpecLocation)" Outputs="$(PetClientOutputDirectory)\$(PetClientClassName).cs">
-    	 <Exec Command="$(NSwagExe) openapi2csclient /input:$(PetOpenApiSpecLocation)  /classname:$(PetClientClassName) /namespace:$(PetClientNamespace) /output:$(PetClientOutputDirectory)\$(PetClientClassName).cs" ConsoleToMSBuild="true">
-    			<Output TaskParameter="ConsoleOutput" PropertyName="OutputOfExec" />
+         <Exec Command="$(NSwagExe) openapi2csclient /input:$(PetOpenApiSpecLocation)  /classname:$(PetClientClassName) /namespace:$(PetClientNamespace) /output:$(PetClientOutputDirectory)\$(PetClientClassName).cs" ConsoleToMSBuild="true">
+                <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfExec" />
       </Exec>
     </Target>
     <Target Name="forceReGenerationOnRebuild" AfterTargets="CoreClean">
-    	<Delete Files="$(PetClientOutputDirectory)\$(PetClientClassName).cs"></Delete>
+        <Delete Files="$(PetClientOutputDirectory)\$(PetClientClassName).cs"></Delete>
     </Target>
     ```
 
-    You can notice we are using [BeforeTarget and AfterTarget](https://docs.microsoft.com/visualstudio/msbuild/target-build-order#beforetargets-and-aftertargets) as way to define build order.  
-    The first target called "generatePetClient" will be executed before the core compilation target, so we will create the source before the compiler executes. The input and output parameter are related to [Incremental Build](https://docs.microsoft.com/visualstudio/msbuild/how-to-build-incrementally). MSBuild can compare the timestamps of the input files with the timestamps of the output files and determine whether to skip, build, or partially rebuild a target.  
-    After installing the NSwag.MSBuild NuGet package in your project, you can use the variable $(NSwagExe) in your .csproj file to run the NSwag command line tool in an MSBuild target. This way the tools can easily be updated via NuGet. Here we are using the _Exec MSBUild Task_ to execute the NSwag program with the required parameters to generate the client Rest Api. [More about Nsawg command and parameters](https://github.com/RicoSuter/NSwag/wiki/NSwag.MSBuild).  
+    You can notice we are using [BeforeTarget and AfterTarget](https://docs.microsoft.com/visualstudio/msbuild/target-build-order#beforetargets-and-aftertargets) as way to define build order.
+    The first target called "generatePetClient" will be executed before the core compilation target, so we will create the source before the compiler executes. The input and output parameter are related to [Incremental Build](https://docs.microsoft.com/visualstudio/msbuild/how-to-build-incrementally). MSBuild can compare the timestamps of the input files with the timestamps of the output files and determine whether to skip, build, or partially rebuild a target.
+    After installing the NSwag.MSBuild NuGet package in your project, you can use the variable $(NSwagExe) in your .csproj file to run the NSwag command line tool in an MSBuild target. This way the tools can easily be updated via NuGet. Here we are using the _Exec MSBUild Task_ to execute the NSwag program with the required parameters to generate the client Rest Api. [More about Nsawg command and parameters](https://github.com/RicoSuter/NSwag/wiki/NSwag.MSBuild).
     You can capture output from `<Exec>` addig ConsoleToMsBuild="true" to your `<Exec>` tag and then capturing the output using the ConsoleOutput parameter in an `<Output>` tag. ConsoleOutput returns the output as an Item. Whitespace are trimmed. ConsoleOutput is enabled when ConsoleToMSBuild is true.
     The second target called "forceReGenerationOnRebuild" deletes the generated class during clean up to force the re generation on rebuild target execution. This target runs after core clean msbuild pre defined target.
 
@@ -226,14 +226,14 @@ _Note:_This simple validation could be done in other way on the MSBuild file, bu
   2. Add some props needed to execute our task
 
   ```xml
- 	<PropertyGroup>
-  		<!--The place where the OpenApi spec is in-->
-  		<PetClientInputOpenApiSpec>petshop-openapi-spec.json</PetClientInputOpenApiSpec>
-  		<PetClientClientClassName>PetRestApiClient</PetClientClientClassName>
-  		<PetClientClientNamespaceName>PetRestApiClient</PetClientClientNamespaceName>
-  		<PetClientFolderClientClass>PetRestApiClient</PetClientFolderClientClass>
-  		<!--The directory where NSawg.exe is in-->
-  		<NSwagCommandFullPath>C:\Nsawg\Win</NSwagCommandFullPath>
+     <PropertyGroup>
+          <!--The place where the OpenApi spec is in-->
+          <PetClientInputOpenApiSpec>petshop-openapi-spec.json</PetClientInputOpenApiSpec>
+          <PetClientClientClassName>PetRestApiClient</PetClientClientClassName>
+          <PetClientClientNamespaceName>PetRestApiClient</PetClientClientNamespaceName>
+          <PetClientFolderClientClass>PetRestApiClient</PetClientFolderClientClass>
+          <!--The directory where NSawg.exe is in-->
+          <NSwagCommandFullPath>C:\Nsawg\Win</NSwagCommandFullPath>
    </PropertyGroup>
   ```
 
@@ -244,12 +244,12 @@ _Note:_This simple validation could be done in other way on the MSBuild file, bu
   ```xml
   <Target Name="generatePetClient" BeforeTargets="CoreCompile" Inputs="$(PetClientInputOpenApiSpec)" Outputs="$(PetClientFolderClientClass)\$(PetClientClientClassName).cs">
      <!--Calling our custom task derivated from MSBuild Tool Task-->
-		<RestApiClientGenerator InputOpenApiSpec="$(PetClientInputOpenApiSpec)" ClientClassName="$(PetClientClientClassName)" ClientNamespaceName="$(PetClientClientNamespaceName)" FolderClientClass="$(PetClientFolderClientClass)" NSwagCommandFullPath="$(NSwagCommandFullPath)"></RestApiClientGenerator>
-	</Target>
-	
+        <RestApiClientGenerator InputOpenApiSpec="$(PetClientInputOpenApiSpec)" ClientClassName="$(PetClientClientClassName)" ClientNamespaceName="$(PetClientClientNamespaceName)" FolderClientClass="$(PetClientFolderClientClass)" NSwagCommandFullPath="$(NSwagCommandFullPath)"></RestApiClientGenerator>
+    </Target>
+
   <Target Name="forceReGenerationOnRebuild" AfterTargets="CoreClean">
-		<Delete Files="$(PetClientFolderClientClass)\$(PetClientClientClassName).cs"></Delete>
-	</Target>
+        <Delete Files="$(PetClientFolderClientClass)\$(PetClientClientClassName).cs"></Delete>
+    </Target>
   ```
 
   Input and Output are related to [Incremental Build](https://docs.microsoft.com/visualstudio/msbuild/how-to-build-incrementally), and _forceReGenerationOnRebuild_ target delete the generated file after core clean, and it force the client re generation during the rebuild target execution.

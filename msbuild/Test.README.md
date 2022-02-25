@@ -107,25 +107,25 @@ Now we need to create each test. Each test will need its own msbuild file defini
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
-	<UsingTask TaskName="AppSettingStronglyTyped.AppSettingStronglyTyped" AssemblyFile="..\AppSettingStronglyTyped.dll" />
-	<PropertyGroup>
-		<TargetFramework>netstandard2.1</TargetFramework>
-	</PropertyGroup>
+    <UsingTask TaskName="AppSettingStronglyTyped.AppSettingStronglyTyped" AssemblyFile="..\AppSettingStronglyTyped.dll" />
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+    </PropertyGroup>
 
-	<PropertyGroup>
-		<SettingClass>MySettingSuccess</SettingClass>
-		<SettingNamespace>example</SettingNamespace>
-	</PropertyGroup>
+    <PropertyGroup>
+        <SettingClass>MySettingSuccess</SettingClass>
+        <SettingNamespace>example</SettingNamespace>
+    </PropertyGroup>
 
-	<ItemGroup>
-		<SettingFiles Include="complete-prop.setting" />
-	</ItemGroup>
+    <ItemGroup>
+        <SettingFiles Include="complete-prop.setting" />
+    </ItemGroup>
 
-	<Target Name="generateSettingClass">
-		<AppSettingStronglyTyped SettingClassName="$(SettingClass)" SettingNamespaceName="$(SettingNamespace)" SettingFiles="@(SettingFiles)">
-			<Output TaskParameter="ClassNameFile" PropertyName="SettingClassFileName" />
-		</AppSettingStronglyTyped>
-	</Target>
+    <Target Name="generateSettingClass">
+        <AppSettingStronglyTyped SettingClassName="$(SettingClass)" SettingNamespaceName="$(SettingNamespace)" SettingFiles="@(SettingFiles)">
+            <Output TaskParameter="ClassNameFile" PropertyName="SettingClassFileName" />
+        </AppSettingStronglyTyped>
+    </Target>
 </Project>
 ```
 

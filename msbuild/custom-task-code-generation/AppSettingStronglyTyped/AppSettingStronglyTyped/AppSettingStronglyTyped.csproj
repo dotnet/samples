@@ -1,38 +1,38 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-	<PropertyGroup>
-		<TargetFramework>netstandard2.0</TargetFramework>
-		<version>1.0.0</version>
-		<title>AppSettingStronglyTyped</title>
-		<authors>John</authors>
-		<description>Generates a strongly typed setting class base on a txt file</description>
-		<tags>MyTags</tags>
-		<copyright>Copyright ©Contoso 2022</copyright>
-		<!-- we need the assemblies bundled, so set this so we don't expose any dependencies to the outside world -->
-		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-		<TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
-		<DebugType>embedded</DebugType>
-		<IsPackable>true</IsPackable>
-	</PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <version>1.0.0</version>
+        <title>AppSettingStronglyTyped</title>
+        <authors>John</authors>
+        <description>Generates a strongly typed setting class base on a txt file</description>
+        <tags>MyTags</tags>
+        <copyright>Copyright ©Contoso 2022</copyright>
+        <!-- we need the assemblies bundled, so set this so we don't expose any dependencies to the outside world -->
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+        <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+        <DebugType>embedded</DebugType>
+        <IsPackable>true</IsPackable>
+    </PropertyGroup>
 
-	<ItemGroup>
-		<PackageReference Include="Microsoft.Build.Utilities.Core" Version="17.0.0" />
-	</ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Build.Utilities.Core" Version="17.0.0" />
+    </ItemGroup>
 
-	<ItemGroup>
-		<!-- These lines pack the build props/targets files to the `build` folder in the generated package.
-         By convention, the .NET SDK will look for build\<Package Id>.props and build\<Package Id>.targets 
+    <ItemGroup>
+        <!-- These lines pack the build props/targets files to the `build` folder in the generated package.
+         By convention, the .NET SDK will look for build\<Package Id>.props and build\<Package Id>.targets
          for automatic inclusion in the build. -->
-		<Content Include="build\AppSettingStronglyTyped.props" PackagePath="build\" />
-		<Content Include="build\AppSettingStronglyTyped.targets" PackagePath="build\" />
-	</ItemGroup>
+        <Content Include="build\AppSettingStronglyTyped.props" PackagePath="build\" />
+        <Content Include="build\AppSettingStronglyTyped.targets" PackagePath="build\" />
+    </ItemGroup>
 
-	<Target Name="CopyProjectReferencesToPackage" DependsOnTargets="ResolveReferences">
-		<ItemGroup>
-			<!-- The dependencies of your MSBuild task must be packaged inside the package, they cannot be expressed as normal PackageReferences -->
+    <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="ResolveReferences">
+        <ItemGroup>
+            <!-- The dependencies of your MSBuild task must be packaged inside the package, they cannot be expressed as normal PackageReferences -->
 
-			<!--example: <BuildOutputInPackage Include="$(PkgFParsec)/lib/netstandard2.0/FParsecCS.dll" />-->
-		</ItemGroup>
-	</Target>
+            <!--example: <BuildOutputInPackage Include="$(PkgFParsec)/lib/netstandard2.0/FParsecCS.dll" />-->
+        </ItemGroup>
+    </Target>
 
 </Project>

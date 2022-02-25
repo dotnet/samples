@@ -20,7 +20,7 @@ namespace AppSettingStronglyTyped.Test
         {
             buildEngine = new Mock<IBuildEngine>();
             errors = new List<BuildErrorEventArgs>();
-            buildEngine.Setup(x => x.LogErrorEvent(It.IsAny<BuildErrorEventArgs>())).Callback<BuildErrorEventArgs>(e => errors.Add(e)); 
+            buildEngine.Setup(x => x.LogErrorEvent(It.IsAny<BuildErrorEventArgs>())).Callback<BuildErrorEventArgs>(e => errors.Add(e));
         }
 
         [TestMethod]

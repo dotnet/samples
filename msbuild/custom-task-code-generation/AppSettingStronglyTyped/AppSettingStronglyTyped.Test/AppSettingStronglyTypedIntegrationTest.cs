@@ -14,7 +14,7 @@ namespace AppSettingStronglyTyped.Test
      * will be a process holding a lock on any used task assemblies for a long time.
      * The command-line argument -nodeReuse:false tells MSBuild not to do that: any
      * additional processes it creates will exit when the build does.
-     * 
+     *
      * If you've ever noticed builds failing because of a failure to copy to the output
      * because a file was in use after running tests, it's because of this.
      **/
