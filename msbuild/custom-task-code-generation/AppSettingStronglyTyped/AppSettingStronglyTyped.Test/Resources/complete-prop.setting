@@ -1,0 +1,5 @@
+﻿Prop1:string:Hello
+Prop2:int:504
+Prop3:long:200000001
+Prop4:guid:79a107f3-0109-4425-aa16-81918663b4ed
+Prop5:bool:false
