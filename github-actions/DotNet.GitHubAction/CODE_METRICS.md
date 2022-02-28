@@ -7,7 +7,7 @@ This file is dynamically maintained by a bot, *please do not* edit this by hand.
 
 <div id='dotnet-codeanalysis'></div>
 
-## DotNet.CodeAnalysis :feelsgood:
+## DotNet.CodeAnalysis :exploding_head:
 
 The *DotNet.CodeAnalysis.csproj* project file contains:
 
@@ -15,12 +15,12 @@ The *DotNet.CodeAnalysis.csproj* project file contains:
 - 16 named types.
 - 2,590 total lines of source code.
 - Approximately 643 lines of executable code.
-- The highest cyclomatic complexity is 17 :feelsgood:.
+- The highest cyclomatic complexity is 17 :exploding_head:.
 
 <details>
 <summary>
   <strong id="dotnet-codeanalysis">
-    DotNet.CodeAnalysis :feelsgood:
+    DotNet.CodeAnalysis :exploding_head:
   </strong>
 </summary>
 <br>
@@ -30,7 +30,7 @@ The `DotNet.CodeAnalysis` namespace contains 14 named types.
 - 14 named types.
 - 2,568 total lines of source code.
 - Approximately 639 lines of executable code.
-- The highest cyclomatic complexity is 17 :feelsgood:.
+- The highest cyclomatic complexity is 17 :exploding_head:.
 
 <details>
 <summary>
@@ -95,7 +95,7 @@ The `DotNet.CodeAnalysis` namespace contains 14 named types.
 <details>
 <summary>
   <strong id="fileutilities">
-    FileUtilities :feelsgood:
+    FileUtilities :exploding_head:
   </strong>
 </summary>
 <br>
@@ -103,7 +103,7 @@ The `DotNet.CodeAnalysis` namespace contains 14 named types.
 - The `FileUtilities` contains 17 members.
 - 392 total lines of source code.
 - Approximately 82 lines of executable code.
-- The highest cyclomatic complexity is 17 :feelsgood:.
+- The highest cyclomatic complexity is 17 :exploding_head:.
 
 | Member kind | Line number | Maintainability index | Cyclomatic complexity | Depth of inheritance | Class coupling | Lines of source / executable code |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -120,7 +120,7 @@ The `DotNet.CodeAnalysis` namespace contains 14 named types.
 | Method | [33](https%3A%2F%2Fgithub.com%2Fdotnet%2Fsamples%2Fblob%2Fmain%2Fgithub-actions%2FDotNet.GitHubAction%2FDotNet.CodeAnalysis%2FFileUtilities.cs%23L33 "string? FileUtilities.ResolveRelativePath(string path, string? basePath, string? baseDirectory, IEnumerable<string> searchPaths, Func<string, bool> fileExists)") | 56 | 8 :warning: | 0 | 6 | 72 / 17 |
 | Method | [80](https%3A%2F%2Fgithub.com%2Fdotnet%2Fsamples%2Fblob%2Fmain%2Fgithub-actions%2FDotNet.GitHubAction%2FDotNet.CodeAnalysis%2FFileUtilities.cs%23L80 "string? FileUtilities.ResolveRelativePath(string? path, string? baseDirectory)") | 93 | 1 :heavy_check_mark: | 0 | 1 | 2 / 1 |
 | Method | [83](https%3A%2F%2Fgithub.com%2Fdotnet%2Fsamples%2Fblob%2Fmain%2Fgithub-actions%2FDotNet.GitHubAction%2FDotNet.CodeAnalysis%2FFileUtilities.cs%23L83 "string? FileUtilities.ResolveRelativePath(string? path, string? basePath, string? baseDirectory)") | 91 | 1 :heavy_check_mark: | 0 | 3 | 4 / 1 |
-| Method | [88](https%3A%2F%2Fgithub.com%2Fdotnet%2Fsamples%2Fblob%2Fmain%2Fgithub-actions%2FDotNet.GitHubAction%2FDotNet.CodeAnalysis%2FFileUtilities.cs%23L88 "string? FileUtilities.ResolveRelativePath(PathKind kind, string? path, string? basePath, string? baseDirectory)") | 57 | 17 :feelsgood: | 0 | 6 | 79 / 11 |
+| Method | [88](https%3A%2F%2Fgithub.com%2Fdotnet%2Fsamples%2Fblob%2Fmain%2Fgithub-actions%2FDotNet.GitHubAction%2FDotNet.CodeAnalysis%2FFileUtilities.cs%23L88 "string? FileUtilities.ResolveRelativePath(PathKind kind, string? path, string? basePath, string? baseDirectory)") | 57 | 17 :exploding_head: | 0 | 6 | 79 / 11 |
 | Method | [278](https%3A%2F%2Fgithub.com%2Fdotnet%2Fsamples%2Fblob%2Fmain%2Fgithub-actions%2FDotNet.GitHubAction%2FDotNet.CodeAnalysis%2FFileUtilities.cs%23L278 "T FileUtilities.RethrowExceptionsAsIOException<T>(Func<T> operation)") | 84 | 1 :heavy_check_mark: | 0 | 5 | 15 / 3 |
 | Field | [188](https%3A%2F%2Fgithub.com%2Fdotnet%2Fsamples%2Fblob%2Fmain%2Fgithub-actions%2FDotNet.GitHubAction%2FDotNet.CodeAnalysis%2FFileUtilities.cs%23L188 "char[] FileUtilities.s_invalidPathChars") | 93 | 0 :heavy_check_mark: | 0 | 1 | 1 / 1 |
 | Method | [245](https%3A%2F%2Fgithub.com%2Fdotnet%2Fsamples%2Fblob%2Fmain%2Fgithub-actions%2FDotNet.GitHubAction%2FDotNet.CodeAnalysis%2FFileUtilities.cs%23L245 "string? FileUtilities.TryNormalizeAbsolutePath(string path)") | 85 | 1 :heavy_check_mark: | 0 | 2 | 11 / 3 |
@@ -232,7 +232,7 @@ The `DotNet.CodeAnalysis` namespace contains 14 named types.
 <details>
 <summary>
   <strong id="pathutilities">
-    PathUtilities :feelsgood:
+    PathUtilities :exploding_head:
   </strong>
 </summary>
 <br>
@@ -240,7 +240,7 @@ The `DotNet.CodeAnalysis` namespace contains 14 named types.
 - The `PathUtilities` contains 45 members.
 - 745 total lines of source code.
 - Approximately 198 lines of executable code.
-- The highest cyclomatic complexity is 17 :feelsgood:.
+- The highest cyclomatic complexity is 17 :exploding_head:.
 
 | Member kind | Line number | Maintainability index | Cyclomatic complexity | Depth of inheritance | Class coupling | Lines of source / executable code |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -259,14 +259,14 @@ The `DotNet.CodeAnalysis` namespace contains 14 named types.
 | Method | [114](https%3A%2F%2Fgithub.com%2Fdotnet%2Fsamples%2Fblob%2Fmain%2Fgithub-actions%2FDotNet.GitHubAction%2FDotNet.CodeAnalysis%2FPathUtilities.cs%23L114 "string? PathUtilities.GetDirectoryName(string? path, bool isUnixLike)") | 60 | 7 :heavy_check_mark: | 0 | 2 | 28 / 12 |
 | Method | [81](https%3A%2F%2Fgithub.com%2Fdotnet%2Fsamples%2Fblob%2Fmain%2Fgithub-actions%2FDotNet.GitHubAction%2FDotNet.CodeAnalysis%2FPathUtilities.cs%23L81 "string PathUtilities.GetExtension(string path)") | 100 | 1 :heavy_check_mark: | 0 | 1 | 4 / 1 |
 | Method | [97](https%3A%2F%2Fgithub.com%2Fdotnet%2Fsamples%2Fblob%2Fmain%2Fgithub-actions%2FDotNet.GitHubAction%2FDotNet.CodeAnalysis%2FPathUtilities.cs%23L97 "string? PathUtilities.GetFileName(string? path, bool includeExtension = true)") | 78 | 1 :heavy_check_mark: | 0 | 3 | 5 / 3 |
-| Method | [275](https%3A%2F%2Fgithub.com%2Fdotnet%2Fsamples%2Fblob%2Fmain%2Fgithub-actions%2FDotNet.GitHubAction%2FDotNet.CodeAnalysis%2FPathUtilities.cs%23L275 "PathKind PathUtilities.GetPathKind(string? path)") | 54 | 17 :feelsgood: | 0 | 3 | 58 / 16 |
+| Method | [275](https%3A%2F%2Fgithub.com%2Fdotnet%2Fsamples%2Fblob%2Fmain%2Fgithub-actions%2FDotNet.GitHubAction%2FDotNet.CodeAnalysis%2FPathUtilities.cs%23L275 "PathKind PathUtilities.GetPathKind(string? path)") | 54 | 17 :exploding_head: | 0 | 3 | 58 / 16 |
 | Method | [563](https%3A%2F%2Fgithub.com%2Fdotnet%2Fsamples%2Fblob%2Fmain%2Fgithub-actions%2FDotNet.GitHubAction%2FDotNet.CodeAnalysis%2FPathUtilities.cs%23L563 "string[] PathUtilities.GetPathParts(string path)") | 73 | 2 :heavy_check_mark: | 0 | 1 | 12 / 5 |
 | Method | [166](https%3A%2F%2Fgithub.com%2Fdotnet%2Fsamples%2Fblob%2Fmain%2Fgithub-actions%2FDotNet.GitHubAction%2FDotNet.CodeAnalysis%2FPathUtilities.cs%23L166 "string? PathUtilities.GetPathRoot(string? path)") | 85 | 1 :heavy_check_mark: | 0 | 2 | 8 / 2 |
 | Method | [172](https%3A%2F%2Fgithub.com%2Fdotnet%2Fsamples%2Fblob%2Fmain%2Fgithub-actions%2FDotNet.GitHubAction%2FDotNet.CodeAnalysis%2FPathUtilities.cs%23L172 "string? PathUtilities.GetPathRoot(string? path, bool isUnixLike)") | 73 | 3 :heavy_check_mark: | 0 | 2 | 17 / 6 |
 | Method | [547](https%3A%2F%2Fgithub.com%2Fdotnet%2Fsamples%2Fblob%2Fmain%2Fgithub-actions%2FDotNet.GitHubAction%2FDotNet.CodeAnalysis%2FPathUtilities.cs%23L547 "string PathUtilities.GetRelativeChildPath(string parentPath, string childPath)") | 73 | 2 :heavy_check_mark: | 0 | 1 | 13 / 5 |
 | Method | [482](https%3A%2F%2Fgithub.com%2Fdotnet%2Fsamples%2Fblob%2Fmain%2Fgithub-actions%2FDotNet.GitHubAction%2FDotNet.CodeAnalysis%2FPathUtilities.cs%23L482 "string PathUtilities.GetRelativePath(string directory, string fullPath)") | 52 | 10 :radioactive: | 0 | 1 | 56 / 20 |
 | Method | [264](https%3A%2F%2Fgithub.com%2Fdotnet%2Fsamples%2Fblob%2Fmain%2Fgithub-actions%2FDotNet.GitHubAction%2FDotNet.CodeAnalysis%2FPathUtilities.cs%23L264 "string PathUtilities.GetUnixRoot(string path)") | 89 | 3 :heavy_check_mark: | 0 | 1 | 7 / 1 |
-| Method | [189](https%3A%2F%2Fgithub.com%2Fdotnet%2Fsamples%2Fblob%2Fmain%2Fgithub-actions%2FDotNet.GitHubAction%2FDotNet.CodeAnalysis%2FPathUtilities.cs%23L189 "string PathUtilities.GetWindowsRoot(string path)") | 51 | 13 :feelsgood: | 0 | 1 | 64 / 21 |
+| Method | [189](https%3A%2F%2Fgithub.com%2Fdotnet%2Fsamples%2Fblob%2Fmain%2Fgithub-actions%2FDotNet.GitHubAction%2FDotNet.CodeAnalysis%2FPathUtilities.cs%23L189 "string PathUtilities.GetWindowsRoot(string path)") | 51 | 13 :x: | 0 | 1 | 64 / 21 |
 | Method | [334](https%3A%2F%2Fgithub.com%2Fdotnet%2Fsamples%2Fblob%2Fmain%2Fgithub-actions%2FDotNet.GitHubAction%2FDotNet.CodeAnalysis%2FPathUtilities.cs%23L334 "bool PathUtilities.IsAbsolute(string? path)") | 67 | 6 :heavy_check_mark: | 0 | 3 | 28 / 7 |
 | Method | [28](https%3A%2F%2Fgithub.com%2Fdotnet%2Fsamples%2Fblob%2Fmain%2Fgithub-actions%2FDotNet.GitHubAction%2FDotNet.CodeAnalysis%2FPathUtilities.cs%23L28 "bool PathUtilities.IsAnyDirectorySeparator(char c)") | 91 | 2 :heavy_check_mark: | 0 | 0 | 4 / 1 |
 | Method | [539](https%3A%2F%2Fgithub.com%2Fdotnet%2Fsamples%2Fblob%2Fmain%2Fgithub-actions%2FDotNet.GitHubAction%2FDotNet.CodeAnalysis%2FPathUtilities.cs%23L539 "bool PathUtilities.IsChildPath(string parentPath, string childPath)") | 86 | 5 :heavy_check_mark: | 0 | 1 | 10 / 1 |
@@ -592,7 +592,7 @@ The `DotNet.CodeAnalysis.VisualBasic` namespace contains 1 named types.
 
 <div id='dotnet-githubaction'></div>
 
-## DotNet.GitHubAction :feelsgood:
+## DotNet.GitHubAction :x:
 
 The *DotNet.GitHubAction.csproj* project file contains:
 
@@ -600,7 +600,7 @@ The *DotNet.GitHubAction.csproj* project file contains:
 - 6 named types.
 - 669 total lines of source code.
 - Approximately 288 lines of executable code.
-- The highest cyclomatic complexity is 13 :feelsgood:.
+- The highest cyclomatic complexity is 13 :x:.
 
 <details>
 <summary>
@@ -685,7 +685,7 @@ The `DotNet.GitHubAction.Analyzers` namespace contains 1 named types.
 <details>
 <summary>
   <strong id="dotnet-githubaction-extensions">
-    DotNet.GitHubAction.Extensions :feelsgood:
+    DotNet.GitHubAction.Extensions :x:
   </strong>
 </summary>
 <br>
@@ -695,12 +695,12 @@ The `DotNet.GitHubAction.Extensions` namespace contains 3 named types.
 - 3 named types.
 - 471 total lines of source code.
 - Approximately 156 lines of executable code.
-- The highest cyclomatic complexity is 13 :feelsgood:.
+- The highest cyclomatic complexity is 13 :x:.
 
 <details>
 <summary>
   <strong id="codeanalysismetricdataextensions">
-    CodeAnalysisMetricDataExtensions :feelsgood:
+    CodeAnalysisMetricDataExtensions :x:
   </strong>
 </summary>
 <br>
@@ -708,7 +708,7 @@ The `DotNet.GitHubAction.Extensions` namespace contains 3 named types.
 - The `CodeAnalysisMetricDataExtensions` contains 9 members.
 - 208 total lines of source code.
 - Approximately 67 lines of executable code.
-- The highest cyclomatic complexity is 13 :feelsgood:.
+- The highest cyclomatic complexity is 13 :x:.
 
 | Member kind | Line number | Maintainability index | Cyclomatic complexity | Depth of inheritance | Class coupling | Lines of source / executable code |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -720,7 +720,7 @@ The `DotNet.GitHubAction.Extensions` namespace contains 3 named types.
 | Method | [42](https%3A%2F%2Fgithub.com%2Fdotnet%2Fsamples%2Fblob%2Fmain%2Fgithub-actions%2FDotNet.GitHubAction%2FDotNet.GitHubAction%2FExtensions%2FCodeAnalysisMetricDataExtensions.cs%23L42 "IEnumerable<TSource> CodeAnalysisMetricDataExtensions.Flatten<TSource>(IEnumerable<TSource> parent, Func<TSource, IEnumerable<TSource>> childSelector)") | 87 | 1 :heavy_check_mark: | 0 | 3 | 5 / 2 |
 | Method | [8](https%3A%2F%2Fgithub.com%2Fdotnet%2Fsamples%2Fblob%2Fmain%2Fgithub-actions%2FDotNet.GitHubAction%2FDotNet.GitHubAction%2FExtensions%2FCodeAnalysisMetricDataExtensions.cs%23L8 "string CodeAnalysisMetricDataExtensions.ToCyclomaticComplexityEmoji(CodeAnalysisMetricData metric)") | 88 | 1 :heavy_check_mark: | 0 | 2 | 9 / 1 |
 | Method | [181](https%3A%2F%2Fgithub.com%2Fdotnet%2Fsamples%2Fblob%2Fmain%2Fgithub-actions%2FDotNet.GitHubAction%2FDotNet.GitHubAction%2FExtensions%2FCodeAnalysisMetricDataExtensions.cs%23L181 "string CodeAnalysisMetricDataExtensions.ToDisplayName(CodeAnalysisMetricData metric)") | 100 | 1 :heavy_check_mark: | 0 | 2 | 14 / 1 |
-| Method | [48](https%3A%2F%2Fgithub.com%2Fdotnet%2Fsamples%2Fblob%2Fmain%2Fgithub-actions%2FDotNet.GitHubAction%2FDotNet.GitHubAction%2FExtensions%2FCodeAnalysisMetricDataExtensions.cs%23L48 "string CodeAnalysisMetricDataExtensions.ToMermaidClassDiagram(CodeAnalysisMetricData classMetric, string className)") | 41 | 13 :feelsgood: | 0 | 9 | 132 / 45 |
+| Method | [48](https%3A%2F%2Fgithub.com%2Fdotnet%2Fsamples%2Fblob%2Fmain%2Fgithub-actions%2FDotNet.GitHubAction%2FDotNet.GitHubAction%2FExtensions%2FCodeAnalysisMetricDataExtensions.cs%23L48 "string CodeAnalysisMetricDataExtensions.ToMermaidClassDiagram(CodeAnalysisMetricData classMetric, string className)") | 41 | 13 :x: | 0 | 9 | 132 / 45 |
 
 <a href="#CodeAnalysisMetricDataExtensions-class-diagram">:link: to `CodeAnalysisMetricDataExtensions` class diagram</a>
 
