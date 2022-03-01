@@ -1,5 +1,5 @@
 name: '.NET code metric analyzer'
-description: 'A Github action that maintains a CODE_METRICS.md file, reporting cylcomatic complexity, maintainability index, etc.'
+description: 'A Github action that maintains a CODE_METRICS.md file, reporting cyclomatic complexity, maintainability index, etc.'
 branding:
   icon: sliders
   color: purple
