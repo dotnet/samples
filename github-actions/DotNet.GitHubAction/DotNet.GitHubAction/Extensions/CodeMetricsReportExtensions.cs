@@ -234,17 +234,17 @@ static class CodeMetricsReportExtensions
 
         var lineNumber = location.GetLineSpan().StartLinePosition.Line + 1;
 
-        if (location.SourceTree is { FilePath: { Length: > 0 } })
+        if (location.SourceTree is { FilePath.Length: > 0 })
         {
             var fullPath = location.SourceTree?.FilePath;
             var relativePath =
                 Path.GetRelativePath(actionInputs.WorkspaceDirectory, fullPath!)
                     .Replace("\\", "/");
             var lineNumberFileReference =
-                Uri.EscapeDataString(
-                    $"https://github.com/{actionInputs.Owner}/{actionInputs.Name}/blob/{actionInputs.Branch}/{relativePath}#L{lineNumber}");
-
-            return $"[{lineNumber:#,0}]({lineNumberFileReference} \"{symbolDisplayName}\")";
+                $"https://github.com/{actionInputs.Owner}/{actionInputs.Name}/blob/{actionInputs.Branch}/{relativePath}#L{lineNumber}";
+            
+            // Must force anchor link, as GitHub assumes site-relative links.
+            return $"<a href='{lineNumberFileReference}' title='{symbolDisplayName}'>{lineNumber:#,0}</a>";
         }
 
         return $"[{lineNumber:#,0}](# \"{symbolDisplayName}\")";
