@@ -11,7 +11,7 @@ description: "Several .NET 5 console applications that contain sample source cod
 
 # Logging in .NET sample source code
 
-There are five sample source code projects in this collection of samples. The samples are written in C# and the related docs content is covered in [Logging in .NET][logging] articles. In addition to an overview, there are in-depth articles discussing logging providers, compile-time logging source generation, details for implementing a custom logging provider, information on high-performance logging, and console log formatting.
+There are five sample source code projects in this collection of samples. The samples are written in C# and the content of the related docs is covered in [Logging in .NET][logging] articles. In addition to an overview, there are in-depth articles discussing logging providers, compile-time logging source generation, details for implementing a custom logging provider, information on high-performance logging, and console log formatting.
 
 ## Sample prerequisites
 
@@ -22,7 +22,7 @@ The samples are written in C# and targets .NET 5. It requires the [.NET 5.0 SDK]
 To download and run the sample, follow these steps:
 
 1. Download and unzip the sample.
-2. In Visual Studio (2019 or later):
+2. In Visual Studio (2022 or later):
     1. On the menu bar, choose **File** > **Open** > **Project/Solution**.
     2. Navigate to the folder that holds the unzipped sample code, and open the C# project (.csproj) file.
     3. Choose the <kbd>F5</kbd> key to run with debugging, or <kbd>Ctrl</kbd>+<kbd>F5</kbd> keys to run the project without debugging.
