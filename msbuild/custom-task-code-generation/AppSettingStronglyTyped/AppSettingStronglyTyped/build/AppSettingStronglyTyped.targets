@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<!--Defining all the text files input parameters-->
+	<ItemGroup>
+		<SettingFiles Include="$(RootFolder)\*.$(SettingExtensionFile)" />
+	</ItemGroup>
+
+	<!--It is generated a target which is executed before the compilation-->
+	<Target Name="BeforeCompile" Inputs="@(SettingFiles)" Outputs="$(RootFolder)\$(SettingClass).generated.cs">
+		<!--Calling our custom task-->
+		<AppSettingStronglyTyped SettingClassName="$(SettingClass)" SettingNamespaceName="$(SettingNamespace)" SettingFiles="@(SettingFiles)">
+			<Output TaskParameter="ClassNameFile" PropertyName="SettingClassFileName" />
+		</AppSettingStronglyTyped>
+		<!--Our generated file is included to be compiled-->
+		<ItemGroup>
+			<Compile Remove="$(SettingClassFileName)" />
+			<Compile Include="$(SettingClassFileName)" />
+		</ItemGroup>
+	</Target>
+
+	<!--The generated file is deleted after a general clean. It will force the regeneration on rebuild-->
+	<Target Name="AfterClean">
+		<Delete Files="$(RootFolder)\$(SettingClass).generated.cs" />
+	</Target>
+</Project>
