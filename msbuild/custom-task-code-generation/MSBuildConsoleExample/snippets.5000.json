@@ -1,4 +1,4 @@
 {
     "host": "custom",
-    "command": "dotnet nuget add source \"$(Resolve-Path ([System.IO.Path]::Combine([System.IO.Path]::GetDirectoryName($configFile), '..\\AppSettingStronglyTyped\\')))\" -n \"local\" \ndotnet build \"$projectFile\""
+    "command": "dotnet nuget add source \"$(Resolve-Path \"$configFile\\..\\..\\AppSettingStronglyTyped\\\")\" -n \"local\" \ndotnet build \"$projectFile\""
 }
