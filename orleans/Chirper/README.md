@@ -27,11 +27,11 @@ The sample demonstrates the following features of Orleans:
 
 In this project, in-memory persistence is used (see _Program.cs_), but it can be substituted for a persistence provider of your choice without changing the grain code. Only the configuration needs to change to use a different persistence provider.
 
-## Why Orleans?
+## Why Orleans
 
 Orleans allows the network of Chirper users to be described via very simple C# code whilst allowing it to easily scale out to handle the increasing number of users and volume of chirp messages.
 
-## How is it modeled?
+## How is it modeled
 
 Chirper users are modeled as grains.
 

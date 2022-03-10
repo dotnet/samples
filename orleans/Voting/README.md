@@ -43,7 +43,7 @@ The application can be run locally by executing:
 dotnet run -c Release -- --environment Development --urls http://localhost:5000
 ```
 
-Once the application starts, open a browser to http://localhost:5000 to play with the app. The Orleans Dashboard will be available at http://localhost:8888. The application can also be deployed to Kubernetes. The key file for deploying this sample to Kubernetes is [`deployment.yaml`](./deployment.yaml), which describes the required Kubernetes resources. Before deploying the app, you will need to provision the following resources:
+Once the application starts, open a browser to <http://localhost:5000> to play with the app. The Orleans Dashboard will be available at <http://localhost:8888.> The application can also be deployed to Kubernetes. The key file for deploying this sample to Kubernetes is [`deployment.yaml`](./deployment.yaml), which describes the required Kubernetes resources. Before deploying the app, you will need to provision the following resources:
 
 * A resource group
 * An Azure Container Registry (ACR) container registry
