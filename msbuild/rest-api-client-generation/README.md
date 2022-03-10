@@ -246,7 +246,7 @@ The complete code version is in this PetReaderToolTaskExample folder, you can do
           <!--Calling our custom task derivated from MSBuild Tool Task-->
           <RestApiClientGenerator InputOpenApiSpec="$(PetClientInputOpenApiSpec)" ClientClassName="$(PetClientClientClassName)" ClientNamespaceName="$(PetClientClientNamespaceName)" FolderClientClass="$(PetClientFolderClientClass)" NSwagCommandFullPath="$(NSwagCommandFullPath)"></RestApiClientGenerator>
       </Target>
-    
+
       <Target Name="forceReGenerationOnRebuild" AfterTargets="CoreClean">
           <Delete Files="$(PetClientFolderClientClass)\$(PetClientClientClassName).cs"></Delete>
       </Target>
