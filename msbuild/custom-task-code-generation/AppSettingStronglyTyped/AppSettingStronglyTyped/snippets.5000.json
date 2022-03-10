@@ -1,0 +1,4 @@
+{
+    "host": "custom",
+    "command": "dotnet build \"$projectFile\"\ndotnet pack -o . .\\AppSettingStronglyTyped\\AppSettingStronglyTyped.csproj"
+}
