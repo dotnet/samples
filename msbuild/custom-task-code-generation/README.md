@@ -4,17 +4,17 @@ If you are not clear on terms such as tasks, targets, properties, or runtimes, y
 
 The basic idea of the current example is defined as:
 
-```
+```text
 Input text => Generation => Output C# (Some code generation)
 ```
 
 We are going to create a MSBuild custom task named AppSettingStronglyTyped. The task is going to read a set of text files, and each file with lines with the following format:
 
-```
+```text
 propertyName:type:defaultValue
 ```
 
-Then our code will generate a C# class with all the constants. :innocent: This is not useful at all, it is simple, the idea is help us to learn the mechanism. 
+Then our code will generate a C# class with all the constants. :innocent: This is not useful at all, it is simple, the idea is help us to learn the mechanism.
 A problem should stop the build and give us enough information.
 
 ## Step 1, create the AppSettingStronglyTyped project
@@ -36,51 +36,51 @@ We need to include _Microsoft.Build.Utilities.Core_ NuGet package, and then crea
 
 We are going use three parameters:
 
-```c#
-    //The name of the class which is going to be generated
-    [Required]
-    public string SettingClassName { get; set; }
+```csharp
+//The name of the class which is going to be generated
+[Required]
+public string SettingClassName { get; set; }
 
-    //The name of the namespace where the class is going to be generated
-    [Required]
-    public string SettingNamespaceName { get; set; }
+//The name of the namespace where the class is going to be generated
+[Required]
+public string SettingNamespaceName { get; set; }
 
-    //List of files which we need to read with the defined format: 'propertyName:type:defaultValue' per line
-    [Required]
-    public ITaskItem[] SettingFiles { get; set; }
+//List of files which we need to read with the defined format: 'propertyName:type:defaultValue' per line
+[Required]
+public ITaskItem[] SettingFiles { get; set; }
 ```
 
 The task is going to process the _SettingFiles_ and generate a class 'SettingNamespaceName.SettingClassName'. The class will have a set of constants based on the text file's content.
 The task output will be:
 
-```c#
-    //The filename where the class was generated
-    [Output]
-    public string ClassNameFile { get; set; }
+```csharp
+//The filename where the class was generated
+[Output]
+public string ClassNameFile { get; set; }
 ```
 
 We need to override the Execute method. The execute method returns true if the task was successful and false in other cases. Task implements ITask and provides default implementations of some ITask members and additionally, logging is easier. It is important the log to know what is going on. And even more important if we are going to return not succeed (false). On error, we should use Log.LogError.
 
-```c#
-    public override bool Execute()
+```csharp
+public override bool Execute()
+{
+    //Read the input files and return a IDictionary<string, object> with the properties to be created.
+    //Any format error it will return not succeed and Log.LogError properly
+    var (success, settings) = ReadProjectSettingFiles();
+    if (!success)
     {
-        //Read the input files and return a IDictionary<string, object> with the properties to be created.
-        //Any format error it will return not succeed and Log.LogError properly
-        var (success, settings) = ReadProjectSettingFiles();
-        if (!success)
-        {
-            return !Log.HasLoggedErrors;
-        }
-        //Create the class based on the Dictionary
-        success = CreateSettingClass(settings);
-
         return !Log.HasLoggedErrors;
     }
+    //Create the class based on the Dictionary
+    success = CreateSettingClass(settings);
+
+    return !Log.HasLoggedErrors;
+}
 ```
 
 Then, the details are really not important for our purpose. You can copy from the source code and improve if you like.
 
-:shipit:Food for thought. We are generating C# code during build process as example.The task is like any other c# class, you could do whatever you want. For example, sending an email, generating change log, reading github repository. This is the power of MSBuild custom tasks.
+:shipit:Food for thought. We are generating C# code during build process as example.The task is like any other C# class, you could do whatever you want. For example, sending an email, generating change log, reading github repository. This is the power of MSBuild custom tasks.
 
 ### Step 3, Change the AppSettingStronglyTyped.csproj
 
@@ -168,13 +168,13 @@ In this next step we’ll wire up the task implementation in a .props and .targe
 First, we should modify the AppSettingStronglyTyped.csproj, adding
 
 ```xml
-    <ItemGroup>
-        <!-- these lines pack the build props/targets files to the `build` folder in the generated package.
-         by convention, the .NET SDK will look for build\<Package Id>.props and build\<Package Id>.targets
-         for automatic inclusion in the build. -->
-        <Content Include="build\AppSettingStronglyTyped.props" PackagePath="build\" />
-        <Content Include="build\AppSettingStronglyTyped.targets" PackagePath="build\" />
-    </ItemGroup>
+<ItemGroup>
+    <!-- these lines pack the build props/targets files to the `build` folder in the generated package.
+      by convention, the .NET SDK will look for build\<Package Id>.props and build\<Package Id>.targets
+      for automatic inclusion in the build. -->
+    <Content Include="build\AppSettingStronglyTyped.props" PackagePath="build\" />
+    <Content Include="build\AppSettingStronglyTyped.targets" PackagePath="build\" />
+</ItemGroup>
 ```
 
 Then we must create a _build_ folder and inside two text files: _AppSettingStronglyTyped.props_ and _AppSettingStronglyTyped.targets_.
@@ -275,7 +275,7 @@ Then, we should rebuild to be sure everything is ok.
 
 At this point we are going to create our text file with the extension defined to be discovered. Using the default extension we are going to create MyValues.mysettings on the root, and add the following content:
 
-```
+```text
 Greeting:string:Hello World!
 ```
 
@@ -283,7 +283,7 @@ Now, we are going to rebuild again and the magic should happen, the generated fi
 
 The class _MySetting_ is in the _example_ namespace, we are going to redefine to use our app namespace. Open csproj and add
 
-```
+```text
     <PropertyGroup>
         <SettingNamespace>MSBuildConsoleExample</SettingNamespace>
     </PropertyGroup>
@@ -293,7 +293,7 @@ Now, we are going to rebuild again and the class is on _MSBuildConsoleExample_ n
 
 Go to Program.cs and change the hardcoded 'Hello Word!!' to our constant
 
-```c#
+```csharp
         static void Main(string[] args)
         {
             Console.WriteLine(MySetting.Greeting);
@@ -317,7 +317,7 @@ It means that assets will be consumed but won't flow to the parent project. [Mor
 It is possible to compile using a command line command. We need to go to the MSBuildConsoleExample\MSBuildConsoleExample folder.
 We are going to use the -bl (binary log) option to generate a binary log. The binary log will have very useful information to know what is going on during the build process.
 
-```dotnetcli
+```dotnet
 # Using Dotnet MSBuild (run core environment)
 dotnet build -bl
 
