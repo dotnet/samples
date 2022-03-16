@@ -1,8 +1,8 @@
 # How to test a MSBuild Custom Task
 
-A really important item when we create a MSBuild Custom Task, which is going to be distributed, is to ensure the correctness.
+A really important item when we create a MSBuild Custom Task, which is going to be distributed, is to ensure the correctness of the code.
 The way to be confident about that is testing it.
-It is out of scope to talk about the benefits of doing tests and basic test tooling. Here some [basics about unit tests.](https://docs.microsoft.com/visualstudio/test/walkthrough-creating-and-running-unit-tests-for-managed-code).
+For information about the benefits of doing tests and basic test tooling, see [basics about unit tests](https://docs.microsoft.com/visualstudio/test/walkthrough-creating-and-running-unit-tests-for-managed-code).
 We are going to use examples which have already been developed. The following projects includes unit and integration MSBuild Custom Tasks testing
 
 1. [Custom Task-Code Generation](./custom-task-code-generation/)
@@ -63,8 +63,8 @@ Last but not least, we need to assert the expected outcome from our test
    Assert.IsTrue(File.ReadLines(appSettingStronglyTyped.ClassNameFile).SequenceEqual(File.ReadLines(".\\Resources\\complete-prop-class.txt"))); // Assenting the file content
 ```
 
-Following this pattern you should expand all the possibilities.
-:warning: When there are files generation we need to use different file name for each test to avoid collision. Remember to delete the generated files as test cleanup.
+Following this pattern, you should expand all the possibilities.
+:warning: When there are files generated, we need to use different file name for each test to avoid collision. Remember to delete the generated files as test cleanup.
 
 ## Integration Test
 
