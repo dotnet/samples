@@ -20,14 +20,14 @@ This sample is written in C# and targets .NET 5.0. It requires the [.NET 5.0 SDK
 
 ## Building the sample
 
-The source code includes an MSBuild project file for C# (a *.csproj* file) that targets .NET 5.0. After you download the *.zip* file containing the example code, create a directory and select **Download ZIP** to download the sample code files to your computer. To build the example:
+The source code includes an MSBuild project file for C# (a *.csproj* file) that targets .NET 5.0. Create a directory and select **Download ZIP** to download the example code files to your computer. To build the example:
 
-1. Download the *.zip* file containing.
+1. Download the *.zip* file containing the example code files.
 1. Create the directory to which you want to copy the files.
 1. Copy the files from the *.zip* file to the directory you just created.
 1. If you are using Visual Studio 2019:
    1. In Visual Studio, select **Open a project or solution** (or **File** > **Open** > **Project/Solution** from the Visual Studio menu.
-   1. Select **Debug** > **Start Debugging** from the Visual Studio menu to build and launch the application.
+   1. Select **Debug** > **Build Solution** from the Visual Studio menu to build the solution.
 1. If you are working from the command line:
    1. Navigate to the directory that contains the sample.
-   1. Type in the command `dotnet run` to build and launch the application.
+   1. Type in the command `dotnet build` to build the solution.
