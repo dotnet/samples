@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <UsingTask TaskName="RestApiClientGenerator.RestApiClientGenerator" AssemblyFile="..\RestApiClientGenerator.dll" />
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <!--The place where the OpenApi spec is in-->
+        <PetClientInputOpenApiSpec>https://petstore.swagger.io/v2/swagger.json</PetClientInputOpenApiSpec>
+        <PetClientClientClassName>PetRestApiClientFail</PetClientClientClassName>
+        <PetClientClientNamespaceName>PetRestApiClientFail</PetClientClientNamespaceName>
+        <PetClientFolderClientClass>..</PetClientFolderClientClass>
+        <!--The directory where NSawg.exe is in-->
+        <NSwagCommandFullPath>C:\Nwag\Win</NSwagCommandFullPath>
+    </PropertyGroup>
+
+    <Target Name="generatePetClient">
+        <RestApiClientGenerator InputOpenApiSpec="$(PetClientInputOpenApiSpec)" ClientClassName="$(PetClientClientClassName)" ClientNamespaceName="$(PetClientClientNamespaceName)" FolderClientClass="$(PetClientFolderClientClass)" NSwagCommandFullPath="$(NSwagCommandFullPath)"></RestApiClientGenerator>
+    </Target>
+</Project>

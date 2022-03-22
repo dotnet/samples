@@ -1,0 +1,4 @@
+{
+    "host": "custom",
+    "command": "dotnet nuget add source \"$RepoRootDir\" -n \"local\" \ndotnet build \"$projectFile\""
+}

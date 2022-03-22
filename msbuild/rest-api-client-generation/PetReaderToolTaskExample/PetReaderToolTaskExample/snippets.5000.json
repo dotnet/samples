@@ -1,0 +1,9 @@
+{
+    "host": "dotnet",
+    "expectederrors": [
+        {
+            "file": "msbuild/rest-api-client-generation/PetReaderToolTaskExample/PetReaderToolTaskExample/PetRestApiClient/PetRestApiClient.csproj",
+            "error": "MSB6004"
+        }
+    ]
+}

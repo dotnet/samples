@@ -1,0 +1,18 @@
+﻿<Project>
+    <UsingTask TaskName="AppSettingStronglyTyped.AppSettingStronglyTyped" AssemblyFile="..\AppSettingStronglyTyped.dll" />
+
+    <PropertyGroup>
+        <SettingClass>MySettingSuccess</SettingClass>
+        <SettingNamespace>example</SettingNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <SettingFiles Include="complete-prop.setting" />
+    </ItemGroup>
+
+    <Target Name="generateSettingClass">
+        <AppSettingStronglyTyped SettingClassName="$(SettingClass)" SettingNamespaceName="$(SettingNamespace)" SettingFiles="@(SettingFiles)">
+            <Output TaskParameter="ClassNameFile" PropertyName="SettingClassFileName" />
+        </AppSettingStronglyTyped>
+    </Target>
+</Project>

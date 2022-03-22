@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <UsingTask TaskName="RestApiClientGenerator.RestApiClientGenerator" AssemblyFile="..\RestApiClientGenerator\bin\Debug\netstandard2.0\RestApiClientGenerator.dll" />
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <!--The place where the OpenApi spec is in-->
+        <PetClientInputOpenApiSpec>petshop-openapi-spec.json</PetClientInputOpenApiSpec>
+        <PetClientClientClassName>PetRestApiClient</PetClientClientClassName>
+        <PetClientClientNamespaceName>PetRestApiClient</PetClientClientNamespaceName>
+        <PetClientFolderClientClass>PetRestApiClient</PetClientFolderClientClass>
+        <!--The directory where NSawg.exe is in-->
+        <NSwagCommandFullPath>C:\Nwag\Win</NSwagCommandFullPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Folder Include="PetRestApiClient\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+      <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    </ItemGroup>
+
+    <Target Name="generatePetClient" BeforeTargets="CoreCompile" Inputs="$(PetClientInputOpenApiSpec)" Outputs="$(PetClientFolderClientClass)\$(PetClientClientClassName).cs">
+        <RestApiClientGenerator InputOpenApiSpec="$(PetClientInputOpenApiSpec)" ClientClassName="$(PetClientClientClassName)" ClientNamespaceName="$(PetClientClientNamespaceName)" FolderClientClass="$(PetClientFolderClientClass)" NSwagCommandFullPath="$(NSwagCommandFullPath)"></RestApiClientGenerator>
+    </Target>
+
+    <Target Name="forceReGenerationOnRebuild" AfterTargets="CoreClean">
+        <Delete Files="$(PetClientFolderClientClass)\$(PetClientClientClassName).cs"></Delete>
+    </Target>
+
+</Project>

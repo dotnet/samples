@@ -1,0 +1,47 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestApiClientGenerator", "RestApiClientGenerator\RestApiClientGenerator.csproj", "{46D27276-6128-4B81-AF5E-01F8729CE3CE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetReaderToolTaskConsoleApp", "PetReaderToolTaskConsoleApp\PetReaderToolTaskConsoleApp.csproj", "{44CC87A5-2D12-495F-A1F6-8392F9624768}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetRestApiClient", "PetRestApiClient\PetRestApiClient.csproj", "{F2237F5A-3B56-46C4-9CB4-82B4FF869FF9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{46D27276-6128-4B81-AF5E-01F8729CE3CE} = {46D27276-6128-4B81-AF5E-01F8729CE3CE}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestApiClientGenerator.Test", "RestApiClientGenerator.Test\RestApiClientGenerator.Test.csproj", "{B3045C9A-9FBD-4C82-86E7-92F28E3725A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46D27276-6128-4B81-AF5E-01F8729CE3CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46D27276-6128-4B81-AF5E-01F8729CE3CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46D27276-6128-4B81-AF5E-01F8729CE3CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46D27276-6128-4B81-AF5E-01F8729CE3CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44CC87A5-2D12-495F-A1F6-8392F9624768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44CC87A5-2D12-495F-A1F6-8392F9624768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44CC87A5-2D12-495F-A1F6-8392F9624768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44CC87A5-2D12-495F-A1F6-8392F9624768}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2237F5A-3B56-46C4-9CB4-82B4FF869FF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2237F5A-3B56-46C4-9CB4-82B4FF869FF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2237F5A-3B56-46C4-9CB4-82B4FF869FF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2237F5A-3B56-46C4-9CB4-82B4FF869FF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3045C9A-9FBD-4C82-86E7-92F28E3725A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3045C9A-9FBD-4C82-86E7-92F28E3725A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3045C9A-9FBD-4C82-86E7-92F28E3725A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3045C9A-9FBD-4C82-86E7-92F28E3725A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		        SolutionGuid = {14987383-640D-408F-9CCB-887FAAEA7461}
+		SolutionGuid = {01EE7EC4-10DD-499F-A0B2-0574BA01C4E7}
+	EndGlobalSection
+EndGlobal
