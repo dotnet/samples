@@ -1,0 +1,8 @@
+﻿ using System;
+ namespace MyNamespace {
+
+  public class MystringPropSetting {
+    public readonly static string  Gretting = "Hello Word!!";
+  }
+
+}

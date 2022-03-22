@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PetOpenApiSpecLocation>petshop-openapi-spec.json</PetOpenApiSpecLocation>
+        <PetClientClassName>PetShopRestClient</PetClientClassName>
+        <PetClientNamespace>PetShopRestClient</PetClientNamespace>
+        <PetClientOutputDirectory>PetShopRestClient</PetClientOutputDirectory>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+        <PackageReference Include="NSwag.MSBuild" Version="13.15.5">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="PetShopRestClient\" />
+    </ItemGroup>
+
+    <Target Name="generatePetClient" BeforeTargets="CoreCompile" Inputs="$(PetOpenApiSpecLocation)" Outputs="$(PetClientOutputDirectory)\$(PetClientClassName).cs">
+        <Exec Command="$(NSwagExe) openapi2csclient /input:$(PetOpenApiSpecLocation)  /classname:$(PetClientClassName) /namespace:$(PetClientNamespace) /output:$(PetClientOutputDirectory)\$(PetClientClassName).cs" ConsoleToMSBuild="true">
+            <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfExec" />
+        </Exec>
+    </Target>
+
+    <Target Name="forceReGenerationOnRebuild" AfterTargets="CoreClean">
+        <Delete Files="$(PetClientOutputDirectory)\$(PetClientClassName).cs"></Delete>
+    </Target>
+
+</Project>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetReaderExecTaskExample", "PetReaderExecTaskExample\PetReaderExecTaskExample.csproj", "{BD434370-2DA3-4E2E-ABAB-08A287D36A50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetShopRestClient", "PetShopRestClient\PetShopRestClient.csproj", "{50C25425-00A2-45FC-80A2-BFA662855650}"
+EndProject
+Global
+    GlobalSection(SolutionConfigurationPlatforms) = preSolution
+        Debug|Any CPU = Debug|Any CPU
+        Release|Any CPU = Release|Any CPU
+    EndGlobalSection
+    GlobalSection(ProjectConfigurationPlatforms) = postSolution
+        {BD434370-2DA3-4E2E-ABAB-08A287D36A50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {BD434370-2DA3-4E2E-ABAB-08A287D36A50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {BD434370-2DA3-4E2E-ABAB-08A287D36A50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {BD434370-2DA3-4E2E-ABAB-08A287D36A50}.Release|Any CPU.Build.0 = Release|Any CPU
+        {50C25425-00A2-45FC-80A2-BFA662855650}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {50C25425-00A2-45FC-80A2-BFA662855650}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {50C25425-00A2-45FC-80A2-BFA662855650}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {50C25425-00A2-45FC-80A2-BFA662855650}.Release|Any CPU.Build.0 = Release|Any CPU
+    EndGlobalSection
+    GlobalSection(SolutionProperties) = preSolution
+        HideSolutionNode = FALSE
+    EndGlobalSection
+    GlobalSection(ExtensibilityGlobals) = postSolution
+        SolutionGuid = {CFD3C465-EC70-4B57-A18B-FA14E4C6D124}
+    EndGlobalSection
+EndGlobal

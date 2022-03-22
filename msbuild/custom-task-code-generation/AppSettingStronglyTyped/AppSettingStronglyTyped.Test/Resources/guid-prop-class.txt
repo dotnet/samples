@@ -1,0 +1,8 @@
+﻿ using System;
+ namespace MyNamespace {
+
+  public class MyguidPropSetting {
+    public readonly static Guid  Id = Guid.Parse("79a107f3-0109-4425-aa16-81918663b4ed");
+  }
+
+}
