@@ -15,7 +15,7 @@ There are five sample source code projects in this collection of samples. The sa
 
 ## Sample prerequisites
 
-The samples are written in C# and targets .NET 5. It requires the [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0) or later.
+The samples are written in C# and targets .NET 6. It requires the [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0) or later.
 
 ## Building the sample
 
