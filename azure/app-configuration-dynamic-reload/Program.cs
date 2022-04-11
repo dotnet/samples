@@ -6,6 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Read configuration
 var connectionString = builder.Configuration.GetConnectionString("AppConfig");
+
 // Configure Azure App Configuration
 builder.Host.ConfigureAppConfiguration(builder => builder.AddAzureAppConfiguration(options =>
 {

@@ -31,9 +31,6 @@ A *sentinel key* is a special key that you update after you complete the change 
 1. For **Key**, enter *TestApp:Settings:Sentinel*. For **Value**, enter 1. Leave **Label** and **Content type** blank.
 1. Select **Apply**.
 
-> [!NOTE]
-> If you aren't using a sentinel key, you need to manually register every key you want to monitor.
-
 ## Run the sample
 
 ```dotnetcli
@@ -41,4 +38,4 @@ dotnet build
 dotnet run
 ```
 
-Change the value stored in the sentinel key. Within 10 seconds, the new config value will be available to your app.
+Change the value stored in the sentinel key in the Azure Portal. Within 10 seconds, the new config value will be available to your app.
