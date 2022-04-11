@@ -1,0 +1,16 @@
+﻿@page
+@model IndexModel
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+
+<style>
+    body {
+        background-color: @ViewData["BackgroundColor"]
+    }
+    h1 {
+        color: @ViewData["FontColor"];
+        font-size: @ViewData["FontSize"]px;
+    }
+</style>
+
+<h1>@ViewData["Message"]</h1>
