@@ -3,15 +3,13 @@ using CommercialRegistration;
 using ConsumerVehicleRegistration;
 using LiveryRegistration;
 
-namespace toll_calculator;
-
-/*   First set of test code
-var tollCalc = new TollCalculator();
-
 var car = new Car();
 var taxi = new Taxi();
 var bus = new Bus();
 var truck = new DeliveryTruck();
+
+/*   First set of test code
+var tollCalc = new toll_calculator.TollCalculator();
 
 Console.WriteLine($"The toll for a car is {tollCalc.CalculateToll(car)}");
 Console.WriteLine($"The toll for a taxi is {tollCalc.CalculateToll(taxi)}");
