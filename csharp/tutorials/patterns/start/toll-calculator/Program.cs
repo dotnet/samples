@@ -3,7 +3,7 @@ using CommercialRegistration;
 using ConsumerVehicleRegistration;
 using LiveryRegistration;
 
-using toll_calculator;
+namespace toll_calculator;
 
 /*   First set of test code
 var tollCalc = new TollCalculator();
