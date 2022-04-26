@@ -108,9 +108,9 @@ namespace testwebapi.Controllers
             return "success:memleak";
         }
 
-        [HttpGet]
+       [HttpGet]
         [Route("exception")]
-        public ActionResult<string> exception()
+        public Exception exception()
         {
             throw new Exception("bad, bad code");
         }
