@@ -132,6 +132,59 @@ namespace testwebapi.Controllers
 
             return "success:highcpu";
         }
+    
+
+        [HttpGet]
+        [Route("taskwait")]
+        public ActionResult<string> TaskWait()
+        {
+            // Using Task.Wait() or Task.Result causes the current thread to block until the
+            // result has been computed. This is the most common cause of threadpool starvation
+            // and NOT recommended in your own code unless you know the task is complete and won't
+            // need to block.
+            Customer c = PretendQueryCustomerFromDbAsync("Dana").Result;
+            return "success:taskwait";
+        }
+
+        [HttpGet]
+        [Route("tasksleepwait")]
+        public ActionResult<string> TaskSleepWait()
+        {
+            // Starting in .NET 6.0 the threadpool can recognize some of the common ways that
+            // code blocks on tasks completing and can mitigate it by more quickly
+            // scaling up the number of threadpool threads. This example is a less common
+            // way to block on a task completing to show what happens when the threadpool
+            // doesn't recognize the blocking behavior. This code is NOT recommended.
+            Task dbTask = PretendQueryCustomerFromDbAsync("Dana");
+            while(!dbTask.IsCompleted)
+            {
+                Thread.Sleep(10);
+            }
+            return "success:tasksleepwait";
+        }
+
+        [HttpGet]
+        [Route("taskasyncwait")]
+        public async Task<ActionResult<string>> TaskAsyncWait()
+        {
+            // Using the await keyword allows the current thread to service other workitems and
+            // when the database lookup Task is complete a thread from the threadpool will resume
+            // execution here. This way no thread is blocked and large numbers of requests can
+            // run in parallel without blocking
+            Customer c = await PretendQueryCustomerFromDbAsync("Dana");
+            return "success:taskasyncwait";
+        }
+
+
+        async Task<Customer> PretendQueryCustomerFromDbAsync(string customerId)
+        {
+            // To keep the demo app easy to set up and performing consistently we have replaced a real database query
+            // with a fixed delay of 500ms. The impact on application performance should be similar to using a real
+            // database that had similar latency.
+            await Task.Delay(500);
+            return new Customer(customerId);
+        }
+
     }
 
     class Customer
