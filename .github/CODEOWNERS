@@ -12,16 +12,14 @@
 # This should make it easy to add new rules without breaking existing ones.
 
 # Global rule:
-*           @dotnet/docs
+*           @psaini1109
 
 # C# samples:
-/csharp/**  @BillWagner
+/csharp/**  @psaini1109
 
 # ML.NET samples:
-/machine-learning/**  @luisquintanilla
+/machine-learning/**  @psaini1109
 
 # WPF folders:
-/wpf/**   @adegeo
+/wpf/**   @psaini1109
 
-# Windows forms areas:
-/windowsforms/** @adegeo @dotnet/dotnet-winforms
