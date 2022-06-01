@@ -84,14 +84,8 @@ void ExploreLoops()
 
 void ChallengeAnswer()
 {
-    int sum = 0;
-    for (int number = 1; number < 21; number++)
-    {
-        if (number % 3 == 0)
-        {
-            sum = sum + number;
-        }
-    }
-    Console.WriteLine($"The sum is {sum}");
+    int firstTerm = 3, commonDifference = 3, limit = 20;
+    int noOfTerms = (limit - firstTerm + commonDifference) / commonDifference;
+    int sum = noOfTerms * (2 * firstTerm + (noOfTerms - 1) * commonDifference) / 2 ;
+    Console.WriteLine($"Applying Arithmetic Progression, the sum is {sum}");
 }
-
