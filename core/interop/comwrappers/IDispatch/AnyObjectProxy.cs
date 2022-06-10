@@ -140,7 +140,11 @@ public class AnyObjectProxy : ComWrappersImpl.IDispatch,
         //  * IDispatch/IUnknown instances
         //  * .NET objects passed back as arguments
         //  * etc
-        return Marshal.GetObjectsForNativeVariants(pDispParams.rgvarg, pDispParams.cArgs)!;
+        object[] result = Marshal.GetObjectsForNativeVariants(pDispParams.rgvarg, pDispParams.cArgs)!;
+        // https://docs.microsoft.com/en-us/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke
+        // Arguments are stored in pDispParams->rgvarg in reverse order, so the first argument is the one with the highest index in the array.
+        Array.Reverse(result);
+        return result;
     }
 
     /* WORKAROUND for WinForms WebBrowser control API */
