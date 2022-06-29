@@ -1,0 +1,16 @@
+FROM mcr.microsoft.com/dotnet/sdk:7.0-windowsservercore-ltsc2022 AS build
+
+# Install Visual Studio Build Tools
+# Note: Use of the Visual Studio Build Tools requires a valid Visual Studio license.
+RUN curl -SL --output vs_buildtools.exe https://aka.ms/vs/17/release/vs_buildtools.exe
+RUN vs_buildtools.exe --installPath C:\BuildTools --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 Microsoft.VisualStudio.Component.Windows10SDK.19041 --quiet --wait --norestart --nocache
+
+WORKDIR /source
+
+COPY . .
+RUN dotnet publish -c release -o /app -r win-x64 --self-contained false
+
+FROM mcr.microsoft.com/windows/nanoserver:ltsc2022-amd64
+WORKDIR /app
+COPY --from=build /app .
+ENTRYPOINT ["/app/HelloWorld"]
