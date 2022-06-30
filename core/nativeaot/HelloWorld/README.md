@@ -17,7 +17,7 @@ This will create a simple Hello World console app in `Program.cs` and associated
 
 ## Add NativeAOT to your project
 
-Add `<PublishAot>true</PublishAot>` property to your project file. This will produce a native AOT app and shows PublishAot compatibility warnings during build.
+Add `<PublishAot>true</PublishAot>` property to your project file. This will produce a native AOT app and show any potential compatibility warnings during the publish process.
 
 ## Restore and Publish your app
 
