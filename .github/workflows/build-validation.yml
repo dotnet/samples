@@ -15,8 +15,8 @@ on:
         default: 'Force a snippets build'
 
 env:
-  DOTNET_INSTALLER_CHANNEL: '6.0'
-  DOTNET_DO_INSTALL: 'false'
+  DOTNET_INSTALLER_CHANNEL: '7.0'
+  DOTNET_DO_INSTALL: 'true' # True to install preview versions, False to use the pre-installed (released) SDK
   EnableNuGetPackageRestore: 'True'
   repo: 'samples'
 
