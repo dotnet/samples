@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Azure;
 using Azure.Core;
 using Azure.Identity;
+using Azure.ResourceManager;
 using Azure.ResourceManager.Resources;
 using Azure.ResourceManager.Resources.Models;
 using Azure.ResourceManager.Storage;
@@ -13,7 +14,7 @@ using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
 
 using AccessTier = Azure.ResourceManager.Storage.Models.AccessTier;
-using Sku = Azure.ResourceManager.Storage.Models.Sku;
+
 
 namespace AzureIdentityStorageExample
 {
@@ -22,46 +23,44 @@ namespace AzureIdentityStorageExample
     /// </summary>
     class Program
     {
-        const string ResourceRegion = "West US";
-        const string DotNetBotChillingPng = "dotnet-bot_chilling.png";
-        const string DotNetBotGrillingPng = "dotnet-bot_grilling.png";
-        const string BlobContainerName = "images";
+        static AzureLocation _resourceRegion = new AzureLocation("West US");
+        const string _dotNetBotChillingPng = "dotnet-bot_chilling.png";
+        const string _dotNetBotGrillingPng = "dotnet-bot_grilling.png";
+        const string _blobContainerName = "images";
 
         /// <summary>
         /// Main program.
         /// </summary>
         static async Task Main()
         {
-            string subscriptionId = Environment.GetEnvironmentVariable("AZURE_SUBSCRIPTION_ID");
-
             var credential = new DefaultAzureCredential();
 
-            // Azure.ResourceManager.Resources is currently in preview.
-            var resourcesManagementClient = new ResourcesManagementClient(subscriptionId, credential);
-
-            // Azure.ResourceManager.Storage is currently in preview.
-            var storageManagementClient = new StorageManagementClient(subscriptionId, credential);
+            var armClient = new ArmClient(credential);
+            
+            SubscriptionResource subscription = await armClient.GetDefaultSubscriptionAsync();
 
             try
             {
                 // Create a Resource Group
-                string resourceGroupName = await CreateResourceGroupAsync(resourcesManagementClient);
+                ResourceGroupResource resourceGroup = await CreateResourceGroupAsync(subscription);
 
                 // Create a Storage account
-                string storageName = await CreateStorageAccountAsync(storageManagementClient, resourceGroupName);
+                var storageAccount = await CreateStorageAccountAsync(subscription, resourceGroup);
 
                 // Create a container and upload a blob using a storage connection string
-                await UploadBlobUsingStorageConnectionStringAsync(storageManagementClient, resourceGroupName, storageName);
+                await UploadBlobUsingStorageConnectionStringAsync(storageAccount);
 
                 // Upload a blob using Azure.Identity.DefaultAzureCredential
-                await UploadBlobUsingDefaultAzureCredentialAsync(storageManagementClient, resourceGroupName, storageName, credential);
+                await UploadBlobUsingDefaultAzureCredentialAsync(storageAccount, credential);
 
 
                 Console.WriteLine("Press any key to continue and delete the resources...");
                 Console.ReadKey(true);
-
+                
                 // Delete the resource group
-                await DeleteResourceGroupAsync(resourcesManagementClient, resourceGroupName);
+                Console.WriteLine("Deleting the resources...");
+                await resourceGroup.DeleteAsync(WaitUntil.Completed);
+                Console.WriteLine("Done!");
             }
             catch (RequestFailedException ex)
             {
@@ -76,82 +75,87 @@ namespace AzureIdentityStorageExample
         /// <summary>
         /// Creates a new resource group with a random name.
         /// </summary>
-        /// <param name="resourcesManagementClient">A credentialed ResourcesManagementClient.</param>
+        /// <param name="subscription">The subscription in which to create the resource group.</param>
         /// <returns></returns>
-        private static async Task<string> CreateResourceGroupAsync(ResourcesManagementClient resourcesManagementClient)
+        private static async Task<ResourceGroupResource> CreateResourceGroupAsync(SubscriptionResource subscription)
         {
             string resourceGroupName = RandomName("rg", 20);
             Console.WriteLine($"Creating resource group {resourceGroupName}...");
-            await resourcesManagementClient.ResourceGroups.CreateOrUpdateAsync(resourceGroupName, new ResourceGroup(ResourceRegion));
+            ArmOperation<ResourceGroupResource> resourceGroupOperation = 
+                await subscription.GetResourceGroups().CreateOrUpdateAsync(WaitUntil.Completed, 
+                                                                        resourceGroupName, 
+                                                                        new ResourceGroupData(_resourceRegion));
             Console.WriteLine("Done!");
-
-            return resourceGroupName;
+            
+            return resourceGroupOperation.Value;
         }
 
         /// <summary>
         /// Creates a new storage account with a random name.
         /// </summary>
-        /// <param name="storageManagementClient">A credentialed StorageManagementClient.</param>
-        /// <param name="rgName">The name of the resource group in which to create the storage account.</param>
+        /// <param name="subscription">The subscription in which to create the storage account.</param>
+        /// <param name="resourceGroup">The resource group in which to create the storage account.</param>
         /// <returns></returns>
-        private static async Task<string> CreateStorageAccountAsync(StorageManagementClient storageManagementClient, string rgName)
+        private static async Task<StorageAccountResource> CreateStorageAccountAsync(SubscriptionResource subscription, ResourceGroupResource resourceGroup)
         {
             Console.WriteLine("Creating a new storage account...");
 
-            string storageAccountName = await GenerateStorageAccountNameAsync(storageManagementClient);
-            StorageAccountCreateParameters parameters =
-                new StorageAccountCreateParameters(new Sku("Standard_LRS"), Kind.BlobStorage, ResourceRegion)
-                    { AccessTier = AccessTier.Hot };
-
-            StorageAccountsCreateOperation createStorageAccountOperation =
-                await storageManagementClient.StorageAccounts.StartCreateAsync(rgName, storageAccountName, parameters);
-            await createStorageAccountOperation.WaitForCompletionAsync();
+            string storageAccountName = await GenerateStorageAccountNameAsync(subscription);
+            var parameters =
+                new StorageAccountCreateOrUpdateContent(new StorageSku(StorageSkuName.StandardLRS), 
+                                                            StorageKind.BlobStorage, 
+                                                            _resourceRegion);
+            
+            parameters.AccessTier = AccessTier.Hot;
+          
+            var storageAccounts = resourceGroup.GetStorageAccounts();
+            ArmOperation<StorageAccountResource> createStorageAccountOperation = 
+                await storageAccounts.CreateOrUpdateAsync(WaitUntil.Completed,
+                                                            storageAccountName, 
+                                                            parameters);   
+                         
             Console.WriteLine($"Done creating account {storageAccountName}.");
 
-            return storageAccountName;
+            return createStorageAccountOperation.Value;
         }
 
         /// <summary>
         /// Generates a random, unique storage account name.
         /// </summary>
-        /// <param name="storageManagementClient">A credentialed StorageManagementClient.</param>
+        /// <param name="subscription">The subscription in which to create the storage account.</param>
         /// <returns></returns>
-        private static async Task<string> GenerateStorageAccountNameAsync(StorageManagementClient storageManagementClient)
+        private static async Task<string> GenerateStorageAccountNameAsync(SubscriptionResource subscription)
         {
-            string storageAccountName = RandomName("storage", 20);
             while (true)
             {
+                string storageAccountName = RandomName("storage", 20);
                 Response<CheckNameAvailabilityResult> availabilityResponse =
-                    await storageManagementClient.StorageAccounts.CheckNameAvailabilityAsync(
-                        new StorageAccountCheckNameAvailabilityParameters(storageAccountName));
+                    await subscription.CheckStorageAccountNameAvailabilityAsync(
+                        new StorageAccountNameAvailabilityContent(storageAccountName));
 
                 if (availabilityResponse.Value.NameAvailable.GetValueOrDefault())
                 {
                     return storageAccountName;
                 }
-                
-                storageAccountName = RandomName("storage", 20);
             }
         }
 
         /// <summary>
         /// Uploads an image as a blob to a storage account using a BlobContainerClient and a storage connection string.
         /// </summary>
-        /// <param name="storageManagementClient">A credentialed StorageManagementClient.</param>
-        /// <param name="resourceGroupName">The name of the resource group containing the storage account.</param>
-        /// <param name="storageAccountName">The name of the storage account in which to upload the blob.</param>
+        /// <param name="storageAccount">The storage account in which to upload the blob.</param>
         /// <returns></returns>
-        private static async Task UploadBlobUsingStorageConnectionStringAsync(StorageManagementClient storageManagementClient, string resourceGroupName, string storageAccountName)
+        private static async Task UploadBlobUsingStorageConnectionStringAsync(StorageAccountResource storageAccount)
         {
-            Console.WriteLine($"Creating a container and uploading blob {DotNetBotChillingPng} using a storage connection string...");
+            Console.WriteLine($"Creating a container and uploading blob {_dotNetBotChillingPng} using a storage connection string...");
 
-            string connectionString = await GetStorageConnectionStringAsync(storageManagementClient, resourceGroupName, storageAccountName);
+            string connectionString = await GetStorageConnectionStringAsync(storageAccount);
 
-            var containerClient = new BlobContainerClient(connectionString, BlobContainerName);
+            var containerClient = new BlobContainerClient(connectionString, _blobContainerName);
             await containerClient.CreateIfNotExistsAsync(publicAccessType: PublicAccessType.Blob);
 
-            BlobClient blobClient = containerClient.GetBlobClient(DotNetBotChillingPng);
-            await blobClient.UploadAsync(DotNetBotChillingPng);
+            BlobClient blobClient = containerClient.GetBlobClient(_dotNetBotChillingPng);
+            await blobClient.UploadAsync(_dotNetBotChillingPng);
 
             Console.WriteLine($"Your blob uploaded with a connection string is at:");
             Console.WriteLine("");
@@ -162,55 +166,34 @@ namespace AzureIdentityStorageExample
         /// <summary>
         /// Retrieves the storage account key and uses it to return a storage connection string.
         /// </summary>
-        /// <param name="storageManagementClient">A credentialed StorageManagementClient.</param>
-        /// <param name="resourceGroupName">The name of the resource group containing the storage account.</param>
-        /// <param name="storageAccountName">The name of the storage account in which to upload the blob.</param>
+        /// <param name="storageAccount">The storage account in which to upload the blob.</param>
         /// <returns></returns>
-        static async Task<string> GetStorageConnectionStringAsync(StorageManagementClient storageManagementClient, string resourceGroupName, string storageAccountName)
+        static async Task<string> GetStorageConnectionStringAsync(StorageAccountResource storageAccount)
         {
-            Response<StorageAccountListKeysResult> keysResponse = await storageManagementClient.StorageAccounts.ListKeysAsync(resourceGroupName, storageAccountName);
+            Response<StorageAccountListKeysResult> keysResponse = await storageAccount.GetKeysAsync();
             StorageAccountKey storageKey = keysResponse.Value.Keys[0];
-            return $"DefaultEndpointsProtocol=https;AccountName={storageAccountName};AccountKey={storageKey.Value};EndpointSuffix=core.windows.net;";
+            return $"DefaultEndpointsProtocol=https;AccountName={storageAccount.Data.Name};AccountKey={storageKey.Value};EndpointSuffix=core.windows.net;";
         }
 
         /// <summary>
         /// Uploads an image as a blob to a storage account using a BlobContainerClient and an Azure.Core.TokenCredential (like DefaultAzureCredential).
         /// </summary>
-        /// <param name="storageManagementClient">A credentialed StorageManagementClient.</param>
-        /// <param name="resourceGroupName">The name of the resource group containing the storage account.</param>
-        /// <param name="storageAccountName">The name of the storage account in which to upload the blob.</param>
+        /// <param name="storageAccount">The storage account in which to upload the blob.</param>
         /// <param name="credential">An Azure.Core.TokenCredential that contains an authenticated token.</param>
         /// <returns></returns>
-        private static async Task UploadBlobUsingDefaultAzureCredentialAsync(StorageManagementClient storageManagementClient, string resourceGroupName, string storageAccountName, TokenCredential credential)
+        private static async Task UploadBlobUsingDefaultAzureCredentialAsync(StorageAccountResource storageAccount, TokenCredential credential)
         {
-            Console.WriteLine($"Uploading blob {DotNetBotGrillingPng} using DefaultAzureCredential...");
+            Console.WriteLine($"Uploading blob {_dotNetBotGrillingPng} using DefaultAzureCredential...");
 
-            string connectionString = await GetStorageConnectionStringAsync(storageManagementClient, resourceGroupName, storageAccountName);
+            var containerClient = new BlobContainerClient(new Uri($"{storageAccount.Data.PrimaryEndpoints.Blob}{_blobContainerName}"), credential);
 
-            string blobEndpoint = storageManagementClient.StorageAccounts.GetProperties(resourceGroupName, storageAccountName).Value.PrimaryEndpoints.Blob;
-            var containerClient = new BlobContainerClient(new Uri($"{blobEndpoint}{BlobContainerName}"), credential);
-
-            BlobClient blobClient = containerClient.GetBlobClient(DotNetBotGrillingPng);
-            await blobClient.UploadAsync(DotNetBotGrillingPng);
+            BlobClient blobClient = containerClient.GetBlobClient(_dotNetBotGrillingPng);
+            await blobClient.UploadAsync(_dotNetBotGrillingPng);
 
             Console.WriteLine($"Your blob uploaded with DefaultAzureCredential is at:");
             Console.WriteLine("");
             Console.WriteLine(blobClient.Uri);
             Console.WriteLine("");
-        }
-
-        /// <summary>
-        /// Deletes the resource group (and all of its included resources).
-        /// </summary>
-        /// <param name="resourcesManagementClient">A credentialed ResourcesManagementClient.</param>
-        /// <param name="resourceGroupName">The name of the resource group containing the storage account.</param>
-        /// <returns></returns>
-        private static async Task DeleteResourceGroupAsync(ResourcesManagementClient resourcesManagementClient, string resourceGroupName)
-        {
-            Console.WriteLine($"Deleting resource group {resourceGroupName}...");
-            ResourceGroupsDeleteOperation deleteOperation = await resourcesManagementClient.ResourceGroups.StartDeleteAsync(resourceGroupName);
-            await deleteOperation.WaitForCompletionAsync();
-            Console.WriteLine("Done!");
         }
 
         /// <summary>
