@@ -37,7 +37,7 @@ Use the [Azure Cloud Shell](https://shell.azure.com) to create and get client se
     ```azurecli
     az ad sp create-for-rbac -n http://<your-application-name>.<your-organization-domain>
 
-    # Example: az ad sp create-for-rbac -n http://this-sample-app.microsoft.com
+    # Example: az ad sp create-for-rbac -n http://this-sample-app.contoso.com
     ```
 
     Output:
@@ -45,7 +45,7 @@ Use the [Azure Cloud Shell](https://shell.azure.com) to create and get client se
     ```json
     {
         "appId": "<generated-app-ID>",
-        "displayName": "http://this-sample-app.microsoft.com",
+        "displayName": "http://this-sample-app.contoso.com",
         "password": "<random-password>",
         "tenant": "<tenant-ID>"
     }
