@@ -37,7 +37,7 @@ namespace customer_relationship
                 o = new SampleOrder(recurring, 19.23m * i);
                 c.AddOrder(o);
 
-                recurring.AddMonths(2);
+                recurring = recurring.AddMonths(2);
             }
 
             Console.WriteLine($"Data about {c.Name}");
