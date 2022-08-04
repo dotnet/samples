@@ -11,6 +11,8 @@
         "**/windowsforms/matching-game/net45/**/*.vbproj",
         "**/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Vsix/MakeConst.Vsix.csproj",
         "**/framework/wcf/**/*.csproj",
-        "**/framework/wcf/**/*.vbproj"
+        "**/framework/wcf/**/*.vbproj",
+        "**/framework/windows-workflow-foundation/**/*.csproj",
+        "**/framework/windows-workflow-foundation/**/*.vbproj"
     ]
 }
