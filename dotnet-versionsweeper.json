@@ -9,6 +9,7 @@
         "**/net45-compat-library/**/*.csproj",
         "**/windowsforms/matching-game/net45/**/*.csproj",
         "**/windowsforms/matching-game/net45/**/*.vbproj",
-        "**/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Vsix/MakeConst.Vsix.csproj"
+        "**/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Vsix/MakeConst.Vsix.csproj",
+        "**/core/whats-new/whats-new-in-21/vb/whats-new.vbproj"
     ]
 }
