@@ -1,10 +1,10 @@
 # Building a Hello World console app with NativeAOT
 
-NativeAOT is an AOT-optimized .NET Core runtime. This document will guide you through compiling a .NET Core Console application with NativeAOT.
+NativeAOT is an AOT-optimized .NET runtime. This document will guide you through compiling a .NET Console application with NativeAOT.
 
-_Please ensure that [pre-requisites](https://github.com/dotnet/runtime/blob/main/src/coreclr/nativeaot/docs/prerequisites.md) are installed._
+_Please ensure that [pre-requisites](https://docs.microsoft.com/en-us/dotnet/core/deploying/native-aot#prerequisites) are installed._
 
-## Create .NET Core Console project
+## Create .NET Console project
 
 Open a new shell/command prompt window and run the following commands.
 
@@ -17,27 +17,7 @@ This will create a simple Hello World console app in `Program.cs` and associated
 
 ## Add NativeAOT to your project
 
-To use NativeAOT with your project, you need to add a reference to the ILCompiler NuGet package that contains the NativeAOT ahead of time compiler and runtime.
-For the compiler to work, it first needs to be added to your project.
-
-In your shell/command prompt navigate to the root directory of your project and run the command:
-
-```bash
-> dotnet new nugetconfig
-```
-
-This will add a nuget.config file to your application. Open the file and in the ``<packageSources>`` element under ``<clear/>`` add the following:
-
-```xml
-<add key="dotnet7" value="https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet7/nuget/v3/index.json" />
-<add key="nuget.org" value="https://api.nuget.org/v3/index.json" protocolVersion="3" />
-```
-
-Once you've added the package source, add a reference to the compiler by running the following command:
-
-```bash
-> dotnet add package Microsoft.DotNet.ILCompiler -v 7.0.0-*
-```
+Add `<PublishAot>true</PublishAot>` property to your project file. This will produce a native AOT app and show any potential compatibility warnings during the publish process.
 
 ## Restore and Publish your app
 
@@ -53,6 +33,11 @@ where `<Configuration>` is your project configuration (such as Debug or Release)
 > dotnet publish -r win-x64 -c release
 ```
 
-Once completed, you can find the native executable in the root folder of your project under `/bin/<Configuration>/net6.0/<RID>/publish/`. Navigate to `/bin/<Configuration>/net6.0/<RID>/publish/` in your project folder and run the produced native executable.
+Once completed, you can find the native executable in the root folder of your project under `/bin/<Configuration>/net7.0/<RID>/publish/`. Navigate to `/bin/<Configuration>/net7.0/<RID>/publish/` in your project folder and run the produced native executable.
 
-Feel free to modify the sample application and experiment. However, keep in mind some functionality might not yet be supported in NativeAOT. Let us know on the [Issues page](https://github.com/dotnet/runtime/issues).
+## Build using a docker container
+
+This sample includes Dockerfiles that demonstrate installing NativeAOT build prerequisites and building in a container:
+
+- Linux x64: `docker build -t hello . & docker run -t hello`
+- Windows x64: `docker build -t hello -f Dockerfile.windowsservercore-x64 . & docker run -t hello`

@@ -2,9 +2,9 @@
 
 This document will guide you through building native libraries that can be consumed by other programming languages with NativeAOT. NativeAOT can build static libraries that can be linked at compile time or shared libraries that are required at runtime.
 
-## Create .NET Core Class Library project with NativeAOT support
+## Create .NET Class Library project with NativeAOT support
 
-Create a .NET Core class library project using `dotnet new classlib -o NativeLibrary` and follow the [Hello world](../HelloWorld/README.md) sample instruction to add NativeAOT support to it.
+Create a .NET class library project using `dotnet new classlib -o NativeLibrary` and follow the [Hello world](../HelloWorld/README.md) sample instruction to add NativeAOT support to it.
 
 ## Building static libraries
 
