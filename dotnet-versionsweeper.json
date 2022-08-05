@@ -10,7 +10,7 @@
         "**/windowsforms/matching-game/net45/**/*.csproj",
         "**/windowsforms/matching-game/net45/**/*.vbproj",
         "**/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Vsix/MakeConst.Vsix.csproj",
-        "**wpf/WebSiteBrowser/framework/csharp/StarVoteControl.csproj",
+        "**/wpf/WebSiteBrowser/framework/csharp/StarVoteControl.csproj",
         "**wpf/WebSiteBrowser/framework/csharp/WebSiteRatings.csproj"
     ]
 }
