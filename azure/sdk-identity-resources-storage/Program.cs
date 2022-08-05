@@ -195,7 +195,8 @@ class Program
     {
         Console.WriteLine($"Uploading blob {DotNetBotGrillingPng} using DefaultAzureCredential...");
 
-        var containerClient = new BlobContainerClient(new Uri($"{storageAccount.Data.PrimaryEndpoints.Blob}{BlobContainerName}"), credential);
+        var containerClient = new BlobContainerClient(
+            new Uri($"{storageAccount.Data.PrimaryEndpoints.BlobUri}{BlobContainerName}"), credential);
 
         BlobClient blobClient = containerClient.GetBlobClient(DotNetBotGrillingPng);
         await blobClient.UploadAsync(DotNetBotGrillingPng);
