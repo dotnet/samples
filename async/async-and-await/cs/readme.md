@@ -7,7 +7,7 @@ products:
 page_type: sample
 name: "Async Sample: Asynchronous programming with async and await in C#"
 urlFragment: "async-and-await-cs"
-description: "A .NET 5 WPF application that contains the example method from Asynchronous progamming with async and await in C# tutorial."
+description: "A .NET 6 WPF application that contains the example method from Asynchronous progamming with async and await in C# tutorial."
 ---
 # Asynchronous programming with async and await in C\#
 
@@ -21,7 +21,7 @@ The code for the *MainWindow.xaml.cs* file from this sample is included in the a
 
 ## Sample prerequisites
 
-This sample is written in C# and targets .NET 5 running on Windows. It requires the [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0).
+This sample is written in C# and targets .NET 6 running on Windows. It requires the [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0).
 
 ## Building the sample
 

@@ -24,7 +24,7 @@ The following hooks into the [managed assembly loading algorithm](https://docs.m
 
 ## Build and Run
 
-1) Install [.NET 5.0 SDK](https://dotnet.microsoft.com/download) or later
+1) Install [.NET 6.0 SDK](https://dotnet.microsoft.com/download) or later
 
 1) Build the solution with `dotnet build`
 

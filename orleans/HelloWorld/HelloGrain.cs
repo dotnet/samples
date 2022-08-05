@@ -1,10 +1,9 @@
-using System.Threading.Tasks;
-using Orleans;
+﻿using Orleans;
 
-namespace HelloWorld
+namespace HelloWorld;
+
+public class HelloGrain : Grain, IHelloGrain
 {
-    public class HelloGrain : Grain, IHelloGrain
-    {
-        public Task<string> SayHello(string greeting) => Task.FromResult($"Hello, {greeting}!");
-    }
+    public Task<string> SayHello(string greeting) =>
+        Task.FromResult($"Hello, {greeting}!");
 }
