@@ -9,14 +9,21 @@
         <tags>MyTags</tags>
         <copyright>Copyright ©Contoso 2022</copyright>
         <!-- we need the assemblies bundled, so set this so we don't expose any dependencies to the outside world -->
-        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+        <GenerateDependencyFile>true</GenerateDependencyFile>
         <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
         <DebugType>embedded</DebugType>
         <IsPackable>true</IsPackable>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.Build.Utilities.Core" Version="17.0.0" />
+	   <PackageReference 
+		   Include="Microsoft.Build.Utilities.Core"
+		   Version="17.0.0"
+           PrivateAssets="all" />
+	   <PackageReference
+		   Include="Microsoft.Extensions.DependencyInjection"
+		   Version="6.0.0"
+           PrivateAssets="all" />
     </ItemGroup>
 
     <ItemGroup>
@@ -33,6 +40,19 @@
 
             <!--example: <BuildOutputInPackage Include="$(PkgFParsec)/lib/netstandard2.0/FParsecCS.dll" />-->
         </ItemGroup>
+    </Target>
+
+    <!-- This target adds the generated deps.json file to our package output -->
+    <Target Name="AddBuildDependencyFileToBuiltProjectOutputGroupOutput"
+            BeforeTargets="BuiltProjectOutputGroup"
+            Condition=" '$(GenerateDependencyFile)' == 'true'">
+
+       <ItemGroup>
+          <BuiltProjectOutputGroupOutput
+              Include="$(ProjectDepsFilePath)"
+              TargetPath="$(ProjectDepsFileName)"
+              FinalOutputPath="$(ProjectDepsFilePath)" />
+       </ItemGroup>
     </Target>
 
 </Project>
