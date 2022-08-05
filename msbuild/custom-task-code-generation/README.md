@@ -128,12 +128,12 @@ The dependencies of your MSBuild task must be packaged inside the package; they 
 
 ```xml
 <ItemGroup>
-	<PackageReference 
-		Include="Microsoft.Build.Utilities.Core"
-		Version="17.0.0" />
-	<PackageReference
-		Include="Microsoft.Extensions.DependencyInjection"
-		Version="6.0.0" />
+   <PackageReference 
+      Include="Microsoft.Build.Utilities.Core"
+      Version="17.0.0" />
+   <PackageReference
+      Include="Microsoft.Extensions.DependencyInjection"
+      Version="6.0.0" />
 </ItemGroup>
 ```
 
@@ -141,16 +141,16 @@ Now, mark every dependency of this Task project, both `PackageReference` and `Pr
 
 ```xml
 <ItemGroup>
-	<PackageReference 
-		Include="Microsoft.Build.Utilities.Core"
-		Version="17.0.0"
-		PrivateAssets="all"
-	/>
-	<PackageReference
-		Include="Microsoft.Extensions.DependencyInjection"
-		Version="6.0.0"
-		PrivateAssets="all"
-	/>
+   <PackageReference 
+     Include="Microsoft.Build.Utilities.Core"
+     Version="17.0.0"
+     PrivateAssets="all"
+   />
+   <PackageReference
+     Include="Microsoft.Extensions.DependencyInjection"
+     Version="6.0.0"
+     PrivateAssets="all"
+    />
 </ItemGroup>
 ```
 
@@ -177,14 +177,14 @@ Then, the dependencies of your MSBuild task must be packaged inside the package,
     </PropertyGroup>
 
     <ItemGroup>
-	   <PackageReference 
-		   Include="Microsoft.Build.Utilities.Core"
-		   Version="17.0.0"
-           PrivateAssets="all" />
-	   <PackageReference
-		   Include="Microsoft.Extensions.DependencyInjection"
-		   Version="6.0.0"
-           PrivateAssets="all" />
+      <PackageReference 
+        Include="Microsoft.Build.Utilities.Core"
+        Version="17.0.0"
+        PrivateAssets="all" />
+      <PackageReference
+        Include="Microsoft.Extensions.DependencyInjection"
+        Version="6.0.0"
+        PrivateAssets="all" />
     </ItemGroup>
 
     <ItemGroup>
