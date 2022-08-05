@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2041
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullFxApp", "FullFxApp\FullFxApp.csproj", "{E1B6E485-C8F3-4F3F-BDEE-DBAD28845BFE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FullFxApp", "FullFxApp\FullFxApp.csproj", "{E1B6E485-C8F3-4F3F-BDEE-DBAD28845BFE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCore3App", "NetCore3App\NetCore3App.csproj", "{A79CED68-4B78-4033-B314-980A90436A18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetApp", "NetApp\NetApp.csproj", "{A79CED68-4B78-4033-B314-980A90436A18}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{962D97FF-E0C4-4882-91DD-99C9116C9077}"
 	ProjectSection(SolutionItems) = preProject
