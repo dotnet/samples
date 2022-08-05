@@ -1,21 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28107.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp", "WindowsFormsApp\WindowsFormsApp.csproj", "{0FDAC2AE-B71E-4505-BA3B-820236261240}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowsFormsApp", "WindowsFormsApp\WindowsFormsApp.csproj", "{0FDAC2AE-B71E-4505-BA3B-820236261240}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SharedProject1", "SharedProject1\SharedProject1.shproj", "{B5787552-D555-48B1-8254-6DA3A97429F6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreWindowsFormsApp", "CoreWindowsFormsApp\CoreWindowsFormsApp.csproj", "{F0288ECD-39BE-46FA-9CC2-2A05EA41C16E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsForm", "WindowsFormsForm\WindowsFormsForm.csproj", "{24FAB4BF-867B-4E88-9DCB-9BF24A87EAAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowsFormsForm", "WindowsFormsForm\WindowsFormsForm.csproj", "{24FAB4BF-867B-4E88-9DCB-9BF24A87EAAC}"
 EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		SharedProject1\SharedProject1.projitems*{0fdac2ae-b71e-4505-ba3b-820236261240}*SharedItemsImports = 4
-		SharedProject1\SharedProject1.projitems*{b5787552-d555-48b1-8254-6da3a97429f6}*SharedItemsImports = 13
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -39,5 +35,10 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DFED4611-7B7B-4931-AF7A-BC610BC5EEA5}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		SharedProject1\SharedProject1.projitems*{0fdac2ae-b71e-4505-ba3b-820236261240}*SharedItemsImports = 5
+		SharedProject1\SharedProject1.projitems*{b5787552-d555-48b1-8254-6da3a97429f6}*SharedItemsImports = 13
+		SharedProject1\SharedProject1.projitems*{f0288ecd-39be-46fa-9cc2-2a05ea41c16e}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal
