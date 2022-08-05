@@ -10,6 +10,7 @@
         "**/windowsforms/matching-game/net45/**/*.csproj",
         "**/windowsforms/matching-game/net45/**/*.vbproj",
         "**/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Vsix/MakeConst.Vsix.csproj",
+        "**/core/whats-new/whats-new-in-21/vb/whats-new.vbproj",
         "**/framework/wcf/**/*.csproj",
         "**/framework/wcf/**/*.vbproj",
         "**/framework/windows-workflow-foundation/**/*.csproj",
