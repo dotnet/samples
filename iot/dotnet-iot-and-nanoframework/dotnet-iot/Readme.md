@@ -30,7 +30,7 @@ In this sample Raspberry Pi 2 will be used, you can use above Raspberry Pi 2. Th
 ```bash
 dotnet add package Iot.Device.Bindings
 dotnet add package System.Device.Gpio
-dotnet add package Microsoft.Azure.Devices.Clien
+dotnet add package Microsoft.Azure.Devices.Client
 ```
 
 ## Prepare the hardware
