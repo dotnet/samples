@@ -21,7 +21,7 @@ The code for the *MainWindow.xaml.cs* file from this sample is included in the a
 
 ## Sample prerequisites
 
-This sample is written in C# and targets .NET 5 running on Windows. It requires the [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0).
+This sample is written in C# and targets .NET 6 running on Windows. It requires the [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0).
 
 ## Building the sample
 
