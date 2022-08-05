@@ -1,8 +1,8 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>App.ico</ApplicationIcon>
     <Company>GrapeCity, Inc.</Company>
@@ -14,12 +14,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="C1.Win" Version="[5.0.20202.439-beta,)" />
-    <PackageReference Include="C1.Win.FlexGrid" Version="[5.0.20202.439-beta,)" />
-    <PackageReference Include="C1.Win.Ribbon" Version="[5.0.20202.439-beta,)" />
-    <PackageReference Include="C1.Win.RulesManager" Version="[5.0.20202.439-beta,)" />
-    <PackageReference Include="C1.Win.SuperTooltip" Version="[5.0.20202.439-beta,)" />
-    <PackageReference Include="C1.Win.Themes" Version="[5.0.20202.439-beta,)" />
+    <PackageReference Include="C1.Win" Version="6.0.20222.566" />
+    <PackageReference Include="C1.Win.FlexGrid" Version="6.0.20222.566" />
+    <PackageReference Include="C1.Win.Ribbon" Version="6.0.20222.566" />
+    <PackageReference Include="C1.Win.RulesManager" Version="6.0.20222.566" />
+    <PackageReference Include="C1.Win.SuperTooltip" Version="6.0.20222.566" />
+    <PackageReference Include="C1.Win.Themes" Version="6.0.20222.566" />
   </ItemGroup>
 
   <ItemGroup>
