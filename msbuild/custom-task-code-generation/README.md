@@ -137,7 +137,7 @@ The dependencies of your MSBuild task must be packaged inside the package; they 
 </ItemGroup>
 ```
 
-Now, mark every dependency of this Task project, both `PackageReference` and `ProjectReference` with the `PrivateAssets="all"` attribute. This will tell NuGet not to expose these dependencies to consuming projects at all. You can read more about controlling dependency assets [at the NuGet documentation](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files#controlling-dependency-assets).
+Now, mark every dependency of this Task project, both `PackageReference` and `ProjectReference`, with the `PrivateAssets="all"` attribute. This tells NuGet not to expose these dependencies to consuming projects at all. You can read more about controlling dependency assets [in the NuGet documentation](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files#controlling-dependency-assets).
 
 ```xml
 <ItemGroup>
