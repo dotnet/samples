@@ -7,7 +7,7 @@ products:
 page_type: sample
 name: "Async Sample: Asynchronous Programming with Async and Await"
 urlFragment: "async-and-await-vb"
-description: "A .NET 5 WPF application that contains the example method from Asynchronous progamming with async and await in Visual Basic tutorial."
+description: "A .NET 6 WPF application that contains the example method from Asynchronous progamming with async and await in Visual Basic tutorial."
 ---
 # Asynchronous progamming with async and await in Visual Basic
 
@@ -21,7 +21,7 @@ The code for the *MainWindow.xaml.vb* file from this sample is included in the a
 
 ## Sample prerequisites
 
-This sample is written in Visual Basic and targets .NET 5.0 running on Windows. It requires the [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0).
+This sample is written in Visual Basic and targets .NET 6.0 running on Windows. It requires the [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0).
 
 ## Building the sample
 

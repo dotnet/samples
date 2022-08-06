@@ -28,9 +28,9 @@ In this sample Raspberry Pi 2 will be used, you can use above Raspberry Pi 2. Th
 ## Prerequisite Packages
 
 ```bash
-dotnet add package Iot.Device.Bindings --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet5/nuget/v3/index.json)
-dotnet add package System.Device.Gpio --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet5/nuget/v3/index.json
-dotnet add package Microsoft.Azure.Devices.Client --version 1.38.0
+dotnet add package Iot.Device.Bindings
+dotnet add package System.Device.Gpio
+dotnet add package Microsoft.Azure.Devices.Client
 ```
 
 ## Prepare the hardware
