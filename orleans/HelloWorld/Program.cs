@@ -1,9 +1,8 @@
-using System;
 using HelloWorld;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Orleans;
-using Orleans.Hosting; 
+using Orleans.Hosting;
 
 // Configure the host
 using var host = new HostBuilder()

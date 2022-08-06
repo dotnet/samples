@@ -16,16 +16,16 @@ This sample solution includes a class library that is unit tested by two xUnit t
 
 ## Sample prerequisites
 
-This sample is written in C# and targets .NET 5.0. It requires the [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0).
+This sample is written in C# and targets .NET 6.0. It requires the [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0).
 
 ## Building the sample
 
-The source code includes an MSBuild project file for C# (a *.csproj* file) that targets .NET 5.0. Create a directory and select **Download ZIP** to download the example code files to your computer. To build the example:
+The source code includes an MSBuild project file for C# (a *.csproj* file) that targets .NET 6.0. Create a directory and select **Download ZIP** to download the example code files to your computer. To build the example:
 
 1. Download the *.zip* file containing the example code files.
 1. Create the directory to which you want to copy the files.
 1. Copy the files from the *.zip* file to the directory you just created.
-1. If you are using Visual Studio 2019:
+1. If you are using Visual Studio 2022:
    1. In Visual Studio, select **Open a project or solution** (or **File** > **Open** > **Project/Solution** from the Visual Studio menu.
    1. Select **Debug** > **Build Solution** from the Visual Studio menu to build the solution.
 1. If you are working from the command line:

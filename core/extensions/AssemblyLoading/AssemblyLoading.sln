@@ -1,11 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblyLoading", "AssemblyLoading\AssemblyLoading.csproj", "{A6DA7FB0-D562-41EF-BAB1-2F255E8A3730}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssemblyLoading", "AssemblyLoading\AssemblyLoading.csproj", "{A6DA7FB0-D562-41EF-BAB1-2F255E8A3730}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLibrary", "MyLibrary\MyLibrary.csproj", "{69C0721B-4D56-4326-A4BE-06BEE11A298C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyLibrary", "MyLibrary\MyLibrary.csproj", "{69C0721B-4D56-4326-A4BE-06BEE11A298C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EB5EBA1-0FEE-4C61-95D9-FA2592675261}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +20,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A6DA7FB0-D562-41EF-BAB1-2F255E8A3730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -44,5 +46,11 @@ Global
 		{69C0721B-4D56-4326-A4BE-06BEE11A298C}.Release|x64.Build.0 = Release|Any CPU
 		{69C0721B-4D56-4326-A4BE-06BEE11A298C}.Release|x86.ActiveCfg = Release|Any CPU
 		{69C0721B-4D56-4326-A4BE-06BEE11A298C}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {588DE818-4760-407D-A0F2-6D04785D83DA}
 	EndGlobalSection
 EndGlobal
