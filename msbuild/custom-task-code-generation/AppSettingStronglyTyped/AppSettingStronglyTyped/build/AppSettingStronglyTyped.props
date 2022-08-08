@@ -2,11 +2,8 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<!--defining properties interesting for my task-->
 	<PropertyGroup>
-		<!--default directory where the .dll was published inside a NuGet package-->
-		<taskForldername>lib</taskForldername>
-		<taskFramework>netstandard2.0</taskFramework>
 		<!--The folder where the custom task will be present. It points to inside the NuGet package. -->
-		<CustomTasksFolder>$(MSBuildThisFileDirectory)..\$(taskForldername)\$(taskFramework)</CustomTasksFolder>
+		<CustomTasksFolder>$(MSBuildThisFileDirectory)..\tasks\netstandard2.0</CustomTasksFolder>
 		<!--Reference to the assembly which contains the MSBuild Task-->
 		<CustomTasksAssembly>$(CustomTasksFolder)\$(MSBuildThisFileName).dll</CustomTasksAssembly>
 	</PropertyGroup>
