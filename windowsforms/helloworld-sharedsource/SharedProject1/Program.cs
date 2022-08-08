@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsForm;
 
@@ -25,8 +23,8 @@ namespace WindowsFormsApp
         static void UpdateForm(Form1 form)
         {
             var dict = new Dictionary<string, string>();
-#if NETCOREAPP3_0
-            dict.Add("label1", "Hello .NET Core");
+#if NET
+            dict.Add("label1", "Hello .NET");
 #else
             dict.Add("label1", "Hello .NET Framework");
 #endif
