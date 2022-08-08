@@ -198,8 +198,9 @@ Then, the dependencies of your MSBuild task must be packaged inside the package,
     <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="ResolveReferences">
         <ItemGroup>
             <!-- The dependencies of your MSBuild task must be packaged inside the package, they cannot be expressed as normal PackageReferences -->
-
-            <!--example: <BuildOutputInPackage Include="$(PkgFParsec)/lib/netstandard2.0/FParsecCS.dll" />-->
+            <BuildOutputInPackage
+                Include="@(ReferenceCopyLocalPaths)"
+                TargetPath="%(ReferenceCopyLocalPaths.DestinationSubPath)" />
         </ItemGroup>
     </Target>
 
@@ -250,11 +251,8 @@ _AppSettingStronglyTyped.props_ includes the task and define some property with 
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <!--defining properties interesting for my task-->
     <PropertyGroup>
-        <!--default directory where the .dll was publich inside a NuGet package-->
-        <taskFoldername>lib</taskFoldername>
-        <taskFramework>netstandard2.0</taskFramework>
         <!--The folder where the custom task will be present. It points to inside the NuGet package. -->
-        <CustomTasksFolder>$(MSBuildThisFileDirectory)..\$(taskFoldername)\$(taskFramework)</CustomTasksFolder>
+        <CustomTasksFolder>$(MSBuildThisFileDirectory)..\tasks\netstandard2.0</CustomTasksFolder>
         <!--Reference to the assembly which contains the MSBuild Task-->
         <CustomTasksAssembly>$(CustomTasksFolder)\$(MSBuildThisFileName).dll</CustomTasksAssembly>
     </PropertyGroup>
