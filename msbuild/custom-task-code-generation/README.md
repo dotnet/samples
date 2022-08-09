@@ -122,6 +122,40 @@ We are going to generate a NuGet package, so first we need to add some basic inf
 </Project>
 ```
 
+#### Mark dependencies as private
+
+The dependencies of your MSBuild task must be packaged inside the package; they cannot be expressed as normal package references. The package won't expose any regular dependencies to external users. This takes two steps to accomplish: marking your assemblies as private and actually embedding them in the generated package. For this example, we'll assume that your task depends on `Microsoft.Extensions.DependencyInjection` to work, so add a `PackageReference` to `Microsoft.Extensions.DependencyInjection` at version `6.0.0`.
+
+```xml
+<ItemGroup>
+   <PackageReference
+      Include="Microsoft.Build.Utilities.Core"
+      Version="17.0.0" />
+   <PackageReference
+      Include="Microsoft.Extensions.DependencyInjection"
+      Version="6.0.0" />
+</ItemGroup>
+```
+
+Now, mark every dependency of this Task project, both `PackageReference` and `ProjectReference`, with the `PrivateAssets="all"` attribute. This tells NuGet not to expose these dependencies to consuming projects at all. You can read more about controlling dependency assets [in the NuGet documentation](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files#controlling-dependency-assets).
+
+```xml
+<ItemGroup>
+   <PackageReference
+     Include="Microsoft.Build.Utilities.Core"
+     Version="17.0.0"
+     PrivateAssets="all"
+   />
+   <PackageReference
+     Include="Microsoft.Extensions.DependencyInjection"
+     Version="6.0.0"
+     PrivateAssets="all"
+    />
+</ItemGroup>
+```
+
+### Bundle dependencies into the package
+
 Then, the dependencies of your MSBuild task must be packaged inside the package, they cannot be expressed as normal PackageReferences. We don't expose any regular dependencies to the outside world. It is not needed for the current example, because we don't have extra dependencies, but it is worth being aware of this for other scenarios.
 
 ```xml
@@ -131,27 +165,56 @@ Then, the dependencies of your MSBuild task must be packaged inside the package,
         <TargetFramework>netstandard2.0</TargetFramework>
         <version>1.0.0</version>
         <title>AppSettingStronglyTyped</title>
-        <authors>John Doe</authors>
+        <authors>John</authors>
         <description>Generates a strongly typed setting class base on a txt file</description>
         <tags>MyTags</tags>
-        <copyright>Copyright ©Microsoft Company 2022</copyright>
+        <copyright>Copyright ©Contoso 2022</copyright>
         <!-- we need the assemblies bundled, so set this so we don't expose any dependencies to the outside world -->
-        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+        <GenerateDependencyFile>true</GenerateDependencyFile>
         <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
         <DebugType>embedded</DebugType>
         <IsPackable>true</IsPackable>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.Build.Utilities.Core" Version="17.0.0" />
+      <PackageReference
+        Include="Microsoft.Build.Utilities.Core"
+        Version="17.0.0"
+        PrivateAssets="all" />
+      <PackageReference
+        Include="Microsoft.Extensions.DependencyInjection"
+        Version="6.0.0"
+        PrivateAssets="all" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <!-- These lines pack the build props/targets files to the `build` folder in the generated package.
+         By convention, the .NET SDK will look for build\<Package Id>.props and build\<Package Id>.targets
+         for automatic inclusion in the build. -->
+        <Content Include="build\AppSettingStronglyTyped.props" PackagePath="build\" />
+        <Content Include="build\AppSettingStronglyTyped.targets" PackagePath="build\" />
     </ItemGroup>
 
     <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="ResolveReferences">
         <ItemGroup>
-            <!-- the dependencies of your MSBuild task must be packaged inside the package, they cannot be expressed as normal PackageReferences -->
-
-            <!--example: <BuildOutputInPackage Include="$(PkgFParsec)/lib/netstandard2.0/FParsecCS.dll" />-->
+            <!-- The dependencies of your MSBuild task must be packaged inside the package, they cannot be expressed as normal PackageReferences -->
+            <BuildOutputInPackage
+                Include="@(ReferenceCopyLocalPaths)"
+                TargetPath="%(ReferenceCopyLocalPaths.DestinationSubPath)" />
         </ItemGroup>
+    </Target>
+
+    <!-- This target adds the generated deps.json file to our package output -->
+    <Target Name="AddBuildDependencyFileToBuiltProjectOutputGroupOutput"
+            BeforeTargets="BuiltProjectOutputGroup"
+            Condition=" '$(GenerateDependencyFile)' == 'true'">
+
+       <ItemGroup>
+          <BuiltProjectOutputGroupOutput
+              Include="$(ProjectDepsFilePath)"
+              TargetPath="$(ProjectDepsFileName)"
+              FinalOutputPath="$(ProjectDepsFilePath)" />
+       </ItemGroup>
     </Target>
 
 </Project>
@@ -188,11 +251,8 @@ _AppSettingStronglyTyped.props_ includes the task and define some property with 
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <!--defining properties interesting for my task-->
     <PropertyGroup>
-        <!--default directory where the .dll was publich inside a NuGet package-->
-        <taskForldername>lib</taskForldername>
-        <taskFramework>netstandard2.0</taskFramework>
         <!--The folder where the custom task will be present. It points to inside the NuGet package. -->
-        <CustomTasksFolder>$(MSBuildThisFileDirectory)..\$(taskForldername)\$(taskFramework)</CustomTasksFolder>
+        <CustomTasksFolder>$(MSBuildThisFileDirectory)..\tasks\netstandard2.0</CustomTasksFolder>
         <!--Reference to the assembly which contains the MSBuild Task-->
         <CustomTasksAssembly>$(CustomTasksFolder)\$(MSBuildThisFileName).dll</CustomTasksAssembly>
     </PropertyGroup>
