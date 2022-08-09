@@ -16,6 +16,9 @@
         "**/framework/wcf/**/*.csproj",
         "**/framework/wcf/**/*.vbproj",
         "**/framework/windows-workflow-foundation/**/*.csproj",
-        "**/framework/windows-workflow-foundation/**/*.vbproj"
+        "**/framework/windows-workflow-foundation/**/*.vbproj",
+        "**/windowsforms/MSIX-WindowsForms/WindowsFormsApp1/**/*.csproj",
+        "**/wpf/WebSiteBrowser/**/*.csproj",
+        "**/wpf/WPF-WinRT/**/*.csproj"
     ]
 }
