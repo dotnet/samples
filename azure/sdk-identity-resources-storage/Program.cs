@@ -170,14 +170,16 @@ class Program
     /// <returns></returns>
     static async Task<string> GetStorageConnectionStringAsync(StorageAccountResource storageAccount)
     {
-        var keysResponse = await storageAccount.GetKeysAsync();
-        var storageKey = keysResponse.Value.Keys[0];
+        var keysResponse = storageAccount.GetKeysAsync().GetAsyncEnumerator();
+        var storageKey = await keysResponse.MoveNextAsync()
+            ? keysResponse.Current.Value
+            : throw new Exception("No keys found for storage account.");
 
         var connectionStringParts = new string[]
         {
             "DefaultEndpointsProtocol=https",
             $"AccountName={storageAccount.Data.Name}",
-            $"AccountKey={storageKey.Value}",
+            $"AccountKey={storageKey}",
             "EndpointSuffix=core.windows.net"
         };
 
