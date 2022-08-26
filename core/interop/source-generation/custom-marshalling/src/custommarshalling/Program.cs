@@ -18,9 +18,9 @@ static void MarshalStringAsUtf32()
 
     string[] toPrint = new string[]
     {
-    s,
-    "🄷🄴🄻🄻🄾 🅆🄾🅁🄻🄳",
-    "Lorem ipsum dolor sit amet"
+        s,
+        "🄷🄴🄻🄻🄾 🅆🄾🅁🄻🄳",
+        "Lorem ipsum dolor sit amet"
     };
 
     // Marshals strings using Utf32StringMarshaller
