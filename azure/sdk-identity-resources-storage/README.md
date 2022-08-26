@@ -59,22 +59,22 @@ Use the [Azure Cloud Shell](https://shell.azure.com) to create and get client se
 az role assignment create --role "Contributor" --assignee <appId>
 ```
 
-1. Assign the *Storage Blob Data Contributor* role to service principal. There are two ways to do this:
+1. Assign the *Storage Blob Data Contributor* role to service principal. There are two possible ways to do this (either way is acceptable):
 
-    a. Use the `appId` property from the output in the previous step.
+    * Use the `appId` property from the output in the first step.
 
     ```azurecli
     az role assignment create --role "Storage Blob Data Contributor" --assignee <appId>
     ```
 
-    b. Use the `objectId` of the Service Principal account
+    * Use the `objectId` of the Service Principal account
 
     ```azurecli
     az ad sp show <appid>
     az az role assignment create --role 'Storage Blob Data Contributor' --assignee-object-id <objectid> --assignee-principal-type ServicePrincipal
     ```
 
-    This will allow the service principal to perform blob data operations using Azure.Identity (as opposed to a connection string)
+    This will allow the service principal to perform blob data operations using Azure.Identity (as opposed to a connection string).
 
 1. Use the returned credentials from the first step to set the following environment variables.
 
