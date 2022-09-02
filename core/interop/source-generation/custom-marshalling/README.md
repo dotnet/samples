@@ -47,7 +47,7 @@ This sample implements and uses custom marshallers for a built-in type and a use
         - Windows: `bin\Debug\custommarshalling.exe`
         - Non-Windows: `bin/Debug/custommarshalling`
 
-Note: The way the sample is built is relatively complicated. The goal is that it's possible to build and run the sample with simple `dotnet run` with minimal requirements on pre-installed tools. Typically real-world projects which have both managed and native components will use different build systems for each; for example msbuild/dotnet for managed and CMake for native.
+Note: The way the sample is built is relatively complicated. The goal is that it's possible to build and run the sample with a simple `dotnet run` command with minimal requirements for pre-installed tools. Typically, real-world projects that have both managed and native components will use different build systems for each; for example, msbuild/dotnet for managed and CMake for native.
 
 ## Visual Studio support
 
