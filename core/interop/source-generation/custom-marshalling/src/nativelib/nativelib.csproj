@@ -1,0 +1,94 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <NativeBinDir>$(BinRoot)/$(Configuration)</NativeBinDir>
+    <NativeOutputName>nativelib</NativeOutputName>
+
+    <NativePlatform>$([System.Runtime.InteropServices.RuntimeInformation]::ProcessArchitecture)</NativePlatform>
+    <NativeObjDir>$(MSBuildThisFileDirectory)obj/$(Configuration)/$(NativePlatform)/</NativeObjDir>
+  </PropertyGroup>
+
+  <!-- Properties for MSVCFindCompilerPaths -->
+  <PropertyGroup Condition="$([MSBuild]::IsOsPlatform('Windows'))">
+    <MSVCPlatform>$(NativePlatform)</MSVCPlatform>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <NativeSource Include="nativelib.cpp" />
+    <Clean Include="$(NativeBinDir)/$(NativeOutputName).*" />
+    <Clean Include="$(NativeObjDir)/*.*" />
+  </ItemGroup>
+
+  <!-- This is to hide all the source files in VS to make the project cleaner,
+       but also to include them in the build so that when the source is modified the build will rerun the C++ compiler. -->
+  <ItemGroup>
+    <Content Include="*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Visible>false</Visible>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CompilerPaths"
+                      Version="[1.0.1, )"
+                      Condition="$([MSBuild]::IsOsPlatform('Windows'))" />
+  </ItemGroup>
+
+  <!-- Targets to build the native project. The output goes directly to the bin directory -->
+  <Target Name="PrepareForNativeBuild">
+    <PropertyGroup>
+      <NativeOutputExtension Condition="$([MSBuild]::IsOsPlatform('Linux'))">.so</NativeOutputExtension>
+      <NativeOutputExtension Condition="$([MSBuild]::IsOsPlatform('OSX'))">.dylib</NativeOutputExtension>
+      <NativeOutputExtension Condition="$([MSBuild]::IsOsPlatform('Windows'))">.dll</NativeOutputExtension>
+      <NativeOutputFilePath>$(NativeBinDir)/$(NativeOutputName)$(NativeOutputExtension)</NativeOutputFilePath>
+
+      <SourceFiles>@(NativeSource-> '&quot;%(RootDir)%(Directory)%(Filename)%(Extension)&quot;', ' ')</SourceFiles>
+    </PropertyGroup>
+
+    <MakeDir Directories="$(NativeBinDir)" />
+    <MakeDir Directories="$(NativeObjDir)" />
+  </Target>
+
+  <Target Name="BuildNativeProjectUnix"
+          AfterTargets="Build"
+          DependsOnTargets="PrepareForNativeBuild"
+          Condition="$([MSBuild]::IsOsPlatform('Linux')) OR $([MSBuild]::IsOsPlatform('OSX'))">
+    <PropertyGroup>
+      <IncPaths>-Iinc</IncPaths>
+      <CompilerArgs>-g -shared -fPIC </CompilerArgs>
+    </PropertyGroup>
+    <PropertyGroup Condition="$([MSBuild]::IsOsPlatform('Linux'))">
+      <PreprocessorDefines>-D LINUX</PreprocessorDefines>
+      <LinkArgs>-ldl -Wl,-rpath,'$ORIGIN',--disable-new-dtags</LinkArgs>
+    </PropertyGroup>
+    <PropertyGroup Condition="$([MSBuild]::IsOsPlatform('OSX'))">
+      <PreprocessorDefines>-D OSX</PreprocessorDefines>
+      <LinkArgs>-ldl -Wl,-rpath,'@loader_path'</LinkArgs>
+    </PropertyGroup>
+
+    <Exec Command="g++ $(SourceFiles) $(IncPaths) $(PreprocessorDefines) -std=c++11 -o &quot;$(NativeOutputFilePath)&quot; $(CompilerArgs) $(LinkArgs)"
+          WorkingDirectory="$(NativeObjDir)"
+          ConsoleToMsBuild="true" />
+  </Target>
+
+  <Target Name="BuildNativeProjectWindows"
+          AfterTargets="Build"
+          DependsOnTargets="PrepareForNativeBuild;MSVCFindCompilerPaths"
+          Condition="$([MSBuild]::IsOsPlatform('Windows'))">
+    <PropertyGroup>
+      <IncPaths>@(MSVCIncludePaths-> '/I &quot;%(RootDir)%(Directory)%(Filename)&quot;', ' ')</IncPaths>
+      <IncPaths>$(IncPaths) /I inc</IncPaths>
+      <CompilerArgs>/EHsc /Od /GS /sdl /Zi</CompilerArgs>
+      <PreprocessorDefines>/D WINDOWS</PreprocessorDefines>
+      <LibPaths>@(MSVCLibPaths-> '/LIBPATH:&quot;%(RootDir)%(Directory)%(Filename)&quot;', ' ')</LibPaths>
+    </PropertyGroup>
+
+    <Exec Command="&quot;$(MSVCCompilerPath)&quot; $(SourceFiles) $(IncPaths) $(PreprocessorDefines) $(CompilerArgs) /link $(LibPaths) ole32.lib /DLL /out:&quot;$(NativeOutputFilePath)&quot;"
+          WorkingDirectory="$(NativeObjDir)"
+          ConsoleToMsBuild="true" />
+  </Target>
+</Project>

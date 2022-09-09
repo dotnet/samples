@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>CustomMarshalling</RootNamespace>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Clean Include="$(BinRoot)/$(Configuration)/$(TargetName).*" />
+  </ItemGroup>
+
+  <Target Name="SetupForDemo" AfterTargets="Build">
+    <ItemGroup>
+      <AllOutputs Include="$(OutputPath)$(TargetName).*" />
+    </ItemGroup>
+
+    <!-- Copy the project outputs to the bin directory -->
+    <Copy SourceFiles="@(AllOutputs)" DestinationFolder="$(BinRoot)/$(Configuration)" />
+  </Target>
+
+</Project>
