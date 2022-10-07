@@ -31,7 +31,7 @@ public class PlayerGrain : Grain, IPlayerGrain
         return (await grain.GetGames()).Where(x => !_activeGames.Contains(x.GameId)).ToArray();
     }
 
-    // create a new game, and add oursleves to that game
+    // create a new game, and add ourselves to that game
     public async Task<Guid> CreateGame()
     {
         _gamesStarted++;
