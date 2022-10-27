@@ -88,7 +88,7 @@ public static int Add(int a, int b)
 }
 ```
 
-After the native library library is built, the above C# `Add` method will be exported as a native `add` function to consumers of the library. Here are some limitations to consider when deciding what managed method to export:
+After the native library is built, the above C# `Add` method will be exported as a native `add` function to consumers of the library. Here are some limitations to consider when deciding what managed method to export:
 
 * Exported methods have to be static.
 * Exported methods can only naturally accept or return primitives or value types (i.e structs), they have to marshal all reference type arguments.
