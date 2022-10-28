@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ConsoleRandomAnswerGenerator": {
+      "commandName": "Project",
+      "commandLineArgs": "\"Is my future bright?\""
+    }
+  }
+}
