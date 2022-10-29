@@ -1,30 +1,13 @@
 ﻿using System;
-using System.Globalization;
 using System.Text.Json.Serialization;
 
-namespace WebAPIClient
+public sealed record class Repository(
+    [property: JsonPropertyName("name")] string Name,
+    [property: JsonPropertyName("description")] string Description,
+    [property: JsonPropertyName("html_url")] Uri GitHubHomeUrl,
+    [property: JsonPropertyName("homepage")] Uri Homepage,
+    [property: JsonPropertyName("watchers")] int Watchers,
+    [property: JsonPropertyName("pushed_at")] DateTime LastPushUtc)
 {
-    public class Repository
-    {
-        [JsonPropertyName("name")]
-        public string Name { get; set; }
-
-        [JsonPropertyName("description")]
-        public string Description { get; set; }
-
-        [JsonPropertyName("html_url")]
-        public Uri GitHubHomeUrl { get; set; }
-
-        [JsonPropertyName("homepage")]
-        public Uri Homepage { get; set; }
-
-        [JsonPropertyName("watchers")]
-        public int Watchers { get; set; }
-
-        [JsonPropertyName("pushed_at")]
-        public string JsonDate { get; set; }
-
-        public DateTime LastPush =>
-            DateTime.ParseExact(JsonDate, "yyyy-MM-ddTHH:mm:ssZ", CultureInfo.InvariantCulture);
-    }
+    public DateTime LastPush => LastPushUtc.ToLocalTime();
 }
