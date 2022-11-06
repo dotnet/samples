@@ -98,6 +98,7 @@ where `<Configuration>` is your project configuration (such as Debug or Release)
 The above command will drop a static library (Windows `.lib`, OSX/Linux `.a`) in `./bin/[configuration]/netstandard2.0/[RID]/publish/` folder and will have the same name as the folder in which your source file is present.
 
 When linking the generated static library, it is important to also include additional framework dependencies in the linker settings, and add `NativeAOT_StaticInitialization` to the symbol table. This can be accomplished by appending the following flag to the linker settings:
+
 * Windows: `/INCLUDE:NativeAOT_StaticInitialization`
 * Linux: `-Wl,--require-defined,NativeAOT_StaticInitialization`
 * macOS: `-Wl,-u,_NativeAOT_StaticInitialization`
