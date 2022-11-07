@@ -9,7 +9,7 @@ Create a .NET class library project using `dotnet new classlib -o NativeLibrary`
 ## Building shared libraries
 
 ```bash
-> dotnet publish /p:NativeLib=Shared /p:SelfContained=true -r <RID> -c <Configuration>
+> dotnet publish /p:NativeLib=Shared -r <RID> -c <Configuration>
 ```
 
 The above command will drop a shared library (Windows `.dll`, OSX `.dylib`, Linux `.so`) in `./bin/[configuration]/netstandard2.0/[RID]/publish/` folder and will have the same name as the folder in which your source file is present.
@@ -86,13 +86,13 @@ The sample [source code](Class1.cs) demonstrates common techniques used to stay 
 ## Building static libraries
 
 ```bash
-> dotnet publish /p:NativeLib=Static /p:SelfContained=true -r <RID> -c <Configuration>
+> dotnet publish /p:NativeLib=Static -r <RID> -c <Configuration>
 ```
 
 where `<Configuration>` is your project configuration (such as Debug or Release) and `<RID>` is the runtime identifier (one of win-x64, linux-x64, osx-x64). For example, if you want to publish a release configuration of your library for a 64-bit version of Windows the command would look like:
 
 ```bash
-> dotnet publish /p:NativeLib=Static /p:SelfContained=true -r win-x64 -c release
+> dotnet publish /p:NativeLib=Static -r win-x64 -c release
 ```
 
 The above command will drop a static library (Windows `.lib`, OSX/Linux `.a`) in `./bin/[configuration]/netstandard2.0/[RID]/publish/` folder and will have the same name as the folder in which your source file is present.
