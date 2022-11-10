@@ -19,6 +19,7 @@
         "**/framework/windows-workflow-foundation/**/*.vbproj",
         "**/windowsforms/MSIX-WindowsForms/WindowsFormsApp1/**/*.csproj",
         "**/wpf/WebSiteBrowser/**/*.csproj",
-        "**/wpf/WPF-WinRT/**/*.csproj"
+        "**/wpf/WPF-WinRT/**/*.csproj",
+        "**/core/porting/upgrade-assistant-wcf-framework/CalculatorSample/**/*.csproj"
     ]
 }
