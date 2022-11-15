@@ -22,6 +22,7 @@ Text in brackets are placeholders; replace the text with the requested informati
 <!-- Do not modify anything below this line -->
 
 ---
+
 #### Issue metadata
 
 * Issue type: sample-update

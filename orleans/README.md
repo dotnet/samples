@@ -40,11 +40,12 @@ Publishers send out short *"Chirp"* messages (not to be confused with *"Tweets"*
 
 ### Demonstrates
 
-* How to build a simplified social media / social network application using Orleans 
+* How to build a simplified social media / social network application using Orleans
 * How to store state within a grain using grain persistence (`IPersistentState<T>`)
 * Grains which implement multiple grain interfaces
 * Reentrant grains, which allow for multiple grain calls to be executed concurrently, in a single-threaded, interleaving fashion
 * Using a *grain observer* (`IGrainObserver`) to receive push notifications from grains
+
 ## [GPS Tracker](./GPSTracker/#readme)
 
 <p align="center">
@@ -92,7 +93,6 @@ A presence service tracks players and game sessions in near-real-time.
 
 * A simplified version of a real-world use of Orleans
 * Using a *grain observer* (`IGrainObserver`) to receive push notifications from grains
-
 
 ## [Tic Tac Toe](./TicTacToe/#readme)
 
@@ -221,6 +221,7 @@ A *Hello, World!* application using F#.
 ## [F# Hello World written in F# end to end](https://github.com/PiotrJustyna/road-to-orleans/tree/main/5a#readme)
 
 In-memory clustering example where everything is written in F#:
+
 * Clustered Silos
 * Concurrent Clients
 * Grains

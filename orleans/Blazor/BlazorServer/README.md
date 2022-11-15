@@ -49,6 +49,6 @@ The application manages this data via direct calls to supporting grains in the O
 The application subscribes to individual changes to this list via Orleans Streams.
 This allows it to keep the todo list updated in real-time, upon changes from other browser sessions.
 Changes are rendered and sent in real-time to the browser via the underlying SignalR infrastructure in Blazor.
- 
+
 To demonstrate real-time server updates, open multiple browser windows showing the server-side todo demo,
 and then proceed to perform changes to the todo list from any window. The other windows will mirror the update in real-time.

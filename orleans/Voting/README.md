@@ -15,8 +15,8 @@ The application can be run locally by executing:
 dotnet run -c Release -- --environment Development --urls http://localhost:5000
 ```
 
-Once the application starts, open a browser to http://localhost:5000 to play with the app.
-The Orleans Dashboard will be available at http://localhost:8888.
+Once the application starts, open a browser to <http://localhost:5000> to play with the app.
+The Orleans Dashboard will be available at <http://localhost:8888>.
 The application can also be deployed to Kubernetes.
 The key file for deploying this sample to Kubernetes is [`deployment.yaml`](./deployment.yaml), which describes the required Kubernetes resources.
 Before deploying the app, you will need to provision the following resources:
@@ -258,7 +258,7 @@ kubectl get pods --watch
 
 If no errors were encountered, then the pods should all enter the *Running* state, at which point we can find out what IP address was provisioned for our service by querying the `votingapp` service object which we created:
 
-``` PowerShell 
+``` PowerShell
 kubectl get service votingapp
 ```
 
