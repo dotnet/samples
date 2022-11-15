@@ -1,34 +1,47 @@
-using Orleans;
-using Orleans.Hosting;
-using VotingData;
+using Voting.Data;
 
-await Host.CreateDefaultBuilder(args)
-    .UseOrleans((ctx, builder) =>
+var builder = WebApplication.CreateBuilder(args);
+builder.Host.UseOrleans((ctx, orleansBuilder) =>
+{
+    if (ctx.HostingEnvironment.IsDevelopment())
     {
-        if (ctx.HostingEnvironment.IsDevelopment())
-        {
-            builder.UseLocalhostClustering();
-            builder.AddMemoryGrainStorage("votes");
-        }
-        else
-        {
-            // In Kubernetes, we use environment variables and the pod manifest
-            builder.UseKubernetesHosting();
-
-            // Use Redis for clustering & persistence
-            var redisAddress = $"{Environment.GetEnvironmentVariable("REDIS")}:6379";
-            builder.UseRedisClustering(options => options.ConnectionString = redisAddress);
-            builder.AddRedisGrainStorage("votes", options => options.ConnectionString = redisAddress);
-        }
-
-        builder.UseDashboard(options =>
-        {
-            options.Port = 8888;
-        })
-        .ConfigureApplicationParts(parts => parts.AddApplicationPart(typeof(VoteGrain).Assembly));
-    })
-    .ConfigureWebHostDefaults(webBuilder =>
+        // During development time, we don't want to have to deal with
+        // storage emulators or other dependencies. Just "Hit F5" to run.
+        orleansBuilder
+            .UseLocalhostClustering()
+            .AddMemoryGrainStorage("votes");
+    }
+    else
     {
-        webBuilder.UseStartup<Startup>();
-    })
-    .RunConsoleAsync();
+        // In Kubernetes, we use environment variables and the pod manifest
+        //orleansBuilder.UseKubernetesHosting();
+
+        // Use Redis for clustering & persistence
+        //var redisAddress = $"{Environment.GetEnvironmentVariable("REDIS")}:6379";
+        //orleansBuilder.UseRedisClustering(options => options.ConnectionString = redisAddress);
+        //orleansBuilder.AddRedisGrainStorage("votes", options => options.ConnectionString = redisAddress);
+    }
+});
+
+// Add services to the container.
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddScoped<PollService>();
+builder.Services.AddScoped<DemoService>();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseRouting();
+app.MapBlazorHub();
+app.MapFallbackToPage("/_Host");
+app.Run();

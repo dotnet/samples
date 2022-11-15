@@ -1,24 +1,12 @@
----
-languages:
-- csharp
-products:
-- dotnet
-- dotnet-orleans
-page_type: sample
-name: "Orleans BankAccount ACID transactions"
-urlFragment: "orleans-bank-account-acid-transactions"
-description: "An example of a BankAccount using ACID transactions."
----
-
-# Orleans Bank Account with ACID transactions
+# BankAccount - ACID transactions between grains
 
 This sample demonstrates how to implement ACID transactions using Orleans using a bank account scenario.
 There are two kinds of grains:
 
 ![BankClient application running in a terminal](./assets/BankClient.png)
 
-* `AccountGrain`, which implements `IAccountGrain`, simulates a bank account with a balance.
-* `AtmGrain`, which implements `IAtmGrain`, simulates an Automatic Teller Machine that allows transfers between two bank accounts.
+* `AccountGrain`, which implements `IAccountGrain`, simulates a bank account with an balance.
+* `AtmGrain`, which implements `IAtmGrain`, simulates an Automatic Teller Machine which allows transfers between two bank accounts.
 
 `AtmGrain` has this interface:
 
@@ -47,15 +35,12 @@ public interface IAccountGrain : IGrainWithGuidKey
 ```
 
 The `[Transaction(option)]` attributes on the grain methods tell the runtime that these methods are transactional.
-The `IAtmGrain.Transfer` method creates a transaction, while the `IAccountGrain.Withdraw` and `IAccountGrain.Deposit` methods must be called in the context of existing transactions.
+The `IAtmGrain.Transfer` method creates a transation, while the `IAccountGrain.Withdraw` and `IAccountGrain.Deposit` methods must be called in the context of an existing transactions.
 
 `AtmGrain.Transfer(...)` is implemented as follows:
 
 ```csharp
-public async Task Transfer(
-    IAccountGrain fromAccount,
-    IAccountGrain toAccount,
-    uint amountToTransfer)
+public async Task Transfer(IAccountGrain fromAccount, IAccountGrain toAccount, uint amountToTransfer)
 {
     await Task.WhenAll(
         fromAccount.Withdraw(amountToTransfer),
@@ -87,22 +72,7 @@ public Task Withdraw(uint amount) => _balance.PerformUpdate(x =>
 });
 ```
 
-## Sample prerequisites
-
-This sample is written in C# and targets .NET 6. It requires the [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0) or later.
-
-## Building the sample
-
-To download and run the sample, follow these steps:
-
-1. Download and unzip the sample.
-2. In Visual Studio (2022 or later):
-    1. On the menu bar, choose **File** > **Open** > **Project/Solution**.
-    2. Navigate to the folder that holds the unzipped sample code, and open the C# project (.csproj) file.
-    3. Choose the <kbd>F5</kbd> key to run with debugging, or <kbd>Ctrl</kbd>+<kbd>F5</kbd> keys to run the project without debugging.
-3. From the command line:
-   1. Navigate to the folder that holds the unzipped sample code.
-   2. At the command line, type [`dotnet run`](https://docs.microsoft.com/dotnet/core/tools/dotnet-run).
+## Running the sample
 
 First start the *BankServer* process
 
@@ -118,15 +88,15 @@ dotnet run --project BankClient
 
 The client will issue transactions between random accounts in a loop, printing the results. For example:
 
-```console
-We transferred 100 credits from Pasqualino to Ida.
+```
+We transfered 100 credits from Pasqualino to Ida.
 Pasqualino balance: 1500
 Ida balance: 1600
 ```
 
 When a withdraw would overdraw an account, the client will print an error like so:
 
-```console
-Error transferring 100 credits from Derick to Xaawo: Transaction 2edc92f5-a94d-4167-9522-fa661cc030ff Aborted because of an unhandled exception in a grain method call. See InnerException for details.
+```
+Error transfering 100 credits from Derick to Xaawo: Transaction 2edc92f5-a94d-4167-9522-fa661cc030ff Aborted because of an unhandled exception in a grain method call. See InnerException for details.
         InnerException: Withdrawing 100 credits from account "Derick" would overdraw it. This account has 0 credits.
 ```

@@ -1,16 +1,4 @@
----
-languages:
-- csharp
-products:
-- dotnet
-- dotnet-orleans
-page_type: sample
-name: "Orleans Transport Layer Security (TLS) sample"
-urlFragment: "orleans-transport-layer-security-tls"
-description: "An Orleans sample demonstrating transport layer security (TLS)."
----
-
-# Orleans Transport Layer Security (TLS) sample
+# Transport Layer Security (TLS) Sample
 
 This sample demonstrates a client and silo which communicate over a channel secured by mutual Transport Layer Security (mTLS).
 
@@ -44,30 +32,15 @@ siloBuilder.UseTls(
     })
 ```
 
-## Sample prerequisites
+## Running the sample
 
-This sample is written in C# and targets .NET 6. It requires the [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0) or later.
-
-## Building the sample
-
-To download and run the sample, follow these steps:
-
-1. Download and unzip the sample.
-2. In Visual Studio (2022 or later):
-    1. On the menu bar, choose **File** > **Open** > **Project/Solution**.
-    2. Navigate to the folder that holds the unzipped sample code, and open the C# project (.csproj) file.
-    3. Choose the <kbd>F5</kbd> key to run with debugging, or <kbd>Ctrl</kbd>+<kbd>F5</kbd> keys to run the project without debugging.
-3. From the command line:
-   1. Navigate to the folder that holds the unzipped sample code.
-   2. At the command line, type [`dotnet run`](https://docs.microsoft.com/dotnet/core/tools/dotnet-run).
-
-For the sample, we will generate and use a self-signed certificate.
+For the purpose of the sample, we will generate and use a self-signed certificate.
 
 ***NOTE:*** Ensure that security best practices are followed when deploying your application to a production environment.
 
 A self-signed certificate can be generated & installed using PowerShell:
 
-```powershell
+``` powershell
 $cert = New-SelfSignedCertificate -CertStoreLocation Cert:\CurrentUser\My -DnsName "fakedomain.faketld"
 ```
 
@@ -75,18 +48,18 @@ Now that the certificate configured in the sample is installed, run the client a
 
 Start the silo using the following command:
 
-```powershell
+``` powershell
 dotnet run --project TLS.Server
 ```
 
 Start the client in a different command window using the following command:
 
-```powershell
+``` powershell
 dotnet run --project TLS.Client
 ```
 
 Once you have successfully run the sample, remove the self-signed certificate which was generated above:
 
-```powershell
+``` powershell
 Remove-Item "Cert:\CurrentUser\My\$($cert.ThumbPrint)"
 ```

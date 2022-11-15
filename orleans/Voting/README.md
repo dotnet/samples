@@ -1,49 +1,25 @@
----
-languages:
-- csharp
-products:
-- dotnet
-- dotnet-orleans
-page_type: sample
-name: "Orleans Voting sample app on Kubernetes"
-urlFragment: "orleans-voting-sample-app-on-kubernetes"
-description: "An Orleans sample demonstrating a voting app on Kubernetes."
----
-
-# Orleans Voting sample app on Kubernetes
+# Voting - Orleans on Kubernetes
 
 ![A screenshot of the application](./screenshot.png)
 
-This is an [Orleans](https://github.com/dotnet/orleans) sample application that demonstrates deployment to Kubernetes. The application is a simplistic Web app for voting on a custom set of options. The application uses [.NET Generic Host](https://docs.microsoft.com/dotnet/core/extensions/generic-host) to co-host [ASP.NET Core](https://docs.microsoft.com/aspnet/core) and Orleans as well as the [Orleans Dashboard](https://github.com/OrleansContrib/OrleansDashboard) together in the same process.
+This is an [Orleans](https://github.com/dotnet/orleans) sample application which demonstrates deployment to Kubernetes.
+The application is a simplistic Web app for voting on a custom set of options.
+The application uses [.NET Generic Host](https://docs.microsoft.com/dotnet/core/extensions/generic-host) to co-host [ASP.NET Core](https://docs.microsoft.com/aspnet/core) and Orleans as well as the [Orleans Dashboard](https://github.com/OrleansContrib/OrleansDashboard) together in the same process.
 
 ![A screenshot of the Orleans dashboard](./dashboard.png)
 
 The Web app sends HTTP requests which are handled by ASP.NET Core MVC controllers which call into Orleans grains.
-
-## Sample prerequisites
-
-This sample is written in C# and targets .NET 6. It requires the [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0) or later.
-
-## Building the sample
-
-To download and run the sample, follow these steps:
-
-1. Download and unzip the sample.
-2. In Visual Studio (2022 or later):
-    1. On the menu bar, choose **File** > **Open** > **Project/Solution**.
-    2. Navigate to the folder that holds the unzipped sample code, and open the C# project (.csproj) file.
-    3. Choose the <kbd>F5</kbd> key to run with debugging, or <kbd>Ctrl</kbd>+<kbd>F5</kbd> keys to run the project without debugging.
-3. From the command line:
-   1. Navigate to the folder that holds the unzipped sample code.
-   2. At the command line, type [`dotnet run`](https://docs.microsoft.com/dotnet/core/tools/dotnet-run).
-
 The application can be run locally by executing:
 
-```powershell
+``` PowerShell
 dotnet run -c Release -- --environment Development --urls http://localhost:5000
 ```
 
-Once the application starts, open a browser to <http://localhost:5000> to play with the app. The Orleans Dashboard will be available at <http://localhost:8888.> The application can also be deployed to Kubernetes. The key file for deploying this sample to Kubernetes is [`deployment.yaml`](./deployment.yaml), which describes the required Kubernetes resources. Before deploying the app, you will need to provision the following resources:
+Once the application starts, open a browser to http://localhost:5000 to play with the app.
+The Orleans Dashboard will be available at http://localhost:8888.
+The application can also be deployed to Kubernetes.
+The key file for deploying this sample to Kubernetes is [`deployment.yaml`](./deployment.yaml), which describes the required Kubernetes resources.
+Before deploying the app, you will need to provision the following resources:
 
 * A resource group
 * An Azure Container Registry (ACR) container registry
@@ -51,9 +27,9 @@ Once the application starts, open a browser to <http://localhost:5000> to play w
 * A Service Principal which allows AKS to access ACR
 
 The [`provision.ps1`](./provision.ps1) script attempts to automate these steps, with some required names defined at the top of the script.
-It is best to execute the following steps in a **PowerShell** terminal one-by-one since the script performs no error handling.
+It is best to execute the following steps in a **PowerShell** terminal one-by-one, since the script performs no error handling.
 
-```azurecli
+``` PowerShell
 # Choose some resource names. Note that some of these are globally unique across all of Azure, so you will need to change these values.
 $resourceGroup = "votingapp"
 $location = "westus"
@@ -246,14 +222,18 @@ roleRef:
   apiGroup: ''
 ```
 
-The file is large and could be intimidating at first, but the basic structure is to create two *Deployment* resources: one for Redis and one for our application. Each Deployment has a corresponding *Service* which is used for routing traffic. In addition, because this sample uses the `Microsoft.Orleans.Kubernetes.Hosting` package, which queries the Kubernetes API, you will need to provision a *Role* and corresponding *RoleBinding* if your cluster is RBAC enabled. The `deployment.yaml` file contains one section for each of those resources, separated by `---`.
+The file is large and could be intimidating at first, but the basic structure is to create two *Deployment* resources: one for Redis and one for our application.
+Each Deployment has a corresponding *Service* which is used for routing traffic.
+In addition, because this sample uses the `Microsoft.Orleans.Kubernetes.Hosting` package, which queries the Kubernetes API, you will need to provision a *Role* and corresponding *RoleBinding* if your cluster is RBAC enabled.
+The `deployment.yaml` file contains one section for each of those resources, separated by `---`.
 
-With the `deployment.yaml` file created, now we need to build and deploy the application. Use `docker` to copy the source into a new build container and build the application, then copy the result into a fresh layer.
+With the `deployment.yaml` file created, now we need to build and deploy the application.
+Use `docker` to copy the source into a new build container and build the application, then copy the result into a fresh layer.
 
 Execute the following to build the container image, push it to Azure Container Registry, and deploy the `deployment.yaml` file to Kubernetes.
 Note that you will need to substitute the variable names as you did when provisioning the resources.
 
-```azurepowershell
+``` PowerShell
 $resourceGroup = "votingapp"
 $containerRegistry = "votingappacr"
 
@@ -272,13 +252,13 @@ Similarly, re-applying the `deployment.yaml` file is not necessary if it is unch
 
 If all of the previous steps succeeded, then we can watch the changes in the active pods:
 
-```powershell
+``` PowerShell
 kubectl get pods --watch
 ```
 
 If no errors were encountered, then the pods should all enter the *Running* state, at which point we can find out what IP address was provisioned for our service by querying the `votingapp` service object which we created:
 
-```powershell
+``` PowerShell 
 kubectl get service votingapp
 ```
 
