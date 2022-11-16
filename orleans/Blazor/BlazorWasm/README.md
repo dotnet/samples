@@ -6,7 +6,7 @@ products:
 - dotnet-orleans
 page_type: sample
 name: "Orleans ASP.NET Core Blazor WebAssembly sample"
-urlFragment: "orleans-aspnet-core-blazor-server-sample"
+urlFragment: "orleans-aspnet-core-blazor-wasm-sample"
 description: "An example of an Orleans sample using Blazor and ASP.NET Core."
 ---
 
