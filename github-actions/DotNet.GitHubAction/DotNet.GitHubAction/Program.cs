@@ -71,9 +71,14 @@ static async Task StartAnalysisAsync(ActionInputs inputs, IHost host)
     }
 
     // https://docs.github.com/actions/reference/workflow-commands-for-github-actions#setting-an-output-parameter
-    Console.WriteLine($"::set-output name=updated-metrics::{updatedMetrics}");
-    Console.WriteLine($"::set-output name=summary-title::{title}");
-    Console.WriteLine($"::set-output name=summary-details::{summary}");
+    // ::set-output deprecated as mentioned in https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/
+    var githubOutputFile = Environment.GetEnvironmentVariable("GITHUB_OUTPUT", EnvironmentVariableTarget.Process);
+    using (var textWriter = new StreamWriter(githubOutputFile!, true, Encoding.UTF8))
+    {
+        textWriter.WriteLine($"updated-metrics={updatedMetrics}");
+        textWriter.WriteLine($"summary-title={title}");
+        textWriter.WriteLine($"summary-details={summary}");
+    }
 
     Environment.Exit(0);
 }
@@ -86,7 +91,7 @@ parser.WithNotParsed(
             .CreateLogger("DotNet.GitHubAction.Program")
             .LogError(
                 string.Join(Environment.NewLine, errors.Select(error => error.ToString())));
-        
+
         Environment.Exit(2);
     });
 
