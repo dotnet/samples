@@ -2,7 +2,6 @@ using Common;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Orleans.Hosting;
 
 using Silo;
 
@@ -23,7 +22,7 @@ catch (Exception ex)
     return 1;
 }
 
-static void ConfigureSilo(ISiloBuilder siloBuilder)
+static void ConfigureSilo(HostBuilderContext context, ISiloBuilder siloBuilder)
 {
     var secrets = Secrets.LoadFromFile()!;
     siloBuilder

@@ -6,7 +6,7 @@ products:
 - dotnet-orleans
 page_type: sample
 name: "Orleans ASP.NET Core Blazor WebAssembly sample"
-urlFragment: "orleans-aspnet-core-blazor-server-sample"
+urlFragment: "orleans-aspnet-core-blazor-wasm-sample"
 description: "An example of an Orleans sample using Blazor and ASP.NET Core."
 ---
 
@@ -21,7 +21,7 @@ The application is based on the [official tutorial](https://dotnet.microsoft.com
 
 ## Sample prerequisites
 
-This sample is written in C# and targets .NET 6. It requires the [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0) or later.
+This sample is written in C# and targets .NET 7.0. It requires the [.NET 7.0 SDK](https://dotnet.microsoft.com/download/dotnet/7.0) or later.
 
 ## Building the sample
 

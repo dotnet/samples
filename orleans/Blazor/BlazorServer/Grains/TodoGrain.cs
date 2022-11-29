@@ -1,6 +1,6 @@
-using BlazorServer.Models;
-using Orleans;
+﻿using BlazorServer.Models;
 using Orleans.Runtime;
+using Orleans.Streams;
 
 namespace BlazorServer;
 
@@ -42,9 +42,10 @@ public class TodoGrain : Grain, ITodoGrain
         _logger.LogInformation(
             "{@GrainType} {@GrainKey} now contains {@Todo}",
             GrainType, GrainKey, item);
-
+        
         // Notify listeners - best effort only
-        GetStreamProvider("SMS").GetStream<TodoNotification>(item.OwnerKey, nameof(ITodoGrain))
+        var streamId = StreamId.Create(nameof(ITodoGrain), item.OwnerKey);
+        this.GetStreamProvider("MemoryStreams").GetStream<TodoNotification>(streamId)
             .OnNextAsync(new TodoNotification(item.Key, item))
             .Ignore();
     }
@@ -71,7 +72,8 @@ public class TodoGrain : Grain, ITodoGrain
             GrainType, GrainKey);
 
         // Notify listeners - best effort only
-        GetStreamProvider("SMS").GetStream<TodoNotification>(ownerKey, nameof(ITodoGrain))
+        var streamId = StreamId.Create(nameof(ITodoGrain), ownerKey);
+        this.GetStreamProvider("MemoryStreams").GetStream<TodoNotification>(streamId)
             .OnNextAsync(new TodoNotification(itemKey, null))
             .Ignore();
 
@@ -79,8 +81,10 @@ public class TodoGrain : Grain, ITodoGrain
         DeactivateOnIdle();
     }
 
+    [GenerateSerializer]
     public class State
     {
+        [Id(0)]
         public TodoItem? Item { get; set; }
     }
 }
