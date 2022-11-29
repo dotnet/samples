@@ -1,5 +1,3 @@
-
-using Orleans;
 using Orleans.Concurrency;
 
 namespace TicTacToe.Grains;
@@ -13,7 +11,7 @@ public class GameGrain : Grain, IGameGrain
     // list of players in the current game
     // for simplicity, player 0 always plays an "O" and player 1 plays an "X"
     //  who starts a game is a random call once a game is started, and is set via indexNextPlayerToMove
-    private List<Guid> _playerIds = new();
+    public List<Guid> _playerIds = new();
     private int _indexNextPlayerToMove;
 
     private GameState _gameState;
@@ -30,7 +28,7 @@ public class GameGrain : Grain, IGameGrain
     private string _name = null!;
 
     // initialise 
-    public override Task OnActivateAsync()
+    public override Task OnActivateAsync(CancellationToken token)
     {
         // make sure newly formed game is in correct state 
         _playerIds = new List<Guid>();
@@ -42,7 +40,7 @@ public class GameGrain : Grain, IGameGrain
         _winnerId = Guid.Empty;
         _loserId = Guid.Empty;
 
-        return base.OnActivateAsync();
+        return base.OnActivateAsync(token);
     }
 
     // add a player into a game
@@ -76,7 +74,7 @@ public class GameGrain : Grain, IGameGrain
         if (_playerIds.IndexOf(move.PlayerId) < 0) throw new ArgumentException("No such playerid for this game", "move");
         if (move.PlayerId != _playerIds[_indexNextPlayerToMove]) throw new ArgumentException("The wrong player tried to make a move", "move");
 
-        if (move.X is < 0 or > 2 || move.Y is < 0 or > 2) throw new ArgumentException("Bad co-ordinates for a move", "move");
+        if (move.X < 0 || move.X > 2 || move.Y < 0 || move.Y > 2) throw new ArgumentException("Bad co-ordinates for a move", "move");
         if (_board[move.X, move.Y] != -1) throw new ArgumentException("That square is not empty", "move");
 
         // record move
@@ -109,7 +107,11 @@ public class GameGrain : Grain, IGameGrain
         }
 
         // check for draw
-        bool draw = _moves.Count is 9;
+        var draw = false;
+        if (_moves.Count is 9)
+        {
+            draw = true;  // we could try to look for stalemate earlier, if we wanted 
+        }
 
         // handle end of game
         if (win || draw)
@@ -135,7 +137,7 @@ public class GameGrain : Grain, IGameGrain
             return _gameState;
         }
 
-        // if game hasn't ended, prepare for next players move
+        // if game hasnt ended, prepare for next players move
         _indexNextPlayerToMove = (_indexNextPlayerToMove + 1) % 2;
         return _gameState;
     }

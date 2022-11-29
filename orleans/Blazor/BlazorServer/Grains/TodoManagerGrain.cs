@@ -1,5 +1,4 @@
 using System.Collections.Immutable;
-using Orleans;
 using Orleans.Runtime;
 
 namespace BlazorServer;
@@ -29,8 +28,10 @@ public class TodoManagerGrain : Grain, ITodoManagerGrain
     public Task<ImmutableArray<Guid>> GetAllAsync() =>
         Task.FromResult(ImmutableArray.CreateRange(_state.State.Items));
 
+    [GenerateSerializer]
     public class State
     {
+        [Id(0)]
         public HashSet<Guid> Items { get; set; } = new();
     }
 }

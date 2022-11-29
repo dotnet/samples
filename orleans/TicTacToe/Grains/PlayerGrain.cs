@@ -1,5 +1,3 @@
-using Orleans;
-
 namespace TicTacToe.Grains;
 
 public class PlayerGrain : Grain, IPlayerGrain
@@ -13,7 +11,7 @@ public class PlayerGrain : Grain, IPlayerGrain
 
     private string _username = null!;
 
-    public override Task OnActivateAsync()
+    public override Task OnActivateAsync(CancellationToken token)
     {
         _activeGames = new List<Guid>();
         _pastGames = new List<Guid>();
@@ -22,7 +20,7 @@ public class PlayerGrain : Grain, IPlayerGrain
         _loses = 0;
         _gamesStarted = 0;
 
-        return base.OnActivateAsync();
+        return base.OnActivateAsync(token);
     }
 
     public async Task<PairingSummary[]> GetAvailableGames()
@@ -31,7 +29,7 @@ public class PlayerGrain : Grain, IPlayerGrain
         return (await grain.GetGames()).Where(x => !_activeGames.Contains(x.GameId)).ToArray();
     }
 
-    // create a new game, and add ourselves to that game
+    // create a new game, and add oursleves to that game
     public async Task<Guid> CreateGame()
     {
         _gamesStarted++;
