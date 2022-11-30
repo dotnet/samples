@@ -25,7 +25,7 @@ The sample demonstrates the following features of Orleans:
 * Reentrant grains - for allowing multiple calls to concurrently interleave each other
 * Grain observers - for sending push messages back to clients
 
-In this project, in-memory persistence is used (see _Program.cs_), but it can be substituted for a persistence provider of your choice without changing the grain code. Only the configuration needs to change to use a different persistence provider.
+In this project, in-memory persistence is used (see *Program.cs*), but it can be substituted for a persistence provider of your choice without changing the grain code. Only the configuration needs to change to use a different persistence provider.
 
 ## Why Orleans
 
@@ -43,7 +43,7 @@ There is also an `IChirperViewer` observer interface for applications to subscri
 
 ## Sample prerequisites
 
-This sample is written in C# and targets .NET 6. It requires the [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0) or later.
+This sample is written in C# and targets .NET 7.0. It requires the [.NET 7.0 SDK](https://dotnet.microsoft.com/download/dotnet/7.0) or later.
 
 ## Building the sample
 

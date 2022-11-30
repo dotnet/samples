@@ -1,7 +1,6 @@
 using Common;
 using GrainInterfaces;
 using Microsoft.Extensions.Logging;
-using Orleans;
 using Orleans.Streams;
 using Orleans.Streams.Core;
 
@@ -63,7 +62,7 @@ public class ConsumerGrain : Grain, IConsumerGrain, IStreamSubscriptionObserver
         await handle.ResumeAsync(_observer);
     }
 
-    public override Task OnActivateAsync()
+    public override Task OnActivateAsync(CancellationToken cancellationToken)
     {
         _logger.LogInformation("OnActivateAsync");
         return Task.CompletedTask;
