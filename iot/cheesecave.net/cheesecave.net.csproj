@@ -11,7 +11,7 @@
     <PackageReference Include="System.Device.Gpio" Version="2.1.0" />
     <PackageReference Include="Microsoft.Azure.Devices.Client" Version="1.41.1" />
     <PackageReference Include="Microsoft.Azure.Devices.Shared" Version="1.30.2" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
   </ItemGroup>
 
 </Project>
