@@ -1,7 +1,0 @@
-<Project>
-  <!-- Shared properties -->
-  <PropertyGroup>
-    <SourceRoot>$(MSBuildThisFileDirectory)</SourceRoot>
-    <BinRoot>$(MSBuildThisFileDirectory)bin</BinRoot>
-  </PropertyGroup>
-</Project>

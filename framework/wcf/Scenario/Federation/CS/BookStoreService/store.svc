@@ -1,1 +1,0 @@
-﻿<%@ServiceHost language="c#" Factory="Microsoft.Samples.Federation.BookStoreServiceHostFactory" %>

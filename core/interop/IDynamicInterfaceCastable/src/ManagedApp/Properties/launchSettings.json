@@ -1,9 +1,0 @@
-{
-  "profiles": {
-    "MarshalingSample": {
-      "commandName": "Executable",
-      "executablePath": "$(SolutionDir)\\..\\bin\\$(Configuration)\\IDynamicInterfaceCastableSample.exe",
-      "nativeDebugging": true
-    }
-  }
-}

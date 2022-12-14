@@ -1,6 +1,0 @@
-<Project Sdk="Microsoft.Build.Traversal">
-  <ItemGroup>
-    <ProjectReference Include="COMClient/*.csproj" />
-    <ProjectReference Include="COMServer/*.csproj" />
-  </ItemGroup>
-</Project>

@@ -1,3 +1,0 @@
-<%@ServiceHost language="c#" Debug="true" Service="Microsoft.Samples.WebForms.WeatherService" %>
-
-

@@ -1,9 +1,0 @@
-{
-  "profiles": {
-    "MarshalingSample": {
-      "commandName": "Executable",
-      "executablePath": "$(SolutionDir)\\..\\bin\\$(Configuration)\\MarshalingSample.exe",
-      "nativeDebugging": true
-    }
-  }
-}

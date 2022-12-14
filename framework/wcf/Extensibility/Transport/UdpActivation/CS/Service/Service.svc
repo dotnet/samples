@@ -1,1 +1,0 @@
-<%@ ServiceHost Service="Microsoft.ServiceModel.Samples.CalculatorService" %>

@@ -1,4 +1,0 @@
-<%@ServiceHost language="VB" Debug="true" 
-Service="Microsoft.Samples.ComplexTypeAjaxService.CalculatorService" 
-Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>
-

@@ -1,2 +1,0 @@
-﻿<!--  Copyright (c) Microsoft Corporation.  All rights reserved. -->
-<%@ Control Language="C#" AutoEventWireup="true" CodeFile="HiringRequestHistory.ascx.cs" Inherits="Microsoft.Samples.WebClient.HiringRequestHistory" %>
