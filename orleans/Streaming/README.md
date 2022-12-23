@@ -5,7 +5,7 @@ products:
 - dotnet
 - dotnet-orleans
 page_type: sample
-name: "Orleans Stocks sample app"
+name: "Orleans Streaming sample apps"
 urlFragment: "orleans-streaming-samples"
 description: "A collection of Orleans sample apps demonstrating streaming capabilities."
 ---
