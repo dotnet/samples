@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <RootNamespace>Sudoku</RootNamespace>
     <StartupObject>Conways_Game_of_Life.Form1</StartupObject>
     <RootNamespace>Conways_Game_of_Life</RootNamespace>
