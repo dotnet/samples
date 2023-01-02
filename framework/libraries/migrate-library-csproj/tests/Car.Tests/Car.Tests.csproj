@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>netcodeapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
