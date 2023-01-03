@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp3.1;net48</TargetFrameworks>
+    <TargetFrameworks>net7.0;net48</TargetFrameworks>
     <ApplicationManifest Condition="'$(TargetFramework)' == 'net48'">netfx.manifest</ApplicationManifest>
-    <EnableComHosting Condition="'$(TargetFramework)' == 'netcoreapp3.1'">true</EnableComHosting>
-    <EnableRegFreeCom Condition="'$(TargetFramework)' == 'netcoreapp3.1'">true</EnableRegFreeCom>
+    <EnableComHosting Condition="'$(TargetFramework)' == 'net7.0'">true</EnableComHosting>
+    <EnableRegFreeCom Condition="'$(TargetFramework)' == 'net7.0'">true</EnableRegFreeCom>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,11 +12,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ClientTfm Include="netcoreapp3.1;net48" />
+    <ClientTfm Include="net7.0;net48" />
   </ItemGroup>
 
   <Target Name="ServerUsage_NetCore"
-          Condition="'$(NetFXServer)' != 'true' and '$(TargetFramework)' == 'netcoreapp3.1'"
+          Condition="'$(NetFXServer)' != 'true' and '$(TargetFramework)' == 'net7.0'"
           AfterTargets="Build">
     <Message Importance="High" Text="%0a************************************%0a*** $(MSBuildProjectName) usage instructions ***%0a************************************" />
     <Message Importance="High" Text="A RegFree COM manifest has been created for the server.%0aThe manifest '@(RegFreeComManifest->'%(Filename)%(Extension)')' must be included during server deployment.%0aThe Server project will copy all required outputs to the Client output directory." />

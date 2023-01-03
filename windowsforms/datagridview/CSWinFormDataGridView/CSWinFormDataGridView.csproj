@@ -1,8 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
-
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <RootNamespace>CSWinFormDataGridView</RootNamespace>
     <AssemblyName>CSWinFormDataGridView</AssemblyName>
     <UseWindowsForms>true</UseWindowsForms>
@@ -12,11 +11,10 @@
          AssemblyInfo.cs -->
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="7.0.0" />
   </ItemGroup>
-
   <!-- By default, all .cs and .resx files in the current
        directory or descendant directories will be included.
        Optionally, they can be updated as demonstrated here
@@ -54,7 +52,6 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-
   <ItemGroup>
     <Content Include="CustomDataGridViewColumn\ReadMe.md" />
     <Content Include="DataGridViewPaging\ReadMe.md" />
@@ -62,5 +59,4 @@
     <Content Include="JustInTimeDataLoading\ReadMe.md" />
     <Content Include="MultipleLayeredColumnHeader\ReadMe.md" />
   </ItemGroup>
-
 </Project>
