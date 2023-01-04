@@ -3,7 +3,7 @@
   <PropertyGroup>
     <LangVersion>6</LangVersion>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <RootNamespace>csharp6_starter</RootNamespace>
   </PropertyGroup>
 

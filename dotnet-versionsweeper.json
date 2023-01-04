@@ -20,6 +20,8 @@
         "**/windowsforms/MSIX-WindowsForms/WindowsFormsApp1/**/*.csproj",
         "**/wpf/WebSiteBrowser/**/*.csproj",
         "**/wpf/WPF-WinRT/**/*.csproj",
-        "**/core/porting/upgrade-assistant-wcf-framework/CalculatorSample/**/*.csproj"
+        "**/core/porting/upgrade-assistant-wcf-framework/CalculatorSample/**/*.csproj",
+        "**/core/extensions/ExcelDemo/ExcelDemo.csproj",
+        "**/core/extensions/VisioDemo/VisioDemo.csproj"
     ]
 }
