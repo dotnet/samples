@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net7.0-windows</TargetFramework>
     <RootNamespace>Sudoku</RootNamespace>
     <StartupObject>Sudoku.Form1</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
@@ -25,13 +25,11 @@
     <NoWarn />
     <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
   </PropertyGroup>
-
   <ItemGroup>
     <Import Include="System.Data" />
     <Import Include="System.Drawing" />
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
-
   <ItemGroup>
     <Compile Update="My Project\app.Designer.vb">
       <DesignTime>True</DesignTime>
@@ -39,7 +37,6 @@
       <DependentUpon>app.manifest</DependentUpon>
     </Compile>
   </ItemGroup>
-
   <ItemGroup>
     <None Update="My Project\app.manifest">
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
@@ -47,5 +44,7 @@
       <LastGenOutput>app.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
-
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="7.0.0" />
+  </ItemGroup>
 </Project>
