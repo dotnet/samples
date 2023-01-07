@@ -1,15 +1,12 @@
-// Licensed to the .NET Foundation under one or more agreements.
-// The .NET Foundation licenses this file to you under the MIT license.
-
 //On unix make sure to compile using -ldl and -pthread flags.
 
 //Set this value accordingly to your workspace settings
 #if defined(_WIN32)
-#define PathToLibrary "bin\\Debug\\net6.0\\win-x64\\native\\NativeLibrary.dll"
+#define PathToLibrary "bin\\Debug\\net7.0\\win-x64\\native\\NativeLibrary.dll"
 #elif defined(__APPLE__)
-#define PathToLibrary "./bin/Debug/net6.0/osx-x64/native/NativeLibrary.dylib"
+#define PathToLibrary "./bin/Debug/net7.0/osx-x64/native/NativeLibrary.dylib"
 #else
-#define PathToLibrary "./bin/Debug/net6.0/linux-x64/native/NativeLibrary.so"
+#define PathToLibrary "./bin/Debug/net7.0/linux-x64/native/NativeLibrary.so"
 #endif
 
 #ifdef _WIN32
@@ -60,6 +57,16 @@ int callSumFunc(char *path, char *funcName, int firstInt, int secondInt)
     #else
         void *handle = dlopen(path, RTLD_LAZY);
     #endif
+    if (!handle)
+    {
+#ifdef _WIN32
+        int errorCode = GetLastError();
+        printf("Failed to load library at specified path. Error code: %d\n", errorCode);
+#else
+        puts("Failed to load library at specified path");
+#endif
+        return -1;
+    }
 
     typedef int(*myFunc)(int,int);
     myFunc MyImport = (myFunc)symLoad(handle, funcName);
@@ -79,6 +86,16 @@ char *callSumStringFunc(char *path, char *funcName, char *firstString, char *sec
     #else
         void *handle = dlopen(path, RTLD_LAZY);
     #endif
+    if (!handle)
+    {
+#ifdef _WIN32
+        int errorCode = GetLastError();
+        printf("Failed to load library at specified path. Error code: %d\n", errorCode);
+#else
+        puts("Failed to load library at specified path");
+#endif
+        return nullptr;
+    }
 
     // Declare a typedef
     typedef char *(*myFunc)(char*,char*);
