@@ -3,6 +3,7 @@
 // See the LICENSE file in the project root for more information.
 
 #include "eventpipeeventprinter.h"
+#include <inttypes.h>
 
 using std::vector;
 using std::shared_ptr;
@@ -114,7 +115,7 @@ void EventPipeEventPrinter::PrintEvent(LPCWSTR providerName,
     PrintIndentLevel(1);
     printf("eventLevel: %d\n", metadata.level);
     PrintIndentLevel(1);
-    printf("eventKeywords: %lld\n", metadata.keywords);
+    printf("eventKeywords: %" PRIi64 "\n", metadata.keywords);
     PrintIndentLevel(1);
     printf("eventVersion: %d\n", metadata.version);
     PrintIndentLevel(1);
@@ -226,7 +227,7 @@ bool EventPipeEventPrinter::PrintType(EventPipeDataDescriptor type,
         {
             INT64 data = ReadFromBuffer<INT64>(eventData, cbEventData, offset);
             PrintIndentLevel(indentLevel);
-            printf("type Int64 value=%lld\n", data);
+            printf("type Int64 value=%" PRIi64 "\n", data);
         }
         break;
 
@@ -234,7 +235,7 @@ bool EventPipeEventPrinter::PrintType(EventPipeDataDescriptor type,
         {
             UINT64 data = ReadFromBuffer<UINT64>(eventData, cbEventData, offset);
             PrintIndentLevel(indentLevel);
-            printf("type Uint64 value=%llu\n", data);
+            printf("type Uint64 value=%" PRIu64 "\n", data);
         }
         break;
 

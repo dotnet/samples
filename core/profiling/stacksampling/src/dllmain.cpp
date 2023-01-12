@@ -3,32 +3,56 @@
 // See the LICENSE file in the project root for more information.
 
 #include "ClassFactory.h"
-
-const IID IID_IUnknown      = { 0x00000000, 0x0000, 0x0000, { 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46 } };
-
-const IID IID_IClassFactory = { 0x00000001, 0x0000, 0x0000, { 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46 } };
+#include "SampleProfiler.h"
 
 BOOL STDMETHODCALLTYPE DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved)
 {
     return TRUE;
 }
 
+void PrintGuid(REFGUID guid)
+{
+    printf("{%8.8lu-%4.4u-%4.4u-%2.2u%2.2u-%2.2u%2.2u%2.2u%2.2u%2.2u%2.2u}",
+           guid.Data1,
+           guid.Data2,
+           guid.Data3,
+           guid.Data4[0],
+           guid.Data4[1],
+           guid.Data4[2],
+           guid.Data4[3],
+           guid.Data4[4],
+           guid.Data4[5],
+           guid.Data4[6],
+           guid.Data4[7]);
+}
+
 extern "C" HRESULT STDMETHODCALLTYPE DllGetClassObject(REFCLSID rclsid, REFIID riid, LPVOID* ppv)
 {
+    printf("Sample dllmain\n");
     // {cf0d821e-299b-5307-a3d8-b283c03916dd}
     const GUID CLSID_CorProfiler = { 0xcf0d821e, 0x299b, 0x5307, { 0xa3, 0xd8, 0xb2, 0x83, 0xc0, 0x39, 0x16, 0xdd } };
 
     if (ppv == nullptr || rclsid != CLSID_CorProfiler)
     {
+        PrintGuid(rclsid);
+        printf("\n");
+        PrintGuid(CLSID_CorProfiler);
+        printf("\n");
+        PrintGuid(riid);
+        printf("\n");
+
+        printf("1 ppv=%p\n", ppv);
         return E_FAIL;
     }
 
-    auto factory = new ClassFactory;
+    auto factory = new ClassFactory<SampleProfiler>;
     if (factory == nullptr)
     {
+        printf("2\n");
         return E_FAIL;
     }
 
+    printf("3\n");
     return factory->QueryInterface(riid, ppv);
 }
 
