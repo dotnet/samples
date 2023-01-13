@@ -243,6 +243,11 @@ inline int operator!=(REFGUID guidOne, REFGUID guidOther)
 #define STATUS_STACK_OVERFLOW            ((DWORD   )0xC00000FDL)
 #define STATUS_CONTROL_C_EXIT            ((DWORD   )0xC000013AL)
 
+#define MAKE_HRESULT(sev,fac,code) \
+    ((HRESULT) (((ULONG)(sev)<<31) | ((ULONG)(fac)<<16) | ((ULONG)(code))) )
+#define MAKE_SCODE(sev,fac,code) \
+    ((SCODE) (((ULONG)(sev)<<31) | ((ULONG)(fac)<<16) | ((LONG)(code))) )
+
 #define SUCCEEDED(Status) ((HRESULT)(Status) >= 0)
 #define FAILED(Status) ((HRESULT)(Status)<0)
 #define IS_ERROR(Status) ((ULONG)(Status) >> 31 == SEVERITY_ERROR) // diff from win32

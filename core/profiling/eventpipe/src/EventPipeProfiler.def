@@ -1,4 +1,4 @@
-LIBRARY CorProfiler
+LIBRARY EventPipeProfiler
 EXPORTS
     DllGetClassObject             private
     

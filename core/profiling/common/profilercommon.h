@@ -4,6 +4,9 @@
 
 #pragma once
 
+#define COM_NO_WINDOWS_H
+#define NOMINMAX
+
 #ifndef WIN32
 #include "unix/profiler_defines.h"
 #else // !WIN32
