@@ -4,7 +4,6 @@
 
 #pragma once
 
-#ifndef WIN32
 #include <cstdlib>
 #include <cinttypes>
 #include <cstring>
@@ -37,6 +36,7 @@
 #define THIS                void
 
 #define DECLSPEC_NOVTABLE
+#define DECLSPEC_NORETURN __attribute__((noreturn))
 
 #define DECLARE_INTERFACE(iface)    interface DECLSPEC_NOVTABLE iface
 #define DECLARE_INTERFACE_(iface, baseiface)    interface DECLSPEC_NOVTABLE iface : public baseiface
@@ -214,6 +214,34 @@ inline int operator!=(REFGUID guidOne, REFGUID guidOther)
 
 #define SEVERITY_SUCCESS    0
 #define SEVERITY_ERROR      1
+
+#define STATUS_USER_APC                  ((DWORD   )0x000000C0L)
+#define STATUS_GUARD_PAGE_VIOLATION      ((DWORD   )0x80000001L)
+#define STATUS_DATATYPE_MISALIGNMENT     ((DWORD   )0x80000002L)
+#define STATUS_BREAKPOINT                ((DWORD   )0x80000003L)
+#define STATUS_SINGLE_STEP               ((DWORD   )0x80000004L)
+#define STATUS_LONGJUMP                  ((DWORD   )0x80000026L)
+#define STATUS_UNWIND_CONSOLIDATE        ((DWORD   )0x80000029L)
+#define STATUS_ACCESS_VIOLATION          ((DWORD   )0xC0000005L)
+#define STATUS_IN_PAGE_ERROR             ((DWORD   )0xC0000006L)
+#define STATUS_INVALID_HANDLE            ((DWORD   )0xC0000008L)
+#define STATUS_NO_MEMORY                 ((DWORD   )0xC0000017L)
+#define STATUS_ILLEGAL_INSTRUCTION       ((DWORD   )0xC000001DL)
+#define STATUS_NONCONTINUABLE_EXCEPTION  ((DWORD   )0xC0000025L)
+#define STATUS_INVALID_DISPOSITION       ((DWORD   )0xC0000026L)
+#define STATUS_ARRAY_BOUNDS_EXCEEDED     ((DWORD   )0xC000008CL)
+#define STATUS_FLOAT_DENORMAL_OPERAND    ((DWORD   )0xC000008DL)
+#define STATUS_FLOAT_DIVIDE_BY_ZERO      ((DWORD   )0xC000008EL)
+#define STATUS_FLOAT_INEXACT_RESULT      ((DWORD   )0xC000008FL)
+#define STATUS_FLOAT_INVALID_OPERATION   ((DWORD   )0xC0000090L)
+#define STATUS_FLOAT_OVERFLOW            ((DWORD   )0xC0000091L)
+#define STATUS_FLOAT_STACK_CHECK         ((DWORD   )0xC0000092L)
+#define STATUS_FLOAT_UNDERFLOW           ((DWORD   )0xC0000093L)
+#define STATUS_INTEGER_DIVIDE_BY_ZERO    ((DWORD   )0xC0000094L)
+#define STATUS_INTEGER_OVERFLOW          ((DWORD   )0xC0000095L)
+#define STATUS_PRIVILEGED_INSTRUCTION    ((DWORD   )0xC0000096L)
+#define STATUS_STACK_OVERFLOW            ((DWORD   )0xC00000FDL)
+#define STATUS_CONTROL_C_EXIT            ((DWORD   )0xC000013AL)
 
 #define SUCCEEDED(Status) ((HRESULT)(Status) >= 0)
 #define FAILED(Status) ((HRESULT)(Status)<0)
@@ -452,10 +480,14 @@ interface ITypeInfo;
 interface ITypeLib;
 interface IMoniker;
 
-#include "unknwn.h"
+// This is just to make the compiler happy with corhlpr.h, don't expect it to do
+// the right thing.
+#define RaiseException(x,y,w,z) \
+    do                          \
+    {                           \
+        _ASSERTE(false);        \
+        throw x;                \
+    }                           \
+    while(false)                \
 
-#else
-#define WCHAR(str) L##str
-#define PROFILER_STUB EXTERN_C void STDMETHODCALLTYPE
-#define UINT_PTR_FORMAT "llx"
-#endif
+#include "unknwn.h"

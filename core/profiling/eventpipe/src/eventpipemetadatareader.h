@@ -10,12 +10,7 @@
 #include <vector>
 #include <memory>
 #include <assert.h>
-#ifndef WIN32
-#include "profiler_pal.h"
-#endif // WIN32
-#include "cor.h"
-#include "corprof.h"
-#include "profilerstring.h"
+#include "profilercommon.h"
 
 enum class EventPipeTypeCode
 {

@@ -16,14 +16,9 @@
 #include <string>
 #include <condition_variable>
 #include <map>
-#ifndef WIN32
-#include "profiler_pal.h"
-#endif // WIN32
-#include "cor.h"
-#include "corprof.h"
+#include "profilercommon.h"
 #include "eventpipemetadatareader.h"
 #include "eventpipeeventprinter.h"
-#include "profilerstring.h"
 
 #define SHORT_LENGTH    32
 #define STRING_LENGTH  256
