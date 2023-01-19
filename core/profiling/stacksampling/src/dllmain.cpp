@@ -28,31 +28,20 @@ void PrintGuid(REFGUID guid)
 
 extern "C" HRESULT STDMETHODCALLTYPE DllGetClassObject(REFCLSID rclsid, REFIID riid, LPVOID* ppv)
 {
-    printf("Sample dllmain\n");
     // {cf0d821e-299b-5307-a3d8-b283c03916dd}
     const GUID CLSID_CorProfiler = { 0xcf0d821e, 0x299b, 0x5307, { 0xa3, 0xd8, 0xb2, 0x83, 0xc0, 0x39, 0x16, 0xdd } };
 
     if (ppv == nullptr || rclsid != CLSID_CorProfiler)
     {
-        PrintGuid(rclsid);
-        printf("\n");
-        PrintGuid(CLSID_CorProfiler);
-        printf("\n");
-        PrintGuid(riid);
-        printf("\n");
-
-        printf("1 ppv=%p\n", ppv);
         return E_FAIL;
     }
 
     auto factory = new ClassFactory<SampleProfiler>;
     if (factory == nullptr)
     {
-        printf("2\n");
         return E_FAIL;
     }
 
-    printf("3\n");
     return factory->QueryInterface(riid, ppv);
 }
 
