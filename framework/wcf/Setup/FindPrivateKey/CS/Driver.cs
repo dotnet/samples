@@ -216,7 +216,7 @@ namespace Microsoft.Samples.Tools.FindPrivateKey
             // Next try current user profile
             string currentUserProfile = System.Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 
-            // Search all sub directories
+            // Search all subdirectories.
             string userKeyDir = currentUserProfile + "\\Microsoft\\Crypto\\RSA\\";
 
             fs = System.IO.Directory.GetDirectories(userKeyDir);
