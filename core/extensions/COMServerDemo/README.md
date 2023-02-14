@@ -50,6 +50,16 @@ Program should output an estimated value of &#960;.
 
 Program should output an estimated value of &#960;.
 
+### Default AssemblyLoadContext
+
+1. Install .NET 8 or later.
+
+1. Navigate to the root directory and run `dotnet.exe build /p:DefaultALC=True`.
+
+1. Follow the instructions for COM server registration that were emitted during the build.
+
+1. Run the generated binary directly. For example, `COMClient\bin\Debug\net8.0\COMClient.exe`.
+
 **Note** The RegFree COM scenario requires a customized [application manifest](https://docs.microsoft.com/windows/desktop/sbscs/manifests) in the executing binary. This means that attempting to execute through `dotnet.exe` will not work and instead trigger a rebuild of the project.
 
 **Note** Running the "Registered COM" first and then immediately following it by "RegFree COM" will not work, since the build system will not correctly rebuild all files (the simple property change is not detected as a reason for a full rebuild). To fix this, run `dotnet clean` between the two samples.
