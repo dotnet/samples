@@ -173,7 +173,7 @@ namespace Microsoft.Samples.Tools.FindPrivateKey
 
 							Marshal.Copy(pBytes,keyFileBytes,0,cbBytes);
 
-							// Copy eveything except tailing null byte
+							// Copy everything except tailing null byte
 							keyFileName = System.Text.Encoding.ASCII.GetString(keyFileBytes, 0, keyFileBytes.Length-1);
 						}
 					}		
@@ -206,7 +206,7 @@ namespace Microsoft.Samples.Tools.FindPrivateKey
             // set up searching directory
             string machineKeyDir = allUserProfile + "\\Microsoft\\Crypto\\RSA\\MachineKeys";
 
-            // Seach the key file
+            // Search the key file
             string[] fs = System.IO.Directory.GetFiles(machineKeyDir, keyFileName);
 
             // If found
@@ -216,7 +216,7 @@ namespace Microsoft.Samples.Tools.FindPrivateKey
             // Next try current user profile
             string currentUserProfile = System.Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 
-            // seach all sub directory
+            // Search all subdirectories.
             string userKeyDir = currentUserProfile + "\\Microsoft\\Crypto\\RSA\\";
 
             fs = System.IO.Directory.GetDirectories(userKeyDir);
