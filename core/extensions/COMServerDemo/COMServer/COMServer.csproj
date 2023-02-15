@@ -16,6 +16,7 @@
             COMServer.X.manifest
     -->
     <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework Condition="'$(DefaultALC)' == 'True'">net8.0</TargetFramework>
 
     <!-- Indicate the assembly is providing a COM server -->
     <EnableComHosting>True</EnableComHosting>
@@ -27,6 +28,12 @@
   <ItemGroup>
     <!-- Used in lieu of a Primary Interop Assembly (PIA) -->
     <Compile Include="../COMContract/*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <RuntimeHostConfigurationOption Condition="'$(DefaultALC)' == 'True'"
+        Include="System.Runtime.InteropServices.COM.LoadComponentInDefaultContext"
+        Value="true" />
   </ItemGroup>
 
   <Target Name="ServerUsage"
