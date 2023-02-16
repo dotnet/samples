@@ -40,10 +40,10 @@ To download and run the sample, follow these steps:
 - [Implement the `IHostedService` interface][timer-svc]
 - [Deploy a Worker Service to Azure][cloud-svc]
 
-[workers]: https://docs.microsoft.com/dotnet/core/extensions/workers
-[queue]: https://docs.microsoft.com/dotnet/core/extensions/queue-service
-[scoped-bgs]: https://docs.microsoft.com/dotnet/core/extensions/scoped-service
-[win-bgs]: https://docs.microsoft.com/dotnet/core/extensions/windows-service
+[workers]: https://learn.microsoft.com/dotnet/core/extensions/workers
+[queue]: https://learn.microsoft.com/dotnet/core/extensions/queue-service
+[scoped-bgs]: https://learn.microsoft.com/dotnet/core/extensions/scoped-service
+[win-bgs]: https://learn.microsoft.com/dotnet/core/extensions/windows-service
 [win-inst]: https://learn.microsoft.com/dotnet/core/extensions/windows-service-with-installer
-[timer-svc]: https://docs.microsoft.com/dotnet/core/extensions/timer-service
-[cloud-svc]: https://docs.microsoft.com/dotnet/core/extensions/cloud-service
+[timer-svc]: https://learn.microsoft.com/dotnet/core/extensions/timer-service
+[cloud-svc]: https://learn.microsoft.com/dotnet/core/extensions/cloud-service
