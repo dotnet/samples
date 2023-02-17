@@ -15,7 +15,7 @@ There are six sample source code projects in this collection of samples. The sam
 
 ## Sample prerequisites
 
-The samples are written in C# and targets .NET 5. It requires the [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0) or later.
+The samples are written in C# and target .NET 7. They require the [.NET 7.0 SDK](https://dotnet.microsoft.com/download/dotnet/7.0) or later.
 
 ## Building the sample
 
@@ -36,12 +36,14 @@ To download and run the sample, follow these steps:
 - [Create a Queue Service][queue]
 - [Use scoped services within a `BackgroundService`][scoped-bgs]
 - [Create a Windows Service using `BackgroundService`][win-bgs]
+- [Create a Windows Service installer][win-inst]
 - [Implement the `IHostedService` interface][timer-svc]
 - [Deploy a Worker Service to Azure][cloud-svc]
 
-[workers]: https://docs.microsoft.com/dotnet/core/extensions/workers
-[queue]: https://docs.microsoft.com/dotnet/core/extensions/queue-service
-[scoped-bgs]: https://docs.microsoft.com/dotnet/core/extensions/scoped-service
-[win-bgs]: https://docs.microsoft.com/dotnet/core/extensions/windows-service
-[timer-svc]: https://docs.microsoft.com/dotnet/core/extensions/timer-service
-[cloud-svc]: https://docs.microsoft.com/dotnet/core/extensions/cloud-service
+[workers]: https://learn.microsoft.com/dotnet/core/extensions/workers
+[queue]: https://learn.microsoft.com/dotnet/core/extensions/queue-service
+[scoped-bgs]: https://learn.microsoft.com/dotnet/core/extensions/scoped-service
+[win-bgs]: https://learn.microsoft.com/dotnet/core/extensions/windows-service
+[win-inst]: https://learn.microsoft.com/dotnet/core/extensions/windows-service-with-installer
+[timer-svc]: https://learn.microsoft.com/dotnet/core/extensions/timer-service
+[cloud-svc]: https://learn.microsoft.com/dotnet/core/extensions/cloud-service
