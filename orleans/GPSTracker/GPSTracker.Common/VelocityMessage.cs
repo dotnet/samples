@@ -1,10 +1,10 @@
-namespace GPSTracker.Common;
+﻿namespace GPSTracker.Common;
 
 [Immutable, GenerateSerializer]
-public record class VelocityMessage(
+public record VelocityMessage(
     DeviceMessage DeviceMessage,
     double Velocity) :
-    DeviceMessage(
+     DeviceMessage(
         DeviceMessage.Latitude,
         DeviceMessage.Longitude,
         DeviceMessage.MessageId,
@@ -12,4 +12,4 @@ public record class VelocityMessage(
         DeviceMessage.Timestamp);
 
 [Immutable, GenerateSerializer]
-public record class VelocityBatch(VelocityMessage[] Messages);
+public record class VelocityBatch(List<VelocityMessage> Messages);
