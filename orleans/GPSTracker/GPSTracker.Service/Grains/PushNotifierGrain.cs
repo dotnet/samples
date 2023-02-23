@@ -1,4 +1,4 @@
-using GPSTracker.Common;
+﻿using GPSTracker.Common;
 using GPSTracker.GrainInterface;
 using Orleans.Concurrency;
 using Orleans.Runtime;
@@ -6,10 +6,10 @@ using Orleans.Runtime;
 namespace GPSTracker.GrainImplementation;
 
 [Reentrant]
-[StatelessWorker]
+[StatelessWorker(maxLocalWorkers: 12)]
 public class PushNotifierGrain : Grain, IPushNotifierGrain
 {
-    private readonly List<VelocityMessage> _messageQueue = new();
+    private readonly Queue<VelocityMessage> _messageQueue = new();
     private readonly ILogger<PushNotifierGrain> _logger;
     private List<(SiloAddress Host, IRemoteLocationHub Hub)> _hubs = new();
     public PushNotifierGrain(ILogger<PushNotifierGrain> logger) => _logger = logger;
@@ -39,74 +39,68 @@ public class PushNotifierGrain : Grain, IPushNotifierGrain
         await base.OnActivateAsync(cancellationToken);
     }
 
-    public override async Task OnDeactivateAsync(DeactivationReason reason, CancellationToken cancellationToken)
+    public override async Task OnDeactivateAsync(DeactivationReason deactivationReason, CancellationToken cancellationToken)
     {
-        Flush();
-        await _flushTask;
-
-        await base.OnDeactivateAsync(reason, cancellationToken);
+        await Flush();
+        await base.OnDeactivateAsync(deactivationReason, cancellationToken);
     }
 
-    private async Task RefreshHubs()
+    private async ValueTask RefreshHubs()
     {
         // Discover the current infrastructure
-        var hubListGrain = GrainFactory.GetGrain<IHubListGrain>(Guid.Empty);
+        IHubListGrain hubListGrain = GrainFactory.GetGrain<IHubListGrain>(Guid.Empty);
         _hubs = await hubListGrain.GetHubs();
     }
 
-    public Task SendMessage(VelocityMessage message)
+    public ValueTask SendMessage(VelocityMessage message)
     {
         // Add a message to the send queue
-        _messageQueue.Add(message);
-        if (_messageQueue.Count > 25)
-        {
-            // If the queue size is greater than 25, flush the queue
-            Flush();
-        }
-
-        return Task.CompletedTask;
+        _messageQueue.Enqueue(message);
+        return new(Flush());
     }
 
-    private void Flush()
+    private Task Flush()
     {
         if (_flushTask.IsCompleted)
         {
-            _flushTask.Ignore();
             _flushTask = FlushInternal();
         }
 
+        return _flushTask;
+
         async Task FlushInternal()
         {
+            const int MaxMessagesPerBatch = 100;
             if (_messageQueue.Count == 0) return;
 
-            while (_messageQueue.Count > 25)
+            while (_messageQueue.Count > 0)
             {
                 // Send all messages to all SignalR hubs
-                var messagesToSend = _messageQueue.ToArray();
-                _messageQueue.Clear();
+                var messagesToSend = new List<VelocityMessage>(Math.Min(_messageQueue.Count, MaxMessagesPerBatch));
+                while (messagesToSend.Count < MaxMessagesPerBatch && _messageQueue.TryDequeue(out VelocityMessage? msg)) messagesToSend.Add(msg);
 
                 var tasks = new List<Task>(_hubs.Count);
                 var batch = new VelocityBatch(messagesToSend);
-                foreach (var hub in _hubs)
+
+                foreach ((SiloAddress Host, IRemoteLocationHub Hub) hub in _hubs)
                 {
                     tasks.Add(BroadcastUpdates(hub.Host, hub.Hub, batch, _logger));
-
-                    // An async local function allows for clean error logging on a per-host basis.
-                    static async Task BroadcastUpdates(SiloAddress host, IRemoteLocationHub hub, VelocityBatch batch, ILogger logger)
-                    {
-                        try
-                        {
-                            await hub.BroadcastUpdates(batch);
-                        }
-                        catch (Exception ex)
-                        {
-                            logger.LogError(ex, "Error broadcasting to host {Host}", host);
-                        }
-                    }
                 }
 
                 await Task.WhenAll(tasks);
             }
+        }
+    }
+
+    private static async Task BroadcastUpdates(SiloAddress host, IRemoteLocationHub hub, VelocityBatch batch, ILogger logger)
+    {
+        try
+        {
+            await hub.BroadcastUpdates(batch);
+        }
+        catch (Exception ex)
+        {
+            logger.LogError(ex, "Error broadcasting to host {Host}", host);
         }
     }
 }

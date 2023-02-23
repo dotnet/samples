@@ -1,4 +1,4 @@
-namespace GPSTracker.Common;
+﻿namespace GPSTracker.Common;
 
 [Immutable, GenerateSerializer]
 public record class DeviceMessage(
