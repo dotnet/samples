@@ -1,4 +1,4 @@
-using Orleans.Runtime;
+﻿using Orleans.Runtime;
 
 namespace GPSTracker.GrainImplementation;
 
@@ -29,7 +29,7 @@ public class HubListGrain : Grain, IHubListGrain
     private List<(SiloAddress Host, IRemoteLocationHub Hub)> GetCachedHubs()
     {
         // Returns a cached list of hubs if the cache is valid, otherwise builds a list of hubs.
-        var clusterMembers = _clusterMembership.CurrentSnapshot;
+        ClusterMembershipSnapshot clusterMembers = _clusterMembership.CurrentSnapshot;
         if (_cache is { } && clusterMembers.Version == _cacheMembershipVersion)
         {
             return _cache;
@@ -38,23 +38,23 @@ public class HubListGrain : Grain, IHubListGrain
         // Filter out hosts which are not yet active or have been removed from the cluster.
         var hubs = new List<(SiloAddress Host, IRemoteLocationHub Hub)>();
         var toDelete = new List<SiloAddress>();
-        foreach (var pair in _hubs)
+        foreach (KeyValuePair<SiloAddress, IRemoteLocationHub> pair in _hubs)
         {
-            var host = pair.Key;
-            var hubRef = pair.Value;
-            var hostStatus = clusterMembers.GetSiloStatus(host);
-            if (hostStatus == SiloStatus.Dead)
+            SiloAddress host = pair.Key;
+            IRemoteLocationHub hubRef = pair.Value;
+            SiloStatus hostStatus = clusterMembers.GetSiloStatus(host);
+            if (hostStatus is SiloStatus.Dead)
             {
                 toDelete.Add(host);
             }
 
-            if (hostStatus == SiloStatus.Active)
+            if (hostStatus is SiloStatus.Active)
             {
                 hubs.Add((host, hubRef));
             }
         }
 
-        foreach (var host in toDelete)
+        foreach (SiloAddress host in toDelete)
         {
             _hubs.Remove(host);
         }
