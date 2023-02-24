@@ -18,7 +18,7 @@
 #define WSTR(str) u##str
 #endif // WIN32
 
-class CorProfiler;
+class SampleProfiler;
 
 class ManualEvent
 {
@@ -76,7 +76,7 @@ private:
 
     ICorProfilerInfo10* corProfilerInfo;
 
-    static void DoSampling(ICorProfilerInfo10* pProfInfo, CorProfiler *parent);
+    static void DoSampling(ICorProfilerInfo10* pProfInfo, SampleProfiler *parent);
 
     WSTRING GetClassName(ClassID classId);
     WSTRING GetModuleName(ModuleID modId);
@@ -87,7 +87,7 @@ public:
         return s_instance;
     }
 
-    Sampler(ICorProfilerInfo10* pProfInfo, CorProfiler *parent);
+    Sampler(ICorProfilerInfo10* pProfInfo, SampleProfiler *parent);
     ~Sampler() = default;
 
     void Start();

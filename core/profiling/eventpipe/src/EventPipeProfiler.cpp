@@ -2,10 +2,9 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
-#include "CorProfiler.h"
+#include "EventPipeProfiler.h"
 #include "corhlpr.h"
-#include "CComPtr.h"
-#include "profiler_pal.h"
+#include "profilercommon.h"
 #include <string>
 #include <sstream>
 #include <assert.h>
@@ -19,8 +18,8 @@ using std::lock_guard;
 using std::map;
 using std::thread;
 
-CorProfiler::CorProfiler() :
-    _pCorProfilerInfo12(),
+EventPipeProfiler::EventPipeProfiler() :
+    _pEventPipeProfilerInfo12(),
     _session(),
     _provider(),
     _allTypesEvent(),
@@ -31,25 +30,25 @@ CorProfiler::CorProfiler() :
 
 }
 
-CorProfiler::~CorProfiler()
+EventPipeProfiler::~EventPipeProfiler()
 {
-    if (this->_pCorProfilerInfo12 != nullptr)
+    if (this->_pEventPipeProfilerInfo12 != nullptr)
     {
-        this->_pCorProfilerInfo12->Release();
-        this->_pCorProfilerInfo12 = nullptr;
+        this->_pEventPipeProfilerInfo12->Release();
+        this->_pEventPipeProfilerInfo12 = nullptr;
     }
 }
 
-HRESULT STDMETHODCALLTYPE CorProfiler::Initialize(IUnknown *pICorProfilerInfoUnk)
+HRESULT STDMETHODCALLTYPE EventPipeProfiler::Initialize(IUnknown *pICorProfilerInfoUnk)
 {
     HRESULT hr = S_OK;
-    if (FAILED(hr = pICorProfilerInfoUnk->QueryInterface(__uuidof(ICorProfilerInfo12), (void **)&_pCorProfilerInfo12)))
+    if (FAILED(hr = pICorProfilerInfoUnk->QueryInterface(__uuidof(ICorProfilerInfo12), (void **)&_pEventPipeProfilerInfo12)))
     {
         printf("FAIL: failed to QI for ICorProfilerInfo12.\n");
         return hr;
     }
 
-    if (FAILED(hr = _pCorProfilerInfo12->SetEventMask2(COR_PRF_MONITOR_JIT_COMPILATION
+    if (FAILED(hr = _pEventPipeProfilerInfo12->SetEventMask2(COR_PRF_MONITOR_JIT_COMPILATION
                                                         | COR_PRF_DISABLE_ALL_NGEN_IMAGES,
                                                        COR_PRF_HIGH_MONITOR_EVENT_PIPE)))
     {
@@ -80,10 +79,10 @@ HRESULT STDMETHODCALLTYPE CorProfiler::Initialize(IUnknown *pICorProfilerInfoUnk
 
 // For the purposes of this sample we create an event that has all the built-in types
 // to demonstrate how to serialize them.
-HRESULT CorProfiler::DefineEvent()
+HRESULT EventPipeProfiler::DefineEvent()
 {
     HRESULT hr = S_OK;
-    if (FAILED(hr = _pCorProfilerInfo12->EventPipeCreateProvider(WCHAR("MySuperAwesomeEventPipeProvider"), &_provider)))
+    if (FAILED(hr = _pEventPipeProfilerInfo12->EventPipeCreateProvider(WCHAR("MySuperAwesomeEventPipeProvider"), &_provider)))
     {
         printf("FAIL: could not create EventPipe provider hr=0x%x\n", hr);
         return hr;
@@ -110,7 +109,7 @@ HRESULT CorProfiler::DefineEvent()
     };
 
     const size_t allTypesParamsCount = sizeof(allTypesParams) / sizeof(allTypesParams[0]);
-    hr = _pCorProfilerInfo12->EventPipeDefineEvent(
+    hr = _pEventPipeProfilerInfo12->EventPipeDefineEvent(
             _provider,                      // Provider
             WCHAR("AllTypesEvent"),         // Name
             1,                              // ID
@@ -135,7 +134,7 @@ HRESULT CorProfiler::DefineEvent()
 // This method will write a single event with static data to demonstrate how to serialize the
 // different types that EventPipe can handle. In a real world application the data would likely
 // be dynamic, but the serialization step would be the same.
-HRESULT CorProfiler::WriteEvent()
+HRESULT EventPipeProfiler::WriteEvent()
 {
     printf("Writing AllTypesEvent\n");
 
@@ -221,7 +220,7 @@ HRESULT CorProfiler::WriteEvent()
     eventData[15].ptr = reinterpret_cast<UINT64>(&dataSource[0]);
     eventData[15].size = arraySize;
 
-    HRESULT hr = _pCorProfilerInfo12->EventPipeWriteEvent(
+    HRESULT hr = _pEventPipeProfilerInfo12->EventPipeWriteEvent(
                     _allTypesEvent,
                     sizeof(eventData)/sizeof(COR_PRF_EVENT_DATA),
                     eventData,
@@ -236,7 +235,7 @@ HRESULT CorProfiler::WriteEvent()
     return S_OK;
 }
 
-HRESULT CorProfiler::StartSession()
+HRESULT EventPipeProfiler::StartSession()
 {
     // Microsoft-Windows-DotNETRuntime is the provider for the runtime events, listen to all events
     // from the runtime.
@@ -244,7 +243,7 @@ HRESULT CorProfiler::StartSession()
         { WCHAR("Microsoft-Windows-DotNETRuntime"),  0xFFFFFFFFFFFFFFFF, 5, NULL }
     };
 
-    HRESULT hr = _pCorProfilerInfo12->EventPipeStartSession(sizeof(providers) / sizeof(providers[0]),
+    HRESULT hr = _pEventPipeProfilerInfo12->EventPipeStartSession(sizeof(providers) / sizeof(providers[0]),
                                                     providers,
                                                     false,
                                                     &_session);
@@ -257,9 +256,9 @@ HRESULT CorProfiler::StartSession()
     return S_OK;
 }
 
-HRESULT STDMETHODCALLTYPE CorProfiler::Shutdown()
+HRESULT STDMETHODCALLTYPE EventPipeProfiler::Shutdown()
 {
-    _pCorProfilerInfo12->EventPipeStopSession(_session);
+    _pEventPipeProfilerInfo12->EventPipeStopSession(_session);
     return S_OK;
 }
 
@@ -267,7 +266,7 @@ HRESULT STDMETHODCALLTYPE CorProfiler::Shutdown()
 // on the thread that generates the event. It will block the runtime's execution until it returns
 // so be careful not to start any long running operations. This method can (and will) be called 
 // concurrently from multiple threads.
-HRESULT STDMETHODCALLTYPE CorProfiler::EventPipeEventDelivered(
+HRESULT STDMETHODCALLTYPE EventPipeProfiler::EventPipeEventDelivered(
     EVENTPIPE_PROVIDER provider,
     DWORD eventId,
     DWORD eventVersion,
@@ -300,14 +299,14 @@ HRESULT STDMETHODCALLTYPE CorProfiler::EventPipeEventDelivered(
 // This method is called synchronously from the provider creator's thread. Just like
 // EventPipeEventDelivered above, any long running operations will block the runtime from continuing.
 // This method will be called before any events are fired from the provider.
-HRESULT CorProfiler::EventPipeProviderCreated(EVENTPIPE_PROVIDER provider)
+HRESULT EventPipeProfiler::EventPipeProviderCreated(EVENTPIPE_PROVIDER provider)
 {
     String name = GetOrAddProviderName(provider);
-    wprintf(L"CorProfiler::EventPipeProviderCreated provider=%s\n", name.ToCStr());
+    wprintf(L"EventPipeProfiler::EventPipeProviderCreated provider=%s\n", name.ToCStr());
 
     // Add all events from any new provider to the session
     COR_PRF_EVENTPIPE_PROVIDER_CONFIG providerConfig = { name.ToNativeStr(), 0xFFFFFFFFFFFFFFFF, 5, NULL };
-    HRESULT hr = _pCorProfilerInfo12->EventPipeAddProviderToSession(_session, providerConfig);
+    HRESULT hr = _pEventPipeProfilerInfo12->EventPipeAddProviderToSession(_session, providerConfig);
     if (FAILED(hr))
     {
         printf("EventPipeAddProviderToSession failed with hr=0x%x\n", hr);
@@ -317,14 +316,14 @@ HRESULT CorProfiler::EventPipeProviderCreated(EVENTPIPE_PROVIDER provider)
     return S_OK;
 }
 
-String CorProfiler::GetOrAddProviderName(EVENTPIPE_PROVIDER provider)
+String EventPipeProfiler::GetOrAddProviderName(EVENTPIPE_PROVIDER provider)
 {
     auto it = _providerNameCache.find(provider);
     if (it == _providerNameCache.end())
     {
         WCHAR nameBuffer[LONG_LENGTH];
         ULONG nameCount;
-        HRESULT hr = _pCorProfilerInfo12->EventPipeGetProviderInfo(provider,
+        HRESULT hr = _pEventPipeProfilerInfo12->EventPipeGetProviderInfo(provider,
                                                                    LONG_LENGTH,
                                                                    &nameCount,
                                                                    nameBuffer);
@@ -343,7 +342,7 @@ String CorProfiler::GetOrAddProviderName(EVENTPIPE_PROVIDER provider)
     return it->second;
 }
 
-EventPipeMetadataInstance CorProfiler::GetOrAddMetadata(LPCBYTE pMetadata, ULONG cbMetadata)
+EventPipeMetadataInstance EventPipeProfiler::GetOrAddMetadata(LPCBYTE pMetadata, ULONG cbMetadata)
 {
     auto it = _metadataCache.find(pMetadata);
     if (it == _metadataCache.end())

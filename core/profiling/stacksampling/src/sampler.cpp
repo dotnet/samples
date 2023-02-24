@@ -2,7 +2,7 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
-#include "CorProfiler.h"
+#include "SampleProfiler.h"
 #include "sampler.h"
 #include <thread>
 #include <cwchar>
@@ -34,14 +34,14 @@ HRESULT __stdcall DoStackSnapshotStackSnapShotCallbackWrapper(
         clientData);
 }
 
-Sampler::Sampler(ICorProfilerInfo10* pProfInfo, CorProfiler *parent) :
+Sampler::Sampler(ICorProfilerInfo10* pProfInfo, SampleProfiler *parent) :
     m_workerThread(DoSampling, pProfInfo, parent)
 {
     Sampler::s_instance = this;
 }
 
 // static
-void Sampler::DoSampling(ICorProfilerInfo10 *pProfInfo, CorProfiler *parent)
+void Sampler::DoSampling(ICorProfilerInfo10 *pProfInfo, SampleProfiler *parent)
 {
     Sampler::Instance()->corProfilerInfo = parent->corProfilerInfo;
 
@@ -150,7 +150,7 @@ WSTRING Sampler::GetModuleName(ModuleID modId)
     ULONG nameLength = 0;
     AssemblyID assemID;
 
-    if (modId == NULL)
+    if (modId == 0)
     {
         printf("NULL modId passed to GetModuleName\n");
         return WSTR("Unknown");
@@ -208,7 +208,7 @@ WSTRING Sampler::GetClassName(ClassID classId)
     ClassID typeArgs[SHORT_LENGTH];
     HRESULT hr = S_OK;
 
-    if (classId == NULL)
+    if (classId == 0)
     {
         printf("NULL classId passed to GetClassName\n");
         return WSTR("Unknown");
@@ -297,15 +297,15 @@ WSTRING Sampler::GetClassName(ClassID classId)
 
 WSTRING Sampler::GetFunctionName(FunctionID funcID, const COR_PRF_FRAME_INFO frameInfo)
 {
-    if (funcID == NULL)
+    if (funcID == 0)
     {
         return WSTR("Unknown_Native_Function");
     }
 
-    ClassID classId = NULL;
-    ModuleID moduleId = NULL;
-    mdToken token = NULL;
-    ULONG32 nTypeArgs = NULL;
+    ClassID classId = 0;
+    ModuleID moduleId = 0;
+    mdToken token = 0;
+    ULONG32 nTypeArgs = 0;
     ClassID typeArgs[SHORT_LENGTH];
 
     HRESULT hr = corProfilerInfo->GetFunctionInfo2(funcID,
