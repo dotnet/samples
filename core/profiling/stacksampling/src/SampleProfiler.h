@@ -10,8 +10,7 @@
 #include <mutex>
 #include <vector>
 #include <condition_variable>
-#include "cor.h"
-#include "corprof.h"
+#include "profilercommon.h"
 #include "sampler.h"
 
 #define SHORT_LENGTH    32
@@ -63,7 +62,7 @@ private:
     MetaInterface* m_ptr;
 };
 
-class CorProfiler : public ICorProfilerCallback8
+class SampleProfiler : public ICorProfilerCallback8
 {
 private:
     std::atomic<int> refCount;
@@ -74,8 +73,8 @@ private:
 public:
     ICorProfilerInfo10* corProfilerInfo;
 
-    CorProfiler();
-    virtual ~CorProfiler();
+    SampleProfiler();
+    virtual ~SampleProfiler();
     HRESULT STDMETHODCALLTYPE Initialize(IUnknown* pICorProfilerInfoUnk) override;
     HRESULT STDMETHODCALLTYPE Shutdown() override;
     HRESULT STDMETHODCALLTYPE AppDomainCreationStarted(AppDomainID appDomainId) override;
@@ -153,7 +152,7 @@ public:
     HRESULT STDMETHODCALLTYPE RootReferences2(ULONG cRootRefs, ObjectID rootRefIds[], COR_PRF_GC_ROOT_KIND rootKinds[], COR_PRF_GC_ROOT_FLAGS rootFlags[], UINT_PTR rootIds[]) override;
     HRESULT STDMETHODCALLTYPE HandleCreated(GCHandleID handleId, ObjectID initialObjectId) override;
     HRESULT STDMETHODCALLTYPE HandleDestroyed(GCHandleID handleId) override;
-    HRESULT STDMETHODCALLTYPE InitializeForAttach(IUnknown* pCorProfilerInfoUnk, void* pvClientData, UINT cbClientData) override;
+    HRESULT STDMETHODCALLTYPE InitializeForAttach(IUnknown* pSampleProfilerInfoUnk, void* pvClientData, UINT cbClientData) override;
     HRESULT STDMETHODCALLTYPE ProfilerAttachComplete() override;
     HRESULT STDMETHODCALLTYPE ProfilerDetachSucceeded() override;
     HRESULT STDMETHODCALLTYPE ReJITCompilationStarted(FunctionID functionId, ReJITID rejitId, BOOL fIsSafeToBlock) override;

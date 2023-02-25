@@ -3,14 +3,27 @@
 // See the LICENSE file in the project root for more information.
 
 #include "ClassFactory.h"
-
-const IID IID_IUnknown      = { 0x00000000, 0x0000, 0x0000, { 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46 } };
-
-const IID IID_IClassFactory = { 0x00000001, 0x0000, 0x0000, { 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46 } };
+#include "SampleProfiler.h"
 
 BOOL STDMETHODCALLTYPE DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved)
 {
     return TRUE;
+}
+
+void PrintGuid(REFGUID guid)
+{
+    printf("{%8.8lu-%4.4u-%4.4u-%2.2u%2.2u-%2.2u%2.2u%2.2u%2.2u%2.2u%2.2u}",
+           guid.Data1,
+           guid.Data2,
+           guid.Data3,
+           guid.Data4[0],
+           guid.Data4[1],
+           guid.Data4[2],
+           guid.Data4[3],
+           guid.Data4[4],
+           guid.Data4[5],
+           guid.Data4[6],
+           guid.Data4[7]);
 }
 
 extern "C" HRESULT STDMETHODCALLTYPE DllGetClassObject(REFCLSID rclsid, REFIID riid, LPVOID* ppv)
@@ -23,7 +36,7 @@ extern "C" HRESULT STDMETHODCALLTYPE DllGetClassObject(REFCLSID rclsid, REFIID r
         return E_FAIL;
     }
 
-    auto factory = new ClassFactory;
+    auto factory = new ClassFactory<SampleProfiler>;
     if (factory == nullptr)
     {
         return E_FAIL;

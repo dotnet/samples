@@ -1,0 +1,1 @@
+These files are what is needed to make the sdk files compile without Windows.h, etc. They originated from the dotnet/runtime PAL and are modified to be simpler.

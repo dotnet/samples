@@ -16,11 +16,9 @@
 #include <string>
 #include <condition_variable>
 #include <map>
-#include "cor.h"
-#include "corprof.h"
+#include "profilercommon.h"
 #include "eventpipemetadatareader.h"
 #include "eventpipeeventprinter.h"
-#include "profilerstring.h"
 
 #define SHORT_LENGTH    32
 #define STRING_LENGTH  256
@@ -105,10 +103,10 @@ class ThreadSafeMap
     }
 };
 
-class CorProfiler : public ICorProfilerCallback10
+class EventPipeProfiler : public ICorProfilerCallback10
 {
 private:
-    ICorProfilerInfo12 *_pCorProfilerInfo12;
+    ICorProfilerInfo12 *_pEventPipeProfilerInfo12;
     EVENTPIPE_SESSION _session;
     EVENTPIPE_PROVIDER _provider;
     EVENTPIPE_EVENT _allTypesEvent;
@@ -118,8 +116,8 @@ private:
 
 public:
 
-    CorProfiler();
-    virtual ~CorProfiler();
+    EventPipeProfiler();
+    virtual ~EventPipeProfiler();
     HRESULT STDMETHODCALLTYPE Initialize(IUnknown* pICorProfilerInfoUnk) override;
     HRESULT STDMETHODCALLTYPE Shutdown() override;
 
@@ -200,7 +198,7 @@ public:
     HRESULT STDMETHODCALLTYPE RootReferences2(ULONG cRootRefs, ObjectID rootRefIds[], COR_PRF_GC_ROOT_KIND rootKinds[], COR_PRF_GC_ROOT_FLAGS rootFlags[], UINT_PTR rootIds[]) override { return S_OK; }
     HRESULT STDMETHODCALLTYPE HandleCreated(GCHandleID handleId, ObjectID initialObjectId) override { return S_OK; }
     HRESULT STDMETHODCALLTYPE HandleDestroyed(GCHandleID handleId) override { return S_OK; }
-    HRESULT STDMETHODCALLTYPE InitializeForAttach(IUnknown* pCorProfilerInfoUnk, void* pvClientData, UINT cbClientData) override { return S_OK; }
+    HRESULT STDMETHODCALLTYPE InitializeForAttach(IUnknown* pEventPipeProfilerInfoUnk, void* pvClientData, UINT cbClientData) override { return S_OK; }
     HRESULT STDMETHODCALLTYPE ProfilerAttachComplete() override { return S_OK; }
     HRESULT STDMETHODCALLTYPE ProfilerDetachSucceeded() override { return S_OK; }
     HRESULT STDMETHODCALLTYPE ReJITCompilationStarted(FunctionID functionId, ReJITID rejitId, BOOL fIsSafeToBlock) override { return S_OK; }
@@ -215,7 +213,7 @@ public:
     HRESULT STDMETHODCALLTYPE DynamicMethodJITCompilationFinished(FunctionID functionId, HRESULT hrStatus, BOOL fIsSafeToBlock) override { return S_OK; }
     HRESULT STDMETHODCALLTYPE DynamicMethodUnloaded(FunctionID functionId) override { return S_OK; }
 
-    // The following methods are defined in CorProfiler.cpp
+    // The following methods are defined in EventPipeProfiler.cpp
     HRESULT STDMETHODCALLTYPE EventPipeEventDelivered(
         EVENTPIPE_PROVIDER provider,
         DWORD eventId,
