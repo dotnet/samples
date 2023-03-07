@@ -1,26 +1,23 @@
-﻿using System;
-using System.Linq;
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
 
-namespace ExpressionTreeSamples
+namespace ExpressionTreeSamples;
+
+public class ExpressionTreeClassesSampleOne : Sample
 {
-    public class ExpressionTreeClassesSampleOne : Sample
+    public override string Name { get; } = "Expression Tree Classes, Sample 1";
+
+    public override void Run()
     {
-        public override string Name { get; } = "Expression Tree Classes, Sample 1";
+        Expression<Func<int, int>> addFive = (num) => num + 5;
 
-        public override void Run()
+        if (addFive.NodeType == ExpressionType.Lambda)
         {
-            Expression<Func<int, int>> addFive = (num) => num + 5;
+            var lambdaExp = (LambdaExpression)addFive;
 
-            if (addFive.NodeType == ExpressionType.Lambda)
-            {
-                var lambdaExp = (LambdaExpression)addFive;
+            var parameter = lambdaExp.Parameters.First();
 
-                var parameter = lambdaExp.Parameters.First();
-
-                Console.WriteLine(parameter.Name);
-                Console.WriteLine(parameter.Type);
-            }
+            Console.WriteLine(parameter.Name);
+            Console.WriteLine(parameter.Type);
         }
     }
 }

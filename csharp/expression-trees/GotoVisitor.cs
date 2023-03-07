@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
 
 namespace ExpressionVisitor
 {
@@ -18,8 +17,11 @@ namespace ExpressionVisitor
 
             Console.WriteLine($"{prefix}The target is {node.Target.Name}");
             Console.WriteLine($"{prefix}The value of the goto is:");
-            var visitor = Visitor.CreateFromExpression(node.Value);
-            visitor.Visit(prefix + "\t");
+            if (node.Value is not null)
+            {
+                var visitor = CreateFromExpression(node.Value);
+                visitor.Visit(prefix + "\t");
+            }
         }
     }
 }
