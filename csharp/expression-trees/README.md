@@ -1,6 +1,16 @@
+---
+languages:
+- csharp
+products:
+- dotnet-csharp
+page_type: sample
+name: "Build and interpret expression trees"
+urlFragment: "build-interpret-expression-trees"
+description: "A sample console application that shows how to build and interpret expression trees."
+---
 # C# Expression Trees Sample
 
-This sample is created during the [Expression Trees topic](https://docs.microsoft.com/dotnet/csharp/expression-trees)
+This sample is created during the [Expression Trees topics](https://docs.microsoft.com/dotnet/csharp/advanced-topics/expression-trees)
 for learning C# features. Please see that topic for detailed steps on the code
 for this sample.
 

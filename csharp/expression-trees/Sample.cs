@@ -1,9 +1,8 @@
-﻿namespace ExpressionTreeSamples
+﻿namespace ExpressionTreeSamples;
+
+// Base class for all samples.
+public abstract class Sample
 {
-    // Base class for all samples.
-    public abstract class Sample
-    {
-        public abstract string Name { get; }
-        public abstract void Run();
-    }
+    public abstract string Name { get; }
+    public abstract void Run();
 }
