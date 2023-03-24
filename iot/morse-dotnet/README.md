@@ -16,7 +16,7 @@ This sample consists of two apps:
 - **MorseSend**: A .NET console app that uses GPIO to send Morse code to a receiver.
 - **MorseReceive**: A .NET console app that uses GPIO to receive Morse code from a sender.
 
-## But why?
+## But why? 🤔
 
 This sample is a fun way to learn about GPIO and .NET. It's also a good way to learn about the [Morse code](https://en.wikipedia.org/wiki/Morse_code) alphabet.
 
