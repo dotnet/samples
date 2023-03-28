@@ -4,9 +4,10 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationIcon>App.ico</ApplicationIcon>
     <Company>GrapeCity, Inc.</Company>
-    <Copyright>(c) GrapeCity, Inc..  All rights reserved.</Copyright>
+    <Copyright>(c) GrapeCity, Inc. All rights reserved.</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,12 +15,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="C1.Win" Version="6.0.20222.566" />
-    <PackageReference Include="C1.Win.FlexGrid" Version="6.0.20222.566" />
-    <PackageReference Include="C1.Win.Ribbon" Version="6.0.20222.566" />
-    <PackageReference Include="C1.Win.RulesManager" Version="6.0.20222.566" />
-    <PackageReference Include="C1.Win.SuperTooltip" Version="6.0.20222.566" />
-    <PackageReference Include="C1.Win.Themes" Version="6.0.20222.566" />
+    <PackageReference Include="C1.Win" Version="6.0.20231.596" />
+    <PackageReference Include="C1.Win.FlexGrid" Version="6.0.20231.596" />
+    <PackageReference Include="C1.Win.Ribbon" Version="6.0.20231.596" />
+    <PackageReference Include="C1.Win.RulesManager" Version="6.0.20231.596" />
+    <PackageReference Include="C1.Win.SuperTooltip" Version="6.0.20231.596" />
+    <PackageReference Include="C1.Win.Themes" Version="6.0.20231.596" />
   </ItemGroup>
 
   <ItemGroup>
