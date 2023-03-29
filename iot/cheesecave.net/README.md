@@ -1,4 +1,4 @@
-﻿---
+---
 languages:
 - csharp
 products:
