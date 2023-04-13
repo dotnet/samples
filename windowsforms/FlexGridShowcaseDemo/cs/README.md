@@ -6,14 +6,14 @@ products:
 - dotnet-core
 - windows-forms
 page_type: sample
-name: "Windows Forms Sample: FlexGrid Showcase (C#)"
+name: "Windows Forms Datagrid Sample: FlexGrid Showcase (C#)"
 urlFragment: "winforms-flexgridshowcase-cs"
 description: ".NET 6.0 Windows Forms application that demonstrates how to use GrapeCity FlexGrid"
 ---
 
 # FlexGrid Showcase Demo
 
-This sample is a .NET 6.0 Windows Forms application that demonstrates how to use GrapeCity [`FlexGrid`](https://www.grapecity.com/componentone/docs/win/online-flexgrid/overview.html).
+This sample is a .NET 6.0 Windows Forms application that demonstrates how to use GrapeCity [`FlexGrid`](https://www.grapecity.com/componentone/winforms-ui-controls/flexgrid-winforms-data-grid), a WinForms Datagrid control.
 
 The sample shows different operations with `FlexGrid`:
 
@@ -32,6 +32,8 @@ There are several GrapeCity packages used in the sample:
 * [`RulesManager`](https://www.nuget.org/packages/C1.Win.RulesManager)
 * [`SuperTooltip`](https://www.nuget.org/packages/C1.Win.SuperTooltip)
 * [`Themes`](https://www.nuget.org/packages/C1.Win.Themes)
+
+For more code examples and tutorials see the [documentation](https://www.grapecity.com/componentone/docs/win/online-flexgrid/overview.html).
 
 Mentioned controls and packages require a valid license for runtime testing and distribution.
 
