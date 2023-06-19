@@ -1,10 +1,10 @@
-﻿namespace TeleprompterConsole;
+namespace TeleprompterConsole;
 
 public class Program
 {
-    public static void Main(string[] args)
+    public static async Task Main(string[] args)
     {
-        RunTeleprompter().Wait();
+        await RunTeleprompter();
     }
 
     private static async Task RunTeleprompter()
