@@ -26,8 +26,13 @@ public class PlayerGrain : Grain, IPlayerGrain
     async Task IPlayerGrain.Die()
     {
         // Drop everything
-        var tasks = _things.Select(Drop).ToList();
-        await Task.WhenAll(tasks);
+        var dropTasks = new List<Task>();
+        var copy = new List<Thing>(_things);
+        foreach (var thing in copy)
+        {
+            dropTasks.Add(this.Drop(thing));
+        }
+        await Task.WhenAll(dropTasks);
 
         // Exit the game
         if (_roomGrain is not null && _myInfo is not null)
