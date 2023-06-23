@@ -26,11 +26,10 @@ public class PlayerGrain : Grain, IPlayerGrain
     async Task IPlayerGrain.Die()
     {
         // Drop everything
-        var dropTasks = new List<Task>();
-        var copy = new List<Thing>(_things);
-        foreach (var thing in copy)
+        var dropTasks = new List<Task<string?>>();        
+        foreach (var thing in _things.ToArray() /* New collection */)
         {
-            dropTasks.Add(this.Drop(thing));
+            dropTasks.Add(Drop(thing));
         }
         await Task.WhenAll(dropTasks);
 
