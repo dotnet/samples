@@ -10,7 +10,7 @@
         <PetClientClientClassName>PetRestApiClientSuccess</PetClientClientClassName>
         <PetClientClientNamespaceName>PetRestApiClientSuccess</PetClientClientNamespaceName>
         <PetClientFolderClientClass>..</PetClientFolderClientClass>
-        <!--The directory where NSawg.exe is in-->
+        <!--The directory where NSwag.exe is in-->
         <NSwagCommandFullPath>C:\Nwag\Win</NSwagCommandFullPath>
     </PropertyGroup>
 

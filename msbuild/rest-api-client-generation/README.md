@@ -1,6 +1,6 @@
 # Rest Api Client Generation
 
-Nowadays, an application which consumes RestApi is a very common scenario. We are going to generate the Rest API client automatically during the build process. We will use [NSawg](https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag?view=aspnetcore-6.0&tabs=visual-studio)
+Nowadays, an application which consumes RestApi is a very common scenario. We are going to generate the Rest API client automatically during the build process. We will use [NSwag](https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag?view=aspnetcore-6.0&tabs=visual-studio)
 
 Our app will be a console app, because it is simpler. The kind of app which use the Rest Api client is not important.
 The example will consume the public [Pet Store API](https://petstore.swagger.io), which publish the [OpenAPI spec](https://petstore.swagger.io/v2/swagger.json)
@@ -52,7 +52,7 @@ The complete code version is in this PetReaderExecTaskExample folder, you can do
 
     You can notice we are using [BeforeTarget and AfterTarget](https://docs.microsoft.com/visualstudio/msbuild/target-build-order#beforetargets-and-aftertargets) as way to define build order.
     The first target called "generatePetClient" will be executed before the core compilation target, so we will create the source before the compiler executes. The input and output parameter are related to [Incremental Build](https://docs.microsoft.com/visualstudio/msbuild/how-to-build-incrementally). MSBuild can compare the timestamps of the input files with the timestamps of the output files and determine whether to skip, build, or partially rebuild a target.
-    After installing the NSwag.MSBuild NuGet package in your project, you can use the variable $(NSwagExe) in your .csproj file to run the NSwag command line tool in an MSBuild target. This way the tools can easily be updated via NuGet. Here we are using the _Exec MSBUild Task_ to execute the NSwag program with the required parameters to generate the client Rest Api. [More about Nsawg command and parameters](https://github.com/RicoSuter/NSwag/wiki/NSwag.MSBuild).
+    After installing the NSwag.MSBuild NuGet package in your project, you can use the variable $(NSwagExe) in your .csproj file to run the NSwag command line tool in an MSBuild target. This way the tools can easily be updated via NuGet. Here we are using the _Exec MSBUild Task_ to execute the NSwag program with the required parameters to generate the client Rest Api. [More about NSwag command and parameters](https://github.com/RicoSuter/NSwag/wiki/NSwag.MSBuild).
     You can capture output from `<Exec>` addig ConsoleToMsBuild="true" to your `<Exec>` tag and then capture the output using the ConsoleOutput parameter in an `<Output>` tag. ConsoleOutput returns the output as an Item. Whitespace is trimmed. ConsoleOutput is enabled when ConsoleToMSBuild is true.
     The second target called "forceReGenerationOnRebuild" deletes the generated class during clean up to force the regeneration on rebuild target execution. This target runs after core clean MSBuild pre defined target.
 
@@ -232,8 +232,8 @@ The complete code version is in this PetReaderToolTaskExample folder, you can do
           <PetClientClientClassName>PetRestApiClient</PetClientClientClassName>
           <PetClientClientNamespaceName>PetRestApiClient</PetClientClientNamespaceName>
           <PetClientFolderClientClass>PetRestApiClient</PetClientFolderClientClass>
-          <!--The directory where NSawg.exe is in-->
-          <NSwagCommandFullPath>C:\Nsawg\Win</NSwagCommandFullPath>
+          <!--The directory where NSwag.exe is in-->
+          <NSwagCommandFullPath>C:\NSwag\Win</NSwagCommandFullPath>
         </PropertyGroup>
       ```
 
