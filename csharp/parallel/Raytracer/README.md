@@ -6,7 +6,7 @@ products:
 - windows-forms
 page_type: sample
 name: ".NET Core parallel animated ray-traced bouncing ball"
-urlFragment: "parallel-programming-Windows Forms-raytracer-cs"
+urlFragment: "parallel-programming-winforms-raytracer-cs"
 description: "A .NET Core Windows Forms application that demonstrates an animated, ray-traced bouncing ball with parallel programming."
 ---
 

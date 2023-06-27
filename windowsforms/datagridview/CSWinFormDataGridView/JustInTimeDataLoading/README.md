@@ -29,4 +29,4 @@ discard unused data when retrieving new values from the database.
 
 ## References
 
-- [Implementing Virtual Mode with Just-In-Time Data Loading in the Windows Forms DataGridView Control](<<https://docs.microsoft.com/dotnet/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid>)
+- [Implementing Virtual Mode with Just-In-Time Data Loading in the Windows Forms DataGridView Control](https://docs.microsoft.com/dotnet/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid)

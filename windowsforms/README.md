@@ -43,8 +43,8 @@ To create a new application you can use the `dotnet new` command, using the new 
 In your favorite console run:
 
 ```cmd
-dotnet new Windows Forms -o MyWindows FormsApp
-cd MyWindows FormsApp
+dotnet new winforms -o MyWinFormsApp
+cd MyWinFormsApp
 dotnet build
 dotnet run
 ```
@@ -108,8 +108,8 @@ Visual Studio does not yet support designers and custom tools for .NET Core desk
 
 ## Filing issues and getting help
 
-You can file Windows Forms and WPF related issues in the [dotnet/core repo](https://github.com/dotnet/core/issues). If you are trying out WPF or Windows Forms development on top of .NET Core 3.1 and get stuck or have questions, please reach out to <netcore3modernize@microsoft.com>.
+You can file Windows Forms and WPF related issues in the [dotnet/core repo](https://github.com/dotnet/core/issues). If you are trying out WPF or Windows Forms development on top of .NET Core 3.1 and get stuck or have questions, reach out to <netcore3modernize@microsoft.com>.
 
 ### Known issues
 
-Take a look at the issues filed with the [Windows Forms area tag](https://github.com/dotnet/core/labels/area-winforms).
+Take a look at the issues filed with the [WinForms area tag](https://github.com/dotnet/core/labels/area-winforms).

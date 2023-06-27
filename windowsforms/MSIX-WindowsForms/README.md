@@ -30,7 +30,7 @@ In the .wapproj file modify the `ProjectReference` element:
 
 ```xml
 <ItemGroup>
-  <ProjectReference Include="..\CoreWindows FormsApp1\CoreWindows FormsApp1.csproj" SkipGetTargetFrameworkProperties="true" Properties="RuntimeIdentifier=win-x64;SelfContained=true" />
+  <ProjectReference Include="..\CoreWinFormsApp1\CoreWinFormsApp1.csproj" SkipGetTargetFrameworkProperties="true" Properties="RuntimeIdentifier=win-x64;SelfContained=true" />
 </ItemGroup>
 ```
 
@@ -44,7 +44,7 @@ And add the targets:
 <Target Name="_ValidateAppReferenceItems" />
 <Target Name="_FixEntryPoint" AfterTargets="_ConvertItems">
   <PropertyGroup>
-    <EntryPointExe>CoreWindows FormsApp1\CoreWindows FormsApp1.exe</EntryPointExe>
+    <EntryPointExe>CoreWinFormsApp1\CoreWinFormsApp1.exe</EntryPointExe>
   </PropertyGroup>
 </Target>
 <Target Name="PublishReferences" BeforeTargets="ExpandProjectReferences">

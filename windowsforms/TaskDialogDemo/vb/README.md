@@ -6,7 +6,7 @@ products:
 - windows
 page_type: sample
 name: "Windows Forms Sample: Task Dialog (Visual Basic)"
-urlFragment: "Windows Forms-taskdialog-vb"
+urlFragment: "winforms-taskdialog-vb"
 description: ".NET 5.0 Windows Forms application that demonstrates how to use Task Dialog in Visual Basic."
 ---
 
@@ -16,7 +16,7 @@ This sample is a .NET 5.0 Windows Forms Visual Basic application that demonstrat
 
 ![Screenshot](../images/screenshot.jpg)
 
-Credits: this sample was authored by @kpreisser, the author of [`Task Dialog` for Windows Forms](<<https://github.com/dotnet/winforms/pull/1133>).
+Credits: this sample was authored by @kpreisser, the author of [`Task Dialog` for Windows Forms](https://github.com/dotnet/winforms/pull/1133).
 
 ## Sample prerequisites
 

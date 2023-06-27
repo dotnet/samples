@@ -15,7 +15,7 @@ This sample demonstrates a simple memory game where you try to match tiles in th
 
 ## Prerequisites
 
-- [Visual Studio 2019 version 16.8](<<https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+desktopguide+winforms>)
+- [Visual Studio 2019 version 16.8](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+desktopguide+winforms)
 
   - Enable the [Visual Studio Desktop workload](https://docs.microsoft.com/visualstudio/install/modify-visual-studio?view=vs-2019&preserve-view=true#modify-workloads).
 
