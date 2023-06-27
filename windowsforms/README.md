@@ -2,7 +2,7 @@
 
 With [.NET Core 3.1](https://github.com/dotnet/core-sdk#installers-and-binaries), you can build Windows Forms applications.
 
-## Why build WinForms applications on top of .NET Core
+## Why build Windows Forms applications on top of .NET Core
 
 If you're new to .NET Core, here are a few resources to help you understand the advantages of .NET Core for building Windows applications:
 
@@ -11,14 +11,14 @@ If you're new to .NET Core, here are a few resources to help you understand the 
 
 ## Quality disclaimer
 
-.NET Core 3 support for desktop development is in preview. There are early daily builds available supporting WinForms and WPF. You will likely encounter missing tools, bugs, and unexpected behavior. We do not recommend using this SDK and tools for building applications for production scenarios. We do recommend using this SDK and tools to evaluate your how easy it will be to migrate your existing applications, or if you're just interested in trying out the latest upcoming Windows development technology.
+.NET Core 3 support for desktop development is in preview. There are early daily builds available supporting Windows Forms and WPF. You will likely encounter missing tools, bugs, and unexpected behavior. We do not recommend using this SDK and tools for building applications for production scenarios. We do recommend using this SDK and tools to evaluate your how easy it will be to migrate your existing applications, or if you're just interested in trying out the latest upcoming Windows development technology.
 
 ## Samples in this repo
 
 | Sample Name | Description |
 | ----------- | ----------- |
-| [Hello World - shared source](helloworld-sharedsource) | This sample shows you how to share source between a .NET Framework WinForms application and a .NET Core WinForms application. Use this to get the full .NET Framework tooling experience while still building for .NET Core. |
-| [Matching Game](matching-game) | This sample demonstrates simple event handling and timers in a .NET Core 3 WinForms application |
+| [Hello World - shared source](helloworld-sharedsource) | This sample shows you how to share source between a .NET Framework Windows Forms application and a .NET Core Windows Forms application. Use this to get the full .NET Framework tooling experience while still building for .NET Core. |
+| [Matching Game](matching-game) | This sample demonstrates simple event handling and timers in a .NET Core 3 Windows Forms application |
 | [DataGridView Sample](datagridview) | This sample demonstrates DataGridView usage in .NET Core 3 |
 | [Graphics Sample](graphics) | This sample demonstrates using GDI+ APIs via the Graphics type in .NET Core 3 |
 | [Sudoku Sample](Sudoku) | This sample demonstrates creating a game using event handling and the Graphics type in .NET Core 3 |
@@ -36,9 +36,9 @@ Install the latest [.NET Core 3.1 SDK released or daily build](https://aka.ms/ne
 
 If you want to first understand your existing applications readiness for targeting .NET Core 3.1 or later, you can run the .NET Portability Analyzer using the download link and instructions [here](https://devblogs.microsoft.com/dotnet/are-your-windows-forms-and-wpf-applications-ready-for-net-core-3-0/). This will produce a report that shows you API compatibility for each assembly that your application depends on.
 
-### Creating new .NET Core 3.1 or later WinForms applications
+### Creating new .NET Core 3.1 or later Windows Forms applications
 
-To create a new application you can use the `dotnet new` command, using the new templates for WinForms.
+To create a new application you can use the `dotnet new` command, using the new templates for Windows Forms.
 
 In your favorite console run:
 
@@ -49,15 +49,15 @@ dotnet build
 dotnet run
 ```
 
-### Enable WinForms designers
+### Enable Windows Forms designers
 
-The WinForms designer for .NET Core 3 in Visual Studio is in preview and must be enabled. To enable the designergo to **Tools** > **Options** > **Environment** > **Preview Features** and select the **Use the preview Windows Forms designer for .NET Core apps** option.
+The Windows Forms designer for .NET Core 3 in Visual Studio is in preview and must be enabled. To enable the designergo to **Tools** > **Options** > **Environment** > **Preview Features** and select the **Use the preview Windows Forms designer for .NET Core apps** option.
 
 ## Porting existing applications
 
 >We recommend running the [APIPort tool](https://github.com/Microsoft/dotnet-apiport-ui/releases) first to determine if there are any APIs your application depends on that are missing with .NET Core.
 
-There is no tooling available to help with project migration. In order to migrate your WinForms application, you will create a new project and manually port all of the elements defined in your original project. You will notice the new project is based on the simplified project format, and not everything is migrated.
+There is no tooling available to help with project migration. In order to migrate your Windows Forms application, you will create a new project and manually port all of the elements defined in your original project. You will notice the new project is based on the simplified project format, and not everything is migrated.
 
 ### Migrate the head project
 
@@ -70,8 +70,8 @@ Ideally you should migrate all projects in your solution to target .NET Core 3.1
 5. Copy the `PackageReference` elements generated in the previous step from the original project into the new project's .csproj file.
 6. Copy the `ProjectReference` elements from the original project. Note: The new project format does not use the `Name` and `ProjectGuid` elements, so you can safely delete those.
 7. At this point it's a good idea to try and restore/build to make sure all dependencies are properly configured.
-8. [Link the files](#link-files-from-the-old-project) from your existing .NET Framework WinForms project to the .NET Core 3.1 WinForms project.
-9. **Optional** If you have difficulties with compiler linking, you can copy the project files from the .NET Framework WinForms project to the new .NET Core 3.1 WinForms project.
+8. [Link the files](#link-files-from-the-old-project) from your existing .NET Framework Windows Forms project to the .NET Core 3.1 Windows Forms project.
+9. **Optional** If you have difficulties with compiler linking, you can copy the project files from the .NET Framework Windows Forms project to the new .NET Core 3.1 Windows Forms project.
 
     * C# files (files with the `.cs` extension) are included by default in the .csproj.
     * Other project elements like `EmbeddedResources` can also use globbing.
@@ -88,7 +88,7 @@ Most existing projects include an `AssemblyInfo.cs` file in the Properties folde
 
 #### Include the Windows.Compatibility Pack
 
-Not every framework assembly is available in the .NET Core base class library. Windows applications like WinForms and WPF could have dependencies that are not available in .NET Core or .NET Standard. Adding a reference to the [Windows Compatibility Pack](https://docs.microsoft.com/dotnet/core/porting/windows-compat-pack) will help reduce missing assembly dependencies as it includes several types that might be needed by your application.
+Not every framework assembly is available in the .NET Core base class library. Windows applications like Windows Forms and WPF could have dependencies that are not available in .NET Core or .NET Standard. Adding a reference to the [Windows Compatibility Pack](https://docs.microsoft.com/dotnet/core/porting/windows-compat-pack) will help reduce missing assembly dependencies as it includes several types that might be needed by your application.
 
 ```cmd
 dotnet add package Microsoft.Windows.Compatibility
@@ -102,13 +102,13 @@ Visual Studio does not yet support designers and custom tools for .NET Core desk
 
 .NET Core has its own implementation of `System.ServiceModel` with some differences:
 
-* It's available as NuGet packages (also included in the Windows Compatiblity Pack).
+* It's available as NuGet packages (also included in the Windows Compatibility Pack).
 * There are [unsupported features](https://github.com/dotnet/wcf/blob/main/release-notes/SupportedFeatures-v2.1.0.md) that you should review.
 * The binding and endpoint address must be specified in the service client constructor. Otherwise, if you reuse the ServiceReference created by Visual Studio, you may get the following error: `System.PlatformNotSupportedException: 'Configuration files are not supported.'`
 
 ## Filing issues and getting help
 
-You can file WinForms and WPF related issues in the [dotnet/core repo](https://github.com/dotnet/core/issues). If you are trying out WPF or WinForms development on top of .NET Core 3.1 and get stuck or have questions, please reach out to netcore3modernize@microsoft.com.
+You can file Windows Forms and WPF related issues in the [dotnet/core repo](https://github.com/dotnet/core/issues). If you are trying out WPF or Windows Forms development on top of .NET Core 3.1 and get stuck or have questions, reach out to <netcore3modernize@microsoft.com>.
 
 ### Known issues
 

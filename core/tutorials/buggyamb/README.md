@@ -13,7 +13,7 @@ description: "A set of samples to teach production ASP.NET Core debugging for Wi
 
 For a quick tour of the application please click here: [Quick Tour](Docs/quick_tour.md).
 
-BuggyAmb is just a very buggy ASP.NET Core Razor Pages based application. This application was intentionally created as a buggy application so it can be used as a learning resource to practice troubleshooting some sample problem scenarios:
+BuggyAmb is a buggy ASP.NET Core Razor Pages-based application. This application was intentionally created as a buggy application so it can be used as a learning resource to practice troubleshooting some sample problem scenarios:
 
 * High CPU or low CPU performance problems, deadlocks.
 * High memory issues.
@@ -34,7 +34,7 @@ As a support engineer, I can confidently say that if you know how to collect the
 
 ## Best practices
 
-A successfull troubleshooting session has the following characteristics:
+A successful troubleshooting session has the following characteristics:
 
 ### Identifying the issue
 
@@ -50,15 +50,15 @@ For example, "it was running fast and now it is slow." is a bad definition becau
 
 Once you identify the issue you need to collect the data. Most of the data collection may require to be done when the problem happens.
 
-If you can reproduce a problem then you are lucky and you can collect data at any time you want but if you cannot reproduce the problem easily and if you miss the data collection then you may need to wait for the next occurence which may be a problem.
+If you can reproduce a problem then you are lucky and you can collect data at any time you want but if you cannot reproduce the problem easily and if you miss the data collection then you may need to wait for the next occurrence which may be a problem.
 
 So you need to know what kind of tools you have, how to use those tools in which scenario, etc...
 
 ### Data analysis
 
-Just like collecting data, there are great tools that you can use to analyse data and you need to know what kind of tools there are to analyze data.
+Just like collecting data, there are great tools that you can use to analyze data and you need to know what kind of tools there are to analyze data.
 
-Note that some data analysis can be done while capturing the data on the server, for example you may want to look at a network trace while you capture it on the server but some data needs to be analyzed seperately on another machine.
+Note that some data analysis can be done while capturing the data on the server, for example you may want to look at a network trace while you capture it on the server but some data needs to be analyzed separately on another machine.
 
 So you need to prepare your machine so you can use those tools when needed.
 

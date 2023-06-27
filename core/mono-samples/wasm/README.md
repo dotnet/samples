@@ -11,7 +11,7 @@ urlFragment: "mono-wasm-csharp"
 
 # Wasm Sample: Simple greeting and counter (C#)
 
-In this sample, the mono runtime is used to invoke javascript unmanaged code (index.html) from the C# managed side (WasmSampleApp.cs) and vice versa. With the sample running, you can enter your name and click the corresponding button to modify the greeting message as well as click another button to increment a counter.
+In this sample, the mono runtime is used to invoke JavaScript unmanaged code (index.html) from the C# managed side (WasmSampleApp.cs) and vice versa. With the sample running, you can enter your name and click the corresponding button to modify the greeting message as well as click another button to increment a counter.
 
 > [!NOTE]
 > The purpose of this sample is to demonstrate the concept of building a WebAssembly application on top of the mono runtime. The mono runtime headers should be supplied through the build process.
@@ -24,7 +24,7 @@ This sample will only run on macOS.
 - .NET sdk 6.0.100-alpha.1.20628.2.
 - dotnet-serve (<https://github.com/natemcmain/dotnet-serve>)
 
-To install a specific version of the dotnet sdk, download the latest stable version of the dotnet-install script:
+To install a specific version of the .NET SDK, download the latest stable version of the dotnet-install script:
 
 - Bash: <https://dot.net/v1/dotnet-install.sh>
 

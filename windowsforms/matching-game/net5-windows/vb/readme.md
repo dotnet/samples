@@ -2,7 +2,6 @@
 languages:
 - vb
 products:
-- dotnet
 - dotnet-core
 - windows-forms
 page_type: sample

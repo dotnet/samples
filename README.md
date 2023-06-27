@@ -15,7 +15,7 @@ The content team tracks issues for .NET documentation in the [dotnet/docs](https
 The code in this repository represents programs that demonstrate application or library scenarios. These samples often use more than one technology, feature, or toolkit. Each sample has a readme.md file that explains the sample and links to resources for more information.
 
 Samples should be buildable projects. Those projects should build and
-run on the widest set of platforms possible for the given sample. In practice, that means building .NET Core-based console applications where possible. Samples that are specific to the web or a UI framework should add those tools as needed. Examples include web applications, mobile apps, WPF or WinForms apps, and so on.
+run on the widest set of platforms possible for the given sample. In practice, that means building .NET Core-based console applications where possible. Samples that are specific to the web or a UI framework should add those tools as needed. Examples include web applications, mobile apps, WPF or Windows Forms apps, and so on.
 
 We are working toward having a CI system in place for all code. When you make any updates to samples, make sure each update is part of a buildable
 project. Ideally, add tests for correctness on samples as well.

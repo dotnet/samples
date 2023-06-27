@@ -2,7 +2,6 @@
 languages:
 - csharp
 products:
-- dotnet
 - dotnet-core
 - windows-forms
 page_type: sample

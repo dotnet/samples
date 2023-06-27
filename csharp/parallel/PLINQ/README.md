@@ -2,7 +2,6 @@
 languages:
 - csharp
 products:
-- dotnet
 - dotnet-core
 page_type: sample
 name: ".NET Core parallel programming with PLINQ"
