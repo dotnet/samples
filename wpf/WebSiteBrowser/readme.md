@@ -1,6 +1,6 @@
 # WebSite Ratings Sample
 
-These two samples are referenced by the [.NET Upgrade Assistant](https://docs.microsoft.com/dotnet/core/porting/upgrade-assistant-winforms-framework) article.
+These two samples are referenced by the [.NET Upgrade Assistant](<https://docs.microsoft.com/dotnet/core/porting/upgrade-assistant-Windows> Forms-framework) article.
 
 - The .NET Framework version of the app is available in the *framework* folder.
 - The .NET 6 version of the app is available in the *net* folder.

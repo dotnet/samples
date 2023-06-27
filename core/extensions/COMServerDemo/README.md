@@ -3,7 +3,6 @@ languages:
 - csharp
 products:
 - dotnet-core
-- windows
 page_type: sample
 name: "COM Server Demo"
 urlFragment: "com-server-demo"

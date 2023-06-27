@@ -3,7 +3,6 @@ languages:
 - csharp
 products:
 - dotnet-core
-- windows
 page_type: sample
 name: "Visio Demo"
 urlFragment: "visio-demo"

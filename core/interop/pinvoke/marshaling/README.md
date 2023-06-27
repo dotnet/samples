@@ -5,12 +5,12 @@ languages:
 products:
 - dotnet-core
 page_type: sample
-name: "P/Invoke Marshaling Sample"
+name: "P/Invoke Marshalling Sample"
 urlFragment: "pinvoke-marshal-arguments"
 description: "A .NET application that demonstrates different ways to marshal arguments to native functions when using P/Invokes."
 ---
 
-# .NET Core P/Invoke Marshaling Sample
+# .NET Core P/Invoke Marshalling Sample
 
 This project demonstrates different ways to marshal arguments to native functions when using P/Invokes. Documentation can be found here for [P/Invokes](https://docs.microsoft.com/dotnet/standard/native-interop/pinvoke) and here for the [Type marshaling](https://docs.microsoft.com/dotnet/standard/native-interop/type-marshaling).
 

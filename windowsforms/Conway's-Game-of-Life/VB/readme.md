@@ -3,7 +3,7 @@ languages:
 - vb
 products:
 - dotnet-core
-- windows
+- windows-forms
 page_type: sample
 name: ".NET Core Windows Forms Conway's Game Of Life (Visual Basic)"
 urlFragment: "Conway's-Game-of-Life-vb"
@@ -13,7 +13,7 @@ description: "The Game of Life, also known simply as Life, is a cellular automat
 
 ## Requires
 
-- Visual Studio 2019 Version 16.5.0 Preview 2.0 or later to edit the GUI in the solution designer and you need to enable the designer in the Visual Studio Preview. Go to **Tools** > **Options** > **Environment** > **Preview Features** and select the **Use the preview Windows Forms designer for .NET Core apps** option.
+- Visual Studio 2019 or later to edit the GUI in the solution designer
 - .NET Core 3.1
 
 ## License
@@ -23,7 +23,7 @@ description: "The Game of Life, also known simply as Life, is a cellular automat
 ## Technologies
 
 - Windows Forms
-- dotnet-core
+- .NET Core
 
 ## Topics
 
@@ -36,7 +36,7 @@ description: "The Game of Life, also known simply as Life, is a cellular automat
 
 ## Description
 
-This Windows Forms sample was ported to .NET Core from a [previous .NET Framework 4.5 sample](https://github.com/microsoftarchive/msdn-code-gallery-community-a-c/tree/master/Conway's%20Game%20of%20Life/%5BVB%5D-Conway's%20Game%20of%20Life/VB).  This illustrates how to use Visual Basic in WinForms in .NET Core 3.1. Visual Basic support for WinForms is not fully supported in .NET Core 3.1, but the features used in this sample work fine.
+This Windows Forms sample was ported to .NET Core from a [previous .NET Framework 4.5 sample](https://github.com/microsoftarchive/msdn-code-gallery-community-a-c/tree/master/Conway's%20Game%20of%20Life/%5BVB%5D-Conway's%20Game%20of%20Life/VB).  This illustrates how to use Visual Basic in Windows Forms in .NET Core 3.1. Visual Basic support for Windows Forms is not fully supported in .NET Core 3.1, but the features used in this sample work fine.
 
 The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.
 
@@ -49,6 +49,6 @@ The universe of the Game of Life is an infinite two-dimensional orthogonal grid 
 3. Any live cell with more than three live neighbors dies, as if by overpopulation.
 4. Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.
 
-The initial pattern constitutes the seed of the system. The first generation is created by applying the above rules simultaneously to every cell in the seed—births and deaths occur simultaneously, and the discrete moment at which this happens is sometimes called a tick (in other words, each generation is a pure function of the preceding one). The rules continue to be applied repeatedly to create further generations.
+The initial pattern constitutes the seed of the system. The first generation is created by applying the above rules simultaneously to every cell in the seedï¿½births and deaths occur simultaneously, and the discrete moment at which this happens is sometimes called a tick (in other words, each generation is a pure function of the preceding one). The rules continue to be applied repeatedly to create further generations.
 
 ![Conway's Game of Life Image](Conway's-Game-of-Life-VB.jpg)

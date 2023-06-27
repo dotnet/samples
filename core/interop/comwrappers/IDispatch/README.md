@@ -6,7 +6,7 @@ The [`ComWrappers`](https://docs.microsoft.com/dotnet/api/system.runtime.interop
 Key Features
 ------------
 
-Demonstrates how to implement and utilize the `ComWrappers` API by manually implementing a subset of [`IDispatch`](https://docs.microsoft.com/windows/win32/api/oaidl/nn-oaidl-idispatch) for .NET objects. The consumer of the `IDispatch` instance is the [WinForms `WebBrowser`](https://docs.microsoft.com/dotnet/framework/winforms/controls/webbrowser-control-windows-forms) API for [exposing an object to the JavaScript engine](https://docs.microsoft.com/dotnet/api/system.windows.forms.webbrowser.objectforscripting).
+Demonstrates how to implement and utilize the `ComWrappers` API by manually implementing a subset of [`IDispatch`](https://docs.microsoft.com/windows/win32/api/oaidl/nn-oaidl-idispatch) for .NET objects. The consumer of the `IDispatch` instance is the [Windows Forms `WebBrowser`](<https://docs.microsoft.com/dotnet/framework/Windows> Forms/controls/webbrowser-control-windows-forms) API for [exposing an object to the JavaScript engine](https://docs.microsoft.com/dotnet/api/system.windows.forms.webbrowser.objectforscripting).
 
 This is already fully supported by the built-in COM interop system, but this demonstrates a way for users to provide their own implementation.
 

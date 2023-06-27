@@ -1,6 +1,6 @@
 # MSIX Windows Forms Core Application
 
-This sample shows how to use the Windows Packaging Project to package a WinForms application running on .NET Core 3.1.
+This sample shows how to use the Windows Packaging Project to package a Windows Forms application running on .NET Core 3.1.
 
 ## Pre-requisites
 
@@ -30,7 +30,7 @@ In the .wapproj file modify the `ProjectReference` element:
 
 ```xml
 <ItemGroup>
-  <ProjectReference Include="..\CoreWinFormsApp1\CoreWinFormsApp1.csproj" SkipGetTargetFrameworkProperties="true" Properties="RuntimeIdentifier=win-x64;SelfContained=true" />
+  <ProjectReference Include="..\CoreWindows FormsApp1\CoreWindows FormsApp1.csproj" SkipGetTargetFrameworkProperties="true" Properties="RuntimeIdentifier=win-x64;SelfContained=true" />
 </ItemGroup>
 ```
 
@@ -44,7 +44,7 @@ And add the targets:
 <Target Name="_ValidateAppReferenceItems" />
 <Target Name="_FixEntryPoint" AfterTargets="_ConvertItems">
   <PropertyGroup>
-    <EntryPointExe>CoreWinFormsApp1\CoreWinFormsApp1.exe</EntryPointExe>
+    <EntryPointExe>CoreWindows FormsApp1\CoreWindows FormsApp1.exe</EntryPointExe>
   </PropertyGroup>
 </Target>
 <Target Name="PublishReferences" BeforeTargets="ExpandProjectReferences">

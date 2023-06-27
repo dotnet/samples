@@ -2,18 +2,17 @@
 languages:
 - csharp
 products:
-- dotnet
 - dotnet-core
 - windows-forms
 page_type: sample
 name: ".NET Core parallel animated ray-traced bouncing ball"
-urlFragment: "parallel-programming-winforms-raytracer-cs"
-description: "A .NET Core WinForms application that demonstrates an animated, ray-traced bouncing ball with parallel programming."
+urlFragment: "parallel-programming-Windows Forms-raytracer-cs"
+description: "A .NET Core Windows Forms application that demonstrates an animated, ray-traced bouncing ball with parallel programming."
 ---
 
 # .NET Core parallel animated ray-traced bouncing ball
 
-The sample source code is a .NET Core WinForms application written in C#, that provides an animated, ray-traced bouncing ball. Sequential and parallel implementations are provided, as is a special parallel implementation that colors the animated image based on which thread was used to calculate which regions. For more information, see [Updates on .NET Core Windows Forms designer](https://devblogs.microsoft.com/dotnet/updates-on-net-core-windows-forms-designer/).
+The sample source code is a .NET Core Windows Forms application written in C#, that provides an animated, ray-traced bouncing ball. Sequential and parallel implementations are provided, as is a special parallel implementation that colors the animated image based on which thread was used to calculate which regions. For more information, see [Updates on .NET Core Windows Forms designer](https://devblogs.microsoft.com/dotnet/updates-on-net-core-windows-forms-designer/).
 
 ## Demo
 

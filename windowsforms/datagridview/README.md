@@ -3,7 +3,7 @@
 This Windows Forms sample was ported to .NET Core from
 [a previous .NET Framework 4.5 sample](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20Forms%20DataGridView%20demo%20(CSWinFormDataGridView)).
 
-This sample demonstrates DataGridView usage in a .NET Core 3 WinForms app.
+This sample demonstrates DataGridView usage in a .NET Core 3 Windows Forms app.
 It contains five separate sample DataGridView scenarios. Uncomment the one
 you wish to run in `Program.cs`:
 

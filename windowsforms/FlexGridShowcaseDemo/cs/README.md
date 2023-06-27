@@ -2,18 +2,17 @@
 languages:
 - csharp
 products:
-- dotnet
 - dotnet-core
 - windows-forms
 page_type: sample
 name: "Windows Forms Datagrid Sample: FlexGrid Showcase (C#)"
-urlFragment: "winforms-flexgridshowcase-cs"
+urlFragment: "Windows Forms-flexgridshowcase-cs"
 description: ".NET 6.0 Windows Forms application that demonstrates how to use GrapeCity FlexGrid"
 ---
 
 # FlexGrid Showcase Demo
 
-This sample is a .NET 6.0 Windows Forms application that demonstrates how to use GrapeCity [`FlexGrid`](https://www.grapecity.com/componentone/winforms-ui-controls/flexgrid-winforms-data-grid), a WinForms Datagrid control.
+This sample is a .NET 6.0 Windows Forms application that demonstrates how to use GrapeCity [`FlexGrid`](<https://www.grapecity.com/componentone/Windows> Forms-ui-controls/flexgrid-Windows Forms-data-grid), a Windows Forms Datagrid control.
 
 The sample shows different operations with `FlexGrid`:
 

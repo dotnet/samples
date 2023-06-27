@@ -2,7 +2,6 @@
 languages:
 - csharp
 products:
-- dotnet
 - dotnet-core
 - windows-wpf
 page_type: sample

@@ -2,7 +2,7 @@
 languages:
 - csharp
 products:
-- dotnet-core
+- aspnet-core
 - azure
 page_type: sample
 name: "Azure Monitor Application Insights Quickstart for ASP.NET Core"
