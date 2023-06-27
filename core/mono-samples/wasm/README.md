@@ -24,7 +24,7 @@ This sample will only run on macOS.
 - .NET sdk 6.0.100-alpha.1.20628.2.
 - dotnet-serve (<https://github.com/natemcmain/dotnet-serve>)
 
-To install a specific version of the dotnet sdk, download the latest stable version of the dotnet-install script:
+To install a specific version of the .NET SDK, download the latest stable version of the dotnet-install script:
 
 - Bash: <https://dot.net/v1/dotnet-install.sh>
 

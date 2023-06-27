@@ -112,4 +112,4 @@ You can file Windows Forms and WPF related issues in the [dotnet/core repo](http
 
 ### Known issues
 
-Take a look at the issues filed with the [Windows Forms area tag](<https://github.com/dotnet/core/labels/area-Windows> Forms).
+Take a look at the issues filed with the [Windows Forms area tag](https://github.com/dotnet/core/labels/area-winforms).

@@ -16,7 +16,7 @@ This sample is a .NET 5.0 Windows Forms Visual Basic application that demonstrat
 
 ![Screenshot](../images/screenshot.jpg)
 
-Credits: this sample was authored by @kpreisser, the author of [`Task Dialog` for Windows Forms](<https://github.com/dotnet/Windows> Forms/pull/1133).
+Credits: this sample was authored by @kpreisser, the author of [`Task Dialog` for Windows Forms](<<https://github.com/dotnet/winforms/pull/1133>).
 
 ## Sample prerequisites
 

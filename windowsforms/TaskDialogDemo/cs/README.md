@@ -16,7 +16,7 @@ This sample is a .NET 5.0 Windows Forms application that demonstrates how to use
 
 ![Screenshot](../images/screenshot.jpg)
 
-Credits: this sample was authored by @kpreisser, the author of [`Task Dialog` for Windows Forms](<https://github.com/dotnet/Windows> Forms/pull/1133).
+Credits: this sample was authored by @kpreisser, the author of [`Task Dialog` for Windows Forms](<<https://github.com/dotnet/winforms/pull/1133>).
 
 ## Sample prerequisites
 
