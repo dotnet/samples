@@ -2,7 +2,6 @@
 languages:
 - csharp
 products:
-- dotnet
 - dotnet-core
 page_type: sample
 name: "Order .NET Core unit tests"

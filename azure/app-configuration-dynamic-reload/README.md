@@ -2,7 +2,7 @@
 languages:
 - csharp
 products:
-- dotnet-core
+- aspnet-core
 - azure
 page_type: sample
 name: "Azure App Configuration dynamic settings sample"

@@ -3,7 +3,6 @@ languages:
 - csharp
 products:
 - dotnet-core
-- windows
 page_type: sample
 name: "Excel Demo"
 urlFragment: "excel-demo"
