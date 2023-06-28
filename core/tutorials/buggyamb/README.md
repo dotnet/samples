@@ -2,7 +2,7 @@
 languages:
 - csharp
 products:
-- dotnet-core
+- dotnet
 page_type: sample
 name: "BuggyAmb debugging sample application"
 urlFragment: "buggyamb-debugging-sample-app"

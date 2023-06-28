@@ -2,7 +2,7 @@
 languages:
 - csharp
 products:
-- dotnet-core
+- dotnet
 page_type: sample
 name: "Order .NET Core unit tests"
 urlFragment: "order-unit-tests-cs"

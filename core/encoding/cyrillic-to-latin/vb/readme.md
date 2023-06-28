@@ -2,7 +2,7 @@
 languages:
 - vb
 products:
-- dotnet-core
+- dotnet
 page_type: sample
 name: ".NET Core Cyrillic to Latin Transliteration Utility (Visual Basic)"
 urlFragment: "cyrillic-transliteration-vb"

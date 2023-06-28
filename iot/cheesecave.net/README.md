@@ -2,7 +2,7 @@
 languages:
 - csharp
 products:
-- dotnet-core
+- dotnet
 - azure-iot-hub
 page_type: sample
 name: "End-to-end .NET IoT and Azure IoT Hub example"

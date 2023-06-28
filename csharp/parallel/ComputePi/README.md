@@ -2,7 +2,7 @@
 languages:
 - csharp
 products:
-- dotnet-core
+- dotnet
 page_type: sample
 name: ".NET Core parallel computation of PI"
 urlFragment: "parallel-programming-compute-pi-cs"
