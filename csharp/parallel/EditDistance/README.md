@@ -2,7 +2,7 @@
 languages:
 - csharp
 products:
-- dotnet-core
+- dotnet
 page_type: sample
 name: ".NET Core parallel wavefront algorithm sample"
 urlFragment: "parallel-programming-edit-distance-cs"

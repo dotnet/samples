@@ -2,7 +2,6 @@
 languages:
 - csharp
 products:
-- dotnet-core
 - windows-forms
 page_type: sample
 name: "Matching Game Sample (.NET 5 C#)"

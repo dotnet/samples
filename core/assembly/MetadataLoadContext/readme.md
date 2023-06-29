@@ -2,7 +2,7 @@
 languages:
 - csharp
 products:
-- dotnet-core
+- dotnet
 page_type: sample
 name: "Inspect assembly contents using MetadataLoadContext"
 urlFragment: "inspect-assembly-contents-using-metadataloadcontext"

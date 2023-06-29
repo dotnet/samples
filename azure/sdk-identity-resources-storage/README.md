@@ -2,7 +2,7 @@
 languages:
 - csharp
 products:
-- dotnet-core
+- dotnet
 - azure-sdks
 page_type: sample
 name: "Azure Identity, Resource Management, and Storage sample"

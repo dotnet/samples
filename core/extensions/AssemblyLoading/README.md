@@ -2,7 +2,7 @@
 languages:
 - csharp
 products:
-- dotnet-core
+- dotnet
 page_type: sample
 name: "Assembly Loading Extension Points"
 urlFragment: "assembly-loading-extension-points"

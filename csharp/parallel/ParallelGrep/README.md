@@ -2,7 +2,7 @@
 languages:
 - csharp
 products:
-- dotnet-core
+- dotnet
 page_type: sample
 name: ".NET Core parallel grep sample"
 urlFragment: "parallel-programming-grep-cs"

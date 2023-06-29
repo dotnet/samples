@@ -2,7 +2,7 @@
 languages:
 - csharp
 products:
-- dotnet-core
+- dotnet
 - windows-forms
 page_type: sample
 name: ".NET Core parallel animated ray-traced bouncing ball"

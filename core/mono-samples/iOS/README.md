@@ -2,7 +2,7 @@
 languages:
 - csharp
 products:
-- dotnet-core
+- dotnet
 page_type: sample
 name: "iOS Sample: Simple greeting and counter (C#)"
 description: "An iOS application that contains an example of embedding the mono runtime to invoke unmanaged code with C#."
