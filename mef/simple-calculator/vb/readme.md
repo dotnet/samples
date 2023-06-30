@@ -2,7 +2,7 @@
 languages:
 - vb
 products:
-- dotnet-core
+- dotnet
 page_type: sample
 name: "MEF Sample: Simple Calculator (Visual Basic)"
 urlFragment: "simple-calculator-vb"

@@ -3,7 +3,7 @@ languages:
 - csharp
 - cpp
 products:
-- dotnet-core
+- dotnet
 page_type: sample
 name: "DllMap Demo"
 urlFragment: "dllmap-demo"

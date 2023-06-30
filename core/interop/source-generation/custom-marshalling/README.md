@@ -3,7 +3,7 @@ languages:
 - csharp
 - cpp
 products:
-- dotnet-core
+- dotnet
 page_type: sample
 name: "Custom Marshalling Source Generation"
 urlFragment: "custom-marshalling-source-generation"

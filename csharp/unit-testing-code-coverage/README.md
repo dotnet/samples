@@ -2,7 +2,7 @@
 languages:
 - csharp
 products:
-- dotnet-core
+- dotnet
 page_type: sample
 name: ".NET Core unit testing code coverage"
 urlFragment: "unit-testing-code-coverage-cs"

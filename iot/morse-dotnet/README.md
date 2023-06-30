@@ -2,7 +2,7 @@
 languages:
 - csharp
 products:
-- dotnet-core
+- dotnet
 page_type: sample
 name: "Morse Code in .NET with GPIO"
 urlFragment: "morse-dotnet"

@@ -2,7 +2,7 @@
 languages:
 - csharp
 products:
-- dotnet-core
+- dotnet
 page_type: sample
 name: "Diagnostic scenarios sample debug target"
 urlFragment: "diagnostic-scenarios"
