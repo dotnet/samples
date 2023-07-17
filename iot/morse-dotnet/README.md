@@ -20,6 +20,10 @@ This sample consists of two apps:
 
 This sample is a fun way to learn about GPIO and .NET. It's also a good way to learn about the [Morse code](https://en.wikipedia.org/wiki/Morse_code) alphabet.
 
+## Video demonstration
+
+[You can see Morse.NET in action in this video](https://learn.microsoft.com/shows/dotnet-iot-for-beginners/general-purpose-inputoutput-read-input-with-gpio-and-dotnet-dotnet-iot-for-beginners#time=6m4s).
+
 ## Limitations
 
 The sender app is fully functional. The receiver app works well with the sender app, but it probably wouldn't work very well with a human telegraph operator. The receiver app expects precise timing between the on and off states of the laser. A human operator would probably be more likely to vary the timing between on and off states, which would make the receiver app less reliable.
