@@ -10,7 +10,7 @@ description: "A sample console application that shows how to use MetadataLoadCon
 ---
 # Inspect assembly contents using MetadataLoadContext
 
-This sample is a .NET Core console application that loads a specified assembly and prints its custom attributes and defined types. It demonstrates how to use the [System.Reflection.MetadataLoadContext](https://www.nuget.org/packages/System.Reflection.MetadataLoadContext) API to load an assembly for inspection purposes.
+This sample is a .NET console application that loads a specified assembly and prints its custom attributes and defined types. It demonstrates how to use the [System.Reflection.MetadataLoadContext](https://www.nuget.org/packages/System.Reflection.MetadataLoadContext) API to load an assembly for inspection purposes.
 
 ## Build and run the sample
 
