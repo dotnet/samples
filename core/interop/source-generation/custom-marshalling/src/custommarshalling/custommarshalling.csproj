@@ -7,6 +7,7 @@
     <Nullable>enable</Nullable>
     <RootNamespace>CustomMarshalling</RootNamespace>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <LangVersion>Preview</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
