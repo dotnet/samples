@@ -5,20 +5,22 @@
 
 //Set this value accordingly to your workspace settings
 #if defined(_WIN32)
-#define PathToLibrary "bin\\Debug\\net6.0\\win-x64\\native\\NativeLibrary.dll"
+#define PathToLibrary "bin\\Debug\\net7.0\\win-x64\\publish\\NativeLibrary.dll"
 #elif defined(__APPLE__)
-#define PathToLibrary "./bin/Debug/net6.0/osx-x64/native/NativeLibrary.dylib"
+#define PathToLibrary "./bin/Debug/net7.0/osx-x64/publish/NativeLibrary.dylib"
 #else
-#define PathToLibrary "./bin/Debug/net6.0/linux-x64/native/NativeLibrary.so"
+#define PathToLibrary "./bin/Debug/net7.0/linux-x64/publish/NativeLibrary.so"
 #endif
 
 #ifdef _WIN32
 #include "windows.h"
 #define symLoad GetProcAddress
+#pragma comment (lib, "ole32.lib")
 #else
 #include "dlfcn.h"
 #include <unistd.h>
 #define symLoad dlsym
+#define CoTaskMemFree free
 #endif
 
 #include <stdlib.h>
@@ -49,7 +51,7 @@ int main()
     printf("The concatenated string is %s \n", sumstring);
 
     // Free string
-    free(sumstring);
+    CoTaskMemFree(sumstring);
 }
 
 int callSumFunc(char *path, char *funcName, int firstInt, int secondInt)

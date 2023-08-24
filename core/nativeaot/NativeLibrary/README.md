@@ -12,7 +12,7 @@ Create a .NET class library project using `dotnet new classlib -o NativeLibrary`
 > dotnet publish /p:NativeLib=Shared -r <RID> -c <Configuration>
 ```
 
-The above command will drop a shared library (Windows `.dll`, OSX `.dylib`, Linux `.so`) in `./bin/[configuration]/netstandard2.0/[RID]/publish/` folder and will have the same name as the folder in which your source file is present.
+The above command will drop a shared library (Windows `.dll`, OSX `.dylib`, Linux `.so`) in `./bin/[configuration]/net7.0/[RID]/publish/` folder and will have the same name as the folder in which your source file is present.
 
 ### Loading shared libraries from C and importing methods
 
@@ -95,7 +95,7 @@ where `<Configuration>` is your project configuration (such as Debug or Release)
 > dotnet publish /p:NativeLib=Static -r win-x64 -c release
 ```
 
-The above command will drop a static library (Windows `.lib`, OSX/Linux `.a`) in `./bin/[configuration]/netstandard2.0/[RID]/publish/` folder and will have the same name as the folder in which your source file is present.
+The above command will drop a static library (Windows `.lib`, OSX/Linux `.a`) in `./bin/[configuration]/net7.0/[RID]/publish/` folder and will have the same name as the folder in which your source file is present.
 
 <!-- markdownlint-disable MD033 -->
 <details>
