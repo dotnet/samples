@@ -108,3 +108,14 @@ extern "C" DLL_EXPORT error_data* STDMETHODCALLTYPE GetErrors(int* codes, int le
 
     return ret;
 }
+
+struct error_data_buffer
+{
+    error_data data[4];
+};
+
+extern "C" DLL_EXPORT void STDMETHODCALLTYPE GetErrorCodes(error_data_buffer errors, int* codes)
+{
+    for (int i = 0; i < 4; ++i)
+        codes[i] = errors.data[i].code;
+}

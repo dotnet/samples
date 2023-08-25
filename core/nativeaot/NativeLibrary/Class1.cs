@@ -46,7 +46,7 @@ namespace NativeLibrary
             string sum = my1String + my2String;
 
             // Assign pointer of the concatenated string to sumPointer
-            IntPtr sumPointer = Marshal.StringToHGlobalAnsi(sum);
+            IntPtr sumPointer = Marshal.StringToCoTaskMemAnsi(sum);
 
             // Return pointer
             return sumPointer;

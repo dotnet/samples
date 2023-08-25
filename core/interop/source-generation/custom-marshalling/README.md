@@ -23,7 +23,7 @@ This sample implements and uses custom marshallers for a built-in type and a use
 
 ## Prerequisites
 
-- [.NET 7 SDK](https://dotnet.microsoft.com/download) Preview 7 or later
+- [.NET 8 SDK](https://dotnet.microsoft.com/download) Preview 7 or later
 
 - C++ compiler
   - Windows: `cl.exe`
