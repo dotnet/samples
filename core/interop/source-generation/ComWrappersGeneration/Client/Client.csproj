@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <CompilerGeneratedFilesOutputPath>bin\Generated</CompilerGeneratedFilesOutputPath>
+    <PublishAOT>true</PublishAOT>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="../Shared/*.cs" />
+  </ItemGroup>
+
+  <Target Name="CopyToSharedOutputDirectory" AfterTargets="Publish">
+    <CreateItem Include="$(PublishDir)\*.*">
+            <Output TaskParameter="Include" ItemName="PublishedFiles" />
+    </CreateItem>
+    <Copy SourceFiles="@(PublishedFiles)"
+                DestinationFiles="@(PublishedFiles->'..\OutputFiles\%(Filename)%(Extension)')" />
+  </Target>
+</Project>

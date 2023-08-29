@@ -24,6 +24,7 @@ public class Program
 }
 
 [ComImport]
+[ComVisible(true)]
 [Guid("c67121c6-cf26-431f-adc7-d12fe2448841")]
 internal interface ISimpleCalculator
 {
@@ -31,6 +32,8 @@ internal interface ISimpleCalculator
     int Subtract(int a, int b);
 }
 
+[ComVisible(true)]
+[Guid("c67121c6-cf27-431f-adc7-d12fe2448841")]
 internal class Calculator : ISimpleCalculator
 {
     public int Add(int a, int b) => a + b;
@@ -39,8 +42,11 @@ internal class Calculator : ISimpleCalculator
 
 public static class PInvokes
 {
-    [DllImport("ComInterfaceGeneratorDemo", EntryPoint ="GetNativeCalculator")]
+    [DllImport("ComInterfaceGeneratorDemo", EntryPoint = "GetNativeCalculator")]
     internal static extern nint GetNativeCalculator();
+
+    [DllImport("ComInterfaceGeneratorDemo", EntryPoint = "GetNativeCalculator")]
+    internal static extern ISimpleCalculator GetCalculator();
 }
 
 public static class Exports
@@ -54,4 +60,16 @@ public static class Exports
         }
         return Marshal.GetComInterfaceForObject(new Calculator(), typeof(ISimpleCalculator));
     }
+}
+
+internal class Ole32
+{
+    // https://docs.microsoft.com/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance
+    [DllImport(nameof(Ole32))]
+    public static extern int CoCreateInstance(
+        [In, MarshalAs(UnmanagedType.LPStruct)] Guid rclsid,
+        IntPtr pUnkOuter,
+        uint dwClsContext,
+        [In, MarshalAs(UnmanagedType.LPStruct)] Guid riid,
+        [MarshalAs(UnmanagedType.IUnknown)] out object ppv);
 }
