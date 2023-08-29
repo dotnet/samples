@@ -1,4 +1,5 @@
 using System;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.Marshalling;
 using Microsoft.Win32;
@@ -36,36 +37,70 @@ public static unsafe class Exports
     public static int DllRegisterServer()
     {
         const string InprocServer32 = nameof(InprocServer32);
-
+        const string ProgId = nameof(ProgId);
+        const string CLSID = nameof(CLSID);
         if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             return -1;
 
-        CreateKeyForAssembly(Calculator.ClsId, ISimpleCalculator.IID);
-        CreateKeyForAssembly(ClassFactory.ClsId, IClassFactory.IID);
+        CreateKeyForAssembly(ISimpleCalculator.IID, Calculator.ClsId, nameof(ISimpleCalculator), nameof(Calculator), 5);
 
         return 0;
 
-        static void CreateKeyForAssembly(string iid, string clsid)
+        static void CreateKeyForAssembly(string iid, string clsid, string interfaceName, string className, int numMethods)
         {
             if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                 throw new InvalidOperationException();
-            using (var key = Registry.CurrentUser.CreateSubKey($$"""SOFTWARE\Classes\CLSID\{{{Calculator.ClsId}}}"""))
+
+            string progId = $"Tutorial.{className}.0";
+
+            using (var key = Registry.CurrentUser.CreateSubKey($$"""SOFTWARE\Classes\CLSID\{{{clsid}}}"""))
             {
-                key.SetValue(null, "Calculator", RegistryValueKind.String);
-            }
-            using (var key = Registry.CurrentUser.CreateSubKey($$"""SOFTWARE\Classes\CLSID\{{{Calculator.ClsId}}}\{{InprocServer32}}"""))
-            {
-                key.SetValue(null, AppContext.BaseDirectory + typeof(ClassFactory).Assembly.GetName().Name + ".exe", RegistryValueKind.String);
+                key.SetValue(null, className, RegistryValueKind.String);
+                key.SetValue("ProgId", progId, RegistryValueKind.String);
             }
 
-            using (var key = Registry.CurrentUser.CreateSubKey($$"""SOFTWARE\Classes\Interface\{{{ISimpleCalculator.IID}}}"""))
+            using (var key = Registry.CurrentUser.CreateSubKey($$"""SOFTWARE\Classes\CLSID\{{{clsid}}}\Interface\{{{iid}}}"""))
             {
-                key.SetValue(null, "ISimpleCalculator", RegistryValueKind.String);
+                key.SetValue(null, interfaceName, RegistryValueKind.String);
+            }
+            using (var key = Registry.CurrentUser.CreateSubKey($$"""SOFTWARE\Classes\CLSID\{{{clsid}}}\Interface\{{{iid}}}"""))
+            {
+                key.SetValue(null, interfaceName, RegistryValueKind.String);
+            }
+            using (var key = Registry.CurrentUser.CreateSubKey($$"""SOFTWARE\Classes\CLSID\{{{clsid}}}\{{InprocServer32}}"""))
+            {
+                key.SetValue(null, @"C:\src\samples\core\interop\source-generation\ComWrappersGeneration\OutputFiles\Server.dll", RegistryValueKind.String);
+                // key.SetValue(null, typeof(ClassFactory).Assembly.GetName().Name + ".dll", RegistryValueKind.String);
             }
 
-            // using (var key = Registry.CurrentUser.CreateSubKey($$"""SOFTWARE\Classes\ProgId\{{{ISimpleCalculator.IID}}}"""))
+            using (var key = Registry.CurrentUser.CreateSubKey($$"""SOFTWARE\Classes\Interface\{{{iid}}}"""))
+            {
+                key.SetValue(null, interfaceName, RegistryValueKind.String);
+            }
+            using (var key = Registry.CurrentUser.CreateSubKey($$"""SOFTWARE\Classes\Interface\{{{iid}}}\ProxyStubClsid32\{{{clsid}}}"""))
+            {
+                key.SetValue(null, className, RegistryValueKind.String);
+            }
+            using (var key = Registry.CurrentUser.CreateSubKey($$"""SOFTWARE\Classes\Interface\{{{iid}}}\NumMethods"""))
+            {
+                key.SetValue(null, numMethods, RegistryValueKind.String);
+            }
+            using (var key = Registry.CurrentUser.CreateSubKey($$"""SOFTWARE\Classes\{{{progId}}}"""))
+            {
+                key.SetValue(null, className, RegistryValueKind.String);
+                key.SetValue("CLSID", clsid, RegistryValueKind.String);
+            }
+
+            // static void CreateComRegKey(string value, params string[] path)
             // {
-            //     key.SetValue(null, "Description", RegistryValueKind.String);
+            //     if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            //         throw new InvalidOperationException();
+
+            //     var keyPath = @"SOFTWARE\Classes\" + string.Join('\\', path);
+            //     using (var key = Registry.CurrentUser.CreateSubKey(keyPath))
+            //     {
+            //         key.SetValue(null, value, RegistryValueKind.String);
+            //     }
             // }
         }
     }

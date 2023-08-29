@@ -21,12 +21,12 @@
     <PackageReference Include="Microsoft.Win32.Registry" Version="5.0.0" />
   </ItemGroup>
 
-  <Target Name="CopyToSharedOutputDirectory" AfterTargets="Publish">
+  <Target Name="CopyToSharedOutputDirectory" AfterTargets="CopyNativeBinary">
     <CreateItem Include="$(PublishDir)\*.*">
-            <Output TaskParameter="Include" ItemName="PublishedFiles" />
+      <Output TaskParameter="Include" ItemName="PublishedFiles" />
     </CreateItem>
     <Copy SourceFiles="@(PublishedFiles)"
-                DestinationFiles="@(PublishedFiles->'..\OutputFiles\%(Filename)%(Extension)')" />
+          DestinationFiles="@(PublishedFiles->'..\OutputFiles\%(Filename)%(Extension)')" />
   </Target>
 
 </Project>

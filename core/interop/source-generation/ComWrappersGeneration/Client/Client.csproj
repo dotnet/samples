@@ -16,11 +16,11 @@
     <Compile Include="../Shared/*.cs" />
   </ItemGroup>
 
-  <Target Name="CopyToSharedOutputDirectory" AfterTargets="Publish">
-    <CreateItem Include="$(PublishDir)\*.*">
-            <Output TaskParameter="Include" ItemName="PublishedFiles" />
-    </CreateItem>
-    <Copy SourceFiles="@(PublishedFiles)"
-                DestinationFiles="@(PublishedFiles->'..\OutputFiles\%(Filename)%(Extension)')" />
+  <Target Name="CopyToSharedOutputDirectory" AfterTargets="CopyNativeBinary">
+    <ItemGroup>
+      <PublishedFiles123 Include="$(PublishDir)\*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(PublishedFiles123)"
+          DestinationFiles="@(PublishedFiles123->'..\OutputFiles\%(Filename)%(Extension)')" />
   </Target>
 </Project>

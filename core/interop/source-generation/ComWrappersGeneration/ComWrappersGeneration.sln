@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComInterfaceGeneratorDemo", "Server\Server.csproj", "{A940B0A0-04CD-40CF-8516-331C2BA97B31}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{A940B0A0-04CD-40CF-8516-331C2BA97B31}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuiltInCOM", "BuiltInCOM\BuiltInCOM.csproj", "{49132495-3828-4263-8F21-8CC028D86E08}"
 EndProject

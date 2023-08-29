@@ -14,7 +14,7 @@ public static partial class ComInterfaces
         [return: MarshalAs(UnmanagedType.Interface)]
         object CreateInstance([MarshalAs(UnmanagedType.Interface)] object? outer, in Guid id);
         void LockServer([MarshalAs(UnmanagedType.U4)] bool fLock);
-        public const string IID = "e5acc998-8195-47ba-9fae-854da721e324";
+        public const string IID = "00000001-0000-0000-C000-000000000046";
     }
 
     [GeneratedComInterface]

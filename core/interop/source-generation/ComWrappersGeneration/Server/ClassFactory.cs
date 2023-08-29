@@ -16,8 +16,8 @@ public partial class ClassFactory : IClassFactory
         if(outer != null)
            throw new NotImplementedException();
 
-        if (id != new Guid(ISimpleCalculator.IID))
-            throw new InvalidOperationException();
+        // if (id != new Guid(ISimpleCalculator.IID))
+        //     throw new InvalidOperationException();
 
         return new Calculator();
     }
