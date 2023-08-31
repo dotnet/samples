@@ -10,6 +10,7 @@
     <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
     <CompilerGeneratedFilesOutputPath>bin\Generated</CompilerGeneratedFilesOutputPath>
     <PublishAOT>true</PublishAOT>
+    <DebugType>embedded</DebugType>
     <!-- <EnableComHosting>true</EnableComHosting> -->
   </PropertyGroup>
 

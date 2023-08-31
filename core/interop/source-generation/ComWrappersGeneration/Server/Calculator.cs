@@ -10,7 +10,11 @@ namespace Tutorial;
 [Guid(ClsId)]
 internal partial class Calculator : ISimpleCalculator
 {
-    public int Add(int a, int b) => a + b;
+    public int Add(int a, int b)
+    {
+        Console.WriteLine("Adding");
+        return a + b;
+    }
     public int Subtract(int a, int b) => a - b;
     internal const string ClsId = ClsIds.Calculator;
 }

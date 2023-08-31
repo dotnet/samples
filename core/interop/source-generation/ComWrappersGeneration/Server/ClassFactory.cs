@@ -9,17 +9,37 @@ namespace Tutorial;
 
 [GeneratedComClass]
 [Guid(ClsId)]
-public partial class ClassFactory : IClassFactory
+public unsafe partial class ClassFactory : IClassFactory
 {
-    public object CreateInstance(object? outer, in Guid id)
+    public void CreateInstance(nint outer, ref Guid id, nint* iface)
     {
-        if(outer != null)
-           throw new NotImplementedException();
+        Console.WriteLine($"CreateFactory requested IID: {id}");
+        var cw = new StrategyBasedComWrappers();
+        var iunk = cw.GetOrCreateComInterfaceForObject(new Calculator(), CreateComInterfaceFlags.None);
+        Console.WriteLine($"Iunk: {iunk:x}");
+        var vtable = *(void***)iunk;
+        // nint outval;
+        var hr = Marshal.QueryInterface(iunk, ref id, out *iface);
+        // var invokeval = ((delegate* unmanaged[MemberFunction]<void*, Guid*, nint*, int>)vtable[0])((void*)iunk, &iid, iface);
+        Console.WriteLine($"ISimpleCalc: {*iface:x}");
 
-        // if (id != new Guid(ISimpleCalculator.IID))
-        //     throw new InvalidOperationException();
+        int c;
+        vtable = *(void***)(*iface);
+        Console.WriteLine($"MethodPtr: {(nint)vtable[3]:x}");
+        var ivokeval = ((delegate* unmanaged<void*, int, int, int*, int>)vtable[3])((void*)(*iface), 2, 3, &c);
+        Console.WriteLine(ivokeval);
+        Console.WriteLine(c);
+        // Console.WriteLine(invokeval);
+        // Console.WriteLine($"ISimpleCalc: {outval}");
+        // *iface = outval;
+        // Console.WriteLine($"iface: {*iface}");
 
-        return new Calculator();
+        // int c;
+        // vtable = *(void***)outval;
+        // Console.WriteLine((nint)vtable);
+        // var ivokeval = ((delegate* unmanaged[MemberFunction]<void*, int, int, int*, int>)vtable[3])((void*)outval, 2, 3, &c);
+        // Console.WriteLine(ivokeval);
+        // Console.WriteLine(c);
     }
 
     public void LockServer(bool fLock) { }
