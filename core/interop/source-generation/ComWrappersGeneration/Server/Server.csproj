@@ -18,16 +18,10 @@
     <Compile Include="../Shared/*.cs" />
   </ItemGroup>
 
+  <Import Project="../Shared/CopyToOutputDirectory.targets" />
+
   <ItemGroup>
     <PackageReference Include="Microsoft.Win32.Registry" Version="5.0.0" />
   </ItemGroup>
-
-  <Target Name="CopyToSharedOutputDirectory" AfterTargets="CopyNativeBinary">
-    <CreateItem Include="$(PublishDir)\*.*">
-      <Output TaskParameter="Include" ItemName="PublishedFiles" />
-    </CreateItem>
-    <Copy SourceFiles="@(PublishedFiles)"
-          DestinationFiles="@(PublishedFiles->'..\OutputFiles\%(Filename)%(Extension)')" />
-  </Target>
 
 </Project>

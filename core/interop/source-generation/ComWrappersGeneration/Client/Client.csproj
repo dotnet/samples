@@ -13,15 +13,10 @@
     <DebugType>embedded</DebugType>
   </PropertyGroup>
 
+  <Import Project="../Shared/CopyToOutputDirectory.targets" />
+
   <ItemGroup>
     <Compile Include="../Shared/*.cs" />
   </ItemGroup>
 
-  <Target Name="CopyToSharedOutputDirectory" AfterTargets="CopyNativeBinary">
-    <ItemGroup>
-      <PublishedFiles123 Include="$(PublishDir)\*" />
-    </ItemGroup>
-    <Copy SourceFiles="@(PublishedFiles123)"
-          DestinationFiles="@(PublishedFiles123->'..\OutputFiles\%(Filename)%(Extension)')" />
-  </Target>
 </Project>

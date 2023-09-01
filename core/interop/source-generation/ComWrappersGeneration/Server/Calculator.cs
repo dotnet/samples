@@ -2,7 +2,6 @@ using System;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.Marshalling;
 using Microsoft.Win32;
-using static Tutorial.ComInterfaces;
 
 namespace Tutorial;
 

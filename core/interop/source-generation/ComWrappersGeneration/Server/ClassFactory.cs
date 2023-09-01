@@ -1,10 +1,5 @@
-
-using System;
-using System.Net.Http.Headers;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.Marshalling;
-using Microsoft.Win32;
-using static Tutorial.ComInterfaces;
 
 namespace Tutorial;
 
@@ -13,7 +8,7 @@ public unsafe partial class ClassFactory : IClassFactory
 {
     public void CreateInstance(nint pOuter, ref Guid iid, nint* ppInterface)
     {
-        Console.WriteLine($"IID requested from ClassFactory.CreateInstance: {iid}");
+        Console.WriteLine($"Server: IID requested from ClassFactory.CreateInstance: {iid}");
         if (pOuter != 0)
         {
             *ppInterface = 0;

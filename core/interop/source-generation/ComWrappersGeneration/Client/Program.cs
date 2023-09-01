@@ -3,7 +3,6 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.Marshalling;
-using static Tutorial.ComInterfaces;
 
 [assembly: DisableRuntimeMarshalling]
 
@@ -15,6 +14,7 @@ public class Program
     {
         var clsid = new Guid(ClsIds.Calculator);
         var iid = new Guid(ICalculator.IID);
+        Console.WriteLine($"Client: Requesting a Calculator (CLSID {clsid}) with ICalculator (IID {iid})");
         int hr = Ole32.CoCreateInstance(ref clsid, /* Do not do aggregation */ 0, (uint)Ole32.CLSCTX.CLSCTX_INPROC_SERVER, ref iid, out object comObject);
         Marshal.ThrowExceptionForHR(hr);
         ICalculator calculator = (ICalculator) comObject;
@@ -23,19 +23,10 @@ public class Program
         int b = 3;
         int c;
         c = calculator.Add(a, b);
-        Console.WriteLine($"{a} + {b} = {c}");
+        Console.WriteLine($"Client: {a} + {b} = {c}");
         c = calculator.Subtract(a, b);
-        Console.WriteLine($"{a} - {b} = {c}");
+        Console.WriteLine($"Client: {a} - {b} = {c}");
     }
-}
-
-public static partial class PInvokes
-{
-    [LibraryImport("ComServer", EntryPoint = "GetNativeCalculator")]
-    [return: MarshalAs(UnmanagedType.Interface)]
-    internal static partial ICalculator GetCalculator();
-    [LibraryImport("ComServer", EntryPoint = nameof(GetClassFactory))]
-    internal static partial IClassFactory GetClassFactory();
 }
 
 internal static unsafe partial class Ole32
@@ -49,6 +40,7 @@ internal static unsafe partial class Ole32
         ref Guid riid,
         [MarshalAs(UnmanagedType.Interface)] out object ppv);
 
+    // https://learn.microsoft.com/en-us/windows/win32/api/wtypesbase/ne-wtypesbase-clsctx
     public enum CLSCTX : uint
     {
         CLSCTX_INPROC_SERVER = 0x1,

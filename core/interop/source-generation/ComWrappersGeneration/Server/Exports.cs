@@ -4,20 +4,22 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.Marshalling;
 using Microsoft.Win32;
-using static Tutorial.ComInterfaces;
 
 namespace Tutorial;
 
 public static unsafe class Exports
 {
-    private const string SamplesRoot = @"<Path to dotnet/samples repository base>";
-    private const string PathToDll = SamplesRoot + @"\core\interop\source-generation\ComWrappersGeneration\OutputFiles\Server.dll";
-
+    /// <summary>
+    /// Returns a pointer to an IClassFactory instance that corresponds to the requested <paramref name="classId"/>.
+    /// <paramref name="interfaceId"/> is expected to be the IID of IClassFactory.
+    /// This method is called by the COM system when a client requests an object that this server has registered.
+    /// <see href="https://learn.microsoft.com/en-us/windows/win32/api/combaseapi/nf-combaseapi-dllgetclassobject"/>
+    /// </summary>
     [UnmanagedCallersOnly(EntryPoint = nameof(DllGetClassObject))]
     public static int DllGetClassObject(Guid* classId, Guid* interfaceId, nint* ppIClassFactory)
     {
-        Console.WriteLine($"Class ID requested from DllGetClassObject: {*classId}");
-        Console.WriteLine($"Interface ID requested from DllGetClassObject: {*interfaceId}");
+        Console.WriteLine($"Server: Class ID requested from DllGetClassObject: {*classId}");
+        Console.WriteLine($"Server: Interface ID requested from DllGetClassObject: {*interfaceId}");
         if (*classId != new Guid(ClsIds.Calculator)
             || *interfaceId != new Guid(IClassFactory.IID))
         {
@@ -33,68 +35,79 @@ public static unsafe class Exports
         Marshal.Release(pIUnknown);
         if (hr != 0)
         {
-            Console.WriteLine($"QueryInterface in DllGetClassObject failed: {hr:x}");
+            Console.WriteLine($"Server: QueryInterface in DllGetClassObject failed: {hr:x}");
             return hr;
         }
         return 0;
     }
 
+    /// <summary>
+    /// Registers the server with the COM system.
+    /// Called by <c>regsvr32.exe</c> when run with this .dll as the argument.
+    /// <see href="https://learn.microsoft.com/en-us/windows/win32/api/olectl/nf-olectl-dllregisterserver"/>
+    /// </summary>
     [UnmanagedCallersOnly(EntryPoint = nameof(DllRegisterServer))]
     public static int DllRegisterServer()
     {
-        const string InprocServer32 = nameof(InprocServer32);
-        const string ProgId = nameof(ProgId);
-        const string CLSID = nameof(CLSID);
         if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             return -1;
 
-        CreateKeyForClass(Calculator.ClsId, nameof(Calculator));
+        if (!FileUtils.TryGetDllPath(out string? dllPath))
+            return -2147220991; // SELFREG_E_CLASS
+
+        CreateComRegistryEntryForClass(Calculator.ClsId, nameof(Calculator), dllPath!);
 
         return 0;
+    }
 
-        static void CreateKeyForClass(string clsid, string className)
+    static void CreateComRegistryEntryForClass(string clsid, string className, string dllPath)
+    {
+        if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            throw new InvalidOperationException();
+
+        string progId = GetProgId(className);
+
+        using (var key = Registry.CurrentUser.CreateSubKey($$"""SOFTWARE\Classes\CLSID\{{{clsid}}}"""))
         {
-            if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-                throw new InvalidOperationException();
-
-            string progId = $"Tutorial.{className}.0";
-
-            using (var key = Registry.CurrentUser.CreateSubKey($$"""SOFTWARE\Classes\CLSID\{{{clsid}}}"""))
-            {
-                key.SetValue(null, className, RegistryValueKind.String);
-                key.SetValue("ProgId", progId, RegistryValueKind.String);
-            }
-            using (var key = Registry.CurrentUser.CreateSubKey($$"""SOFTWARE\Classes\CLSID\{{{clsid}}}\{{InprocServer32}}"""))
-            {
-                key.SetValue(null, PathToDll, RegistryValueKind.String);
-                key.SetValue("ThreadingModel", "Both", RegistryValueKind.String);
-                // key.SetValue(null, typeof(ClassFactory).Assembly.GetName().Name + ".dll", RegistryValueKind.String);
-            }
-            using (var key = Registry.CurrentUser.CreateSubKey($$"""SOFTWARE\Classes\{{{progId}}}"""))
-            {
-                key.SetValue(null, className, RegistryValueKind.String);
-                key.SetValue("CLSID", clsid, RegistryValueKind.String);
-            }
+            key.SetValue(null, className, RegistryValueKind.String);
+            key.SetValue("ProgId", progId, RegistryValueKind.String);
+        }
+        using (var key = Registry.CurrentUser.CreateSubKey($$"""SOFTWARE\Classes\CLSID\{{{clsid}}}\InprocServer32"""))
+        {
+            key.SetValue(null, dllPath, RegistryValueKind.String);
+            key.SetValue("ThreadingModel", "Both", RegistryValueKind.String);
+            // key.SetValue(null, typeof(ClassFactory).Assembly.GetName().Name + ".dll", RegistryValueKind.String);
+        }
+        using (var key = Registry.CurrentUser.CreateSubKey($$"""SOFTWARE\Classes\{{{progId}}}"""))
+        {
+            key.SetValue(null, className, RegistryValueKind.String);
+            key.SetValue("CLSID", clsid, RegistryValueKind.String);
         }
     }
 
+    /// <summary>
+    /// Unregisters the server from the COM system.
+    /// Called by <c>regsvr32.exe</c> when run with the -u flag and this .dll as the argument
+    /// <see href="https://learn.microsoft.com/en-us/windows/win32/api/olectl/nf-olectl-dllunregisterserver"/>
+    /// </summary>
     [UnmanagedCallersOnly(EntryPoint = nameof(DllUnregisterServer))]
     public static int DllUnregisterServer()
     {
-
-        DeleteKey(Calculator.ClsId, nameof(Calculator));
+        DeleteComRegistryKeyForClass(Calculator.ClsId, nameof(Calculator));
 
         return 0;
-
-        static void DeleteKey(string clsid, string className)
-        {
-            if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-                throw new InvalidOperationException();
-
-            string progId = $"Tutorial.{className}.0";
-
-            Registry.CurrentUser.DeleteSubKeyTree($$"""SOFTWARE\Classes\CLSID\{{{clsid}}}""");
-            Registry.CurrentUser.DeleteSubKeyTree($$"""SOFTWARE\Classes\{{{progId}}}""");
-        }
     }
+
+    static void DeleteComRegistryKeyForClass(string clsid, string className)
+    {
+        if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            throw new InvalidOperationException();
+
+        string progId = GetProgId(className);
+
+        Registry.CurrentUser.DeleteSubKeyTree($$"""SOFTWARE\Classes\CLSID\{{{clsid}}}""");
+        Registry.CurrentUser.DeleteSubKeyTree($$"""SOFTWARE\Classes\{{{progId}}}""");
+    }
+
+    public static string GetProgId(string className) => $"Tutorial.{className}.0";
 }

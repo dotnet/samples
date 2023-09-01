@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Target Name="CopyToSharedOutputDirectory" AfterTargets="CopyNativeBinary">
+    <CreateItem Include="$(PublishDir)\*.*">
+      <Output TaskParameter="Include" ItemName="PublishedFiles" />
+    </CreateItem>
+
+    <Message Text="Copying published %(PublishedFiles.FileName)%(PublishedFiles.Extension) to @(PublishedFiles->'.\OutputFiles\%(Filename)%(Extension)')"
+             Importance="high" />
+    <Copy SourceFiles="@(PublishedFiles)"
+          DestinationFiles="@(PublishedFiles->'..\OutputFiles\%(Filename)%(Extension)')" />
+  </Target>
+
+</Project>
