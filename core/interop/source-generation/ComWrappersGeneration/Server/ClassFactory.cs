@@ -12,7 +12,8 @@ public unsafe partial class ClassFactory : IClassFactory
         if (pOuter != 0)
         {
             *ppInterface = 0;
-            throw new COMException("Class does not support aggregation", -2147221232 /* CLASS_E_NOAGGREGATION */);
+            const int CLASS_E_NOAGGREGATION = unchecked((int)0x80040110);
+            throw new COMException("Class does not support aggregation", CLASS_E_NOAGGREGATION);
         }
         Calculator calculator = new();
         nint pIUnknown = (nint)ComInterfaceMarshaller<Calculator>.ConvertToUnmanaged(calculator);
