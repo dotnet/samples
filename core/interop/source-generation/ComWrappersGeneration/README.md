@@ -6,9 +6,8 @@ products:
 page_type: sample
 name: "Source-Generated COM Sample"
 urlFragment: "generated-comwrappers"
-description: "A .NET solution that demonstrated how to use source-generated COM in .NET"
+description: "A .NET solution that uses source-generated COM in .NET"
 ---
-
 
 # .NET Source-Generated COM Sample
 
@@ -23,6 +22,4 @@ This example defines an interface `ICalculator` that provides `Add` and `Subtrac
 
 ## Build and Run
 
-Build the Native AOT binaries by running `dotnet publish -r <RID>` where `<RID>` is the RuntimeIdentifier for your windows device, for example `win-x64`. The projects will copy the binaries to the OutputFiles directory. After publishing, use `regsvr32.exe` to register Server.dll to COM (run `regsvr.exe ./OutputFiles/Server.dll`). Then, run the Client.exe and see the output as it gets a COM object from the Server.dll and calls methods on it.
-
-
+Build the Native AOT binaries by running `dotnet publish -r <RID>` where `<RID>` is the RuntimeIdentifier for your windows device, for example `win-x64`. The projects will copy the binaries to the OutputFiles directory. After publishing, use `regsvr32.exe` to register Server.dll to COM (run `regsvr.exe ./OutputFiles/Server.dll`). Then, run `./OutputFiles/Client.exe` and see the output as it gets a COM object from the Server.dll and calls methods on it. Once finished, unregister the server by running `regsvr32.exe -u ./OutputFiles/Server.dll`.
