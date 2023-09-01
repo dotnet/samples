@@ -11,62 +11,21 @@ namespace Tutorial;
 
 public class Program
 {
-    public static unsafe void Main()
+    public static unsafe void Main(string[] args)
     {
-        int hr;
+        var clsid = new Guid(ClsIds.Calculator);
+        var iid = new Guid(ISimpleCalculator.IID);
+        int hr = Ole32.CoCreateInstance(ref clsid, /* Do not do aggregation */ 0, (uint)Ole32.CLSCTX.CLSCTX_INPROC_SERVER, ref iid, out object comObject);
+        Marshal.ThrowExceptionForHR(hr);
+        ISimpleCalculator simpleCalculator = (ISimpleCalculator) comObject;
+
         int a = 5;
         int b = 3;
         int c;
-
-        // string tempClsid = "10144713-1526-46C9-88DA-1FB52807A9FF";
-        // string tempIID = "E357FCCD-A995-4576-B01F-234630154E96";
-        // var rclsid = new Guid(tempClsid);
-        // var riid = new Guid(tempIID);
-        var rclsid =  new Guid(ClsIds.Calculator);
-        var riid = new Guid(ISimpleCalculator.IID);
-        nint iunk = 0;
-        hr = Ole32.CoCreateInstance(in rclsid, 0, (uint)Ole32.CLSCTX.CLSCTX_INPROC_SERVER, in riid, &iunk);
-        Console.WriteLine("Returned from CoCreate: " + hr);
-        Console.WriteLine($"Returned from CoCreate: ptr = {iunk:x}");
-
-        var vtable = *(void***)iunk;
-        // nint outval;
-        Guid iid = new(ISimpleCalculator.IID);
-        nint icalc;
-        hr = Marshal.QueryInterface(iunk, ref iid, out icalc);
-        // hr = ((delegate* unmanaged[MemberFunction]<void*, Guid*, nint*, int>)vtable[0])((void*)iunk, &iid, &icalc);
-        if (hr != 0)
-        {
-            Console.WriteLine($"Failed");
-        }
-        Console.WriteLine($"ISimpleCalc: {icalc:x}");
-
-        vtable = *(void***)icalc;
-        Console.WriteLine($"methodptr: {(nint)vtable[3]:x}");
-        hr = ((delegate* unmanaged<void*, int, int, int*, int>)vtable[3])((void*)icalc, 2, 3, &c);
-        if (hr != 0)
-        {
-            Console.WriteLine($"failed");
-        }
-        Console.WriteLine($"Added: {c}");
-        // var vtable = *(void***)iunk;
-        // var cw = new StrategyBasedComWrappers();
-        // var ivokeval = ((delegate* unmanaged[MemberFunction]<void*, int, int, int*, int>)vtable[3])((void*)iunk, 2, 3, &c);
-        // Console.WriteLine(c);
-        // var obj = cw.GetOrCreateObjectForComInstance(iunk, CreateObjectFlags.None);
-        // Console.WriteLine(obj);
-
-        // ISimpleCalculator calc = (ISimpleCalculator)obj;
-        // Console.WriteLine($"asdfasddf");
-        // Console.WriteLine(calc);
-        // Console.WriteLine(obj as ComObject);
-
-        // c = calc.Add(a, b);
-        // Console.WriteLine($"{a} + {b} = {c}");
-        // Debug.Assert(c == 8);
-        // c = calc.Subtract(a, b);
-        // Console.WriteLine($"{a} - {b} = {c}");
-        // Debug.Assert(c == 2);
+        c = simpleCalculator.Add(a, b);
+        Console.WriteLine($"{a} + {b} = {c}");
+        c = simpleCalculator.Subtract(a, b);
+        Console.WriteLine($"{a} - {b} = {c}");
     }
 }
 
@@ -79,17 +38,16 @@ public static partial class PInvokes
     internal static partial IClassFactory GetClassFactory();
 }
 
-
 internal static unsafe partial class Ole32
 {
     // https://docs.microsoft.com/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance
     [LibraryImport(nameof(Ole32))]
     public static partial int CoCreateInstance(
-        in Guid rclsid,
-        IntPtr pUnkOuter,
+        ref Guid rclsid,
+        nint pUnkOuter,
         uint dwClsContext,
-        in Guid riid,
-        nint* ppv);
+        ref Guid riid,
+        [MarshalAs(UnmanagedType.Interface)] out object ppv);
 
     public enum CLSCTX : uint
     {

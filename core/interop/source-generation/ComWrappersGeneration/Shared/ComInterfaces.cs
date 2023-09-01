@@ -6,8 +6,7 @@ namespace Tutorial;
 public static partial class ComInterfaces
 {
     [GeneratedComInterface]
-    // [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-    // [ComVisible(true)]
+    [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
     [Guid(IID)]
     internal unsafe partial interface IClassFactory
     {
@@ -17,8 +16,7 @@ public static partial class ComInterfaces
     }
 
     [GeneratedComInterface]
-    // [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-    // [ComVisible(true)]
+    [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
     [Guid(IID)]
     internal partial interface ISimpleCalculator
     {
