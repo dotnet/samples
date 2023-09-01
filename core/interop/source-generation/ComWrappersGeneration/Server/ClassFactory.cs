@@ -9,7 +9,6 @@ using static Tutorial.ComInterfaces;
 namespace Tutorial;
 
 [GeneratedComClass]
-[Guid(ClsId)]
 public unsafe partial class ClassFactory : IClassFactory
 {
     public void CreateInstance(nint pOuter, ref Guid iid, nint* ppInterface)
@@ -28,6 +27,4 @@ public unsafe partial class ClassFactory : IClassFactory
     }
 
     public void LockServer(bool fLock) { }
-
-    internal const string ClsId = ClsIds.ClassFactory;
 }

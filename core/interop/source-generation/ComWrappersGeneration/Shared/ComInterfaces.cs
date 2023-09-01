@@ -18,7 +18,7 @@ public static partial class ComInterfaces
     [GeneratedComInterface]
     [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
     [Guid(IID)]
-    internal partial interface ISimpleCalculator
+    internal partial interface ICalculator
     {
         int Add(int a, int b);
         int Subtract(int a, int b);

@@ -8,7 +8,7 @@ namespace Tutorial;
 
 [GeneratedComClass]
 [Guid(ClsId)]
-internal partial class Calculator : ISimpleCalculator
+internal partial class Calculator : ICalculator
 {
     public int Add(int a, int b) => a + b;
     public int Subtract(int a, int b) => a - b;

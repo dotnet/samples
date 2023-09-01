@@ -14,17 +14,17 @@ public class Program
     public static unsafe void Main(string[] args)
     {
         var clsid = new Guid(ClsIds.Calculator);
-        var iid = new Guid(ISimpleCalculator.IID);
+        var iid = new Guid(ICalculator.IID);
         int hr = Ole32.CoCreateInstance(ref clsid, /* Do not do aggregation */ 0, (uint)Ole32.CLSCTX.CLSCTX_INPROC_SERVER, ref iid, out object comObject);
         Marshal.ThrowExceptionForHR(hr);
-        ISimpleCalculator simpleCalculator = (ISimpleCalculator) comObject;
+        ICalculator calculator = (ICalculator) comObject;
 
         int a = 5;
         int b = 3;
         int c;
-        c = simpleCalculator.Add(a, b);
+        c = calculator.Add(a, b);
         Console.WriteLine($"{a} + {b} = {c}");
-        c = simpleCalculator.Subtract(a, b);
+        c = calculator.Subtract(a, b);
         Console.WriteLine($"{a} - {b} = {c}");
     }
 }
@@ -33,7 +33,7 @@ public static partial class PInvokes
 {
     [LibraryImport("ComServer", EntryPoint = "GetNativeCalculator")]
     [return: MarshalAs(UnmanagedType.Interface)]
-    internal static partial ISimpleCalculator GetCalculator();
+    internal static partial ICalculator GetCalculator();
     [LibraryImport("ComServer", EntryPoint = nameof(GetClassFactory))]
     internal static partial IClassFactory GetClassFactory();
 }
