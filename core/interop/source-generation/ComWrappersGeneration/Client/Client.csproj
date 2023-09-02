@@ -10,7 +10,6 @@
     <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
     <CompilerGeneratedFilesOutputPath>bin\Generated</CompilerGeneratedFilesOutputPath>
     <PublishAOT>true</PublishAOT>
-    <DebugType>embedded</DebugType>
   </PropertyGroup>
 
   <Import Project="../Shared/CopyToOutputDirectory.targets" />

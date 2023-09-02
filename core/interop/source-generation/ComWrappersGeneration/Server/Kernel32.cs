@@ -5,7 +5,7 @@ internal static partial class Kernel32
 {
     /// <summary>
     /// Gets a module handle given an address from that module.
-    /// <see href="https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulehandleexw" />
+    /// <see href="https://learn.microsoft.com/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulehandleexw" />
     /// </summary>
     [LibraryImport(nameof(Kernel32))]
     [return: MarshalAs(UnmanagedType.Bool)]
@@ -23,7 +23,7 @@ internal static partial class Kernel32
 
     /// <summary>
     /// Gets the path to a module given the module handle.
-    /// <see href="https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew" />
+    /// <see href="https://learn.microsoft.com/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew" />
     /// </summary>
     [LibraryImport(nameof(Kernel32), StringMarshalling = StringMarshalling.Utf16)]
     public static partial int GetModuleFileNameW(

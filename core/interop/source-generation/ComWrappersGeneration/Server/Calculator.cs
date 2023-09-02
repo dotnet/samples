@@ -6,10 +6,10 @@ using Microsoft.Win32;
 namespace Tutorial;
 
 [GeneratedComClass]
-[Guid(ClsId)]
+[Guid(Clsid)]
 internal partial class Calculator : ICalculator
 {
     public int Add(int a, int b) => a + b;
     public int Subtract(int a, int b) => a - b;
-    internal const string ClsId = ClsIds.Calculator;
+    internal const string Clsid = Clsids.Calculator;
 }

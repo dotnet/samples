@@ -17,7 +17,7 @@ public static class FileUtils
             return false;
 
         char[] filePath = new char[256];
-        int pathSize = Kernel32.GetModuleFileNameW(moduleHandle, filePath, 256);
+        int pathSize = Kernel32.GetModuleFileNameW(moduleHandle, filePath, filePath.Length);
         if (pathSize == 0)
             return false;
 

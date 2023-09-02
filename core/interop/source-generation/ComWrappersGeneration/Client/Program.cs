@@ -12,10 +12,10 @@ public class Program
 {
     public static unsafe void Main(string[] args)
     {
-        var clsid = new Guid(ClsIds.Calculator);
+        var clsid = new Guid(Clsids.Calculator);
         var iid = new Guid(ICalculator.IID);
         Console.WriteLine($"Client: Requesting a Calculator (CLSID {clsid}) with ICalculator (IID {iid})");
-        int hr = Ole32.CoCreateInstance(ref clsid, /* Do not do aggregation */ 0, (uint)Ole32.CLSCTX.CLSCTX_INPROC_SERVER, ref iid, out object comObject);
+        int hr = Ole32.CoCreateInstance(ref clsid, /* No aggregation */ 0, (uint)Ole32.CLSCTX.CLSCTX_INPROC_SERVER, ref iid, out object comObject);
         Marshal.ThrowExceptionForHR(hr);
         ICalculator calculator = (ICalculator) comObject;
 
@@ -40,7 +40,7 @@ internal static unsafe partial class Ole32
         ref Guid riid,
         [MarshalAs(UnmanagedType.Interface)] out object ppv);
 
-    // https://learn.microsoft.com/en-us/windows/win32/api/wtypesbase/ne-wtypesbase-clsctx
+    // https://learn.microsoft.com/windows/win32/api/wtypesbase/ne-wtypesbase-clsctx
     public enum CLSCTX : uint
     {
         CLSCTX_INPROC_SERVER = 0x1,

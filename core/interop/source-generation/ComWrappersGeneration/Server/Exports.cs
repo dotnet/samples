@@ -13,20 +13,21 @@ public static unsafe class Exports
     /// Returns a pointer to an IClassFactory instance that corresponds to the requested <paramref name="classId"/>.
     /// <paramref name="interfaceId"/> is expected to be the IID of IClassFactory.
     /// This method is called by the COM system when a client requests an object that this server has registered.
-    /// <see href="https://learn.microsoft.com/en-us/windows/win32/api/combaseapi/nf-combaseapi-dllgetclassobject"/>
+    /// <see href="https://learn.microsoft.com/windows/win32/api/combaseapi/nf-combaseapi-dllgetclassobject"/>
     /// </summary>
     [UnmanagedCallersOnly(EntryPoint = nameof(DllGetClassObject))]
     public static int DllGetClassObject(Guid* classId, Guid* interfaceId, nint* ppIClassFactory)
     {
         Console.WriteLine($"Server: Class ID requested from DllGetClassObject: {*classId}");
         Console.WriteLine($"Server: Interface ID requested from DllGetClassObject: {*interfaceId}");
-        if (*classId != new Guid(ClsIds.Calculator)
+        if (*classId != new Guid(Clsids.Calculator)
             || *interfaceId != new Guid(IClassFactory.IID))
         {
             *ppIClassFactory = 0;
-            return -2147221231; // 0x80040111 CLASS_E_CLASSNOTAVAILABLE
+            const int CLASS_E_CLASSNOTAVAILABLE = unchecked((int)0x80040111);
+            return CLASS_E_CLASSNOTAVAILABLE;
         }
-        var factory = new ClassFactory();
+        var factory = ClassFactory.Instance;
         nint pIUnknown = (nint)ComInterfaceMarshaller<ClassFactory>.ConvertToUnmanaged(factory);
 
         // Call QI on the COM ptr from COM wrappers to get the requested interface pointer
@@ -44,7 +45,7 @@ public static unsafe class Exports
     /// <summary>
     /// Registers the server with the COM system.
     /// Called by <c>regsvr32.exe</c> when run with this .dll as the argument.
-    /// <see href="https://learn.microsoft.com/en-us/windows/win32/api/olectl/nf-olectl-dllregisterserver"/>
+    /// <see href="https://learn.microsoft.com/windows/win32/api/olectl/nf-olectl-dllregisterserver"/>
     /// </summary>
     [UnmanagedCallersOnly(EntryPoint = nameof(DllRegisterServer))]
     public static int DllRegisterServer()
@@ -53,9 +54,12 @@ public static unsafe class Exports
             return -1;
 
         if (!FileUtils.TryGetDllPath(out string? dllPath))
-            return -2147220991; // SELFREG_E_CLASS
+        {
+            const int SELFREG_E_CLASS = unchecked((int)0x80040201);
+            return SELFREG_E_CLASS;
+        }
 
-        CreateComRegistryEntryForClass(Calculator.ClsId, nameof(Calculator), dllPath!);
+        CreateComRegistryEntryForClass(Calculator.Clsid, nameof(Calculator), dllPath!);
 
         return 0;
     }
@@ -76,7 +80,6 @@ public static unsafe class Exports
         {
             key.SetValue(null, dllPath, RegistryValueKind.String);
             key.SetValue("ThreadingModel", "Both", RegistryValueKind.String);
-            // key.SetValue(null, typeof(ClassFactory).Assembly.GetName().Name + ".dll", RegistryValueKind.String);
         }
         using (var key = Registry.CurrentUser.CreateSubKey($$"""SOFTWARE\Classes\{{{progId}}}"""))
         {
@@ -88,12 +91,12 @@ public static unsafe class Exports
     /// <summary>
     /// Unregisters the server from the COM system.
     /// Called by <c>regsvr32.exe</c> when run with the -u flag and this .dll as the argument
-    /// <see href="https://learn.microsoft.com/en-us/windows/win32/api/olectl/nf-olectl-dllunregisterserver"/>
+    /// <see href="https://learn.microsoft.com/windows/win32/api/olectl/nf-olectl-dllunregisterserver"/>
     /// </summary>
     [UnmanagedCallersOnly(EntryPoint = nameof(DllUnregisterServer))]
     public static int DllUnregisterServer()
     {
-        DeleteComRegistryKeyForClass(Calculator.ClsId, nameof(Calculator));
+        DeleteComRegistryKeyForClass(Calculator.Clsid, nameof(Calculator));
 
         return 0;
     }
