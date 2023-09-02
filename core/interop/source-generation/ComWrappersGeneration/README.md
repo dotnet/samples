@@ -21,4 +21,4 @@ This example defines an interface `ICalculator` that provides `Add` and `Subtrac
 
 ## Build and Run
 
-Build the Native AOT binaries by running `dotnet publish -r <RID>` where `<RID>` is the RuntimeIdentifier for your windows device, for example `win-x64`. The projects will copy the binaries to the OutputFiles directory. After publishing, use `regsvr32.exe` to register Server.dll to COM (run `regsvr.exe ./OutputFiles/Server.dll`). Then, run `./OutputFiles/Client.exe` and see the output as it gets a COM object from the Server.dll and calls methods on it. Once finished, unregister the server by running `regsvr32.exe -u ./OutputFiles/Server.dll`.
+Build the Native AOT binaries by running `dotnet publish -r <RID>` where `<RID>` is the RuntimeIdentifier for your Windows device, for example `win-x64`. The projects will copy the binaries to the `OutputFiles/` directory. After publishing, use `regsvr32.exe` to register `Server.dll` (run `regsvr.exe ./OutputFiles/Server.dll`). Then, run the `Client.exe` and observe the output as it activates and uses a COM instance from `Server.dll`.
