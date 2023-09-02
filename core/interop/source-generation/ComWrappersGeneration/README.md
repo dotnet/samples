@@ -8,17 +8,16 @@ name: "Source-Generated COM Sample"
 urlFragment: "generated-comwrappers"
 description: "A .NET solution that uses source-generated COM in .NET"
 ---
-
 # .NET Source-Generated COM Sample
 
-This project demonstrates how to use the COM source generators in the .NET SDK to expose .NET objects to COM and import COM objects to .NET, with source-generated parameter marshalling. This tutorial compiles the projects to a NativeAOT application to demonstrate the compatibility of source-generated COM, and to export native methods from the Server project that the Windows COM system requires.
+This tutorial demonstrates how to use COM source generators in .NET 8+ to create a COM server. The projects compile using Native AOT to demonstrate the compatibility of source-generated COM, and to export native methods from the Server project that are required by all COM servers.
 
-This example defines an interface `ICalculator` that provides `Add` and `Subtract` methods. The server provides an implementation of `ICalculator` and exposes it to COM through registration. The client project creates an instance of the object through the `CoCreateInstance` Win32 method, and calls methods on the object.
+This example defines an interface `ICalculator` that provides `Add` and `Subtract` methods. The server provides an implementation of `ICalculator` and exposes it through COM registration. The client project creates an instance of the object using the [`CoCreateInstance`](https://learn.microsoft.com/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) Win32 method, and calls methods on the object.
 
-## Prerequites
+## Prerequisites
 
-- .NET 8 SDK
-- Windows device
+- .NET 8+ SDK
+- Windows 10+ OS
 
 ## Build and Run
 
