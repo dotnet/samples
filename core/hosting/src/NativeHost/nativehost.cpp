@@ -128,22 +128,27 @@ int main(int argc, char *argv[])
         // </SnippetCallManaged>
     }
 
-#ifdef NET5_0
     // Function pointer to managed delegate with non-default signature
     typedef void (CORECLR_DELEGATE_CALLTYPE *custom_entry_point_fn)(lib_args args);
     custom_entry_point_fn custom = nullptr;
+    lib_args args
+    {
+        STR("from host!"),
+        -1
+    };
+
+    // UnmanagedCallersOnly
     rc = load_assembly_and_get_function_pointer(
         dotnetlib_path.c_str(),
         dotnet_type,
-        STR("CustomEntryPointUnmanaged") /*method_name*/,
+        STR("CustomEntryPointUnmanagedCallersOnly") /*method_name*/,
         UNMANAGEDCALLERSONLY_METHOD,
         nullptr,
         (void**)&custom);
     assert(rc == 0 && custom != nullptr && "Failure: load_assembly_and_get_function_pointer()");
-#else
-    // Function pointer to managed delegate with non-default signature
-    typedef void (CORECLR_DELEGATE_CALLTYPE *custom_entry_point_fn)(lib_args args);
-    custom_entry_point_fn custom = nullptr;
+    custom(args);
+
+    // Custom delegate type
     rc = load_assembly_and_get_function_pointer(
         dotnetlib_path.c_str(),
         dotnet_type,
@@ -152,13 +157,6 @@ int main(int argc, char *argv[])
         nullptr,
         (void**)&custom);
     assert(rc == 0 && custom != nullptr && "Failure: load_assembly_and_get_function_pointer()");
-#endif
-
-    lib_args args
-    {
-        STR("from host!"),
-        -1
-    };
     custom(args);
 
     return EXIT_SUCCESS;
