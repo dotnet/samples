@@ -19,7 +19,7 @@ Additional comments are contained in source and project files.
 
 ## Prerequisites
 
-* [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download) or a later version
+* [.NET Core 6.0 SDK](https://dotnet.microsoft.com/download) or a later version
 
 * C++ compiler
   * Windows: `cl.exe`
@@ -55,6 +55,9 @@ Hello, world! from Lib [count: 3]
 -- message: from host!
 -- number: 2
 Hello, world! from CustomEntryPoint in Lib
+-- message: from host!
+-- number: -1
+Hello, world! from CustomEntryPointUnmanagedCallersOnly in Lib
 -- message: from host!
 -- number: -1
 ```
