@@ -154,7 +154,7 @@ namespace Microsoft.Samples.Http
         {
             if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_ICalculator))
             {
-                return new System.ServiceModel.EndpointAddress("http://afifivm.redmond.corp.microsoft.com/servicemodelsamples/service.svc");
+                return new System.ServiceModel.EndpointAddress("http://localhost/servicemodelsamples/service.svc");
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }
