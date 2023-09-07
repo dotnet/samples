@@ -62,6 +62,19 @@ Hello, world! from CustomEntryPointUnmanagedCallersOnly in Lib
 -- number: -1
 ```
 
+To make this sample run a managed app instead of loading a class library, launch the `nativehost` passing `app` as a command line argument. The expected output will come from the `App` application:
+
+```console
+App started - args = [ app_arg_1, app_arg_2 ]
+Hello, world! from App [count: 1]
+-- message: from host!
+Hello, world! from App [count: 2]
+-- message: from host!
+Hello, world! from App [count: 3]
+-- message: from host!
+Signaling app to close
+```
+
 Note: The way the sample is built is relatively complicated. The goal is that it's possible to build and run the sample with simple `dotnet run` with minimal requirements on pre-installed tools. Typically, real-world projects that have both managed and native components will use different build systems for each; for example, msbuild/dotnet for managed and CMake for native.
 
 ## Visual Studio support
