@@ -7,48 +7,48 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Microsoft.Samples.Http
+namespace Microsoft.Samples.NetTcp
 {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://Microsoft.Samples.Http", ConfigurationName="Microsoft.Samples.Http.ICalculator")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://Microsoft.Samples.NetTcp", ConfigurationName="Microsoft.Samples.NetTcp.ICalculator")]
     public interface ICalculator
     {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Samples.Http/ICalculator/Add", ReplyAction="http://Microsoft.Samples.Http/ICalculator/AddResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Samples.NetTcp/ICalculator/Add", ReplyAction="http://Microsoft.Samples.NetTcp/ICalculator/AddResponse")]
         double Add(double n1, double n2);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Samples.Http/ICalculator/Add", ReplyAction="http://Microsoft.Samples.Http/ICalculator/AddResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Samples.NetTcp/ICalculator/Add", ReplyAction="http://Microsoft.Samples.NetTcp/ICalculator/AddResponse")]
         System.Threading.Tasks.Task<double> AddAsync(double n1, double n2);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Samples.Http/ICalculator/Subtract", ReplyAction="http://Microsoft.Samples.Http/ICalculator/SubtractResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Samples.NetTcp/ICalculator/Subtract", ReplyAction="http://Microsoft.Samples.NetTcp/ICalculator/SubtractResponse")]
         double Subtract(double n1, double n2);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Samples.Http/ICalculator/Subtract", ReplyAction="http://Microsoft.Samples.Http/ICalculator/SubtractResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Samples.NetTcp/ICalculator/Subtract", ReplyAction="http://Microsoft.Samples.NetTcp/ICalculator/SubtractResponse")]
         System.Threading.Tasks.Task<double> SubtractAsync(double n1, double n2);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Samples.Http/ICalculator/Multiply", ReplyAction="http://Microsoft.Samples.Http/ICalculator/MultiplyResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Samples.NetTcp/ICalculator/Multiply", ReplyAction="http://Microsoft.Samples.NetTcp/ICalculator/MultiplyResponse")]
         double Multiply(double n1, double n2);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Samples.Http/ICalculator/Multiply", ReplyAction="http://Microsoft.Samples.Http/ICalculator/MultiplyResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Samples.NetTcp/ICalculator/Multiply", ReplyAction="http://Microsoft.Samples.NetTcp/ICalculator/MultiplyResponse")]
         System.Threading.Tasks.Task<double> MultiplyAsync(double n1, double n2);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Samples.Http/ICalculator/Divide", ReplyAction="http://Microsoft.Samples.Http/ICalculator/DivideResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Samples.NetTcp/ICalculator/Divide", ReplyAction="http://Microsoft.Samples.NetTcp/ICalculator/DivideResponse")]
         double Divide(double n1, double n2);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Samples.Http/ICalculator/Divide", ReplyAction="http://Microsoft.Samples.Http/ICalculator/DivideResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Samples.NetTcp/ICalculator/Divide", ReplyAction="http://Microsoft.Samples.NetTcp/ICalculator/DivideResponse")]
         System.Threading.Tasks.Task<double> DivideAsync(double n1, double n2);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    public interface ICalculatorChannel : Microsoft.Samples.Http.ICalculator, System.ServiceModel.IClientChannel
+    public interface ICalculatorChannel : Microsoft.Samples.NetTcp.ICalculator, System.ServiceModel.IClientChannel
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    public partial class CalculatorClient : System.ServiceModel.ClientBase<Microsoft.Samples.Http.ICalculator>, Microsoft.Samples.Http.ICalculator
+    public partial class CalculatorClient : System.ServiceModel.ClientBase<Microsoft.Samples.NetTcp.ICalculator>, Microsoft.Samples.NetTcp.ICalculator
     {
         
         /// <summary>
@@ -61,7 +61,7 @@ namespace Microsoft.Samples.Http
         public CalculatorClient() : 
                 base(CalculatorClient.GetDefaultBinding(), CalculatorClient.GetDefaultEndpointAddress())
         {
-            this.Endpoint.Name = EndpointConfiguration.BasicHttpBinding_ICalculator.ToString();
+            this.Endpoint.Name = EndpointConfiguration.NetTcpBinding_ICalculator.ToString();
             ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
         }
         
@@ -138,13 +138,12 @@ namespace Microsoft.Samples.Http
         
         private static System.ServiceModel.Channels.Binding GetBindingForEndpoint(EndpointConfiguration endpointConfiguration)
         {
-            if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_ICalculator))
+            if ((endpointConfiguration == EndpointConfiguration.NetTcpBinding_ICalculator))
             {
-                System.ServiceModel.BasicHttpBinding result = new System.ServiceModel.BasicHttpBinding();
+                System.ServiceModel.NetTcpBinding result = new System.ServiceModel.NetTcpBinding();
                 result.MaxBufferSize = int.MaxValue;
                 result.ReaderQuotas = System.Xml.XmlDictionaryReaderQuotas.Max;
                 result.MaxReceivedMessageSize = int.MaxValue;
-                result.AllowCookies = true;
                 return result;
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
@@ -152,27 +151,27 @@ namespace Microsoft.Samples.Http
         
         private static System.ServiceModel.EndpointAddress GetEndpointAddress(EndpointConfiguration endpointConfiguration)
         {
-            if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_ICalculator))
+            if ((endpointConfiguration == EndpointConfiguration.NetTcpBinding_ICalculator))
             {
-                return new System.ServiceModel.EndpointAddress("http://localhost/servicemodelsamples/service.svc");
+                return new System.ServiceModel.EndpointAddress("net.tcp://localhost:9000/servicemodelsamples/service");
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }
         
         private static System.ServiceModel.Channels.Binding GetDefaultBinding()
         {
-            return CalculatorClient.GetBindingForEndpoint(EndpointConfiguration.BasicHttpBinding_ICalculator);
+            return CalculatorClient.GetBindingForEndpoint(EndpointConfiguration.NetTcpBinding_ICalculator);
         }
         
         private static System.ServiceModel.EndpointAddress GetDefaultEndpointAddress()
         {
-            return CalculatorClient.GetEndpointAddress(EndpointConfiguration.BasicHttpBinding_ICalculator);
+            return CalculatorClient.GetEndpointAddress(EndpointConfiguration.NetTcpBinding_ICalculator);
         }
         
         public enum EndpointConfiguration
         {
             
-            BasicHttpBinding_ICalculator,
+            NetTcpBinding_ICalculator,
         }
     }
 }
