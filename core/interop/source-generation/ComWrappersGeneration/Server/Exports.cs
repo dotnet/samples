@@ -16,7 +16,7 @@ public static unsafe class Exports
     /// <see href="https://learn.microsoft.com/windows/win32/api/combaseapi/nf-combaseapi-dllgetclassobject"/>
     /// </summary>
     [UnmanagedCallersOnly(EntryPoint = nameof(DllGetClassObject))]
-    public static int DllGetClassObject(Guid* classId, Guid* interfaceId, nint* ppIClassFactory)
+    public static int DllGetClassObject([DNNE.C99Type("void*")] Guid* classId, [DNNE.C99Type("void*")] Guid* interfaceId, nint* ppIClassFactory)
     {
         Console.WriteLine($"Server: Class ID requested from DllGetClassObject: {*classId}");
         Console.WriteLine($"Server: Interface ID requested from DllGetClassObject: {*interfaceId}");

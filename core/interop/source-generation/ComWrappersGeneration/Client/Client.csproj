@@ -9,10 +9,11 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
     <CompilerGeneratedFilesOutputPath>bin\Generated</CompilerGeneratedFilesOutputPath>
-    <PublishAOT>true</PublishAOT>
-  </PropertyGroup>
 
-  <Import Project="../Shared/CopyToOutputDirectory.targets" />
+    <!-- <PublishAOT>true</PublishAOT> -->
+
+    <PublishDir>../OutputFiles/Client</PublishDir>
+  </PropertyGroup>
 
   <ItemGroup>
     <Compile Include="../Shared/*.cs" />

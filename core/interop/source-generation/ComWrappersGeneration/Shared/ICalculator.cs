@@ -5,6 +5,8 @@ namespace Tutorial;
 
 [GeneratedComInterface]
 [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+// TypeIdentifierAttribute is required to enable casting managed types to
+[TypeIdentifier]
 [Guid(IID)]
 internal partial interface ICalculator
 {
