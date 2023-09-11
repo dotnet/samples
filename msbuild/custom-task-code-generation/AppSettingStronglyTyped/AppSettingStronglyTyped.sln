@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppSettingStronglyTyped", "AppSettingStronglyTyped\AppSettingStronglyTyped.csproj", "{0EDB0B2F-8086-4F4E-9413-425CB9D47185}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppSettingStronglyTyped.Test", "AppSettingStronglyTyped.Test\AppSettingStronglyTyped.Test.csproj", "{307BBB4B-1FB2-4704-B4B0-E46476D0E779}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppSettingStronglyTyped.Test", "AppSettingStronglyTyped.Test\AppSettingStronglyTyped.Test.csproj", "{307BBB4B-1FB2-4704-B4B0-E46476D0E779}"
 EndProject
 Global
     GlobalSection(SolutionConfigurationPlatforms) = preSolution
