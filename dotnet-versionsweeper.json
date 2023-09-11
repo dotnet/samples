@@ -1,4 +1,5 @@
 {
+    "actionType": "all",
     "ignore": [
         "**/frameworks-library/**/*.csproj",
         "**/whats-new-in-21/**/*.csproj",
