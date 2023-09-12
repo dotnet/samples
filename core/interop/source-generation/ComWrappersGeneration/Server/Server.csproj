@@ -9,24 +9,19 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
     <CompilerGeneratedFilesOutputPath>bin\Generated</CompilerGeneratedFilesOutputPath>
-
     <!-- <PublishAOT>true</PublishAOT> -->
 
     <EnableDynamicLoading>true</EnableDynamicLoading>
-    <DnneNativeBinarySuffix>NE</DnneNativeBinarySuffix>
-    <PublishDir>../OutputFiles/Server</PublishDir>
+    <OutDir>..\OutputFiles\Server</OutDir>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DNNE" Version="2.*" Condition="'$(PublishAOT)' != 'true'"/>
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.Win32.Registry" Version="5.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Include="../Shared/*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DNNE" Version="2.*" Condition="'$(PublishAOT)' != 'true'"/>
+    <PackageReference Include="Microsoft.Win32.Registry" Version="5.0.0" />
   </ItemGroup>
 
 </Project>

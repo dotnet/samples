@@ -2,27 +2,37 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 
 namespace Tutorial;
 
 public static class FileUtils
 {
+    /// <summary>
+    /// Gets the path to the NativeDll that the COM system should use to call the native exports
+    /// </summary>
     public static unsafe bool TryGetDllPath([NotNullWhen(true)]out string? dllPath)
     {
-        if (TryGetDllPathCoreCLR(out dllPath))
-            return true;
+        if (IsNativeAOT())
+            return TryGetDllPathNativeAOT(out dllPath);
 
-        return TryGetDllPathNativeAOT(out dllPath);
+        return TryGetDllPathCoreCLR(out dllPath);
     }
 
-    public static unsafe bool TryGetDllPathCoreCLR([NotNullWhen(true)]out string? dllPath)
+    /// <summary>
+    /// Returns true if the application is running as NativeAOT, or false otherwise
+    /// </summary <summary>
+    private static bool IsNativeAOT()
+        => typeof(FileUtils).Assembly.Location == ""
+            && !RuntimeFeature.IsDynamicCodeSupported;
+
+    /// <summary>
+    /// Gets the path to the NativeDll that the COM system should use to call the native exports when deploying to CoreCLR.
+    /// Returns false if the application is deployed as a NativeAOT application.
+    /// </summary>
+    public static unsafe bool TryGetDllPathCoreCLR(out string? dllPath)
     {
         string assemblyPath = typeof(FileUtils).Assembly.Location;
-        if (assemblyPath == "")
-        {
-            dllPath = null;
-            return false;
-        }
         const string dnneSuffix = "NE.dll";
         var fileName = Path.GetFileNameWithoutExtension(assemblyPath);
         var directory = Path.GetDirectoryName(assemblyPath) ?? "";
@@ -30,6 +40,9 @@ public static class FileUtils
         return true;
     }
 
+    /// <summary>
+    /// Gets the path to the NativeDll that the COM system should use to call the native exports
+    /// </summary>
     public static unsafe bool TryGetDllPathNativeAOT([NotNullWhen(true)]out string? dllPath)
     {
         dllPath = null;

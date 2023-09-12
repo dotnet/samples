@@ -1,3 +1,4 @@
+namespace Tutorial;
 
 public static class Clsids
 {
