@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices;
+﻿using System.Diagnostics;
+using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.Marshalling;
 
 using IStream = InteropWithStream.IStream;
@@ -15,15 +16,16 @@ unsafe
 {
     // The returned void* is a handle that is passed to/from the managed library.
     void* streamHandle = ManagedLibNE.C_CreateStream();
+    Debug.Assert(streamHandle != null);
 
     fixed (byte* pb = bytes)
     {
         hr = ManagedLibNE.C_Stream_Write(streamHandle, bytes.Length, pb);
-        Marshal.ThrowExceptionForHR(hr);
+        Debug.Assert(hr == 0);
     }
 
     hr = ManagedLibNE.C_PrintStream(streamHandle);
-    Marshal.ThrowExceptionForHR(hr);
+    Debug.Assert(hr == 0);
 
     ManagedLibNE.C_DeleteStream(streamHandle);
 }
@@ -39,28 +41,22 @@ bytes = bytes.Reverse().ToArray();
 Console.WriteLine("--- Stream via IStream style interop");
 unsafe
 {
-    // In C/C++ this would typed as IStream*.
+    // In C/C++ this would be typed as IStream*.
     void* istreamRaw;
     hr = ManagedLibNE.IStream_CreateStream(&istreamRaw);
-    Marshal.ThrowExceptionForHR(hr);
+    Debug.Assert(hr == 0 && istreamRaw != null);
 
     // Managed type system work, unnecessary in C/C++.
     var istream = UniqueComInterfaceMarshaller<IStream>.ConvertToManaged(istreamRaw);
-    if (istream is null)
-    {
-        throw new Exception("Failed to implement IStream");
-    }
+    Debug.Assert(istream != null);
 
     // In C/C++ this would check the HRESULT and out value.
     istream.Write(bytes, (uint)bytes.Length, out uint written);
-    if (written != bytes.Length)
-    {
-        throw new Exception("Failed to write data");
-    }
+    Debug.Assert(written == bytes.Length);
 
-    // Pass the IStream* back to managed.
+    // Pass the IStream* back to the library.
     hr = ManagedLibNE.IStream_PrintStream(istreamRaw);
-    Marshal.ThrowExceptionForHR(hr);
+    Debug.Assert(hr == 0);
 
     // In C/C++ this would be handled by calling IUnknown::Release() or implicitly
     // through a smart pointer like CComPtr<T>.
@@ -68,8 +64,8 @@ unsafe
 }
 
 /// <summary>
-/// In C/C++ these operations would normally be done via OS functions
-/// such as LoadLibrary/dlopen and GetProcAddress/dlsym.
+/// In C/C++ calling these functions would normally be done via
+/// OS APIs such as LoadLibrary/dlopen and GetProcAddress/dlsym.
 /// </summary>
 static unsafe partial class ManagedLibNE
 {
@@ -102,7 +98,7 @@ static unsafe partial class ManagedLibNE
     [LibraryImport(nameof(ManagedLibNE))]
     public static partial int IStream_PrintStream(void* istream);
 
-    // See the COM generated IStream type. The IStream definition
-    // for C/C++ can be found in objidl.h on Windows, but must be
-    // manually defined on non-Windows platforms.
+    // See the COM generated IStream type - IStream.cs.
+    // The IStream definition for C/C++ can be found in objidl.h
+    // on Windows, but must be manually defined on non-Windows platforms.
 }
