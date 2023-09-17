@@ -1,8 +1,13 @@
 using System.Runtime.InteropServices;
-using System.Runtime.InteropServices.Marshalling;
 
+#if NETFRAMEWORK
+using IStream = System.Runtime.InteropServices.ComTypes.IStream;
+using STATSTG = System.Runtime.InteropServices.ComTypes.STATSTG;
+#else
+using System.Runtime.InteropServices.Marshalling;
 using IStream = InteropWithStream.IStream;
 using STATSTG = InteropWithStream.STATSTG;
+#endif // !NETFRAMEWORK
 
 namespace InteropWithStream;
 
@@ -11,13 +16,21 @@ namespace InteropWithStream;
 /// </summary>
 public static unsafe partial class StreamExports
 {
+#if NETFRAMEWORK
+    [DNNE.Export]
+#else
     [UnmanagedCallersOnly]
+#endif // !NETFRAMEWORK
     public static int IStream_CreateStream(void** istream)
     {
         try
         {
             MemoryStream stream = new();
+#if NETFRAMEWORK
+            *istream = (void*)Marshal.GetIUnknownForObject(new MemoryStreamWrapper(stream));
+#else
             *istream = ComInterfaceMarshaller<MemoryStreamWrapper>.ConvertToUnmanaged(new MemoryStreamWrapper(stream));
+#endif // !NETFRAMEWORK
         }
         catch (Exception e)
         {
@@ -26,12 +39,20 @@ public static unsafe partial class StreamExports
         return 0;
     }
 
+#if NETFRAMEWORK
+    [DNNE.Export]
+#else
     [UnmanagedCallersOnly]
+#endif // !NETFRAMEWORK
     public static int IStream_PrintStream(void* streamMaybe)
     {
         try
         {
+#if NETFRAMEWORK
+            var streamWrapper = (MemoryStreamWrapper)Marshal.GetObjectForIUnknown((IntPtr)streamMaybe);
+#else
             var streamWrapper = ComInterfaceMarshaller<MemoryStreamWrapper>.ConvertToManaged(streamMaybe);
+#endif // !NETFRAMEWORK
             if (streamWrapper is null)
             {
                 throw new NotSupportedException();
@@ -54,6 +75,50 @@ public static unsafe partial class StreamExports
         return 0;
     }
 
+#if NETFRAMEWORK
+    [ComVisible(true)]
+    sealed partial class MemoryStreamWrapper : IStream
+    {
+        public MemoryStreamWrapper(MemoryStream s)
+        {
+            this.Stream = s;
+        }
+
+        public MemoryStream Stream { get; private set; }
+
+        // ISequentialStream
+        public void Read([MarshalAs(UnmanagedType.LPArray, SizeParamIndex = 1), Out] byte[] pv, int cb, IntPtr pcbRead)
+        {
+            Marshal.WriteInt32(pcbRead, Stream.Read(pv, 0, pv.Length));
+        }
+
+        public void Write([MarshalAs(UnmanagedType.LPArray, SizeParamIndex = 1)] byte[] pv, int cb, IntPtr pcbWritten)
+        {
+            Stream.Write(pv, 0, pv.Length);
+            Marshal.WriteInt32(pcbWritten, pv.Length);
+        }
+
+        // IStream
+        public void Seek(long dlibMove, int dwOrigin, IntPtr plibNewPosition)
+            => throw new NotImplementedException();
+        public void SetSize(long libNewSize)
+            => throw new NotImplementedException();
+        public void CopyTo(IStream pstm, long cb, IntPtr pcbRead, IntPtr pcbWritten)
+            => throw new NotImplementedException();
+        public void Commit(int grfCommitFlags)
+            => throw new NotImplementedException();
+        public void Revert()
+            => throw new NotImplementedException();
+        public void LockRegion(long libOffset, long cb, int dwLockType)
+            => throw new NotImplementedException();
+        public void UnlockRegion(long libOffset, long cb, int dwLockType)
+            => throw new NotImplementedException();
+        public void Stat(out STATSTG pstatstg, int grfStatFlag)
+            => throw new NotImplementedException();
+        public void Clone(out IStream ppstm)
+            => throw new NotImplementedException();
+    }
+#else
     [GeneratedComClass]
     sealed partial class MemoryStreamWrapper : IStream
     {
@@ -93,9 +158,10 @@ public static unsafe partial class StreamExports
             => throw new NotImplementedException();
         public void UnlockRegion(ulong libOffset, ulong cb, uint dwLockType)
             => throw new NotImplementedException();
-        public void Stat(out STATSTG pstatstg, int grfStatFlag)
+        public void Stat(out STATSTG pstatstg, uint grfStatFlag)
             => throw new NotImplementedException();
         public void Clone(out IStream ppstm)
             => throw new NotImplementedException();
     }
+#endif // !NETFRAMEWORK
 }

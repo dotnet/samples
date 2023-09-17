@@ -1,4 +1,6 @@
-// Represents the IStream API surface area in .NET.
+// Represents the IStream API surface area in .NET 8+.
+
+#if !NETFRAMEWORK
 
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.Marshalling;
@@ -26,7 +28,7 @@ internal partial interface IStream : ISequentialStream
     void Revert();
     void LockRegion(ulong libOffset, ulong cb, uint dwLockType);
     void UnlockRegion(ulong libOffset, ulong cb, uint dwLockType);
-    void Stat(out STATSTG pstatstg, int grfStatFlag);
+    void Stat(out STATSTG pstatstg, uint grfStatFlag);
     void Clone(out IStream ppstm);
 }
 
@@ -104,3 +106,5 @@ internal static class STATSTGMarshaller
         public uint reserved;
     }
 }
+
+#endif // !NETFRAMEWORK

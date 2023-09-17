@@ -8,14 +8,22 @@ namespace InteropWithStream;
 /// </summary>
 public static unsafe partial class StreamExports
 {
+#if NETFRAMEWORK
+    [DNNE.Export]
+#else
     [UnmanagedCallersOnly]
+#endif // !NETFRAMEWORK
     public static IntPtr C_CreateStream()
     {
         MemoryStream stream = new();
         return GCHandle.ToIntPtr(GCHandle.Alloc(stream));
     }
 
+#if NETFRAMEWORK
+    [DNNE.Export]
+#else
     [UnmanagedCallersOnly]
+#endif // !NETFRAMEWORK
     public static void C_DeleteStream(IntPtr streamMaybe)
     {
         if (streamMaybe != IntPtr.Zero)
@@ -24,7 +32,11 @@ public static unsafe partial class StreamExports
         }
     }
 
+#if NETFRAMEWORK
+    [DNNE.Export]
+#else
     [UnmanagedCallersOnly]
+#endif // !NETFRAMEWORK
     public static int C_PrintStream(IntPtr streamMaybe)
     {
         try
@@ -50,6 +62,24 @@ public static unsafe partial class StreamExports
     // APIs for interacting with Streams via C export
     //
 
+#if NETFRAMEWORK
+    [DNNE.Export]
+    public static int C_Stream_Read(IntPtr streamMaybe, nint length, byte* dataRaw)
+    {
+        Debug.Assert(length < int.MaxValue);
+        try
+        {
+            var stream = (Stream)GCHandle.FromIntPtr(streamMaybe).Target!;
+            Span<byte> data = new(dataRaw, (int)length);
+            stream.Read(data.ToArray(), 0, data.Length);
+        }
+        catch (Exception e)
+        {
+            return e.HResult;
+        }
+        return 0;
+    }
+#else
     [UnmanagedCallersOnly]
     public static int C_Stream_Read(IntPtr streamMaybe, nint length, byte* dataRaw)
     {
@@ -66,7 +96,27 @@ public static unsafe partial class StreamExports
         }
         return 0;
     }
+#endif // !NETFRAMEWORK
 
+#if NETFRAMEWORK
+    [DNNE.Export]
+    public static int C_Stream_Write(IntPtr streamMaybe, nint length, byte* dataRaw)
+    {
+        Debug.Assert(length < int.MaxValue);
+        try
+        {
+            var stream = (Stream)GCHandle.FromIntPtr(streamMaybe).Target!;
+            ReadOnlySpan<byte> data = new(dataRaw, (int)length);
+            stream.Write(data.ToArray(), 0, data.Length);
+        }
+        catch (Exception e)
+        {
+            return e.HResult;
+        }
+        return 0;
+    }
+}
+#else
     [UnmanagedCallersOnly]
     public static int C_Stream_Write(IntPtr streamMaybe, nint length, byte* dataRaw)
     {
@@ -84,3 +134,4 @@ public static unsafe partial class StreamExports
         return 0;
     }
 }
+#endif // !NETFRAMEWORK

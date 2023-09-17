@@ -2,9 +2,10 @@
 
   <PropertyGroup>
     <TargetFrameworks>$(DefaultTargetFramework)</TargetFrameworks>
-    <TargetFrameworks Condition="$([MSBuild]::IsOsPlatform('Windows'))">$(TargetFrameworks);net472</TargetFrameworks>
+    <TargetFrameworks Condition="$([MSBuild]::IsOsPlatform('Windows'))">$(TargetFrameworks);net48</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 
     <!-- COM source generator -->
@@ -21,6 +22,8 @@
 
   <ItemGroup>
     <PackageReference Include="DNNE" Version="2.0.5" />
+
+    <PackageReference Condition="'$(TargetFramework)' == 'net48'" Include="System.Memory" Version="4.5.5" />
   </ItemGroup>
 
 </Project>
