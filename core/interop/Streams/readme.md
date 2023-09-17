@@ -6,7 +6,7 @@ The [`Stream`](https://learn.microsoft.com/dotnet/api/system.io.stream) data typ
 
 1) The projection of the `Stream` type using the COM [`IStream`](https://learn.microsoft.com/windows/win32/api/objidl/nn-objidl-istream) interface. This approach utilizes [`ComWrappers`](https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.comwrappers) and the COM source generator.
 
-The [`ManagedLib`](./ManagedLib/) represents a .NET class library that is exposing a `Stream` type to an unmanaged process.
+The [`ManagedLib`](./ManagedLib/) represents a .NET class library that is exposing a `Stream` type to an unmanaged process. This project demonstrates both the latest .NET approach and how it could be done using .NET Framework.
 
 The [`Runner`](./Runner/) is a placeholder for an unmanaged process. The code within [`Program.cs`](./Runner/Program.cs) is written in relatively low-level C#, but represents basic concepts that translate directly into C/C++.
 
