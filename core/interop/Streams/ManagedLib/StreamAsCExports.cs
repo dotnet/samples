@@ -75,7 +75,9 @@ public static unsafe partial class StreamExports
             var stream = (Stream)GCHandle.FromIntPtr(streamMaybe).Target!;
             Span<byte> data = new(dataRaw, (int)length);
 #if NETFRAMEWORK
-            stream.Read(data.ToArray(), 0, data.Length);
+            var buffer = new byte[data.Length];
+            stream.Read(buffer, 0, buffer.Length);
+            buffer.CopyTo(data);
 #else
             stream.Read(data);
 #endif // !NETFRAMEWORK
