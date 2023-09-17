@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.Build.Traversal">
+
+  <ItemGroup>
+    <ProjectReference Include="./ManagedLib/*.csproj" />
+    <ProjectReference Include="./Runner/*.csproj" />
+  </ItemGroup>
+
+</Project>
