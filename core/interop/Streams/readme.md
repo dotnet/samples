@@ -16,7 +16,7 @@ The [`Runner`](./Runner/) is a placeholder for an unmanaged process. The code wi
 
 ## Build and Run
 
-1. Navigate to the `Runner` directory.
+1. Navigate to this directory.
 
 1. Build the sample by executing `dotnet build`.
 
