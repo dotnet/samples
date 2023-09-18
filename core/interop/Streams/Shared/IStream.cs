@@ -11,15 +11,15 @@ namespace InteropWithStream;
 
 [GeneratedComInterface]
 [Guid("0C733A30-2A1C-11CE-ADE5-00AA0044773D")]
-internal partial interface ISequentialStream
+internal unsafe partial interface ISequentialStream
 {
-    void Read([MarshalAs(UnmanagedType.LPArray, SizeParamIndex = 1), Out] byte[] pv, uint cb, out uint pcbRead);
-    void Write([MarshalAs(UnmanagedType.LPArray, SizeParamIndex = 1)] byte[] pv, uint cb, out uint pcbWritten);
+    void Read(byte* pv, uint cb, out uint pcbRead);
+    void Write(byte* pv, uint cb, out uint pcbWritten);
 }
 
 [GeneratedComInterface]
 [Guid("0000000c-0000-0000-C000-000000000046")]
-internal partial interface IStream : ISequentialStream
+internal unsafe partial interface IStream : ISequentialStream
 {
     void Seek(long dlibMove, uint dwOrigin, ulong plibNewPosition);
     void SetSize(ulong libNewSize);

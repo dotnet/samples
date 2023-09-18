@@ -27,9 +27,9 @@ public static unsafe partial class StreamExports
         {
             MemoryStream stream = new();
 #if NETFRAMEWORK
-            *istream = (void*)Marshal.GetIUnknownForObject(new MemoryStreamWrapper(stream));
+            *istream = (void*)Marshal.GetIUnknownForObject(new StreamWrapper(stream));
 #else
-            *istream = ComInterfaceMarshaller<MemoryStreamWrapper>.ConvertToUnmanaged(new MemoryStreamWrapper(stream));
+            *istream = ComInterfaceMarshaller<StreamWrapper>.ConvertToUnmanaged(new StreamWrapper(stream));
 #endif // !NETFRAMEWORK
         }
         catch (Exception e)
@@ -49,16 +49,21 @@ public static unsafe partial class StreamExports
         try
         {
 #if NETFRAMEWORK
-            var streamWrapper = (MemoryStreamWrapper)Marshal.GetObjectForIUnknown((IntPtr)streamMaybe);
+            var streamWrapper = (StreamWrapper)Marshal.GetObjectForIUnknown((IntPtr)streamMaybe);
 #else
-            var streamWrapper = ComInterfaceMarshaller<MemoryStreamWrapper>.ConvertToManaged(streamMaybe);
+            var streamWrapper = ComInterfaceMarshaller<StreamWrapper>.ConvertToManaged(streamMaybe);
 #endif // !NETFRAMEWORK
             if (streamWrapper is null)
             {
                 throw new NotSupportedException();
             }
 
-            var stream = streamWrapper.Stream;
+            var stream = streamWrapper.Stream as MemoryStream;
+            if (stream is null)
+            {
+                throw new NotSupportedException();
+            }
+
             var data = stream.ToArray();
             const int row = 4;
             for (int i = 0; i < data.Length; ++i)
@@ -77,25 +82,25 @@ public static unsafe partial class StreamExports
 
 #if NETFRAMEWORK
     [ComVisible(true)]
-    sealed partial class MemoryStreamWrapper : IStream
+    sealed partial class StreamWrapper : IStream
     {
-        public MemoryStreamWrapper(MemoryStream s)
+        public StreamWrapper(Stream s)
         {
             this.Stream = s;
         }
 
-        public MemoryStream Stream { get; private set; }
+        public Stream Stream { get; private set; }
 
         // ISequentialStream
         public void Read([MarshalAs(UnmanagedType.LPArray, SizeParamIndex = 1), Out] byte[] pv, int cb, IntPtr pcbRead)
         {
-            Marshal.WriteInt32(pcbRead, Stream.Read(pv, 0, pv.Length));
+            *(int*)pcbRead = Stream.Read(pv, 0, pv.Length);
         }
 
         public void Write([MarshalAs(UnmanagedType.LPArray, SizeParamIndex = 1)] byte[] pv, int cb, IntPtr pcbWritten)
         {
             Stream.Write(pv, 0, pv.Length);
-            Marshal.WriteInt32(pcbWritten, pv.Length);
+            *(int*)pcbWritten = pv.Length;
         }
 
         // IStream
@@ -120,27 +125,27 @@ public static unsafe partial class StreamExports
     }
 #else
     [GeneratedComClass]
-    sealed partial class MemoryStreamWrapper : IStream
+    sealed partial class StreamWrapper : IStream
     {
-        public MemoryStreamWrapper(MemoryStream s)
+        public StreamWrapper(Stream s)
         {
             this.Stream = s;
         }
 
-        public MemoryStream Stream { get; private set; }
+        public Stream Stream { get; private set; }
 
         // ISequentialStream
-        public void Read([MarshalAs(UnmanagedType.LPArray, SizeParamIndex = 1), Out] byte[] pv, uint cb, out uint pcbRead)
+        public void Read(byte* pv, uint cb, out uint pcbRead)
         {
-            Span<byte> data = new(pv);
+            Span<byte> data = new(pv, (int)cb);
             pcbRead = (uint)Stream.Read(data);
         }
 
-        public void Write([MarshalAs(UnmanagedType.LPArray, SizeParamIndex = 1)] byte[] pv, uint cb, out uint pcbWritten)
+        public void Write(byte* pv, uint cb, out uint pcbWritten)
         {
-            ReadOnlySpan<byte> data = new(pv);
+            ReadOnlySpan<byte> data = new(pv, (int)cb);
             Stream.Write(data);
-            pcbWritten = (uint)pv.Length;
+            pcbWritten = (uint)data.Length;
         }
 
         // IStream

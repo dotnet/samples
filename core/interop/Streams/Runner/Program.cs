@@ -50,9 +50,12 @@ unsafe
     var istream = UniqueComInterfaceMarshaller<IStream>.ConvertToManaged(istreamRaw);
     Debug.Assert(istream != null);
 
-    // In C/C++ this would check the HRESULT and out value.
-    istream.Write(bytes, (uint)bytes.Length, out uint written);
-    Debug.Assert(written == bytes.Length);
+    fixed (byte* pb = bytes)
+    {
+        // In C/C++ this would check the HRESULT and out value.
+        istream.Write(pb, (uint)bytes.Length, out uint written);
+        Debug.Assert(written == bytes.Length);
+    }
 
     // Pass the IStream* back to the library.
     hr = ManagedLibNE.IStream_PrintStream(istreamRaw);
