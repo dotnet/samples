@@ -25,8 +25,8 @@ This sample supports NativeAOT and standard CoreCLR deployments. The native meth
 
 ### NativeAOT
 
-Build the Native AOT binaries by running `dotnet publish -r <RID>` where `<RID>` is the RuntimeIdentifier for your OS, for example `win-x64`. The projects will copy the binaries to the `OutputFiles/` directory. After publishing, use `regsvr32.exe` to register `Server.dll` (run `regsvr.exe .\OutputFiles\Server\Server.dll`). Then, run client application `.\OutputFiles\Client\Client.exe` and observe the output as it activates and uses a COM instance from `Server.dll`.
+Build the Native AOT binaries by running `dotnet publish -r <RID>` where `<RID>` is the RuntimeIdentifier for your OS, for example `win-x64`. The projects will copy the binaries to the `OutputFiles\` directory. After publishing, use `regsvr32.exe` to register `Server.dll` (run `regsvr.exe .\OutputFiles\Server\Server.dll`). Then, run client application `.\OutputFiles\Client\Client.exe` and observe the output as it activates and uses a COM instance from `Server.dll`.
 
 ### CoreCLR
 
-Build the Native AOT binaries by running `dotnet publish -r <RID>` where `<RID>` is the RuntimeIdentifier for your Windows device, for example `win-x64`. The projects will copy the binaries to the `OutputFiles/` directory. After publishing, use `regsvr32.exe` to register `Server.dll` (run `regsvr.exe .\OutputFiles\Server\ServerNE.dll`). Then, run the `.\OutputFiles\Client\Client.exe` and observe the output as it activates and uses a COM instance from `ServerNE.dll`.
+Build the Native AOT binaries by running `dotnet publish -r <RID>` where `<RID>` is the RuntimeIdentifier for your Windows device, for example `win-x64`. The projects will copy the binaries to the `OutputFiles\` directory. After publishing, use `regsvr32.exe` to register `Server.dll` (run `regsvr.exe .\OutputFiles\Server\ServerNE.dll`). Then, run the `.\OutputFiles\Client\Client.exe` and observe the output as it activates and uses a COM instance from `ServerNE.dll`.
