@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -48,7 +49,6 @@
   <ItemGroup>
     <None Include="Web.config" />
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
   <PropertyGroup>
     <PostBuildEvent>
       if not exist %25SystemDrive%25\inetpub\wwwroot\servicemodelsamples\bin mkdir %25SystemDrive%25\inetpub\wwwroot\servicemodelsamples\bin
@@ -58,4 +58,5 @@
       copy "$(TargetDir)Service.pdb" %25SystemDrive%25\inetpub\wwwroot\servicemodelsamples\bin
     </PostBuildEvent>
   </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
