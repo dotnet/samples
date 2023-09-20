@@ -86,7 +86,7 @@ static unsafe partial class ManagedLibNE
     public static partial int C_PrintStream(void* stream);
 
     [LibraryImport(nameof(ManagedLibNE))]
-    public static partial int C_Stream_Read(void* streamMaybe, nint length, byte* data);
+    public static partial int C_Stream_Read(void* streamMaybe, nint length, byte* data, nint* dataRead);
 
     [LibraryImport(nameof(ManagedLibNE))]
     public static partial int C_Stream_Write(void* streamMaybe, nint length, byte* data);

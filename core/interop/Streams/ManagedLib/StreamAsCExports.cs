@@ -24,11 +24,11 @@ public static unsafe partial class StreamExports
 #else
     [UnmanagedCallersOnly]
 #endif // !NETFRAMEWORK
-    public static void C_DeleteStream(IntPtr streamMaybe)
+    public static void C_DeleteStream(IntPtr streamRaw)
     {
-        if (streamMaybe != IntPtr.Zero)
+        if (streamRaw != IntPtr.Zero)
         {
-            GCHandle.FromIntPtr(streamMaybe).Free();
+            GCHandle.FromIntPtr(streamRaw).Free();
         }
     }
 
@@ -37,11 +37,11 @@ public static unsafe partial class StreamExports
 #else
     [UnmanagedCallersOnly]
 #endif // !NETFRAMEWORK
-    public static int C_PrintStream(IntPtr streamMaybe)
+    public static int C_PrintStream(IntPtr streamRaw)
     {
         try
         {
-            var stream = (MemoryStream)GCHandle.FromIntPtr(streamMaybe).Target!;
+            var stream = (MemoryStream)GCHandle.FromIntPtr(streamRaw).Target!;
             var data = stream.ToArray();
             const int row = 4;
             for (int i = 0; i < data.Length; ++i)
@@ -67,19 +67,19 @@ public static unsafe partial class StreamExports
 #else
     [UnmanagedCallersOnly]
 #endif // !NETFRAMEWORK
-    public static int C_Stream_Read(IntPtr streamMaybe, nint length, byte* dataRaw)
+    public static int C_Stream_Read(IntPtr streamRaw, nint length, byte* dataRaw, nint* dataRead)
     {
-        Debug.Assert(length < int.MaxValue);
+        Debug.Assert(length <= int.MaxValue);
         try
         {
-            var stream = (Stream)GCHandle.FromIntPtr(streamMaybe).Target!;
+            var stream = (Stream)GCHandle.FromIntPtr(streamRaw).Target!;
             Span<byte> data = new(dataRaw, (int)length);
 #if NETFRAMEWORK
             var buffer = new byte[data.Length];
-            stream.Read(buffer, 0, buffer.Length);
+            *dataRead = (nint)stream.Read(buffer, 0, buffer.Length);
             buffer.CopyTo(data);
 #else
-            stream.Read(data);
+            *dataRead = (nint)stream.Read(data);
 #endif // !NETFRAMEWORK
         }
         catch (Exception e)
@@ -94,12 +94,12 @@ public static unsafe partial class StreamExports
 #else
     [UnmanagedCallersOnly]
 #endif // !NETFRAMEWORK
-    public static int C_Stream_Write(IntPtr streamMaybe, nint length, byte* dataRaw)
+    public static int C_Stream_Write(IntPtr streamRaw, nint length, byte* dataRaw)
     {
-        Debug.Assert(length < int.MaxValue);
+        Debug.Assert(length <= int.MaxValue);
         try
         {
-            var stream = (Stream)GCHandle.FromIntPtr(streamMaybe).Target!;
+            var stream = (Stream)GCHandle.FromIntPtr(streamRaw).Target!;
             ReadOnlySpan<byte> data = new(dataRaw, (int)length);
 #if NETFRAMEWORK
             stream.Write(data.ToArray(), 0, data.Length);
