@@ -23,7 +23,7 @@
   <ItemGroup>
     <PackageReference Include="DNNE" Version="2.0.5" />
 
-    <PackageReference Condition="'$(TargetFramework)' == 'net48'" Include="System.Memory" Version="4.5.5" />
+    <PackageReference Condition="'$(TargetFrameworkIdentifier)' == '.NETFramework'" Include="System.Memory" Version="4.5.5" />
   </ItemGroup>
 
 </Project>

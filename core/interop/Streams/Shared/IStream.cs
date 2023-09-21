@@ -85,7 +85,6 @@ internal static class STATSTGMarshaller
             grfStateBits = unmanaged.grfStateBits,
             reserved = unmanaged.reserved,
         };
-
     }
 
     public static void Free(STATSTGUnmanaged unmanaged)

@@ -1,10 +1,10 @@
 # Interop with .NET Stream sample
 
-The [`Stream`](https://learn.microsoft.com/dotnet/api/system.io.stream) data type is one of the most common non-trivial data types for interop. This sample provides two distinct mechanism for working with the `Stream` type in interop scenarios.
+The [`Stream`](https://learn.microsoft.com/dotnet/api/system.io.stream) data type is one of the most common non-trivial data types for interop. This sample provides two distinct mechanisms for working with the `Stream` type in interop scenarios.
 
 1) The projection of the `Stream` type using C-style exports.
 
-1) The projection of the `Stream` type using the COM [`IStream`](https://learn.microsoft.com/windows/win32/api/objidl/nn-objidl-istream) interface. This approach utilizes [`ComWrappers`](https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.comwrappers) and the COM source generator.
+1) The projection of the `Stream` type using the COM [`IStream`](https://learn.microsoft.com/windows/win32/api/objidl/nn-objidl-istream) interface. This approach utilizes [`ComWrappers`](https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.comwrappers) and the [COM source generator](https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.marshalling.generatedcominterfaceattribute).
 
 The [`ManagedLib`](./ManagedLib/) represents a .NET class library that is exposing a `Stream` type to an unmanaged process. This project demonstrates both the latest .NET approach and how it could be done using .NET Framework.
 
