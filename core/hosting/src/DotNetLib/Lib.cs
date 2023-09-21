@@ -34,13 +34,12 @@ namespace DotNetLib
             PrintLibArgs(libArgs);
         }
 
-#if NET5_0
         [UnmanagedCallersOnly]
-        public static void CustomEntryPointUnmanaged(LibArgs libArgs)
+        public static void CustomEntryPointUnmanagedCallersOnly(LibArgs libArgs)
         {
-            CustomEntryPoint(libArgs);
+            Console.WriteLine($"Hello, world! from {nameof(CustomEntryPointUnmanagedCallersOnly)} in {nameof(Lib)}");
+            PrintLibArgs(libArgs);
         }
-#endif
 
         private static void PrintLibArgs(LibArgs libArgs)
         {

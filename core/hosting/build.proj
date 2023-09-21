@@ -10,6 +10,7 @@
   <ItemGroup>
     <ProjectReference Include="src/NativeHost/*.csproj" />
     <ProjectReference Include="src/DotNetLib/*.csproj" />
+    <ProjectReference Include="src/App/*.csproj" />
   </ItemGroup>
 
 </Project>
