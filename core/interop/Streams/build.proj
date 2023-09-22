@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.Build.Traversal">
+
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+
+    <RunCommand>./Runner/bin/$(Configuration)/$(DefaultTargetFramework)/Runner</RunCommand>
+    <RunCommand Condition="$([MSBuild]::IsOsPlatform('Windows'))">./Runner/bin/$(Configuration)/$(DefaultTargetFramework)/Runner.exe</RunCommand>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="./ManagedLib/*.csproj" />
+    <ProjectReference Include="./Runner/*.csproj" />
+  </ItemGroup>
+
+</Project>
