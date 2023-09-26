@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>service</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <PublishUrl>publish\</PublishUrl>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -51,11 +51,11 @@
   </ItemGroup>
   <PropertyGroup>
     <PostBuildEvent>
-      if not exist %25SystemDrive%25\inetpub\wwwroot\servicemodelsamples\bin mkdir %25SystemDrive%25\inetpub\wwwroot\servicemodelsamples\bin
-      copy "$(ProjectDir)Service.svc" %25SystemDrive%25\inetpub\wwwroot\servicemodelsamples\
-      copy "$(TargetDir)Service.dll" %25SystemDrive%25\inetpub\wwwroot\servicemodelsamples\bin
-      copy "$(ProjectDir)Web.config" %25SystemDrive%25\inetpub\wwwroot\servicemodelsamples
-      copy "$(TargetDir)Service.pdb" %25SystemDrive%25\inetpub\wwwroot\servicemodelsamples\bin
+      if not exist %SystemDrive%\inetpub\wwwroot\servicemodelsamples\bin mkdir %SystemDrive%\inetpub\wwwroot\servicemodelsamples\bin
+      copy "$(MSBuildProjectDirectory)\Service.svc" %SystemDrive%\inetpub\wwwroot\servicemodelsamples\
+      copy "$(TargetDir)Service.dll" %SystemDrive%\inetpub\wwwroot\servicemodelsamples\bin
+      copy "$(MSBuildProjectDirectory)\Web.config" %SystemDrive%\inetpub\wwwroot\servicemodelsamples
+      copy "$(TargetDir)Service.pdb" %SystemDrive%\inetpub\wwwroot\servicemodelsamples\bin
     </PostBuildEvent>
   </PropertyGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
