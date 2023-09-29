@@ -6,17 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
-    <CompilerGeneratedFilesOutputPath>bin\Generated</CompilerGeneratedFilesOutputPath>
-
+    <!-- Uncomment to publish as a native executable -->
     <!-- <PublishAOT>true</PublishAOT> -->
-
-    <PublishDir>../OutputFiles/Client</PublishDir>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Include="../Shared/*.cs" />
-  </ItemGroup>
 
 </Project>

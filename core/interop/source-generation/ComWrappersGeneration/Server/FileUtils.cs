@@ -1,8 +1,4 @@
-
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Reflection;
-using System.Runtime.CompilerServices;
+﻿using System.Diagnostics.CodeAnalysis;
 
 namespace Tutorial;
 
@@ -11,39 +7,28 @@ public static class FileUtils
     /// <summary>
     /// Gets the path to the NativeDll that the COM system should use to call the native exports
     /// </summary>
-    public static unsafe bool TryGetDllPath([NotNullWhen(true)]out string? dllPath)
+    public static unsafe bool TryGetDllPath([NotNullWhen(true)] out string? dllPath)
     {
-        if (IsNativeAOT())
-            return TryGetDllPathNativeAOT(out dllPath);
-
-        return TryGetDllPathCoreCLR(out dllPath);
-    }
-
-    /// <summary>
-    /// Returns true if the application is running as NativeAOT, or false otherwise
-    /// </summary <summary>
-    private static bool IsNativeAOT()
-        => typeof(FileUtils).Assembly.Location == ""
-            && !RuntimeFeature.IsDynamicCodeSupported;
-
-    /// <summary>
-    /// Gets the path to the NativeDll that the COM system should use to call the native exports when deploying to CoreCLR.
-    /// Returns false if the application is deployed as a NativeAOT application.
-    /// </summary>
-    public static unsafe bool TryGetDllPathCoreCLR(out string? dllPath)
-    {
-        string assemblyPath = typeof(FileUtils).Assembly.Location;
+        // Try using the libraries to get assembly path
+        dllPath = typeof(FileUtils).Assembly.Location;
+        // Assembly.Location is an empty string in single file and NativeAOT
+        // Fall back to Windows APIs if Location is empty string
+        if (dllPath == "" && !TryGetDllPathWin32(out dllPath))
+            return false;
+        // Check if DNNE binary exists and return path to DNNE binary if it exists
         const string dnneSuffix = "NE.dll";
-        var fileName = Path.GetFileNameWithoutExtension(assemblyPath);
-        var directory = Path.GetDirectoryName(assemblyPath) ?? "";
-        dllPath = Path.Combine(directory, fileName + dnneSuffix);
+        var fileName = Path.GetFileNameWithoutExtension(dllPath);
+        var directory = Path.GetDirectoryName(dllPath) ?? "";
+        var dnnePath = Path.Combine(directory, fileName + dnneSuffix);
+        if (File.Exists(dnnePath))
+            dllPath = dnnePath;
         return true;
     }
 
     /// <summary>
-    /// Gets the path to the NativeDll that the COM system should use to call the native exports
+    /// Gets the path to the dll that has the DllRegisterServer address using the Windows APIs
     /// </summary>
-    public static unsafe bool TryGetDllPathNativeAOT([NotNullWhen(true)]out string? dllPath)
+    public static unsafe bool TryGetDllPathWin32([NotNullWhen(true)] out string? dllPath)
     {
         dllPath = null;
         bool receivedHandle = Kernel32.GetModuleHandleExW(

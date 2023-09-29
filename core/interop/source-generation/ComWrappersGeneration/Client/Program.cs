@@ -38,7 +38,11 @@ internal static unsafe partial class Ole32
         nint pUnkOuter,
         uint dwClsContext,
         ref Guid riid,
-        [MarshalAs(UnmanagedType.Interface)] out object ppv);
+        // The default ComInterfaceMarshaller will unwrap a .NET object if it can tell the COM instance is a ComWrapper.
+        // This causes issues when casting to ICalculator, since the Server's Calculator class doesn't implement the Client's interface.
+        // UniqueComInterfaceMarshaller doesn't try to unwrap the object and always creates a new COM object.
+        [MarshalUsing(typeof(UniqueComInterfaceMarshaller<object>))]
+        out object ppv);
 
     // https://learn.microsoft.com/windows/win32/api/wtypesbase/ne-wtypesbase-clsctx
     public enum CLSCTX : uint

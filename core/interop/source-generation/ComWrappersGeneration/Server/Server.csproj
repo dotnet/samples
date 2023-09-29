@@ -6,18 +6,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
-    <CompilerGeneratedFilesOutputPath>bin\Generated</CompilerGeneratedFilesOutputPath>
+    <!-- Uncomment to publish as a native executable -->
     <!-- <PublishAOT>true</PublishAOT> -->
 
-    <EnableDynamicLoading>true</EnableDynamicLoading>
-    <OutDir>..\OutputFiles\Server</OutDir>
+    <!-- Enable DNNE to dynamically load the managed .dll -->
+    <EnableDynamicLoading Condition="'$(PublishAOT)' != 'true'">true</EnableDynamicLoading>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Include="../Shared/*.cs" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="DNNE" Version="2.*" Condition="'$(PublishAOT)' != 'true'"/>

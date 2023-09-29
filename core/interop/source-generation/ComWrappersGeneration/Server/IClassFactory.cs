@@ -12,7 +12,7 @@ namespace Tutorial;
 [Guid(IID)]
 internal unsafe partial interface IClassFactory
 {
-    void CreateInstance(nint outer, ref Guid id, nint* iface);
+    void CreateInstance(nint outer, in Guid id, [MarshalAs(UnmanagedType.Interface)] out object? iface);
     void LockServer([MarshalAs(UnmanagedType.Bool)] bool fLock);
     public const string IID = "00000001-0000-0000-C000-000000000046";
 }
