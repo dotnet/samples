@@ -190,7 +190,7 @@ namespace System.Threading.Tasks
                             break;
 
                         case TaskStatus.Canceled:
-                            observer.OnError(new OperationCanceledException(t));
+                            observer.OnError(new OperationCanceledException("The operation was canceled."));
                             break;
                     }
                 }, cts.Token);
