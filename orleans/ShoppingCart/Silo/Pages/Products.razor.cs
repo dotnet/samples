@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft. All rights reserved.
+﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT License.
 
 using Orleans.ShoppingCart.Silo.Components;
@@ -20,7 +20,7 @@ public sealed partial class Products
     public ProductService ProductService { get; set; } = null!;
 
     [Inject]
-    public IDialogService DialogService  { get; set; } = null!;
+    public IDialogService DialogService { get; set; } = null!;
 
     protected override async Task OnInitializedAsync() =>
         _products = await InventoryService.GetAllProductsAsync();

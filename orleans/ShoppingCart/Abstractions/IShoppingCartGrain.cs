@@ -15,7 +15,7 @@ public interface IShoppingCartGrain : IGrainWithStringKey
     /// Removes the given <paramref name="product" /> from the shopping cart.
     /// </summary>
     Task RemoveItemAsync(ProductDetails product);
-    
+
     /// <summary>
     /// Gets all the items in the shopping cart.
     /// </summary>
