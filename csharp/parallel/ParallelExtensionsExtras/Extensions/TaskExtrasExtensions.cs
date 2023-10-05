@@ -52,7 +52,7 @@ namespace System.Threading.Tasks
 
         #region ToAsync(AsyncCallback, object)
         /// <summary>
-        /// Creates a Task that represents the completion of another Task, and 
+        /// Creates a Task that represents the completion of another Task, and
         /// that schedules an AsyncCallback to run upon completion.
         /// </summary>
         /// <param name="task">The antecedent Task.</param>
@@ -73,7 +73,7 @@ namespace System.Threading.Tasks
         }
 
         /// <summary>
-        /// Creates a Task that represents the completion of another Task, and 
+        /// Creates a Task that represents the completion of another Task, and
         /// that schedules an AsyncCallback to run upon completion.
         /// </summary>
         /// <param name="task">The antecedent Task.</param>
@@ -140,7 +140,7 @@ namespace System.Threading.Tasks
         }
 
         /// <summary>Propagates any exceptions that occurred on the specified tasks.</summary>
-        /// <param name="task">The Tassk whose exceptions are to be propagated.</param>
+        /// <param name="task">The Task whose exceptions are to be propagated.</param>
         public static void PropagateExceptions(this Task[] tasks)
         {
             if (tasks == null) throw new ArgumentNullException(nameof(tasks));
@@ -169,13 +169,13 @@ namespace System.Threading.Tasks
 
             public IDisposable Subscribe(IObserver<TResult> observer)
             {
-                // Validate arguments
+                // Validate arguments.
                 if (observer == null) throw new ArgumentNullException("observer");
 
-                // Support cancelling the continuation if the observer is unsubscribed
+                // Support cancelling the continuation if the observer is unsubscribed.
                 var cts = new CancellationTokenSource();
 
-                // Create a continuation to pass data along to the observer
+                // Create a continuation to pass data along to the observer.
                 _task.ContinueWith(t =>
                 {
                     switch (t.Status)
@@ -190,7 +190,7 @@ namespace System.Threading.Tasks
                             break;
 
                         case TaskStatus.Canceled:
-                            observer.OnError(new TaskCanceledException(t));
+                            observer.OnError(new OperationCanceledException("The operation was canceled."));
                             break;
                     }
                 }, cts.Token);
@@ -200,7 +200,7 @@ namespace System.Threading.Tasks
             }
         }
 
-        /// <summary>Translate a call to IDisposable.Dispose to a CancellationTokenSource.Cancel.</summary>
+        /// <summary>Translates a call to IDisposable.Dispose to a CancellationTokenSource.Cancel.</summary>
         private class CancelOnDispose : IDisposable
         {
             internal CancellationTokenSource _source;

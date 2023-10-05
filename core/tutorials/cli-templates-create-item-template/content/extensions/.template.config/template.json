@@ -8,5 +8,15 @@
   "tags": {
     "language": "C#",
     "type": "item"
+  },
+  "symbols": {
+    "ClassName":{
+      "type": "parameter",
+      "description": "The name of the code file and class.",
+      "datatype": "text",
+      "replaces": "StringExtensions",
+      "fileRename": "StringExtensions",
+      "defaultValue": "StringExtensions"
+    }
   }
 }
