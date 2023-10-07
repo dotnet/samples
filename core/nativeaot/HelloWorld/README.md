@@ -32,4 +32,4 @@ This sample includes Dockerfiles that demonstrate installing NativeAOT build pre
 - Linux x64: `docker build -t hello . & docker run -t hello`
 - Windows x64: `docker build -t hello -f Dockerfile.windowsservercore-x64 . & docker run -t hello`
 
-More comprehensive containerized sample app built with native AOT can be found at https://github.com/dotnet/dotnet-docker/tree/main/samples/releasesapi.
+More comprehensive containerized sample app built with native AOT can be found in [dotnet-docker repo](https://github.com/dotnet/dotnet-docker/tree/main/samples/releasesapi).
