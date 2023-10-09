@@ -8,7 +8,7 @@ RUN vs_buildtools.exe --installPath C:\BuildTools --add Microsoft.VisualStudio.C
 WORKDIR /source
 
 COPY . .
-RUN dotnet publish -o /app
+RUN dotnet publish -o /app HelloWorld.csproj
 
 FROM mcr.microsoft.com/windows/nanoserver:ltsc2022-amd64
 WORKDIR /app

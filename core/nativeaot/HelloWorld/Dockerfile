@@ -8,7 +8,7 @@ RUN apt-get update \
 WORKDIR /source
 
 COPY . .
-RUN dotnet publish -o /app
+RUN dotnet publish -o /app HelloWorld.csproj
 
 FROM mcr.microsoft.com/dotnet/runtime-deps:8.0
 WORKDIR /app
