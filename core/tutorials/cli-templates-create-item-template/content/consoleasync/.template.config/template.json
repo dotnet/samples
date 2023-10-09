@@ -5,6 +5,7 @@
   "identity": "ExampleTemplate.AsyncProject",
   "name": "Example templates: async project",
   "shortName": "consoleasync",
+  "sourceName": "consoleasync",
   "tags": {
     "language": "C#",
     "type": "project"
