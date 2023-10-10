@@ -5,7 +5,7 @@ Public Class MultiWindow
         ThreadStatusItem.Content = $"Thread ID: {Thread.CurrentThread.ManagedThreadId}"
     End Sub
 
-    Private Sub StartStopButton_Click(sender As Object, e As RoutedEventArgs)
+    Private Sub PauseButton_Click(sender As Object, e As RoutedEventArgs)
         Task.Delay(TimeSpan.FromSeconds(5)).Wait()
     End Sub
 
