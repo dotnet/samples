@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 
 # Install NativeAOT build prerequisites
 RUN apt-get update \
@@ -8,9 +8,9 @@ RUN apt-get update \
 WORKDIR /source
 
 COPY . .
-RUN dotnet publish -c release -r linux-x64 -o /app
+RUN dotnet publish -o /app HelloWorld.csproj
 
-FROM mcr.microsoft.com/dotnet/runtime-deps:7.0
+FROM mcr.microsoft.com/dotnet/runtime-deps:8.0
 WORKDIR /app
 COPY --from=build /app .
 ENTRYPOINT ["/app/HelloWorld"]
