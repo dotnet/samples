@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFrameworks>net462;net6.0</TargetFrameworks>
     <OutputType>Exe</OutputType>
-    <PackageId>Client</PackageId>
+    <Title>Client</Title>
     <Description>NetTcp</Description>
     <Company>Microsoft Corporation</Company>
     <Product>Windows Communication Foundation and Windows Workflow Foundation SDK</Product>
@@ -26,6 +26,7 @@
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net6.0' ">
+    <PackageReference Include="System.ServiceModel.Primitives" Version="6.*" />
     <PackageReference Include="System.ServiceModel.NetTcp" Version="6.*" />
   </ItemGroup>
 
