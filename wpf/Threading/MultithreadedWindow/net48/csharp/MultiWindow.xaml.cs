@@ -13,7 +13,7 @@ namespace SDKSamples
         private void Window_Loaded(object sender, RoutedEventArgs e) =>
             ThreadStatusItem.Content = $"Thread ID: {Thread.CurrentThread.ManagedThreadId}";
 
-        private void StartStopButton_Click(object sender, RoutedEventArgs e) =>
+        private void PauseButton_Click(object sender, RoutedEventArgs e) =>
             Task.Delay(TimeSpan.FromSeconds(5)).Wait();
 
         private void SameThreadWindow_Click(object sender, RoutedEventArgs e) =>
