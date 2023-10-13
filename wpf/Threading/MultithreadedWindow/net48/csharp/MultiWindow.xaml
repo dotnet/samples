@@ -28,7 +28,7 @@
         </TextBlock>
 
         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="20" >
-            <Button Content="Pause" Click="StartStopButton_Click" Name="StartStopButton" Margin="5,0" Padding="10,0" />
+            <Button Content="Pause" Click="PauseButton_Click" Margin="5,0" Padding="10,0" />
             <TextBlock Margin="5,0,0,0" Text="&lt;-- Pause for 5 seconds" />
         </StackPanel>
 
