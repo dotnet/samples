@@ -32,6 +32,7 @@ Build the Native AOT binaries by running `dotnet publish -r <RID>` where `<RID>`
 Build the projects by running `dotnet publish`. The projects will copy the binaries to the `OutputFiles\` directory. After publishing, use `regsvr32.exe` to register the native binary produced by DNNE, `ServerNE.dll` (run `regsvr.exe .\OutputFiles\Server\ServerNE.dll`). `Server.dll` will activate the .NET runtime and call the exported methods in the managed `Server.dll` which register the server with COM. Then, run the client application `.\OutputFiles\Client\Client.exe` and observe the output as it activates and uses a COM instance from `ServerNE.dll`.
 
 ## See also
+
 - [ComWrappers source generation](https://learn.microsoft.com/dotnet/standard/native-interop/comwrappers-source-generation)
 - [Native exports in NativeAOT](https://learn.microsoft.com/dotnet/core/deploying/native-aot/interop#native-exports)
 - [COM interop in .NET](https://learn.microsoft.com/dotnet/standard/native-interop/cominterop)

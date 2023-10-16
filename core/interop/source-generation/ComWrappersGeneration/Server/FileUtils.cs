@@ -1,4 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 
 namespace Tutorial;
 
@@ -7,9 +9,10 @@ public static class FileUtils
     /// <summary>
     /// Gets the path to the NativeDll that the COM system should use to call the native exports
     /// </summary>
+    [UnconditionalSuppressMessage(category: "SingleFile", checkId: "IL3000" /* Avoid accessing Assembly file path when publishing as a single file */, Justification = "The code is aware the `Assembly.Location` may be an empty string and falls back to Win32 APIs")]
     public static unsafe bool TryGetDllPath([NotNullWhen(true)] out string? dllPath)
     {
-        // Try using the libraries to get assembly path
+        // Try using reflection to get the path to the native COM entry points
         dllPath = typeof(FileUtils).Assembly.Location;
         // Assembly.Location is an empty string in single file and NativeAOT
         // Fall back to Windows APIs if Location is empty string
@@ -17,9 +20,9 @@ public static class FileUtils
             return false;
         // Check if DNNE binary exists and return path to DNNE binary if it exists
         const string dnneSuffix = "NE.dll";
-        var fileName = Path.GetFileNameWithoutExtension(dllPath);
-        var directory = Path.GetDirectoryName(dllPath) ?? "";
-        var dnnePath = Path.Combine(directory, fileName + dnneSuffix);
+        string fileName = Path.GetFileNameWithoutExtension(dllPath);
+        string directory = Path.GetDirectoryName(dllPath) ?? "";
+        string dnnePath = Path.Combine(directory, fileName + dnneSuffix);
         if (File.Exists(dnnePath))
             dllPath = dnnePath;
         return true;

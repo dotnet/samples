@@ -27,12 +27,11 @@ public static unsafe class Exports
             const int CLASS_E_CLASSNOTAVAILABLE = unchecked((int)0x80040111);
             return CLASS_E_CLASSNOTAVAILABLE;
         }
-        var factory = ClassFactory.Instance;
+        ClassFactory factory = ClassFactory.Instance;
         nint pIUnknown = (nint)ComInterfaceMarshaller<ClassFactory>.ConvertToUnmanaged(factory);
-
         // Call QI on the COM ptr from COM wrappers to get the requested interface pointer
         // This is IClassFactory for CoCreateInstance
-        var hr = Marshal.QueryInterface(pIUnknown, ref *interfaceId, out *ppIClassFactory);
+        int hr = Marshal.QueryInterface(pIUnknown, in *interfaceId, out *ppIClassFactory);
         Marshal.Release(pIUnknown);
         if (hr != 0)
         {
@@ -58,9 +57,7 @@ public static unsafe class Exports
             const int SELFREG_E_CLASS = unchecked((int)0x80040201);
             return SELFREG_E_CLASS;
         }
-
         CreateComRegistryEntryForClass(Calculator.Clsid, nameof(Calculator), dllPath!);
-
         return 0;
     }
 
@@ -71,17 +68,17 @@ public static unsafe class Exports
 
         string progId = GetProgId(className);
 
-        using (var key = Registry.CurrentUser.CreateSubKey($$"""SOFTWARE\Classes\CLSID\{{{clsid}}}"""))
+        using (RegistryKey key = Registry.CurrentUser.CreateSubKey($$"""SOFTWARE\Classes\CLSID\{{{clsid}}}"""))
         {
             key.SetValue(null, className, RegistryValueKind.String);
             key.SetValue("ProgId", progId, RegistryValueKind.String);
         }
-        using (var key = Registry.CurrentUser.CreateSubKey($$"""SOFTWARE\Classes\CLSID\{{{clsid}}}\InprocServer32"""))
+        using (RegistryKey key = Registry.CurrentUser.CreateSubKey($$"""SOFTWARE\Classes\CLSID\{{{clsid}}}\InprocServer32"""))
         {
             key.SetValue(null, dllPath, RegistryValueKind.String);
             key.SetValue("ThreadingModel", "Both", RegistryValueKind.String);
         }
-        using (var key = Registry.CurrentUser.CreateSubKey($$"""SOFTWARE\Classes\{{{progId}}}"""))
+        using (RegistryKey key = Registry.CurrentUser.CreateSubKey($$"""SOFTWARE\Classes\{{{progId}}}"""))
         {
             key.SetValue(null, className, RegistryValueKind.String);
             key.SetValue("CLSID", clsid, RegistryValueKind.String);
@@ -96,20 +93,15 @@ public static unsafe class Exports
     [UnmanagedCallersOnly(EntryPoint = nameof(DllUnregisterServer))]
     public static int DllUnregisterServer()
     {
-        DeleteComRegistryKeyForClass(Calculator.Clsid, nameof(Calculator));
-
-        return 0;
-    }
-
-    static void DeleteComRegistryKeyForClass(string clsid, string className)
-    {
         if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             throw new InvalidOperationException();
 
-        string progId = GetProgId(className);
+        string clsid = Calculator.Clsid;
+        string progId = GetProgId(nameof(Calculator));
 
         Registry.CurrentUser.DeleteSubKeyTree($$"""SOFTWARE\Classes\CLSID\{{{clsid}}}""");
         Registry.CurrentUser.DeleteSubKeyTree($$"""SOFTWARE\Classes\{{{progId}}}""");
+        return 0;
     }
 
     public static string GetProgId(string className) => $"Tutorial.{className}.0";

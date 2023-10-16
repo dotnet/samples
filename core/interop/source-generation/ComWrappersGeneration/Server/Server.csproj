@@ -7,7 +7,7 @@
     <Nullable>enable</Nullable>
 
     <!-- Uncomment to publish as a native executable -->
-    <!-- <PublishAOT>true</PublishAOT> -->
+    <PublishAOT>true</PublishAOT>
 
     <!-- Enable DNNE to dynamically load the managed .dll -->
     <EnableDynamicLoading Condition="'$(PublishAOT)' != 'true'">true</EnableDynamicLoading>
@@ -16,6 +16,8 @@
   <ItemGroup>
     <PackageReference Include="DNNE" Version="2.*" Condition="'$(PublishAOT)' != 'true'"/>
     <PackageReference Include="Microsoft.Win32.Registry" Version="5.0.0" />
+    <!-- When publishing AOT, use our own .def file to export the COM methods as PRIVATE. The Windows native linker (Link.exe) warns when exported COM methods are not PRIVATE. -->
+    <LinkerArg Include="/DEF:&quot;Server.def&quot;" Condition="'$(PublishAOT)' == 'true'"/>
   </ItemGroup>
 
 </Project>
