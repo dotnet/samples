@@ -17,6 +17,7 @@
     <PackageReference Include="Microsoft.Orleans.Clustering.Cosmos" Version="7.*" />
     <PackageReference Include="Microsoft.Orleans.Persistence.Cosmos" Version="7.*" />
     <PackageReference Include="Microsoft.Orleans.Server" Version="7.*" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.*" />
     <PackageReference Include="MudBlazor" Version="6.*" />
   </ItemGroup>
 
