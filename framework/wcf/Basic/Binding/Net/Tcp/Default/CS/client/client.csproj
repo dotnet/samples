@@ -22,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net462' ">
+    <Reference Include="System.IdentityModel" />
     <Reference Include="System.ServiceModel" />
   </ItemGroup>
 
@@ -31,4 +32,3 @@
   </ItemGroup>
 
 </Project>
-
