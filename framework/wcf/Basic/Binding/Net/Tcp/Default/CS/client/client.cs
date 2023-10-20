@@ -3,18 +3,25 @@
 //----------------------------------------------------------------
 
 using System;
+using System.ServiceModel;
 
 namespace Microsoft.Samples.NetTcp
 {
-    //The service contract is defined in generatedClient.cs, generated from the service by the svcutil tool.
+    // The service contract is defined in generatedClient.cs, generated from the service by the svcutil tool.
 
-    //Client implementation code.
+    // Client implementation code.
     class Client
     {
         static void Main()
         {
             // Create a client
             CalculatorClient client = new CalculatorClient();
+
+            // Include the identity element when running cross-machine in a domain.
+            // NetTcpBinding binding = new NetTcpBinding();
+            // var endpointIdentity = new UpnEndpointIdentity("user_name@service_domain");
+            // EndpointAddress endpointAddress = new EndpointAddress(new Uri("net.tcp://localhost:9000/servicemodelsamples/service"), endpointIdentity);
+            // CalculatorClient client = new CalculatorClient(binding, endpointAddress);
 
             // Call the Add service operation.
             double value1 = 100.00D;
