@@ -6,7 +6,7 @@ products:
 page_type: sample
 name: "Source-Generated COM Sample"
 urlFragment: "generated-comwrappers"
-description: "A .NET solution that uses source-generated COM in .NET"
+description: "A .NET codebase that uses source-generated COM in .NET"
 ---
 # .NET Source-Generated COM Sample
 
