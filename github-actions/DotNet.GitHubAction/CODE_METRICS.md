@@ -598,14 +598,14 @@ The *DotNet.GitHubAction.csproj* project file contains:
 
 - 4 namespaces.
 - 6 named types.
-- 669 total lines of source code.
-- Approximately 288 lines of executable code.
+- 685 total lines of source code.
+- Approximately 304 lines of executable code.
 - The highest cyclomatic complexity is 13 :x:.
 
 <details>
 <summary>
   <strong id="global+namespace">
-    &lt;global namespace&gt; :heavy_check_mark:
+    &lt;global namespace&gt; :warning:
   </strong>
 </summary>
 <br>
@@ -613,26 +613,26 @@ The *DotNet.GitHubAction.csproj* project file contains:
 The `<global namespace>` namespace contains 1 named types.
 
 - 1 named types.
-- 94 total lines of source code.
-- Approximately 94 lines of executable code.
-- The highest cyclomatic complexity is 7 :heavy_check_mark:.
+- 110 total lines of source code.
+- Approximately 110 lines of executable code.
+- The highest cyclomatic complexity is 8 :warning:.
 
 <details>
 <summary>
   <strong id="program$">
-    &lt;Program&gt;$ :heavy_check_mark:
+    &lt;Program&gt;$ :warning:
   </strong>
 </summary>
 <br>
 
 - The `<Program>$` contains 1 members.
-- 94 total lines of source code.
-- Approximately 94 lines of executable code.
-- The highest cyclomatic complexity is 7 :heavy_check_mark:.
+- 110 total lines of source code.
+- Approximately 110 lines of executable code.
+- The highest cyclomatic complexity is 8 :warning:.
 
 | Member kind | Line number | Maintainability index | Cyclomatic complexity | Depth of inheritance | Class coupling | Lines of source / executable code |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| Method | <a href='https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Program.cs#L1' title='<top-level-statements-entry-point>'>1</a> | 42 | 7 :heavy_check_mark: | 0 | 15 | 94 / 47 |
+| Method | <a href='https://github.com/dotnet/samples/blob/main/github-actions/DotNet.GitHubAction/DotNet.GitHubAction/Program.cs#L1' title='<top-level-statements-entry-point>'>1</a> | 40 | 8 :warning: | 0 | 16 | 110 / 55 |
 
 <a href="#global+namespace">:top: back to &lt;global namespace&gt;</a>
 
