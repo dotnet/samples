@@ -1,11 +1,11 @@
 ﻿//  Copyright (c) Microsoft Corporation.  All Rights Reserved.
 
 using System;
-using System.ServiceModel.Dispatcher;
-using System.ServiceModel.Description;
-using System.ServiceModel.Channels;
-using System.ServiceModel;
 using System.Collections.ObjectModel;
+using System.ServiceModel;
+using System.ServiceModel.Channels;
+using System.ServiceModel.Description;
+using System.ServiceModel.Dispatcher;
 
 namespace Microsoft.ServiceModel.Samples
 {
@@ -17,8 +17,6 @@ namespace Microsoft.ServiceModel.Samples
     {
         #region Private Fields
 
-        double timeout;
-
         #endregion
 
         #region Properties
@@ -26,11 +24,7 @@ namespace Microsoft.ServiceModel.Samples
         /// <summary>
         /// Gets or sets the custom lease time.
         /// </summary>
-        public double Timeout
-        {
-            get { return this.timeout; }
-            set { this.timeout = value; }
-        }
+        public double Timeout { get; set; }
 
         #endregion
 
@@ -49,12 +43,12 @@ namespace Microsoft.ServiceModel.Samples
         /// </remarks>
         public void ApplyDispatchBehavior(ServiceDescription description, ServiceHostBase serviceHostBase)
         {
-            CustomLifetimeLease customLease = new CustomLifetimeLease(timeout);
+            CustomLifetimeLease customLease = new CustomLifetimeLease(Timeout);
 
             foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)
             {
                 ChannelDispatcher cd = cdb as ChannelDispatcher;
-                
+
                 if (cd != null)
                 {
                     foreach (EndpointDispatcher ed in cd.Endpoints)
