@@ -23,7 +23,7 @@
     <PackageReference Include="xunit" Version="2.5.3" />
     <PackageReference Include="xunit.abstractions" Version="2.0.3" />
     <PackageReference Include="xunit.analyzers" Version="1.4.0" />
-    <PackageReference Include="xunit.assert" Version="2.5.3" />
+    <PackageReference Include="xunit.assert" Version="2.6.0" />
     <PackageReference Include="xunit.core" Version="2.5.3" />
     <PackageReference Include="xunit.extensibility.core" Version="2.5.3" />
     <PackageReference Include="xunit.extensibility.execution" Version="2.5.3" />
