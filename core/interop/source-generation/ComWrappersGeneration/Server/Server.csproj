@@ -7,7 +7,7 @@
     <Nullable>enable</Nullable>
 
     <!-- Uncomment to publish as a native executable -->
-    <PublishAOT>true</PublishAOT>
+    <!-- <PublishAOT>true</PublishAOT> -->
 
     <!-- Enable DNNE to dynamically load the managed .dll -->
     <EnableDynamicLoading Condition="'$(PublishAOT)' != 'true'">true</EnableDynamicLoading>
