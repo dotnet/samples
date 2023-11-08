@@ -1,14 +1,11 @@
 ﻿//  Copyright (c) Microsoft Corporation.  All Rights Reserved.
 
-using System;
-using System.Globalization;
-using System.Resources;
 using System.Reflection;
-using System.Threading;
+using System.Resources;
 
 namespace Microsoft.ServiceModel.Samples
 {
-    class ResourceHelper
+    internal class ResourceHelper
     {
         // Gets the string associated with the specified key from the resource file
         public static string GetString(string key)
