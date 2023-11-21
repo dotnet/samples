@@ -1,0 +1,14 @@
+<Project>
+  <!-- Shared properties -->
+  <PropertyGroup>
+    <DefaultTargetFramework>net8.0</DefaultTargetFramework>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <CompilerGeneratedFilesOutputPath>bin\Generated</CompilerGeneratedFilesOutputPath>
+    <PublishDir>$(MSBuildThisFileDirectory)\OutputFiles\$(MSBuildProjectName)\</PublishDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="../Shared/*.cs" />
+  </ItemGroup>
+</Project>
