@@ -11,14 +11,14 @@ Public Class Weather
         DirectCast(Resources("HideWeatherImageStoryboard"), Storyboard).Begin(Me)
 
         ' Asynchronously fetch the weather forecast on a different thread and pause this code.
-        Dim Weather As String = Await FetchWeatherFromServerAsync()
+        Dim weatherType As String = Await Task.Run(AddressOf FetchWeatherFromServerAsync)
 
         ' After async data returns, process it...
         ' Set the weather image
-        If Weather = "sunny" Then
+        If weatherType = "sunny" Then
             weatherIndicatorImage.Source = DirectCast(Resources("SunnyImageSource"), ImageSource)
 
-        ElseIf Weather = "rainy" Then
+        ElseIf weatherType = "rainy" Then
             weatherIndicatorImage.Source = DirectCast(Resources("RainingImageSource"), ImageSource)
 
         End If
@@ -30,7 +30,7 @@ Public Class Weather
         ' Update UI text
         fetchButton.IsEnabled = True
         fetchButton.Content = "Fetch Forecast"
-        weatherText.Text = Weather
+        weatherText.Text = weatherType
     End Sub
 
     Private Async Function FetchWeatherFromServerAsync() As Task(Of String)
