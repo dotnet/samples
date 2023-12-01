@@ -9,7 +9,7 @@ Create a .NET class library project using `dotnet new classlib -o NativeLibrary`
 ## Building shared libraries
 
 ```bash
-> dotnet publish /p:NativeLib=Shared
+> dotnet publish /p:NativeLib=Shared --use-current-runtime
 ```
 
 The above command will drop a shared library (Windows `.dll`, macOS `.dylib`, Linux `.so`) in `./bin/Release/net8.0/[RID]/publish/` folder and will have the same name as the folder in which your source file is present.
@@ -67,7 +67,7 @@ For a C# method in the native library to be consumable by external programs, it 
 Apply the attribute to the method, specifying the `EntryPoint`:
 
 ```csharp
-[UnmanagedCallersOnly(EntryPoint = "add")]
+[UnmanagedCallersOnly(EntryPoint = "aotsample_add")]
 public static int Add(int a, int b)
 {
     return a + b;
@@ -86,7 +86,7 @@ The sample [source code](Class1.cs) demonstrates common techniques used to stay 
 ## Building static libraries
 
 ```bash
-> dotnet publish /p:NativeLib=Static
+> dotnet publish /p:NativeLib=Static --use-current-runtime
 ```
 
 The above command will drop a static library (Windows `.lib`, macOS/Linux `.a`) in `./bin/Release/net8.0/[RID]/publish/` folder and will have the same name as the folder in which your source file is present.
