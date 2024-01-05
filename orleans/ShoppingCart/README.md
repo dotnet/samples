@@ -55,6 +55,21 @@ The app is architected as follows:
 1. `cd orleans-on-app-service`
 1. `dotnet run --project Silo\Orleans.ShoppingCart.Silo.csproj`
 
+### Deploying to Azure
+
+Before deploying to Azure, make sure you complete the following steps:
+
+1. Create an Azure Cosmos DB for NoSQL account.
+    1. Create a database named `Orleans`.
+    1. Within the `Orleans` database, create a container named `OrleansStorage` with a partition key path of `/PartitionKey`.
+    1. Create another container named `OrleansCluster` within the `Orleans` database. Ensure this container has a partition key path of `/ClusterId`.
+    1. Get the connection string.
+1. Create an Azure Container App as the target of your deployment.
+    1. Ensure that the target ingress port is `8080`. For more information, see [default ASP.NET Core port changed to 8080](https://learn.microsoft.com/dotnet/core/compatibility/containers/8.0/aspnet-port).
+    1. Create a secret in the Container App for the Azure Cosmos DB for NoSQL account's connection string.
+    1. Create an environment variable in the Container App's container named `ORLEANS_AZURE_COSMOS_DB_CONNECTION_STRING`. Reference the secret you just created.
+1. Deploy the application to the Azure Container App service. For more information, see [Azure Container Apps deployment options](https://learn.microsoft.com/azure/container-apps/code-to-cloud-options).
+
 ### Acknowledgements
 
 The Orleans.ShoppingCart.Silo project uses the following open3rd party-source projects:

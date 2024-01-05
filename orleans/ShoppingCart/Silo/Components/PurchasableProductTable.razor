@@ -36,7 +36,7 @@
         <RowTemplate>
             <MudTd>
                 <MudFab Disabled=@(IsInCart?.Invoke(product) ?? false) Size=Size.Small
-                    Color=Color.Primary Icon=@Icons.Filled.AddShoppingCart
+                    Color=Color.Primary Icon=@Icons.Material.Filled.AddShoppingCart
                     OnClick=@(async _ => await AddToCartAsync(product.Id))/>
             </MudTd>
             <MudTd DataLabel="Name">@product.Name</MudTd>

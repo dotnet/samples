@@ -13,10 +13,10 @@ internal class ProductGrain : Grain, IProductGrain
             storageName: "shopping-cart")]
         IPersistentState<ProductDetails> product) => _product = product;
 
-    Task<int> IProductGrain.GetProductAvailabilityAsync() => 
+    Task<int> IProductGrain.GetProductAvailabilityAsync() =>
         Task.FromResult(_product.State.Quantity);
 
-    Task<ProductDetails> IProductGrain.GetProductDetailsAsync() => 
+    Task<ProductDetails> IProductGrain.GetProductDetailsAsync() =>
         Task.FromResult(_product.State);
 
     Task IProductGrain.ReturnProductAsync(int quantity) =>
