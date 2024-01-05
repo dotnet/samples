@@ -79,7 +79,9 @@ static async Task StartAnalysisAsync(ActionInputs inputs, IHost host)
         {
             textWriter.WriteLine($"updated-metrics={updatedMetrics}");
             textWriter.WriteLine($"summary-title={title}");
-            textWriter.WriteLine($"summary-details={summary}");
+            textWriter.WriteLine("summary-details<<EOF");
+            textWriter.WriteLine(summary);
+            textWriter.WriteLine("EOF");
         }
     }
     else

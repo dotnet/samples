@@ -3,8 +3,10 @@
 //----------------------------------------------------------------
 
 using System;
-using System.Net;
+using System.IdentityModel.Selectors;
+using System.IdentityModel.Tokens;
 using System.Security.Cryptography.X509Certificates;
+using System.ServiceModel.Security;
 
 namespace Microsoft.Samples.TransportSecurity
 {
@@ -17,10 +19,12 @@ namespace Microsoft.Samples.TransportSecurity
         {
             // WARNING: This code is only needed for test certificates such as those created by makecert. It is 
             // not recommended for production code.
-            PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
-
             // Create a client
             CalculatorClient client = new CalculatorClient();
+            client.ClientCredentials.ServiceCertificate.SslCertificateAuthentication = new X509ServiceCertificateAuthentication();
+            client.ClientCredentials.ServiceCertificate.SslCertificateAuthentication.CertificateValidationMode = X509CertificateValidationMode.Custom;
+            MyX509CertificateValidator myX509CertificateValidator = new MyX509CertificateValidator("CN=ServiceModelSamples-HTTPS-Server");
+            client.ClientCredentials.ServiceCertificate.SslCertificateAuthentication.CustomCertificateValidator = myX509CertificateValidator;
 
             // Call the Add service operation.
             double value1 = 100.00D;
@@ -57,30 +61,34 @@ namespace Microsoft.Samples.TransportSecurity
 
     // WARNING: This code is only needed for test certificates such as those created by makecert. It is 
     // not recommended for production code.
-    class PermissiveCertificatePolicy
+    public class MyX509CertificateValidator : X509CertificateValidator
     {
-        string subjectName;
-        static PermissiveCertificatePolicy currentPolicy;
-        PermissiveCertificatePolicy(string subjectName)
-        {
-            this.subjectName = subjectName;
-            ServicePointManager.ServerCertificateValidationCallback +=
-                new System.Net.Security.RemoteCertificateValidationCallback(RemoteCertValidate);
-        }
+        private string _allowedIssuerName;
 
-        public static void Enact(string subjectName)
+        public MyX509CertificateValidator(string allowedIssuerName)
         {
-            currentPolicy = new PermissiveCertificatePolicy(subjectName);
-        }
-
-        bool RemoteCertValidate(object sender, X509Certificate cert, X509Chain chain, System.Net.Security.SslPolicyErrors error)
-        {
-            if (cert.Subject == subjectName)
+            if (string.IsNullOrEmpty(allowedIssuerName))
             {
-                return true;
+                throw new ArgumentNullException("allowedIssuerName", "[MyX509CertificateValidator] The string parameter allowedIssuerName was null or empty.");
             }
 
-            return false;
+            _allowedIssuerName = allowedIssuerName;
+        }
+
+        public override void Validate(X509Certificate2 certificate)
+        {
+            // Check that there is a certificate.
+            if (certificate == null)
+            {
+                throw new ArgumentNullException("certificate", "[MyX509CertificateValidator] The X509Certificate2 parameter certificate was null.");
+            }
+
+            // Check that the certificate issuer matches the configured issuer.
+            if (!certificate.Subject.Contains(_allowedIssuerName))
+            {
+                throw new SecurityTokenValidationException
+                  (string.Format("Certificate was not issued by a trusted issuer. Expected: {0}, Actual: {1}", _allowedIssuerName, certificate.IssuerName.Name));
+            }
         }
     }
 }
