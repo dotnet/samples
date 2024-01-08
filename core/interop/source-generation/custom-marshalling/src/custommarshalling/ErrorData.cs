@@ -72,6 +72,9 @@ namespace CustomMarshalling
                 };
             }
 
+            public static ErrorDataUnmanaged ConvertToUnmanaged(ErrorData managed)
+                => ErrorDataMarshaller.ConvertToUnmanaged(managed);
+
             public static void Free(ErrorDataUnmanaged unmanaged)
                 => ErrorDataMarshaller.Free(unmanaged);
         }
