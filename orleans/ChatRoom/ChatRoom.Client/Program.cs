@@ -1,4 +1,4 @@
-using System.Reflection;
+﻿using System.Reflection;
 using ChatRoom;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -54,7 +54,7 @@ static async Task ProcessLoopAsync(ClientContext context)
             break;
         }
 
-        var firstTwoCharacters = input[..2];
+        var firstTwoCharacters = input.Length >= 2 ? input[..2] : string.Empty;
         if (firstTwoCharacters is "/n")
         {
             context = context with { UserName = input.Replace("/n", "").Trim() };
