@@ -13,7 +13,7 @@ public class MonsterGrain : Grain, IMonsterGrain
 
         RegisterTimer(
             _ => Move(),
-            null,
+            null!,
             TimeSpan.FromSeconds(150),
             TimeSpan.FromMinutes(150));
 
