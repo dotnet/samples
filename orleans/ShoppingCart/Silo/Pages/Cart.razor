@@ -3,7 +3,7 @@
 <MudToolBar DisableGutters="true">
     <MudText Typo="Typo.h4">Shopping Cart</MudText>
     <MudSpacer />
-    <MudButton Variant="Variant.Outlined" StartIcon=@Icons.Filled.RemoveShoppingCart
+    <MudButton Variant="Variant.Outlined" StartIcon=@Icons.Material.Filled.RemoveShoppingCart
         Disabled=@(_cartItems?.Any() is false) Size=@Size.Large
         Color="Color.Secondary" OnClick=@EmptyCartAsync>
         Empty Cart
