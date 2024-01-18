@@ -7,8 +7,8 @@
     <PackageVersion Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.0" />
     <PackageVersion Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
     <PackageVersion Include="Microsoft.Extensions.Logging.Console" Version="8.0.0" />
-    <PackageVersion Include="Microsoft.Orleans.Client" Version="7.2.3" />
-    <PackageVersion Include="Microsoft.Orleans.Sdk" Version="7.2.3" />
-    <PackageVersion Include="Microsoft.Orleans.Server" Version="7.2.3" />
+    <PackageVersion Include="Microsoft.Orleans.Client" Version="8.0.0" />
+    <PackageVersion Include="Microsoft.Orleans.Sdk" Version="8.0.0" />
+    <PackageVersion Include="Microsoft.Orleans.Server" Version="8.0.0" />
   </ItemGroup>
 </Project>
