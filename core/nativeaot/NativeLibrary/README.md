@@ -86,7 +86,12 @@ The sample [source code](Class1.cs) demonstrates common techniques used to stay 
 ## Building static libraries
 
 > [!WARNING]
-> Building shared libraries is preferred to building static libraries. Static libraries might have problems with ABI differences (the compiler-rt runtime used to build the static libraries that ship with native AOT needs to match the compiler-rt runtime used by other code in the same loadable module). It is also not not possible to mix multiple native AOT compiled static libraries within the same loadable module. These problems don't exist when building a shared library.
+> It's preferred to build shared libraries than static libraries:
+>
+> - All code in the loadable module must be compiled with C/C++ compiler version and options that are compatible with native AOT static libraries.
+> - It's also not possible to mix multiple native AOT compiled static libraries within the same loadable module.
+>
+> These problems don't exist when you build a shared library.
 
 ```bash
 > dotnet publish /p:NativeLib=Static --use-current-runtime
