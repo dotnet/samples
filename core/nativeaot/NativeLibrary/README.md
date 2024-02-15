@@ -17,6 +17,7 @@ The above command will drop a shared library (Windows `.dll`, macOS `.dylib`, Li
 ### Loading shared libraries from C and importing methods
 
 For reference, you can read the file LoadLibrary.c.
+Please note that on Windows the platform (x86 and x64) must match between the dotnet aot library and the tool used to compile and link the c code; see [here](https://learn.microsoft.com/en-us/cpp/build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line?view=msvc-170) for x64.
 The first thing you'll have to do in order to have a proper "loader" that loads your shared library is to add these directives
 
 ```c
