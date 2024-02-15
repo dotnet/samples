@@ -12,8 +12,8 @@
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
-    <PackageReference Include="Microsoft.Windows.Compatibility" Version="8.0.1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="8.0.2" />
   </ItemGroup>
   <!-- By default, all .cs and .resx files in the current
        directory or descendant directories will be included.

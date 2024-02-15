@@ -9,7 +9,7 @@ Create a .NET class library project using `dotnet new classlib -o NativeLibrary`
 ## Building shared libraries
 
 ```bash
-> dotnet publish /p:NativeLib=Shared --use-current-runtime
+> dotnet publish --use-current-runtime
 ```
 
 The above command will drop a shared library (Windows `.dll`, macOS `.dylib`, Linux `.so`) in `./bin/Release/net8.0/[RID]/publish/` folder and will have the same name as the folder in which your source file is present.
@@ -84,6 +84,14 @@ After the native library is built, the above C# `Add` method will be exported as
 The sample [source code](Class1.cs) demonstrates common techniques used to stay within these limitations.
 
 ## Building static libraries
+
+> [!WARNING]
+> It's preferred to build shared libraries than static libraries:
+>
+> * All code in the loadable module must be compiled with C/C++ compiler version and options that are compatible with native AOT static libraries.
+> * It's also not possible to mix multiple native AOT compiled static libraries within the same loadable module.
+>
+> These problems don't exist when you build a shared library.
 
 ```bash
 > dotnet publish /p:NativeLib=Static --use-current-runtime
