@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ServiceModel.Description;
 using System.Xml;
 
+#if NET462_OR_GREATER
 namespace Microsoft.Samples.GZipEncoder
 {
     public class GZipMessageEncodingBindingElementImporter : IPolicyImportExtension
@@ -42,4 +43,4 @@ namespace Microsoft.Samples.GZipEncoder
         }
     }
 }
-
+#endif
