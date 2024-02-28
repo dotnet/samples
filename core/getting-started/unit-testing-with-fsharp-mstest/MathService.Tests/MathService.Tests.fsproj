@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MSTest" Version="3.2.1" />
+    <PackageReference Include="MSTest" Version="3.2.2" />
   </ItemGroup>
 
   <ItemGroup>
