@@ -126,7 +126,7 @@
   -->
   <PropertyGroup>
     <PostBuildEvent>
-      "$(FrameworkSDKDir)bin\NETFX 4.0 Tools\gacutil.exe" /f /i "$(TargetDir)UDPActivation.dll"
+      "gacutil.exe" /f /i "$(TargetDir)UDPActivation.dll"
     </PostBuildEvent>
   </PropertyGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
