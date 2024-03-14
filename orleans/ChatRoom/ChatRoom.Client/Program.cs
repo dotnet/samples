@@ -85,7 +85,11 @@ static async Task ProcessLoopAsync(ClientContext context)
             continue;
         }
 
+        if (context.IsConnectedToChannel)
+        {
         await SendMessage(context, input);
+        }
+
     } while (input is not "/exit");
 }
 
