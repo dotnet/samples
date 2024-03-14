@@ -85,7 +85,10 @@ static async Task ProcessLoopAsync(ClientContext context)
             continue;
         }
 
-        await SendMessage(context, input);
+        if (context.IsConnectedToChannel)
+        {
+            await SendMessage(context, input);
+        }
     } while (input is not "/exit");
 }
 
@@ -150,11 +153,18 @@ static void PrintUsage()
 static async Task ShowChannelMembers(ClientContext context)
 {
     var room = context.Client.GetGrain<IChannelGrain>(context.CurrentChannel);
+
+    if (!context.IsConnectedToChannel)
+    {
+        AnsiConsole.MarkupLine("[bold red]You are not connected to any channel[/]");
+        return;
+    }
+
     var members = await room.GetMembers();
 
     AnsiConsole.Write(new Rule($"Members for '{context.CurrentChannel}'")
     {
-        Alignment = Justify.Center,
+        Justification = Justify.Center,
         Style = Style.Parse("darkgreen")
     });
 
@@ -165,7 +175,7 @@ static async Task ShowChannelMembers(ClientContext context)
 
     AnsiConsole.Write(new Rule()
     {
-        Alignment = Justify.Center,
+        Justification = Justify.Center,
         Style = Style.Parse("darkgreen")
     });
 }
@@ -173,11 +183,18 @@ static async Task ShowChannelMembers(ClientContext context)
 static async Task ShowCurrentChannelHistory(ClientContext context)
 {
     var room = context.Client.GetGrain<IChannelGrain>(context.CurrentChannel);
+
+    if (!context.IsConnectedToChannel)
+    {
+        AnsiConsole.MarkupLine("[bold red]You are not connected to any channel[/]");
+        return;
+    }
+
     var history = await room.ReadHistory(1_000);
 
     AnsiConsole.Write(new Rule($"History for '{context.CurrentChannel}'")
     {
-        Alignment = Justify.Center,
+        Justification = Justify.Center,
         Style = Style.Parse("darkgreen")
     });
 
@@ -189,7 +206,7 @@ static async Task ShowCurrentChannelHistory(ClientContext context)
 
     AnsiConsole.Write(new Rule()
     {
-        Alignment = Justify.Center,
+        Justification = Justify.Center,
         Style = Style.Parse("darkgreen")
     });
 }
@@ -237,6 +254,12 @@ static async Task<ClientContext> JoinChannel(
 
 static async Task<ClientContext> LeaveChannel(ClientContext context)
 {
+    if (!context.IsConnectedToChannel)
+    {
+        AnsiConsole.MarkupLine("[bold red]You are not connected to any channel[/]");
+        return context;
+    }
+
     AnsiConsole.MarkupLine(
         "[bold olive]Leaving channel [/]{0}",
         context.CurrentChannel!);
