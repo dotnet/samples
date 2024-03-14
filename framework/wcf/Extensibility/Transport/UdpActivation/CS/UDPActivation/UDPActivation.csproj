@@ -125,7 +125,7 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>
+    <PostBuildEvent Condition="'$(CI)' != 'true'">
       "gacutil.exe" /f /i "$(TargetDir)UDPActivation.dll"
     </PostBuildEvent>
   </PropertyGroup>
