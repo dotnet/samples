@@ -154,7 +154,7 @@ static async Task ShowChannelMembers(ClientContext context)
 
     AnsiConsole.Write(new Rule($"Members for '{context.CurrentChannel}'")
     {
-        Alignment = Justify.Center,
+        Justification = Justify.Center,
         Style = Style.Parse("darkgreen")
     });
 
@@ -165,7 +165,7 @@ static async Task ShowChannelMembers(ClientContext context)
 
     AnsiConsole.Write(new Rule()
     {
-        Alignment = Justify.Center,
+        Justification = Justify.Center,
         Style = Style.Parse("darkgreen")
     });
 }
@@ -177,7 +177,7 @@ static async Task ShowCurrentChannelHistory(ClientContext context)
 
     AnsiConsole.Write(new Rule($"History for '{context.CurrentChannel}'")
     {
-        Alignment = Justify.Center,
+        Justification = Justify.Center,
         Style = Style.Parse("darkgreen")
     });
 
@@ -189,7 +189,7 @@ static async Task ShowCurrentChannelHistory(ClientContext context)
 
     AnsiConsole.Write(new Rule()
     {
-        Alignment = Justify.Center,
+        Justification = Justify.Center,
         Style = Style.Parse("darkgreen")
     });
 }
