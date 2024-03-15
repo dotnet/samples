@@ -43,7 +43,7 @@ There is also an `IChirperViewer` observer interface for applications to subscri
 
 ## Sample prerequisites
 
-This sample is written in C# and targets .NET 7.0. It requires the [.NET 7.0 SDK](https://dotnet.microsoft.com/download/dotnet/7.0) or later.
+This sample is written in C# and targets .NET 8.0. It requires the [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) or later.
 
 ## Building the sample
 
