@@ -1,21 +1,16 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT License.
 
-using Orleans.Runtime;
-
 namespace Orleans.ShoppingCart.Grains;
 
 [Reentrant]
-public sealed class InventoryGrain : Grain, IInventoryGrain
-{
-    private readonly IPersistentState<HashSet<string>> _productIds;
-    private readonly Dictionary<string, ProductDetails> _productCache = new();
-
-    public InventoryGrain(
-        [PersistentState(
+public sealed class InventoryGrain(
+    [PersistentState(
             stateName: "Inventory",
             storageName: "shopping-cart")]
-        IPersistentState<HashSet<string>> state) => _productIds = state;
+        IPersistentState<HashSet<string>> state) : Grain, IInventoryGrain
+{
+    private readonly Dictionary<string, ProductDetails> _productCache = [];
 
     public override Task OnActivateAsync(CancellationToken _) => PopulateProductCacheAsync();
 
@@ -24,29 +19,29 @@ public sealed class InventoryGrain : Grain, IInventoryGrain
 
     async Task IInventoryGrain.AddOrUpdateProductAsync(ProductDetails product)
     {
-        _productIds.State.Add(product.Id);
+        state.State.Add(product.Id);
         _productCache[product.Id] = product;
 
-        await _productIds.WriteStateAsync();
+        await state.WriteStateAsync();
     }
 
     public async Task RemoveProductAsync(string productId)
     {
-        _productIds.State.Remove(productId);
+        state.State.Remove(productId);
         _productCache.Remove(productId);
 
-        await _productIds.WriteStateAsync();
+        await state.WriteStateAsync();
     }
 
     private async Task PopulateProductCacheAsync()
     {
-        if (_productIds is not { State.Count: > 0 })
+        if (state is not { State.Count: > 0 })
         {
             return;
         }
 
         await Parallel.ForEachAsync(
-            _productIds.State,
+            state.State,
             async (id, _) =>
             {
                 var productGrain = GrainFactory.GetGrain<IProductGrain>(id);
