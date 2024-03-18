@@ -72,8 +72,8 @@ Before deploying to Azure, make sure you complete the following steps:
 
 ### Build docker image locally
 
-1. Install Docker Desktop
-2. Run to build the docker image `docker build -t orleans-shopping-cart -f Silo/Dockerfile .`
+1. Install Docker Desktop from [Docker Hub](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
+2. Run `docker build -t orleans-shopping-cart -f Silo/Dockerfile .` to build the docker image locally
 
 ### Acknowledgements
 
