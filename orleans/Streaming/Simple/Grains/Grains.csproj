@@ -9,10 +9,4 @@
     <ProjectReference Include="..\GrainInterfaces\GrainInterfaces.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Update="Microsoft.Orleans.Sdk">
-      <TreatAsUsed>true</TreatAsUsed>
-    </PackageReference>
-  </ItemGroup>
-
 </Project>

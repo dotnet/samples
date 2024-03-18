@@ -6,9 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Orleans.Server" Version="8.0.0">
-      <TreatAsUsed>true</TreatAsUsed>
-    </PackageReference>
+    <PackageReference Include="Microsoft.Orleans.Server" Version="8.0.0" />
     <PackageReference Include="Microsoft.Orleans.Persistence.AzureStorage" Version="8.0.0" />
     <PackageReference Include="Microsoft.Orleans.Streaming " Version="8.0.0" />
     <PackageReference Include="Microsoft.Orleans.Streaming.EventHubs " Version="8.0.0" />
@@ -16,9 +14,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Common\Common.csproj" />
-    <ProjectReference Include="..\GrainInterfaces\GrainInterfaces.csproj">
-      <TreatAsUsed>true</TreatAsUsed>
-    </ProjectReference>
     <ProjectReference Include="..\Grains\Grains.csproj">
       <TreatAsUsed>true</TreatAsUsed>
     </ProjectReference>
