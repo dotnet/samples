@@ -1,19 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Orleans.Core.Abstractions" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Orleans.Sdk " Version="7.0.0" />
-    <PackageReference Include="Microsoft.Orleans.Streaming " Version="7.0.0" />
+    <PackageReference Include="Microsoft.Orleans.Streaming" />
+    <PackageReference Update="Microsoft.Orleans.Sdk" Version="8.0.0" />
+    <PackageReference Update="Microsoft.Orleans.Streaming" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Common\Common.csproj" />
     <ProjectReference Include="..\GrainInterfaces\GrainInterfaces.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Update="Microsoft.Orleans.Sdk" Version="8.0.0" />
-    <PackageReference Update="Microsoft.Orleans.Streaming" Version="8.0.0" />
   </ItemGroup>
 
 </Project>

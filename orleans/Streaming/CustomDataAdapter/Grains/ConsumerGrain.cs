@@ -1,12 +1,13 @@
-using Common;
+﻿using Common;
 using GrainInterfaces;
 using Microsoft.Extensions.Logging;
+using Orleans;
 using Orleans.Streams;
 using Orleans.Streams.Core;
 
 namespace Grains;
 
-// ImplicitStreamSubscription attribute here is to subscribe implicitely to all stream within
+// ImplicitStreamSubscription attribute here is to subscribe implicitly to all stream within
 // a given namespace: whenever some data is pushed to the streams of namespace Constants.StreamNamespace,
 // a grain of type ConsumerGrain with the same guid of the stream will receive the message.
 // Even if no activations of the grain currently exist, the runtime will automatically

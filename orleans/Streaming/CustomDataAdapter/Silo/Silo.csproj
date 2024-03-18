@@ -8,7 +8,8 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
     <PackageReference Include="Microsoft.Orleans.Server" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Orleans.Streaming.EventHubs " Version="7.0.0" />
+    <PackageReference Include="Microsoft.Orleans.Streaming.EventHubs" />
+    <PackageReference Update="Microsoft.Orleans.Streaming.EventHubs" Version="8.0.0" />
     <PackageReference Include="Microsoft.Orleans.Persistence.AzureStorage" Version="8.0.0" />
   </ItemGroup>
 
@@ -16,10 +17,6 @@
     <ProjectReference Include="..\..\Common\Common.csproj" />
     <ProjectReference Include="..\GrainInterfaces\GrainInterfaces.csproj" />
     <ProjectReference Include="..\Grains\Grains.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Update="Microsoft.Orleans.Streaming.EventHubs" Version="8.0.0" />
   </ItemGroup>
 
 </Project>
