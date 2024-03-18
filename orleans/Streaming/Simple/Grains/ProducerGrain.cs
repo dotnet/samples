@@ -1,4 +1,4 @@
-using Common;
+﻿using Common;
 using GrainInterfaces;
 using Microsoft.Extensions.Logging;
 using Orleans.Runtime;
@@ -32,7 +32,7 @@ public class ProducerGrain : Grain, IProducerGrain
 
         // Register a timer that produce an event every second
         var period = TimeSpan.FromSeconds(1);
-        _timer = RegisterTimer(TimerTick, null, period, period);
+        _timer = RegisterTimer(TimerTick, null!, period, period);
 
         _logger.LogInformation("I will produce a new event every {Period}", period);
 

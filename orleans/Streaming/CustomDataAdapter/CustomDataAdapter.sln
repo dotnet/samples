@@ -1,17 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29905.134
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34707.107
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Silo", "Silo\Silo.csproj", "{3B374D11-D14D-4F9A-AF5F-8E941E52A544}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "..\Common\Common.csproj", "{5C1B9E40-298A-4A8A-9077-2FF87B1C2F69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrainInterfaces", "GrainInterfaces\GrainInterfaces.csproj", "{75E26AC8-58C2-41DC-AF31-0098FD2238DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrainInterfaces", "GrainInterfaces\GrainInterfaces.csproj", "{75E26AC8-58C2-41DC-AF31-0098FD2238DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grains", "Grains\Grains.csproj", "{522F5332-93B0-42EE-901D-F88EA748D99B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grains", "Grains\Grains.csproj", "{522F5332-93B0-42EE-901D-F88EA748D99B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NonOrleansClient", "NonOrleansClient\NonOrleansClient.csproj", "{B0661EEE-5788-4E41-A5C3-6A4796B5D1EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NonOrleansClient", "NonOrleansClient\NonOrleansClient.csproj", "{B0661EEE-5788-4E41-A5C3-6A4796B5D1EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C5BA2FA4-2192-494F-80FA-25ED80465295}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
