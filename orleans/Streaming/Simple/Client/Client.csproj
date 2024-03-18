@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -8,18 +8,13 @@
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
     <PackageReference Include="Microsoft.Orleans.Client" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Orleans.Streaming " Version="7.0.0" />
-    <PackageReference Include="Microsoft.Orleans.Streaming.EventHubs " Version="7.0.0" />
+    <PackageReference Include="Microsoft.Orleans.Streaming" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Orleans.Streaming.EventHubs" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Common\Common.csproj" />
     <ProjectReference Include="..\GrainInterfaces\GrainInterfaces.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Update="Microsoft.Orleans.Streaming" Version="8.0.0" />
-    <PackageReference Update="Microsoft.Orleans.Streaming.EventHubs" Version="8.0.0" />
   </ItemGroup>
 
 </Project>
