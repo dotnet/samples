@@ -12,6 +12,7 @@ WORKDIR /src
 COPY ["Silo/Orleans.ShoppingCart.Silo.csproj", "Silo/"]
 COPY ["Abstractions/Orleans.ShoppingCart.Abstractions.csproj", "Abstractions/"]
 COPY ["Grains/Orleans.ShoppingCart.Grains.csproj", "Grains/"]
+COPY ["Directory.Build.props", "Directory.Build.props"]
 RUN dotnet restore "Silo/Orleans.ShoppingCart.Silo.csproj"
 COPY . .
 WORKDIR "/src/Silo"

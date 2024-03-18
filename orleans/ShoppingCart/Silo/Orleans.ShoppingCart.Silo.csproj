@@ -1,12 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-	<IsTransformWebConfigDisabled>false</IsTransformWebConfigDisabled>
-	<UserSecretsId>98f9767c-ea86-409e-bde7-f6d352a55cce</UserSecretsId>
-	<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <IsTransformWebConfigDisabled>false</IsTransformWebConfigDisabled>
+    <UserSecretsId>98f9767c-ea86-409e-bde7-f6d352a55cce</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,8 +25,8 @@
   </ItemGroup>
 
   <Target Name="ZipPublishOutput" AfterTargets="Publish">
-	<Delete Files="$(ProjectDir)\..\silo.zip" />
-	<ZipDirectory SourceDirectory="$(PublishDir)" DestinationFile="$(ProjectDir)\..\silo.zip" />
+    <Delete Files="$(ProjectDir)\..\silo.zip" />
+    <ZipDirectory SourceDirectory="$(PublishDir)" DestinationFile="$(ProjectDir)\..\silo.zip" />
   </Target>
-	
+
 </Project>
