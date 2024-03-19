@@ -62,12 +62,12 @@
   <PropertyGroup>
     <PostBuildEvent>
       if not exist %SystemDrive%\inetpub\wwwroot\servicemodelsamples\bin mkdir %SystemDrive%\inetpub\wwwroot\servicemodelsamples\bin
-      copy /y $(MSBuildProjectDirectory)\hello.aspx %SystemDrive%\inetpub\wwwroot\servicemodelsamples\.
-      copy /y $(MSBuildProjectDirectory)\Service.svc %SystemDrive%\inetpub\wwwroot\servicemodelsamples\.
-      copy /y $(MSBuildProjectDirectory)\Web.config %SystemDrive%\inetpub\wwwroot\servicemodelsamples\.
+      copy /y "$(MSBuildProjectDirectory)\hello.aspx" %SystemDrive%\inetpub\wwwroot\servicemodelsamples\
+      copy /y "$(MSBuildProjectDirectory)\Service.svc" %SystemDrive%\inetpub\wwwroot\servicemodelsamples\
+      copy /y "$(MSBuildProjectDirectory)\Web.config" %SystemDrive%\inetpub\wwwroot\servicemodelsamples\
       copy "$(TargetDir)Service.dll" %SystemDrive%\inetpub\wwwroot\servicemodelsamples\bin
       copy "$(TargetDir)Service.pdb" %SystemDrive%\inetpub\wwwroot\servicemodelsamples\bin
-      call $(MSBuildProjectDirectory)\SetupApp.bat
+      call "$(MSBuildProjectDirectory)\SetupApp.bat"
     </PostBuildEvent>
   </PropertyGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
