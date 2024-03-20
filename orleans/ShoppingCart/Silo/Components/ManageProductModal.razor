@@ -63,7 +63,11 @@
 
     public void Close() => MudDialog?.Cancel();
 
-    private void Bogus() => Product = Product.GetBogusFaker().Generate();
+    private void Bogus()
+    {
+        Product = Product.GetBogusFaker().Generate();
+        StateHasChanged();
+    }
 
     private Task Save()
     {
