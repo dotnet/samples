@@ -24,11 +24,11 @@ A canonical shopping cart sample application, built using Microsoft Orleans. Thi
 
 ## Features
 
-- [.NET 7](https://docs.microsoft.com/dotnet/core/whats-new/dotnet-7)
+- [.NET 8](https://docs.microsoft.com/dotnet/core/whats-new/dotnet-8)
 - [ASP.NET Core Blazor](https://docs.microsoft.com/aspnet/core/blazor/?view=aspnetcore-7.0)
 - [Orleans: Grain persistence](https://docs.microsoft.com/dotnet/orleans/grains/grain-persistence)
-  - [Azure Storage grain persistence](https://docs.microsoft.com/dotnet/orleans/grains/grain-persistence/azure-storage)
-- [Orleans: Cluster management](https://docs.microsoft.com/dotnet/orleans/implementation/cluster-management)
+- [Azure Storage grain persistence](https://docs.microsoft.com/dotnet/orleans/grains/grain-persistence/azure-storage)
+  - [Orleans: Cluster management](https://docs.microsoft.com/dotnet/orleans/implementation/cluster-management)
 - [Orleans: Code generation](https://docs.microsoft.com/dotnet/orleans/grains/code-generation)
 - [Orleans: Startup tasks](https://docs.microsoft.com/dotnet/orleans/host/configuration-guide/startup-tasks)
 - [Azure Bicep](https://docs.microsoft.com/azure/azure-resource-manager/bicep)
@@ -44,7 +44,7 @@ The app is architected as follows:
 ### Prerequisites
 
 - A [GitHub account](https://github.com/join)
-- The [.NET 7 SDK or later](https://dotnet.microsoft.com/download/dotnet)
+- The [.NET 8 SDK or later](https://dotnet.microsoft.com/download/dotnet)
 - The [Azure CLI](/cli/azure/install-azure-cli)
 - A .NET integrated development environment (IDE)
   - Feel free to use the [Visual Studio IDE](https://visualstudio.microsoft.com) or the [Visual Studio Code](https://code.visualstudio.com)
@@ -69,6 +69,11 @@ Before deploying to Azure, make sure you complete the following steps:
     1. Create a secret in the Container App for the Azure Cosmos DB for NoSQL account's connection string.
     1. Create an environment variable in the Container App's container named `ORLEANS_AZURE_COSMOS_DB_CONNECTION_STRING`. Reference the secret you just created.
 1. Deploy the application to the Azure Container App service. For more information, see [Azure Container Apps deployment options](https://learn.microsoft.com/azure/container-apps/code-to-cloud-options).
+
+### Build docker image locally
+
+1. Install Docker Desktop from [Docker Hub](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
+2. Run `docker build -t orleans-shopping-cart -f Silo/Dockerfile .` to build the docker image locally
 
 ### Acknowledgements
 
