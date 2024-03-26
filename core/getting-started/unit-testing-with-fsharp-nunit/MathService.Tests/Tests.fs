@@ -6,6 +6,13 @@ open NUnit.Framework
 open MathService
 
 [<Test>]
+let ``My test`` () =
+    Assert.That(true, Is.True)
+
+//[<Test>]
+//let ``Fail every time`` () = Assert.That(false, Is.True)
+
+[<Test>]
 let ``Sequence of Evens returns empty collection`` () =
     let expected = Seq.empty<int>
     let actual = MyMath.squaresOfOdds [2; 4; 6; 8; 10]
