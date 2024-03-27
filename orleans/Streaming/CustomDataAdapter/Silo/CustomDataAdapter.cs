@@ -1,4 +1,4 @@
-using System.Text.Json;
+﻿using System.Text.Json;
 using Azure.Messaging.EventHubs;
 using Orleans.Runtime;
 using Orleans.Serialization;
@@ -20,7 +20,7 @@ public class CustomDataAdapter : EventHubDataAdapter
     public override StreamId GetStreamIdentity(EventData queueMessage)
     {
         var guid = Guid.Parse(queueMessage.PartitionKey);
-        var ns = (string) queueMessage.Properties["StreamNamespace"];
+        var ns = (string)queueMessage.Properties["StreamNamespace"];
         return StreamId.Create(ns, guid);
     }
 
