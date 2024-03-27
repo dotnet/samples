@@ -20,7 +20,7 @@ namespace Prime.UnitTests.Services
         {
             var result = _primeService.IsPrime(1);
 
-            Assert.IsFalse(result, "1 should not be prime");
+            Assert.That(result, Is.False, "1 should not be prime");
         }
         #endregion
         #region Sample_TestCode
@@ -31,7 +31,7 @@ namespace Prime.UnitTests.Services
         {
             var result = _primeService.IsPrime(value);
 
-            Assert.IsFalse(result, $"{value} should not be prime");
+            Assert.That(result, Is.False, $"{value} should not be prime");
         }
         #endregion
     }
