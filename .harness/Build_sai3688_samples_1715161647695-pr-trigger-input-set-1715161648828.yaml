@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_sai3688_samples_1715161647695-pr-trigger-input-set
+  identifier: Build_sai3688_samples_1715161647695prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_sai3688_samples_1715161647695
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
