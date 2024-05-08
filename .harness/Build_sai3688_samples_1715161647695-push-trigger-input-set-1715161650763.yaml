@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_sai3688_samples_1715161647695-push-trigger-input-set
+  identifier: Build_sai3688_samples_1715161647695pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_sai3688_samples_1715161647695
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
