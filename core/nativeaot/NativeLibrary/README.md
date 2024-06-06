@@ -65,6 +65,8 @@ The last thing to do is to actually call the method we have imported.
 int result =  MyImport(5,3);
 ```
 
+Note that the .NET Runtime does not support unloading. Once a handle to the shared library is created, the library cannot be closed with `dlclose/FreeLibrary`.
+
 ## Exporting methods
 
 For a C# method in the native library to be consumable by external programs, it has to be explicitly exported using the `[UnmanagedCallersOnly]` attribute.
