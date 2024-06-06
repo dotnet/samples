@@ -68,8 +68,7 @@ int callSumFunc(char *path, char *funcName, int firstInt, int secondInt)
 
     int result = MyImport(firstInt, secondInt);
 
-    // CoreRT libraries do not support unloading
-    // See https://github.com/dotnet/corert/issues/7887
+    // NOTE: Native AOT libraries do not support unloading
     return result;
 }
 
