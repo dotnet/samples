@@ -309,6 +309,8 @@ namespace
             return false;
 
         // Load hostfxr and get desired exports
+        // NOTE: The .NET Runtime does not support unloading any of its native libraries. Running
+        // dlclose/FreeLibrary on any .NET libraries produces undefined behavior.
         void *lib = load_library(buffer);
         init_for_cmd_line_fptr = (hostfxr_initialize_for_dotnet_command_line_fn)get_export(lib, "hostfxr_initialize_for_dotnet_command_line");
         init_for_config_fptr = (hostfxr_initialize_for_runtime_config_fn)get_export(lib, "hostfxr_initialize_for_runtime_config");
