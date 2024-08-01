@@ -26,7 +26,7 @@ The first thing you'll have to do in order to have a proper "loader" that loads 
 ```c
 #ifdef _WIN32
 #include "windows.h"
-#define symLoad GetProcAddress GetProcAddress
+#define symLoad GetProcAddress
 #else
 #include "dlfcn.h"
 #define symLoad dlsym
