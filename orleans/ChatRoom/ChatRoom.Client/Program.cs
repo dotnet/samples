@@ -238,8 +238,7 @@ static async Task<ClientContext> JoinChannel(
     await AnsiConsole.Status().StartAsync("Joining channel...", async ctx =>
     {
         var room = context.Client.GetGrain<IChannelGrain>(context.CurrentChannel);
-        await room.Join(context.UserName!);
-        var streamId = StreamId.Create("ChatRoom", context.CurrentChannel!);
+        var streamId = await room.Join(context.UserName!);
         var stream =
             context.Client
                 .GetStreamProvider("chat")
@@ -267,8 +266,7 @@ static async Task<ClientContext> LeaveChannel(ClientContext context)
     await AnsiConsole.Status().StartAsync("Leaving channel...", async ctx =>
     {
         var room = context.Client.GetGrain<IChannelGrain>(context.CurrentChannel);
-        await room.Leave(context.UserName!);
-        var streamId = StreamId.Create("ChatRoom", context.CurrentChannel!);
+        var streamId = await room.Leave(context.UserName!);
         var stream =
             context.Client
                 .GetStreamProvider("chat")
