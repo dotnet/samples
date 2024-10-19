@@ -3,7 +3,6 @@
 
 using System;
 using System.IO;
-using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
 using System.ServiceModel.Description;
@@ -12,7 +11,7 @@ using System.ServiceModel.Dispatcher;
 namespace Microsoft.ServiceModel.Samples
 {
     // Define a service contract
-    [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
+    [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]
     public interface IErrorCalculator
     {
         [OperationContract]
@@ -36,20 +35,11 @@ namespace Microsoft.ServiceModel.Samples
     [ErrorBehavior(typeof(CalculatorErrorHandler))]
     public class CalculatorService : IErrorCalculator
     {
-        public int Add(int n1, int n2)
-        {
-            return n1 + n2;
-        }
+        public int Add(int n1, int n2) => n1 + n2;
 
-        public int Subtract(int n1, int n2)
-        {
-            return n1 - n2;
-        }
+        public int Subtract(int n1, int n2) => n1 - n2;
 
-        public int Multiply(int n1, int n2)
-        {
-            return n1 * n2;
-        }
+        public int Multiply(int n1, int n2) => n1 * n2;
 
         public int Divide(int n1, int n2)
         {
@@ -106,17 +96,9 @@ namespace Microsoft.ServiceModel.Samples
     // This attribute can be used to install a custom error handler for a service
     public sealed class ErrorBehaviorAttribute : Attribute, IServiceBehavior
     {
-        Type errorHandlerType;
+        public ErrorBehaviorAttribute(Type errorHandlerType) => ErrorHandlerType = errorHandlerType;
 
-        public ErrorBehaviorAttribute(Type errorHandlerType)
-        {
-            this.errorHandlerType = errorHandlerType;
-        }
- 
-        public Type ErrorHandlerType
-        {
-            get { return this.errorHandlerType; }
-        }
+        public Type ErrorHandlerType { get; }
 
         void IServiceBehavior.Validate(ServiceDescription description, ServiceHostBase serviceHostBase)
         {
@@ -132,7 +114,7 @@ namespace Microsoft.ServiceModel.Samples
 
             try
             {
-                errorHandler = (IErrorHandler)Activator.CreateInstance(errorHandlerType);
+                errorHandler = (IErrorHandler)Activator.CreateInstance(ErrorHandlerType);
             }
             catch (MissingMethodException e)
             {
@@ -147,7 +129,7 @@ namespace Microsoft.ServiceModel.Samples
             {
                 ChannelDispatcher channelDispatcher = channelDispatcherBase as ChannelDispatcher;
                 channelDispatcher.ErrorHandlers.Add(errorHandler);
-            }                                                
+            }
         }
     }
 }
