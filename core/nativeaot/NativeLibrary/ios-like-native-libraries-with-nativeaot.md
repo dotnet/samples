@@ -23,7 +23,7 @@ This section describes steps to create a simple .NET Class Library project with 
     ```cs
     using System.Runtime.InteropServices;
     namespace NaotLib;
-    
+
     public class Class1
     {
         [UnmanagedCallersOnly(EntryPoint = "aotsample_add")]
@@ -90,7 +90,7 @@ This section describes all required steps to achieve this and a simple scenario 
     - `LC_RPATH` load command
 
         ```bash
-        install_name_tool -rpath @executable_path @executable_path/Frameworks MyNativeAOTLibrary/bin/Release/net9.0/ios-arm64/publish/MyNativeAOTLibrary.dylib 
+        install_name_tool -rpath @executable_path @executable_path/Frameworks MyNativeAOTLibrary/bin/Release/net9.0/ios-arm64/publish/MyNativeAOTLibrary.dylib
         ```
 
     - `LC_ID_DYLIB` load command
