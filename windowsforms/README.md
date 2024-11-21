@@ -17,21 +17,23 @@
 
 ## Porting apps from .NET Framework
 
-If you want to first understand your existing application's readiness for migrating from .NET Framework to .NET, use the [.NET Upgrade Assistant](https://learn.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-how-to-analyze). This tool analyzes projects and generates a report that you can browse to get more information about the upgrade.
+If you want to first understand your existing application's readiness for migrating from .NET Framework to .NET, use the [.NET Upgrade Assistant](https://learn.microsoft.com/dotnet/core/porting/upgrade-assistant-how-to-analyze). This tool analyzes projects and generates a report that you can browse to get more information about the upgrade.
 
-To learn how to migrate a Windows Forms app, see [Upgrade a .NET Framework Windows Forms desktop app to .NET](https://learn.microsoft.com/en-us/dotnet/desktop/winforms/migration/).
+To learn how to migrate a Windows Forms app, see [Upgrade a .NET Framework Windows Forms desktop app to .NET](https://learn.microsoft.com/dotnet/desktop/winforms/migration/).
 
 ## Create Windows Forms app in the command line
 
-To create a new application you can use the `dotnet new` command, using the new templates for Windows Forms.
-
-In your favorite console run:
+To create a new application you can use the `dotnet new` command, using the new templates for Windows Forms. Open a terminal use use the following commands:
 
 ```cmd
 dotnet new winforms -o MyWinFormsApp
 cd MyWinFormsApp
 dotnet run
 ```
+
+## Create a Windows Forms app in Visual Studio
+
+To create a new app in Visual Studio, see [Tutorial: Create a Windows Forms app with .NET](https://learn.microsoft.com/dotnet/desktop/winforms/get-started/create-app-visual-studio?view=netdesktop-9.0).
 
 ## Filing issues and getting help
 
