@@ -17,7 +17,7 @@
 
 ## Porting apps from .NET Framework
 
-If you want to first understand your existing applications readiness for migrating from .NET Framework to .NET, use the [.NET Upgrade Assistant](https://learn.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-how-to-analyze). This tool analyzes projects and generates a report that you can browse to get more information about the upgrade.
+If you want to first understand your existing application's readiness for migrating from .NET Framework to .NET, use the [.NET Upgrade Assistant](https://learn.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-how-to-analyze). This tool analyzes projects and generates a report that you can browse to get more information about the upgrade.
 
 To learn how to migrate a Windows Forms app, see [Upgrade a .NET Framework Windows Forms desktop app to .NET](https://learn.microsoft.com/en-us/dotnet/desktop/winforms/migration/).
 
