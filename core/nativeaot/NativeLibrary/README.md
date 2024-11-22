@@ -26,7 +26,7 @@ The first thing you'll have to do in order to have a proper "loader" that loads 
 ```c
 #ifdef _WIN32
 #include "windows.h"
-#define symLoad GetProcAddress GetProcAddress
+#define symLoad GetProcAddress
 #else
 #include "dlfcn.h"
 #define symLoad dlsym
@@ -64,6 +64,8 @@ The last thing to do is to actually call the method we have imported.
 ```c
 int result =  MyImport(5,3);
 ```
+
+Note that the .NET Runtime does not support unloading. Once a handle to the shared library is created, the library cannot be closed with `dlclose/FreeLibrary`.
 
 ## Exporting methods
 

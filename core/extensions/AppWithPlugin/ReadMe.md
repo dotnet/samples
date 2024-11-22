@@ -21,7 +21,7 @@ By using `AssemblyDependencyResolver` along with a custom `AssemblyLoadContext`,
 
 ## Build and Run
 
-1. Install .NET 7.0 or newer. The sample targets .NET 7.0, but support for all the features it uses was added in .NET Core 3.0.
+1. Install .NET 8.0 or newer. The sample targets .NET 8.0, but support for all the features it uses was added in .NET Core 3.0.
 2. Use the .NET SDK to build the project via `dotnet build`.
    - The AppWithPlugin project does not contain any references to the plugin projects, so you need to build the solution.
 3. Go to the AppWithPlugin directory and use `dotnet run` to run the app.

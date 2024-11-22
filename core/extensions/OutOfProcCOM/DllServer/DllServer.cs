@@ -4,6 +4,11 @@ using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices;
 
+// The Assembly GUID and TLB version must match what
+// is defined in Contract.idl when defining the library.
+[assembly: Guid("46F3FEB2-121D-4830-AA22-0CDA9EA90DC3")]
+[assembly: TypeLibVersion(1, 0)]
+
 namespace OutOfProcCOM
 {
     [ComVisible(true)]

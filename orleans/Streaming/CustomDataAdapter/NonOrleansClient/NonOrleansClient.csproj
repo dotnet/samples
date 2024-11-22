@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Azure.Messaging.EventHubs" Version="5.7.4" />
-    <PackageReference Include="System.Text.Json" Version="7.0.0" />
+    <PackageReference Include="System.Text.Json" Version="8.0.4" />
   </ItemGroup>
 
   <ItemGroup>

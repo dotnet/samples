@@ -1,10 +1,14 @@
-using Microsoft.OpenApi.Models;
+﻿using Microsoft.OpenApi.Models;
 using Sample.Silo.Api;
 using Orleans.Providers;
+
+bool isDevelopment = false;
 
 await Host.CreateDefaultBuilder(args)
     .UseOrleans((ctx, builder) =>
     {
+        isDevelopment = ctx.HostingEnvironment.IsDevelopment();
+
         builder.UseLocalhostClustering();
         builder.AddMemoryGrainStorageAsDefault();
         builder.AddMemoryStreams<DefaultMemoryMessageBodySerializer>("MemoryStreams");
@@ -40,11 +44,15 @@ await Host.CreateDefaultBuilder(args)
             .Configure(app =>
             {
                 app.UseCors("ApiService");
-                app.UseSwagger();
-                app.UseSwaggerUI(options =>
+
+                if (isDevelopment)
                 {
-                    options.SwaggerEndpoint("/swagger/v1/swagger.json", nameof(Sample));
-                });
+                    app.UseSwagger();
+                    app.UseSwaggerUI(options =>
+                    {
+                        options.SwaggerEndpoint("/swagger/v1/swagger.json", nameof(Sample));
+                    });
+                }
 
                 app.UseRouting();
                 app.UseEndpoints(endpoints =>
