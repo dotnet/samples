@@ -61,7 +61,6 @@ public class MonsterGrain : Grain, IMonsterGrain
         }
     }
 
-
     Task<string> IMonsterGrain.Kill(IRoomGrain room)
     {
         if (_roomGrain is not null)
