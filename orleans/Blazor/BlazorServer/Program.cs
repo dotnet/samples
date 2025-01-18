@@ -1,40 +1,40 @@
+﻿using BlazorServer.Components;
 using BlazorServer.Services;
 using Orleans.Providers;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Host.UseOrleans((ctx, siloBuilder) => {
+// Add services to the container.
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
 
+builder.Host.UseOrleans((ctx, siloBuilder) =>
+{
     siloBuilder.UseLocalhostClustering();
     siloBuilder.AddMemoryGrainStorageAsDefault();
     siloBuilder.AddMemoryStreams<DefaultMemoryMessageBodySerializer>("MemoryStreams");
     siloBuilder.AddMemoryGrainStorage("PubSubStore");
 });
-
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddSingleton<TodoService>();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
 {
-    app.UseDeveloperExceptionPage();
-}
-else
-{
-    app.UseExceptionHandler("/Error");
+    app.UseExceptionHandler("/Error", createScopeForErrors: true);
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
 app.UseHttpsRedirection();
-app.UseStaticFiles();
 
-app.UseRouting();
 
-app.MapBlazorHub();
-app.MapFallbackToPage("/_Host");
+app.UseAntiforgery();
 
-app.Run();
+app.MapStaticAssets();
+app.MapRazorComponents<App>()
+    .AddInteractiveServerRenderMode();
+
+await app.RunAsync();

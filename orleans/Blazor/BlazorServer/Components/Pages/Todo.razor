@@ -3,27 +3,36 @@
 @implements IAsyncDisposable
 
 <h1>Todo (@todos.Count(todo => !todo.IsDone))</h1>
-
-@foreach (var todo in todos)
+@foreach (var todo in todos.OrderBy(x => x.Timestamp))
 {
     <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <div class="input-group-text">
-                <input type="checkbox" checked="@todo.IsDone"
-                    @onchange="@(async e => await HandleTodoDoneAsync(todo, (bool)e.Value!))" />
-            </div>
-            <button class="btn btn-outline-secondary" type="button"
-                @onclick="@(async e => await HandleDeleteTodoAsync(todo))">
-                <span class="oi oi-trash" aria-hidden="true"></span>
-            </button>
+        <div class="input-group-text">
+            <input class="form-check-input mt-0"
+                   type="checkbox"
+                   checked="@todo.IsDone"
+                   @onchange="@(() => HandleTodoDoneAsync(todo, !todo.IsDone))"
+                   aria-label="Toggle task status">
         </div>
-        <input class="form-control" value="@todo.Title"
-            @onchange="@(async e => await HandleTodoTitleChangeAsync(todo, (string)e.Value!))" />
+        <button class="btn btn-outline-danger" type="button" @onclick="@(() => HandleDeleteTodoAsync(todo))">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
+                <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
+            </svg>
+        </button>
+        <InputText class="form-control"
+                   aria-label="Task"
+                   Value="@todo.Title"
+                   ValueChanged="@(title => HandleTodoTitleChangeAsync(todo, title))"
+                   ValueExpression="() => todo.Title" />
     </div>
 }
 
-<input placeholder="Something todo" @bind="@newTodo" />
-<button @onclick="AddTodoAsync">Add Todo</button>
+<form @onsubmit="@AddTodoAsync">
+    <div class="input-group mb-3">
+        <input type="text" @bind="@newTodo" class="form-control" placeholder="Something todo" aria-label="Something todo" aria-describedby="button-add">
+        <button class="btn btn-outline-secondary" type="submit" id="button-add">Add Todo</button>
+    </div>
+</form>
 
 @code {
 
@@ -73,9 +82,9 @@
         if (!string.IsNullOrWhiteSpace(newTodo))
         {
             // create a new todo
-            var todo = new TodoItem(Guid.NewGuid(), newTodo, false, ownerKey);
+            var todo = new TodoItem(Guid.NewGuid(), newTodo, false, ownerKey, DateTime.UtcNow);
 
-            // add it to the cluste
+            // add it to the cluster
             await TodoService.SetAsync(todo);
 
             // the above this will generate a stream notification that may or may not have come through while we were awaiting the call
