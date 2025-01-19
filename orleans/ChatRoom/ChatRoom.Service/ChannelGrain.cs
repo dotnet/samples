@@ -1,24 +1,23 @@
-using Orleans.Runtime;
-using Orleans.Streams;
+﻿using Orleans.Streams;
 
 namespace ChatRoom;
 
-public class ChannelGrain : Grain, IChannelGrain
+public sealed class ChannelGrain : Grain, IChannelGrain
 {
-    private readonly List<ChatMsg> _messages = new(100);
-    private readonly List<string> _onlineMembers = new(10);
+    private readonly List<ChatMsg> _messages = [];
+    private readonly List<string> _onlineMembers = [];
 
-    private IAsyncStream<ChatMsg> _stream = null!;
+    // Initialized in OnActivateAsync that runs before
+    // other methods that uses _stream field can be invoked.
+    private IAsyncStream<ChatMsg> _stream = default!;
 
     public override Task OnActivateAsync(CancellationToken cancellationToken)
     {
         var streamProvider = this.GetStreamProvider("chat");
 
-        var streamId = StreamId.Create(
-            "ChatRoom", this.GetPrimaryKeyString());
+        var streamId = StreamId.Create("ChatRoom", this.GetPrimaryKeyString());
 
-        _stream = streamProvider.GetStream<ChatMsg>(
-            streamId);
+        _stream = streamProvider.GetStream<ChatMsg>(streamId);
 
         return base.OnActivateAsync(cancellationToken);
     }
@@ -29,8 +28,8 @@ public class ChannelGrain : Grain, IChannelGrain
 
         await _stream.OnNextAsync(
             new ChatMsg(
-                "System",
-                $"{nickname} joins the chat '{this.GetPrimaryKeyString()}' ..."));
+                Author: "System",
+                Text: $"{nickname} joins the chat '{this.GetPrimaryKeyString()}' ..."));
 
         return _stream.StreamId;
     }
@@ -41,8 +40,8 @@ public class ChannelGrain : Grain, IChannelGrain
 
         await _stream.OnNextAsync(
             new ChatMsg(
-                "System",
-                $"{nickname} leaves the chat..."));
+                Author: "System",
+                Text: $"{nickname} leaves the chat..."));
 
         return _stream.StreamId;
     }
@@ -50,6 +49,8 @@ public class ChannelGrain : Grain, IChannelGrain
     public async Task<bool> Message(ChatMsg msg)
     {
         _messages.Add(msg);
+        if (_messages.Count > 100)
+            _messages.RemoveAt(0);
 
         await _stream.OnNextAsync(msg);
 
