@@ -1,26 +1,16 @@
 ﻿using BlazorServer.Models;
-using Orleans.Runtime;
-using Orleans.Streams;
 
 namespace BlazorServer;
 
-public class TodoGrain : Grain, ITodoGrain
+public class TodoGrain(
+    ILogger<TodoGrain> logger,
+    [PersistentState("State")] IPersistentState<TodoGrain.State> state) : Grain, ITodoGrain
 {
-    private readonly ILogger<TodoGrain> _logger;
-    private readonly IPersistentState<State> _state;
-
     private string GrainType => nameof(TodoGrain);
+
     private Guid GrainKey => this.GetPrimaryKey();
 
-    public TodoGrain(
-        ILogger<TodoGrain> logger,
-        [PersistentState("State")] IPersistentState<State> state)
-    {
-        _logger = logger;
-        _state = state;
-    }
-
-    public Task<TodoItem?> GetAsync() => Task.FromResult(_state.State.Item);
+    public Task<TodoItem?> GetAsync() => Task.FromResult(state.State.Item);
 
     public async Task SetAsync(TodoItem item)
     {
@@ -31,18 +21,18 @@ public class TodoGrain : Grain, ITodoGrain
         }
 
         // Save the item
-        _state.State.Item = item;
-        await _state.WriteStateAsync();
+        state.State = state.State with { Item = item };
+        await state.WriteStateAsync();
 
         // Register the item with its owner list
         await GrainFactory.GetGrain<ITodoManagerGrain>(item.OwnerKey)
             .RegisterAsync(item.Key);
 
         // For sample debugging
-        _logger.LogInformation(
+        logger.LogInformation(
             "{@GrainType} {@GrainKey} now contains {@Todo}",
             GrainType, GrainKey, item);
-        
+
         // Notify listeners - best effort only
         var streamId = StreamId.Create(nameof(ITodoGrain), item.OwnerKey);
         this.GetStreamProvider("MemoryStreams").GetStream<TodoNotification>(streamId)
@@ -53,21 +43,21 @@ public class TodoGrain : Grain, ITodoGrain
     public async Task ClearAsync()
     {
         // Fast path for already cleared state
-        if (_state.State.Item is null) return;
+        if (state.State.Item is null) return;
 
         // Hold on to the keys
-        var itemKey = _state.State.Item.Key;
-        var ownerKey = _state.State.Item.OwnerKey;
+        var itemKey = state.State.Item.Key;
+        var ownerKey = state.State.Item.OwnerKey;
 
         // Unregister from the registry
         await GrainFactory.GetGrain<ITodoManagerGrain>(ownerKey)
             .UnregisterAsync(itemKey);
 
         // Clear the state
-        await _state.ClearStateAsync();
+        await state.ClearStateAsync();
 
         // For sample debugging
-        _logger.LogInformation(
+        logger.LogInformation(
             "{@GrainType} {@GrainKey} is now cleared",
             GrainType, GrainKey);
 
@@ -81,10 +71,10 @@ public class TodoGrain : Grain, ITodoGrain
         DeactivateOnIdle();
     }
 
-    [GenerateSerializer]
-    public class State
+    [GenerateSerializer, Immutable]
+    public sealed record class State
     {
         [Id(0)]
-        public TodoItem? Item { get; set; }
+        public TodoItem? Item { get; init; }
     }
 }

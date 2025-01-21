@@ -22,7 +22,7 @@ The application is based on the [official tutorial](https://dotnet.microsoft.com
 
 ## Sample prerequisites
 
-This sample is written in C# and targets .NET 8.0. It requires the [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) or later.
+This sample is written in C# and targets .NET 9.0. It requires the [.NET 9.0 SDK](https://dotnet.microsoft.com/download/dotnet/9.0) or later.
 
 ## Building the sample
 
@@ -77,3 +77,5 @@ Changes are rendered and sent in real-time to the browser via the underlying Sig
 
 To demonstrate real-time server updates, open multiple browser windows showing the server-side todo demo,
 and then proceed to perform changes to the todo list from any window. The other windows will mirror the update in real-time.
+
+![Screenshot](screenshot.png)
