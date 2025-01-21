@@ -49,8 +49,11 @@ public sealed class ChannelGrain : Grain, IChannelGrain
     public async Task<bool> Message(ChatMsg msg)
     {
         _messages.Add(msg);
+
         if (_messages.Count > 100)
+        {
             _messages.RemoveAt(0);
+        }
 
         await _stream.OnNextAsync(msg);
 
