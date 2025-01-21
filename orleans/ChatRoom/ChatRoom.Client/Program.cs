@@ -2,13 +2,13 @@
 using ChatRoom;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Orleans.Runtime;
 using Spectre.Console;
 
 using var host = new HostBuilder()
     .UseOrleansClient(clientBuilder =>
     {
-        clientBuilder.UseLocalhostClustering()
+        clientBuilder
+            .UseLocalhostClustering()
             .AddMemoryStreams("chat");
     })
     .Build();
