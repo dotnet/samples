@@ -9,6 +9,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chirper.Server", "Chirper.Server\Chirper.Server.csproj", "{2C967379-D025-4EBB-96C0-1A4C6CBE4B4B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chirper.Client", "Chirper.Client\Chirper.Client.csproj", "{3BE53D35-938D-47D8-B135-501786B145DC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2C967379-D025-4EBB-96C0-1A4C6CBE4B4B} = {2C967379-D025-4EBB-96C0-1A4C6CBE4B4B}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1223A865-0D72-4BF7-8FCD-016A48F3EC68}"
 	ProjectSection(SolutionItems) = preProject

@@ -1,4 +1,4 @@
-using System.Collections.Immutable;
+﻿using System.Collections.Immutable;
 using Chirper.Grains.Models;
 using Microsoft.Extensions.Logging;
 using Orleans.Concurrency;
@@ -7,8 +7,12 @@ using Orleans.Runtime;
 namespace Chirper.Grains;
 
 [Reentrant]
-public sealed class ChirperAccount : Grain, IChirperAccount
+public sealed class ChirperAccount(
+   [PersistentState(stateName: "account", storageName: "AccountState")] IPersistentState<ChirperAccountState> state,
+   ILogger<ChirperAccount> logger) : Grain, IChirperAccount
 {
+    private static string GrainType => nameof(ChirperAccount);
+
     /// <summary>
     /// Size for the recently received message cache.
     /// </summary>
@@ -29,28 +33,17 @@ public sealed class ChirperAccount : Grain, IChirperAccount
     /// This list is not part of state and will not survive grain deactivation.
     /// </summary>
     private readonly HashSet<IChirperViewer> _viewers = new();
-    private readonly ILogger<ChirperAccount> _logger;
-    private readonly IPersistentState<ChirperAccountState> _state;
 
     /// <summary>
     /// Allows state writing to happen in the background.
     /// </summary>
     private Task? _outstandingWriteStateOperation;
 
-    public ChirperAccount(
-       [PersistentState(stateName: "account", storageName: "AccountState")] IPersistentState<ChirperAccountState> state,
-       ILogger<ChirperAccount> logger)
-    {
-        _state = state;
-        _logger = logger;
-    }
-
-    private static string GrainType => nameof(ChirperAccount);
     private string GrainKey => this.GetPrimaryKeyString();
 
     public override Task OnActivateAsync(CancellationToken _)
     {
-        _logger.LogInformation("{GrainType} {GrainKey} activated.", GrainType, GrainKey);
+        logger.LogInformation("{GrainType} {GrainKey} activated.", GrainType, GrainKey);
 
         return Task.CompletedTask;
     }
@@ -59,41 +52,41 @@ public sealed class ChirperAccount : Grain, IChirperAccount
     {
         var chirp = CreateNewChirpMessage(message);
 
-        _logger.LogInformation("{GrainType} {GrainKey} publishing new chirp message '{Chirp}'.",
+        logger.LogInformation("{GrainType} {GrainKey} publishing new chirp message '{Chirp}'.",
             GrainType, GrainKey, chirp);
 
-        _state.State.MyPublishedMessages.Enqueue(chirp);
+        state.State.MyPublishedMessages.Enqueue(chirp);
 
-        while (_state.State.MyPublishedMessages.Count > PublishedMessagesCacheSize)
+        while (state.State.MyPublishedMessages.Count > PublishedMessagesCacheSize)
         {
-            _state.State.MyPublishedMessages.Dequeue();
+            state.State.MyPublishedMessages.Dequeue();
         }
 
         await WriteStateAsync();
 
         // notify viewers of new message
-        _logger.LogInformation("{GrainType} {GrainKey} sending new chirp message to {ViewerCount} viewers.",
+        logger.LogInformation("{GrainType} {GrainKey} sending new chirp message to {ViewerCount} viewers.",
             GrainType, GrainKey, _viewers.Count);
 
         _viewers.ForEach(_ => _.NewChirp(chirp));
 
         // notify followers of a new message
-        _logger.LogInformation("{GrainType} {GrainKey} sending new chirp message to {FollowerCount} followers.",
-            GrainType, GrainKey, _state.State.Followers.Count);
+        logger.LogInformation("{GrainType} {GrainKey} sending new chirp message to {FollowerCount} followers.",
+            GrainType, GrainKey, state.State.Followers.Count);
 
-        await Task.WhenAll(_state.State.Followers.Values.Select(_ => _.NewChirpAsync(chirp)).ToArray());
+        await Task.WhenAll(state.State.Followers.Values.Select(_ => _.NewChirpAsync(chirp)).ToArray());
     }
 
     public ValueTask<ImmutableList<ChirperMessage>> GetReceivedMessagesAsync(int number, int start)
     {
         if (start < 0) start = 0;
-        if (start + number > _state.State.RecentReceivedMessages.Count)
+        if (start + number > state.State.RecentReceivedMessages.Count)
         {
-            number = _state.State.RecentReceivedMessages.Count - start;
+            number = state.State.RecentReceivedMessages.Count - start;
         }
 
         return ValueTask.FromResult(
-            _state.State.RecentReceivedMessages
+            state.State.RecentReceivedMessages
                 .Skip(start)
                 .Take(number)
                 .ToImmutableList());
@@ -101,7 +94,7 @@ public sealed class ChirperAccount : Grain, IChirperAccount
 
     public async ValueTask FollowUserIdAsync(string username)
     {
-        _logger.LogInformation(
+        logger.LogInformation(
             "{GrainType} {UserName} > FollowUserName({TargetUserName}).",
             GrainType,
             GrainKey,
@@ -111,7 +104,7 @@ public sealed class ChirperAccount : Grain, IChirperAccount
 
         await userToFollow.AddFollowerAsync(GrainKey, this.AsReference<IChirperSubscriber>());
 
-        _state.State.Subscriptions[username] = userToFollow;
+        state.State.Subscriptions[username] = userToFollow;
 
         await WriteStateAsync();
 
@@ -121,7 +114,7 @@ public sealed class ChirperAccount : Grain, IChirperAccount
 
     public async ValueTask UnfollowUserIdAsync(string username)
     {
-        _logger.LogInformation(
+        logger.LogInformation(
             "{GrainType} {GrainKey} > UnfollowUserName({TargetUserName}).",
             GrainType,
             GrainKey,
@@ -132,7 +125,7 @@ public sealed class ChirperAccount : Grain, IChirperAccount
             .RemoveFollowerAsync(GrainKey);
 
         // remove this publisher from the subscriptions list
-        _state.State.Subscriptions.Remove(username);
+        state.State.Subscriptions.Remove(username);
 
         // save now
         await WriteStateAsync();
@@ -142,10 +135,10 @@ public sealed class ChirperAccount : Grain, IChirperAccount
     }
 
     public ValueTask<ImmutableList<string>> GetFollowingListAsync() =>
-        ValueTask.FromResult(_state.State.Subscriptions.Keys.ToImmutableList());
+        ValueTask.FromResult(state.State.Subscriptions.Keys.ToImmutableList());
 
     public ValueTask<ImmutableList<string>> GetFollowersListAsync() =>
-        ValueTask.FromResult(_state.State.Followers.Keys.ToImmutableList());
+        ValueTask.FromResult(state.State.Followers.Keys.ToImmutableList());
 
     public ValueTask SubscribeAsync(IChirperViewer viewer)
     {
@@ -162,12 +155,12 @@ public sealed class ChirperAccount : Grain, IChirperAccount
     public ValueTask<ImmutableList<ChirperMessage>> GetPublishedMessagesAsync(int number, int start)
     {
         if (start < 0) start = 0;
-        if (start + number > _state.State.MyPublishedMessages.Count)
+        if (start + number > state.State.MyPublishedMessages.Count)
         {
-            number = _state.State.MyPublishedMessages.Count - start;
+            number = state.State.MyPublishedMessages.Count - start;
         }
         return ValueTask.FromResult(
-            _state.State.MyPublishedMessages
+            state.State.MyPublishedMessages
                 .Skip(start)
                 .Take(number)
                 .ToImmutableList());
@@ -175,37 +168,37 @@ public sealed class ChirperAccount : Grain, IChirperAccount
 
     public async ValueTask AddFollowerAsync(string username, IChirperSubscriber follower)
     {
-        _state.State.Followers[username] = follower;
+        state.State.Followers[username] = follower;
         await WriteStateAsync();
         _viewers.ForEach(cv => cv.NewFollower(username));
     }
 
     public ValueTask RemoveFollowerAsync(string username)
     {
-        _state.State.Followers.Remove(username);
+        state.State.Followers.Remove(username);
         return WriteStateAsync();
     }
 
     public async Task NewChirpAsync(ChirperMessage chirp)
     {
-        _logger.LogInformation(
+        logger.LogInformation(
             "{GrainType} {GrainKey} received chirp message = {Chirp}",
             GrainType,
             GrainKey,
             chirp);
 
-        _state.State.RecentReceivedMessages.Enqueue(chirp);
+        state.State.RecentReceivedMessages.Enqueue(chirp);
 
         // only relevant when not using fixed queue
-        while (_state.State.RecentReceivedMessages.Count > ReceivedMessagesCacheSize) // to keep not more than the max number of messages
+        while (state.State.RecentReceivedMessages.Count > ReceivedMessagesCacheSize) // to keep not more than the max number of messages
         {
-            _state.State.RecentReceivedMessages.Dequeue();
+            state.State.RecentReceivedMessages.Dequeue();
         }
 
         await WriteStateAsync();
 
         // notify any viewers that a new chirp has been received
-        _logger.LogInformation(
+        logger.LogInformation(
             "{GrainType} {GrainKey} sending received chirp message to {ViewerCount} viewers",
             GrainType,
             GrainKey,
@@ -246,7 +239,7 @@ public sealed class ChirperAccount : Grain, IChirperAccount
         if (_outstandingWriteStateOperation is null)
         {
             // If after the initial write is completed, no other request initiated a new write operation, do it now.
-            currentWriteStateOperation = _state.WriteStateAsync();
+            currentWriteStateOperation = state.WriteStateAsync();
             _outstandingWriteStateOperation = currentWriteStateOperation;
         }
         else

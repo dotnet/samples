@@ -7,20 +7,11 @@ using Spectre.Console;
 
 namespace Chirper.Client;
 
-public sealed partial class ShellHostedService : BackgroundService
+public sealed partial class ShellHostedService(IClusterClient client, IHostApplicationLifetime applicationLifetime) : BackgroundService
 {
-    private readonly IClusterClient _client;
-    private readonly IHostApplicationLifetime _applicationLifetime;
-
     private ChirperConsoleViewer? _viewer;
     private IChirperViewer? _viewerRef;
     private IChirperAccount? _account;
-
-    public ShellHostedService(IClusterClient client, IHostApplicationLifetime applicationLifetime)
-    {
-        _client = client;
-        _applicationLifetime = applicationLifetime;
-    }
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
@@ -35,7 +26,7 @@ public sealed partial class ShellHostedService : BackgroundService
             }
             else if (command is null or "/quit")
             {
-                _applicationLifetime.StopApplication();
+                applicationLifetime.StopApplication();
                 return;
             }
             else if (command.StartsWith("/user "))
@@ -44,7 +35,7 @@ public sealed partial class ShellHostedService : BackgroundService
                 {
                     await Unobserve();
                     var username = match.Groups["username"].Value;
-                    _account = _client.GetGrain<IChirperAccount>(username);
+                    _account = client.GetGrain<IChirperAccount>(username);
 
                     AnsiConsole.MarkupLine("[bold grey][[[/][bold lime]✓[/][bold grey]]][/] The current user is now [navy]{0}[/]", username);
                 }
@@ -121,7 +112,7 @@ public sealed partial class ShellHostedService : BackgroundService
                     if (_viewerRef is null)
                     {
                         _viewer = new ChirperConsoleViewer(_account.GetPrimaryKeyString());
-                        _viewerRef = _client.CreateObjectReference<IChirperViewer>(_viewer);
+                        _viewerRef = client.CreateObjectReference<IChirperViewer>(_viewer);
                     }
 
                     await _account.SubscribeAsync(_viewerRef);

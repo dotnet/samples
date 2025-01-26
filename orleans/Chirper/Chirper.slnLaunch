@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Server + Client",
+    "Projects": [
+      {
+        "Path": "Chirper.Client\\Chirper.Client.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Chirper.Server\\Chirper.Server.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
