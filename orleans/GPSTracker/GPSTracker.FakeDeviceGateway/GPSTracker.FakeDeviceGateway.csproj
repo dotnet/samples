@@ -1,11 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <OutputType>Exe</OutputType>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\GPSTracker.Common\GPSTracker.Common.csproj" />
+    <ProjectReference Include="..\GPSTracker.ServiceDefaults\GPSTracker.ServiceDefaults.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Aspire.Azure.Data.Tables" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Orleans.Clustering.AzureStorage" Version="9.0.1" />
   </ItemGroup>
 </Project>

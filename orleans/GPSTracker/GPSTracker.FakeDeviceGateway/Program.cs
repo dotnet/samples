@@ -2,11 +2,12 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-using IHost host = Host.CreateDefaultBuilder(args)
-    .UseOrleansClient((ctx, clientBuilder) => clientBuilder.UseLocalhostClustering())
-    .UseConsoleLifetime()
-    .Build();
+var builder = Host.CreateApplicationBuilder(args);
+builder.AddServiceDefaults();
+builder.AddKeyedAzureTableClient("clustering");
+builder.UseOrleansClient();
 
+using var host = builder.Build();
 await host.StartAsync();
 
 IHostApplicationLifetime lifetime = host.Services.GetRequiredService<IHostApplicationLifetime>();
