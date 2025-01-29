@@ -1,9 +1,9 @@
-namespace Chirper.Grains.Models;
+﻿namespace Chirper.Grains.Models;
 
 /// <summary>
 /// Data object representing one Chirp message entry
 /// </summary>
-[GenerateSerializer]
+[GenerateSerializer, Immutable]
 public record class ChirperMessage(
     /// <summary>
     /// The message content for this chirp message entry.
