@@ -1,4 +1,4 @@
-using System.Text;
+﻿using System.Text;
 using AdventureGrainInterfaces;
 
 namespace AdventureGrains;
@@ -8,14 +8,11 @@ namespace AdventureGrains;
 /// </summary>
 public class RoomGrain : Grain, IRoomGrain
 {
-    // TODO: replace placeholder grain interface with actual grain
-    // communication interface(s).
-
+    private readonly List<PlayerInfo> _players = [];
+    private readonly List<MonsterInfo> _monsters = [];
+    private readonly List<Thing> _things = [];
+    private readonly Dictionary<string, IRoomGrain> _exits = [];
     private string? _description;
-    private readonly List<PlayerInfo> _players = new();
-    private readonly List<MonsterInfo> _monsters = new();
-    private readonly List<Thing> _things = new();
-    private readonly Dictionary<string, IRoomGrain> _exits = new();
 
     Task IRoomGrain.Enter(PlayerInfo player)
     {
@@ -106,15 +103,19 @@ public class RoomGrain : Grain, IRoomGrain
         {
             builder.AppendLine("Beware! These guys are in the room with you:");
             if (others.Length > 0)
+            {
                 foreach (var player in others)
                 {
                     builder.Append("  ").AppendLine(player.Name);
                 }
+            }
             if (_monsters.Count > 0)
+            {
                 foreach (var monster in _monsters)
                 {
                     builder.Append("  ").AppendLine(monster.Name);
                 }
+            }
         }
 
         return Task.FromResult(builder.ToString());

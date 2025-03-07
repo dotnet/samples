@@ -1,4 +1,4 @@
-using System.Text;
+﻿using System.Text;
 using System.Threading;
 using AdventureGrainInterfaces;
 
@@ -6,9 +6,8 @@ namespace AdventureGrains;
 
 public class PlayerGrain : Grain, IPlayerGrain
 {
+    private readonly List<Thing> _things = []; // Things that the player is carrying
     private IRoomGrain? _roomGrain; // Current room
-    private readonly List<Thing> _things = new(); // Things that the player is carrying
-
     private bool _killed = false;
     private PlayerInfo _myInfo = null!;
 
@@ -22,11 +21,10 @@ public class PlayerGrain : Grain, IPlayerGrain
 
     Task<IRoomGrain> IPlayerGrain.RoomGrain() => Task.FromResult(_roomGrain!);
 
-
     async Task IPlayerGrain.Die()
     {
         // Drop everything
-        var dropTasks = new List<Task<string?>>();        
+        var dropTasks = new List<Task<string?>>();
         foreach (var thing in _things.ToArray() /* New collection */)
         {
             dropTasks.Add(Drop(thing));

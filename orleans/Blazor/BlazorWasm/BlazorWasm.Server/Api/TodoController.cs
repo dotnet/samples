@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using BlazorWasm.Grains;
 using BlazorWasm.Models;
 using System.ComponentModel.DataAnnotations;
@@ -24,30 +24,35 @@ public class TodoController : ControllerBase
     [HttpGet("list/{ownerKey}", Name = "list")]
     public async Task<IEnumerable<TodoItem>> ListAsync([Required] Guid ownerKey)
     {
-        // Get all item keys for this owner.
-        var keys =
-            await _factory.GetGrain<ITodoManagerGrain>(ownerKey)
-                          .GetAllAsync();
+        // get all the todo item keys for this owner
+        var itemKeys = await _factory
+            .GetGrain<ITodoManagerGrain>(ownerKey)
+            .GetAllAsync();
 
-        // Fast path for empty owner.
-        if (keys.Length is 0) return Array.Empty<TodoItem>();
+        // fan out to get the individual items from the cluster in parallel
+        // issue all individual requests at the same time
+        var tasks = itemKeys
+            .Select(async itemId =>
+            {
+                var item = await _factory
+                    .GetGrain<ITodoGrain>(itemId)
+                    .GetAsync();
 
-        // Fan out and get all individual items in parallel.
-        // Issue all requests at the same time.
-        var tasks =
-            keys.Select(key => _factory.GetGrain<ITodoGrain>(key).GetAsync())
-                .ToList();
+                // we can get a null result if the individual grain failed to unregister
+                // in this case we can finish the job here
+                if (item is null)
+                {
+                    await _factory
+                        .GetGrain<ITodoManagerGrain>(ownerKey)
+                        .UnregisterAsync(itemId);
+                }
 
-        // Compose the result as requests complete
-        var result = new List<TodoItem>();
-        for (var i = 0; i < keys.Length; ++i)
-        {
-            var item = await tasks[i];
-            if (item is null) continue;
-            result.Add(item);
-        }
+                return item;
+            });
 
-        return result;
+        var result = await Task.WhenAll(tasks);
+
+        return result.OfType<TodoItem>();
     }
 
     [HttpPost]
@@ -58,7 +63,7 @@ public class TodoController : ControllerBase
             return BadRequest(ModelState);
         }
 
-        var item = new TodoItem(model.Key, model.Title, model.IsDone, model.OwnerKey);
+        var item = new TodoItem(model.Key, model.Title, model.IsDone, model.OwnerKey, DateTime.UtcNow);
         await _factory.GetGrain<ITodoGrain>(item.Key).SetAsync(item);
         return Ok();
     }
