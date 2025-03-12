@@ -13,7 +13,7 @@ fileLister.DirectoryChanged += (sender, eventArgs) =>
 {
     Console.Write($"Entering '{eventArgs.CurrentSearchDirectory}'.");
     Console.WriteLine($" {eventArgs.CompletedDirs} of {eventArgs.TotalDirs} completed...");
-}
+};
 
 fileLister.Search(".", "*.dll", true);
 
