@@ -2,10 +2,10 @@
 
 public class FileLogger
 {
-    private readonly string logPath;
+    private readonly string _logPath;
     public FileLogger(string path)
     {
-        logPath = path;
+        _logPath = path;
         Logger.WriteMessage += LogMessage;
     }
 
@@ -15,7 +15,7 @@ public class FileLogger
     {
         try
         {
-            using (var log = File.AppendText(logPath))
+            using (var log = File.AppendText(_logPath))
             {
                 log.WriteLine(msg);
                 log.Flush();

@@ -1,4 +1,4 @@
-﻿namespace events;
+﻿namespace Events;
 
 public class FileFoundArgs : EventArgs
 {
