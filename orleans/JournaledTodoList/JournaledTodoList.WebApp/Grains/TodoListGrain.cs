@@ -12,7 +12,32 @@ public sealed class TodoListGrain : JournaledGrain<TodoListGrain.TodoListProject
         await registry.RegisterTodoListAsync(this.GetPrimaryKeyString());
     }
 
+    public async Task<TodoList?> GetTodoListAtTimestampAsync(DateTimeOffset timestamp)
     {
+        // Get all events up to the current version
+        var allEvents = await RetrieveConfirmedEvents(0, Version);
+
+        // Create a fresh projection and apply the filtered events
+        var historicalProjection = new TodoListProjection();
+        foreach (var evt in allEvents.Where(e => e.Timestamp <= timestamp))
+        {
+            switch (evt)
+            {
+                case TodoItemAdded added: historicalProjection.Apply(added); break;
+                case TodoItemUpdated updated: historicalProjection.Apply(updated); break;
+                case TodoItemToggled toggled: historicalProjection.Apply(toggled); break;
+                case TodoItemRemoved removed: historicalProjection.Apply(removed); break;
+            }
+        }
+
+        // Return the historical state
+        return historicalProjection.Timestamp > DateTimeOffset.MinValue
+            ? new TodoList(
+                Name: this.GetPrimaryKeyString(),
+                Items: historicalProjection.Items.Values.ToImmutableArray(),
+                Timestamp: historicalProjection.Timestamp)
+            : null;
+    }
 
     public async Task<TodoList> GetTodoListAsync()
     {

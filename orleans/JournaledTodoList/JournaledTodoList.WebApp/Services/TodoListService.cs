@@ -33,6 +33,12 @@ public class TodoListService(IGrainFactory grainFactory)
         return grain.GetTodoListAsync();
     }
 
+    public Task<TodoList?> GetTodoListAtTimestampAsync(string listId, DateTimeOffset timestamp)
+    {
+        var grain = grainFactory.GetGrain<ITodoListGrain>(listId);
+        return grain.GetTodoListAtTimestampAsync(timestamp);
+    }
+
     public Task<ImmutableArray<TodoListEvent>> GetTodoListHistoryAsync(string listId)
     {
         var grain = grainFactory.GetGrain<ITodoListGrain>(listId);

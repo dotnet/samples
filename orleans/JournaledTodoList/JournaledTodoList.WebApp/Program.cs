@@ -12,9 +12,7 @@ builder.UseOrleans(siloBuilder =>
 });
 builder.Services.AddScoped<TodoListService>();
 
-// Add services to the container.
-builder.Services
-    .AddRazorComponents()
+builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
 var app = builder.Build();
