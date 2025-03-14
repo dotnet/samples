@@ -12,14 +12,19 @@ public sealed class TodoListGrain : JournaledGrain<TodoListGrain.TodoListProject
         await registry.RegisterTodoListAsync(this.GetPrimaryKeyString());
     }
 
-    public Task<TodoList> GetTodoListAsync()
     {
+
+    public async Task<TodoList> GetTodoListAsync()
+    {
+        // Ensure we are State object is up to date before returning.
+        await RefreshNow();
+
         var list = new TodoList(
             Name: this.GetPrimaryKeyString(),
             Items: State.Items.Values.ToImmutableArray(),
             Timestamp: State.Timestamp);
 
-        return Task.FromResult(list);
+        return list;
     }
 
     public async Task AddTodoItemAsync(string title)
