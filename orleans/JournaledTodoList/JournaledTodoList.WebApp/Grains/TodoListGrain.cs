@@ -16,7 +16,8 @@ public sealed class TodoListGrain : JournaledGrain<TodoListGrain.TodoListProject
     {
         var list = new TodoList(
             Name: this.GetPrimaryKeyString(),
-            Items: State.Items.Values.ToImmutableArray());
+            Items: State.Items.Values.ToImmutableArray(),
+            Timestamp: State.Timestamp);
 
         return Task.FromResult(list);
     }
@@ -67,9 +68,12 @@ public sealed class TodoListGrain : JournaledGrain<TodoListGrain.TodoListProject
     {
         public Dictionary<int, TodoItem> Items { get; set; } = [];
 
+        public DateTimeOffset Timestamp { get; set; } = DateTimeOffset.MinValue;
+
         public void Apply(TodoItemAdded added)
         {
             Items.Add(added.ItemId, new TodoItem(added.ItemId, added.Title, false));
+            Timestamp = added.Timestamp;
         }
 
         public void Apply(TodoItemUpdated updated)
@@ -78,6 +82,7 @@ public sealed class TodoListGrain : JournaledGrain<TodoListGrain.TodoListProject
             {
                 Items[updated.ItemId] = item with { Title = updated.Title };
             }
+            Timestamp = updated.Timestamp;
         }
 
         public void Apply(TodoItemToggled toggled)
@@ -86,11 +91,13 @@ public sealed class TodoListGrain : JournaledGrain<TodoListGrain.TodoListProject
             {
                 Items[toggled.ItemId] = item with { IsCompleted = !item.IsCompleted };
             }
+            Timestamp = toggled.Timestamp;
         }
 
         public void Apply(TodoItemRemoved removed)
         {
             Items.Remove(removed.ItemId);
+            Timestamp = removed.Timestamp;
         }
     }
 }
