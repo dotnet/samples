@@ -1,8 +1,8 @@
-using System.Collections.Immutable;
+﻿using System.Collections.Immutable;
 
 namespace JournaledTodoList.WebApp.Grains;
 
 public interface ITodoListRegistryObserver : IGrainObserver
 {
-    Task OnTodoListsChanged(ImmutableArray<string> todoLists);
+    Task OnTodoListsChanged(ImmutableArray<TodoListReference> todoLists);
 }

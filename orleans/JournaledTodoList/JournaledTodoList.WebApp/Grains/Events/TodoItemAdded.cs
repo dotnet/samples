@@ -2,7 +2,7 @@
 
 [GenerateSerializer, Immutable]
 public record class TodoItemAdded(int ItemId, DateTimeOffset Timestamp, string Title)
-    : TodoListEvent(ItemId, Timestamp)
+    : TodoListEvent(Timestamp)
 {
     public override string GetDescription() => $"Added item {ItemId}: {Title}";
 }

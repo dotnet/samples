@@ -1,4 +1,5 @@
 ﻿using System.Collections.Immutable;
+using System.Web;
 using JournaledTodoList.WebApp.Grains;
 using JournaledTodoList.WebApp.Grains.Events;
 
@@ -14,17 +15,31 @@ public class TodoListService(IGrainFactory grainFactory)
         return new Subscription(observerRef, registryGrain);
     }
 
-    public Task<ImmutableArray<string>> GetAllTodoListsAsync()
+    public Task<ImmutableArray<TodoListReference>> GetTodoListReferencesAsync()
     {
         var registryGrain = grainFactory.GetGrain<ITodoListRegistryGrain>("registry");
         return registryGrain.GetAllTodoListsAsync();
     }
 
-    public async Task CreateTodoListAsync(string listId)
+    public async Task CreateTodoListAsync(string listName)
     {
-        // Just accessing the grain is enough to have it register itself
+        var listId = NormalizeListName(listName);
         var grain = grainFactory.GetGrain<ITodoListGrain>(listId);
-        await grain.GetTodoListAsync();
+        await grain.SetNameAsync(listName);
+
+        static string NormalizeListName(string name)
+        {
+            // Replace spaces and special characters to ensure valid URL
+            var normalized = name
+                .Trim()
+                .Replace(' ', '-')
+                .Replace('/', '-')
+                .Replace('\\', '-')
+                .ToLowerInvariant();
+
+            // Encode remaining bits for good measure!
+            return HttpUtility.UrlEncode(normalized);
+        }
     }
 
     public Task<TodoList> GetTodoListAsync(string listId)

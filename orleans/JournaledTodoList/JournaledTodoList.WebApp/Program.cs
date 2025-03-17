@@ -9,6 +9,7 @@ builder.AddKeyedAzureBlobClient("grain-state");
 builder.UseOrleans(siloBuilder =>
 {
     siloBuilder.AddLogStorageBasedLogConsistencyProviderAsDefault();
+    siloBuilder.AddStateStorageBasedLogConsistencyProvider(name: Constants.StateStorageProviderName);
 });
 builder.Services.AddScoped<TodoListService>();
 

@@ -1,38 +1,40 @@
 ﻿using System.Collections.Immutable;
+using JournaledTodoList.WebApp.Grains;
 using JournaledTodoList.WebApp.Services;
 
 namespace JournaledTodoList.WebApp.Components.Pages;
 
-public partial class HomePage(TodoListService todoListService)
+public partial class HomePage(TodoListService todoListService) : ITodoListRegistryObserver, IDisposable
 {
+    private IDisposable? subscription;
     private string newListName = "";
-    private ImmutableArray<string> todoLists = [];
+
+    private ImmutableArray<TodoListReference> TodoLists { get; set; } = [];
 
     protected override async Task OnInitializedAsync()
     {
-        todoLists = await todoListService.GetAllTodoListsAsync();
-        await CreateNewList("Default");
+        subscription = await todoListService.SubscribeAsync(this);
     }
+
+    public void Dispose()
+    {
+        subscription?.Dispose();
+    }
+
+    async Task ITodoListRegistryObserver.OnTodoListsChanged(ImmutableArray<TodoListReference> todoLists) => await InvokeAsync(() =>
+    {
+        TodoLists = todoLists;
+        StateHasChanged();
+    });
 
     private async Task CreateNewList(string listName)
     {
-        var normalizedName = NormalizeListName(listName);
-        if (string.IsNullOrWhiteSpace(normalizedName) || todoLists.Contains(normalizedName))
+        if (string.IsNullOrWhiteSpace(listName) || TodoLists.Any(x => x.Name == listName))
         {
             return;
         }
 
-        await todoListService.CreateTodoListAsync(normalizedName);
-        todoLists = await todoListService.GetAllTodoListsAsync();
+        await todoListService.CreateTodoListAsync(listName);
         newListName = "";
-    }
-
-    private static string NormalizeListName(string name)
-    {
-        // Replace spaces and special characters to ensure valid URL
-        return name.Trim()
-                  .Replace(" ", "-")
-                  .Replace("/", "-")
-                  .Replace("\\", "-");
     }
 }

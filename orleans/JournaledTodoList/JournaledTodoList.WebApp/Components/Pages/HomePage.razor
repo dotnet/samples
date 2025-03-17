@@ -14,10 +14,10 @@
     </div>
 
     <div class="list-group">
-        @foreach (var listId in todoLists)
+        @foreach (var list in TodoLists)
         {
-            <a href="/todolist/@listId" class="list-group-item list-group-item-action">
-                @listId
+            <a href="/todolist/@(list.Id)" class="list-group-item list-group-item-action">
+                @list.Name
             </a>
         }
     </div>

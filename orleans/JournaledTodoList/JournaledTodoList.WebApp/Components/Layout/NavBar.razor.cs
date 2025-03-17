@@ -8,11 +8,10 @@ public partial class NavBar(TodoListService todoListService) : ITodoListRegistry
 {
     private IDisposable? subscription;
 
-    private ImmutableArray<string> TodoLists { get; set; } = [];
+    private ImmutableArray<TodoListReference> TodoLists { get; set; } = [];
 
     protected override async Task OnInitializedAsync()
     {
-        TodoLists = await todoListService.GetAllTodoListsAsync();
         subscription = await todoListService.SubscribeAsync(this);
     }
 
@@ -21,7 +20,7 @@ public partial class NavBar(TodoListService todoListService) : ITodoListRegistry
         subscription?.Dispose();
     }
 
-    async Task ITodoListRegistryObserver.OnTodoListsChanged(ImmutableArray<string> todoLists) => await InvokeAsync(() =>
+    async Task ITodoListRegistryObserver.OnTodoListsChanged(ImmutableArray<TodoListReference> todoLists) => await InvokeAsync(() =>
     {
         TodoLists = todoLists;
         StateHasChanged();

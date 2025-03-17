@@ -6,35 +6,29 @@ namespace JournaledTodoList.WebApp.Grains;
 
 public sealed class TodoListGrain : JournaledGrain<TodoListGrain.TodoListProjection, TodoListEvent>, ITodoListGrain
 {
-    public override async Task OnActivateAsync(CancellationToken cancellationToken)
+    public async Task<ImmutableArray<TodoListEvent>> GetHistoryAsync()
     {
-        var registry = GrainFactory.GetGrain<ITodoListRegistryGrain>("registry");
-        await registry.RegisterTodoListAsync(this.GetPrimaryKeyString());
+        var events = await RetrieveConfirmedEvents(0, Version);
+        return events.ToImmutableArray();
     }
 
     public async Task<TodoList?> GetTodoListAtTimestampAsync(DateTimeOffset timestamp)
     {
         // Get all events up to the current version
-        var allEvents = await RetrieveConfirmedEvents(0, Version);
+        var allEvents = await GetHistoryAsync();
 
         // Create a fresh projection and apply the filtered events
         var historicalProjection = new TodoListProjection();
         foreach (var evt in allEvents.Where(e => e.Timestamp <= timestamp))
         {
-            switch (evt)
-            {
-                case TodoItemAdded added: historicalProjection.Apply(added); break;
-                case TodoItemUpdated updated: historicalProjection.Apply(updated); break;
-                case TodoItemToggled toggled: historicalProjection.Apply(toggled); break;
-                case TodoItemRemoved removed: historicalProjection.Apply(removed); break;
-            }
+            TransitionState(historicalProjection, evt);
         }
 
-        // Return the historical state
+        // Only return a TodoList if there were events that matched the timestamp.
         return historicalProjection.Timestamp > DateTimeOffset.MinValue
             ? new TodoList(
                 Name: this.GetPrimaryKeyString(),
-                Items: historicalProjection.Items.Values.ToImmutableArray(),
+                Items: historicalProjection.Items.Values.OrderBy(x => x.Id).ToImmutableArray(),
                 Timestamp: historicalProjection.Timestamp)
             : null;
     }
@@ -46,7 +40,7 @@ public sealed class TodoListGrain : JournaledGrain<TodoListGrain.TodoListProject
 
         var list = new TodoList(
             Name: this.GetPrimaryKeyString(),
-            Items: State.Items.Values.ToImmutableArray(),
+            Items: State.Items.Values.OrderBy(x => x.Id).ToImmutableArray(),
             Timestamp: State.Timestamp);
 
         return list;
@@ -84,10 +78,17 @@ public sealed class TodoListGrain : JournaledGrain<TodoListGrain.TodoListProject
         await ConfirmEvents();
     }
 
-    public async Task<ImmutableArray<TodoListEvent>> GetHistoryAsync()
+    public async Task SetNameAsync(string listName)
     {
-        var events = await RetrieveConfirmedEvents(0, Version);
-        return events.ToImmutableArray();
+        var evt = new TodoListNameChanged(listName, DateTimeOffset.UtcNow);
+        RaiseEvent(evt);
+        await ConfirmEvents();
+
+        // Publish list with new name to todo list registry.
+        // The registry only cares about the id and name of the list,
+        // so this is the only place where we need to interact with the registry.
+        var registry = GrainFactory.GetGrain<ITodoListRegistryGrain>("registry");
+        await registry.RegisterTodoListAsync(new TodoListReference(this.GetPrimaryKeyString(), listName));
     }
 
     /// <summary>
@@ -99,6 +100,8 @@ public sealed class TodoListGrain : JournaledGrain<TodoListGrain.TodoListProject
         public Dictionary<int, TodoItem> Items { get; set; } = [];
 
         public DateTimeOffset Timestamp { get; set; } = DateTimeOffset.MinValue;
+
+        public string Name { get; set; } = string.Empty;
 
         public void Apply(TodoItemAdded added)
         {
@@ -128,6 +131,12 @@ public sealed class TodoListGrain : JournaledGrain<TodoListGrain.TodoListProject
         {
             Items.Remove(removed.ItemId);
             Timestamp = removed.Timestamp;
+        }
+
+        public void Apply(TodoListNameChanged nameChanged)
+        {
+            Name = nameChanged.Name;
+            Timestamp = nameChanged.Timestamp;
         }
     }
 }

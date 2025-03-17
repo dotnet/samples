@@ -4,9 +4,9 @@ namespace JournaledTodoList.WebApp.Grains;
 
 public interface ITodoListRegistryGrain : IGrainWithStringKey
 {
-    Task RegisterTodoListAsync(string todoListId);
+    Task RegisterTodoListAsync(TodoListReference todoListReference);
 
-    Task<ImmutableArray<string>> GetAllTodoListsAsync();
+    Task<ImmutableArray<TodoListReference>> GetAllTodoListsAsync();
 
     Task Subscribe(ITodoListRegistryObserver observer);
 

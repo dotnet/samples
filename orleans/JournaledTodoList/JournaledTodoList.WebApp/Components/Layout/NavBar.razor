@@ -5,11 +5,11 @@
                 <i class="bi bi-house-door me-2"></i> Home
             </NavLink>
         </li>
-        @foreach (var listId in TodoLists)
+        @foreach (var list in TodoLists)
         {
             <li class="nav-item">
-                <NavLink class="nav-link" href="@($"todolist/{listId}")">
-                    <i class="bi bi-list-task me-1"></i> @listId
+                <NavLink class="nav-link" href="@($"todolist/{list.Id}")">
+                    <i class="bi bi-list-task me-1"></i> @list.Name
                 </NavLink>
             </li>
         }
