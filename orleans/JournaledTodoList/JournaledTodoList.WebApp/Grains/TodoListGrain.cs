@@ -87,7 +87,7 @@ public sealed class TodoListGrain : JournaledGrain<TodoListGrain.TodoListProject
         // Publish list with new name to todo list registry.
         // The registry only cares about the id and name of the list,
         // so this is the only place where we need to interact with the registry.
-        var registry = GrainFactory.GetGrain<ITodoListRegistryGrain>("registry");
+        var registry = GrainFactory.GetGrain<ITodoListRegistryGrain>(Constants.TodoListRegistryId);
         await registry.RegisterTodoListAsync(new TodoListReference(this.GetPrimaryKeyString(), listName));
     }
 

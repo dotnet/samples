@@ -9,7 +9,7 @@ public class TodoListService(IGrainFactory grainFactory)
 {
     public async Task<IDisposable> SubscribeAsync(ITodoListRegistryObserver observer)
     {
-        var registryGrain = grainFactory.GetGrain<ITodoListRegistryGrain>("registry");
+        var registryGrain = grainFactory.GetGrain<ITodoListRegistryGrain>(Constants.TodoListRegistryId);
         var observerRef = grainFactory.CreateObjectReference<ITodoListRegistryObserver>(observer);
         await registryGrain.Subscribe(observerRef);
         return new Subscription(observerRef, registryGrain);
@@ -17,7 +17,7 @@ public class TodoListService(IGrainFactory grainFactory)
 
     public Task<ImmutableArray<TodoListReference>> GetTodoListReferencesAsync()
     {
-        var registryGrain = grainFactory.GetGrain<ITodoListRegistryGrain>("registry");
+        var registryGrain = grainFactory.GetGrain<ITodoListRegistryGrain>(Constants.TodoListRegistryId);
         return registryGrain.GetAllTodoListsAsync();
     }
 
