@@ -35,9 +35,6 @@ public sealed class TodoListGrain : JournaledGrain<TodoListGrain.TodoListProject
 
     public async Task<TodoList> GetTodoListAsync()
     {
-        // Ensure we are State object is up to date before returning.
-        await RefreshNow();
-
         var list = new TodoList(
             Name: this.GetPrimaryKeyString(),
             Items: State.Items.Values.OrderBy(x => x.Id).ToImmutableArray(),
