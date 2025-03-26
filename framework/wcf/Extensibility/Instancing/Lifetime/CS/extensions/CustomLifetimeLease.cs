@@ -1,19 +1,16 @@
 ﻿//  Copyright (c) Microsoft Corporation.  All Rights Reserved.
 
 using System;
-using System.ServiceModel;
-using System.Timers;
-using Timer = System.Timers.Timer;
-using System.ServiceModel.Dispatcher;
-using System.Collections;
 using System.Collections.Generic;
+using System.ServiceModel;
+using System.ServiceModel.Dispatcher;
 
 namespace Microsoft.ServiceModel.Samples
 {
     public static class CustomHeader
     {
-        public static readonly String HeaderName = "InstanceId";
-        public static readonly String HeaderNamespace = "http://Microsoft.ServiceModel.Samples/Lifetime";
+        public const string HeaderName = "InstanceId";
+        public const string HeaderNamespace = "http://Microsoft.ServiceModel.Samples/Lifetime";
     }
 
     /// <summary>
@@ -22,13 +19,13 @@ namespace Microsoft.ServiceModel.Samples
     /// IShareableInstanceContextLifetime in order to be able 
     /// to attach to the service model layer.
     /// </summary>
-    class CustomLifetimeLease : IInstanceContextProvider
+    internal class CustomLifetimeLease : IInstanceContextProvider
     {
         #region Private Fields
-        
-        double timeout;
-        bool isIdle;
-        Dictionary<String, InstanceContext> instanceContextCache;
+
+        private readonly double _timeout;
+        private bool _isIdle;
+        private readonly Dictionary<string, InstanceContext> _instanceContextCache;
 
         // Lock must be acquired on this before
         // accessing the isIdle member.
@@ -41,7 +38,7 @@ namespace Microsoft.ServiceModel.Samples
         // it will result in a considerable perf hit or 
         // even cause dead locks depending on how 
         // service model handles threads. 
-        object thisLock;
+        private readonly object _thisLock;
 
         #endregion
 
@@ -52,9 +49,9 @@ namespace Microsoft.ServiceModel.Samples
         /// </summary>
         public CustomLifetimeLease(double timeout)
         {
-            this.timeout = timeout;
-            thisLock = new object();
-            this.instanceContextCache = new Dictionary<String, InstanceContext>();
+            _timeout = timeout;
+            _thisLock = new object();
+            _instanceContextCache = new Dictionary<string, InstanceContext>();
         }
 
         #endregion
@@ -63,9 +60,9 @@ namespace Microsoft.ServiceModel.Samples
 
         public bool IsIdle(InstanceContext instanceContext)
         {
-            lock (thisLock)
+            lock (_thisLock)
             {
-                if (isIdle)
+                if (_isIdle)
                 {
                     Utility.WriteMessageToConsole(
                         ResourceHelper.GetString("MsgIdle"));
@@ -76,27 +73,27 @@ namespace Microsoft.ServiceModel.Samples
                         ResourceHelper.GetString("MsgNotIdle"));
                 }
 
-                bool idleCopy = isIdle;
-                isIdle = false;
+                bool idleCopy = _isIdle;
+                _isIdle = false;
                 return idleCopy;
             }
         }
 
-        public void NotifyIdle(InstanceContextIdleCallback callback, 
+        public void NotifyIdle(InstanceContextIdleCallback callback,
             InstanceContext instanceContext)
         {
-            lock (thisLock)
+            lock (_thisLock)
             {
                 ICustomLease customLease =
                     instanceContext.Extensions.Find<ICustomLease>();
 
-                customLease.Callback = callback;                
-                isIdle = customLease.IsIdle;
-                if (isIdle)
+                customLease.Callback = callback;
+                _isIdle = customLease.IsIdle;
+                if (_isIdle)
                 {
                     callback(instanceContext);
-                }                
-            }                    
+                }
+            }
         }
 
         /// <summary>
@@ -112,21 +109,21 @@ namespace Microsoft.ServiceModel.Samples
             //Check if the incoming request has the InstanceContext id it wants to connect with.
             if (message.Headers.FindHeader(CustomHeader.HeaderName, CustomHeader.HeaderNamespace) != -1)
             {
-                String sharingId = message.Headers.GetHeader<string>(CustomHeader.HeaderName, CustomHeader.HeaderNamespace);
-                if (sharingId != null && instanceContextCache.ContainsKey(sharingId))
+                string sharingId = message.Headers.GetHeader<string>(CustomHeader.HeaderName, CustomHeader.HeaderNamespace);
+                if (sharingId != null && _instanceContextCache.ContainsKey(sharingId))
                 {
-                    Utility.WriteMessageToConsole(String.Format(ResourceHelper.GetString("InstanceContextLookup"),sharingId));
+                    Utility.WriteMessageToConsole(string.Format(ResourceHelper.GetString("InstanceContextLookup"), sharingId));
                     //Retrieve the InstanceContext from the map
-                    InstanceContext context = instanceContextCache[sharingId];
+                    InstanceContext context = _instanceContextCache[sharingId];
                     if (context != null)
                     {
                         //Before returning, stop the timer on this InstanceContext
                         CustomLeaseExtension extension = context.Extensions.Find<CustomLeaseExtension>();
-                        Utility.WriteMessageToConsole(String.Format(ResourceHelper.GetString("StopInstanceContextIdleTimer"), sharingId));
+                        Utility.WriteMessageToConsole(string.Format(ResourceHelper.GetString("StopInstanceContextIdleTimer"), sharingId));
                         extension.StopTimer();
 
                         Utility.WriteMessageToConsole(ResourceHelper.GetString("CachedInstanceContextFound"));
-                        return instanceContextCache[sharingId];
+                        return _instanceContextCache[sharingId];
                     }
                 }
             }
@@ -139,7 +136,7 @@ namespace Microsoft.ServiceModel.Samples
         {
             //Look if the Client has given us a unique ID to add to this InstanceContext
             int headerIndex = message.Headers.FindHeader(CustomHeader.HeaderName, CustomHeader.HeaderNamespace);
-            String headerId = null;
+            string headerId = null;
             if (headerIndex != -1)
             {
                 headerId = message.Headers.GetHeader<string>(headerIndex);
@@ -149,31 +146,31 @@ namespace Microsoft.ServiceModel.Samples
             {
                 //If no header was sent by the Client, then create a new one and assign it to this InstanceContext.
                 headerId = Guid.NewGuid().ToString();
-                Utility.WriteMessageToConsole(String.Format(ResourceHelper.GetString("NoHeaderFound")));
+                Utility.WriteMessageToConsole(string.Format(ResourceHelper.GetString("NoHeaderFound")));
             }
 
-            Utility.WriteMessageToConsole(String.Format(ResourceHelper.GetString("InstanceContextAddedToCache"), headerId));
+            Utility.WriteMessageToConsole(string.Format(ResourceHelper.GetString("InstanceContextAddedToCache"), headerId));
 
             //Add this to the Cache
-            this.instanceContextCache[headerId] = instanceContext;
+            _instanceContextCache[headerId] = instanceContext;
 
             //Register the Closing event of this InstancContext so it can be removed from the collection
-            instanceContext.Closing += this.RemoveInstanceContext;
+            instanceContext.Closing += RemoveInstanceContext;
 
             IExtension<InstanceContext> customLeaseExtension =
-                new CustomLeaseExtension(timeout, headerId);
-            instanceContext.Extensions.Add(customLeaseExtension);            
+                new CustomLeaseExtension(_timeout, headerId);
+            instanceContext.Extensions.Add(customLeaseExtension);
         }
 
         public void RemoveInstanceContext(object o, EventArgs args)
         {
             InstanceContext context = o as InstanceContext;
             CustomLeaseExtension extension = context.Extensions.Find<CustomLeaseExtension>();
-            String id = (extension != null) ? extension.InstanceId : null;
-            if (this.instanceContextCache[id] != null)
+            string id = (extension != null) ? extension.InstanceId : null;
+            if (_instanceContextCache[id] != null)
             {
-                Utility.WriteMessageToConsole(String.Format(ResourceHelper.GetString("InstanceContextRemovedFromCache"), id));
-                this.instanceContextCache.Remove(id);
+                Utility.WriteMessageToConsole(string.Format(ResourceHelper.GetString("InstanceContextRemovedFromCache"), id));
+                _instanceContextCache.Remove(id);
             }
         }
         #endregion
