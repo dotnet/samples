@@ -35,7 +35,7 @@ namespace AppSettingStronglyTyped.Test
 
             //Assert
             Assert.IsTrue(success);
-            Assert.AreEqual(errors.Count, 0);
+            Assert.AreEqual(0, errors.Count);
             Assert.AreEqual("MySettingEmpty.generated.cs", appSettingStronglyTyped.ClassNameFile);
             Assert.IsTrue(File.Exists(appSettingStronglyTyped.ClassNameFile));
             Assert.IsTrue(File.ReadLines(appSettingStronglyTyped.ClassNameFile).SequenceEqual(File.ReadLines(".\\Resources\\empty-class.txt")));

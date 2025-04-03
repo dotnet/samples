@@ -1,0 +1,4 @@
+LIBRARY SampleProfiler
+EXPORTS
+    DllGetClassObject             private
+    

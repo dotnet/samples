@@ -1,0 +1,4 @@
+LIBRARY EventPipeProfiler
+EXPORTS
+    DllGetClassObject             private
+    

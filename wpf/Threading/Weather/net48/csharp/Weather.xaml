@@ -1,0 +1,60 @@
+<Window x:Class="SDKSamples.Weather"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Weather Forecast"
+    Height="300"
+    Width="300"
+    >
+    <Window.Resources>
+
+        <Storyboard x:Key="ShowClockFaceStoryboard">
+            <DoubleAnimation Storyboard.TargetName="ClockImage" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.1" />
+            <DoubleAnimation Storyboard.TargetName="ClockImage" Storyboard.TargetProperty="Source.Drawing.Children[1].Geometry.Transform.Angle" From="0" To="360" Duration="0:0:2" RepeatBehavior="Forever" />
+            <DoubleAnimation Storyboard.TargetName="ClockFaceScaleTransform" Storyboard.TargetProperty="ScaleX" From="0" To="1" Duration="0:0:0.5" />
+            <DoubleAnimation Storyboard.TargetName="ClockFaceScaleTransform" Storyboard.TargetProperty="ScaleY" From="0" To="1" Duration="0:0:0.5" />
+        </Storyboard>
+
+        <Storyboard x:Key="HideClockFaceStoryboard" Completed="HideClockFaceStoryboard_Completed">
+            <DoubleAnimation Storyboard.TargetName="ClockImage" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.25" />
+            <DoubleAnimation Storyboard.TargetName="ClockFaceScaleTransform" Storyboard.TargetProperty="ScaleX" From="1" To="0" Duration="0:0:0.25" />
+            <DoubleAnimation Storyboard.TargetName="ClockFaceScaleTransform" Storyboard.TargetProperty="ScaleY" From="1" To="0" Duration="0:0:0.25" />
+        </Storyboard>
+
+        <Storyboard x:Key="ShowWeatherImageStoryboard">
+            <DoubleAnimation Storyboard.TargetName="weatherIndicatorImage" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.1" />
+            <DoubleAnimation Storyboard.TargetName="WeatherIndicatorScaleTransform" Storyboard.TargetProperty="ScaleX" From="0" To="1" Duration="0:0:0.5" />
+            <DoubleAnimation Storyboard.TargetName="WeatherIndicatorScaleTransform" Storyboard.TargetProperty="ScaleY" From="0" To="1" Duration="0:0:0.5" />
+        </Storyboard>
+
+        <Storyboard x:Key="HideWeatherImageStoryboard" Completed="HideWeatherImageStoryboard_Completed">
+            <DoubleAnimation Storyboard.TargetName="weatherIndicatorImage" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.1" />
+        </Storyboard>
+
+        <DrawingImage x:Key="RainingImageSource" Drawing="{StaticResource RainingDrawingResource}" />
+        <DrawingImage x:Key="SunnyImageSource" Drawing="{StaticResource SunnyDrawingResource}" />
+
+    </Window.Resources>
+
+    <Grid Name="tomorrowsWeather" Margin="20,20,20,5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="fetchButton" Content="Fetch Forecast" Click="FetchButton_Click" Grid.Row="0"/>
+        <Image x:Name="ClockImage" RenderTransformOrigin="0.5,0.5" Opacity="0" Stretch="Uniform" Grid.Row="1" Margin="10" Source="{StaticResource ClockDrawing}" >
+            <Image.RenderTransform>
+                <ScaleTransform x:Name="ClockFaceScaleTransform" />
+            </Image.RenderTransform>
+        </Image>
+
+        <Image x:Name="weatherIndicatorImage" Opacity="0" Grid.Row="1" Margin="10" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <ScaleTransform x:Name="WeatherIndicatorScaleTransform" />
+            </Image.RenderTransform>
+        </Image>
+
+        <TextBlock x:Name="weatherText" HorizontalAlignment="Center" Grid.Row="2" />
+    </Grid>
+</Window>

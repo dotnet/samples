@@ -1,10 +1,8 @@
---- 
+---
 languages:
 - csharp
 products:
 - dotnet
-- dotnet-core
-- azure
 - azure-iot-hub
 page_type: sample
 name: "Compare .NET nanoFramework with .NET IoT"

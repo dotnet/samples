@@ -28,5 +28,8 @@ namespace CustomMarshalling
         [LibraryImport(LibName)]
         [return: MarshalUsing(CountElementName = "len")]
         internal static partial ErrorData[] GetErrors(int[] codes, int len);
+
+        [LibraryImport(LibName)]
+        internal static partial void GetErrorCodes(ErrorBuffer buffer, int[] codes);
     }
 }

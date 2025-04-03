@@ -3,11 +3,10 @@ languages:
 - csharp
 products:
 - dotnet
-- dotnet-core
 page_type: sample
 name: ".NET Core unit testing code coverage"
 urlFragment: "unit-testing-code-coverage-cs"
-description: ".NET Core unit testing code coverage and reporting with coverlet, and ReportGenerator."
+description: ".NET Core unit testing code coverage and reporting with coverlet and ReportGenerator."
 ---
 
 # .NET Core unit testing code coverage

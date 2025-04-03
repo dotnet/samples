@@ -1,103 +1,82 @@
-﻿using CommercialRegistration;
+﻿using System.Diagnostics.CodeAnalysis;
+using CommercialRegistration;
 using ConsumerVehicleRegistration;
 using LiveryRegistration;
 
-namespace toll_calculator;
-public class TollCalculator
+namespace Calculators;
+public static class TollCalculator
 {
-    public decimal CalculateToll(object vehicle) =>
+    const decimal CarFare = 2.00m, TaxiFare = 3.50m, BusFare = 5.00m, DeliveryTruckFare = 10.00m;
+
+    public static decimal CalculateToll([AllowNull] object vehicle) =>
         vehicle switch
         {
+            null => throw new ArgumentNullException(nameof(vehicle)),
             Car c => c.Passengers switch
             {
-                0 => 2.00m + 0.5m,
-                1 => 2.0m,
-                2 => 2.0m - 0.5m,
-                _ => 2.00m - 1.0m
+                0 => CarFare + 0.50m,
+                1 => CarFare,
+                2 => CarFare - 0.50m,
+                _ => CarFare - 1.00m
             },
 
             Taxi t => t.Fares switch
             {
-                0 => 3.50m + 1.00m,
-                1 => 3.50m,
-                2 => 3.50m - 0.50m,
-                _ => 3.50m - 1.00m
+                0 => TaxiFare + 1.00m,
+                1 => TaxiFare,
+                2 => TaxiFare - 0.50m,
+                _ => TaxiFare - 1.00m
             },
 
-            Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-            Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
-            Bus b => 5.00m,
+            Bus b => b.Riders / (double)b.Capacity < 0.5d
+                ? BusFare + 2.00m
+                : b.Riders / (double)b.Capacity > 0.9d
+                    ? BusFare - 1.00m
+                    : BusFare,
 
-            DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
-            DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
-            DeliveryTruck t => 10.00m,
+            DeliveryTruck t => t.GrossWeight > 5000
+                ? DeliveryTruckFare + 3.50m
+                : t.GrossWeight < 3000
+                    ? DeliveryTruckFare - 2.00m
+                    : DeliveryTruckFare,
 
-            { } => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
-            null => throw new ArgumentNullException(nameof(vehicle))
+            //{ } => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
+            _ => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle))
         };
 
-    // <SnippetFinalTuplePattern>
-    public decimal PeakTimePremium(DateTime timeOfToll, bool inbound) =>
-        (IsWeekDay(timeOfToll), GetTimeBand(timeOfToll), inbound) switch
-        {
-            (true, TimeBand.Overnight, _) => 0.75m,
-            (true, TimeBand.Daytime, _) => 1.5m,
-            (true, TimeBand.MorningRush, true) => 2.0m,
-            (true, TimeBand.EveningRush, false) => 2.0m,
-            (_, _, _) => 1.0m,
-        };
+        // <SnippetFinalTuplePattern>
+        public static decimal PeakTimePremium(DateTime timeOfToll, bool inbound) =>
+            (IsWeekDay(timeOfToll), GetTimeBand(timeOfToll), inbound) switch
+            {
+                (true, TimeBand.Overnight, _) => 0.75m,
+                (true, TimeBand.Daytime, _) => 1.5m,
+                (true, TimeBand.MorningRush, true) => 2.0m,
+                (true, TimeBand.EveningRush, false) => 2.0m,
+                _ => 1.0m
+            };
     // </SnippetFinalTuplePattern>
 
     // <SnippetPremiumWithoutPattern>
-    public decimal PeakTimePremiumIfElse(DateTime timeOfToll, bool inbound)
+    public static decimal PeakTimePremiumIfElse(DateTime timeOfToll, bool inbound)
     {
         if ((timeOfToll.DayOfWeek == DayOfWeek.Saturday) ||
             (timeOfToll.DayOfWeek == DayOfWeek.Sunday))
         {
             return 1.0m;
         }
-        else
-        {
-            int hour = timeOfToll.Hour;
-            if (hour < 6)
-            {
-                return 0.75m;
-            } else if (hour < 10)
-            {
-                if (inbound)
-                {
-                    return 2.0m;
-                }
-                else
-                {
-                    return 1.0m;
-                }
-            }
-            else if (hour < 16)
-            {
-                return 1.5m;
-            }
-            else if (hour < 20)
-            {
-                if (inbound)
-                {
-                    return 1.0m;
-                }
-                else
-                {
-                    return 2.0m;
-                }
-            }
-            else // Overnight
-            {
-                return 0.75m;
-            }
-        }
+
+        int hour = timeOfToll.Hour;
+        if (hour < 6) { return 0.75m; }
+        if (hour < 10) { return inbound ? 2.0m : 1.0m; }
+        if (hour < 16) { return 1.5m; }
+        if (hour < 20) { return inbound ? 1.0m : 2.0m; }
+        // Overnight
+        return 0.75m;
     }
     // </SnippetPremiumWithoutPattern>
 
     // <SnippetTuplePatternOne>
-    public decimal PeakTimePremiumFull(DateTime timeOfToll, bool inbound) =>
+    public static decimal PeakTimePremiumFull(DateTime timeOfToll, bool inbound) =>
         (IsWeekDay(timeOfToll), GetTimeBand(timeOfToll), inbound) switch
         {
             (true, TimeBand.MorningRush, true) => 2.00m,
@@ -141,7 +120,7 @@ public class TollCalculator
     private static TimeBand GetTimeBand(DateTime timeOfToll) =>
         timeOfToll.Hour switch
         {
-            < 6 or > 19 => TimeBand.Overnight,
+            < 6 or >= 20 => TimeBand.Overnight,
             < 10 => TimeBand.MorningRush,
             < 16 => TimeBand.Daytime,
             _ => TimeBand.EveningRush,

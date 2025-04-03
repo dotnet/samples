@@ -1,4 +1,4 @@
-using System.Reflection;
+﻿using System.Reflection;
 using AdventureSetup;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;

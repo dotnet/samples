@@ -1,4 +1,4 @@
-using GPSTracker.Common;
+﻿using GPSTracker.Common;
 using Microsoft.AspNetCore.SignalR;
 
 namespace GPSTracker;
@@ -12,7 +12,8 @@ internal sealed class RemoteLocationHub : IRemoteLocationHub
 
     public RemoteLocationHub(IHubContext<LocationHub> hub) => _hub = hub;
 
-    // Send a mesage to every client which is connected to the hub
-    public Task BroadcastUpdates(VelocityBatch messages) =>
-        _hub.Clients.All.SendAsync("locationUpdates", messages, CancellationToken.None);
+    // Send a message to every client which is connected to the hub
+    public ValueTask BroadcastUpdates(VelocityBatch messages) =>
+        new(_hub.Clients.All.SendAsync(
+            "locationUpdates", messages, CancellationToken.None));
 }

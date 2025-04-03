@@ -3,7 +3,6 @@ languages:
   - csharp
 products:
   - dotnet
-  - dotnet-core
 page_type: sample
 name: DateTime.Parse examples
 urlFragment: datetime-parse

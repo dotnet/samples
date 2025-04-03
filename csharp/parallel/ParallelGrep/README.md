@@ -3,7 +3,6 @@ languages:
 - csharp
 products:
 - dotnet
-- dotnet-core
 page_type: sample
 name: ".NET Core parallel grep sample"
 urlFragment: "parallel-programming-grep-cs"

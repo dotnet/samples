@@ -2,9 +2,7 @@
 languages:
 - csharp
 products:
-- dotnet-core
-- dotnet-framework
-- windows
+- dotnet
 page_type: sample
 name: ".NET Framework and .NET Core COM interoperability"
 urlFragment: "net-framework-net-core-com-interop"

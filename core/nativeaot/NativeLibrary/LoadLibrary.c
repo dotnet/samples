@@ -5,20 +5,22 @@
 
 //Set this value accordingly to your workspace settings
 #if defined(_WIN32)
-#define PathToLibrary "bin\\Debug\\net7.0\\win-x64\\native\\NativeLibrary.dll"
+#define PathToLibrary "bin\\Release\\net8.0\\win-x64\\publish\\NativeLibrary.dll"
 #elif defined(__APPLE__)
-#define PathToLibrary "./bin/Debug/net7.0/osx-x64/native/NativeLibrary.dylib"
+#define PathToLibrary "./bin/Release/net8.0/osx-x64/publish/NativeLibrary.dylib"
 #else
-#define PathToLibrary "./bin/Debug/net7.0/linux-x64/native/NativeLibrary.so"
+#define PathToLibrary "./bin/Release/net8.0/linux-x64/publish/NativeLibrary.so"
 #endif
 
 #ifdef _WIN32
 #include "windows.h"
 #define symLoad GetProcAddress
+#pragma comment (lib, "ole32.lib")
 #else
 #include "dlfcn.h"
 #include <unistd.h>
 #define symLoad dlsym
+#define CoTaskMemFree free
 #endif
 
 #include <stdlib.h>
@@ -43,15 +45,15 @@ int main()
     }
 
     // Sum two integers
-    int sum = callSumFunc(PathToLibrary, "add", 2, 8);
+    int sum = callSumFunc(PathToLibrary, "aotsample_add", 2, 8);
     printf("The sum is %d \n", sum);
 
     // Concatenate two strings
-    char *sumstring = callSumStringFunc(PathToLibrary, "sumstring", "ok", "ko");
+    char *sumstring = callSumStringFunc(PathToLibrary, "aotsample_sumstring", "ok", "ko");
     printf("The concatenated string is %s \n", sumstring);
 
     // Free string
-    free(sumstring);
+    CoTaskMemFree(sumstring);
 }
 
 void *loadSymbol(char *path, char *funcName)

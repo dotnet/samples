@@ -1,14 +1,14 @@
-using System.Reflection;
+﻿using System.Reflection;
 using ChatRoom;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Orleans.Runtime;
 using Spectre.Console;
 
 using var host = new HostBuilder()
     .UseOrleansClient(clientBuilder =>
     {
-        clientBuilder.UseLocalhostClustering()
+        clientBuilder
+            .UseLocalhostClustering()
             .AddMemoryStreams("chat");
     })
     .Build();
@@ -54,7 +54,7 @@ static async Task ProcessLoopAsync(ClientContext context)
             break;
         }
 
-        var firstTwoCharacters = input[..2];
+        var firstTwoCharacters = input.Length >= 2 ? input[..2] : string.Empty;
         if (firstTwoCharacters is "/n")
         {
             context = context with { UserName = input.Replace("/n", "").Trim() };
@@ -85,7 +85,10 @@ static async Task ProcessLoopAsync(ClientContext context)
             continue;
         }
 
-        await SendMessage(context, input);
+        if (context.IsConnectedToChannel)
+        {
+            await SendMessage(context, input);
+        }
     } while (input is not "/exit");
 }
 
@@ -150,11 +153,18 @@ static void PrintUsage()
 static async Task ShowChannelMembers(ClientContext context)
 {
     var room = context.Client.GetGrain<IChannelGrain>(context.CurrentChannel);
+
+    if (!context.IsConnectedToChannel)
+    {
+        AnsiConsole.MarkupLine("[bold red]You are not connected to any channel[/]");
+        return;
+    }
+
     var members = await room.GetMembers();
 
     AnsiConsole.Write(new Rule($"Members for '{context.CurrentChannel}'")
     {
-        Alignment = Justify.Center,
+        Justification = Justify.Center,
         Style = Style.Parse("darkgreen")
     });
 
@@ -165,7 +175,7 @@ static async Task ShowChannelMembers(ClientContext context)
 
     AnsiConsole.Write(new Rule()
     {
-        Alignment = Justify.Center,
+        Justification = Justify.Center,
         Style = Style.Parse("darkgreen")
     });
 }
@@ -173,11 +183,18 @@ static async Task ShowChannelMembers(ClientContext context)
 static async Task ShowCurrentChannelHistory(ClientContext context)
 {
     var room = context.Client.GetGrain<IChannelGrain>(context.CurrentChannel);
+
+    if (!context.IsConnectedToChannel)
+    {
+        AnsiConsole.MarkupLine("[bold red]You are not connected to any channel[/]");
+        return;
+    }
+
     var history = await room.ReadHistory(1_000);
 
     AnsiConsole.Write(new Rule($"History for '{context.CurrentChannel}'")
     {
-        Alignment = Justify.Center,
+        Justification = Justify.Center,
         Style = Style.Parse("darkgreen")
     });
 
@@ -189,7 +206,7 @@ static async Task ShowCurrentChannelHistory(ClientContext context)
 
     AnsiConsole.Write(new Rule()
     {
-        Alignment = Justify.Center,
+        Justification = Justify.Center,
         Style = Style.Parse("darkgreen")
     });
 }
@@ -221,8 +238,7 @@ static async Task<ClientContext> JoinChannel(
     await AnsiConsole.Status().StartAsync("Joining channel...", async ctx =>
     {
         var room = context.Client.GetGrain<IChannelGrain>(context.CurrentChannel);
-        await room.Join(context.UserName!);
-        var streamId = StreamId.Create("ChatRoom", context.CurrentChannel!);
+        var streamId = await room.Join(context.UserName!);
         var stream =
             context.Client
                 .GetStreamProvider("chat")
@@ -237,6 +253,12 @@ static async Task<ClientContext> JoinChannel(
 
 static async Task<ClientContext> LeaveChannel(ClientContext context)
 {
+    if (!context.IsConnectedToChannel)
+    {
+        AnsiConsole.MarkupLine("[bold red]You are not connected to any channel[/]");
+        return context;
+    }
+
     AnsiConsole.MarkupLine(
         "[bold olive]Leaving channel [/]{0}",
         context.CurrentChannel!);
@@ -244,8 +266,7 @@ static async Task<ClientContext> LeaveChannel(ClientContext context)
     await AnsiConsole.Status().StartAsync("Leaving channel...", async ctx =>
     {
         var room = context.Client.GetGrain<IChannelGrain>(context.CurrentChannel);
-        await room.Leave(context.UserName!);
-        var streamId = StreamId.Create("ChatRoom", context.CurrentChannel!);
+        var streamId = await room.Leave(context.UserName!);
         var stream =
             context.Client
                 .GetStreamProvider("chat")

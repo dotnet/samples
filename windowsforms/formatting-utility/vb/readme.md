@@ -2,16 +2,16 @@
 languages:
 - vb
 products:
-- dotnet-core
-- windows
+- dotnet
+- windows-forms
 page_type: sample
-name: ".NET Core WinForms Formatting Utility (Visual Basic)"
+name: ".NET Core Windows Forms Formatting Utility (Visual Basic)"
 urlFragment: "windowsforms-formatting-utility-vb"
 description: "A .NET Core Windows Forms application written in Visual Basic that allows you to apply standard or custom format strings."
 ---
 # .NET Formatting Utility
 
-The .NET Formating Utility (Formatter.exe) is a .NET Core Windows Forms application written in Visual Basic that allows you to apply standard or custom format strings to either numeric values or date and time values and to determine how they affect the result string.
+The .NET Formatting Utility (Formatter.exe) is a .NET Core Windows Forms application written in Visual Basic that allows you to apply standard or custom format strings to either numeric values or date and time values and to determine how they affect the result string.
 
 ## Sample prerequisites
 

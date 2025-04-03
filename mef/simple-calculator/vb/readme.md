@@ -2,8 +2,7 @@
 languages:
 - vb
 products:
-- dotnet-core
-- windows
+- dotnet
 page_type: sample
 name: "MEF Sample: Simple Calculator (Visual Basic)"
 urlFragment: "simple-calculator-vb"
@@ -28,7 +27,7 @@ To download and run the sample, follow these steps:
 
     2. Navigate to the folder that holds the unzipped sample code, and open the solution (*.sln*) file.
 
-    3. Choose the F5 key, or Ctrl+F5 keys, to run the project.
+    3. Press <kbd>F5</kbd> or <kbd>Ctrl</kbd>+<kbd>F5</kbd> to run the project.
 
 3. From the command line:
 

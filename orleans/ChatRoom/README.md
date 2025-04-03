@@ -14,7 +14,7 @@ description: "An Orleans sample chat room app."
 
 ![A screenshot of the chat client](screenshot.png)
 
-This sample uses [Orleans Streaming](http://dotnet.github.io/orleans/docs/streaming/index.html) to build a basic chat application. In this application, each client can:
+This sample uses [Orleans Streaming](https://learn.microsoft.com/dotnet/orleans/streaming) to build a basic chat application. In this application, each client can:
 
 * Set their name
 * Join and leave a channel
@@ -26,7 +26,7 @@ Each chat channel has a corresponding `ChannelGrain` which is identified by the 
 
 ## Sample prerequisites
 
-This sample is written in C# and targets .NET 7.0. It requires the [.NET 7.0 SDK](https://dotnet.microsoft.com/download/dotnet/7.0) or later.
+This sample is written in C# and targets .NET 9.0. It requires the [.NET 9.0 SDK](https://dotnet.microsoft.com/download/dotnet/9.0) or later.
 
 ## Building the sample
 

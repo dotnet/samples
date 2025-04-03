@@ -3,7 +3,7 @@ languages:
 - csharp
 - cpp
 products:
-- dotnet-core
+- dotnet
 page_type: sample
 name: "Out-of-process COM Server Demo"
 urlFragment: "out-of-process-com-server"

@@ -8,17 +8,17 @@ namespace Orleans.ShoppingCart.Silo.Shared;
 public partial class MainLayout
 {
     const string PrefersDarkThemeKey = "prefers-dark-scheme";
-    
+
     readonly MudTheme _theme = new()
     {
-        Palette = new Palette()
+        Palette = new PaletteLight()
         {
             Tertiary = "#7e6fff",
             DrawerIcon = "#aaa9b9",
             DrawerText = "#aaa9b9",
             DrawerBackground = "#303030"
         },
-        PaletteDark = new Palette()
+        PaletteDark = new PaletteDark()
         {
             Primary = "#7e6fff",
             Tertiary = "#7e6fff",
@@ -85,7 +85,7 @@ public partial class MainLayout
             var (_, message) = tuple;
 
             Snackbar.Add(
-                message, 
+                message,
                 MudSeverity.Success,
                 options => options.CloseAfterNavigation = true);
         });

@@ -41,24 +41,24 @@ namespace SimpleFeedReader.Tests.Services
         }
 
         [Fact]
-        public void Throws_UriFormatException_Given_Malformed_Uri()
+        public async Task Throws_UriFormatException_Given_Malformed_Uri()
         {
             // Arrange
             var feedUrl = "invalid_url";
 
             // Act & Assert
-            Assert.ThrowsAsync<UriFormatException>(async () =>
+            await Assert.ThrowsAsync<UriFormatException>(async () =>
                 await _newsService.GetNews(feedUrl));
         }
 
         [Fact]
-        public void Throws_WebException_Given_Unknown_Host_Uri()
+        public async Task Throws_WebException_Given_Unknown_Host_Uri()
         {
             // Arrange
             var feedUrl = "https://fail/test.rss";
 
             // Act & Assert
-            Assert.ThrowsAsync<WebException>(async () =>
+            await Assert.ThrowsAsync<WebException>(async () =>
                 await _newsService.GetNews(feedUrl));
         }
     }

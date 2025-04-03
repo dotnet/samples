@@ -6,7 +6,7 @@ This folder includes MSBuild examples:
 
    [Please see the Custom Task-Code Generation Readme](./custom-task-code-generation/)
 
-1. Generate a Rest Client API during the build process. The example uses [NSawg](https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag) as a client generator (It is also a code generation example). It is a very common scenario. We are going to create two examples
+1. Generate a Rest Client API during the build process. The example uses [NSwag](https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag) as a client generator (It is also a code generation example). It is a very common scenario. We are going to create two examples
 
    1. Use the pre-defined [MSBuild Exec Task](https://docs.microsoft.com/en-us/dotnet/api/microsoft.build.tasks.exec) to do that.
    1. Use the _MSBuild Custom Task_ derived from [MSBuild Tool Task](https://docs.microsoft.com/dotnet/api/microsoft.build.utilities.tooltask) to do that.

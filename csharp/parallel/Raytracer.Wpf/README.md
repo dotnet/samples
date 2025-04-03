@@ -3,7 +3,6 @@ languages:
 - csharp
 products:
 - dotnet
-- dotnet-core
 - windows-wpf
 page_type: sample
 name: ".NET Core parallel interactive reversi game"

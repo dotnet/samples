@@ -19,7 +19,7 @@ public class Secrets
                 "Must provide a dataConnectionString", nameof(dataConnectionString));
         EventHubConnectionString = eventHubConnectionString
             ?? throw new ArgumentException(
-                "Must provide am eventHubConnectionString", nameof(eventHubConnectionString));
+                "Must provide an eventHubConnectionString", nameof(eventHubConnectionString));
     }
 
     public static Secrets? LoadFromFile(string filename = "Secrets.json")

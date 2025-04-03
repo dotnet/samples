@@ -3,7 +3,7 @@ languages:
 - csharp
 - cpp
 products:
-- dotnet-core
+- dotnet
 page_type: sample
 name: "C++/CLI Library Demo"
 urlFragment: "cpp-cli-library"

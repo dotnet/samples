@@ -79,11 +79,20 @@ static void MarshalErrorData()
 
     // Marshals ErrorData using ErrorDataMarshaller
     Console.WriteLine($"--- {nameof(NativeLib.GetErrors)}: uses {nameof(ErrorDataMarshaller)}.{nameof(ErrorDataMarshaller.Out)}");
-    int[] codes = new int[] { -3, 2, 5 };
+    int[] codes = new int[] { -3, 2, 5, 12 };
     ErrorData[] errors = NativeLib.GetErrors(codes, codes.Length);
     foreach (ErrorData error in errors)
     {
         error.Print();
         Console.WriteLine();
+    }
+
+    ErrorBuffer errorBuffer = new();
+    errors.AsSpan().CopyTo(errorBuffer);
+    int[] retrievedCodes = new int[4];
+    NativeLib.GetErrorCodes(errorBuffer, retrievedCodes);
+    foreach (int code in retrievedCodes)
+    {
+        Console.WriteLine($"Code from error data: {code}");
     }
 }

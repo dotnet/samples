@@ -39,7 +39,7 @@ var notifier = GrainFactory.GetGrain<IPushNotifierGrain>(0);
 
 ## Sample prerequisites
 
-This sample is written in C# and targets .NET 7.0. It requires the [.NET 7.0 SDK](https://dotnet.microsoft.com/download/dotnet/7.0) or later.
+This sample is written in C# and targets .NET 8.0. It requires the [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) or later.
 
 ## Building the sample
 
@@ -75,3 +75,21 @@ dotnet run --project GPSTracker.FakeDeviceGateway
 ```
 
 Dots will appear on the map in the Web browser and begin moving randomly around the area.
+
+## Orleans observability
+
+If you're interested in observability, this sample includes some optional logging, metrics, and distributed tracing.
+
+```docker
+docker run -p 9090:9090 -v ..\dotnet\samples\GPSTracker\prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus
+```
+
+```docker
+docker run -d --name jaeger -e COLLECTOR_ZIPKIN_HOST_PORT=:9411 -p 5775:5775/udp -p 6831:6831/udp -p 6832:6832/udp -p 5778:5778 -p 16686:16686 -p 14268:14268 -p 14250:14250 -p 9411:9411 jaegertracing/all-in-one:1.22
+```
+
+OR zipkin:
+
+```docker
+docker run -p 9411:9411 openzipkin/zipkin
+```

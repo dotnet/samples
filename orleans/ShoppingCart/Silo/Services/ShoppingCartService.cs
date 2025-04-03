@@ -23,7 +23,7 @@ public sealed class ShoppingCartService : BaseClusterService
 
     public Task EmptyCartAsync() =>
         TryUseGrain<IShoppingCartGrain, Task>(
-            cart => cart.EmptyCartAsync(), 
+            cart => cart.EmptyCartAsync(),
             () => Task.CompletedTask);
 
     public Task<bool> AddOrUpdateItemAsync(int quantity, ProductDetails product) =>

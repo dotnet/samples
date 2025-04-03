@@ -7,11 +7,10 @@ open MathService
 
 [<Test>]
 let ``My test`` () =
-    Assert.True(true)
+    Assert.That(true, Is.True)
 
 //[<Test>]
-//let ``Fail every time`` () = Assert.True(false)
-
+//let ``Fail every time`` () = Assert.That(false, Is.True)
 
 [<Test>]
 let ``Sequence of Evens returns empty collection`` () =

@@ -1,0 +1,6 @@
+<Project>
+  <!-- Shared properties -->
+  <PropertyGroup>
+    <DefaultTargetFramework>net8.0</DefaultTargetFramework>
+  </PropertyGroup>
+</Project>

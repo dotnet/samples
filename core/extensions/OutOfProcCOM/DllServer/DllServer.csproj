@@ -3,7 +3,7 @@
   <Import Project="..\Contract\Server.Contract.props" />
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net7.0-windows</TargetFramework>
 
     <!-- Indicate the assembly is providing a COM server -->
     <EnableComHosting>true</EnableComHosting>

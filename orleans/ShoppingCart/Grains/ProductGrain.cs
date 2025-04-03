@@ -3,20 +3,18 @@
 
 namespace Orleans.ShoppingCart.Grains;
 
-internal class ProductGrain : Grain, IProductGrain
-{
-    private readonly IPersistentState<ProductDetails> _product;
-
-    public ProductGrain(
-        [PersistentState(
+internal class ProductGrain(
+    [PersistentState(
             stateName: "Product",
             storageName: "shopping-cart")]
-        IPersistentState<ProductDetails> product) => _product = product;
+        IPersistentState<ProductDetails> product) : Grain, IProductGrain
+{
+    private readonly IPersistentState<ProductDetails> _product = product;
 
-    Task<int> IProductGrain.GetProductAvailabilityAsync() => 
+    Task<int> IProductGrain.GetProductAvailabilityAsync() =>
         Task.FromResult(_product.State.Quantity);
 
-    Task<ProductDetails> IProductGrain.GetProductDetailsAsync() => 
+    Task<ProductDetails> IProductGrain.GetProductDetailsAsync() =>
         Task.FromResult(_product.State);
 
     Task IProductGrain.ReturnProductAsync(int quantity) =>

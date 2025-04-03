@@ -1,69 +1,27 @@
-﻿using System;
+﻿namespace DelegatesAndEvents;
 
-namespace DelegatesAndEvents
+public enum Severity
 {
-
-    // Logger implementation two
-    // <SnippetSeverity>
-    public enum Severity
-    {
-        Verbose,
-        Trace,
-        Information,
-        Warning,
-        Error,
-        Critical
-    }
-    // </SnippetSeverity>
-
-    // <SnippetLoggerFinal>
-    public static class Logger
-    {
-        public static Action<string> WriteMessage;
-
-        public static Severity LogLevel { get; set; } = Severity.Warning;
-
-        public static void LogMessage(Severity s, string component, string msg)
-        {
-            if (s < LogLevel)
-                return;
-
-            var outputMsg = $"{DateTime.Now}\t{s}\t{component}\t{msg}";
-            WriteMessage(outputMsg);
-        }
-    }
-    // </SnippetLoggerFinal>
+    Verbose,
+    Trace,
+    Information,
+    Warning,
+    Error,
+    Critical
 }
 
-namespace ImplementationOne
+public static class Logger
 {
-    // <SnippetFirstImplementation>
-    public static class Logger
+    public static Action<string>? WriteMessage;
+
+    public static Severity LogLevel { get; set; } = Severity.Warning;
+
+    public static void LogMessage(Severity s, string component, string msg)
     {
-        public static Action<string> WriteMessage;
+        if ((s < LogLevel) || (WriteMessage is null))
+            return;
 
-        public static void LogMessage(string msg)
-        {
-            WriteMessage(msg);
-        }
+        var outputMsg = $"{DateTime.Now}\t{s}\t{component}\t{msg}";
+        WriteMessage(outputMsg);
     }
-    // </SnippetFirstImplementation>
-}
-
-namespace ImplementationTwo
-{
-    using DelegatesAndEvents;
-
-    // <SnippetLoggerTwo>
-    public static class Logger
-    {
-        public static Action<string> WriteMessage;
-
-        public static void LogMessage(Severity s, string component, string msg)
-        {
-            var outputMsg = $"{DateTime.Now}\t{s}\t{component}\t{msg}";
-            WriteMessage(outputMsg);
-        }
-    }
-    // </SnippetLoggerTwo>
 }

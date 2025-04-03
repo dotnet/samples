@@ -31,8 +31,8 @@ namespace Microsoft.Samples.PortSharing
          Console.Write("Enter the service number to test: ");
          ushort salt = ushort.Parse(Console.ReadLine());
          string address = String.Format("net.tcp://localhost:9000/calculator/{0}", salt);
-         ChannelFactory<ICalculator> factory = new ChannelFactory<ICalculator>(new NetTcpBinding());
-         ICalculator proxy = factory.CreateChannel(new EndpointAddress(address));
+         ChannelFactory<ICalculator> factory = new ChannelFactory<ICalculator>(new NetTcpBinding(), new EndpointAddress(address));
+         ICalculator proxy = factory.CreateChannel();
          
          // Call the Add service operation.
          double value1 = 100.00D; double value2 = 15.99D;
