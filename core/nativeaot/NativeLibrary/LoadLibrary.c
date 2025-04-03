@@ -33,6 +33,8 @@
 int callSumFunc(char *path, char *funcName, int a, int b);
 char *callSumStringFunc(char *path, char *funcName, char *a, char *b);
 
+void* loadSymbol(char *path, char *funcName);
+
 int main()
 {
     // Check if the library file exists
@@ -54,25 +56,7 @@ int main()
     CoTaskMemFree(sumstring);
 }
 
-int callSumFunc(char *path, char *funcName, int firstInt, int secondInt)
-{
-    // Call sum function defined in C# shared library
-    #ifdef _WIN32
-        HINSTANCE handle = LoadLibraryA(path);
-    #else
-        void *handle = dlopen(path, RTLD_LAZY);
-    #endif
-
-    typedef int(*myFunc)(int,int);
-    myFunc MyImport = (myFunc)symLoad(handle, funcName);
-
-    int result = MyImport(firstInt, secondInt);
-
-    // NOTE: Native AOT libraries do not support unloading
-    return result;
-}
-
-char *callSumStringFunc(char *path, char *funcName, char *firstString, char *secondString)
+void *loadSymbol(char *path, char *funcName)
 {
     // Library loading
     #ifdef _WIN32
@@ -80,17 +64,45 @@ char *callSumStringFunc(char *path, char *funcName, char *firstString, char *sec
     #else
         void *handle = dlopen(path, RTLD_LAZY);
     #endif
+    if (!handle)
+    {
+#ifdef _WIN32
+        int errorCode = GetLastError();
+        printf("Failed to load library at specified path. Error code: %d\n", errorCode);
+#else
+        puts("Failed to load library at specified path");
+#endif
+        return NULL;
+    }
 
     // Declare a typedef
     typedef char *(*myFunc)(char*,char*);
 
     // Import Symbol named funcName
-    myFunc MyImport = (myFunc)symLoad(handle, funcName);
+
+    // NativeAOT libraries do not support unloading
+    // See https://github.com/dotnet/corert/issues/7887
+    return symLoad(handle, funcName);
+}
+
+int callSumFunc(char *path, char *funcName, int firstInt, int secondInt)
+{
+    typedef int(*myFunc)(int,int);
+    myFunc MyImport = (myFunc)loadSymbol(path, funcName);
+
+    int result = MyImport(firstInt, secondInt);
+    return result;
+}
+
+char *callSumStringFunc(char *path, char *funcName, char *firstString, char *secondString)
+{
+    // Declare a typedef
+    typedef char *(*myFunc)(char*,char*);
+
+    // Import Symbol named funcName
+    myFunc MyImport = (myFunc)loadSymbol(path, funcName);
 
     // The C# function will return a pointer
     char *result = MyImport(firstString, secondString);
-
-    // CoreRT libraries do not support unloading
-    // See https://github.com/dotnet/corert/issues/7887
     return result;
 }
