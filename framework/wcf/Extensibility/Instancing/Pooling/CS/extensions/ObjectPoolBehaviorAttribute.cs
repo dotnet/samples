@@ -13,20 +13,20 @@ namespace Microsoft.ServiceModel.Samples
     // used to add pooling behavior to the service instance.
     public sealed class ObjectPoolingAttribute : Attribute, IServiceBehavior
     {
-        const int defaultMaxPoolSize = 32;
-        const int defaultMinPoolSize = 0;
-        int maxPoolSize = defaultMaxPoolSize;
-        int minPoolSize = defaultMinPoolSize;
+        private const int DefaultMaxPoolSize = 32;
+        private const int DefaultMinPoolSize = 0;
+        private int _maxPoolSize = DefaultMaxPoolSize;
+        private int _minPoolSize = DefaultMinPoolSize;
 
         // If the service does not already have a ServiceThrottlingBehavior, we will create
         // one and forward all IServiceBehavior calls to it.  This is used to implement
         // MaxPoolSize.
-        ServiceThrottlingBehavior throttlingBehavior = null;
+        private ServiceThrottlingBehavior throttlingBehavior = null;
 
         // Gets or sets the maximum number of objects that can be created in the pool
         public int MaxPoolSize
         {
-            get { return maxPoolSize; }
+            get => _maxPoolSize;
             set
             {
                 if (value < 0)
@@ -34,14 +34,14 @@ namespace Microsoft.ServiceModel.Samples
                     throw new ArgumentException(ResourceHelper.GetString("ExNegativePoolSize"));
                 }
 
-                this.maxPoolSize = value;
+                _maxPoolSize = value;
             }
         }
 
         // Gets or sets the minimum number of objects that can be created in the pool
         public int MinPoolSize
         {
-            get { return minPoolSize; }
+            get => _minPoolSize;
             set
             {
                 if (value < 0)
@@ -49,7 +49,7 @@ namespace Microsoft.ServiceModel.Samples
                     throw new ArgumentException(ResourceHelper.GetString("ExNegativePoolSize"));
                 }
 
-                this.minPoolSize = value;
+                _minPoolSize = value;
             }
         }
 
@@ -58,9 +58,9 @@ namespace Microsoft.ServiceModel.Samples
         void IServiceBehavior.AddBindingParameters(ServiceDescription description, ServiceHostBase serviceHostBase, Collection<ServiceEndpoint> endpoints, BindingParameterCollection parameters)
         {
             // Forward the call if we created a ServiceThrottlingBehavior.
-            if (this.throttlingBehavior != null)
+            if (throttlingBehavior != null)
             {
-                ((IServiceBehavior)this.throttlingBehavior).AddBindingParameters(description, serviceHostBase, endpoints, parameters);
+                ((IServiceBehavior)throttlingBehavior).AddBindingParameters(description, serviceHostBase, endpoints, parameters);
             }
         }
 
@@ -68,15 +68,15 @@ namespace Microsoft.ServiceModel.Samples
         {
             // Create an instance of the ObjectPoolInstanceProvider.
             ObjectPoolingInstanceProvider instanceProvider = new ObjectPoolingInstanceProvider(description.ServiceType,
-                                                                                               minPoolSize);
+                                                                                               _minPoolSize);
 
             // Forward the call if we created a ServiceThrottlingBehavior.
-            if (this.throttlingBehavior != null)
+            if (throttlingBehavior != null)
             {
-                ((IServiceBehavior)this.throttlingBehavior).ApplyDispatchBehavior(description, serviceHostBase);
+                ((IServiceBehavior)throttlingBehavior).ApplyDispatchBehavior(description, serviceHostBase);
             }
 
-            // In case there was already a ServiceThrottlingBehavior (this.throttlingBehavior==null),
+            // In case there was already a ServiceThrottlingBehavior (throttlingBehavior==null),
             // it should have initialized a single ServiceThrottle on all ChannelDispatchers.  As
             // we loop through the ChannelDispatchers, we verify that and modify the ServiceThrottle
             // to guard MaxPoolSize.
@@ -89,7 +89,7 @@ namespace Microsoft.ServiceModel.Samples
                 {
                     // Make sure there is exactly one throttle used by all endpoints.
                     // If there were others, we could not enforce MaxPoolSize.
-                    if ((this.throttlingBehavior == null) && (this.maxPoolSize != Int32.MaxValue))
+                    if ((throttlingBehavior == null) && (_maxPoolSize != int.MaxValue))
                     {
                         if (throttle == null)
                         {
@@ -115,15 +115,15 @@ namespace Microsoft.ServiceModel.Samples
 
             // Set the MaxConcurrentInstances to limit the number of items that will
             // ever be requested from the pool.
-            if ((throttle != null) && (throttle.MaxConcurrentInstances > this.maxPoolSize))
+            if ((throttle != null) && (throttle.MaxConcurrentInstances > _maxPoolSize))
             {
-                throttle.MaxConcurrentInstances = this.maxPoolSize;
+                throttle.MaxConcurrentInstances = _maxPoolSize;
             }
         }
 
         void IServiceBehavior.Validate(ServiceDescription description, ServiceHostBase serviceHostBase)
         {
-            if (this.maxPoolSize < this.minPoolSize)
+            if (_maxPoolSize < _minPoolSize)
             {
                 throw new InvalidOperationException(ResourceHelper.GetString("ExMinLargerThanMax"));
             }
@@ -141,18 +141,18 @@ namespace Microsoft.ServiceModel.Samples
             // initializes the ServiceThrottle property of the endpoints.  If there is
             // no ServiceThrottlingBehavior, we will create one and run it ourselves.
             // If there is one, we validate that it comes before us.
-            int throttlingIndex = this.GetBehaviorIndex(description, typeof(ServiceThrottlingBehavior));
+            int throttlingIndex = GetBehaviorIndex(description, typeof(ServiceThrottlingBehavior));
             if (throttlingIndex == -1)
             {
-                this.throttlingBehavior = new ServiceThrottlingBehavior();
-                this.throttlingBehavior.MaxConcurrentInstances = this.MaxPoolSize;
+                throttlingBehavior = new ServiceThrottlingBehavior();
+                throttlingBehavior.MaxConcurrentInstances = MaxPoolSize;
 
                 // Forward the call if we created a ServiceThrottlingBehavior.
-                ((IServiceBehavior)this.throttlingBehavior).Validate(description, serviceHostBase);
+                ((IServiceBehavior)throttlingBehavior).Validate(description, serviceHostBase);
             }
             else
             {
-                int poolingIndex = this.GetBehaviorIndex(description, typeof(ObjectPoolingAttribute));
+                int poolingIndex = GetBehaviorIndex(description, typeof(ObjectPoolingAttribute));
                 if (poolingIndex < throttlingIndex)
                 {
                     throw new InvalidOperationException(ResourceHelper.GetString("ExThrottleBeforePool"));
@@ -162,9 +162,9 @@ namespace Microsoft.ServiceModel.Samples
 
         #endregion
 
-        int GetBehaviorIndex(ServiceDescription description, Type behaviorType)
+        private int GetBehaviorIndex(ServiceDescription description, Type behaviorType)
         {
-            for (int i=0; i<description.Behaviors.Count; i++)
+            for (int i = 0; i < description.Behaviors.Count; i++)
             {
                 if (behaviorType.IsInstanceOfType(description.Behaviors[i]))
                 {
