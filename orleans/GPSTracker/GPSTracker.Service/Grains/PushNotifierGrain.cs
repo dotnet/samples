@@ -7,42 +7,44 @@ namespace GPSTracker.GrainImplementation;
 
 [Reentrant]
 [StatelessWorker(maxLocalWorkers: 12)]
-public class PushNotifierGrain : Grain, IPushNotifierGrain
+public sealed class PushNotifierGrain(ILogger<PushNotifierGrain> logger) : Grain, IPushNotifierGrain, IDisposable
 {
     private readonly Queue<VelocityMessage> _messageQueue = new();
-    private readonly ILogger<PushNotifierGrain> _logger;
     private List<(SiloAddress Host, IRemoteLocationHub Hub)> _hubs = new();
-    public PushNotifierGrain(ILogger<PushNotifierGrain> logger) => _logger = logger;
     private Task _flushTask = Task.CompletedTask;
+    private IGrainTimer? _flushTimer;
+    private IGrainTimer? _refreshTimer;
 
     public override async Task OnActivateAsync(CancellationToken cancellationToken)
     {
         // Set up a timer to regularly flush the message queue
-        RegisterTimer(
-            _ =>
-            {
-                Flush();
-                return Task.CompletedTask;
-            },
-            null,
-            TimeSpan.FromMilliseconds(15),
-            TimeSpan.FromMilliseconds(15));
+        _flushTimer = this.RegisterGrainTimer(
+            ct => Flush(),
+            dueTime: TimeSpan.FromMilliseconds(15),
+            period: TimeSpan.FromMilliseconds(15));
 
         // Set up a timer to regularly refresh the hubs, to respond to azure infrastructure changes
         await RefreshHubs();
-        RegisterTimer(
-            asyncCallback: async _ => await RefreshHubs(),
-            state: null,
+
+        _refreshTimer = this.RegisterGrainTimer(
+            async _ => await RefreshHubs(),
             dueTime: TimeSpan.FromSeconds(60),
             period: TimeSpan.FromSeconds(60));
 
         await base.OnActivateAsync(cancellationToken);
     }
 
+
     public override async Task OnDeactivateAsync(DeactivationReason deactivationReason, CancellationToken cancellationToken)
     {
         await Flush();
         await base.OnDeactivateAsync(deactivationReason, cancellationToken);
+    }
+
+    public void Dispose()
+    {
+        _flushTimer?.Dispose();
+        _refreshTimer?.Dispose();
     }
 
     private async ValueTask RefreshHubs()
@@ -77,15 +79,13 @@ public class PushNotifierGrain : Grain, IPushNotifierGrain
             {
                 // Send all messages to all SignalR hubs
                 var messagesToSend = new List<VelocityMessage>(Math.Min(_messageQueue.Count, MaxMessagesPerBatch));
-                while (messagesToSend.Count < MaxMessagesPerBatch && _messageQueue.TryDequeue(out VelocityMessage? msg)) messagesToSend.Add(msg);
-
-                var tasks = new List<Task>(_hubs.Count);
-                var batch = new VelocityBatch(messagesToSend);
-
-                foreach ((SiloAddress Host, IRemoteLocationHub Hub) hub in _hubs)
+                while (messagesToSend.Count < MaxMessagesPerBatch && _messageQueue.TryDequeue(out VelocityMessage? msg))
                 {
-                    tasks.Add(BroadcastUpdates(hub.Host, hub.Hub, batch, _logger));
+                    messagesToSend.Add(msg);
                 }
+
+                var batch = new VelocityBatch(messagesToSend);
+                var tasks = _hubs.Select(hub => BroadcastUpdates(hub.Host, hub.Hub, batch, logger));
 
                 await Task.WhenAll(tasks);
             }
