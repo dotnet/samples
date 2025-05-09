@@ -17,8 +17,12 @@
     <DnneWindowsExportsDef>Server.def</DnneWindowsExportsDef>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(PublishAOT)' == 'true'">
+    <DnneBuildExports>false</DnneBuildExports>
+  </PropertyGroup>
+
   <ItemGroup>
-    <PackageReference Include="DNNE" Version="2.0.7" Condition="'$(PublishAOT)' != 'true'"/>
+    <PackageReference Include="DNNE" Version="2.0.7" />
     <PackageReference Include="Microsoft.Win32.Registry" Version="5.0.0" />
     <!-- When publishing AOT, use our own .def file to export the COM methods as PRIVATE. The Windows native linker (Link.exe) warns when exported COM methods are not PRIVATE. -->
     <LinkerArg Include="/DEF:&quot;Server.def&quot;" Condition="'$(PublishAOT)' == 'true'"/>
