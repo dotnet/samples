@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
-    <!-- Uncomment to publish as a native executable -->
+    <!-- Uncomment to publish the project as a single native .dll -->
     <!-- <PublishAOT>true</PublishAOT> -->
   </PropertyGroup>
 
@@ -15,9 +15,12 @@
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <!-- Use our own .def file to export the COM methods as PRIVATE. The Windows native linker (Link.exe) warns when exported COM methods are not PRIVATE. -->
     <DnneWindowsExportsDef>Server.def</DnneWindowsExportsDef>
+    <!-- Copy DNNE .dll and header files to the output directory -->
+    <DnneAddGeneratedBinaryToProject>true</DnneAddGeneratedBinaryToProject>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(PublishAOT)' == 'true'">
+    <!-- Don't build the DNNE .dll when publishing a native .dll with Native AOT. -->
     <DnneBuildExports>false</DnneBuildExports>
   </PropertyGroup>
 
