@@ -25,11 +25,11 @@ This sample supports NativeAOT and standard CoreCLR deployments. The native meth
 
 ### NativeAOT
 
-Build the Native AOT binaries by running `dotnet publish -r <RID>` where `<RID>` is the RuntimeIdentifier for your OS, for example `win-x64`. The projects will copy the binaries to the `OutputFiles\` directory. After publishing, use `regsvr32.exe` to register `Server.dll` with COM by running run `regsvr32.exe .\OutputFiles\Server\Server.dll`. Then, run the client application `.\OutputFiles\Client\Client.exe` and observe the output as it activates and uses a COM instance from `Server.dll`. When you are finished, unregister the server by running `regsvr32.exe .\OutputFiles\Server\Server.dll`.
+Build the Native AOT binaries by running `dotnet publish -r <RID>` where `<RID>` is the RuntimeIdentifier for your OS, for example `win-x64`. The projects will copy the binaries to the `OutputFiles\` directory. After publishing, use `regsvr32.exe` to register `Server.dll` with COM by running run `regsvr32.exe .\OutputFiles\Server\Server.dll`. Then, run the client application `.\OutputFiles\Client\Client.exe` and observe the output as it activates and uses a COM instance from `Server.dll`. When you are finished, unregister the server by running `regsvr32.exe /u .\OutputFiles\Server\Server.dll`.
 
 ### CoreCLR
 
-Build the projects by running `dotnet publish`. The projects will copy the binaries to the `OutputFiles\` directory. After publishing, use `regsvr32.exe` to register the native binary produced by DNNE, `ServerNE.dll` by running `regsvr32.exe .\OutputFiles\Server\ServerNE.dll`. `ServerNE.dll` will start the .NET runtime and call the exported methods in the managed `Server.dll` which register the server with COM. Then, run the client application `.\OutputFiles\Client\Client.exe` and observe the output as it activates and uses a COM instance from `ServerNE.dll`. When you are finished, unregister the server by running `regsvr32.exe .\OutputFiles\Server\ServerNE.dll`.
+Build the projects by running `dotnet publish`. The projects will copy the binaries to the `OutputFiles\` directory. After publishing, use `regsvr32.exe` to register the native binary produced by DNNE, `ServerNE.dll`, by running `regsvr32.exe .\OutputFiles\Server\ServerNE.dll`. `ServerNE.dll` will start the .NET runtime and call the exported methods in the managed `Server.dll` which register the server with COM. Then, run the client application `.\OutputFiles\Client\Client.exe` and observe the output as it activates and uses a COM instance from `ServerNE.dll`. When you are finished, unregister the server by running `regsvr32.exe /u .\OutputFiles\Server\ServerNE.dll`.
 
 ## See also
 
