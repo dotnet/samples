@@ -1,7 +1,7 @@
-namespace System.Collections.Generic;
+﻿namespace System.Collections.Generic;
 
 /// <summary>
-/// Helper extensions for enumerables.
+/// Helper extensions for <see cref="IEnumerable{T}">.
 /// </summary>
 public static class EnumerableExtensions
 {
