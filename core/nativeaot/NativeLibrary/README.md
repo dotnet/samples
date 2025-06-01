@@ -87,7 +87,7 @@ After the native library is built, the above C# `Add` method will be exported as
 * Exported methods cannot be called from regular managed C# code, an exception will be thrown.
 * Exported methods cannot use regular C# exception handling, they should return error codes instead.
 
-The sample [source code](Class1.cs) demonstrates common techniques used to stay within these limitations.
+The sample [source code](LibraryFunctions.cs) demonstrates common techniques used to stay within these limitations.
 
 ## Building static libraries
 
