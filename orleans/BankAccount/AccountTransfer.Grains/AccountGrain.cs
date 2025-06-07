@@ -34,7 +34,7 @@ public sealed class AccountGrain : Grain, IAccountGrain
                     $" This account has {balance.Value} credits.");
             }
 
-            balance.Value += amount;
+            balance.Value -= amount;
         });
 
     public Task<int> GetBalance() =>
