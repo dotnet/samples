@@ -1,16 +1,15 @@
 ﻿using AccountTransfer.Interfaces;
-using Orleans.Concurrency;
 using Orleans.Transactions.Abstractions;
 
 namespace AccountTransfer.Grains;
 
 [GenerateSerializer]
-public record class Balance
+public class Balance
 {
+    [Id(0)] 
     public int Value { get; set; } = 1_000;
 }
 
-[Reentrant]
 public sealed class AccountGrain : Grain, IAccountGrain
 {
     private readonly ITransactionalState<Balance> _balance;
