@@ -111,7 +111,7 @@ public static class LoadDriver
 
     public static double NextDouble(double min, double max) => Random.NextDouble() * (max - min) + min;
 
-    private class Model
+    private sealed class Model
     {
         public Stopwatch TimeSinceLastUpdate { get; } = Stopwatch.StartNew();
         public int DeviceId { get; set; }
