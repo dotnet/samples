@@ -1,16 +1,15 @@
 ﻿using AccountTransfer.Interfaces;
-using Orleans.Concurrency;
 using Orleans.Transactions.Abstractions;
 
 namespace AccountTransfer.Grains;
 
-[GenerateSerializer, Immutable]
-public record class Balance
+[GenerateSerializer]
+public class Balance
 {
-    public int Value { get; init; } = 1_000;
+    [Id(0)] 
+    public int Value { get; set; } = 1_000;
 }
 
-[Reentrant]
 public sealed class AccountGrain : Grain, IAccountGrain
 {
     private readonly ITransactionalState<Balance> _balance;
@@ -21,7 +20,7 @@ public sealed class AccountGrain : Grain, IAccountGrain
 
     public Task Deposit(int amount) =>
         _balance.PerformUpdate(
-            balance => balance with { Value = balance.Value + amount });
+            balance => balance.Value += amount);
 
     public Task Withdraw(int amount) =>
         _balance.PerformUpdate(balance =>
@@ -34,7 +33,7 @@ public sealed class AccountGrain : Grain, IAccountGrain
                     $" This account has {balance.Value} credits.");
             }
 
-            return balance with { Value = balance.Value + amount };
+            balance.Value -= amount;
         });
 
     public Task<int> GetBalance() =>
