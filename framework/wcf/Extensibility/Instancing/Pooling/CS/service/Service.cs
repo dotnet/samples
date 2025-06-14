@@ -1,7 +1,6 @@
 ﻿//  Copyright (c) Microsoft Corporation.  All Rights Reserved.
 
 using System;
-using System.ServiceModel.Channels;
 using System.ServiceModel;
 using System.Threading;
 
