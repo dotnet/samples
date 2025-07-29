@@ -6,12 +6,12 @@ products:
 page_type: sample
 name: "Windows Forms Datagrid Sample: FlexGrid Showcase (C#)"
 urlFragment: "winforms-flexgridshowcase-cs"
-description: ".NET 8.0 Windows Forms application that demonstrates how to use ComponentOne FlexGrid"
+description: ".NET 6.0 Windows Forms application that demonstrates how to use GrapeCity FlexGrid"
 ---
 
 # FlexGrid Showcase Demo
 
-This sample is a .NET 8.0 Windows Forms application that demonstrates how to use ComponentOne [`FlexGrid`](https://developer.mescius.com/componentone/winforms-ui-controls/flexgrid-winforms-data-grid), a Windows Forms Datagrid control.
+This sample is a .NET 6.0 Windows Forms application that demonstrates how to use GrapeCity [`FlexGrid`](https://www.grapecity.com/componentone/winforms-ui-controls/flexgrid-winforms-data-grid), a Windows Forms Datagrid control.
 
 The sample shows different operations with `FlexGrid`:
 
@@ -23,7 +23,7 @@ The sample shows different operations with `FlexGrid`:
 
 ![Screenshot with grouped data](../images/screenshot2.png)
 
-There are several ComponentOne packages used in the sample:
+There are several GrapeCity packages used in the sample:
 
 * [`FlexGrid`](https://www.nuget.org/packages/C1.Win.FlexGrid)
 * [`Ribbon`](https://www.nuget.org/packages/C1.Win.Ribbon)
@@ -31,17 +31,17 @@ There are several ComponentOne packages used in the sample:
 * [`SuperTooltip`](https://www.nuget.org/packages/C1.Win.SuperTooltip)
 * [`Themes`](https://www.nuget.org/packages/C1.Win.Themes)
 
-For more code examples and tutorials see the [documentation](https://developer.mescius.com/componentone/docs/win/online-flexgrid/overview.html).
+For more code examples and tutorials see the [documentation](https://www.grapecity.com/componentone/docs/win/online-flexgrid/overview.html).
 
 Mentioned controls and packages require a valid license for runtime testing and distribution.
 
 Also there is 30-day trial for evaluation purposes.
 
-For more licensing information visit [developer.mescius.com/componentone/licensing](https://developer.mescius.com/componentone/licensing).
+For more licensing information visit [www.grapecity.com/componentone/licensing](https://www.grapecity.com/componentone/licensing).
 
 ## Sample prerequisites
 
-This sample is written in C# and targets .NET 8.0 running on Windows. It requires the [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0).
+This sample is written in C# and targets .NET 6.0 running on Windows. It requires the [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0).
 
 ## Building the sample
 
