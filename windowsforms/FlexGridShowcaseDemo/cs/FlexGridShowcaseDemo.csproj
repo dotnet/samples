@@ -2,12 +2,12 @@
   
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationIcon>App.ico</ApplicationIcon>
-    <Company>MESCIUS inc.</Company>
-    <Copyright>©️ MESCIUS inc. All rights reserved.</Copyright>
+    <Company>GrapeCity, Inc.</Company>
+    <Copyright>(c) GrapeCity, Inc. All rights reserved.</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,12 +15,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="C1.Win" Version="8.0.20242.700" />
-    <PackageReference Include="C1.Win.FlexGrid" Version="8.0.20242.700" />
-    <PackageReference Include="C1.Win.Ribbon" Version="8.0.20242.700" />
-    <PackageReference Include="C1.Win.RulesManager" Version="8.0.20242.700" />
-    <PackageReference Include="C1.Win.SuperTooltip" Version="8.0.20242.700" />
-    <PackageReference Include="C1.Win.Themes" Version="8.0.20242.700" />
+    <PackageReference Include="C1.Win" Version="6.0.20231.596" />
+    <PackageReference Include="C1.Win.FlexGrid" Version="6.0.20231.596" />
+    <PackageReference Include="C1.Win.Ribbon" Version="6.0.20231.596" />
+    <PackageReference Include="C1.Win.RulesManager" Version="6.0.20231.596" />
+    <PackageReference Include="C1.Win.SuperTooltip" Version="6.0.20231.596" />
+    <PackageReference Include="C1.Win.Themes" Version="6.0.20231.596" />
   </ItemGroup>
 
   <ItemGroup>
