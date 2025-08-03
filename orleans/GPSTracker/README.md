@@ -39,7 +39,7 @@ var notifier = GrainFactory.GetGrain<IPushNotifierGrain>(0);
 
 ## Sample prerequisites
 
-This sample is written in C# and targets .NET 8.0. It requires the [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) or later.
+This sample is written in C# and targets .NET 9.0. It requires the [.NET 9.0 SDK](https://dotnet.microsoft.com/download/dotnet/9.0) or later.
 
 ## Building the sample
 
@@ -54,42 +54,10 @@ To download and run the sample, follow these steps:
    1. Navigate to the folder that holds the unzipped sample code.
    2. At the command line, type [`dotnet run`](https://docs.microsoft.com/dotnet/core/tools/dotnet-run).
 
-Open three terminal windows. In the first terminal window, run the following at the command prompt:
+## Run the solution
 
-```dotnetcli
-dotnet run --project GPSTracker.Service
+Start the `GPSTracker.AppHost` project in Visual Studio or from the command line:
+
 ```
-
-In the second terminal, launch another instance of the host, specifying that it's the second host by passing an `InstanceId` value as follows:
-
-```dotnetcli
-dotnet run --project GPSTracker.Service -- --InstanceId 1
-```
-
-Now open a web browser to `http://localhost:5001/index.html`. At this point, there will be no points moving around the map.
-
-In the third terminal window, run the following at the command prompt to begin simulating devices:
-
-```dotnetcli
-dotnet run --project GPSTracker.FakeDeviceGateway
-```
-
-Dots will appear on the map in the Web browser and begin moving randomly around the area.
-
-## Orleans observability
-
-If you're interested in observability, this sample includes some optional logging, metrics, and distributed tracing.
-
-```docker
-docker run -p 9090:9090 -v ..\dotnet\samples\GPSTracker\prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus
-```
-
-```docker
-docker run -d --name jaeger -e COLLECTOR_ZIPKIN_HOST_PORT=:9411 -p 5775:5775/udp -p 6831:6831/udp -p 6832:6832/udp -p 5778:5778 -p 16686:16686 -p 14268:14268 -p 14250:14250 -p 9411:9411 jaegertracing/all-in-one:1.22
-```
-
-OR zipkin:
-
-```docker
-docker run -p 9411:9411 openzipkin/zipkin
+dotnet run --project GPSTracker.AppHost
 ```
