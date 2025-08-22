@@ -8,22 +8,27 @@
         <description>Generates a strongly typed setting class base on a txt file</description>
         <tags>MyTags</tags>
         <copyright>Copyright ©Contoso 2022</copyright>
-        <!-- we need the assemblies bundled, so set this so we don't expose any dependencies to the outside world -->
+      
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+        <!-- Tell the SDK to generate a deps.json file -->
         <GenerateDependencyFile>true</GenerateDependencyFile>
+        <!-- This target will run when MSBuild is collecting the files to be packaged, and we'll implement it below. This property controls the dependency list for this packaging process, so by adding our custom property we hook ourselves into the process in a supported way. -->
         <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
         <!-- This property tells MSBuild where the root folder of the package's build assets should be. Because we are not a library package, we should not pack to 'lib'. Instead, we choose 'tasks' by convention. -->
         <BuildOutputTargetFolder>tasks</BuildOutputTargetFolder>
         <!-- NuGet does validation that libraries in a package are exposed as dependencies, but we _explicitly_ do not want that behavior for MSBuild tasks. They are isolated by design. Therefore we ignore this specific warning. -->
         <NoWarn>NU5100</NoWarn>
+        <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
         <DebugType>embedded</DebugType>
         <IsPackable>true</IsPackable>
     </PropertyGroup>
-
+  
     <ItemGroup>
 	   <PackageReference 
 		       Include="Microsoft.Build.Utilities.Core"
     		   Version="17.0.0"
-           PrivateAssets="all" />
+           PrivateAssets="all" 
+           ExcludeAssets="Runtime" />
 	   <PackageReference
 		       Include="Microsoft.Extensions.DependencyInjection"
     		   Version="6.0.0"
