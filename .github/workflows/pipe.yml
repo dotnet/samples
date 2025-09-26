@@ -17,7 +17,7 @@ jobs:
       - name: Instalar .NET SDK
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '7.0.x'
+          dotnet-version: '9.0.x'
 
       - name: Restaurar dependencias
         run: dotnet restore core/workers/workers.sln
