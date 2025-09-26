@@ -20,7 +20,7 @@ jobs:
           dotnet-version: '7.0.x'
 
       - name: Restaurar dependencias
-        run: dotnet restore samples/core/workers/workers.sln
+        run: dotnet restore core/workers/workers.sln
 
       - name: Compilar
-        run: dotnet build samples/core/workers/workers.sln --configuration Release
+        run: dotnet build core/workers/workers.sln --configuration Release
