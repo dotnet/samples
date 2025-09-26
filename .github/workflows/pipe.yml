@@ -23,4 +23,4 @@ jobs:
         run: dotnet restore
 
       - name: Compilar
-        run: dotnet build --no-restore --configuration Release
+        run: dotnet build samples/core/workers/workers.sln --configuration Release
