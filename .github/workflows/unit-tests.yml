@@ -15,7 +15,7 @@ jobs:
       - name: Instalar .NET SDK
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '9.0.x'
+          dotnet-version: '7.0.x'
 
       - name: Restaurar dependencias (unit-testing)
         run: dotnet restore csharp/unit-testing/UnitTesting.sln
