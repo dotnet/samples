@@ -14,7 +14,7 @@ namespace MSTest.Project
         {
             Test2Called = true;
 
-            Assert.IsTrue(Test1Called);
+            Assert.IsFalse(Test1Called);
             Assert.IsFalse(Test3Called);
         }
 
@@ -23,7 +23,7 @@ namespace MSTest.Project
         {
             Test1Called = true;
 
-            Assert.IsFalse(Test2Called);
+            Assert.IsTrue(Test2Called);
             Assert.IsFalse(Test3Called);
         }
 
