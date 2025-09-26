@@ -1,0 +1,27 @@
+name: Unit Tests
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+    
+jobs:
+  build:
+    name: Compilar y analizar
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v3
+      - name: Instalar .NET SDK
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Restaurar dependencias (unit-testing)
+        run: dotnet restore csharp/unit-testing/UnitTesting.sln
+        
+      - name: Compilar
+        run: dotnet build csharp/unit-testing/UnitTesting.sln --configuration Release
+
+      - name: Ejecutar pruebas unitarias
+        run: dotnet test csharp/unit-testing/UnitTesting.sln --configuration Release
