@@ -1,8 +1,15 @@
+name: Build del proyecto
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
 jobs:
   build:
     name: Compilar y analizar
     runs-on: ubuntu-latest
-
     steps:
       - name: Clonar repositorio
         uses: actions/checkout@v3
@@ -15,5 +22,5 @@ jobs:
       - name: Restaurar dependencias
         run: dotnet restore
 
-      - name: Compilar solución
+      - name: Compilar
         run: dotnet build --no-restore --configuration Release
