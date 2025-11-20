@@ -27,7 +27,9 @@ jobs:
     - name: 'Print manual run reason'
       if: ${{ github.event_name == 'workflow_dispatch' }}
       run: |
-        echo 'Reason: ${{ github.event.inputs.reason }}'
+        echo 'Reason: $REASON'
+      env:
+        REASON: ${{ github.event.inputs.reason }}
 
     - name: .NET code metrics
       id: dotnet-code-metrics
