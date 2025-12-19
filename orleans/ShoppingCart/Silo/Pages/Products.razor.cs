@@ -1,4 +1,4 @@
-﻿// Copyright (c) Microsoft. All rights reserved.
+// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT License.
 
 using Orleans.ShoppingCart.Silo.Components;
@@ -25,7 +25,7 @@ public sealed partial class Products
     protected override async Task OnInitializedAsync() =>
         _products = await InventoryService.GetAllProductsAsync();
 
-    private void CreateNewProduct()
+    private async Task CreateNewProductAsync()
     {
         if (_modal is not null)
         {
@@ -38,7 +38,7 @@ public sealed partial class Products
                 ImageUrl = fake.ImageUrl,
                 DetailsUrl = fake.DetailsUrl
             };
-            _modal.Open("Create Product", OnProductUpdated);
+            await _modal.Open("Create Product", OnProductUpdated);
         }
     }
 

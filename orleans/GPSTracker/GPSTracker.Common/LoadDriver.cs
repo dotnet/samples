@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+using System.Diagnostics;
 using GPSTracker.GrainInterface;
 
 namespace GPSTracker.Common;
@@ -40,7 +40,14 @@ public static class LoadDriver
                 tasks.Add(DeviceLoop(client, model, cancellationToken));
             }
 
-            await Task.WhenAll(tasks);
+            try
+            {
+                await Task.WhenAll(tasks).WaitAsync(cancellationToken);
+            }
+            catch (OperationCanceledException)
+            {
+                break;
+            }
             tasks.Clear();
         }
     }

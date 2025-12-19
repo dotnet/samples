@@ -7,12 +7,9 @@ using System.Net;
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddOpenTelemetry()
-    .WithMetrics(metrics =>
-    {
-        metrics
+    .WithMetrics(metrics => metrics
             .AddPrometheusExporter()
-            .AddMeter("Microsoft.Orleans");
-    })
+            .AddMeter("Microsoft.Orleans"))
     .WithTracing(tracing =>
     {
         // Set a service name
@@ -23,10 +20,7 @@ builder.Services.AddOpenTelemetry()
         tracing.AddSource("Microsoft.Orleans.Runtime");
         tracing.AddSource("Microsoft.Orleans.Application");
 
-        tracing.AddZipkinExporter(zipkin =>
-        {
-            zipkin.Endpoint = new Uri("http://localhost:9411/api/v2/spans");
-        });
+        tracing.AddZipkinExporter(zipkin => zipkin.Endpoint = new Uri("http://localhost:9411/api/v2/spans"));
     });
 
 builder.Host.UseOrleans((ctx, siloBuilder) => {
@@ -55,8 +49,8 @@ if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
 }
-app.UseStaticFiles();
 app.UseDefaultFiles();
+app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthorization();
 app.MapHub<LocationHub>("/locationHub");

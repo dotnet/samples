@@ -15,18 +15,22 @@ public sealed class StockGrain : Grain, IStockGrain
         var stock = this.GetPrimaryKeyString();
         await UpdatePrice(stock);
 
-        RegisterTimer(
+        this.RegisterGrainTimer(
             UpdatePrice,
             stock,
-            TimeSpan.FromMinutes(2),
-            TimeSpan.FromMinutes(2));
+            new GrainTimerCreationOptions
+            {
+                DueTime = TimeSpan.FromMinutes(2),
+                Period = TimeSpan.FromMinutes(2),
+                Interleave = true
+            });
 
         await base.OnActivateAsync(cancellationToken);
     }
 
-    private async Task UpdatePrice(object stock)
+    private async Task UpdatePrice(string stock)
     {
-        var priceTask = GetPriceQuote((string)stock);
+        var priceTask = GetPriceQuote(stock);
 
         // read the results
         _price = await priceTask;

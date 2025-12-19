@@ -37,4 +37,28 @@ public class Secrets
         }
         throw new FileNotFoundException($"Cannot find file {filename}");
     }
+
+    public static Secrets? TryLoadFromFile(string filename = "Secrets.json")
+    {
+        var currentDir = new DirectoryInfo(Directory.GetCurrentDirectory());
+        while (currentDir != null && currentDir.Exists)
+        {
+            var filePath = Path.Combine(currentDir.FullName, filename);
+            if (File.Exists(filePath))
+            {
+                var secrets = JsonSerializer.Deserialize<Secrets>(File.ReadAllText(filePath));
+                // Return null if secrets file exists but has empty/missing values
+                if (secrets is null ||
+                    string.IsNullOrWhiteSpace(secrets.DataConnectionString) ||
+                    string.IsNullOrWhiteSpace(secrets.EventHubConnectionString))
+                {
+                    return null;
+                }
+                return secrets;
+            }
+
+            currentDir = currentDir.Parent;
+        }
+        return null;
+    }
 }
