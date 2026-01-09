@@ -2,17 +2,11 @@
 
 namespace GPSTracker.GrainImplementation;
 
-public class HubListGrain : Grain, IHubListGrain
+public class HubListGrain(IClusterMembershipService clusterMembershipService) : Grain, IHubListGrain
 {
-    private readonly IClusterMembershipService _clusterMembership;
-    private readonly Dictionary<SiloAddress, IRemoteLocationHub> _hubs = new();
+    private readonly Dictionary<SiloAddress, IRemoteLocationHub> _hubs = [];
     private MembershipVersion _cacheMembershipVersion;
     private List<(SiloAddress Host, IRemoteLocationHub Hub)>? _cache;
-
-    public HubListGrain(IClusterMembershipService clusterMembershipService)
-    {
-        _clusterMembership = clusterMembershipService;
-    }
 
     public ValueTask AddHub(SiloAddress host, IRemoteLocationHub hubReference)
     {
@@ -29,7 +23,7 @@ public class HubListGrain : Grain, IHubListGrain
     private List<(SiloAddress Host, IRemoteLocationHub Hub)> GetCachedHubs()
     {
         // Returns a cached list of hubs if the cache is valid, otherwise builds a list of hubs.
-        ClusterMembershipSnapshot clusterMembers = _clusterMembership.CurrentSnapshot;
+        ClusterMembershipSnapshot clusterMembers = clusterMembershipService.CurrentSnapshot;
         if (_cache is { } && clusterMembers.Version == _cacheMembershipVersion)
         {
             return _cache;

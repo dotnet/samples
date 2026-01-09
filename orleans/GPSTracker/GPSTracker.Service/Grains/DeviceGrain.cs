@@ -7,7 +7,7 @@ namespace GPSTracker.GrainImplementation;
 [Reentrant]
 public class DeviceGrain : Grain, IDeviceGrain
 {
-    private DeviceMessage _lastMessage = null!;
+    private DeviceMessage? _lastMessage;
 
     private readonly IPushNotifierGrain _pushNotifier;
 
