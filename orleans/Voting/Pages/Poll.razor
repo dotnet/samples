@@ -18,10 +18,10 @@ else if (!_loaded)
 }
 else if (!_voted)
 {
-	<h1>@_results.Question</h1>
+	<h1>@_results?.Question</h1>
 	<br />
 	<div>
-		@foreach (var (index, option) in _results.Options.Select((value, index) => (index, value)))
+		@foreach (var (index, option) in _results?.Options?.Select((value, index) => (index, value)) ?? [])
 		{
 			<div class="input-group mb-3">
 				<button class="btn btn-outline-secondary" type="button" id="button-add" @onclick="@(e => VoteForOption(index))">👍</button>
@@ -36,7 +36,7 @@ else if (!_voted)
 }
 else
 {
-	<h1>@_results.Question</h1>
+	<h1>@_results?.Question</h1>
 	<br />
 	<div>
 		@foreach (var (option, votes, percentage) in CalculateResults())
@@ -58,15 +58,15 @@ else
 }
 @code
 {
-	[Parameter] public string PollId { get; set; }
-	private MyPollWatcher _watcher;
-	private IAsyncDisposable _subscription;
+	[Parameter] public required string PollId { get; set; }
+	private MyPollWatcher? _watcher;
+	private IAsyncDisposable? _subscription;
 	private bool _loaded;
 	private bool _voted;
-	private string _errorMessage;
+	private string _errorMessage = string.Empty;
 
 	private Guid ownerKey = Guid.NewGuid();
-	private PollState _results;
+	private PollState? _results;
 
 	protected override async Task OnInitializedAsync()
 	{

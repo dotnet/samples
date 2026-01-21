@@ -1,4 +1,4 @@
-public class Startup
+﻿public class Startup
 {
     public void ConfigureServices(IServiceCollection services) =>
         services.AddControllersWithViews();
@@ -17,10 +17,7 @@ public class Startup
 
         app.UseAuthorization();
 
-        app.UseEndpoints(endpoints =>
-        {
-            endpoints.MapDefaultControllerRoute();
-        });
+        app.UseEndpoints(endpoints => endpoints.MapDefaultControllerRoute());
     }
 }
 

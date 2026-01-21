@@ -1,5 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using System.Reflection;
+using System.Diagnostics.CodeAnalysis;
 using System.Text.RegularExpressions;
 using Chirper.Grains;
 using Microsoft.Extensions.Hosting;
@@ -214,14 +213,23 @@ public sealed partial class ShellHostedService : BackgroundService
             """);
         if (title)
         {
-            // Add some flair for the title screen
-            using var logoStream = Assembly.GetExecutingAssembly()
-                .GetManifestResourceStream("Chirper.Client.logo.png");
-
-            var logo = new CanvasImage(logoStream!)
-            {
-                MaxWidth = 25
-            };
+            // ASCII art bird logo (replaces image-based logo to avoid SixLabors.ImageSharp dependency)
+            var logo = new Markup("""
+                [yellow]        ▄▄▄▄▄▄▄        [/]
+                [yellow]     ▄██[/][white]░░░░░░░[/][yellow]██▄     [/]
+                [yellow]   ▄██[/][white]░░░░░░░░░░░[/][yellow]██▄   [/]
+                [yellow]  ██[/][white]░░░░░░░░░░░░░░░[/][yellow]██  [/]
+                [yellow] ██[/][white]░░░░[/][black]●[/][white]░░░░░░░░░░░[/][yellow]██ [/]
+                [yellow]██[/][white]░░░░░░░░░░░░░░░░░░[/][yellow]██[/]
+                [yellow]██[/][white]░░░░░░░░░░░░░░░░░░[/][yellow]██[/]
+                [darkorange]█████████[/][yellow]██[/][white]░░░░░░░░░[/][yellow]██[/]
+                [yellow]██[/][white]░░░░░░░░░░░░░░░░░░[/][yellow]██[/]
+                [yellow] ██[/][white]░░░░░░░░░░░░░░░░[/][yellow]██ [/]
+                [yellow]  ██[/][white]░░░░░░░░░░░░░░[/][yellow]██  [/]
+                [yellow]   ▀██[/][white]░░░░░░░░░░[/][yellow]██▀   [/]
+                [yellow]     ▀██[/][white]░░░░░░[/][yellow]██▀     [/]
+                [yellow]       ▀██████▀       [/]
+                """);
 
             var table = new Table
             {

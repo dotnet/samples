@@ -1,4 +1,4 @@
-﻿using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi;
 using Sample.Silo.Api;
 using Orleans.Providers;
 

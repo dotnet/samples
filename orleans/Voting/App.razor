@@ -15,7 +15,7 @@
 </Router>
 @code
 {
-	[Parameter] public string ClientIP { get; set; }
+	[Parameter] public required string ClientIP { get; set; }
 	protected override Task OnInitializedAsync()
 	{
 		PollService.Initialize(ClientIP);

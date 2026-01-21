@@ -1,4 +1,4 @@
-﻿using BlazorServer.Components;
+using BlazorServer.Components;
 using BlazorServer.Services;
 using Orleans.Providers;
 
@@ -33,7 +33,7 @@ app.UseHttpsRedirection();
 
 app.UseAntiforgery();
 
-app.MapStaticAssets();
+app.UseStaticFiles();
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 

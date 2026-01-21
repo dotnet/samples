@@ -18,7 +18,7 @@
 	@foreach (var (index, option) in options.Select((name, index) => (index, name)))
 	{
 		<div class="input-group mb-3">
-			<input type="text" class="form-control" placeholder="Option value" value="@option" @onchange="@(e => RenameOption(index, (string)e.Value))">
+			<input type="text" class="form-control" placeholder="Option value" value="@option" @onchange="@(e => RenameOption(index, (string?)e.Value ?? string.Empty))">
 			<button class="btn btn-outline-secondary" type="button" id="button-add" @onclick="@(e => DeleteOption(index))">Delete</button>
 		</div>
 	}
@@ -31,8 +31,8 @@
 
     private Guid ownerKey = Guid.NewGuid();
     private List<string> options = new ();
-    private string question;
-    private string newOption;
+    private string question = string.Empty;
+    private string newOption = string.Empty;
 
     protected override async Task OnInitializedAsync()
     {
