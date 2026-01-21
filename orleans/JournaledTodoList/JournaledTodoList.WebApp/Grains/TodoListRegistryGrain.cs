@@ -1,4 +1,4 @@
-﻿using System.Collections.Immutable;
+using System.Collections.Immutable;
 using Orleans.EventSourcing;
 using Orleans.Providers;
 using Orleans.Utilities;
@@ -77,6 +77,7 @@ public sealed class TodoListRegistryGrain(ILogger<TodoListRegistryGrain> logger)
     [GenerateSerializer, Immutable]
     public sealed class TodoListRegistry
     {
+        [Id(0)]
         public ImmutableArray<TodoListReference> TodoLists { get; set; } = [];
     }
 }

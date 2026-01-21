@@ -1,11 +1,11 @@
-﻿using JournaledTodoList.WebApp.Components;
+using JournaledTodoList.WebApp.Components;
 using JournaledTodoList.WebApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();
-builder.AddKeyedAzureTableClient("clustering");
-builder.AddKeyedAzureBlobClient("grain-state");
+builder.AddKeyedAzureTableServiceClient("clustering");
+builder.AddKeyedAzureBlobServiceClient("grain-state");
 builder.UseOrleans(siloBuilder =>
 {
     siloBuilder.AddLogStorageBasedLogConsistencyProviderAsDefault();
