@@ -3,6 +3,8 @@
 //----------------------------------------------------------------
 
 using System;
+using System.ServiceModel;
+using System.ServiceModel.Channels;
 
 namespace Microsoft.Samples.GZipEncoder
 {
@@ -10,7 +12,14 @@ namespace Microsoft.Samples.GZipEncoder
     {
         static void Main()
         {
+#if NET6_0_OR_GREATER
+            Binding binding = new CustomBinding(new GZipMessageEncodingBindingElement(), new HttpTransportBindingElement());
+            EndpointAddress endpointAddress = new EndpointAddress(new Uri("http://localhost:8000/samples/GZipEncoder"));
+            SampleServerClient client = new SampleServerClient(binding, endpointAddress);
+#else
             SampleServerClient client = new SampleServerClient();
+#endif
+
 
             Console.WriteLine("Calling Echo(string):");
             Console.WriteLine("Server responds: {0}", client.Echo("Simple hello"));
