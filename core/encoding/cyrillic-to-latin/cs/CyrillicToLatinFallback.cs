@@ -5,11 +5,11 @@ using System.Text;
 
 class CyrillicToLatinFallback : EncoderFallback
 {
-    private Dictionary<Char, String> table;
+    private Dictionary<char, string> table;
 
     public CyrillicToLatinFallback()
     {
-        table = new Dictionary<Char, String>();
+        table = new Dictionary<char, string>();
         // Define mappings.
         // Uppercase modern Cyrillic characters.
         table.Add('\u0410', "A");
@@ -92,12 +92,12 @@ class CyrillicToLatinFallback : EncoderFallback
 
 public class CyrillicToLatinFallbackBuffer : EncoderFallbackBuffer
 {
-    private Dictionary<Char, String> table;
+    private Dictionary<char, string> table;
     private int bufferIndex;
     private string buffer;
     private int leftToReturn;
 
-    internal CyrillicToLatinFallbackBuffer(Dictionary<Char, String> table)
+    internal CyrillicToLatinFallbackBuffer(Dictionary<char, string> table)
     {
         this.table = table;
         this.bufferIndex = -1;
