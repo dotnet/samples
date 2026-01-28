@@ -1,12 +1,13 @@
 ﻿using System;
+using classes.Contracts;
 
 namespace classes
 {
-    public class Transaction
+    public class Transaction : ITransaction
     {
-        public decimal Amount { get; }
+        public decimal Amount { get; set; }
         public DateTime Date { get; }
-        public string Notes { get; }
+        public string Notes { get; set; }
 
         public Transaction(decimal amount, DateTime date, string note)
         {
@@ -15,4 +16,4 @@ namespace classes
             this.Notes = note;
         }
     }
-}
+}                           
