@@ -1,4 +1,4 @@
-﻿// Copyright (c) Microsoft. All rights reserved.
+// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT License.
 
 using MudSeverity = MudBlazor.Severity;
@@ -11,7 +11,7 @@ public partial class MainLayout
 
     readonly MudTheme _theme = new()
     {
-        Palette = new PaletteLight()
+        PaletteLight = new PaletteLight()
         {
             Tertiary = "#7e6fff",
             DrawerIcon = "#aaa9b9",
@@ -24,7 +24,6 @@ public partial class MainLayout
             Tertiary = "#7e6fff",
             Surface = "#1e1e2d",
             Background = "#1a1a27",
-            BackgroundGrey = "#151521",
             AppbarText = "#92929f",
             AppbarBackground = "rgba(26,26,39,0.8)",
             DrawerBackground = "#1a1a27",
@@ -64,7 +63,7 @@ public partial class MainLayout
         {
             ToastService.OnToastedRequested += OnToastRequested;
 
-            if (await LocalStorage.GetItemAsync(PrefersDarkThemeKey)
+            if (await LocalStorage.GetItemAsync<string>(PrefersDarkThemeKey)
                 is { Length: > 0 } isDarkTheme &&
                 bool.TryParse(isDarkTheme, out var parsedValue))
             {

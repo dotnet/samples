@@ -1,27 +1,11 @@
+﻿using Orleans.Dashboard;
 using Voting.Data;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Host.UseOrleans((ctx, orleansBuilder) =>
-{
-    if (ctx.HostingEnvironment.IsDevelopment())
-    {
-        // During development time, we don't want to have to deal with
-        // storage emulators or other dependencies. Just "Hit F5" to run.
-        orleansBuilder
-            .UseLocalhostClustering()
-            .AddMemoryGrainStorage("votes");
-    }
-    else
-    {
-        // In Kubernetes, we use environment variables and the pod manifest
-        //orleansBuilder.UseKubernetesHosting();
-
-        // Use Redis for clustering & persistence
-        //var redisAddress = $"{Environment.GetEnvironmentVariable("REDIS")}:6379";
-        //orleansBuilder.UseRedisClustering(options => options.ConnectionString = redisAddress);
-        //orleansBuilder.AddRedisGrainStorage("votes", options => options.ConnectionString = redisAddress);
-    }
-});
+builder.Host.UseOrleans((ctx, orleansBuilder) => orleansBuilder
+        .UseLocalhostClustering()
+        .AddMemoryGrainStorage("votes")
+        .AddDashboard());
 
 // Add services to the container.
 builder.Services.AddRazorPages();
@@ -42,6 +26,9 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
+
 app.MapBlazorHub();
+app.MapRazorPages();
+app.MapOrleansDashboard("/dashboard");
 app.MapFallbackToPage("/_Host");
 app.Run();

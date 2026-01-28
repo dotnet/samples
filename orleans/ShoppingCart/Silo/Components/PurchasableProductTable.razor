@@ -1,10 +1,10 @@
 <MudStack>
-    <MudToolBar DisableGutters="true">
+    <MudToolBar Gutters="false">
         <MudText Typo="Typo.h4">@Title</MudText>
         <MudSpacer />
         <MudPaper Outlined="true" Class="flex-grow-1 pb-2 pl-3">
             <MudTextField @bind-Value="_filter" Placeholder="Search products" Adornment="Adornment.Start"
-                AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-n2" DisableUnderLine="true">
+                AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-n2" Underline="false">
             </MudTextField>
         </MudPaper>
     </MudToolBar>
@@ -36,7 +36,7 @@
         <RowTemplate>
             <MudTd>
                 <MudFab Disabled=@(IsInCart?.Invoke(product) ?? false) Size=Size.Small
-                    Color=Color.Primary Icon=@Icons.Material.Filled.AddShoppingCart
+                    Color=Color.Primary StartIcon=@Icons.Material.Filled.AddShoppingCart
                     OnClick=@(async _ => await AddToCartAsync(product.Id))/>
             </MudTd>
             <MudTd DataLabel="Name">@product.Name</MudTd>

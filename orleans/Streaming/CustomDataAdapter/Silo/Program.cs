@@ -1,9 +1,28 @@
+using Azure.Data.Tables;
 using Common;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
 using Silo;
+
+var secrets = Secrets.TryLoadFromFile();
+if (secrets is null)
+{
+    Console.Error.WriteLine("ERROR: This sample requires Azure Event Hub configuration.");
+    Console.Error.WriteLine();
+    Console.Error.WriteLine("Please create a Secrets.json file with the following structure:");
+    Console.Error.WriteLine("""
+    {
+        "DataConnectionString": "<Azure Storage connection string>",
+        "EventHubConnectionString": "<Event Hub connection string>"
+    }
+    """);
+    Console.Error.WriteLine();
+    Console.Error.WriteLine("For local development without Azure, use the 'Simple' streaming sample instead,");
+    Console.Error.WriteLine("which supports in-memory streaming.");
+    return 1;
+}
 
 try
 {
@@ -22,14 +41,13 @@ catch (Exception ex)
     return 1;
 }
 
-static void ConfigureSilo(HostBuilderContext context, ISiloBuilder siloBuilder)
+void ConfigureSilo(HostBuilderContext context, ISiloBuilder siloBuilder)
 {
-    var secrets = Secrets.LoadFromFile()!;
     siloBuilder
         .UseLocalhostClustering(serviceId: Constants.ServiceId, clusterId: Constants.ServiceId)
         .AddAzureTableGrainStorage(
             "PubSubStore",
-            options => options.ConfigureTableServiceClient(secrets.DataConnectionString))
+            options => options.TableServiceClient = new TableServiceClient(secrets.DataConnectionString))
         .AddEventHubStreams(
             Constants.StreamProvider,
             (ISiloEventHubStreamConfigurator configurator) =>
@@ -48,7 +66,7 @@ static void ConfigureSilo(HostBuilderContext context, ISiloBuilder siloBuilder)
                 configurator.UseAzureTableCheckpointer(
                     builder => builder.Configure(options =>
                     {
-                        options.ConfigureTableServiceClient(secrets.DataConnectionString);
+                        options.TableServiceClient = new TableServiceClient(secrets.DataConnectionString);
                         options.PersistInterval = TimeSpan.FromSeconds(10);
                     }));
             });

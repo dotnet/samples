@@ -42,7 +42,7 @@
 
     public ProductDetails Product { get; set; } = new();
 
-    [CascadingParameter] MudDialogInstance MudDialog { get; set; } = null!;
+    [CascadingParameter] IMudDialogInstance MudDialog { get; set; } = null!;
 
     [Parameter, EditorRequired]
     public EventCallback<ProductDetails> ProductUpdated { get; set; }
@@ -50,12 +50,12 @@
     [Inject]
     public IDialogService DialogService { get; set; } = null!;
 
-    public void Open(string title, Func<ProductDetails, Task> onProductUpdated) =>
-        DialogService.Show<ManageProductModal>(
-            title, new DialogParameters()
+    public async Task Open(string title, Func<ProductDetails, Task> onProductUpdated) =>
+        await DialogService.ShowAsync<ManageProductModal>(
+            title, new DialogParameters<ManageProductModal>()
             {
                 { 
-                    nameof(ProductUpdated),
+                    x => x.ProductUpdated,
                     new EventCallbackFactory().Create(
                         this, new Func<ProductDetails, Task>(onProductUpdated)) 
                 }

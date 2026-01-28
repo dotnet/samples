@@ -23,7 +23,7 @@ jobs:
   build-mono:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@ff7abcd0c3c05ccf6adc123a8cd1fd4fb30fb493 #@v2
+    - uses: actions/checkout@0c366fd6a839edf440554fa01a7085ccba70ac98 #@v2
     - name: Setup .NET SDK 6
       if: ${{ env.DOTNET_DO_INSTALL == 'true' }}
       run: |
