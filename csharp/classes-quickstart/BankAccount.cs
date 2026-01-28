@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using classes.Contracts;
 
 namespace classes
 {
-    public class BankAccount
+    public class BankAccount : IBank
     {
-        public string Number { get; }
+        public string Number { get; set; }
         public string Owner { get; set; }
         #region BalanceComputation
         public decimal Balance
@@ -21,6 +22,7 @@ namespace classes
                 return balance;
             }
         }
+
         #endregion
 
         private static int accountNumberSeed = 1234567890;
@@ -36,7 +38,8 @@ namespace classes
         #endregion
 
         #region TransactionDeclaration
-        private List<Transaction> allTransactions = new List<Transaction>();
+
+        private List<ITransaction> allTransactions = new List<ITransaction>();
         #endregion
 
         #region DepositAndWithdrawal
