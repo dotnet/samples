@@ -6,6 +6,5 @@ await Host.CreateDefaultBuilder(args)
     .UseOrleans(
         builder => builder
             .UseLocalhostClustering()
-            .AddMemoryGrainStorage("AccountState")
-            .UseDashboard())
+            .AddMemoryGrainStorage("AccountState"))
     .RunConsoleAsync();

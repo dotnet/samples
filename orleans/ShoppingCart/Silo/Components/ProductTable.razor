@@ -1,13 +1,13 @@
 @using Blazor.Serialization.Extensions
 
 <MudStack>
-    <MudToolBar DisableGutters="true">
+    <MudToolBar Gutters="false">
         <MudText Typo="Typo.h4">@Title</MudText>
         <MudSpacer />
         @ChildContent
         <MudPaper Outlined="true" Class="flex-grow-1 pb-2 pl-3">
             <MudTextField @bind-Value="_filter" Placeholder="Search products" Adornment="Adornment.Start"
-                AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-n2" DisableUnderLine="true">
+                AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-n2" Underline="false">
             </MudTextField>
         </MudPaper>
     </MudToolBar>

@@ -16,13 +16,10 @@ builder.Services.AddLocalStorageServices();
 
 if (builder.Environment.IsDevelopment())
 {
-    builder.Host.UseOrleans((_, builder) =>
-    {
-        builder
+    builder.Host.UseOrleans((_, builder) => builder
             .UseLocalhostClustering()
             .AddMemoryGrainStorage("shopping-cart")
-            .AddStartupTask<SeedProductStoreTask>();
-    });
+            .AddStartupTask<SeedProductStoreTask>());
 }
 else
 {

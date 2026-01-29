@@ -26,10 +26,7 @@ if (!File.Exists(mapFileName))
 
 // Configure the host
 using var host = Host.CreateDefaultBuilder(args)
-    .UseOrleans(siloBuilder =>
-    {
-        siloBuilder.UseLocalhostClustering();
-    })
+    .UseOrleans(siloBuilder => siloBuilder.UseLocalhostClustering())
     .Build();
 
 // Start the host

@@ -13,32 +13,34 @@ public sealed class StockGrain : Grain, IStockGrain
     public override async Task OnActivateAsync(CancellationToken cancellationToken)
     {
         var stock = this.GetPrimaryKeyString();
-        await UpdatePrice(stock);
+        await UpdatePrice(stock, cancellationToken);
 
-        RegisterTimer(
+        this.RegisterGrainTimer(
             UpdatePrice,
             stock,
-            TimeSpan.FromMinutes(2),
-            TimeSpan.FromMinutes(2));
+            new GrainTimerCreationOptions
+            {
+                DueTime = TimeSpan.FromMinutes(2),
+                Period = TimeSpan.FromMinutes(2),
+                Interleave = true
+            });
 
         await base.OnActivateAsync(cancellationToken);
     }
 
-    private async Task UpdatePrice(object stock)
+    private async Task UpdatePrice(string stock, CancellationToken cancellationToken)
     {
-        var priceTask = GetPriceQuote((string)stock);
-
-        // read the results
-        _price = await priceTask;
+        _price = await GetPriceQuote(stock, cancellationToken);
     }
 
-    private async Task<string> GetPriceQuote(string stock)
+    private async Task<string> GetPriceQuote(string stock, CancellationToken cancellationToken)
     {
         using var resp =
             await _httpClient.GetAsync(
-                $"https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol={stock}&apikey={ApiKey}&datatype=csv");
+                $"https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol={stock}&apikey={ApiKey}&datatype=csv",
+                cancellationToken);
 
-        return await resp.Content.ReadAsStringAsync();
+        return await resp.Content.ReadAsStringAsync(cancellationToken);
     }
 
     public Task<string> GetPrice() => Task.FromResult(_price);
