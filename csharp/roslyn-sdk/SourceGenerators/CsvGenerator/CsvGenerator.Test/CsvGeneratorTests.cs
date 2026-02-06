@@ -3,15 +3,14 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Testing;
 using Microsoft.CodeAnalysis.Testing;
 using Microsoft.CodeAnalysis.Text;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 using System.Text;
 
 namespace CsvGenerator.Test;
 
-[TestClass]
 public class CsvGeneratorTests
 {
-    [TestMethod]
+    [Fact]
     public async Task CsvWithHeadersAndRows_GeneratesClass()
     {
         string csvContent = "Name,Country\nTokyo,Japan\nDelhi,India\n";
@@ -60,7 +59,7 @@ namespace CsvGenerated
         await test.RunAsync();
     }
 
-    [TestMethod]
+    [Fact]
     public async Task CsvWithHeaderOnly_NoOutput()
     {
         // Only a header row, no data rows – generator should not produce output.
@@ -78,7 +77,7 @@ namespace CsvGenerated
         await test.RunAsync();
     }
 
-    [TestMethod]
+    [Fact]
     public async Task NonCsvAdditionalFile_IsIgnored()
     {
         var test = new CSharpSourceGeneratorTest<CsvIncrementalGenerator, DefaultVerifier>
@@ -93,7 +92,7 @@ namespace CsvGenerated
         await test.RunAsync();
     }
 
-    [TestMethod]
+    [Fact]
     public async Task CsvWithThreeColumns_GeneratesAllProperties()
     {
         string csvContent = "Id,Name,Score\n1,Alice,95\n2,Bob,87\n";

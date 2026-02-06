@@ -2,14 +2,13 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Testing;
 using Microsoft.CodeAnalysis.Testing;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace GenerateMembers.Test;
 
-[TestClass]
 public class GenerateMembersGeneratorTests
 {
-    [TestMethod]
+    [Fact]
     public async Task ClassWithProperties_GeneratesDescribeAndPropertyNames()
     {
         string source = @"
@@ -67,7 +66,7 @@ namespace TestNamespace
         await test.RunAsync();
     }
 
-    [TestMethod]
+    [Fact]
     public async Task StructWithAttribute_GeneratesCorrectly()
     {
         string source = @"
@@ -125,7 +124,7 @@ namespace TestNamespace
         await test.RunAsync();
     }
 
-    [TestMethod]
+    [Fact]
     public async Task ClassWithoutAttribute_NoGeneratedMembers()
     {
         string source = @"
@@ -151,7 +150,7 @@ public class Person
         await test.RunAsync();
     }
 
-    [TestMethod]
+    [Fact]
     public async Task ClassInGlobalNamespace_GeneratesWithoutNamespaceBlock()
     {
         string source = @"
