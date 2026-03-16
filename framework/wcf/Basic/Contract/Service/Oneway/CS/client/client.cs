@@ -41,6 +41,10 @@ namespace Microsoft.Samples.OneWay
             Console.WriteLine("Divide({0},{1})", value1, value2);
 
             Console.WriteLine("HIIIIIIIIIIIIIIIIIIIIIIIII");
+            Console.WriteLine("New hi"); //feature2
+
+
+
             Console.WriteLine();
             Console.WriteLine("Press <ENTER> to terminate client.");
             Console.ReadLine();
