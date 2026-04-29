@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using HelloWorldInterfaces;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -8,10 +8,7 @@ using Orleans.Hosting;
 [assembly: GenerateCodeForDeclaringAssembly(typeof(Grains.HelloGrain))]
 
 using var host = new HostBuilder()
-    .UseOrleans(builder =>
-    {
-        builder.UseLocalhostClustering();
-    })
+    .UseOrleans(builder => builder.UseLocalhostClustering())
     .UseConsoleLifetime()
     .Build();
 

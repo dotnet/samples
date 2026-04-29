@@ -1,4 +1,4 @@
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Presence.Grains;
 using Presence.PlayerWatcher;
@@ -6,10 +6,7 @@ using Presence.PlayerWatcher;
 Console.Title = "PlayerWatcher";
 
 await Host.CreateDefaultBuilder()
-    .UseOrleansClient(builder =>
-    {
-        builder.UseLocalhostClustering();
-    })
+    .UseOrleansClient(builder => builder.UseLocalhostClustering())
     .ConfigureServices(services =>
     {
         // Add regular services

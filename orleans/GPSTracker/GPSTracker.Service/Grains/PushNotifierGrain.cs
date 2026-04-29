@@ -1,4 +1,4 @@
-﻿using GPSTracker.Common;
+using GPSTracker.Common;
 using GPSTracker.GrainInterface;
 using Orleans.Concurrency;
 using Orleans.Runtime;
@@ -18,23 +18,29 @@ public class PushNotifierGrain : Grain, IPushNotifierGrain
     public override async Task OnActivateAsync(CancellationToken cancellationToken)
     {
         // Set up a timer to regularly flush the message queue
-        RegisterTimer(
+        this.RegisterGrainTimer(
             _ =>
             {
                 Flush();
                 return Task.CompletedTask;
             },
-            null,
-            TimeSpan.FromMilliseconds(15),
-            TimeSpan.FromMilliseconds(15));
+            new GrainTimerCreationOptions
+            {
+                DueTime = TimeSpan.FromMilliseconds(15),
+                Period = TimeSpan.FromMilliseconds(15),
+                Interleave = true
+            });
 
         // Set up a timer to regularly refresh the hubs, to respond to azure infrastructure changes
         await RefreshHubs();
-        RegisterTimer(
-            asyncCallback: async _ => await RefreshHubs(),
-            state: null,
-            dueTime: TimeSpan.FromSeconds(60),
-            period: TimeSpan.FromSeconds(60));
+        this.RegisterGrainTimer(
+            async _ => await RefreshHubs(),
+            new GrainTimerCreationOptions
+            {
+                DueTime = TimeSpan.FromSeconds(60),
+                Period = TimeSpan.FromSeconds(60),
+                Interleave = true
+            });
 
         await base.OnActivateAsync(cancellationToken);
     }

@@ -14,9 +14,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@a81bbbf8298c0fa03ea29cdc473d45769f953675 #@v2
+    - uses: actions/checkout@0c366fd6a839edf440554fa01a7085ccba70ac98 #@v2
     - name: Use Node.js
-      uses: actions/setup-node@56899e050abffc08c2b3b61f3ec6a79a9dc3223d #@v1
+      uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e #@v1
       with:
         node-version: 12.x
     - name: Run Markdownlint

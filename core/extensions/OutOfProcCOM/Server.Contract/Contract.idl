@@ -4,6 +4,7 @@ import "ocidl.idl";
 [
     object,
     oleautomation,
+    dual,
     uuid(F586D6F4-AF37-441E-80A6-3D33D977882D)
 ]
 interface IServer : IDispatch
@@ -12,8 +13,10 @@ interface IServer : IDispatch
         [out, retval] double *ret);
 };
 
+// See the matching Guid and TLB version in DllServer.cs
 [
-    uuid(46F3FEB2-121D-4830-AA22-0CDA9EA90DC3)
+    uuid(46F3FEB2-121D-4830-AA22-0CDA9EA90DC3),
+    version( 1.0 )
 ]
 library ServerLib
 {

@@ -1,11 +1,10 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using BlazorWasm.Grains;
 using BlazorWasm.Models;
 
 namespace Sample.Silo.Api;
 
 [ApiController]
-[ApiVersion("1")]
 [Route("api/[controller]")]
 public class WeatherController : ControllerBase
 {

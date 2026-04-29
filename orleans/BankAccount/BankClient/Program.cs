@@ -1,13 +1,10 @@
-using AccountTransfer.Interfaces;
+﻿using AccountTransfer.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 using IHost host = Host.CreateDefaultBuilder(args)
-    .UseOrleansClient(client =>
-    {
-        client.UseLocalhostClustering()
-            .UseTransactions();
-    })
+    .UseOrleansClient(client => client.UseLocalhostClustering()
+            .UseTransactions())
     .UseConsoleLifetime()
     .Build();
 

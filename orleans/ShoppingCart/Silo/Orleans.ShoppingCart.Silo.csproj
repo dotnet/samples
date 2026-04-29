@@ -1,24 +1,25 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-	<IsTransformWebConfigDisabled>false</IsTransformWebConfigDisabled>
-	<UserSecretsId>98f9767c-ea86-409e-bde7-f6d352a55cce</UserSecretsId>
-	<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <Nullable>enable</Nullable>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+    <IsTransformWebConfigDisabled>false</IsTransformWebConfigDisabled>
+    <UserSecretsId>98f9767c-ea86-409e-bde7-f6d352a55cce</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Azure.Identity" Version="1.*" />
-    <PackageReference Include="Blazor.Serialization" Version="2.*" />
-    <PackageReference Include="Blazor.LocalStorage" Version="2.*" />
-    <PackageReference Include="Bogus" Version="34.*" />
-    <PackageReference Include="Microsoft.Orleans.Clustering.Cosmos" Version="8.*" />
-    <PackageReference Include="Microsoft.Orleans.Persistence.Cosmos" Version="8.*" />
-    <PackageReference Include="Microsoft.Orleans.Server" Version="8.*" />
-    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.*" />
-    <PackageReference Include="MudBlazor" Version="6.*" />
+    <PackageReference Include="Azure.Identity" Version="1.17.1" />
+    <PackageReference Include="Blazor.Serialization" Version="9.0.1" />
+    <PackageReference Include="Blazor.LocalStorage" Version="9.0.1" />
+    <PackageReference Include="Bogus" Version="35.6.5" />
+    <PackageReference Include="Microsoft.Orleans.Clustering.Cosmos" Version="10.0.0" />
+    <PackageReference Include="Microsoft.Orleans.Persistence.Cosmos" Version="10.0.0" />
+    <PackageReference Include="Microsoft.Orleans.Server" Version="10.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.23.0" />
+    <PackageReference Include="MudBlazor" Version="8.15.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,8 +28,8 @@
   </ItemGroup>
 
   <Target Name="ZipPublishOutput" AfterTargets="Publish">
-	<Delete Files="$(ProjectDir)\..\silo.zip" />
-	<ZipDirectory SourceDirectory="$(PublishDir)" DestinationFile="$(ProjectDir)\..\silo.zip" />
+    <Delete Files="$(ProjectDir)\..\silo.zip" />
+    <ZipDirectory SourceDirectory="$(PublishDir)" DestinationFile="$(ProjectDir)\..\silo.zip" />
   </Target>
-	
+
 </Project>

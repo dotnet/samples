@@ -23,6 +23,9 @@
         "**/wpf/WPF-WinRT/**/*.csproj",
         "**/core/porting/upgrade-assistant-wcf-framework/CalculatorSample/**/*.csproj",
         "**/core/extensions/ExcelDemo/ExcelDemo.csproj",
-        "**/core/extensions/VisioDemo/VisioDemo.csproj"
+        "**/core/extensions/VisioDemo/VisioDemo.csproj",
+        "**/wpf/Threading/MultithreadedWindow/net48/vb/ProjectVB.vbproj",
+        "**/wpf/Threading/PrimeNumber/net48/vb/PrimeNumber.vbproj",
+        "**/wpf/Threading/Weather/net48/vb/ProjectVB.vbproj"
     ]
 }

@@ -1,5 +1,4 @@
 using System.Diagnostics.CodeAnalysis;
-using System.Reflection;
 using System.Text.RegularExpressions;
 using Chirper.Grains;
 using Microsoft.Extensions.Hosting;
@@ -75,7 +74,7 @@ public sealed partial class ShellHostedService : BackgroundService
                     var following = await _account.GetFollowingListAsync();
                     AnsiConsole.Write(new Rule($"{_account.GetPrimaryKeyString()}'s followed accounts")
                     {
-                        Alignment = Justify.Center,
+                        Justification = Justify.Center,
                         Style = Style.Parse("blue")
                     });
 
@@ -86,7 +85,7 @@ public sealed partial class ShellHostedService : BackgroundService
 
                     AnsiConsole.Write(new Rule
                     {
-                        Alignment = Justify.Center,
+                        Justification = Justify.Center,
                         Style = Style.Parse("blue")
                     });
                 }
@@ -98,7 +97,7 @@ public sealed partial class ShellHostedService : BackgroundService
                     var followers = await _account.GetFollowersListAsync();
                     AnsiConsole.Write(new Rule($"{_account.GetPrimaryKeyString()}'s followers")
                     {
-                        Alignment = Justify.Center,
+                        Justification = Justify.Center,
                         Style = Style.Parse("blue")
                     });
 
@@ -109,7 +108,7 @@ public sealed partial class ShellHostedService : BackgroundService
 
                     AnsiConsole.Write(new Rule
                     {
-                        Alignment = Justify.Center,
+                        Justification = Justify.Center,
                         Style = Style.Parse("blue")
                     });
                 }
@@ -214,14 +213,23 @@ public sealed partial class ShellHostedService : BackgroundService
             """);
         if (title)
         {
-            // Add some flair for the title screen
-            using var logoStream = Assembly.GetExecutingAssembly()
-                .GetManifestResourceStream("Chirper.Client.logo.png");
-
-            var logo = new CanvasImage(logoStream!)
-            {
-                MaxWidth = 25
-            };
+            // ASCII art bird logo (replaces image-based logo to avoid SixLabors.ImageSharp dependency)
+            var logo = new Markup("""
+                [yellow]        ▄▄▄▄▄▄▄        [/]
+                [yellow]     ▄██[/][white]░░░░░░░[/][yellow]██▄     [/]
+                [yellow]   ▄██[/][white]░░░░░░░░░░░[/][yellow]██▄   [/]
+                [yellow]  ██[/][white]░░░░░░░░░░░░░░░[/][yellow]██  [/]
+                [yellow] ██[/][white]░░░░[/][black]●[/][white]░░░░░░░░░░░[/][yellow]██ [/]
+                [yellow]██[/][white]░░░░░░░░░░░░░░░░░░[/][yellow]██[/]
+                [yellow]██[/][white]░░░░░░░░░░░░░░░░░░[/][yellow]██[/]
+                [darkorange]█████████[/][yellow]██[/][white]░░░░░░░░░[/][yellow]██[/]
+                [yellow]██[/][white]░░░░░░░░░░░░░░░░░░[/][yellow]██[/]
+                [yellow] ██[/][white]░░░░░░░░░░░░░░░░[/][yellow]██ [/]
+                [yellow]  ██[/][white]░░░░░░░░░░░░░░[/][yellow]██  [/]
+                [yellow]   ▀██[/][white]░░░░░░░░░░[/][yellow]██▀   [/]
+                [yellow]     ▀██[/][white]░░░░░░[/][yellow]██▀     [/]
+                [yellow]       ▀██████▀       [/]
+                """);
 
             var table = new Table
             {
@@ -265,13 +273,13 @@ public sealed partial class ShellHostedService : BackgroundService
 
     [GeneratedRegex("/user (?<username>\\w{1,100})")]
     private static partial Regex SetUsernameRegex();
-    
+
     [GeneratedRegex("/chirp (?<message>.+)")]
     private static partial Regex ChirpMessageRegex();
-    
+
     [GeneratedRegex("/unfollow (?<username>\\w{1,100})")]
     private static partial Regex UnfollowUsernameRegex();
-    
+
     [GeneratedRegex("/follow (?<username>\\w{1,100})")]
     private static partial Regex FollowUsernameRegex();
 }

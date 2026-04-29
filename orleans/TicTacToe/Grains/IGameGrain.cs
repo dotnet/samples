@@ -10,7 +10,7 @@ public interface IGameGrain : IGrainWithGuidKey
     Task SetName(string name);
 }
 
-[Serializable]
+[GenerateSerializer]
 public enum GameState
 {
     AwaitingPlayers,
@@ -18,13 +18,14 @@ public enum GameState
     Finished
 }
 
-[Serializable]
+[GenerateSerializer]
 public enum GameOutcome
 {
     Win,
     Lose,
     Draw
 }
+
 
 [GenerateSerializer]
 public struct GameMove

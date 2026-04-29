@@ -12,7 +12,6 @@ let ``My test`` () =
 //[<Fact>]
 //let ``Fail every time`` () = Assert.True(false)
 
-
 [<Fact>]
 let ``Sequence of Evens returns empty collection`` () =
     let expected = Seq.empty<int>

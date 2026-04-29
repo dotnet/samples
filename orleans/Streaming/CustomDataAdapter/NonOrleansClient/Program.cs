@@ -3,7 +3,23 @@ using Azure.Messaging.EventHubs;
 using Azure.Messaging.EventHubs.Producer;
 using Common;
 
-var secrets = Secrets.LoadFromFile()!;
+var secrets = Secrets.TryLoadFromFile();
+if (secrets is null)
+{
+    Console.Error.WriteLine("ERROR: This sample requires Azure Event Hub configuration.");
+    Console.Error.WriteLine();
+    Console.Error.WriteLine("Please create a Secrets.json file with the following structure:");
+    Console.Error.WriteLine("""
+    {
+        "DataConnectionString": "<Azure Storage connection string>",
+        "EventHubConnectionString": "<Event Hub connection string>"
+    }
+    """);
+    Console.Error.WriteLine();
+    Console.Error.WriteLine("For local development without Azure, use the 'Simple' streaming sample instead,");
+    Console.Error.WriteLine("which supports in-memory streaming.");
+    return 1;
+}
 
 // Sending event to a stream
 // Here the StreamGuid will be encoded as the PartitionKey, and the namespace as a property of the event
@@ -27,3 +43,4 @@ await using (var client = new EventHubProducerClient(secrets.EventHubConnectionS
     }
 }
 Console.WriteLine("Done!");
+return 0;

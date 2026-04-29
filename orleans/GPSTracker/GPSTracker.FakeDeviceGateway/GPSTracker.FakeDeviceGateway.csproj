@@ -1,16 +1,15 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
     <OutputType>Exe</OutputType>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GPSTracker.Common\GPSTracker.Common.csproj" />
+    <PackageReference Include="Microsoft.Orleans.Client" Version="10.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
-    <PackageReference Include="Microsoft.Orleans.Client" Version="7.1.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <ProjectReference Include="..\GPSTracker.Common\GPSTracker.Common.csproj" />
   </ItemGroup>
 </Project>

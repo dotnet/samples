@@ -26,7 +26,7 @@ The first thing you'll have to do in order to have a proper "loader" that loads 
 ```c
 #ifdef _WIN32
 #include "windows.h"
-#define symLoad GetProcAddress GetProcAddress
+#define symLoad GetProcAddress
 #else
 #include "dlfcn.h"
 #define symLoad dlsym
@@ -65,6 +65,8 @@ The last thing to do is to actually call the method we have imported.
 int result =  MyImport(5,3);
 ```
 
+Note that the .NET Runtime does not support unloading. Once a handle to the shared library is created, the library cannot be closed with `dlclose/FreeLibrary`.
+
 ## Exporting methods
 
 For a C# method in the native library to be consumable by external programs, it has to be explicitly exported using the `[UnmanagedCallersOnly]` attribute.
@@ -85,7 +87,7 @@ After the native library is built, the above C# `Add` method will be exported as
 * Exported methods cannot be called from regular managed C# code, an exception will be thrown.
 * Exported methods cannot use regular C# exception handling, they should return error codes instead.
 
-The sample [source code](Class1.cs) demonstrates common techniques used to stay within these limitations.
+The sample [source code](LibraryFunctions.cs) demonstrates common techniques used to stay within these limitations.
 
 ## Building static libraries
 

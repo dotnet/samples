@@ -31,31 +31,33 @@ public class CustomDataAdapter : EventHubDataAdapter
         => new CustomBatchContainer(eventHubMessage);
 }
 
-public class CustomBatchContainer : IBatchContainer
+[GenerateSerializer, Immutable]
+public sealed class CustomBatchContainer : IBatchContainer
 {
-    public StreamId StreamId { get; }
+    [Id(0)]
+    private readonly EventHubMessage _eventHubMessage;
 
+    [Id(1)]
     public StreamSequenceToken SequenceToken { get; }
 
-    private readonly byte[] _payload;
+    public StreamId StreamId => _eventHubMessage.StreamId;
 
     public CustomBatchContainer(EventHubMessage eventHubMessage)
     {
-        StreamId = eventHubMessage.StreamId;
-        SequenceToken = new EventHubSequenceTokenV2(eventHubMessage.Offset, eventHubMessage.SequenceNumber, 0);
-        _payload = eventHubMessage.Payload;
+        _eventHubMessage = eventHubMessage;
+        SequenceToken = new EventHubSequenceTokenV2(_eventHubMessage.Offset, _eventHubMessage.SequenceNumber, 0);
     }
 
     public IEnumerable<Tuple<T, StreamSequenceToken>> GetEvents<T>()
     {
         try
         {
-            var evt = JsonSerializer.Deserialize<T>(_payload)!;
+            var evt = JsonSerializer.Deserialize<T>(_eventHubMessage.Payload)!;
             return new[] { Tuple.Create(evt, SequenceToken) };
         }
         catch (Exception)
         {
-            return new List<Tuple<T, StreamSequenceToken>>();
+            return Array.Empty<Tuple<T, StreamSequenceToken>>();
         }
     }
 

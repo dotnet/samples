@@ -1,6 +1,6 @@
 namespace Grains;
 
-public class ObserverManager<TObserver>
+public class ObserverManager<TObserver> where TObserver : notnull
 {
     private readonly Dictionary<TObserver, DateTime> _observers = new();
     private readonly TimeSpan _expiration;

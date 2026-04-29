@@ -21,11 +21,11 @@ namespace AppWithPlugin
 
                 string[] pluginPaths = new string[]
                 {
-                    @"HelloPlugin\bin\Debug\net7.0\HelloPlugin.dll",
-                    @"JsonPlugin\bin\Debug\net7.0\JsonPlugin.dll",
-                    @"OldJsonPlugin\bin\Debug\net7.0\OldJsonPlugin.dll",
-                    @"FrenchPlugin\bin\Debug\net7.0\FrenchPlugin.dll",
-                    @"UVPlugin\bin\Debug\net7.0\UVPlugin.dll",
+                    @"HelloPlugin\bin\Debug\net8.0\HelloPlugin.dll",
+                    @"JsonPlugin\bin\Debug\net8.0\JsonPlugin.dll",
+                    @"OldJsonPlugin\bin\Debug\net8.0\OldJsonPlugin.dll",
+                    @"FrenchPlugin\bin\Debug\net8.0\FrenchPlugin.dll",
+                    @"UVPlugin\bin\Debug\net8.0\UVPlugin.dll",
                 };
 
                 IEnumerable<ICommand> commands = pluginPaths.SelectMany(pluginPath =>

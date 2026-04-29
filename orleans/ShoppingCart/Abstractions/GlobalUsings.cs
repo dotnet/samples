@@ -2,4 +2,3 @@
 // Licensed under the MIT License.
 
 global using System.Text.Json.Serialization;
-global using Orleans.Concurrency;

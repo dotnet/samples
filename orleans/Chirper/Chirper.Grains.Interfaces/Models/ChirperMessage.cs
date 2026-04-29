@@ -8,21 +8,22 @@ public record class ChirperMessage(
     /// <summary>
     /// The message content for this chirp message entry.
     /// </summary>
-    string Message,
+    [property: Id(0)] string Message,
 
     /// <summary>
     /// The timestamp of when this chirp message entry was originally republished.
     /// </summary>
-    DateTimeOffset Timestamp,
+    [property: Id(1)] DateTimeOffset Timestamp,
 
     /// <summary>
     /// The user name of the publisher of this chirp message.
     /// </summary>
-    string PublisherUserName)
+    [property: Id(2)] string PublisherUserName)
 {
     /// <summary>
     /// The unique id of this chirp message.
     /// </summary>
+    [Id(3)]
     public Guid MessageId { get; } = Guid.NewGuid();
 
     /// <summary>

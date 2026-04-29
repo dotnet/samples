@@ -7,4 +7,4 @@ public record class TodoItem(
     string Title,
     bool IsDone,
     Guid OwnerKey,
-    DateTime? Timestamp = null);
+    DateTime Timestamp);

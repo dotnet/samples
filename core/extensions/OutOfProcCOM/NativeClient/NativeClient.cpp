@@ -1,4 +1,3 @@
-#include <atlbase.h>
 #include <iostream>
 #include <iomanip>
 
@@ -17,7 +16,7 @@ int main()
         return EXIT_FAILURE;
     }
 
-    CComPtr<IServer> server;
+    IServer* server;
     hr = ::CoCreateInstance(CLSID_Server, nullptr, CLSCTX_LOCAL_SERVER, __uuidof(IServer), (void **)&server);
     if (FAILED(hr))
     {
@@ -27,6 +26,8 @@ int main()
 
     double pi;
     hr = server->ComputePi(&pi);
+    server->Release();
+    server = NULL;
     if (FAILED(hr))
     {
         std::cout << "Failure: " << std::hex << std::showbase << hr << std::endl;

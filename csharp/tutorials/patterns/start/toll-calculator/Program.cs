@@ -1,41 +1,37 @@
-﻿using System;
+﻿using Calculators;
 using CommercialRegistration;
 using ConsumerVehicleRegistration;
 using LiveryRegistration;
 
-var car = new Car();
-var taxi = new Taxi();
-var bus = new Bus();
-var truck = new DeliveryTruck();
+// "Implement the basic toll calculations"
+var car = new Car() { Passengers = 0 };             // suppose driver only
+var taxi = new Taxi() { Fares = 0 };               // not yet hired
+var bus = new Bus() { Riders = 0, Capacity = 90 };  // suppose driver only
+var truck = new DeliveryTruck();            // medium truck (note default GrossWeight = 4000)
 
-/*   First set of test code
-var tollCalc = new toll_calculator.TollCalculator();
-
-Console.WriteLine($"The toll for a car is {tollCalc.CalculateToll(car)}");
-Console.WriteLine($"The toll for a taxi is {tollCalc.CalculateToll(taxi)}");
-Console.WriteLine($"The toll for a bus is {tollCalc.CalculateToll(bus)}");
-Console.WriteLine($"The toll for a truck is {tollCalc.CalculateToll(truck)}");
+Console.WriteLine($"The toll for a car is {TollCalculator.CalculateToll(car)}");
+Console.WriteLine($"The toll for a taxi is {TollCalculator.CalculateToll(taxi)}");
+Console.WriteLine($"The toll for a bus is {TollCalculator.CalculateToll(bus)}");
+Console.WriteLine($"The toll for a truck is {TollCalculator.CalculateToll(truck)}");
 
 try
 {
-    tollCalc.CalculateToll("this will fail");
+    _ = TollCalculator.CalculateToll("this will fail");
 }
 catch (ArgumentException e)
 {
-    Console.WriteLine("Caught an argument exception when using the wrong type");
+    Console.WriteLine($"Caught an argument exception when using the wrong type for {e.ParamName}");
 }
 try
 {
-    tollCalc.CalculateToll(null!);
+    _ = TollCalculator.CalculateToll(null!);
 }
-catch (ArgumentNullException e)
+catch (ArgumentNullException)
 {
     Console.WriteLine("Caught an argument exception when using null");
 }
-*/
 
-/*  2nd test (after adding for occupants)
-var tollCalc = new TollCalculator();
+/*  // "Add occupancy pricing"
 
 var soloDriver = new Car();
 var twoRideShare = new Car { Passengers = 1 };
@@ -49,47 +45,47 @@ var lowOccupantBus = new Bus { Capacity = 90, Riders = 15 };
 var normalBus = new Bus { Capacity = 90, Riders = 75 };
 var fullBus = new Bus { Capacity = 90, Riders = 85 };
 
-var heavyTruck = new DeliveryTruck { GrossWeightClass = 7500 };
-var truck = new DeliveryTruck { GrossWeightClass = 4000 };
-var lightTruck = new DeliveryTruck { GrossWeightClass = 2500 };
+var heavyTruck = new DeliveryTruck { GrossWeight = 7500 };
+var truck = new DeliveryTruck();    // default GrossWeight = 4000
+var lightTruck = new DeliveryTruck { GrossWeight = 2500 };
 
-Console.WriteLine($"The toll for a solo driver is {tollCalc.CalculateToll(soloDriver)}");
-Console.WriteLine($"The toll for a two ride share is {tollCalc.CalculateToll(twoRideShare)}");
-Console.WriteLine($"The toll for a three ride share is {tollCalc.CalculateToll(threeRideShare)}");
-Console.WriteLine($"The toll for a fullVan is {tollCalc.CalculateToll(fullVan)}");
+Console.WriteLine($"The toll for a solo driver is {TollCalculator.CalculateToll(soloDriver)}");
+Console.WriteLine($"The toll for a two ride share is {TollCalculator.CalculateToll(twoRideShare)}");
+Console.WriteLine($"The toll for a three ride share is {TollCalculator.CalculateToll(threeRideShare)}");
+Console.WriteLine($"The toll for a full car is {TollCalculator.CalculateToll(fullVan)}");
 
-Console.WriteLine($"The toll for an empty taxi is {tollCalc.CalculateToll(emptyTaxi)}");
-Console.WriteLine($"The toll for a single fare taxi is {tollCalc.CalculateToll(singleFare)}");
-Console.WriteLine($"The toll for a double fare taxi is {tollCalc.CalculateToll(doubleFare)}");
-Console.WriteLine($"The toll for a full van taxi is {tollCalc.CalculateToll(fullVanPool)}");
+Console.WriteLine($"The toll for an empty taxi is {TollCalculator.CalculateToll(emptyTaxi)}");
+Console.WriteLine($"The toll for a single fare taxi is {TollCalculator.CalculateToll(singleFare)}");
+Console.WriteLine($"The toll for a double fare taxi is {TollCalculator.CalculateToll(doubleFare)}");
+Console.WriteLine($"The toll for a full taxi is {TollCalculator.CalculateToll(fullVanPool)}");
 
-Console.WriteLine($"The toll for a low-occupant bus is {tollCalc.CalculateToll(lowOccupantBus)}");
-Console.WriteLine($"The toll for a regular bus is {tollCalc.CalculateToll(normalBus)}");
-Console.WriteLine($"The toll for a bus is {tollCalc.CalculateToll(fullBus)}");
+Console.WriteLine($"The toll for a low-occupant bus is {TollCalculator.CalculateToll(lowOccupantBus)}");
+Console.WriteLine($"The toll for a regular bus is {TollCalculator.CalculateToll(normalBus)}");
+Console.WriteLine($"The toll for a bus is {TollCalculator.CalculateToll(fullBus)}");
 
-Console.WriteLine($"The toll for a truck is {tollCalc.CalculateToll(heavyTruck)}");
-Console.WriteLine($"The toll for a truck is {tollCalc.CalculateToll(truck)}");
-Console.WriteLine($"The toll for a truck is {tollCalc.CalculateToll(lightTruck)}");
+Console.WriteLine($"The toll for a heavy truck is {TollCalculator.CalculateToll(heavyTruck)}");
+Console.WriteLine($"The toll for a medium truck is {TollCalculator.CalculateToll(truck)}");
+Console.WriteLine($"The toll for a light truck is {TollCalculator.CalculateToll(lightTruck)}");
 
 try
 {
-    tollCalc.CalculateToll("this will fail");
+    _ = TollCalculator.CalculateToll("this will fail");
 }
 catch (ArgumentException e)
 {
-    Console.WriteLine("Caught an argument exception when using the wrong type");
+    Console.WriteLine($"Caught an argument exception when using the wrong type for {e.ParamName}");
 }
 try
 {
-    tollCalc.CalculateToll(null);
+    _ = TollCalculator.CalculateToll(null!);
 }
-catch (ArgumentNullException e)
+catch (ArgumentNullException)
 {
     Console.WriteLine("Caught an argument exception when using null");
 }
-*/
+*/	// end of "Add occupancy pricing"
 
-/*
+/* // start of "Add peak pricing"
 Console.WriteLine("Testing the time premiums");
 
 var testTimes = new DateTime[]
@@ -107,13 +103,13 @@ var testTimes = new DateTime[]
 
 foreach (var time in testTimes)
 {
-    Console.WriteLine($"Inbound premium at {time} is {tollCalc.PeakTimePremiumFull(time, true)}");
-    Console.WriteLine($"Outbound premium at {time} is {tollCalc.PeakTimePremiumFull(time, false)}");
+    Console.WriteLine($"Inbound premium at {time} is {TollCalculator.PeakTimePremiumFull(time, true)}");
+    Console.WriteLine($"Outbound premium at {time} is {TollCalculator.PeakTimePremiumFull(time, false)}");
 }
 Console.WriteLine("====================================================");
 foreach (var time in testTimes)
 {
-    Console.WriteLine($"Inbound premium at {time} is {tollCalc.PeakTimePremium(time, true)}");
-    Console.WriteLine($"Outbound premium at {time} is {tollCalc.PeakTimePremium(time, false)}");
+    Console.WriteLine($"Inbound premium at {time} is {TollCalculator.PeakTimePremium(time, true)}");
+    Console.WriteLine($"Outbound premium at {time} is {TollCalculator.PeakTimePremium(time, false)}");
 }
-*/
+*/	// end of "Add peak pricing"

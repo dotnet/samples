@@ -1,4 +1,4 @@
-namespace BlazorWasm.Models;
+﻿namespace BlazorWasm.Models;
 
 [Immutable]
 [GenerateSerializer]

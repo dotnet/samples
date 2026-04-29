@@ -1,4 +1,4 @@
-namespace BlazorWasm.Models;
+﻿namespace BlazorWasm.Models;
 
 public record class TodoItem
 {
@@ -6,4 +6,5 @@ public record class TodoItem
     public string Title { get; init; } = null!;
     public bool IsDone { get; init; }
     public Guid OwnerKey { get; init; }
+    public DateTime Timestamp { get; init; }
 }

@@ -1,37 +1,29 @@
-using System.Collections.Immutable;
-using Orleans.Runtime;
+﻿using System.Collections.Immutable;
 
 namespace BlazorServer;
 
-public class TodoManagerGrain : Grain, ITodoManagerGrain
+public class TodoManagerGrain([PersistentState("State")] IPersistentState<TodoManagerGrain.State> state)
+    : Grain, ITodoManagerGrain
 {
-    private readonly IPersistentState<State> _state;
-
-    public TodoManagerGrain(
-        [PersistentState("State")] IPersistentState<State> state)
-    {
-        _state = state;
-    }
-
     public async Task RegisterAsync(Guid itemKey)
     {
-        _state.State.Items.Add(itemKey);
-        await _state.WriteStateAsync();
+        state.State = state.State with { Items = state.State.Items.Add(itemKey) };
+        await state.WriteStateAsync();
     }
 
     public async Task UnregisterAsync(Guid itemKey)
     {
-        _state.State.Items.Remove(itemKey);
-        await _state.WriteStateAsync();
+        state.State = state.State with { Items = state.State.Items.Remove(itemKey) };
+        await state.WriteStateAsync();
     }
 
-    public Task<ImmutableArray<Guid>> GetAllAsync() =>
-        Task.FromResult(ImmutableArray.CreateRange(_state.State.Items));
+    public Task<ImmutableHashSet<Guid>> GetAllAsync()
+        => Task.FromResult(state.State.Items);
 
-    [GenerateSerializer]
-    public class State
+    [GenerateSerializer, Immutable]
+    public record class State
     {
         [Id(0)]
-        public HashSet<Guid> Items { get; set; } = new();
+        public ImmutableHashSet<Guid> Items { get; init; } = [];
     }
 }

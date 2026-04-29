@@ -86,8 +86,14 @@ class ConsoleModule
 
     private static void ShowSyntax()
     {
-        Console.WriteLine("\nSyntax: CyrillicToRoman <source> <destination>");
-        Console.WriteLine("   where <source>      = source filename");
-        Console.WriteLine("         <destination> = destination filename\n");
+        StringBuilder sb = new StringBuilder();
+
+        sb.AppendLine();
+        sb.AppendLine("Syntax: CyrillicToRoman <source> <destination>");
+        sb.AppendLine("   where <source>      = source filename");
+        sb.AppendLine("         <destination> = destination filename");
+        sb.AppendLine();
+        
+        Console.WriteLine(sb.ToString());
     }
 }

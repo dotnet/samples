@@ -1,6 +1,4 @@
-using Orleans.Runtime;
-
-namespace ChatRoom;
+﻿namespace ChatRoom;
 
 public interface IChannelGrain : IGrainWithStringKey
 {
