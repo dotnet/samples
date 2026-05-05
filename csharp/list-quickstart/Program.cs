@@ -39,13 +39,15 @@ void WorkWithString()
 
     var index = names.IndexOf("Felipe");
 
-    index == -1 ? Console.WriteLine($"When an item is not found, IndexOf returns {index}")
-        : Console.WriteLine($"The name {names[index]} is at index {index}");
+    Console.WriteLine(index == -1 
+        ? $"When an item is not found, IndexOf returns {index}"
+        : $"The name {names[index]} is at index {index}");
 
     index = names.IndexOf("Not Found");
 
-    index == -1 ? Console.WriteLine($"When an item is not found, IndexOf returns {index}")
-         : Console.WriteLine($"The name {names[index]} is at index {index}");
+    Console.WriteLine(index == -1 
+        ? $"When an item is not found, IndexOf returns {index}"
+        : $"The name {names[index]} is at index {index}");
 
     names.Sort();
     foreach (var name in names)
