@@ -1,6 +1,9 @@
 ﻿using System;
 using System.IO;
+using System.Security.AccessControl;
 using System.Text;
+using CyrillicToLatin.Common;
+
 
 class ConsoleModule
 {
@@ -9,9 +12,9 @@ class ConsoleModule
         string[] args = Environment.GetCommandLineArgs();
 
         // Get command line arguments.
-        if (args.Length != 3 || String.IsNullOrWhiteSpace(args[1]) || String.IsNullOrWhiteSpace(args[2]))
+        if (args.Length != 3 || string.IsNullOrWhiteSpace(args[1]) || string.IsNullOrWhiteSpace(args[2]))
         {
-            Console.WriteLine("There must be a source and a destination file.");
+            Console.WriteLine(Common.NoSourceOrDestinationFile);
             ShowSyntax();
             return;
         }
@@ -21,7 +24,7 @@ class ConsoleModule
 
         if (!File.Exists(source))
         {
-            Console.WriteLine("The source file does not exist.");
+            Console.WriteLine(Common.NoSourceOrDestinationFile);
             return;
         }
 
@@ -74,12 +77,12 @@ class ConsoleModule
         }
         catch (DirectoryNotFoundException e)
         {
-            Console.WriteLine($"Invalid directory: {e.Message}");
+            Console.WriteLine(Common.WrongDirectory);
             return;
         }
         catch (IOException e)
         {
-            Console.WriteLine($"I/O exception: {e.Message}");
+            Console.WriteLine(Common.WrongIO);
             return;
         }
     }

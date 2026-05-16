@@ -7,8 +7,8 @@ public class Person
 
     public Person(string first, string last)
     {
-        FirstName = first;
-        LastName = last;
+        this.FirstName = first;
+        this.LastName = last;
     }
 
     public override string ToString()
