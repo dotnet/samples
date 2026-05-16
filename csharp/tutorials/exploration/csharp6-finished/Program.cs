@@ -9,13 +9,15 @@ public class Person
     public string LastName { get; private set; }
 
     // <SnippetMiddleName>
-    public string MiddleName { get; } = "";
+    public string MiddleName { get; }
 
     public Person(string first, string middle, string last)
     {
         FirstName = first;
         MiddleName = middle;
         LastName = last;
+
+        MiddleName = "";
     }
     // </SnippetMiddleName>
 
