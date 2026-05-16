@@ -13,7 +13,9 @@ public class FileSearcher
 
     public void Search(string directory, string searchPattern)
     {
-        foreach (var file in Directory.EnumerateFiles(directory, searchPattern))
+        var enumeratedFiles = Directory.EnumerateFiles(directory, searchPattern);
+
+        foreach (var file in enumeratedFiles)
         {
             FileFound?.Invoke(this, new FileFoundArgs(file));
         }

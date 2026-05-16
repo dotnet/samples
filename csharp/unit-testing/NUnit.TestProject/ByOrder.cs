@@ -10,7 +10,7 @@ namespace NUnit.Project
         public static bool Test3Called;
 
         [Test, Order(5)]
-        public void Test1()
+        public void Should_Run_Last_After_Other_Tests_And_Validate_Previous_Execution_State()
         {
             Test3Called = true;
 
@@ -20,7 +20,7 @@ namespace NUnit.Project
         }
 
         [Test, Order(0)]
-        public void Test2B()
+        public void Should_Run_Second_After_First_Test_And_Validate_Only_First_Has_Run()
         {
             Test2BCalled = true;
 
@@ -30,7 +30,7 @@ namespace NUnit.Project
         }
 
         [Test]
-        public void Test2A()
+        public void Should_Run_Third_When_No_Order_Is_Specified_And_All_Previous_Tests_Are_Called()
         {
             Test2ACalled = true;
 
@@ -40,7 +40,7 @@ namespace NUnit.Project
         }
 
         [Test, Order(-5)]
-        public void Test3()
+        public void Should_Run_First_Before_All_Other_Tests_And_Ensure_No_Prior_Execution()
         {
             Test1Called = true;
 
