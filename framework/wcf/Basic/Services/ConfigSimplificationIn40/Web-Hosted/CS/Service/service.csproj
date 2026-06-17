@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20207</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{15B3E0D2-6217-493A-A690-158C497F5318}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -12,16 +12,12 @@
     <AssemblyName>service</AssemblyName>
     <ProjectTypeGuids>{3D9AD99F-2412-4246-B90B-4EAA41C64699};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <StartArguments>/client:"client.exe"</StartArguments>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <StartupObject />
-    <SccProjectName>
-    </SccProjectName>
-    <SccLocalPath>
-    </SccLocalPath>
-    <SccAuxPath>
-    </SccAuxPath>
-    <SccProvider>
-    </SccProvider>
+    <SccProjectName></SccProjectName>
+    <SccLocalPath></SccLocalPath>
+    <SccAuxPath></SccAuxPath>
+    <SccProvider></SccProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -57,14 +53,13 @@
   <ItemGroup>
     <Content Include="service.svc" />
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
   <PropertyGroup>
     <PostBuildEvent>
       mkdir %SystemDrive%\inetpub\wwwroot\servicemodelsamples
       mkdir %SystemDrive%\inetpub\wwwroot\servicemodelsamples\bin
       copy "$(TargetDir)service.dll" %SystemDrive%\inetpub\wwwroot\servicemodelsamples\bin
-      copy "$(ProjectDir)service.svc" %SystemDrive%\inetpub\wwwroot\servicemodelsamples
-      copy "$(ProjectDir)web.config" %SystemDrive%\inetpub\wwwroot\servicemodelsamples
+      copy "$(MSBuildProjectDirectory)\service.svc" %SystemDrive%\inetpub\wwwroot\servicemodelsamples
+      copy "$(MSBuildProjectDirectory)\web.config" %SystemDrive%\inetpub\wwwroot\servicemodelsamples
     </PostBuildEvent>
   </PropertyGroup>
   <ProjectExtensions>
@@ -76,4 +71,5 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
