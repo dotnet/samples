@@ -1,12 +1,11 @@
 ﻿//  Copyright (c) Microsoft Corporation.  All Rights Reserved.
 
 using System;
-using System.ServiceModel.Channels;
 using System.ServiceModel;
 
 namespace Microsoft.ServiceModel.Samples
 {
-    [ServiceContract(SessionMode=SessionMode.Required)]
+    [ServiceContract(SessionMode = SessionMode.Required)]
     public interface IEchoService
     {
         [OperationContract]
@@ -22,7 +21,7 @@ namespace Microsoft.ServiceModel.Samples
             Console.WriteLine("Service instance created.");
             Console.ForegroundColor = ConsoleColor.Gray;
         }
-        
+
         public string Echo(string value)
         {
             Console.ForegroundColor = ConsoleColor.Blue;
@@ -33,7 +32,7 @@ namespace Microsoft.ServiceModel.Samples
         }
     }
 
-    class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
@@ -46,12 +45,12 @@ namespace Microsoft.ServiceModel.Samples
             Console.WriteLine("Echo service started.");
             Console.ForegroundColor = ConsoleColor.Gray;
 
-	    Console.WriteLine("Press <ENTER> to complete test.");
+            Console.WriteLine("Press <ENTER> to complete test.");
             Console.ReadLine();
             host.Close();
         }
 
-        static void PrintLegend()
+        private static void PrintLegend()
         {
             Console.WriteLine("=================================");
 
