@@ -40,7 +40,7 @@ public sealed class InventoryGrain(
             return;
         }
 
-        object lockObject = new();
+        Lock lockObject = new();
         await Parallel.ForEachAsync(
             state.State,
             async (id, _) =>
