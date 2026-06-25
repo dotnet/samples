@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="MatchingGame.Logic/MatchingGame.Logic.vbproj" Id="59ee18ba-75b0-432c-bbcd-602bf121e206" />
+  <Project Path="MatchingGame/MatchingGame.vbproj" Id="8f59b668-36c8-4d64-9d54-e509fba8228a" />
+</Solution>
