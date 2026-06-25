@@ -2,7 +2,7 @@
 languages:
 - vb
 products:
-- windows-forms
+- wpf
 page_type: sample
 name: "Matching Game Sample for WPF (.NET Framework Visual Basic)"
 urlFragment: "matching-game-wpf-netframework-vb"
