@@ -4,8 +4,8 @@ languages:
 products:
 - windows-forms
 page_type: sample
-name: "Matching Game Sample (.NET Framework C#)"
-urlFragment: "matching-game-net45-csharp"
+name: "Matching Game Sample for WinForms (.NET Framework C#)"
+urlFragment: "matching-game-winforms-netframework-cs"
 description: "A simple matching game using Windows Forms for .NET Framework"
 ---
 # Matching game
