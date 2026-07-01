@@ -40,12 +40,17 @@ public sealed class InventoryGrain(
             return;
         }
 
+        Lock lockObject = new();
         await Parallel.ForEachAsync(
             state.State,
             async (id, _) =>
             {
                 var productGrain = GrainFactory.GetGrain<IProductGrain>(id);
-                _productCache[id] = await productGrain.GetProductDetailsAsync();
+                var productDetails = await productGrain.GetProductDetailsAsync();
+                lock (lockObject)
+                {
+                    _productCache[id] = productDetails;
+                }
             });
     }
 }
