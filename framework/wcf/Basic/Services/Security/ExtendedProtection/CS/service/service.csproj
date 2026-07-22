@@ -1,21 +1,16 @@
-﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20702</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{5FBB75D5-03DE-45D2-8361-0ED3D24D8298}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Microsoft.Samples.ExtendedProtection</RootNamespace>
     <AssemblyName>service</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <OldToolsVersion>3.5</OldToolsVersion>
-    <UpgradeBackupLocation />
-    <TargetFrameworkProfile />
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -52,8 +47,8 @@
     <Compile Include="IGetKey.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v16.0\WebApplications\Microsoft.WebApplication.targets" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
@@ -69,24 +64,22 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>50035</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>
-          </IISUrl>
+          <IISUrl></IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
+          <CustomServerUrl></CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup>
-    <PostBuildEvent>mkdir %25SystemDrive%25\inetpub\wwwroot\ExtendedProtection
-mkdir %25SystemDrive%25\inetpub\wwwroot\\ExtendedProtection\bin
-copy "$(TargetDir)service.dll" %25SystemDrive%25\inetpub\wwwroot\ExtendedProtection\bin
-copy "$(ProjectDir)GetKey.svc" %25SystemDrive%25\inetpub\wwwroot\ExtendedProtection
-copy "$(ProjectDir)Web.config" %25SystemDrive%25\inetpub\wwwroot\ExtendedProtection
-
-</PostBuildEvent>
+    <PostBuildEvent>
+      mkdir %SystemDrive%\inetpub\wwwroot\ExtendedProtection
+      mkdir %SystemDrive%\inetpub\wwwroot\\ExtendedProtection\bin
+      copy "$(TargetDir)service.dll" %SystemDrive%\inetpub\wwwroot\ExtendedProtection\bin
+      copy "$(MSBuildProjectDirectory)\GetKey.svc" %SystemDrive%\inetpub\wwwroot\ExtendedProtection
+      copy "$(MSBuildProjectDirectory)\Web.config" %SystemDrive%\inetpub\wwwroot\ExtendedProtection
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>
