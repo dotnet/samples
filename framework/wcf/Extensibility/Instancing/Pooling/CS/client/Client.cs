@@ -1,7 +1,6 @@
 ﻿//  Copyright (c) Microsoft Corporation.  All Rights Reserved.
 
 using System;
-using System.ServiceModel.Channels;
 using System.ServiceModel;
 using System.Diagnostics;
 
@@ -29,8 +28,14 @@ namespace Microsoft.ServiceModel.Samples
         }
 
         static void CallWorkService()
-        {           
+        {
+#if NET6_0_OR_GREATER
+            NetTcpBinding binding = new NetTcpBinding();
+            EndpointAddress endpointAddress = new EndpointAddress(new Uri("net.tcp://localhost:8000/"));
+            ChannelFactory<IDoWork> channelFactory = new ChannelFactory<IDoWork>(binding, endpointAddress);
+#else
             ChannelFactory<IDoWork> channelFactory = new ChannelFactory<IDoWork>("WorkService");
+#endif
 
             IDoWork channel = channelFactory.CreateChannel();
 
@@ -53,8 +58,14 @@ namespace Microsoft.ServiceModel.Samples
         }
 
         static void CallObjectPooledWorkService()
-        {            
+        {
+#if NET6_0_OR_GREATER
+            NetTcpBinding binding = new NetTcpBinding();
+            EndpointAddress endpointAddress = new EndpointAddress(new Uri("net.tcp://localhost:8001/"));
+            ChannelFactory<IDoWork> channelFactory = new ChannelFactory<IDoWork>(binding, endpointAddress);
+#else
             ChannelFactory<IDoWork> channelFactory = new ChannelFactory<IDoWork>("ObjectPooledWorkService");
+#endif
 
             IDoWork channel = channelFactory.CreateChannel();
 
