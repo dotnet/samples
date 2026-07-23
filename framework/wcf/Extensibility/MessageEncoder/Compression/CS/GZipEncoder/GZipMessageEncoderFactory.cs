@@ -12,7 +12,7 @@ namespace Microsoft.Samples.GZipEncoder
     //This class is used to create the custom encoder (GZipMessageEncoder)
     internal class GZipMessageEncoderFactory : MessageEncoderFactory
     {
-        MessageEncoder encoder;
+        private readonly MessageEncoder _encoder;
 
         //The GZip encoder wraps an inner encoder
         //We require a factory to be passed in that will create this inner encoder
@@ -20,30 +20,24 @@ namespace Microsoft.Samples.GZipEncoder
         {
             if (messageEncoderFactory == null)
                 throw new ArgumentNullException("messageEncoderFactory", "A valid message encoder factory must be passed to the GZipEncoder");
-            encoder = new GZipMessageEncoder(messageEncoderFactory.Encoder);
+            _encoder = new GZipMessageEncoder(messageEncoderFactory.Encoder);
         }
 
         //The service framework uses this property to obtain an encoder from this encoder factory
-        public override MessageEncoder Encoder
-        {
-            get { return encoder; }
-        }
+        public override MessageEncoder Encoder => _encoder;
 
-        public override MessageVersion MessageVersion
-        {
-            get { return encoder.MessageVersion; }
-        }
+        public override MessageVersion MessageVersion => _encoder.MessageVersion;
 
         //This is the actual GZip encoder
-        class GZipMessageEncoder : MessageEncoder
+        private class GZipMessageEncoder : MessageEncoder
         {
-            static string GZipContentType = "application/x-gzip";
+            private const string GZipContentType = "application/x-gzip";
 
             //This implementation wraps an inner encoder that actually converts a WCF Message
             //into textual XML, binary XML or some other format. This implementation then compresses the results.
             //The opposite happens when reading messages.
             //This member stores this inner encoder.
-            MessageEncoder innerEncoder;
+            private readonly MessageEncoder _innerEncoder;
 
             //We require an inner encoder to be supplied (see comment above)
             internal GZipMessageEncoder(MessageEncoder messageEncoder)
@@ -51,30 +45,21 @@ namespace Microsoft.Samples.GZipEncoder
             {
                 if (messageEncoder == null)
                     throw new ArgumentNullException("messageEncoder", "A valid message encoder must be passed to the GZipEncoder");
-                innerEncoder = messageEncoder;
+                _innerEncoder = messageEncoder;
             }
 
-            public override string ContentType
-            {
-                get { return GZipContentType; }
-            }
+            public override string ContentType => GZipContentType;
 
-            public override string MediaType
-            {
-                get { return GZipContentType; }
-            }
+            public override string MediaType => GZipContentType;
 
             //SOAP version to use - we delegate to the inner encoder for this
-            public override MessageVersion MessageVersion
-            {
-                get { return innerEncoder.MessageVersion; }
-            }
+            public override MessageVersion MessageVersion => _innerEncoder.MessageVersion;
 
             //Helper method to compress an array of bytes
-            static ArraySegment<byte> CompressBuffer(ArraySegment<byte> buffer, BufferManager bufferManager, int messageOffset)
+            private static ArraySegment<byte> CompressBuffer(ArraySegment<byte> buffer, BufferManager bufferManager, int messageOffset)
             {
                 MemoryStream memoryStream = new MemoryStream();
-                
+
                 using (GZipStream gzStream = new GZipStream(memoryStream, CompressionMode.Compress, true))
                 {
                     gzStream.Write(buffer.Array, buffer.Offset, buffer.Count);
@@ -93,7 +78,7 @@ namespace Microsoft.Samples.GZipEncoder
             }
 
             //Helper method to decompress an array of bytes
-            static ArraySegment<byte> DecompressBuffer(ArraySegment<byte> buffer, BufferManager bufferManager)
+            private static ArraySegment<byte> DecompressBuffer(ArraySegment<byte> buffer, BufferManager bufferManager)
             {
                 MemoryStream memoryStream = new MemoryStream(buffer.Array, buffer.Offset, buffer.Count);
                 MemoryStream decompressedStream = new MemoryStream();
@@ -130,7 +115,7 @@ namespace Microsoft.Samples.GZipEncoder
                 //Decompress the buffer
                 ArraySegment<byte> decompressedBuffer = DecompressBuffer(buffer, bufferManager);
                 //Use the inner encoder to decode the decompressed buffer
-                Message returnMessage = innerEncoder.ReadMessage(decompressedBuffer, bufferManager);
+                Message returnMessage = _innerEncoder.ReadMessage(decompressedBuffer, bufferManager);
                 returnMessage.Properties.Encoder = this;
                 return returnMessage;
             }
@@ -139,7 +124,7 @@ namespace Microsoft.Samples.GZipEncoder
             public override ArraySegment<byte> WriteMessage(Message message, int maxMessageSize, BufferManager bufferManager, int messageOffset)
             {
                 //Use the inner encoder to encode a Message into a buffered byte array
-                ArraySegment<byte> buffer = innerEncoder.WriteMessage(message, maxMessageSize, bufferManager, 0);
+                ArraySegment<byte> buffer = _innerEncoder.WriteMessage(message, maxMessageSize, bufferManager, 0);
                 //Compress the resulting byte array
                 return CompressBuffer(buffer, bufferManager, messageOffset);
             }
@@ -150,14 +135,14 @@ namespace Microsoft.Samples.GZipEncoder
                 //This will ensure that the inner stream gets closed when the message gets closed, which
                 //will ensure that resources are available for reuse/release.
                 GZipStream gzStream = new GZipStream(stream, CompressionMode.Decompress, false);
-                return innerEncoder.ReadMessage(gzStream, maxSizeOfHeaders);
+                return _innerEncoder.ReadMessage(gzStream, maxSizeOfHeaders);
             }
 
             public override void WriteMessage(Message message, System.IO.Stream stream)
             {
                 using (GZipStream gzStream = new GZipStream(stream, CompressionMode.Compress, true))
                 {
-                    innerEncoder.WriteMessage(message, gzStream);
+                    _innerEncoder.WriteMessage(message, gzStream);
                 }
 
                 // innerEncoder.WriteMessage(message, gzStream) depends on that it can flush data by flushing 
