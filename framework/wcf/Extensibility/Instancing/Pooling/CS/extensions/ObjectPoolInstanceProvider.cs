@@ -1,13 +1,10 @@
 ﻿//  Copyright (c) Microsoft Corporation.  All Rights Reserved.
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Reflection;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
 using System.ServiceModel.Dispatcher;
-using System.Threading;
 using System.Timers;
 using Timer = System.Timers.Timer;
 
@@ -15,44 +12,44 @@ namespace Microsoft.ServiceModel.Samples
 {
     // This class contains the implementation for the object pool. This implements the 
     // IInstanceProvider interface in order to be able to plugin to the dispatcher layer.
-    class ObjectPoolingInstanceProvider : IInstanceProvider
+    internal class ObjectPoolingInstanceProvider : IInstanceProvider
     {
-        const int idleTimeout = 5 * 60 * 1000;     // 5 minutes
+        private const int IdleTimeout = 5 * 60 * 1000;     // 5 minutes
 
         #region Private Fields
 
         // Minimum number of objects in the pool
-        int minPoolSize;
-        
+        private readonly int _minPoolSize;
+
         // Type of the object created in the pool
-        Type instanceType;
+        private readonly Type _instanceType;
 
         // Stack used for storing objects in the pool
-        Stack<object> pool;
-        
+        private readonly Stack<object> _pool;
+
         // Lock should acquired before accessing the pool stack
-        object poolLock = new object();
-        
+        private readonly object _poolLock = new object();
+
         // Keeps track of the number of objects returned from the pool.
-        int activeObjectsCount;
+        private int _activeObjectsCount;
 
         // Timer object used to trigger the clean up process
         // after a given period of idle time.
-        Timer idleTimer;
-        
+        private readonly Timer _idleTimer;
+
         #endregion
 
         public ObjectPoolingInstanceProvider(Type instanceType, int minPoolSize)
-        {            
-            this.minPoolSize = minPoolSize;
-            this.instanceType = instanceType;
+        {
+            _minPoolSize = minPoolSize;
+            _instanceType = instanceType;
 
-            pool = new Stack<object>();
-            activeObjectsCount = 0;
+            _pool = new Stack<object>();
+            _activeObjectsCount = 0;
 
             // Initialize the timer and subscribe to the "Elapsed" event
-            idleTimer = new Timer(idleTimeout);
-            idleTimer.Elapsed += new System.Timers.ElapsedEventHandler(idleTimer_Elapsed);
+            _idleTimer = new Timer(IdleTimeout);
+            _idleTimer.Elapsed += new System.Timers.ElapsedEventHandler(idleTimer_Elapsed);
 
             // Initialize the minimum number of objects if possible
             Initialize();
@@ -60,94 +57,88 @@ namespace Microsoft.ServiceModel.Samples
 
         #region IInstanceProvider Members
 
-        object IInstanceProvider.GetInstance(InstanceContext instanceContext)
-        {
-            return ((IInstanceProvider)this).GetInstance(instanceContext, null);
-        }
+        object IInstanceProvider.GetInstance(InstanceContext instanceContext) => ((IInstanceProvider)this).GetInstance(instanceContext, null);
 
         object IInstanceProvider.GetInstance(InstanceContext instanceContext, Message message)
         {
             object obj = null;
 
-            lock (poolLock)
+            lock (_poolLock)
             {
-                if (pool.Count > 0)
+                if (_pool.Count > 0)
                 {
-                    obj = pool.Pop();
+                    obj = _pool.Pop();
                 }
                 else
                 {
                     obj = CreateNewPoolObject();
                 }
-                activeObjectsCount++;
+                _activeObjectsCount++;
             }
 
             WritePoolMessage(ResourceHelper.GetString("MsgNewObject"));
 
-            idleTimer.Stop();
+            _idleTimer.Stop();
 
-            return obj;          
+            return obj;
         }
 
         void IInstanceProvider.ReleaseInstance(InstanceContext instanceContext, object instance)
         {
-            lock (poolLock)
+            lock (_poolLock)
             {
-                pool.Push(instance);
-                activeObjectsCount--;
+                _pool.Push(instance);
+                _activeObjectsCount--;
 
                 WritePoolMessage(ResourceHelper.GetString("MsgObjectPooled"));
 
                 // When the service goes completely idle (no requests are being processed),
                 // the idle timer is started
-                if (activeObjectsCount == 0)
-                    idleTimer.Start();                     
+                if (_activeObjectsCount == 0)
+                    _idleTimer.Start();
             }
         }
-        
+
         #endregion
 
         // Initialize the pool with minimum number of instances
-        void Initialize()
+        private void Initialize()
         {
-            for (int i = 0; i < minPoolSize; i++)
+            for (int i = 0; i < _minPoolSize; i++)
             {
-                pool.Push(CreateNewPoolObject());
+                _pool.Push(CreateNewPoolObject());
             }
         }
 
         // Handles the instantiation of the types created by this instance
-        private object CreateNewPoolObject()
-        {
-            return Activator.CreateInstance(instanceType);            
-        }
+        private object CreateNewPoolObject() => Activator.CreateInstance(_instanceType);
 
         // Clean up procedure
-        void idleTimer_Elapsed(object sender, ElapsedEventArgs args)
+        private void idleTimer_Elapsed(object sender, ElapsedEventArgs args)
         {
-            idleTimer.Stop();
+            _idleTimer.Stop();
 
-            lock (poolLock)
+            lock (_poolLock)
             {
-                if (activeObjectsCount == 0)
+                if (_activeObjectsCount == 0)
                 {
-                    while (pool.Count > minPoolSize)
+                    while (_pool.Count > _minPoolSize)
                     {
                         WritePoolMessage(ResourceHelper.GetString("MsgObjectRemoving"));
-                        
-                        object removedItem = pool.Pop();
-                        
+
+                        object removedItem = _pool.Pop();
+
                         if (removedItem is IDisposable)
                         {
                             ((IDisposable)removedItem).Dispose();
                         }
                     }
-                }                
+                }
             }
         }
 
         // Writes a given message to the console in red color
-        void WritePoolMessage(string message)
+        private void WritePoolMessage(string message)
         {
             ConsoleColor currentForegroundColor = Console.ForegroundColor;
             Console.ForegroundColor = ConsoleColor.Red;
