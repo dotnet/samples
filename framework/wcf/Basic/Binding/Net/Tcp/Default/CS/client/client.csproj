@@ -8,27 +8,22 @@
     <Product>Windows Communication Foundation and Windows Workflow Foundation SDK</Product>
     <Copyright>Copyright (c) Microsoft Corporation</Copyright>
   </PropertyGroup>
-
   <ItemGroup Condition=" '$(TargetFramework)' == 'net462' ">
     <None Remove="Connected Services\Microsoft.Samples.NetTcp\ConnectedService.json" />
     <Compile Remove="Connected Services\Microsoft.Samples.NetTcp\Reference.cs" />
     <None Include="Connected Services\Microsoft.Samples.NetTcp\Reference.cs" />
   </ItemGroup>
-
   <ItemGroup Condition=" '$(TargetFramework)' == 'net6.0' ">
     <None Remove="App.config" />
     <Compile Remove="generatedClient.cs" />
     <None Include="generatedClient.cs" />
   </ItemGroup>
-
   <ItemGroup Condition=" '$(TargetFramework)' == 'net462' ">
     <Reference Include="System.IdentityModel" />
     <Reference Include="System.ServiceModel" />
   </ItemGroup>
-
   <ItemGroup Condition=" '$(TargetFramework)' == 'net6.0' ">
     <PackageReference Include="System.ServiceModel.Primitives" Version="6.*" />
     <PackageReference Include="System.ServiceModel.NetTcp" Version="6.*" />
   </ItemGroup>
-
 </Project>

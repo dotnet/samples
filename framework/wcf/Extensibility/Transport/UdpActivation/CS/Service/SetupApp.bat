@@ -18,3 +18,5 @@ if "%ISVISTA%" == "1" (
 )
 
 @echo on
+
+exit 0
