@@ -2,21 +2,18 @@
 
 #region using
 
-using System;
-using System.Globalization;
-using System.Resources;
 using System.Reflection;
-using System.Threading;
+using System.Resources;
 
 #endregion
- 
+
 namespace Microsoft.ServiceModel.Samples
 {
     /// <summary>
     /// This is a helper class for accessing the 
     /// resource file.
     /// </summary>
-    class ResourceHelper
+    internal class ResourceHelper
     {
 
         #region Public Static Members
