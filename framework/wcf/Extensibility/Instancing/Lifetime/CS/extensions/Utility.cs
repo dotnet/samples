@@ -4,7 +4,7 @@ using System;
 
 namespace Microsoft.ServiceModel.Samples
 {
-    class Utility
+    internal class Utility
     {
         public static void WriteMessageToConsole(string message)
         {

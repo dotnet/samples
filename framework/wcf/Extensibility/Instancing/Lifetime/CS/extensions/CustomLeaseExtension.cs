@@ -3,21 +3,18 @@
 #region using
 
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ServiceModel;
+using System.ServiceModel.Dispatcher;
 using System.Timers;
 using Timer = System.Timers.Timer;
-using System.ServiceModel.Dispatcher;
 
 #endregion
 
 namespace Microsoft.ServiceModel.Samples
 {
-    interface ICustomLease
+    internal interface ICustomLease
     {
-        bool IsIdle { get; }        
+        bool IsIdle { get; }
         InstanceContextIdleCallback Callback { get; set; }
     }
 
@@ -25,41 +22,33 @@ namespace Microsoft.ServiceModel.Samples
     /// This class contains the implementation of an extension to InstanceContext. 
     /// This enables extended lifetime for the InstanceContext.
     /// </summary>
-    class CustomLeaseExtension : IExtension<InstanceContext>, ICustomLease
+    internal class CustomLeaseExtension : IExtension<InstanceContext>, ICustomLease
     {
         #region Private Fields
 
         // Reference to the InstanceContext instance owns this 
         // extension instance.
-        InstanceContext owner;
-        
-        bool isIdle;
-        object thisLock;
-        Timer idleTimer;
-        double idleTimeout;
-        InstanceContextIdleCallback callback;
-        string instanceId;
+        private InstanceContext _owner;
+        private bool _isIdle;
+        private readonly object _thisLock;
+        private readonly Timer _idleTimer;
+        private readonly double _idleTimeout;
+        private InstanceContextIdleCallback _callback;
 
-        public String InstanceId
-        {
-            get
-            {
-                return this.instanceId;
-            }
-        }
+        public string InstanceId { get; }
 
         #endregion
 
         #region Constructor
 
-        public CustomLeaseExtension(double idleTimeout, String instanceId)
+        public CustomLeaseExtension(double idleTimeout, string instanceId)
         {
-            owner = null;
-            isIdle = false;
-            thisLock = new object();
-            idleTimer = new Timer();
-            this.idleTimeout = idleTimeout;
-            this.instanceId = instanceId;
+            _owner = null;
+            _isIdle = false;
+            _thisLock = new object();
+            _idleTimer = new Timer();
+            _idleTimeout = idleTimeout;
+            InstanceId = instanceId;
         }
 
         #endregion
@@ -74,13 +63,10 @@ namespace Microsoft.ServiceModel.Samples
         /// This method is called by WCF at the time it attaches this
         /// extension.
         /// </remarks>
-        public void Attach(InstanceContext owner)
-        {
-            this.owner = owner;            
-        }
+        public void Attach(InstanceContext owner) => _owner = owner;
 
         public void Detach(InstanceContext owner)
-        {            
+        {
         }
 
         #endregion
@@ -95,9 +81,9 @@ namespace Microsoft.ServiceModel.Samples
         {
             get
             {
-                lock (thisLock)
+                lock (_thisLock)
                 {
-                    if (isIdle)
+                    if (_isIdle)
                     {
                         return true;
                     }
@@ -109,7 +95,7 @@ namespace Microsoft.ServiceModel.Samples
                 }
             }
         }
-     
+
         /// <summary>
         /// Gets or sets the InstanceContextIdleCallback.
         /// </summary>
@@ -117,23 +103,23 @@ namespace Microsoft.ServiceModel.Samples
         {
             get
             {
-                lock (thisLock)
+                lock (_thisLock)
                 {
-                    return callback;
+                    return _callback;
                 }
             }
             set
             {
                 // Immutable state.
-                if (idleTimer.Enabled)
+                if (_idleTimer.Enabled)
                 {
                     throw new InvalidOperationException(
                         ResourceHelper.GetString("ExCannotChangeCallback"));
                 }
 
-                lock (thisLock)
+                lock (_thisLock)
                 {
-                    callback = value;
+                    _callback = value;
                 }
             }
         }
@@ -145,27 +131,27 @@ namespace Microsoft.ServiceModel.Samples
         /// <summary>
         /// Starts the timer.
         /// </summary>
-        void StartTimer()
+        private void StartTimer()
         {
-            lock (thisLock)
+            lock (_thisLock)
             {
-                idleTimer.Interval = idleTimeout;
-                idleTimer.Elapsed += new ElapsedEventHandler(idleTimer_Elapsed);
+                _idleTimer.Interval = _idleTimeout;
+                _idleTimer.Elapsed += new ElapsedEventHandler(idleTimer_Elapsed);
 
-                if (!idleTimer.Enabled)
+                if (!_idleTimer.Enabled)
                 {
-                    idleTimer.Start();
+                    _idleTimer.Start();
                 }
             }
         }
 
         public void StopTimer()
         {
-            lock (thisLock)
+            lock (_thisLock)
             {
-                if (idleTimer.Enabled)
+                if (_idleTimer.Enabled)
                 {
-                    idleTimer.Stop();
+                    _idleTimer.Stop();
                 }
             }
         }
@@ -173,19 +159,19 @@ namespace Microsoft.ServiceModel.Samples
         /// <summary>
         /// Timer elapsed event handler.
         /// </summary>        
-        void idleTimer_Elapsed(object sender, ElapsedEventArgs args)
+        private void idleTimer_Elapsed(object sender, ElapsedEventArgs args)
         {
-            lock (thisLock)
+            lock (_thisLock)
             {
                 StopTimer();
-                isIdle = true;
+                _isIdle = true;
                 Utility.WriteMessageToConsole(
                     ResourceHelper.GetString("MsgLeaseExpired"));
-                callback(owner);
+                _callback(_owner);
             }
-        }        
+        }
 
         #endregion
-       
+
     }
 }
