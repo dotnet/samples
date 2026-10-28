@@ -2,8 +2,6 @@
 //  Copyright (c) Microsoft Corporation.  All Rights Reserved.
 
 using System;
-
-using System.ServiceModel.Channels;
 using System.ServiceModel;
 
 namespace Microsoft.ServiceModel.Samples
