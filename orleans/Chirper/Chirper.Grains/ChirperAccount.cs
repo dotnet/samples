@@ -3,10 +3,11 @@ using Chirper.Grains.Models;
 using Microsoft.Extensions.Logging;
 using Orleans.Concurrency;
 using Orleans.Runtime;
+using Orleans.Serialization.Invocation;
 
 namespace Chirper.Grains;
 
-[Reentrant]
+[MayInterleave(nameof(WontFollowAndUnfollowSimultaneously))]
 public sealed class ChirperAccount : Grain, IChirperAccount
 {
     /// <summary>
@@ -47,6 +48,9 @@ public sealed class ChirperAccount : Grain, IChirperAccount
 
     private static string GrainType => nameof(ChirperAccount);
     private string GrainKey => this.GetPrimaryKeyString();
+
+    public static bool WontFollowAndUnfollowSimultaneously(IInvokable request) =>
+        request.GetMethodName() is not (nameof(FollowUserIdAsync) or nameof(UnfollowUserIdAsync));
 
     public override Task OnActivateAsync(CancellationToken _)
     {
